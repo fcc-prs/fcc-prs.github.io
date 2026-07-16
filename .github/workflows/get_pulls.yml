@@ -10,24 +10,17 @@ jobs:
     steps:
       - name: rungh
         run: |
-          gh api graphql -f query=' \
-          query { \
-            organization(login: "key4hep") { \
+          gh api graphql -f query='query { organization(login: "key4hep") { \
             repositories(first: 100) { \
               nodes { \
                 name \
                 pullRequests(first: 30, states: OPEN) { \
                 nodes { \
-                  number \
-                  title \
+                  number title \
                   author { \
                     login \
                   } \
-                  createdAt \
-                  updatedAt \
-                  mergeable \
-                  url \
-                } \
+                  createdAt updatedAt mergeable url } \
               } \
             } \
           } \
