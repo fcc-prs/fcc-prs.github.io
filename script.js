@@ -24,16 +24,19 @@ function generateTable(data) {
     //th.textContent = headerText;
     headerRow.appendChild(th);
   });
- 
+
+  const tbody = table.createTBody();
+  
   // Generate table rows
   data.forEach(item => {
-    const row = document.createElement('tr');
+    const row = tbody.insertRow();
     keys.forEach(key => {
+      //const th = document.createElement("th");
       const td = document.createElement('td');
       td.textContent = item[key] || ""; // Fill empty fields with blank
       row.appendChild(td);
     });
-    table.appendChild(row);
+    tbody.appendChild(row);
   });
   return table;
 }
