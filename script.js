@@ -11,6 +11,7 @@ function generateTable(data) {
   if (!data || data.length === 0) return "No data available.";
   // Create the table element
   const table = document.createElement('table');
+  table.classList.add('sortable');
   
   // Generate table headers
   const headerRow = document.createElement('tr');
