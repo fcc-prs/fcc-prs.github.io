@@ -42,13 +42,9 @@ function fetchJSONData() {
            throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return response.json();  
-   })
-   .then(data => console.log(data))  
-   .catch(error => console.error('Failed to fetch data:', error)); 
-}
-           
+        }
+}  
   
-
 // Render the table
 const jsonData = fetchJSONData();
 const container = document.getElementById('table-container');
