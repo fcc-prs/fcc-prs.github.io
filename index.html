@@ -14,5 +14,15 @@
   <script src="script.js"></script>
   <link href="https://cdn.jsdelivr.net/gh/tofsjonas/sortable@latest/dist/sortable.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/gh/tofsjonas/sortable@latest/dist/sortable.min.js"></script>
+
+  <h1>JSON Import Example</h1>
+  <p>Check your console for imported data.</p>
+
+  <script type="module">
+    import jsonData from './sample.json' assert { type: 'json' };
+    console.log(jsonData);
+  </script>
+    
+    
 </body>
 </html>
