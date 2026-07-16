@@ -16,7 +16,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.FCC_GH_TOKEN }}
       - name: translategh
-        run: ls; python3 reformulate_json.py; mv data.json sample.jon
+        run: ls; python3 reformulate_json.py; mv data.json sample.json
       - name: update file
         run: |
           git config --global user.name gh_bot; 
