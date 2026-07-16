@@ -27,7 +27,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.FCC_GH_TOKEN }}
       - name: translategh
-        run: ls; python3 reformulate_json.py gh.py gh2.py; mv data.json sample.json; rm gh.json gh2.json
+        run: ls; python3 reformulate_json.py gh.json gh2.json; mv data.json sample.json; rm gh.json gh2.json
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v7
     
