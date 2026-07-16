@@ -13,8 +13,10 @@ jobs:
           gh api graphql -f query='query { organization(login: "key4hep") { repositories(first: 100) { nodes { name pullRequests(first: 30, states: OPEN) { nodes { number title author { login } createdAt updatedAt mergeable url } } } } } }'  > gh.json
         env:
           GH_TOKEN: ${{ secrets.FCC_GH_TOKEN }}
+      - name: Check out the repository to the runner
+        uses: actions/checkout@v6
       - name: translategh
-        run: python3 reformulate_json.py
+        run: ls; python3 reformulate_json.py
 
      
 #        env:
