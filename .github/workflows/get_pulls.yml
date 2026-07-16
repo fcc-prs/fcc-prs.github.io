@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository to the runner
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with: 
-          persist-credentials: false
-          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+          persist-credentials: true
       - name: rungh
         run: |
           gh api graphql -f query='query { organization(login: "key4hep") { repositories(first: 100) { nodes { name pullRequests(first: 30, states: OPEN) { nodes { number title author { login } createdAt updatedAt mergeable url } } } } } }'  > gh.json
@@ -27,8 +27,7 @@ jobs:
           git add sample.json
           git commit -m 'Update pull request json'
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          token: ${{ secrets.FCC_GH_TOKEN }}
-          branch: main    
+        uses: stefanzweifel/git-auto-commit-action@v7
+    
+        
 
