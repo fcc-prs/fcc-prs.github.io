@@ -2,7 +2,9 @@ import json
 import sys
 # Open the file and parse the JSON content into a dictionary/list
 datas=[]
+orgs=[]
 for f in sys.argv[1:]:
+    orgs.append(f.split('.')[0].split('/')[-1])
     with open(f, "r") as file:
         data = json.load(file)
         datas.append(data)
@@ -32,9 +34,8 @@ funcs['updatedAt']=date_only
 funcs['author']=get_login
 funcs['mergeable']=get_merge
 
-org="key4hep"
-
-for data in datas:
+for i,data in enumerate(datas):
+    org=orgs[i]
     pr_infos=data['data']['organization']['repositories']['nodes']
     for v in pr_infos:
         repo=v['name']
