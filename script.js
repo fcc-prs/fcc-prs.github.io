@@ -49,7 +49,7 @@ function fetchJSONData() {
 const jsonData = fetchJSONData();
 var jsonStr = JSON.stringify(jsonData);
 const newParagraph = document.createElement("p");
-newParagraph.textContent = jsonStr;
+newParagraph.textContent = "Hi " + jsonStr;
 document.body.appendChild(newParagraph);
 
 const container = document.getElementById('table-container');
