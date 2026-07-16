@@ -42,7 +42,7 @@ function fetchJSONData() {
            throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return response.json();  
-        }
+        })
 }  
   
 // Render the table
