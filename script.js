@@ -46,7 +46,8 @@ function fetchJSONData() {
 }  
   
 // Render the table
-const jsonData = fetchJSONData();
+//const jsonData = fetchJSONData();
+import jsonData from './sample.json' assert {type:'json'}
 var jsonStr = JSON.stringify(jsonData);
 const newParagraph = document.createElement("p");
 newParagraph.textContent = "Hi " + jsonStr;
