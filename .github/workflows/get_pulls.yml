@@ -16,12 +16,12 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.FCC_GH_TOKEN }}
       - name: translategh
-        run: ls; python3 reformulate_json.py
+        run: ls; python3 reformulate_json.py; mv data.json sample.jon
       - name: update file
         uses: wow-actions/update-file@v1
         with:
           GITHUB_TOKEN: ${{ secrets.FCC_GH_TOKEN }}
-          path: dud.json
+          path: sample.json
           content: 'Updated by update-file action'  
 
      
