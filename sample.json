@@ -755,6 +755,762 @@
             "createdAt": "2026-04-09",
             "updatedAt": "2026-04-09",
             "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4geo",
+            "number": 356,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/356'>Add dd4hep-drawer util</a>",
+            "author": "Zehvogel",
+            "createdAt": "2024-07-18",
+            "updatedAt": "2026-06-04",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4geo",
+            "number": 509,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/509'>Add CI workflow for geometry validation with histcmp</a>",
+            "author": "fredrikshaw",
+            "createdAt": "2025-09-09",
+            "updatedAt": "2026-06-04",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4geo",
+            "number": 578,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/578'>account for phi symmetry in idea calo to reduce # of volumes</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-03-14",
+            "updatedAt": "2026-07-16",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4geo",
+            "number": 590,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/590'>[WIP] Use more hierarchical drivers for FCCee trackers</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-20",
+            "updatedAt": "2026-06-04",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4geo",
+            "number": 599,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/599'>FCChh TrackerOnly layout</a>",
+            "author": "tsulaiav",
+            "createdAt": "2026-05-22",
+            "updatedAt": "2026-06-23",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4geo",
+            "number": 608,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/608'>Fix calculation of sim hit positions in turbine ecal endcap</a>",
+            "author": "varnes",
+            "createdAt": "2026-06-23",
+            "updatedAt": "2026-07-16",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4geo",
+            "number": 611,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/611'>Prerequisites for IDEA option2 PFlow study</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-07-06",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4geo",
+            "number": 612,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/612'>Adding FCC-SEED as option to all detectors and refactor IDEA/ALLEGRO vertex detector</a>",
+            "author": "armin-ilg",
+            "createdAt": "2026-07-03",
+            "updatedAt": "2026-07-15",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4geo",
+            "number": 615,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/615'>IDEA: Adding non-uniform muon-system builder and renaming muon system files</a>",
+            "author": "mahmoudali2",
+            "createdAt": "2026-07-13",
+            "updatedAt": "2026-07-13",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4MarlinWrapper",
+            "number": 236,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/pull/236'>[WiP] Make sure to always only have valid collection names</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-05-05",
+            "updatedAt": "2025-08-12",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/EDM4hep",
+            "number": 170,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/170'>[wip] add `MeasurementND` classes</a>",
+            "author": "tmadlener",
+            "createdAt": "2022-08-08",
+            "updatedAt": "2026-05-23",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/EDM4hep",
+            "number": 177,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/177'>Add some more RDF utility functionality and clean up implementation</a>",
+            "author": "tmadlener",
+            "createdAt": "2022-08-25",
+            "updatedAt": "2026-05-23",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/EDM4hep",
+            "number": 388,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/388'>Add edm4hep::Tensor type for use in ML training and inference</a>",
+            "author": "veprbl",
+            "createdAt": "2024-12-04",
+            "updatedAt": "2026-05-23",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/EDM4hep",
+            "number": 412,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/412'>Add sensor-local tracker hit</a>",
+            "author": "paulgessinger",
+            "createdAt": "2025-03-05",
+            "updatedAt": "2026-06-08",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/EDM4hep",
+            "number": 492,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/492'>Clarify expected usage of SimCalorimeterHit and CaloHitContribution</a>",
+            "author": "BrieucF",
+            "createdAt": "2026-03-30",
+            "updatedAt": "2026-05-23",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/EDM4hep",
+            "number": 502,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/502'>Build and install ArrowMapper if podio supports it</a>",
+            "author": "arnavdham",
+            "createdAt": "2026-06-29",
+            "updatedAt": "2026-07-15",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/EDM4hep",
+            "number": 505,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/505'>Prioritize podio headers in testhepmc</a>",
+            "author": "arnavdham",
+            "createdAt": "2026-07-15",
+            "updatedAt": "2026-07-15",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4FWCore",
+            "number": 245,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/245'>change python formatter to ruff</a>",
+            "author": "m-fila",
+            "createdAt": "2024-10-02",
+            "updatedAt": "2025-03-23",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4FWCore",
+            "number": 312,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/312'>[WIP] Add a service to allow retrieving collections to which an object belongs</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-05-12",
+            "updatedAt": "2025-05-21",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4FWCore",
+            "number": 352,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/352'>Upstream SequenceLoader from ILDConfig</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-10-23",
+            "updatedAt": "2025-11-21",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4FWCore",
+            "number": 364,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/364'>Add a base algorithm to create NTuples</a>",
+            "author": "jmcarcell",
+            "createdAt": "2025-12-01",
+            "updatedAt": "2025-12-23",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4FWCore",
+            "number": 372,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/372'>Add Gaudi Functional C++ Class Generator</a>",
+            "author": "ianna",
+            "createdAt": "2026-01-16",
+            "updatedAt": "2026-07-06",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4FWCore",
+            "number": 413,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
+            "author": "madbaron",
+            "createdAt": "2026-07-06",
+            "updatedAt": "2026-07-14",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-spack",
+            "number": 794,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/794'>Add a `key4hep-sim-reco` environment and build it in an image</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-09-24",
+            "updatedAt": "2026-07-11",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-spack",
+            "number": 844,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/844'>Make sure k4_local_repo points k4geo env to proper paths</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-01-22",
+            "updatedAt": "2026-07-11",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-spack",
+            "number": 869,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/869'>Make the LCG stack the default one for the nightlies</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-04-10",
+            "updatedAt": "2026-07-11",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/key4hep-doc",
+            "number": 113,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/pull/113'>Rework the landing page to not just be a TOC</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-09-27",
+            "updatedAt": "2026-04-08",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-doc",
+            "number": 122,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/pull/122'>Add a cheat sheet for reading EDM4hep vs LCIO</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-01-13",
+            "updatedAt": "2026-01-14",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4SimDelphes",
+            "number": 31,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/31'>Fix energy</a>",
+            "author": "clementhelsens",
+            "createdAt": "2021-03-15",
+            "updatedAt": "2025-09-26",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4SimDelphes",
+            "number": 148,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/148'>LHE MadGraph reweighting implementation into DelphesPythia8_EDM4HEP.</a>",
+            "author": "TomDingley",
+            "createdAt": "2025-06-17",
+            "updatedAt": "2026-07-10",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4SimDelphes",
+            "number": 158,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/158'>Propagate Pythia8 generator weight vector to EDM4hep</a>",
+            "author": "selvaggi",
+            "createdAt": "2026-07-09",
+            "updatedAt": "2026-07-15",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4Gen",
+            "number": 20,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/20'>MDIReader: Added \"photons\" and \"general\" input flags</a>",
+            "author": "aciarma",
+            "createdAt": "2022-12-16",
+            "updatedAt": "2025-03-24",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4Gen",
+            "number": 34,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/34'>Limit number of seen events</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-04-04",
+            "updatedAt": "2025-03-24",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4Gen",
+            "number": 36,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/36'>[WIP] Functional filter</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-05-28",
+            "updatedAt": "2025-03-24",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4Gen",
+            "number": 48,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/48'>Adding standard Key4hep workflows</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-05-15",
+            "updatedAt": "2025-06-17",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4SimGeant4",
+            "number": 84,
+            "title": "<a href='https://github.com/key4hep/k4SimGeant4/pull/84'>Refactor MaterialScan*_genericAngle into MaterialScan_2D</a>",
+            "author": "jmcarcell",
+            "createdAt": "2025-08-11",
+            "updatedAt": "2026-05-19",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4SimGeant4",
+            "number": 88,
+            "title": "<a href='https://github.com/key4hep/k4SimGeant4/pull/88'>Making IGeoSvc::getDetector and constantAsString const.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2025-09-14",
+            "updatedAt": "2025-09-18",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4SimGeant4",
+            "number": 94,
+            "title": "<a href='https://github.com/key4hep/k4SimGeant4/pull/94'>Layer-theta sampling fraction integration for e/gamma </a>",
+            "author": "Dr-Stubborn",
+            "createdAt": "2026-07-07",
+            "updatedAt": "2026-07-07",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4ActsTracking",
+            "number": 59,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/59'>Add a GNN based track finding pipeline</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-29",
+            "updatedAt": "2026-07-14",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4ActsTracking",
+            "number": 72,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/72'>Expand support for 4D tracking</a>",
+            "author": "jburzy",
+            "createdAt": "2026-07-04",
+            "updatedAt": "2026-07-10",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/key4hep-validation",
+            "number": 6,
+            "title": "<a href='https://github.com/key4hep/key4hep-validation/pull/6'>Proof of concept of delegating monitoring to prmon</a>",
+            "author": "graeme-a-stewart",
+            "createdAt": "2022-02-01",
+            "updatedAt": "2022-02-01",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/key4hep-dev-utils",
+            "number": 2,
+            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/2'>[wip] Add a workflow to run clang-format and push back the changes</a>",
+            "author": "tmadlener",
+            "createdAt": "2023-07-14",
+            "updatedAt": "2025-08-06",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-dev-utils",
+            "number": 12,
+            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/12'>Add infrastructure for pre-commit and default hooks</a>",
+            "author": "jmcarcell",
+            "createdAt": "2025-03-25",
+            "updatedAt": "2025-11-19",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-actions",
+            "number": 11,
+            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/11'>Add a pre-commit workflow</a>",
+            "author": "jmcarcell",
+            "createdAt": "2025-03-24",
+            "updatedAt": "2026-07-06",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-actions",
+            "number": 24,
+            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/24'>Always cache the ccache cache even if builds fail</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-11-28",
+            "updatedAt": "2026-07-06",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/key4hep-actions",
+            "number": 33,
+            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/33'>Add workflows and an example for making plots appear after a PR</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-03-18",
+            "updatedAt": "2026-07-06",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-actions",
+            "number": 48,
+            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/48'>Bump actions/cache from 5 to 6 in /cache-external-data</a>",
+            "author": "dependabot",
+            "createdAt": "2026-06-29",
+            "updatedAt": "2026-07-06",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-actions",
+            "number": 49,
+            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/49'>Bump actions/cache from 5 to 6 in /key4hep-build</a>",
+            "author": "dependabot",
+            "createdAt": "2026-06-29",
+            "updatedAt": "2026-07-06",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4RecTracker",
+            "number": 12,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/12'>added the cluster counting algorithm</a>",
+            "author": "welmeten",
+            "createdAt": "2023-11-16",
+            "updatedAt": "2026-02-18",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4RecTracker",
+            "number": 24,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/24'>[MUONDigi] Adding a digitizer of IDEA Muon system.</a>",
+            "author": "mahmoudali2",
+            "createdAt": "2024-07-25",
+            "updatedAt": "2026-02-18",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4RecTracker",
+            "number": 72,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/72'>[WIP] Simple track merging</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-11-05",
+            "updatedAt": "2026-02-18",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4RecTracker",
+            "number": 78,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/78'>IDEA DCH full digitization chain</a>",
+            "author": "muhammadsahil5030",
+            "createdAt": "2026-04-07",
+            "updatedAt": "2026-05-08",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4RecTracker",
+            "number": 80,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/80'>[TrackFit] Generalization for any Bz field direction</a>",
+            "author": "BrieucF",
+            "createdAt": "2026-04-30",
+            "updatedAt": "2026-05-15",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4RecTracker",
+            "number": 81,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
+            "author": "JonaDilg",
+            "createdAt": "2026-05-07",
+            "updatedAt": "2026-07-15",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4RecTracker",
+            "number": 84,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/84'>Add MUONdigitizer: cluster-based digitizer for IDEA muon system</a>",
+            "author": "mahmoudali2",
+            "createdAt": "2026-06-04",
+            "updatedAt": "2026-06-08",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4RecTracker",
+            "number": 85,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/85'>Tracking: Fix track reconstruction issues; Jacobian units, hit-track associations and TGeo navigator reset</a>",
+            "author": "mahmoudali2",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-07-15",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4RecTracker",
+            "number": 86,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/86'>Fix TracksFromGenParticles - build tracks only for particles that reach the calorimeter</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-07-02",
+            "updatedAt": "2026-07-10",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4RecTracker",
+            "number": 87,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/87'>Add track merging processor based on track parameter compatibility</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2026-07-08",
+            "updatedAt": "2026-07-15",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/CLDConfig",
+            "number": 44,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/44'>[WIP] TOF</a>",
+            "author": "Zehvogel",
+            "createdAt": "2024-07-16",
+            "updatedAt": "2024-07-16",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/CLDConfig",
+            "number": 70,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/70'>Add a steering file for using the native EDM4hep algorithms</a>",
+            "author": "jmcarcell",
+            "createdAt": "2025-03-28",
+            "updatedAt": "2026-07-08",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/CLDConfig",
+            "number": 74,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/74'>Allowing beamspot smearing and disabling beamspot constraints in PV fit</a>",
+            "author": "saracreates",
+            "createdAt": "2025-04-11",
+            "updatedAt": "2025-04-25",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/CLDConfig",
+            "number": 78,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/78'>[WIP] MLJetTagger</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-05-02",
+            "updatedAt": "2025-06-03",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/CLDConfig",
+            "number": 91,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/91'>Detailled digitizer</a>",
+            "author": "jessy-daniel",
+            "createdAt": "2026-02-18",
+            "updatedAt": "2026-06-10",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4Reco",
+            "number": 50,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/50'>Rebase of muon collider fork</a>",
+            "author": "aloeliger",
+            "createdAt": "2026-03-09",
+            "updatedAt": "2026-03-10",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4Reco",
+            "number": 51,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/51'>Upstream FastJet algorithm from MuonCollider fork</a>",
+            "author": "aloeliger",
+            "createdAt": "2026-03-18",
+            "updatedAt": "2026-04-24",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-tutorials",
+            "number": 30,
+            "title": "<a href='https://github.com/key4hep/key4hep-tutorials/pull/30'>[WIP] Add initial version of the cheat sheet.</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-01-13",
+            "updatedAt": "2026-01-20",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4GeneratorsConfig",
+            "number": 85,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/pull/85'>Herwig</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2026-06-09",
+            "updatedAt": "2026-07-08",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-julia-fwk",
+            "number": 79,
+            "title": "<a href='https://github.com/key4hep/key4hep-julia-fwk/pull/79'>Housekeeping: remove redundant return casts, add missing const</a>",
+            "author": "m-fila",
+            "createdAt": "2025-05-28",
+            "updatedAt": "2025-05-30",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/key4hep-julia-fwk",
+            "number": 96,
+            "title": "<a href='https://github.com/key4hep/key4hep-julia-fwk/pull/96'>use OhMyThreads insead of lock and also comment out info to test</a>",
+            "author": "Moelf",
+            "createdAt": "2025-07-30",
+            "updatedAt": "2025-08-21",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4GaudiPandora",
+            "number": 26,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/26'>Enable external clustering algorithm</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-01-20",
+            "updatedAt": "2026-07-16",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4GaudiPandora",
+            "number": 30,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/30'>Changes for ALLEGRO [WIP]</a>",
+            "author": "Archil-AD",
+            "createdAt": "2026-05-06",
+            "updatedAt": "2026-05-28",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/DDML",
+            "number": 3,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/3'>Trigger fix</a>",
+            "author": "peter-mckeown",
+            "createdAt": "2025-06-03",
+            "updatedAt": "2025-06-03",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/DDML",
+            "number": 15,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/15'>Add Par04 style Parallel World Placements</a>",
+            "author": "peter-mckeown",
+            "createdAt": "2026-03-10",
+            "updatedAt": "2026-03-10",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/DDML",
+            "number": 16,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/16'>Initialize the inference model early</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-24",
+            "updatedAt": "2026-04-28",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/DDML",
+            "number": 17,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/17'>Add a very basic runtime check setup</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-24",
+            "updatedAt": "2026-04-27",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/DDML",
+            "number": 18,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/18'>Fix CaloClouds3 configuration to use proper model for Endcap</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-24",
+            "updatedAt": "2026-04-24",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/DDML",
+            "number": 19,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/19'>Add python module to streamline configuration for downstream consumers</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-24",
+            "updatedAt": "2026-04-28",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/DDML",
+            "number": 20,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/20'>Make sure to only copy data that the model has actually returned</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-24",
+            "updatedAt": "2026-06-23",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/DDML",
+            "number": 22,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/22'>Make it possible to run inference on models that cannot be exported </a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-24",
+            "updatedAt": "2026-04-28",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4DetectorPerformance",
+            "number": 4,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/4'>Add TrackingValidation workflow for tracking performance studies</a>",
+            "author": "ArinaPon",
+            "createdAt": "2026-03-20",
+            "updatedAt": "2026-07-06",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4DetectorPerformance",
+            "number": 5,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/5'>Version 1 for PFONtuple validation tool in k4DetectorPerformance</a>",
+            "author": "keplerman417",
+            "createdAt": "2026-04-30",
+            "updatedAt": "2026-07-07",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4DetectorPerformance",
+            "number": 6,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/6'>Add Di-Photon Performance Benchmark</a>",
+            "author": "peter-mckeown",
+            "createdAt": "2026-05-06",
+            "updatedAt": "2026-05-06",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4DetectorPerformance",
+            "number": 7,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/7'>Intial commit of the dQdxAnalyser</a>",
+            "author": "ueinhaus",
+            "createdAt": "2026-07-15",
+            "updatedAt": "2026-07-16",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4CEDViewer",
+            "number": 4,
+            "title": "<a href='https://github.com/key4hep/k4CEDViewer/pull/4'>Draw vertices as hits</a>",
+            "author": "apausa",
+            "createdAt": "2026-04-09",
+            "updatedAt": "2026-04-09",
+            "mergeable": "yes"
         }
     ]
 }
