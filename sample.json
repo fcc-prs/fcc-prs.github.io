@@ -757,759 +757,588 @@
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/k4geo",
-            "number": 356,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/356'>Add dd4hep-drawer util</a>",
-            "author": "Zehvogel",
-            "createdAt": "2024-07-18",
-            "updatedAt": "2026-06-04",
+            "repo": "key4hep/FCCSW",
+            "number": 294,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/294'>[WIP] First DECal / SiW ECal commit</a>",
+            "author": "tonyPbA",
+            "createdAt": "2018-03-07",
+            "updatedAt": "2018-05-07",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCCSW",
+            "number": 457,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/457'>update computing documentation</a>",
+            "author": "clementhelsens",
+            "createdAt": "2022-11-10",
+            "updatedAt": "2022-11-16",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCCSW",
+            "number": 491,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/491'>Fix tests.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2026-03-07",
+            "updatedAt": "2026-04-17",
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/k4geo",
-            "number": 509,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/509'>Add CI workflow for geometry validation with histcmp</a>",
-            "author": "fredrikshaw",
-            "createdAt": "2025-09-09",
-            "updatedAt": "2026-06-04",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4geo",
-            "number": 578,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/578'>account for phi symmetry in idea calo to reduce # of volumes</a>",
+            "repo": "key4hep/FCCSW",
+            "number": 494,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/494'>test for FCC PR tracking project  - do not merge</a>",
             "author": "davidlange6",
-            "createdAt": "2026-03-14",
+            "createdAt": "2026-05-05",
+            "updatedAt": "2026-05-05",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/papas",
+            "number": 40,
+            "title": "<a href='https://github.com/HEP-FCC/papas/pull/40'>Papas extra documentation and tidying of examples</a>",
+            "author": "alicerobson",
+            "createdAt": "2017-12-19",
+            "updatedAt": "2017-12-19",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/fcc-tutorials",
+            "number": 162,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/162'>update doc about GitHub PR cycle</a>",
+            "author": "atolosadelgado",
+            "createdAt": "2025-03-03",
+            "updatedAt": "2025-03-07",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/fcc-tutorials",
+            "number": 179,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/179'>Update of DIRAC user workflows</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-12-04",
+            "updatedAt": "2026-06-29",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/fcc-tutorials",
+            "number": 181,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/181'>refactor tutorial structure and update for recent EDM4hep changes</a>",
+            "author": "bndikt",
+            "createdAt": "2026-05-21",
+            "updatedAt": "2026-07-10",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDIRAC",
+            "number": 5,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/5'>Fixes for productions</a>",
+            "author": "andresailer",
+            "createdAt": "2024-04-18",
+            "updatedAt": "2024-04-18",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDIRAC",
+            "number": 10,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/10'>Adding configuration for flavor tagging investigations</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-04-08",
+            "updatedAt": "2025-04-08",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDIRAC",
+            "number": 11,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/11'>Samples for Higgs Zgamma effective coupling re-analysis</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-04-10",
+            "updatedAt": "2025-04-10",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDIRAC",
+            "number": 12,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/12'>Samples for flavour tagging investigations CLD_o2_v07</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-04-28",
+            "updatedAt": "2025-04-28",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDIRAC",
+            "number": 13,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/13'>Samples for Higgs Zgamma effective coupling re-analysis (with Tagger)</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-05-05",
+            "updatedAt": "2025-05-05",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDIRAC",
+            "number": 14,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/14'>Reviving example workflows 01 and 03</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-01-21",
+            "updatedAt": "2026-01-21",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDIRAC",
+            "number": 15,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/15'>Example workflow for submitting FCCAnalyses user jobs</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-01-21",
+            "updatedAt": "2026-01-22",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDIRAC",
+            "number": 17,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/17'>[WIP] Datasets for the ZH crosssection analysis</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-04-15",
+            "updatedAt": "2026-04-21",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/fcc_datasets",
+            "number": 6,
+            "title": "<a href='https://github.com/HEP-FCC/fcc_datasets/pull/6'>Make datasets more robust</a>",
+            "author": "alicerobson",
+            "createdAt": "2017-11-21",
+            "updatedAt": "2017-12-08",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/fcc_datasets",
+            "number": 7,
+            "title": "<a href='https://github.com/HEP-FCC/fcc_datasets/pull/7'>Improvements to Condor Submissions</a>",
+            "author": "alicerobson",
+            "createdAt": "2017-11-29",
+            "updatedAt": "2017-12-13",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/fcc-edm-legacy",
+            "number": 1,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-edm-legacy/pull/1'>Update README.md</a>",
+            "author": "vvolkl",
+            "createdAt": "2019-03-07",
+            "updatedAt": "2020-01-08",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/tkLayout",
+            "number": 1,
+            "title": "<a href='https://github.com/HEP-FCC/tkLayout/pull/1'>Simplify CMake Configuration and fix compilation error with c++17</a>",
+            "author": "vvolkl",
+            "createdAt": "2019-03-07",
+            "updatedAt": "2019-03-07",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/tkLayout",
+            "number": 2,
+            "title": "<a href='https://github.com/HEP-FCC/tkLayout/pull/2'>FCChh_v4.01: add configuration files for tilted layout</a>",
+            "author": "vvolkl",
+            "createdAt": "2019-03-07",
+            "updatedAt": "2019-03-07",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/tkLayout",
+            "number": 3,
+            "title": "<a href='https://github.com/HEP-FCC/tkLayout/pull/3'>FCCee Vertex designs</a>",
+            "author": "vvolkl",
+            "createdAt": "2019-03-07",
+            "updatedAt": "2019-03-07",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 112,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/112'>Adding of a function to obtain MC indices array and a parents tuples \u2026</a>",
+            "author": "Tristan63170",
+            "createdAt": "2021-10-29",
+            "updatedAt": "2022-05-03",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 123,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/123'>Adding ghost matching jet flavour defn </a>",
+            "author": "Edler1",
+            "createdAt": "2022-03-10",
+            "updatedAt": "2022-10-03",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 136,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/136'>GM alternate implementation</a>",
+            "author": "Edler1",
+            "createdAt": "2022-04-22",
+            "updatedAt": "2022-06-17",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 208,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/208'>[CaloNtupleizer] WIP: pi0/gamma separation sensitive variables</a>",
+            "author": "BrieucF",
+            "createdAt": "2022-10-08",
+            "updatedAt": "2022-10-12",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 270,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/270'>Removing Vdt includes</a>",
+            "author": "kjvbrt",
+            "createdAt": "2023-04-12",
+            "updatedAt": "2023-05-08",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 293,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/293'>[WIP] import FCCAnalyses</a>",
+            "author": "kjvbrt",
+            "createdAt": "2023-06-29",
+            "updatedAt": "2024-04-25",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 343,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/343'>HTCondor job run directory</a>",
+            "author": "atishelmanch",
+            "createdAt": "2024-01-31",
+            "updatedAt": "2024-01-31",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 424,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/424'>[WIP] Fix  build on macos</a>",
+            "author": "vvolkl",
+            "createdAt": "2025-01-14",
+            "updatedAt": "2025-01-14",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 440,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/440'>[WIP] On-the-fly full simulation tagging</a>",
+            "author": "saracreates",
+            "createdAt": "2025-05-13",
+            "updatedAt": "2025-07-04",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 452,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/452'>Introduce PDG code enumeration</a>",
+            "author": "mattiaisgro",
+            "createdAt": "2025-06-19",
+            "updatedAt": "2025-06-19",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 493,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/493'>[fix]:461 fixed with a utility function that checks for booealn inter\u2026</a>",
+            "author": "thisismeamir",
+            "createdAt": "2025-12-10",
+            "updatedAt": "2026-02-17",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 502,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/502'>support index-based selection</a>",
+            "author": "goblirsc",
+            "createdAt": "2026-02-16",
+            "updatedAt": "2026-03-16",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 510,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/510'>feat: Migrate HTCondor submission to native Python API (Fixes #336) ;</a>",
+            "author": "gluonparticle",
+            "createdAt": "2026-03-11",
+            "updatedAt": "2026-03-19",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 512,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/512'>Fix: Update eventsProcessed lookup for ROOT 6.38 and add fallback warning</a>",
+            "author": "ShreyasBakare",
+            "createdAt": "2026-03-18",
+            "updatedAt": "2026-03-19",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 513,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/513'>Add a new method to pre-selection and final-selection. Also add some features to do_plots</a>",
+            "author": "tomfournier",
+            "createdAt": "2026-03-23",
+            "updatedAt": "2026-06-02",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 516,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/516'>Visual display of cutflow in final analysis</a>",
+            "author": "forthommel",
+            "createdAt": "2026-05-10",
+            "updatedAt": "2026-05-11",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 517,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/517'>Update Zenodo metadata: Contributors, Description, and Community</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-05-20",
+            "updatedAt": "2026-05-20",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCAnalyses",
+            "number": 520,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/520'>Draft: Combine Backend Skeleton</a>",
+            "author": "captainvogon",
+            "createdAt": "2026-06-25",
             "updatedAt": "2026-07-16",
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/k4geo",
-            "number": 590,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/590'>[WIP] Use more hierarchical drivers for FCCee trackers</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-20",
-            "updatedAt": "2026-06-04",
+            "repo": "key4hep/FCCAnalyses",
+            "number": 522,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/522'>Introduction of tau reconstruction </a>",
+            "author": "sofiagiappichini",
+            "createdAt": "2026-07-14",
+            "updatedAt": "2026-07-15",
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/k4geo",
-            "number": 599,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/599'>FCChh TrackerOnly layout</a>",
-            "author": "tsulaiav",
-            "createdAt": "2026-05-22",
-            "updatedAt": "2026-06-23",
+            "repo": "key4hep/FCCAnalyses",
+            "number": 523,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/523'>Add all-event-weights functor and pp_hhh example analysis</a>",
+            "author": "ZeynepEdaCabukoglu",
+            "createdAt": "2026-07-16",
+            "updatedAt": "2026-07-16",
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/k4geo",
-            "number": 608,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/608'>Fix calculation of sim hit positions in turbine ecal endcap</a>",
+            "repo": "key4hep/k4RecCalorimeter",
+            "number": 170,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/170'>feat: Dual crys calo digi</a>",
+            "author": "ianna",
+            "createdAt": "2025-08-07",
+            "updatedAt": "2026-04-09",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4RecCalorimeter",
+            "number": 193,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/193'>Calculate cluster direction from longitudinal samplings</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2025-11-05",
+            "updatedAt": "2026-04-28",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/k4RecCalorimeter",
+            "number": 253,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/253'>Upstream muon collider calo digis.</a>",
+            "author": "aloeliger",
+            "createdAt": "2026-04-24",
+            "updatedAt": "2026-04-29",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4RecCalorimeter",
+            "number": 264,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/264'>Update turbine ecal endcap cell position calculation and (maybe?) fix bugs in ecal barrel/endcap neighbor map creation</a>",
             "author": "varnes",
             "createdAt": "2026-06-23",
             "updatedAt": "2026-07-16",
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/k4geo",
-            "number": 611,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/611'>Prerequisites for IDEA option2 PFlow study</a>",
+            "repo": "key4hep/k4RecCalorimeter",
+            "number": 271,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/271'>IDEA o2 seeded ECAL clustering algorithms</a>",
             "author": "SanghyunKo",
-            "createdAt": "2026-06-30",
-            "updatedAt": "2026-07-06",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4geo",
-            "number": 612,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/612'>Adding FCC-SEED as option to all detectors and refactor IDEA/ALLEGRO vertex detector</a>",
-            "author": "armin-ilg",
             "createdAt": "2026-07-03",
-            "updatedAt": "2026-07-15",
+            "updatedAt": "2026-07-12",
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/k4geo",
-            "number": 615,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/615'>IDEA: Adding non-uniform muon-system builder and renaming muon system files</a>",
-            "author": "mahmoudali2",
-            "createdAt": "2026-07-13",
-            "updatedAt": "2026-07-13",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4MarlinWrapper",
-            "number": 236,
-            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/pull/236'>[WiP] Make sure to always only have valid collection names</a>",
-            "author": "tmadlener",
-            "createdAt": "2025-05-05",
-            "updatedAt": "2025-08-12",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/EDM4hep",
-            "number": 170,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/170'>[wip] add `MeasurementND` classes</a>",
-            "author": "tmadlener",
-            "createdAt": "2022-08-08",
-            "updatedAt": "2026-05-23",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/EDM4hep",
-            "number": 177,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/177'>Add some more RDF utility functionality and clean up implementation</a>",
-            "author": "tmadlener",
-            "createdAt": "2022-08-25",
-            "updatedAt": "2026-05-23",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/EDM4hep",
-            "number": 388,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/388'>Add edm4hep::Tensor type for use in ML training and inference</a>",
-            "author": "veprbl",
-            "createdAt": "2024-12-04",
-            "updatedAt": "2026-05-23",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/EDM4hep",
-            "number": 412,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/412'>Add sensor-local tracker hit</a>",
-            "author": "paulgessinger",
-            "createdAt": "2025-03-05",
-            "updatedAt": "2026-06-08",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/EDM4hep",
-            "number": 492,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/492'>Clarify expected usage of SimCalorimeterHit and CaloHitContribution</a>",
-            "author": "BrieucF",
-            "createdAt": "2026-03-30",
-            "updatedAt": "2026-05-23",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/EDM4hep",
-            "number": 502,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/502'>Build and install ArrowMapper if podio supports it</a>",
-            "author": "arnavdham",
-            "createdAt": "2026-06-29",
-            "updatedAt": "2026-07-15",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/EDM4hep",
-            "number": 505,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/505'>Prioritize podio headers in testhepmc</a>",
-            "author": "arnavdham",
-            "createdAt": "2026-07-15",
-            "updatedAt": "2026-07-15",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4FWCore",
-            "number": 245,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/245'>change python formatter to ruff</a>",
-            "author": "m-fila",
-            "createdAt": "2024-10-02",
-            "updatedAt": "2025-03-23",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4FWCore",
-            "number": 312,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/312'>[WIP] Add a service to allow retrieving collections to which an object belongs</a>",
-            "author": "tmadlener",
-            "createdAt": "2025-05-12",
-            "updatedAt": "2025-05-21",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4FWCore",
-            "number": 352,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/352'>Upstream SequenceLoader from ILDConfig</a>",
-            "author": "Zehvogel",
-            "createdAt": "2025-10-23",
-            "updatedAt": "2025-11-21",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4FWCore",
-            "number": 364,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/364'>Add a base algorithm to create NTuples</a>",
-            "author": "jmcarcell",
-            "createdAt": "2025-12-01",
-            "updatedAt": "2025-12-23",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4FWCore",
-            "number": 372,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/372'>Add Gaudi Functional C++ Class Generator</a>",
-            "author": "ianna",
-            "createdAt": "2026-01-16",
-            "updatedAt": "2026-07-06",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4FWCore",
-            "number": 413,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
-            "author": "madbaron",
-            "createdAt": "2026-07-06",
-            "updatedAt": "2026-07-14",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-spack",
-            "number": 794,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/794'>Add a `key4hep-sim-reco` environment and build it in an image</a>",
-            "author": "tmadlener",
-            "createdAt": "2025-09-24",
-            "updatedAt": "2026-07-11",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-spack",
-            "number": 844,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/844'>Make sure k4_local_repo points k4geo env to proper paths</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-01-22",
-            "updatedAt": "2026-07-11",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-spack",
-            "number": 869,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/869'>Make the LCG stack the default one for the nightlies</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-04-10",
-            "updatedAt": "2026-07-11",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/key4hep-doc",
-            "number": 113,
-            "title": "<a href='https://github.com/key4hep/key4hep-doc/pull/113'>Rework the landing page to not just be a TOC</a>",
-            "author": "tmadlener",
-            "createdAt": "2025-09-27",
-            "updatedAt": "2026-04-08",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-doc",
-            "number": 122,
-            "title": "<a href='https://github.com/key4hep/key4hep-doc/pull/122'>Add a cheat sheet for reading EDM4hep vs LCIO</a>",
-            "author": "dudarboh",
-            "createdAt": "2026-01-13",
-            "updatedAt": "2026-01-14",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4SimDelphes",
-            "number": 31,
-            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/31'>Fix energy</a>",
-            "author": "clementhelsens",
-            "createdAt": "2021-03-15",
-            "updatedAt": "2025-09-26",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4SimDelphes",
-            "number": 148,
-            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/148'>LHE MadGraph reweighting implementation into DelphesPythia8_EDM4HEP.</a>",
-            "author": "TomDingley",
-            "createdAt": "2025-06-17",
-            "updatedAt": "2026-07-10",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4SimDelphes",
-            "number": 158,
-            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/158'>Propagate Pythia8 generator weight vector to EDM4hep</a>",
-            "author": "selvaggi",
-            "createdAt": "2026-07-09",
-            "updatedAt": "2026-07-15",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4Gen",
-            "number": 20,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/20'>MDIReader: Added \"photons\" and \"general\" input flags</a>",
-            "author": "aciarma",
-            "createdAt": "2022-12-16",
-            "updatedAt": "2025-03-24",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4Gen",
-            "number": 34,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/34'>Limit number of seen events</a>",
-            "author": "kjvbrt",
-            "createdAt": "2024-04-04",
-            "updatedAt": "2025-03-24",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4Gen",
-            "number": 36,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/36'>[WIP] Functional filter</a>",
-            "author": "kjvbrt",
-            "createdAt": "2024-05-28",
-            "updatedAt": "2025-03-24",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4Gen",
-            "number": 48,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/48'>Adding standard Key4hep workflows</a>",
-            "author": "kjvbrt",
-            "createdAt": "2025-05-15",
-            "updatedAt": "2025-06-17",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4SimGeant4",
-            "number": 84,
-            "title": "<a href='https://github.com/key4hep/k4SimGeant4/pull/84'>Refactor MaterialScan*_genericAngle into MaterialScan_2D</a>",
-            "author": "jmcarcell",
-            "createdAt": "2025-08-11",
-            "updatedAt": "2026-05-19",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4SimGeant4",
-            "number": 88,
-            "title": "<a href='https://github.com/key4hep/k4SimGeant4/pull/88'>Making IGeoSvc::getDetector and constantAsString const.</a>",
-            "author": "scott-snyder",
-            "createdAt": "2025-09-14",
-            "updatedAt": "2025-09-18",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4SimGeant4",
-            "number": 94,
-            "title": "<a href='https://github.com/key4hep/k4SimGeant4/pull/94'>Layer-theta sampling fraction integration for e/gamma </a>",
-            "author": "Dr-Stubborn",
+            "repo": "key4hep/k4RecCalorimeter",
+            "number": 274,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/274'>Add GATr-based Pi0 identification</a>",
+            "author": "jacofan",
             "createdAt": "2026-07-07",
-            "updatedAt": "2026-07-07",
+            "updatedAt": "2026-07-15",
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/k4ActsTracking",
-            "number": 59,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/59'>Add a GNN based track finding pipeline</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-29",
-            "updatedAt": "2026-07-14",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4ActsTracking",
-            "number": 72,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/72'>Expand support for 4D tracking</a>",
-            "author": "jburzy",
-            "createdAt": "2026-07-04",
-            "updatedAt": "2026-07-10",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/key4hep-validation",
+            "repo": "key4hep/IDEADetectorSIM",
             "number": 6,
-            "title": "<a href='https://github.com/key4hep/key4hep-validation/pull/6'>Proof of concept of delegating monitoring to prmon</a>",
-            "author": "graeme-a-stewart",
-            "createdAt": "2022-02-01",
-            "updatedAt": "2022-02-01",
+            "title": "<a href='https://github.com/HEP-FCC/IDEADetectorSIM/pull/6'>Fixing small problem in install_standalone.sh</a>",
+            "author": "s6anloes",
+            "createdAt": "2022-05-26",
+            "updatedAt": "2022-05-26",
             "mergeable": "no"
         },
         {
-            "repo": "key4hep/key4hep-dev-utils",
-            "number": 2,
-            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/2'>[wip] Add a workflow to run clang-format and push back the changes</a>",
-            "author": "tmadlener",
-            "createdAt": "2023-07-14",
-            "updatedAt": "2025-08-06",
+            "repo": "key4hep/IDEADetectorSIM",
+            "number": 14,
+            "title": "<a href='https://github.com/HEP-FCC/IDEADetectorSIM/pull/14'>modifications to converter to EDM4Hep and to install_standalone.sh</a>",
+            "author": "lialavezzi",
+            "createdAt": "2022-12-21",
+            "updatedAt": "2022-12-21",
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/key4hep-dev-utils",
-            "number": 12,
-            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/12'>Add infrastructure for pre-commit and default hooks</a>",
-            "author": "jmcarcell",
-            "createdAt": "2025-03-25",
-            "updatedAt": "2025-11-19",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-actions",
-            "number": 11,
-            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/11'>Add a pre-commit workflow</a>",
-            "author": "jmcarcell",
-            "createdAt": "2025-03-24",
-            "updatedAt": "2026-07-06",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-actions",
-            "number": 24,
-            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/24'>Always cache the ccache cache even if builds fail</a>",
-            "author": "tmadlener",
-            "createdAt": "2025-11-28",
-            "updatedAt": "2026-07-06",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/key4hep-actions",
-            "number": 33,
-            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/33'>Add workflows and an example for making plots appear after a PR</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-03-18",
-            "updatedAt": "2026-07-06",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-actions",
-            "number": 48,
-            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/48'>Bump actions/cache from 5 to 6 in /cache-external-data</a>",
-            "author": "dependabot",
-            "createdAt": "2026-06-29",
-            "updatedAt": "2026-07-06",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-actions",
-            "number": 49,
-            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/49'>Bump actions/cache from 5 to 6 in /key4hep-build</a>",
-            "author": "dependabot",
-            "createdAt": "2026-06-29",
-            "updatedAt": "2026-07-06",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4RecTracker",
-            "number": 12,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/12'>added the cluster counting algorithm</a>",
-            "author": "welmeten",
-            "createdAt": "2023-11-16",
-            "updatedAt": "2026-02-18",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4RecTracker",
-            "number": 24,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/24'>[MUONDigi] Adding a digitizer of IDEA Muon system.</a>",
-            "author": "mahmoudali2",
-            "createdAt": "2024-07-25",
-            "updatedAt": "2026-02-18",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4RecTracker",
-            "number": 72,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/72'>[WIP] Simple track merging</a>",
-            "author": "tmadlener",
-            "createdAt": "2025-11-05",
-            "updatedAt": "2026-02-18",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4RecTracker",
-            "number": 78,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/78'>IDEA DCH full digitization chain</a>",
-            "author": "muhammadsahil5030",
-            "createdAt": "2026-04-07",
-            "updatedAt": "2026-05-08",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4RecTracker",
-            "number": 80,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/80'>[TrackFit] Generalization for any Bz field direction</a>",
-            "author": "BrieucF",
-            "createdAt": "2026-04-30",
-            "updatedAt": "2026-05-15",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4RecTracker",
-            "number": 81,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
-            "author": "JonaDilg",
-            "createdAt": "2026-05-07",
-            "updatedAt": "2026-07-15",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4RecTracker",
-            "number": 84,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/84'>Add MUONdigitizer: cluster-based digitizer for IDEA muon system</a>",
-            "author": "mahmoudali2",
-            "createdAt": "2026-06-04",
-            "updatedAt": "2026-06-08",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4RecTracker",
-            "number": 85,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/85'>Tracking: Fix track reconstruction issues; Jacobian units, hit-track associations and TGeo navigator reset</a>",
-            "author": "mahmoudali2",
-            "createdAt": "2026-06-30",
-            "updatedAt": "2026-07-15",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4RecTracker",
-            "number": 86,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/86'>Fix TracksFromGenParticles - build tracks only for particles that reach the calorimeter</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-07-02",
-            "updatedAt": "2026-07-10",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4RecTracker",
-            "number": 87,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/87'>Add track merging processor based on track parameter compatibility</a>",
-            "author": "Victor-Schwan",
-            "createdAt": "2026-07-08",
-            "updatedAt": "2026-07-15",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/CLDConfig",
-            "number": 44,
-            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/44'>[WIP] TOF</a>",
-            "author": "Zehvogel",
-            "createdAt": "2024-07-16",
-            "updatedAt": "2024-07-16",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/CLDConfig",
-            "number": 70,
-            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/70'>Add a steering file for using the native EDM4hep algorithms</a>",
-            "author": "jmcarcell",
-            "createdAt": "2025-03-28",
-            "updatedAt": "2026-07-08",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/CLDConfig",
-            "number": 74,
-            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/74'>Allowing beamspot smearing and disabling beamspot constraints in PV fit</a>",
-            "author": "saracreates",
-            "createdAt": "2025-04-11",
-            "updatedAt": "2025-04-25",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/CLDConfig",
-            "number": 78,
-            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/78'>[WIP] MLJetTagger</a>",
-            "author": "Zehvogel",
-            "createdAt": "2025-05-02",
-            "updatedAt": "2025-06-03",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/CLDConfig",
-            "number": 91,
-            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/91'>Detailled digitizer</a>",
-            "author": "jessy-daniel",
-            "createdAt": "2026-02-18",
-            "updatedAt": "2026-06-10",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4Reco",
-            "number": 50,
-            "title": "<a href='https://github.com/key4hep/k4Reco/pull/50'>Rebase of muon collider fork</a>",
-            "author": "aloeliger",
-            "createdAt": "2026-03-09",
-            "updatedAt": "2026-03-10",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4Reco",
-            "number": 51,
-            "title": "<a href='https://github.com/key4hep/k4Reco/pull/51'>Upstream FastJet algorithm from MuonCollider fork</a>",
-            "author": "aloeliger",
-            "createdAt": "2026-03-18",
-            "updatedAt": "2026-04-24",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-tutorials",
-            "number": 30,
-            "title": "<a href='https://github.com/key4hep/key4hep-tutorials/pull/30'>[WIP] Add initial version of the cheat sheet.</a>",
-            "author": "dudarboh",
-            "createdAt": "2026-01-13",
-            "updatedAt": "2026-01-20",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4GeneratorsConfig",
-            "number": 85,
-            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/pull/85'>Herwig</a>",
-            "author": "dirkzerwas",
-            "createdAt": "2026-06-09",
-            "updatedAt": "2026-07-08",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-julia-fwk",
-            "number": 79,
-            "title": "<a href='https://github.com/key4hep/key4hep-julia-fwk/pull/79'>Housekeeping: remove redundant return casts, add missing const</a>",
-            "author": "m-fila",
-            "createdAt": "2025-05-28",
-            "updatedAt": "2025-05-30",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/key4hep-julia-fwk",
-            "number": 96,
-            "title": "<a href='https://github.com/key4hep/key4hep-julia-fwk/pull/96'>use OhMyThreads insead of lock and also comment out info to test</a>",
-            "author": "Moelf",
-            "createdAt": "2025-07-30",
-            "updatedAt": "2025-08-21",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4GaudiPandora",
-            "number": 26,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/26'>Enable external clustering algorithm</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-01-20",
-            "updatedAt": "2026-07-16",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4GaudiPandora",
-            "number": 30,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/30'>Changes for ALLEGRO [WIP]</a>",
-            "author": "Archil-AD",
-            "createdAt": "2026-05-06",
-            "updatedAt": "2026-05-28",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/DDML",
-            "number": 3,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/3'>Trigger fix</a>",
-            "author": "peter-mckeown",
-            "createdAt": "2025-06-03",
-            "updatedAt": "2025-06-03",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/DDML",
+            "repo": "key4hep/FCCDetectors",
             "number": 15,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/15'>Add Par04 style Parallel World Placements</a>",
-            "author": "peter-mckeown",
-            "createdAt": "2026-03-10",
-            "updatedAt": "2026-03-10",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/DDML",
-            "number": 16,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/16'>Initialize the inference model early</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-24",
-            "updatedAt": "2026-04-28",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/DDML",
-            "number": 17,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/17'>Add a very basic runtime check setup</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-24",
-            "updatedAt": "2026-04-27",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/DDML",
-            "number": 18,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/18'>Fix CaloClouds3 configuration to use proper model for Endcap</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-24",
-            "updatedAt": "2026-04-24",
+            "title": "<a href='https://github.com/HEP-FCC/FCCDetectors/pull/15'>[FCCeeCLD] Remove the hardcoded SD type</a>",
+            "author": "zaborowska",
+            "createdAt": "2021-12-15",
+            "updatedAt": "2022-03-14",
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/DDML",
+            "repo": "key4hep/FCCDetectors",
+            "number": 35,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDetectors/pull/35'>Including IDEA vertex detector (that is not just a scaled copy of the CLD one)</a>",
+            "author": "armin-ilg",
+            "createdAt": "2022-12-15",
+            "updatedAt": "2023-05-25",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDetectors",
+            "number": 60,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDetectors/pull/60'>ECalInclinedFCCee updates</a>",
+            "author": "faltovaj",
+            "createdAt": "2023-08-31",
+            "updatedAt": "2023-09-26",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDetectors",
+            "number": 65,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDetectors/pull/65'>Fixing overlaps in LAr ECAL inclined</a>",
+            "author": "faltovaj",
+            "createdAt": "2023-12-06",
+            "updatedAt": "2023-12-06",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDetectors",
+            "number": 66,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDetectors/pull/66'>PreShower.xml</a>",
+            "author": "Ns921",
+            "createdAt": "2023-12-22",
+            "updatedAt": "2024-01-26",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCCDetectors",
+            "number": 67,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDetectors/pull/67'>A first draft of the Detailed version of the muon system (barrel + endcap in the same builder)</a>",
+            "author": "mahmoudali2",
+            "createdAt": "2024-02-02",
+            "updatedAt": "2024-02-02",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/FCC-config",
+            "number": 202,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/202'>pythia card for different alphaS value for Z-->light jets at Z-pole (NLO)</a>",
+            "author": "panwarlsweet",
+            "createdAt": "2024-09-13",
+            "updatedAt": "2024-09-18",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCC-config",
+            "number": 230,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/230'>add flag to run pandora</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2025-01-15",
+            "updatedAt": "2025-06-30",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCC-config",
+            "number": 368,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/368'>Refactor and workflow change</a>",
+            "author": "TimLdl",
+            "createdAt": "2026-07-13",
+            "updatedAt": "2026-07-16",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/FCC-config",
+            "number": 369,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/369'>Configure indexing service for ALLEGRO.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2026-07-14",
+            "updatedAt": "2026-07-15",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/root2gltf",
+            "number": 2,
+            "title": "<a href='https://github.com/HEP-FCC/root2gltf/pull/2'>Full conversion</a>",
+            "author": "abbyxh",
+            "createdAt": "2024-07-30",
+            "updatedAt": "2026-06-02",
+            "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/phoenix-at-fcc",
+            "number": 26,
+            "title": "<a href='https://github.com/HEP-FCC/phoenix-at-fcc/pull/26'>Host GLTF files locally</a>",
+            "author": "apausa",
+            "createdAt": "2026-07-15",
+            "updatedAt": "2026-07-15",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/bib-studies",
             "number": 19,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/19'>Add python module to streamline configuration for downstream consumers</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-24",
-            "updatedAt": "2026-04-28",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/DDML",
-            "number": 20,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/20'>Make sure to only copy data that the model has actually returned</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-24",
-            "updatedAt": "2026-06-23",
+            "title": "<a href='https://github.com/HEP-FCC/bib-studies/pull/19'>Fixes for new versions of vertex and silicon wrapper and improvements for handling of SR samples (with weights)</a>",
+            "author": "armin-ilg",
+            "createdAt": "2026-06-15",
+            "updatedAt": "2026-06-15",
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/DDML",
-            "number": 22,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/22'>Make it possible to run inference on models that cannot be exported </a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-24",
-            "updatedAt": "2026-04-28",
-            "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/k4DetectorPerformance",
-            "number": 4,
-            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/4'>Add TrackingValidation workflow for tracking performance studies</a>",
-            "author": "ArinaPon",
-            "createdAt": "2026-03-20",
-            "updatedAt": "2026-07-06",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4DetectorPerformance",
-            "number": 5,
-            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/5'>Version 1 for PFONtuple validation tool in k4DetectorPerformance</a>",
-            "author": "keplerman417",
-            "createdAt": "2026-04-30",
-            "updatedAt": "2026-07-07",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4DetectorPerformance",
-            "number": 6,
-            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/6'>Add Di-Photon Performance Benchmark</a>",
-            "author": "peter-mckeown",
-            "createdAt": "2026-05-06",
-            "updatedAt": "2026-05-06",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4DetectorPerformance",
-            "number": 7,
-            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/7'>Intial commit of the dQdxAnalyser</a>",
-            "author": "ueinhaus",
+            "repo": "key4hep/ALLEGRO",
+            "number": 55,
+            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/55'>add instructions for legacy BDT-based photon ID</a>",
+            "author": "giovannimarchiori",
             "createdAt": "2026-07-15",
             "updatedAt": "2026-07-16",
             "mergeable": "yes"
         },
         {
-            "repo": "key4hep/k4CEDViewer",
-            "number": 4,
-            "title": "<a href='https://github.com/key4hep/k4CEDViewer/pull/4'>Draw vertices as hits</a>",
-            "author": "apausa",
-            "createdAt": "2026-04-09",
-            "updatedAt": "2026-04-09",
+            "repo": "key4hep/fcc-physics-events",
+            "number": 2,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-physics-events/pull/2'>feat: add share link button and auto-expand single search results</a>",
+            "author": "afihasan",
+            "createdAt": "2026-07-13",
+            "updatedAt": "2026-07-15",
             "mergeable": "yes"
         }
     ]
