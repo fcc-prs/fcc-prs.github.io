@@ -1,9 +1,12 @@
 import json
-
+import sys
 # Open the file and parse the JSON content into a dictionary/list
-with open("gh.json", "r") as file:
-    data = json.load(file)
-
+datas=[]
+for f in sys.argv[1:]:
+    with open(f, "r") as file:
+        data = json.load(file)
+        datas.append(data)
+        
 pr_list=[]
 
 def dummy(s):
@@ -31,20 +34,20 @@ funcs['mergeable']=get_merge
 
 org="key4hep"
 
-pr_infos=data['data']['organization']['repositories']['nodes']
-
-for v in pr_infos:
-    repo=v['name']
-    prs=v['pullRequests']['nodes']
-    for pr in prs:
-        cols={}
-        cols['repo']=org+"/"+repo
-        for key in wanted_keys:
-            if key != 'url':
-                cols[key]=funcs[key](pr[key])
-            else:
-                cols['title']="<a href='"+pr['url']+"'>"+cols['title']+"</a>"
-        pr_list.append(cols)
+for data in datas:
+    pr_infos=data['data']['organization']['repositories']['nodes']
+    for v in pr_infos:
+        repo=v['name']
+        prs=v['pullRequests']['nodes']
+        for pr in prs:
+            cols={}
+            cols['repo']=org+"/"+repo
+            for key in wanted_keys:
+                if key != 'url':
+                    cols[key]=funcs[key](pr[key])
+                else:
+                    cols['title']="<a href='"+pr['url']+"'>"+cols['title']+"</a>"
+            pr_list.append(cols)
 
 json_list={}
 json_list['data']=pr_list
