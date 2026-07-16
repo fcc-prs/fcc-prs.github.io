@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v6
+        with: 
+          persist-credentials: false
+          fetch-depth: 0
       - name: rungh
         run: |
           gh api graphql -f query='query { organization(login: "key4hep") { repositories(first: 100) { nodes { name pullRequests(first: 30, states: OPEN) { nodes { number title author { login } createdAt updatedAt mergeable url } } } } } }'  > gh.json
