@@ -48,6 +48,9 @@ function fetchJSONData() {
 // Render the table
 const jsonData = fetchJSONData();
 var jsonStr = JSON.stringify(jsonData);
+const newParagraph = document.createElement("p");
+newParagraph.textContent = jsonStr;
+document.body.appendChild(newParagraph);
 
 const container = document.getElementById('table-container');
 const table = generateTable(jsonData.data);
