@@ -34,24 +34,12 @@ function generateTable(data) {
   });
   return table;
 }
-
-function fetchJSONData() {
-   fetch('./sample.json')
-        .then(response => {
-        if (!response.ok) {
-           throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();  
-        })
-}  
   
-// Render the table
-//const jsonData = fetchJSONData();
 import jsonData from './sample.json' with {type:'json'}
-var jsonStr = JSON.stringify(jsonData);
-const newParagraph = document.createElement("p");
-newParagraph.textContent = "Hi " + jsonStr;
-document.body.appendChild(newParagraph);
+//var jsonStr = JSON.stringify(jsonData);
+//const newParagraph = document.createElement("p");
+//newParagraph.textContent = "Hi " + jsonStr;
+//document.body.appendChild(newParagraph);
 
 const container = document.getElementById('table-container');
 const table = generateTable(jsonData.data);
