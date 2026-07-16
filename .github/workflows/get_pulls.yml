@@ -23,8 +23,8 @@ jobs:
       - name: rungh
         run: |
           gh extension install --force heaths/gh-merge-json
-          gh api graphql -f --paginate query='query($endCursor: String) { organization(login: "key4hep") { repositories(first: 100, after: $endCursor) { nodes { name pullRequests(first: 30 states: OPEN) { nodes { number title author { login } createdAt updatedAt mergeable url } } } pageInfo {hasNextPage, endCursor} } } }' | gh merge-json > key4hep.json
-          gh api graphql -f --paginate query='query($endCursor: String) { organization(login: "hep-fcc") { repositories(first: 100, after: $endCursor) { nodes { name pullRequests(first: 30 states: OPEN) { nodes { number title author { login } createdAt updatedAt mergeable url } } } pageInfo {hasNextPage, endCursor} } } }' | gh merge-json > hep-fcc.json
+          gh api graphql --paginate -f query='query($endCursor: String) { organization(login: "key4hep") { repositories(first: 100, after: $endCursor) { nodes { name pullRequests(first: 30 states: OPEN) { nodes { number title author { login } createdAt updatedAt mergeable url } } } pageInfo {hasNextPage, endCursor} } } }' | gh merge-json > key4hep.json
+          gh api graphql --paginate -f query='query($endCursor: String) { organization(login: "hep-fcc") { repositories(first: 100, after: $endCursor) { nodes { name pullRequests(first: 30 states: OPEN) { nodes { number title author { login } createdAt updatedAt mergeable url } } } pageInfo {hasNextPage, endCursor} } } }' | gh merge-json > hep-fcc.json
         env:
           GH_TOKEN: ${{ secrets.FCC_GH_TOKEN }}
       - name: translategh
