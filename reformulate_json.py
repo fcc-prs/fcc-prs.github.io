@@ -40,7 +40,10 @@ for v in pr_infos:
         cols={}
         cols['repo']=org+"/"+repo
         for key in wanted_keys:
-            cols[key]=funcs[key](pr[key])
+            if key != 'url':
+                cols[key]=funcs[key](pr[key])
+            else:
+                cols['title']="<a href='"+pr['url']+"'>"+cols['title']+"</a>"
         pr_list.append(cols)
 
 json_list={}
