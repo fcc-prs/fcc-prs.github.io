@@ -14,14 +14,17 @@ function generateTable(data) {
   table.classList.add('sortable');
   
   // Generate table headers
-  const headerRow = document.createElement('tr');
+  const thead = table.createTHead();
+  const headerRow = thead.insertRow();
+
   const keys = Object.keys(data[0]); // Get keys from the first object
-  keys.forEach(key => {
-    const th = document.createElement('th');
-    th.textContent = key.charAt(0).toUpperCase() + key.slice(1); // Capitalize header
+  keys.forEach(headerText => {
+    const th = document.createElement("th");
+    th.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+    //th.textContent = headerText;
     headerRow.appendChild(th);
   });
-  table.appendChild(headerRow);
+ 
   // Generate table rows
   data.forEach(item => {
     const row = document.createElement('tr');
