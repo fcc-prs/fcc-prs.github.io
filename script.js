@@ -34,8 +34,23 @@ function generateTable(data) {
   });
   return table;
 }
+
+function fetchJSONData() {
+   fetch('./sample.json')
+        .then(response => {
+        if (!response.ok) {
+           throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();  
+   })
+   .then(data => console.log(data))  
+   .catch(error => console.error('Failed to fetch data:', error)); 
+}
+           
+  
+
 // Render the table
-import jsonData from './sample.json' assert { type: 'json' };
+const jsonData = fetchJSONData();
 const container = document.getElementById('table-container');
 const table = generateTable(jsonData.data);
 if (table) container.appendChild(table);
