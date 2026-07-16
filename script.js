@@ -20,7 +20,7 @@ function generateTable(data) {
   const keys = Object.keys(data[0]); // Get keys from the first object
   keys.forEach(headerText => {
     const th = document.createElement("th");
-    th.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+    th.textContent = headerText.charAt(0).toUpperCase() + headerText.slice(1);
     //th.textContent = headerText;
     headerRow.appendChild(th);
   });
