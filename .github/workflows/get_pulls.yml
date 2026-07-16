@@ -33,6 +33,8 @@ jobs:
           } \
           } \
           }'  > gh.json
+          env:
+            GH_TOKEN: ${{ secrets.GITHUB_GH_TOKEN }}
       - name: translategh
         run: python3 reformulate_json.py
 
