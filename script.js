@@ -1,5 +1,5 @@
 // Example JSON data
-const jsonData = {
+const jsonData2 = {
   "data": [
     { "name": "Alice", "age": 25, "city": "Paris" },
     { "name": "Bob", "age": 30, "city": "London" },
@@ -35,6 +35,7 @@ function generateTable(data) {
   return table;
 }
 // Render the table
+import jsonData from './sample.json' assert { type: 'json' };
 const container = document.getElementById('table-container');
 const table = generateTable(jsonData.data);
 if (table) container.appendChild(table);
