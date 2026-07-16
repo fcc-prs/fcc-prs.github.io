@@ -25,7 +25,7 @@ function generateTable(data) {
     keys.forEach(key => {
       //const th = document.createElement("th");
       const td = document.createElement('td');
-      td.textContent = item[key] || ""; // Fill empty fields with blank
+      td.innerHTML = item[key] || ""; // Fill empty fields with blank
       row.appendChild(td);
     });
     tbody.appendChild(row);
