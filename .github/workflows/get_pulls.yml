@@ -22,8 +22,8 @@ jobs:
           persist-credentials: true
       - name: rungh
         run: |
-          gh api graphql -f query='query { organization(login: "key4hep") { repositories { nodes { name pullRequests(states: OPEN) { nodes { number title author { login } createdAt updatedAt mergeable url } } } } } }'  > key4hep.json
-          gh api graphql -f query='query { organization(login: "hep-fcc") { repositories { nodes { name pullRequests(states: OPEN) { nodes { number title author { login } createdAt updatedAt mergeable url } } } } } }'  > hep-fcc.json
+          gh api graphql -f query='query { organization(login: "key4hep") { repositories(first: 100) { nodes { name pullRequests(first: 30 states: OPEN) { nodes { number title author { login } createdAt updatedAt mergeable url } } } } } }'  > key4hep.json
+          gh api graphql -f query='query { organization(login: "hep-fcc") { repositories(first: 100) { nodes { name pullRequests(first: 30 states: OPEN) { nodes { number title author { login } createdAt updatedAt mergeable url } } } } } }'  > hep-fcc.json
         env:
           GH_TOKEN: ${{ secrets.FCC_GH_TOKEN }}
       - name: translategh
