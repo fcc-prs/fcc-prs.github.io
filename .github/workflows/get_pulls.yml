@@ -23,8 +23,9 @@ jobs:
           git config --global user.email "gh_bot@users.noreply.github.com"
           git add sample.json
           git commit -m 'Update pull request json'
-          git push
-          
-#        env:
-#          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          ISSUE: ${{ github.event.issue.html_url }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          token: ${{ secrets.FCC_GH_TOKEN }}
+          branch: main    
+
