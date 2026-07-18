@@ -141,7 +141,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/502'>Build and install ArrowMapper if podio supports it</a>",
             "author": "arnavdham",
             "createdAt": "2026-06-29",
-            "updatedAt": "2026-07-15",
+            "updatedAt": "2026-07-17",
             "mergeable": "yes"
         },
         {
@@ -150,7 +150,25 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/505'>Prioritize podio headers in testhepmc</a>",
             "author": "arnavdham",
             "createdAt": "2026-07-15",
-            "updatedAt": "2026-07-15",
+            "updatedAt": "2026-07-17",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/EDM4hep",
+            "number": 506,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/506'>Group small and related tests together</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-07-17",
+            "updatedAt": "2026-07-17",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/EDM4hep",
+            "number": 507,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/507'>Use HepMC3::HepMC3 imported target instead of old-style variables</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-07-17",
+            "updatedAt": "2026-07-17",
             "mergeable": "yes"
         },
         {
@@ -233,6 +251,33 @@
             "createdAt": "2026-04-10",
             "updatedAt": "2026-07-11",
             "mergeable": "no"
+        },
+        {
+            "repo": "key4hep/key4hep-spack",
+            "number": 891,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/891'>Bump docker/metadata-action from 5.10.0 to 6.2.0</a>",
+            "author": "dependabot",
+            "createdAt": "2026-07-18",
+            "updatedAt": "2026-07-18",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-spack",
+            "number": 892,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/892'>Bump docker/build-push-action from 6.19.2 to 7.3.0</a>",
+            "author": "dependabot",
+            "createdAt": "2026-07-18",
+            "updatedAt": "2026-07-18",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/key4hep-spack",
+            "number": 893,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/893'>Bump pre-commit/action from 3.0.0 to 3.0.1</a>",
+            "author": "dependabot",
+            "createdAt": "2026-07-18",
+            "updatedAt": "2026-07-18",
+            "mergeable": "yes"
         },
         {
             "repo": "key4hep/key4hep-doc",
@@ -501,7 +546,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/85'>Tracking: Fix track reconstruction issues; Jacobian units, hit-track associations and TGeo navigator reset</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-06-30",
-            "updatedAt": "2026-07-15",
+            "updatedAt": "2026-07-17",
             "mergeable": "yes"
         },
         {
@@ -519,7 +564,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/87'>Add track merging processor based on track parameter compatibility</a>",
             "author": "Victor-Schwan",
             "createdAt": "2026-07-08",
-            "updatedAt": "2026-07-15",
+            "updatedAt": "2026-07-17",
             "mergeable": "yes"
         },
         {
@@ -1110,10 +1155,10 @@
         {
             "repo": "hep-fcc/FCCAnalyses",
             "number": 520,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/520'>Draft: Combine Backend Skeleton</a>",
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/520'>Implement integrated CMS Combine backend</a>",
             "author": "captainvogon",
             "createdAt": "2026-06-25",
-            "updatedAt": "2026-07-16",
+            "updatedAt": "2026-07-17",
             "mergeable": "yes"
         },
         {
@@ -1132,6 +1177,15 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-16",
             "updatedAt": "2026-07-16",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "hep-fcc/FCCAnalyses",
+            "number": 524,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/524'>Updated pipeline to run on the **pre_summer2026** production</a>",
+            "author": "selvaggi",
+            "createdAt": "2026-07-17",
+            "updatedAt": "2026-07-17",
             "mergeable": "yes"
         },
         {
@@ -1267,7 +1321,7 @@
             "author": "panwarlsweet",
             "createdAt": "2024-09-13",
             "updatedAt": "2024-09-18",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "hep-fcc/FCC-config",
@@ -1284,7 +1338,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/368'>Refactor and workflow change</a>",
             "author": "TimLdl",
             "createdAt": "2026-07-13",
-            "updatedAt": "2026-07-16",
+            "updatedAt": "2026-07-17",
             "mergeable": "yes"
         },
         {
@@ -1306,15 +1360,6 @@
             "mergeable": "no"
         },
         {
-            "repo": "hep-fcc/phoenix-at-fcc",
-            "number": 26,
-            "title": "<a href='https://github.com/HEP-FCC/phoenix-at-fcc/pull/26'>Host GLTF files locally</a>",
-            "author": "apausa",
-            "createdAt": "2026-07-15",
-            "updatedAt": "2026-07-15",
-            "mergeable": "yes"
-        },
-        {
             "repo": "hep-fcc/bib-studies",
             "number": 19,
             "title": "<a href='https://github.com/HEP-FCC/bib-studies/pull/19'>Fixes for new versions of vertex and silicon wrapper and improvements for handling of SR samples (with weights)</a>",
@@ -1325,11 +1370,11 @@
         },
         {
             "repo": "hep-fcc/ALLEGRO",
-            "number": 55,
-            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/55'>add instructions for legacy BDT-based photon ID</a>",
+            "number": 56,
+            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/56'>migrate to ALLEGRO the scripts in LAr_scripts</a>",
             "author": "giovannimarchiori",
-            "createdAt": "2026-07-15",
-            "updatedAt": "2026-07-16",
+            "createdAt": "2026-07-17",
+            "updatedAt": "2026-07-17",
             "mergeable": "yes"
         },
         {
