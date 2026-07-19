@@ -232,7 +232,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "key4hep/key4hep-spack",
@@ -241,7 +241,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "key4hep/key4hep-spack",
@@ -251,33 +251,6 @@
             "createdAt": "2026-04-10",
             "updatedAt": "2026-07-11",
             "mergeable": "no"
-        },
-        {
-            "repo": "key4hep/key4hep-spack",
-            "number": 891,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/891'>Bump docker/metadata-action from 5.10.0 to 6.2.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-07-18",
-            "updatedAt": "2026-07-18",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-spack",
-            "number": 892,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/892'>Bump docker/build-push-action from 6.19.2 to 7.3.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-07-18",
-            "updatedAt": "2026-07-18",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/key4hep-spack",
-            "number": 893,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/893'>Bump pre-commit/action from 3.0.0 to 3.0.1</a>",
-            "author": "dependabot",
-            "createdAt": "2026-07-18",
-            "updatedAt": "2026-07-18",
-            "mergeable": "yes"
         },
         {
             "repo": "key4hep/key4hep-doc",
@@ -682,6 +655,15 @@
             "author": "Archil-AD",
             "createdAt": "2026-05-06",
             "updatedAt": "2026-05-28",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4PFHitML",
+            "number": 1,
+            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/1'>Fix ci cpp warnings</a>",
+            "author": "herrmannlena",
+            "createdAt": "2026-07-18",
+            "updatedAt": "2026-07-18",
             "mergeable": "yes"
         },
         {
@@ -1321,7 +1303,7 @@
             "author": "panwarlsweet",
             "createdAt": "2024-09-13",
             "updatedAt": "2024-09-18",
-            "mergeable": "no"
+            "mergeable": "yes"
         },
         {
             "repo": "hep-fcc/FCC-config",
