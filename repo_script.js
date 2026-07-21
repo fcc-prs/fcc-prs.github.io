@@ -27,7 +27,11 @@ function generateRepoTable(data) {
 }
  
 import jsonData from './repo_data.json' with {type:'json'}
-
+console.log("loaded data");
 const container = document.getElementById('repo-table-container');
+console.log("got container - calling function");
 const table = generateRepoTable(jsonData.data);
-if (table) container.appendChild(table);
+if (table) { 
+  console.log("Adding table");
+  container.appendChild(table);
+}
