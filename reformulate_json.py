@@ -41,7 +41,7 @@ def get_assignees(s):
     for i,node in enumerate(node_info):
         if i!=0:
             o=o+' \n'
-        o=o+node['id']
+        o=o+node['login']
     return o
     
 wanted_keys=['number', 'title', 'author', 'createdAt', 'updatedAt', 'mergeable', 'url', 'labels', 'assignees']
