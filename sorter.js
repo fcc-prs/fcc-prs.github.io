@@ -10,6 +10,7 @@ function sorter() {
   for (i = 0; i < tr.length; i++) {
     tds = tr[i].getElementsByTagName("td") //[0];
     matches=0;
+    if ( tds.length == 0 ) { matches = 1; } //header
     for (j = 0; j< tds.length; j++ ) {
       td = tds[j];
       if (td) {
