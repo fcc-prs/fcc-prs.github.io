@@ -24,7 +24,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/578'>account for phi symmetry in idea calo to reduce # of volumes</a>",
             "author": "davidlange6",
             "createdAt": "2026-03-14",
-            "updatedAt": "2026-07-16",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -51,7 +51,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/608'>Fix calculation of sim hit positions in turbine ecal endcap</a>",
             "author": "varnes",
             "createdAt": "2026-06-23",
-            "updatedAt": "2026-07-16",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -69,7 +69,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/612'>Adding FCC-SEED as option to all detectors and refactor IDEA/ALLEGRO vertex detector</a>",
             "author": "armin-ilg",
             "createdAt": "2026-07-03",
-            "updatedAt": "2026-07-15",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -79,6 +79,15 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-07-13",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "key4hep/k4geo",
+            "number": 618,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/618'>Revamped README</a>",
+            "author": "s6anloes",
+            "createdAt": "2026-07-20",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -141,16 +150,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/502'>Build and install ArrowMapper if podio supports it</a>",
             "author": "arnavdham",
             "createdAt": "2026-06-29",
-            "updatedAt": "2026-07-17",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/EDM4hep",
-            "number": 505,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/505'>Prioritize podio headers in testhepmc</a>",
-            "author": "arnavdham",
-            "createdAt": "2026-07-15",
-            "updatedAt": "2026-07-17",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -223,7 +223,7 @@
             "author": "madbaron",
             "createdAt": "2026-07-06",
             "updatedAt": "2026-07-14",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "key4hep/key4hep-spack",
@@ -232,7 +232,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeable": "no"
+            "mergeable": "yes"
         },
         {
             "repo": "key4hep/key4hep-spack",
@@ -241,7 +241,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeable": "no"
+            "mergeable": "yes"
         },
         {
             "repo": "key4hep/key4hep-spack",
@@ -537,7 +537,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/87'>Add track merging processor based on track parameter compatibility</a>",
             "author": "Victor-Schwan",
             "createdAt": "2026-07-08",
-            "updatedAt": "2026-07-17",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -555,7 +555,7 @@
             "title": "<a href='https://github.com/key4hep/CLDConfig/pull/70'>Add a steering file for using the native EDM4hep algorithms</a>",
             "author": "jmcarcell",
             "createdAt": "2025-03-28",
-            "updatedAt": "2026-07-08",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -772,15 +772,6 @@
             "author": "apausa",
             "createdAt": "2026-04-09",
             "updatedAt": "2026-04-09",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "key4hep/k4Bench",
-            "number": 106,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/106'>feature(bot): Add PR blamer bot</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-07-19",
-            "updatedAt": "2026-07-19",
             "mergeable": "yes"
         },
         {
@@ -1015,7 +1006,7 @@
             "author": "BrieucF",
             "createdAt": "2022-10-08",
             "updatedAt": "2022-10-12",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "hep-fcc/FCCAnalyses",
@@ -1033,7 +1024,7 @@
             "author": "kjvbrt",
             "createdAt": "2023-06-29",
             "updatedAt": "2024-04-25",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "hep-fcc/FCCAnalyses",
@@ -1051,7 +1042,7 @@
             "author": "vvolkl",
             "createdAt": "2025-01-14",
             "updatedAt": "2025-01-14",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "hep-fcc/FCCAnalyses",
@@ -1069,7 +1060,7 @@
             "author": "mattiaisgro",
             "createdAt": "2025-06-19",
             "updatedAt": "2025-06-19",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "hep-fcc/FCCAnalyses",
@@ -1078,7 +1069,7 @@
             "author": "thisismeamir",
             "createdAt": "2025-12-10",
             "updatedAt": "2026-02-17",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "hep-fcc/FCCAnalyses",
@@ -1087,7 +1078,7 @@
             "author": "goblirsc",
             "createdAt": "2026-02-16",
             "updatedAt": "2026-03-16",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "hep-fcc/FCCAnalyses",
@@ -1104,7 +1095,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/512'>Fix: Update eventsProcessed lookup for ROOT 6.38 and add fallback warning</a>",
             "author": "ShreyasBakare",
             "createdAt": "2026-03-18",
-            "updatedAt": "2026-03-19",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -1123,16 +1114,7 @@
             "author": "forthommel",
             "createdAt": "2026-05-10",
             "updatedAt": "2026-05-11",
-            "mergeable": "yes"
-        },
-        {
-            "repo": "hep-fcc/FCCAnalyses",
-            "number": 517,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/517'>Update Zenodo metadata: Contributors, Description, and Community</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-05-20",
-            "updatedAt": "2026-05-20",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "hep-fcc/FCCAnalyses",
@@ -1141,7 +1123,7 @@
             "author": "captainvogon",
             "createdAt": "2026-06-25",
             "updatedAt": "2026-07-17",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "hep-fcc/FCCAnalyses",
@@ -1149,7 +1131,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/522'>Introduction of tau reconstruction </a>",
             "author": "sofiagiappichini",
             "createdAt": "2026-07-14",
-            "updatedAt": "2026-07-15",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -1159,7 +1141,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-16",
             "updatedAt": "2026-07-19",
-            "mergeable": "yes"
+            "mergeable": "no"
         },
         {
             "repo": "hep-fcc/FCCAnalyses",
@@ -1168,6 +1150,24 @@
             "author": "selvaggi",
             "createdAt": "2026-07-17",
             "updatedAt": "2026-07-17",
+            "mergeable": "no"
+        },
+        {
+            "repo": "hep-fcc/FCCAnalyses",
+            "number": 525,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/525'>[pre-edm4hep1] Drop tracks with non positive-definite covariance before vertex fitting</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-07-20",
+            "updatedAt": "2026-07-20",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "hep-fcc/FCCAnalyses",
+            "number": 531,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/531'>Add --output-format option for TTree and RNTuple output</a>",
+            "author": "deimantae",
+            "createdAt": "2026-07-20",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -1221,7 +1221,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/274'>Add GATr-based Pi0 identification</a>",
             "author": "jacofan",
             "createdAt": "2026-07-07",
-            "updatedAt": "2026-07-15",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -1347,7 +1347,7 @@
             "title": "<a href='https://github.com/HEP-FCC/bib-studies/pull/19'>Fixes for new versions of vertex and silicon wrapper and improvements for handling of SR samples (with weights)</a>",
             "author": "armin-ilg",
             "createdAt": "2026-06-15",
-            "updatedAt": "2026-06-15",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         },
         {
@@ -1366,6 +1366,15 @@
             "author": "afihasan",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-07-15",
+            "mergeable": "yes"
+        },
+        {
+            "repo": "hep-fcc/fcc-physics-events",
+            "number": 3,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-physics-events/pull/3'>Feature/config url generator cards</a>",
+            "author": "afihasan",
+            "createdAt": "2026-07-20",
+            "updatedAt": "2026-07-20",
             "mergeable": "yes"
         }
     ]
