@@ -3,8 +3,8 @@ function generateTable(data) {
   if (!data || data.length === 0) return "No data available.";
   // Create the table element
   const table = document.createElement('table');
-  table.classList.add('sortable');
-  table.classList.add('searchable');
+  table.classList.add('sortable searchable');
+  //table.classList.add('searchable');
   
   // Generate table headers
   const thead = table.createTHead();
