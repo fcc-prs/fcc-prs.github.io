@@ -8,13 +8,14 @@ function generateTable(data) {
   var i=0;
   var isFirst=1;
   // Generate table rows
+  var row = tbody.insertRow();
   data.forEach(item => {
     if (i==0 ) {
       if ( isFirst==0 ) {
         tbody.appendChild(row);
+        row = tbody.insertRow();
       }
-      else{ isFirst=0; }
-      const row = tbody.insertRow();
+      else{ isFirst=0; } 
     }
     const td = document.createElement('td');
     td.innerHTML = item;
