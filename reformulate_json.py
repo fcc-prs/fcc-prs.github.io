@@ -62,8 +62,9 @@ for i,data in enumerate(datas):
     pr_infos=data['data']['organization']['repositories']['nodes']
     for v in pr_infos:
         repo=v['name']
-        if repo not in repo_list: repo_list.append("<a href='https://github.com/"+org+"/"+repo+"'>"+org+"/<br>"+repo+"</a>")
         prs=v['pullRequests']['nodes']
+        if len(prs)>0: repo_list.append("<a href='https://github.com/"+org+"/"+repo+"'>"+org+"/<br>"+repo+"</a>")
+        
         for pr in prs:
             cols={}
             cols['repo']=org+"/<br>"+repo
@@ -82,6 +83,7 @@ with open("data.json", "w", encoding="utf-8") as file:
     json.dump(json_list, file, indent=4)
 
 json_pr_list={}
+repo_list.sort()
 json_pr_list['data']=repo_list
 
 with open("repo_data.json", "w", encoding="utf-8") as file:
