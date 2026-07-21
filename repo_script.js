@@ -20,7 +20,7 @@ function generateRepoTable(data) {
     td.innerHTML = item;
     row.appendChild(td)
     i=i+1;
-    if (i==5) i=0; //5 is the number of columns I want
+    if (i==6) i=0; //is the number of columns I want
   });    
   if (i!=0) tbody.appendChild(row);
 
