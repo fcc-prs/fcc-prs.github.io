@@ -62,7 +62,7 @@ for i,data in enumerate(datas):
     pr_infos=data['data']['organization']['repositories']['nodes']
     for v in pr_infos:
         repo=v['name']
-        if repo not in repo_list: repo_list.append("<a href='https://github.com/"+repo+"'>"+repo+"</a>")
+        if repo not in repo_list: repo_list.append("<a href='https://github.com/"+org+"/"+repo+"'>"+org+"/"+repo+"</a>")
         prs=v['pullRequests']['nodes']
         for pr in prs:
             cols={}
