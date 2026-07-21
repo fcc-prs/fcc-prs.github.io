@@ -28,7 +28,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.FCC_GH_TOKEN }}
       - name: translategh
-        run: ls -l; python3 assets/scripts/reformulate_json.py key4hep.json hep-fcc.json; mv data.json assets/json/sample.json; rm key4hep.json hep-fcc.json
+        run: ls -l; python3 assets/scripts/reformulate_json.py key4hep.json hep-fcc.json; mv data.json assets/json/sample.json; mv repo_data.json assets/json/.; rm key4hep.json hep-fcc.json
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v7
     
