@@ -5,7 +5,7 @@ function generateTable(data) {
   const table = document.createElement('table');
   table.setAttribute('id', 'pr-table');
   //table.classList.add("searchable", "sortable");
-  //table.classList.add('searchable');
+  table.classList.add('searchable');
   //table.classList.add('sortable');
   
   // Generate table headers
