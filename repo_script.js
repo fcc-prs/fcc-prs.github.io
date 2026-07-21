@@ -20,9 +20,9 @@ function generateTable(data) {
     const td = document.createElement('td');
     td.innerHTML = item;
     row.appendChild(td)
-  }    
-  body.appendChild(row);
-  });
+  });    
+  tbody.appendChild(row);
+
   return table;
 }
  
