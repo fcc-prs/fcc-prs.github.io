@@ -23,8 +23,10 @@ function generateRepoTable(data) {
     const td = document.createElement('td');
     td.innerHTML = item;
     row.appendChild(td)
+    i=i+1;
+    if (i==4) i=0;
   });    
-  tbody.appendChild(row);
+  if (i!=0) tbody.appendChild(row);
   console.log("done");
 
   return table;
