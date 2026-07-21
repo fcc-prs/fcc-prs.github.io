@@ -1,7 +1,5 @@
 // Function to generate the table
 function generateTable(data) {
-  console.log("in gen");
-  console.log(data.length);
   if (!data || data.length === 0) return "No data available.";
   // Create the table element
   const table = document.createElement('table');
@@ -40,7 +38,6 @@ function generateTable(data) {
 
  
 import jsonData from './sample.json' with {type:'json'}
-console.log("imported data");
 //var jsonStr = JSON.stringify(jsonData);
 //const newParagraph = document.createElement("p");
 //newParagraph.textContent = "Hi " + jsonStr;
