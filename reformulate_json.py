@@ -48,6 +48,7 @@ def get_assignees(s):
 wanted_keys=['number', 'title', 'author', 'createdAt', 'updatedAt', 'mergeable', 'url', 'labels', 'assignees']
 replace_name={}
 replace_name['number']= 'num'
+replace_name['mergeable']= 'mergeOk'
 
 funcs={}
 for key in wanted_keys:
