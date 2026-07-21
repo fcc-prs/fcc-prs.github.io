@@ -1,4 +1,4 @@
-function generateTable(data) {
+function generateRepoTable(data) {
   if (!data || data.length === 0) return "No data available.";
   // Create the table element
   const table = document.createElement('table');
