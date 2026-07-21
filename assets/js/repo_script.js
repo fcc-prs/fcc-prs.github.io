@@ -27,7 +27,7 @@ function generateRepoTable(data) {
   return table;
 }
  
-import jsonData from './repo_data.json' with {type:'json'}
+import jsonData from '../../repo_data.json' with {type:'json'}
 console.log("loaded data");
 const container = document.getElementById('repo-table-container');
 if (container) {
