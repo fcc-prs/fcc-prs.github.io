@@ -4,6 +4,7 @@ function generateTable(data) {
   // Create the table element
   const table = document.createElement('table');
   table.classList.add('sortable');
+  table.classList.add('searchable');
   
   // Generate table headers
   const thead = table.createTHead();
