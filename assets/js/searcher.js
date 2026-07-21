@@ -1,4 +1,4 @@
-function sorter() {
+function searcher() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue, tds, matches;
   input = document.getElementById("myInput");
