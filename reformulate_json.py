@@ -24,7 +24,27 @@ def get_merge(s):
     if s=="MERGEABLE": return "yes"
     return "no"
 
-wanted_keys=['number', 'title', 'author', 'createdAt', 'updatedAt', 'mergeable', 'url']
+def get_labels(s):
+    o=''
+    node_info = s['nodes']
+    
+    for i,node in enumerate(node_info):
+        if i!=0:
+            o=o+' \n'
+        o=o+node['name']
+    return o
+
+def get_assignees(s):
+    o=''
+    node_info = s['nodes']
+    
+    for i,node in enumerate(node_info):
+        if i!=0:
+            o=o+' \n'
+        o=o+node['login']
+    return o
+    
+wanted_keys=['number', 'title', 'author', 'createdAt', 'updatedAt', 'mergeable', 'url', 'labels', 'assignees']
 funcs={}
 for key in wanted_keys:
     funcs[key]=dummy
@@ -33,6 +53,8 @@ funcs['createdAt']=date_only
 funcs['updatedAt']=date_only
 funcs['author']=get_login
 funcs['mergeable']=get_merge
+funcs['labels']=get_labels
+funcs['assignees']=get_assignees
 
 for i,data in enumerate(datas):
     org=orgs[i]
@@ -44,6 +66,7 @@ for i,data in enumerate(datas):
             cols={}
             cols['repo']=org+"/"+repo
             for key in wanted_keys:
+                if key not in pr: continue 
                 if key != 'url':
                     cols[key]=funcs[key](pr[key])
                 else:
