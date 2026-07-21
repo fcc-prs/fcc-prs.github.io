@@ -17,7 +17,7 @@ function generateTable(data) {
       const row = tbody.insertRow();
     }
     const td = document.createElement('td');
-    td.innerHTML = item[0] || "";
+    td.innerHTML = item;
     row.appendChild(td)
   }    
   body.appendChild(row);
