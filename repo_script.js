@@ -1,15 +1,18 @@
 function generateRepoTable(data) {
+  console.log("Starting table");
   if (!data || data.length === 0) return "No data available.";
+  console.log("have some data");
   // Create the table element
   const table = document.createElement('table');
   table.setAttribute('id', 'repo-table');
-  
+  console.log("made table");
   const tbody = table.createTBody();
   var i=0;
   var isFirst=1;
   // Generate table rows
   var row = tbody.insertRow();
   data.forEach(item => {
+    console.log("looping");
     if (i==0 ) {
       if ( isFirst==0 ) {
         tbody.appendChild(row);
@@ -22,6 +25,7 @@ function generateRepoTable(data) {
     row.appendChild(td)
   });    
   tbody.appendChild(row);
+  console.log("done");
 
   return table;
 }
