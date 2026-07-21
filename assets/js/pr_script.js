@@ -37,7 +37,7 @@ function generateTable(data) {
 }
 
  
-import jsonData from '../../sample.json' with {type:'json'}
+import jsonData from '../json/sample.json' with {type:'json'}
 //var jsonStr = JSON.stringify(jsonData);
 //const newParagraph = document.createElement("p");
 //newParagraph.textContent = "Hi " + jsonStr;
