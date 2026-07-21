@@ -10,6 +10,7 @@ for f in sys.argv[1:]:
         datas.append(data)
         
 pr_list=[]
+repo_list=[]
 
 def dummy(s):
     return s
@@ -61,6 +62,7 @@ for i,data in enumerate(datas):
     pr_infos=data['data']['organization']['repositories']['nodes']
     for v in pr_infos:
         repo=v['name']
+        if repo not in repo_list: repo_list.append("<a href='https://github.com/"+repo+"'>"+repo+"</a>")
         prs=v['pullRequests']['nodes']
         for pr in prs:
             cols={}
@@ -78,3 +80,10 @@ json_list['data']=pr_list
 
 with open("data.json", "w", encoding="utf-8") as file:
     json.dump(json_list, file, indent=4)
+
+json_pr_list={}
+json_pr_list['data']=repo_list
+
+with open("repo_data.json", "w", encoding="utf-8") as file:
+    json.dump(json_pr_list, file, indent=4)
+
