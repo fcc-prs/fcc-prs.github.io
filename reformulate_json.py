@@ -46,6 +46,9 @@ def get_assignees(s):
     return o
     
 wanted_keys=['number', 'title', 'author', 'createdAt', 'updatedAt', 'mergeable', 'url', 'labels', 'assignees']
+replace_name={}
+replace_name['number': 'num']
+
 funcs={}
 for key in wanted_keys:
     funcs[key]=dummy
@@ -71,7 +74,9 @@ for i,data in enumerate(datas):
             for key in wanted_keys:
                 if key not in pr: continue 
                 if key != 'url':
-                    cols[key]=funcs[key](pr[key])
+                    tok=key
+                    if key in replace_name: tok=replace_name[key]
+                    cols[tok]=funcs[key](pr[key])
                 else:
                     cols['title']="<a href='"+pr['url']+"'>"+cols['title']+"</a>"
             pr_list.append(cols)
