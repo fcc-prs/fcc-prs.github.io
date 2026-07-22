@@ -28,7 +28,7 @@
     <div class="pr-modal-content">
       <button id="pr-modal-close" class="pr-modal-close" type="button" aria-label="Close">&times;</button>
       <h3 id="pr-modal-title">Submit Comments as Pull Request</h3>
-      <p>Your comments will be added to <strong>fcc-prs/fcc-prs.github.io</strong> via a GitHub pull request. Once the PR is merged, they will appear for all visitors.</p>
+      <p>Your comments will be submitted as a small patch file to <strong>fcc-prs/fcc-prs.github.io</strong>. Once the pull request is merged, they will appear for all visitors.</p>
 
       <div class="pr-modal-summary-box">
         <strong>Pending comments:</strong>
@@ -48,9 +48,13 @@
         <div class="pr-modal-step">
           <span class="step-num">2</span>
           <div>
-            <strong>Copy the updated comments file to your clipboard</strong>
-            <br>
-            <button id="pr-modal-copy-btn" class="btn-primary" type="button">Copy JSON to Clipboard</button>
+            <strong>Open the GitHub editor with your comments pre-filled</strong>
+            <p class="hint">GitHub will create a new patch file containing only your comments. If prompted, fork the repository — that's expected.</p>
+            <button id="pr-modal-open-btn" class="btn-primary" type="button">Open GitHub Editor &rarr;</button>
+            <p class="hint" style="margin-top: 10px;">Content not pre-filled?
+              <button id="pr-modal-copy-btn" class="btn-secondary btn-small" type="button">Copy JSON</button>
+              and paste it into a new file under <code>assets/json/patches/</code>.
+            </p>
             <textarea id="pr-modal-json-area" class="pr-modal-json-area hidden" readonly rows="6" aria-label="JSON content fallback"></textarea>
           </div>
         </div>
@@ -58,17 +62,8 @@
         <div class="pr-modal-step">
           <span class="step-num">3</span>
           <div>
-            <strong>Open the file in GitHub's editor</strong>
-            <p class="hint">If you don't have write access, GitHub will offer to fork the repository for you — that's expected.</p>
-            <button id="pr-modal-open-btn" class="btn-secondary" type="button">Open GitHub Editor &rarr;</button>
-          </div>
-        </div>
-
-        <div class="pr-modal-step">
-          <span class="step-num">4</span>
-          <div>
-            <strong>Paste and submit</strong>
-            <p class="hint">In the GitHub editor: select all (<kbd>Ctrl+A</kbd> / <kbd>Cmd+A</kbd>), paste (<kbd>Ctrl+V</kbd> / <kbd>Cmd+V</kbd>), write a short commit message, click <em>Propose changes</em>, then <em>Create pull request</em>.</p>
+            <strong>Propose the file and open a pull request</strong>
+            <p class="hint">Add a short commit message, click <em>Propose new file</em>, then <em>Create pull request</em>.</p>
           </div>
         </div>
       </div>

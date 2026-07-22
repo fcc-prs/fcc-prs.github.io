@@ -1,0 +1,25 @@
+name: merge comment patches
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/json/patches/**'
+  workflow_dispatch:
+
+jobs:
+  merge:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v7
+
+      - name: Merge comment patches into comments.json
+        run: python3 assets/scripts/merge_comment_patches.py
+
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "[skip ci] Merge comment patches into comments.json"
