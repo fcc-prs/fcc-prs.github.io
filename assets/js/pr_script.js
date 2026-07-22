@@ -164,18 +164,24 @@ function generateTable(data, comments) {
   return table;
 }
 
-// Build the merged comments.json content to be submitted via PR.
-function buildMergedJson(username) {
-  const merged = JSON.parse(JSON.stringify(commentsData));
+// Build a small patch file containing only the new comments (not the full comments.json).
+function buildPatchJson(username) {
   const today = new Date().toISOString().slice(0, 10);
   const author = username.trim() || '(anonymous)';
+  const patch = { data: {} };
   for (const [key, comments] of Object.entries(pendingComments)) {
-    if (!merged.data[key]) merged.data[key] = [];
-    for (const c of comments) {
-      merged.data[key].push({ author, date: today, text: c.text });
-    }
+    patch.data[key] = comments.map(c => ({ author, date: today, text: c.text }));
   }
-  return JSON.stringify(merged, null, 2);
+  return JSON.stringify(patch, null, 2);
+}
+
+// Open GitHub's "new file" editor with the patch pre-filled.
+function buildGitHubNewFileUrl(username) {
+  const safeUser = (username.trim() || 'anonymous').replace(/[^a-zA-Z0-9._-]/g, '-');
+  const ts = new Date().toISOString().replace(/\D/g, '').slice(0, 14);
+  const filename = `assets/json/patches/comments_${safeUser}_${ts}.json`;
+  const base = 'https://github.com/fcc-prs/fcc-prs.github.io/new/main';
+  return `${base}?filename=${encodeURIComponent(filename)}&value=${encodeURIComponent(buildPatchJson(username))}`;
 }
 
 function pendingSummaryText() {
@@ -185,8 +191,6 @@ function pendingSummaryText() {
 }
 
 // --- modal wiring ---
-const GITHUB_EDIT_URL =
-  'https://github.com/fcc-prs/fcc-prs.github.io/edit/main/assets/json/comments.json';
 
 function openModal() {
   document.getElementById('pr-modal-summary').textContent = pendingSummaryText();
@@ -227,15 +231,14 @@ document.getElementById('pr-modal').addEventListener('click', e => {
 
 document.getElementById('pr-modal-copy-btn').addEventListener('click', async () => {
   const username = document.getElementById('pr-modal-username').value;
-  const json = buildMergedJson(username);
+  const json = buildPatchJson(username);
   const statusEl = document.getElementById('pr-modal-status');
   const copyBtn = document.getElementById('pr-modal-copy-btn');
   try {
     await navigator.clipboard.writeText(json);
     copyBtn.textContent = '✓ Copied!';
-    statusEl.textContent = 'JSON copied to clipboard. Now open the GitHub editor and paste it in.';
+    statusEl.textContent = 'Patch JSON copied. Create a new file at assets/json/patches/ in the repo and paste it in.';
   } catch {
-    // Clipboard API unavailable — show a fallback textarea
     const area = document.getElementById('pr-modal-json-area');
     area.value = json;
     area.classList.remove('hidden');
@@ -245,5 +248,6 @@ document.getElementById('pr-modal-copy-btn').addEventListener('click', async () 
 });
 
 document.getElementById('pr-modal-open-btn').addEventListener('click', () => {
-  window.open(GITHUB_EDIT_URL, '_blank', 'noopener');
+  const username = document.getElementById('pr-modal-username').value;
+  window.open(buildGitHubNewFileUrl(username), '_blank', 'noopener');
 });

@@ -275,6 +275,7 @@ tr:nth-child(even) td {
   margin-top: 6px;
 }
 .btn-secondary:hover { background: #e8eaf6; }
+.btn-small { padding: 3px 10px; font-size: 0.8rem; margin-top: 0; vertical-align: middle; }
 
 .pr-modal-json-area {
   display: block;
