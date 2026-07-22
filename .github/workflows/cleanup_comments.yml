@@ -1,0 +1,25 @@
+name: cleanup obsolete comments
+
+on:
+  schedule:
+    # Runs at 04:00 UTC every Sunday (after the daily PR data refresh at 02:00)
+    - cron: '0 4 * * 0'
+  # Allows manual triggering from the GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v7
+
+      - name: Remove obsolete comments
+        run: python3 assets/scripts/cleanup_comments.py
+
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: Remove obsolete comments for closed/merged PRs
