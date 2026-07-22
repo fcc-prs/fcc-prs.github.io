@@ -55,10 +55,247 @@ tr:nth-child(even) td {
 #myInput {
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 30%; 
+  width: 30%;
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
+
+/* ── Utility ── */
+.hidden { display: none !important; }
+
+/* ── Comment toggle button (last column of each PR row) ── */
+.comment-toggle-cell {
+  text-align: center;
+  white-space: nowrap;
+}
+.comment-toggle-btn {
+  background: none;
+  border: 1px solid #c5cae9;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px 8px;
+  font-size: 0.85rem;
+  color: #555;
+  transition: background 0.15s;
+}
+.comment-toggle-btn:hover { background: #e8eaf6; }
+
+/* ── Expandable comment row ── */
+.comment-expand-cell {
+  background: #f0f2fb;
+  padding: 12px 18px;
+  border-bottom: 2px solid #c5cae9;
+}
+
+/* ── Individual comment bubbles ── */
+.comment-list { margin-bottom: 10px; }
+
+.pr-comment {
+  border-left: 3px solid #7986cb;
+  padding: 4px 10px;
+  margin-bottom: 8px;
+  background: #fff;
+  border-radius: 0 4px 4px 0;
+}
+.pr-comment--pending { border-left-color: #ff9800; }
+
+.pr-comment-meta {
+  font-size: 0.78rem;
+  color: #888;
+  margin-bottom: 2px;
+}
+.pr-comment-badge {
+  background: #ff9800;
+  color: #fff;
+  font-size: 0.68rem;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.pr-comment-text { margin: 0; font-size: 0.9rem; }
+
+/* ── Add-comment form ── */
+.comment-form {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.comment-textarea {
+  flex: 1;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 6px 8px;
+  border: 1px solid #c5cae9;
+  border-radius: 4px;
+  resize: vertical;
+}
+.comment-add-btn {
+  background: #5c6bc0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.comment-add-btn:hover { background: #3949ab; }
+
+/* ── Floating "Prepare PR" button ── */
+.submit-pr-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: #e64a19;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  transition: background 0.2s;
+}
+.submit-pr-btn:hover { background: #bf360c; }
+
+/* ── Modal overlay ── */
+.pr-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pr-modal-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 28px 32px;
+  max-width: 580px;
+  width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.pr-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #999;
+  line-height: 1;
+}
+.pr-modal-close:hover { color: #333; }
+
+.pr-modal-content h3 { margin-top: 0; color: #333; }
+
+.pr-modal-summary-box {
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin: 14px 0;
+  font-size: 0.9rem;
+}
+.pr-modal-summary-box pre {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  color: #444;
+}
+
+/* ── Step list inside modal ── */
+.pr-modal-steps { margin: 18px 0 0; }
+
+.pr-modal-step {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+  align-items: flex-start;
+}
+.step-num {
+  background: #5c6bc0;
+  color: #fff;
+  border-radius: 50%;
+  min-width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.pr-modal-step > div { flex: 1; }
+.pr-modal-step strong { display: block; margin-bottom: 4px; }
+.optional { font-weight: normal; color: #888; }
+.hint { color: #666; font-size: 0.85rem; margin: 4px 0 6px; }
+
+.pr-modal-content input[type="text"] {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  margin-top: 2px;
+}
+
+.btn-primary {
+  background: #5c6bc0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+.btn-primary:hover { background: #3949ab; }
+
+.btn-secondary {
+  background: #fff;
+  color: #5c6bc0;
+  border: 2px solid #5c6bc0;
+  border-radius: 4px;
+  padding: 7px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+.btn-secondary:hover { background: #e8eaf6; }
+
+.pr-modal-json-area {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  font-family: monospace;
+  font-size: 0.78rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.pr-modal-status {
+  margin-top: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #2e7d32;
+  background: #e8f5e9;
+}
+.pr-modal-status:empty { display: none; }
 
