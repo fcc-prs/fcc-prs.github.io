@@ -270,7 +270,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/372'>Add Gaudi Functional C++ Class Generator</a>",
             "author": "ianna",
             "createdAt": "2026-01-16",
-            "updatedAt": "2026-07-21",
+            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -292,7 +292,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/416'>Apply a few suggestions from clang-tidy</a>",
             "author": "jmcarcell",
             "createdAt": "2026-07-21",
-            "updatedAt": "2026-07-21",
+            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -381,6 +381,17 @@
             "author": "selvaggi",
             "createdAt": "2026-07-09",
             "updatedAt": "2026-07-15",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 159,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/159'>Support RNTuple-based EDM4hep output from standalone executables</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-07-22",
+            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -644,7 +655,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/85'>Tracking: Fix track reconstruction issues; Jacobian units, hit-track associations and TGeo navigator reset</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-06-30",
-            "updatedAt": "2026-07-21",
+            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -655,7 +666,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/86'>Fix TracksFromGenParticles - build tracks only for particles that reach the calorimeter</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-07-02",
-            "updatedAt": "2026-07-10",
+            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -666,7 +677,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/87'>Add track merging processor based on track parameter compatibility</a>",
             "author": "Victor-Schwan",
             "createdAt": "2026-07-08",
-            "updatedAt": "2026-07-20",
+            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -744,6 +755,28 @@
             "author": "aloeliger",
             "createdAt": "2026-03-18",
             "updatedAt": "2026-04-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Reco",
+            "num": 58,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/58'>Fix the `ClonesAndSplitTracksFinder` and increase its test coverage</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-07-22",
+            "updatedAt": "2026-07-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Reco",
+            "num": 59,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/59'>[do-not-merge] break test by changing particle gun</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-07-22",
+            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1217,7 +1250,7 @@
             "author": "BrieucF",
             "createdAt": "2022-10-08",
             "updatedAt": "2022-10-12",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "Do not merge",
             "assignees": ""
         },
@@ -1239,7 +1272,7 @@
             "author": "kjvbrt",
             "createdAt": "2023-06-29",
             "updatedAt": "2024-04-25",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1261,7 +1294,7 @@
             "author": "vvolkl",
             "createdAt": "2025-01-14",
             "updatedAt": "2025-01-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1283,7 +1316,7 @@
             "author": "mattiaisgro",
             "createdAt": "2025-06-19",
             "updatedAt": "2025-06-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1294,7 +1327,7 @@
             "author": "thisismeamir",
             "createdAt": "2025-12-10",
             "updatedAt": "2026-02-17",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1305,7 +1338,7 @@
             "author": "goblirsc",
             "createdAt": "2026-02-16",
             "updatedAt": "2026-07-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1327,7 +1360,7 @@
             "author": "ShreyasBakare",
             "createdAt": "2026-03-18",
             "updatedAt": "2026-07-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1338,7 +1371,7 @@
             "author": "tomfournier",
             "createdAt": "2026-03-23",
             "updatedAt": "2026-06-02",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1349,7 +1382,7 @@
             "author": "forthommel",
             "createdAt": "2026-05-10",
             "updatedAt": "2026-05-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1359,18 +1392,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/520'>Implement integrated CMS Combine backend</a>",
             "author": "captainvogon",
             "createdAt": "2026-06-25",
-            "updatedAt": "2026-07-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 522,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/522'>Introduction of tau reconstruction </a>",
-            "author": "sofiagiappichini",
-            "createdAt": "2026-07-14",
-            "updatedAt": "2026-07-21",
+            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1382,18 +1404,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-16",
             "updatedAt": "2026-07-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 524,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/524'>Updated pipeline to run on the **pre_summer2026** production</a>",
-            "author": "selvaggi",
-            "createdAt": "2026-07-17",
-            "updatedAt": "2026-07-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1404,18 +1415,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-07-20",
             "updatedAt": "2026-07-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 531,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/531'>Add --output-format option for TTree and RNTuple output</a>",
-            "author": "deimantae",
-            "createdAt": "2026-07-20",
-            "updatedAt": "2026-07-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1491,7 +1491,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/275'>Fix phi wrapping in topo cluster barycenter calculation.</a>",
             "author": "scott-snyder",
             "createdAt": "2026-07-21",
-            "updatedAt": "2026-07-21",
+            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1623,7 +1623,18 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/369'>Configure indexing service for ALLEGRO.</a>",
             "author": "scott-snyder",
             "createdAt": "2026-07-14",
-            "updatedAt": "2026-07-15",
+            "updatedAt": "2026-07-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 374,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/374'>Don't configure crosstalk tool for EMEC.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2026-07-22",
+            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1663,22 +1674,11 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-physics-events",
-            "num": 2,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-physics-events/pull/2'>feat: add share link button and auto-expand single search results</a>",
-            "author": "afihasan",
-            "createdAt": "2026-07-13",
-            "updatedAt": "2026-07-15",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-physics-events",
             "num": 3,
             "title": "<a href='https://github.com/HEP-FCC/fcc-physics-events/pull/3'>Feature/config url generator cards</a>",
             "author": "afihasan",
             "createdAt": "2026-07-20",
-            "updatedAt": "2026-07-20",
+            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
