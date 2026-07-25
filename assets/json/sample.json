@@ -83,7 +83,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/612'>Adding FCC-SEED as option to all detectors and refactor IDEA/ALLEGRO vertex detector</a>",
             "author": "armin-ilg",
             "createdAt": "2026-07-03",
-            "updatedAt": "2026-07-20",
+            "updatedAt": "2026-07-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -116,7 +116,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/619'>Remove a few unused functions in detectorCommon</a>",
             "author": "jmcarcell",
             "createdAt": "2026-07-21",
-            "updatedAt": "2026-07-21",
+            "updatedAt": "2026-07-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -193,29 +193,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/502'>Build and install ArrowMapper if podio supports it</a>",
             "author": "arnavdham",
             "createdAt": "2026-06-29",
-            "updatedAt": "2026-07-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
-            "num": 506,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/506'>Group small and related tests together</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-07-17",
-            "updatedAt": "2026-07-17",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
-            "num": 507,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/507'>Use HepMC3::HepMC3 imported target instead of old-style variables</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-07-17",
-            "updatedAt": "2026-07-17",
+            "updatedAt": "2026-07-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -270,7 +248,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/372'>Add Gaudi Functional C++ Class Generator</a>",
             "author": "ianna",
             "createdAt": "2026-01-16",
-            "updatedAt": "2026-07-22",
+            "updatedAt": "2026-07-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -281,7 +259,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
             "createdAt": "2026-07-06",
-            "updatedAt": "2026-07-14",
+            "updatedAt": "2026-07-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -328,6 +306,39 @@
             "updatedAt": "2026-07-11",
             "mergeOk": "no",
             "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 895,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/895'>Bump docker/login-action from 4.4.0 to 4.5.1</a>",
+            "author": "dependabot",
+            "createdAt": "2026-07-25",
+            "updatedAt": "2026-07-25",
+            "mergeOk": "yes",
+            "labels": "dependencies \ngithub_actions",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 896,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/896'>Bump actions/setup-python from 6.3.0 to 7.0.0</a>",
+            "author": "dependabot",
+            "createdAt": "2026-07-25",
+            "updatedAt": "2026-07-25",
+            "mergeOk": "yes",
+            "labels": "dependencies \ngithub_actions",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 897,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/897'>Bump actions/checkout from 7.0.0 to 7.0.1</a>",
+            "author": "dependabot",
+            "createdAt": "2026-07-25",
+            "updatedAt": "2026-07-25",
+            "mergeOk": "yes",
+            "labels": "dependencies \ngithub_actions",
             "assignees": ""
         },
         {
@@ -479,8 +490,8 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/59'>Add a GNN based track finding pipeline</a>",
             "author": "tmadlener",
             "createdAt": "2026-04-29",
-            "updatedAt": "2026-07-14",
-            "mergeOk": "no",
+            "updatedAt": "2026-07-24",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -492,6 +503,17 @@
             "createdAt": "2026-07-04",
             "updatedAt": "2026-07-10",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 85,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/85'>add theta/phi hit segmentation for GNNTrackFinder</a>",
+            "author": "Baucki1",
+            "createdAt": "2026-07-24",
+            "updatedAt": "2026-07-24",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -574,17 +596,6 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 12,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/12'>added the cluster counting algorithm</a>",
-            "author": "welmeten",
-            "createdAt": "2023-11-16",
-            "updatedAt": "2026-02-18",
-            "mergeOk": "no",
-            "labels": "WIP",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
             "num": 24,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/24'>[MUONDigi] Adding a digitizer of IDEA Muon system.</a>",
             "author": "mahmoudali2",
@@ -655,7 +666,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/85'>Tracking: Fix track reconstruction issues; Jacobian units, hit-track associations and TGeo navigator reset</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-06-30",
-            "updatedAt": "2026-07-22",
+            "updatedAt": "2026-07-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -666,7 +677,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/86'>Fix TracksFromGenParticles - build tracks only for particles that reach the calorimeter</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-07-02",
-            "updatedAt": "2026-07-23",
+            "updatedAt": "2026-07-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -677,7 +688,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/87'>Add track merging processor based on track parameter compatibility</a>",
             "author": "Victor-Schwan",
             "createdAt": "2026-07-08",
-            "updatedAt": "2026-07-23",
+            "updatedAt": "2026-07-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -689,18 +700,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-16",
             "updatedAt": "2024-07-16",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>CLDConfig",
-            "num": 70,
-            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/70'>Add a steering file for using the native EDM4hep algorithms</a>",
-            "author": "jmcarcell",
-            "createdAt": "2025-03-28",
-            "updatedAt": "2026-07-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -733,7 +733,7 @@
             "author": "jessy-daniel",
             "createdAt": "2026-02-18",
             "updatedAt": "2026-06-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -809,7 +809,7 @@
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/26'>Enable external clustering algorithm</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-01-20",
-            "updatedAt": "2026-07-21",
+            "updatedAt": "2026-07-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1030,17 +1030,6 @@
             "author": "kjvbrt",
             "createdAt": "2025-12-04",
             "updatedAt": "2026-07-23",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-tutorials",
-            "num": 181,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/181'>refactor tutorial structure and update for recent EDM4hep changes</a>",
-            "author": "bndikt",
-            "createdAt": "2026-05-21",
-            "updatedAt": "2026-07-10",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -1370,7 +1359,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/520'>Implement integrated CMS Combine backend</a>",
             "author": "captainvogon",
             "createdAt": "2026-06-25",
-            "updatedAt": "2026-07-22",
+            "updatedAt": "2026-07-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1646,17 +1635,6 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-07-17",
             "updatedAt": "2026-07-17",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-physics-events",
-            "num": 3,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-physics-events/pull/3'>Feature/config url generator cards</a>",
-            "author": "afihasan",
-            "createdAt": "2026-07-20",
-            "updatedAt": "2026-07-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
