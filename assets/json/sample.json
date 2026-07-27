@@ -392,18 +392,7 @@
             "author": "selvaggi",
             "createdAt": "2026-07-09",
             "updatedAt": "2026-07-15",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4SimDelphes",
-            "num": 159,
-            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/159'>Support RNTuple-based EDM4hep output from standalone executables</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-07-22",
-            "updatedAt": "2026-07-22",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -512,7 +501,18 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/85'>add theta/phi hit segmentation for GNNTrackFinder</a>",
             "author": "Baucki1",
             "createdAt": "2026-07-24",
-            "updatedAt": "2026-07-24",
+            "updatedAt": "2026-07-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Clue",
+            "num": 82,
+            "title": "<a href='https://github.com/key4hep/k4Clue/pull/82'>fix CLUE output</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-07-26",
+            "updatedAt": "2026-07-26",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -578,7 +578,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/48'>Bump actions/cache from 5 to 6 in /cache-external-data</a>",
             "author": "dependabot",
             "createdAt": "2026-06-29",
-            "updatedAt": "2026-07-06",
+            "updatedAt": "2026-07-27",
             "mergeOk": "yes",
             "labels": "dependencies \ngithub_actions",
             "assignees": ""
@@ -589,7 +589,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/49'>Bump actions/cache from 5 to 6 in /key4hep-build</a>",
             "author": "dependabot",
             "createdAt": "2026-06-29",
-            "updatedAt": "2026-07-06",
+            "updatedAt": "2026-07-27",
             "mergeOk": "yes",
             "labels": "dependencies \ngithub_actions",
             "assignees": ""
