@@ -101,17 +101,6 @@
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 618,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/618'>Revamped README</a>",
-            "author": "s6anloes",
-            "createdAt": "2026-07-20",
-            "updatedAt": "2026-07-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 619,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/619'>Remove a few unused functions in detectorCommon</a>",
             "author": "jmcarcell",
@@ -188,28 +177,6 @@
             "assignees": ""
         },
         {
-            "repo": "key4hep/<br>EDM4hep",
-            "num": 502,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/502'>Build and install ArrowMapper if podio supports it</a>",
-            "author": "arnavdham",
-            "createdAt": "2026-06-29",
-            "updatedAt": "2026-07-24",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
-            "num": 245,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/245'>change python formatter to ruff</a>",
-            "author": "m-fila",
-            "createdAt": "2024-10-02",
-            "updatedAt": "2025-03-23",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "key4hep/<br>k4FWCore",
             "num": 312,
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/312'>[WIP] Add a service to allow retrieving collections to which an object belongs</a>",
@@ -270,7 +237,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/416'>Apply a few suggestions from clang-tidy</a>",
             "author": "jmcarcell",
             "createdAt": "2026-07-21",
-            "updatedAt": "2026-07-22",
+            "updatedAt": "2026-07-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -623,7 +590,7 @@
             "author": "muhammadsahil5030",
             "createdAt": "2026-04-07",
             "updatedAt": "2026-05-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -634,7 +601,7 @@
             "author": "BrieucF",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-05-15",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -645,7 +612,7 @@
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
             "updatedAt": "2026-07-15",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -656,7 +623,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-06-04",
             "updatedAt": "2026-06-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -666,19 +633,8 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/85'>Tracking: Fix track reconstruction issues; Jacobian units, hit-track associations and TGeo navigator reset</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-06-30",
-            "updatedAt": "2026-07-24",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 86,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/86'>Fix TracksFromGenParticles - build tracks only for particles that reach the calorimeter</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-07-02",
-            "updatedAt": "2026-07-24",
-            "mergeOk": "yes",
+            "updatedAt": "2026-07-27",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -689,7 +645,7 @@
             "author": "Victor-Schwan",
             "createdAt": "2026-07-08",
             "updatedAt": "2026-07-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -965,6 +921,28 @@
             "createdAt": "2026-04-09",
             "updatedAt": "2026-04-09",
             "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 124,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/124'>feat(dashboard): make the Regression Status night selectable and the landscape report-independent</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-07-27",
+            "updatedAt": "2026-07-27",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 125,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/125'>feat(dashboard): show the nightly e-group report in the Overview tab</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-07-27",
+            "updatedAt": "2026-07-27",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1579,7 +1557,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/368'>Refactor and workflow change</a>",
             "author": "TimLdl",
             "createdAt": "2026-07-13",
-            "updatedAt": "2026-07-17",
+            "updatedAt": "2026-07-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
