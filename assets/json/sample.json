@@ -28,7 +28,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/578'>account for phi symmetry in idea calo to reduce # of volumes</a>",
             "author": "davidlange6",
             "createdAt": "2026-03-14",
-            "updatedAt": "2026-07-20",
+            "updatedAt": "2026-07-28",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
@@ -61,7 +61,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/608'>Fix calculation of sim hit positions in turbine ecal endcap</a>",
             "author": "varnes",
             "createdAt": "2026-06-23",
-            "updatedAt": "2026-07-20",
+            "updatedAt": "2026-07-28",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -72,10 +72,10 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/611'>Prerequisites for IDEA option2 PFlow study</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-06-30",
-            "updatedAt": "2026-07-06",
+            "updatedAt": "2026-07-28",
             "mergeOk": "yes",
             "labels": "",
-            "assignees": ""
+            "assignees": "jbeirer"
         },
         {
             "repo": "key4hep/<br>k4geo",
@@ -105,7 +105,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/619'>Remove a few unused functions in detectorCommon</a>",
             "author": "jmcarcell",
             "createdAt": "2026-07-21",
-            "updatedAt": "2026-07-24",
+            "updatedAt": "2026-07-28",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -226,7 +226,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
             "createdAt": "2026-07-06",
-            "updatedAt": "2026-07-24",
+            "updatedAt": "2026-07-28",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -309,6 +309,28 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 898,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/898'>Remove build/usage of fccdetectors package</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-07-28",
+            "updatedAt": "2026-07-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 899,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/899'>Make the setup scripts safe to source with set -u</a>",
+            "author": "yaminocellist",
+            "createdAt": "2026-07-29",
+            "updatedAt": "2026-07-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>key4hep-doc",
             "num": 113,
             "title": "<a href='https://github.com/key4hep/key4hep-doc/pull/113'>Rework the landing page to not just be a TOC</a>",
@@ -358,8 +380,8 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/158'>Propagate Pythia8 generator weight vector to EDM4hep</a>",
             "author": "selvaggi",
             "createdAt": "2026-07-09",
-            "updatedAt": "2026-07-15",
-            "mergeOk": "no",
+            "updatedAt": "2026-07-28",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -441,6 +463,17 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>k4SimGeant4",
+            "num": 95,
+            "title": "<a href='https://github.com/key4hep/k4SimGeant4/pull/95'>Migrating remaining usage of FCCDetectors to k4geo</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-07-28",
+            "updatedAt": "2026-07-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>k4ActsTracking",
             "num": 59,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/59'>Add a GNN based track finding pipeline</a>",
@@ -469,6 +502,17 @@
             "author": "Baucki1",
             "createdAt": "2026-07-24",
             "updatedAt": "2026-07-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 87,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/87'>ci: drop ACTS TGeo plugin build</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-07-28",
+            "updatedAt": "2026-07-28",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -590,7 +634,7 @@
             "author": "muhammadsahil5030",
             "createdAt": "2026-04-07",
             "updatedAt": "2026-05-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -601,7 +645,7 @@
             "author": "BrieucF",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-05-15",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -612,7 +656,7 @@
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
             "updatedAt": "2026-07-15",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -623,7 +667,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-06-04",
             "updatedAt": "2026-06-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -633,8 +677,8 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/85'>Tracking: Fix track reconstruction issues; Jacobian units, hit-track associations and TGeo navigator reset</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-06-30",
-            "updatedAt": "2026-07-27",
-            "mergeOk": "no",
+            "updatedAt": "2026-07-28",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -644,8 +688,19 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/87'>Add track merging processor based on track parameter compatibility</a>",
             "author": "Victor-Schwan",
             "createdAt": "2026-07-08",
-            "updatedAt": "2026-07-24",
-            "mergeOk": "no",
+            "updatedAt": "2026-07-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 88,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/88'>Tracking: fix post-fit TrackState, reset TGeoManager before each fit, correct the Jacobian, remove noise tracks from GGTF output and suppress error messages with debugLvl=INFO</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-07-28",
+            "updatedAt": "2026-07-28",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -921,28 +976,6 @@
             "createdAt": "2026-04-09",
             "updatedAt": "2026-04-09",
             "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 124,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/124'>feat(dashboard): make the Regression Status night selectable and the landscape report-independent</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-07-27",
-            "updatedAt": "2026-07-27",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 125,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/125'>feat(dashboard): show the nightly e-group report in the Overview tab</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-07-27",
-            "updatedAt": "2026-07-27",
-            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1365,13 +1398,24 @@
             "assignees": ""
         },
         {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 534,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/534'>move to k4geo from FCCDetectors</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-07-28",
+            "updatedAt": "2026-07-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
             "num": 170,
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/170'>feat: Dual crys calo digi</a>",
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1393,7 +1437,7 @@
             "author": "aloeliger",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-04-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1403,8 +1447,8 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/264'>Update turbine ecal endcap cell position calculation and (maybe?) fix bugs in ecal barrel/endcap neighbor map creation</a>",
             "author": "varnes",
             "createdAt": "2026-06-23",
-            "updatedAt": "2026-07-16",
-            "mergeOk": "yes",
+            "updatedAt": "2026-07-28",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1415,7 +1459,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-07-03",
             "updatedAt": "2026-07-12",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1426,17 +1470,28 @@
             "author": "jacofan",
             "createdAt": "2026-07-07",
             "updatedAt": "2026-07-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": "SanghyunKo"
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 275,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/275'>Fix phi wrapping in topo cluster barycenter calculation.</a>",
+            "num": 276,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/276'>Fix SW clustering sensitivity to cell ordering.</a>",
             "author": "scott-snyder",
-            "createdAt": "2026-07-21",
-            "updatedAt": "2026-07-22",
+            "createdAt": "2026-07-28",
+            "updatedAt": "2026-07-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 277,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/277'>Fix cluster<>mcparticle links.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2026-07-29",
+            "updatedAt": "2026-07-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1568,7 +1623,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/369'>Configure indexing service for ALLEGRO.</a>",
             "author": "scott-snyder",
             "createdAt": "2026-07-14",
-            "updatedAt": "2026-07-22",
+            "updatedAt": "2026-07-28",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1579,7 +1634,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/374'>Don't configure crosstalk tool for EMEC.</a>",
             "author": "scott-snyder",
             "createdAt": "2026-07-22",
-            "updatedAt": "2026-07-22",
+            "updatedAt": "2026-07-28",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
