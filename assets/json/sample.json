@@ -61,7 +61,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/611'>Prerequisites for IDEA option2 PFlow study</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-06-30",
-            "updatedAt": "2026-07-29",
+            "updatedAt": "2026-07-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "jbeirer"
@@ -95,6 +95,28 @@
             "author": "jmcarcell",
             "createdAt": "2026-07-29",
             "updatedAt": "2026-07-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 623,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/623'>Fix z index decoding in turbine endcap getLocalZ</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-07-30",
+            "updatedAt": "2026-07-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 624,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/624'>Fix flat index in turbine endcap local z lookup</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-07-30",
+            "updatedAt": "2026-07-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -204,7 +226,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/372'>Add Gaudi Functional C++ Class Generator</a>",
             "author": "ianna",
             "createdAt": "2026-01-16",
-            "updatedAt": "2026-07-24",
+            "updatedAt": "2026-07-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -238,7 +260,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -249,7 +271,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -259,8 +281,8 @@
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/869'>Make the LCG stack the default one for the nightlies</a>",
             "author": "jmcarcell",
             "createdAt": "2026-04-10",
-            "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "updatedAt": "2026-07-30",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -381,7 +403,7 @@
             "author": "scott-snyder",
             "createdAt": "2025-09-14",
             "updatedAt": "2025-09-18",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -392,7 +414,7 @@
             "author": "Dr-Stubborn",
             "createdAt": "2026-07-07",
             "updatedAt": "2026-07-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -446,7 +468,7 @@
             "title": "<a href='https://github.com/key4hep/k4Clue/pull/82'>fix CLUE output</a>",
             "author": "jmcarcell",
             "createdAt": "2026-07-26",
-            "updatedAt": "2026-07-26",
+            "updatedAt": "2026-07-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -622,7 +644,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/87'>Add track merging processor based on track parameter compatibility</a>",
             "author": "Victor-Schwan",
             "createdAt": "2026-07-08",
-            "updatedAt": "2026-07-29",
+            "updatedAt": "2026-07-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -634,6 +656,17 @@
             "author": "andread3vita",
             "createdAt": "2026-07-28",
             "updatedAt": "2026-07-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-reco-validation",
+            "num": 17,
+            "title": "<a href='https://github.com/key4hep/key4hep-reco-validation/pull/17'>Refactor and workflow change</a>",
+            "author": "TimLdl",
+            "createdAt": "2026-07-30",
+            "updatedAt": "2026-07-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -909,6 +942,17 @@
             "author": "apausa",
             "createdAt": "2026-04-09",
             "updatedAt": "2026-04-09",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 138,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/138'>fix(regression): ignore missing results for retired benchmark configs</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-07-30",
+            "updatedAt": "2026-07-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1315,7 +1359,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/523'>Add all-event-weights functor and pp_hhh example analysis</a>",
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-16",
-            "updatedAt": "2026-07-21",
+            "updatedAt": "2026-07-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1381,7 +1425,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/264'>Update turbine ecal endcap cell position calculation and (maybe?) fix bugs in ecal barrel/endcap neighbor map creation</a>",
             "author": "varnes",
             "createdAt": "2026-06-23",
-            "updatedAt": "2026-07-29",
+            "updatedAt": "2026-07-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1535,7 +1579,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/368'>Refactor and workflow change</a>",
             "author": "TimLdl",
             "createdAt": "2026-07-13",
-            "updatedAt": "2026-07-29",
+            "updatedAt": "2026-07-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1561,6 +1605,17 @@
             "mergeOk": "no",
             "labels": "wontfix",
             "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>root2gltf",
+            "num": 15,
+            "title": "<a href='https://github.com/HEP-FCC/root2gltf/pull/15'>Assign colors</a>",
+            "author": "apausa",
+            "createdAt": "2026-07-30",
+            "updatedAt": "2026-07-30",
+            "mergeOk": "yes",
+            "labels": "bug",
+            "assignees": "apausa"
         },
         {
             "repo": "hep-fcc/<br>bib-studies",
