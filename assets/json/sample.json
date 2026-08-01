@@ -61,7 +61,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/611'>Prerequisites for IDEA option2 PFlow study</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-06-30",
-            "updatedAt": "2026-07-30",
+            "updatedAt": "2026-07-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "jbeirer"
@@ -84,17 +84,6 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-07-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 622,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/622'>Remove unused private fields from FCCSWEndcapTurbine_k4geo</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-07-29",
-            "updatedAt": "2026-07-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -237,7 +226,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
             "createdAt": "2026-07-06",
-            "updatedAt": "2026-07-28",
+            "updatedAt": "2026-07-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -284,6 +273,17 @@
             "updatedAt": "2026-07-30",
             "mergeOk": "yes",
             "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 903,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/903'>Bump docker/login-action from 4.5.1 to 4.6.0</a>",
+            "author": "dependabot",
+            "createdAt": "2026-08-01",
+            "updatedAt": "2026-08-01",
+            "mergeOk": "yes",
+            "labels": "dependencies \ngithub_actions",
             "assignees": ""
         },
         {
@@ -424,7 +424,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/59'>Add a GNN based track finding pipeline</a>",
             "author": "tmadlener",
             "createdAt": "2026-04-29",
-            "updatedAt": "2026-07-24",
+            "updatedAt": "2026-07-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -446,7 +446,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/85'>add theta/phi hit segmentation for GNNTrackFinder</a>",
             "author": "Baucki1",
             "createdAt": "2026-07-24",
-            "updatedAt": "2026-07-27",
+            "updatedAt": "2026-07-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -465,10 +465,10 @@
         {
             "repo": "key4hep/<br>k4Clue",
             "num": 82,
-            "title": "<a href='https://github.com/key4hep/k4Clue/pull/82'>fix CLUE output</a>",
+            "title": "<a href='https://github.com/key4hep/k4Clue/pull/82'>Fix output in ClueGaudiAlgorithmWrapper.cc and other fixes</a>",
             "author": "jmcarcell",
             "createdAt": "2026-07-26",
-            "updatedAt": "2026-07-30",
+            "updatedAt": "2026-07-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -644,7 +644,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/87'>Add track merging processor based on track parameter compatibility</a>",
             "author": "Victor-Schwan",
             "createdAt": "2026-07-08",
-            "updatedAt": "2026-07-30",
+            "updatedAt": "2026-07-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -942,17 +942,6 @@
             "author": "apausa",
             "createdAt": "2026-04-09",
             "updatedAt": "2026-04-09",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 138,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/138'>fix(regression): ignore missing results for retired benchmark configs</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-07-30",
-            "updatedAt": "2026-07-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1579,7 +1568,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/368'>Refactor and workflow change</a>",
             "author": "TimLdl",
             "createdAt": "2026-07-13",
-            "updatedAt": "2026-07-30",
+            "updatedAt": "2026-07-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1612,7 +1601,7 @@
             "title": "<a href='https://github.com/HEP-FCC/root2gltf/pull/15'>Assign colors</a>",
             "author": "apausa",
             "createdAt": "2026-07-30",
-            "updatedAt": "2026-07-30",
+            "updatedAt": "2026-07-31",
             "mergeOk": "yes",
             "labels": "bug",
             "assignees": "apausa"
@@ -1624,6 +1613,17 @@
             "author": "armin-ilg",
             "createdAt": "2026-06-15",
             "updatedAt": "2026-07-20",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>bib-studies",
+            "num": 20,
+            "title": "<a href='https://github.com/HEP-FCC/bib-studies/pull/20'>Enable .hepevt (SR file type) bkg fiel parsing</a>",
+            "author": "neskongarr",
+            "createdAt": "2026-07-31",
+            "updatedAt": "2026-07-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
