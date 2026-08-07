@@ -61,7 +61,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/611'>Prerequisites for IDEA option2 PFlow study</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-06-30",
-            "updatedAt": "2026-08-05",
+            "updatedAt": "2026-08-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "jbeirer"
@@ -83,7 +83,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/615'>IDEA: Adding non-uniform muon-system builder and renaming muon system files</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
-            "updatedAt": "2026-08-05",
+            "updatedAt": "2026-08-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -94,7 +94,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
-            "updatedAt": "2026-08-03",
+            "updatedAt": "2026-08-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -116,18 +116,18 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/628'>fix(DRTubes): Cache DRTubes VolumeID coders</a>",
             "author": "jbeirer",
             "createdAt": "2026-08-04",
-            "updatedAt": "2026-08-04",
+            "updatedAt": "2026-08-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 629,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/629'>Fixup small errors in cell positioning, and re-syncronize calibration and upstream xmls</a>",
-            "author": "varnes",
-            "createdAt": "2026-08-04",
-            "updatedAt": "2026-08-04",
+            "num": 630,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/630'>[WIP] Fix dangling vis definitions for each IDEA version</a>",
+            "author": "apausa",
+            "createdAt": "2026-08-06",
+            "updatedAt": "2026-08-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -183,7 +183,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -194,7 +194,7 @@
             "author": "BrieucF",
             "createdAt": "2026-03-30",
             "updatedAt": "2026-05-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -249,18 +249,7 @@
             "author": "madbaron",
             "createdAt": "2026-07-06",
             "updatedAt": "2026-07-31",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
-            "num": 416,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/416'>Apply a few suggestions from clang-tidy</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-07-21",
-            "updatedAt": "2026-08-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -293,6 +282,17 @@
             "author": "jmcarcell",
             "createdAt": "2026-04-10",
             "updatedAt": "2026-08-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 906,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/906'>Add k4actstracking +gnn variant</a>",
+            "author": "madbaron",
+            "createdAt": "2026-08-06",
+            "updatedAt": "2026-08-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -431,17 +431,6 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 59,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/59'>Add a GNN based track finding pipeline</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-29",
-            "updatedAt": "2026-08-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
             "num": 72,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/72'>Expand support for 4D tracking</a>",
             "author": "jburzy",
@@ -468,7 +457,18 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/88'>feat: Add material to gen3 geometry</a>",
             "author": "madbaron",
             "createdAt": "2026-08-02",
-            "updatedAt": "2026-08-05",
+            "updatedAt": "2026-08-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 90,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/90'>GNN CI test and generalisation</a>",
+            "author": "madbaron",
+            "createdAt": "2026-08-06",
+            "updatedAt": "2026-08-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -513,7 +513,7 @@
             "author": "jmcarcell",
             "createdAt": "2025-03-24",
             "updatedAt": "2026-07-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -535,7 +535,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-03-18",
             "updatedAt": "2026-07-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -589,7 +589,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
-            "updatedAt": "2026-08-03",
+            "updatedAt": "2026-08-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -634,6 +634,17 @@
             "author": "Victor-Schwan",
             "createdAt": "2026-08-05",
             "updatedAt": "2026-08-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-reco-validation",
+            "num": 19,
+            "title": "<a href='https://github.com/key4hep/key4hep-reco-validation/pull/19'>Rewrite to allow more modularity</a>",
+            "author": "TimLdl",
+            "createdAt": "2026-08-06",
+            "updatedAt": "2026-08-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -832,7 +843,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-04-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -854,7 +865,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-06-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1162,7 +1173,7 @@
             "author": "BrieucF",
             "createdAt": "2022-10-08",
             "updatedAt": "2022-10-12",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "Do not merge",
             "assignees": ""
         },
@@ -1184,7 +1195,7 @@
             "author": "kjvbrt",
             "createdAt": "2023-06-29",
             "updatedAt": "2024-04-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1206,7 +1217,7 @@
             "author": "vvolkl",
             "createdAt": "2025-01-14",
             "updatedAt": "2025-01-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1228,7 +1239,7 @@
             "author": "mattiaisgro",
             "createdAt": "2025-06-19",
             "updatedAt": "2025-06-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1250,7 +1261,7 @@
             "author": "goblirsc",
             "createdAt": "2026-02-16",
             "updatedAt": "2026-07-21",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1272,7 +1283,7 @@
             "author": "tomfournier",
             "createdAt": "2026-03-23",
             "updatedAt": "2026-06-02",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1283,7 +1294,7 @@
             "author": "forthommel",
             "createdAt": "2026-05-10",
             "updatedAt": "2026-05-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1294,7 +1305,7 @@
             "author": "captainvogon",
             "createdAt": "2026-06-25",
             "updatedAt": "2026-07-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1327,7 +1338,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1349,7 +1360,7 @@
             "author": "aloeliger",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-04-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1371,7 +1382,7 @@
             "author": "jacofan",
             "createdAt": "2026-07-07",
             "updatedAt": "2026-08-04",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
         },
@@ -1382,7 +1393,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-07-30",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1437,6 +1448,17 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-07-30",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 376,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/376'>Penguin-free beta measurement B02D0h0</a>",
+            "author": "charlie-wild",
+            "createdAt": "2026-08-06",
+            "updatedAt": "2026-08-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
