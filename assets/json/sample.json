@@ -94,7 +94,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
-            "updatedAt": "2026-08-06",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -116,7 +116,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/628'>fix(DRTubes): Cache DRTubes VolumeID coders</a>",
             "author": "jbeirer",
             "createdAt": "2026-08-04",
-            "updatedAt": "2026-08-06",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -124,10 +124,10 @@
         {
             "repo": "key4hep/<br>k4geo",
             "num": 630,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/630'>[WIP] Fix dangling vis definitions for each IDEA version</a>",
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/630'>Fix dangling vis definitions for each IDEA version</a>",
             "author": "apausa",
             "createdAt": "2026-08-06",
-            "updatedAt": "2026-08-06",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -260,7 +260,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -271,7 +271,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -282,18 +282,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-04-10",
             "updatedAt": "2026-08-01",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 906,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/906'>Add k4actstracking +gnn variant</a>",
-            "author": "madbaron",
-            "createdAt": "2026-08-06",
-            "updatedAt": "2026-08-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -402,7 +391,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimGeant4/pull/88'>Making IGeoSvc::getDetector and constantAsString const.</a>",
             "author": "scott-snyder",
             "createdAt": "2025-09-14",
-            "updatedAt": "2025-09-18",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -457,18 +446,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/88'>feat: Add material to gen3 geometry</a>",
             "author": "madbaron",
             "createdAt": "2026-08-02",
-            "updatedAt": "2026-08-06",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 90,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/90'>GNN CI test and generalisation</a>",
-            "author": "madbaron",
-            "createdAt": "2026-08-06",
-            "updatedAt": "2026-08-06",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -479,7 +457,7 @@
             "title": "<a href='https://github.com/key4hep/k4Clue/pull/82'>Fix output in ClueGaudiAlgorithmWrapper.cc and other fixes</a>",
             "author": "jmcarcell",
             "createdAt": "2026-07-26",
-            "updatedAt": "2026-07-31",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -545,7 +523,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/24'>[MUONDigi] Adding a digitizer of IDEA Muon system.</a>",
             "author": "mahmoudali2",
             "createdAt": "2024-07-25",
-            "updatedAt": "2026-08-03",
+            "updatedAt": "2026-08-07",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -589,7 +567,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
-            "updatedAt": "2026-08-06",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -634,6 +612,17 @@
             "author": "Victor-Schwan",
             "createdAt": "2026-08-05",
             "updatedAt": "2026-08-05",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 92,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/92'>TrackdNdxDelphesBased Fix</a>",
+            "author": "s6anloes",
+            "createdAt": "2026-08-07",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -644,7 +633,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-reco-validation/pull/19'>Rewrite to allow more modularity</a>",
             "author": "TimLdl",
             "createdAt": "2026-08-06",
-            "updatedAt": "2026-08-06",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -843,7 +832,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-04-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -865,7 +854,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-06-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -964,6 +953,17 @@
             "author": "davidlange6",
             "createdAt": "2026-05-05",
             "updatedAt": "2026-05-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 497,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/497'>Add k4Bench to infrastructure section</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-08-07",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1304,7 +1304,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/520'>Implement integrated CMS Combine backend</a>",
             "author": "captainvogon",
             "createdAt": "2026-06-25",
-            "updatedAt": "2026-07-24",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1448,7 +1448,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-07-30",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1459,6 +1459,17 @@
             "author": "charlie-wild",
             "createdAt": "2026-08-06",
             "updatedAt": "2026-08-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 377,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/377'>Lambda b inclusive and exclusive semileptonic dec files</a>",
+            "author": "msrudolp",
+            "createdAt": "2026-08-07",
+            "updatedAt": "2026-08-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
