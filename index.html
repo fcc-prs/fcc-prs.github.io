@@ -9,6 +9,7 @@
 <body>
   <div class="container">
     <h1>FCC Open Pull Request Summary</h1>
+    <p id="last-updated" class="last-updated"></p>
   </div>
   <div class="container">
     <h2>Active Repositories</h2>
@@ -72,6 +73,13 @@
     </div>
   </div>
 
+  <script type="module">
+    import data from '/assets/json/last_updated.json' with {type: 'json'};
+    const el = document.getElementById('last-updated');
+    if (el && data.updated_at) {
+      el.textContent = 'Last updated: ' + new Date(data.updated_at).toUTCString();
+    }
+  </script>
   <script type="module" src="/assets/js/repo_script.js"></script>
   <script type="module" src="/assets/js/pr_script.js"></script>
   <script src="/assets/js/searcher.js"></script>
