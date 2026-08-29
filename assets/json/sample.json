@@ -271,7 +271,7 @@
             "author": "ianna",
             "createdAt": "2026-01-16",
             "updatedAt": "2026-07-31",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -328,6 +328,17 @@
             "updatedAt": "2026-08-20",
             "mergeOk": "yes",
             "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 919,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/919'>Bump int128/docker-manifest-create-action from 2.26.0 to 2.27.0</a>",
+            "author": "dependabot",
+            "createdAt": "2026-08-29",
+            "updatedAt": "2026-08-29",
+            "mergeOk": "yes",
+            "labels": "dependencies \ngithub_actions",
             "assignees": ""
         },
         {
@@ -419,6 +430,17 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 162,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/162'>DelphesEDM4HepConverter: keep energy/mass/momentum consistency; add pdgid for tracks and leptons</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-08-28",
+            "updatedAt": "2026-08-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>k4Gen",
             "num": 34,
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/34'>Limit number of seen events</a>",
@@ -502,6 +524,17 @@
             "author": "jmcarcell",
             "createdAt": "2026-07-28",
             "updatedAt": "2026-08-26",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 94,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/94'>Fix CUDA output tensor for metric learning model</a>",
+            "author": "Baucki1",
+            "createdAt": "2026-08-28",
+            "updatedAt": "2026-08-28",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -980,39 +1013,6 @@
             "assignees": ""
         },
         {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 166,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/166'>chore(deps): bump streamlit from 1.61.1 to 1.62.0 in /dashboard</a>",
-            "author": "dependabot",
-            "createdAt": "2026-08-28",
-            "updatedAt": "2026-08-28",
-            "mergeOk": "yes",
-            "labels": "dependencies \npython",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 167,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/167'>chore(deps): update pymdown-extensions requirement from >=11.0.1 to >=11.0.2</a>",
-            "author": "dependabot",
-            "createdAt": "2026-08-28",
-            "updatedAt": "2026-08-28",
-            "mergeOk": "yes",
-            "labels": "dependencies \npython",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 168,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/168'>chore(deps): bump streamlit from 1.61.1 to 1.62.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-08-28",
-            "updatedAt": "2026-08-28",
-            "mergeOk": "yes",
-            "labels": "dependencies \npython",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>FCCSW",
             "num": 294,
             "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/294'>[WIP] First DECal / SiW ECal commit</a>",
@@ -1470,7 +1470,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1591,7 +1591,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-08-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1640,17 +1640,6 @@
             "assignees": "apausa"
         },
         {
-            "repo": "hep-fcc/<br>fccsw-meetings",
-            "num": 3,
-            "title": "<a href='https://github.com/HEP-FCC/fccsw-meetings/pull/3'>Truncate events that occur multiple times; allow for extra events </a>",
-            "author": "davidlange6",
-            "createdAt": "2026-08-26",
-            "updatedAt": "2026-08-27",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>fcc-drs",
             "num": 74,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/74'>Update dependency marked to v18.0.11</a>",
@@ -1690,17 +1679,6 @@
             "author": "bistapf",
             "createdAt": "2026-08-21",
             "updatedAt": "2026-08-27",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>GenToAna-Tutorial",
-            "num": 5,
-            "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/5'>Add staged FCC-ee Z(mumu)H(bb) analysis tutorial</a>",
-            "author": "bndikt",
-            "createdAt": "2026-08-25",
-            "updatedAt": "2026-08-28",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
