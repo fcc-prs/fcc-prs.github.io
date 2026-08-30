@@ -149,7 +149,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/649'>Fix phi computations in STT_info</a>",
             "author": "ponyisi",
             "createdAt": "2026-08-27",
-            "updatedAt": "2026-08-27",
+            "updatedAt": "2026-08-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -540,17 +540,6 @@
             "assignees": ""
         },
         {
-            "repo": "key4hep/<br>k4Clue",
-            "num": 83,
-            "title": "<a href='https://github.com/key4hep/k4Clue/pull/83'>Fix cluster position calculator</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-08-09",
-            "updatedAt": "2026-08-27",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "key4hep/<br>key4hep-dev-utils",
             "num": 2,
             "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/2'>[wip] Add a workflow to run clang-format and push back the changes</a>",
@@ -750,22 +739,11 @@
         },
         {
             "repo": "key4hep/<br>k4Reco",
-            "num": 50,
-            "title": "<a href='https://github.com/key4hep/k4Reco/pull/50'>Rebase of muon collider fork</a>",
-            "author": "aloeliger",
-            "createdAt": "2026-03-09",
-            "updatedAt": "2026-03-10",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Reco",
             "num": 51,
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/51'>Upstream FastJet algorithm from MuonCollider fork</a>",
             "author": "aloeliger",
             "createdAt": "2026-03-18",
-            "updatedAt": "2026-08-28",
+            "updatedAt": "2026-08-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1491,7 +1469,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/253'>Upstream muon collider calo digis.</a>",
             "author": "aloeliger",
             "createdAt": "2026-04-24",
-            "updatedAt": "2026-04-29",
+            "updatedAt": "2026-08-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1514,6 +1492,17 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-08-26",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 281,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/281'>Gaudi port of calorimeter digitisers used by ILD and MAIA</a>",
+            "author": "madbaron",
+            "createdAt": "2026-08-29",
+            "updatedAt": "2026-08-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1547,7 +1536,7 @@
             "author": "panwarlsweet",
             "createdAt": "2024-09-13",
             "updatedAt": "2024-09-18",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1668,17 +1657,6 @@
             "author": "afihasan",
             "createdAt": "2026-08-03",
             "updatedAt": "2026-08-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>GenToAna-Tutorial",
-            "num": 3,
-            "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/3'>WIP: Filling in Delphes Fast Simulation step of tutorial</a>",
-            "author": "bistapf",
-            "createdAt": "2026-08-21",
-            "updatedAt": "2026-08-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
