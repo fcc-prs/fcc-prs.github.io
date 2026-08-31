@@ -7,7 +7,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-06-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -18,7 +18,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-06-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +40,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-06-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -51,7 +51,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-06-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +73,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-08-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +84,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
             "updatedAt": "2026-08-07",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +95,7 @@
             "author": "apausa",
             "createdAt": "2026-08-17",
             "updatedAt": "2026-08-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -106,7 +106,7 @@
             "author": "apausa",
             "createdAt": "2026-08-20",
             "updatedAt": "2026-08-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -117,7 +117,7 @@
             "author": "apausa",
             "createdAt": "2026-08-20",
             "updatedAt": "2026-08-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -128,7 +128,7 @@
             "author": "apausa",
             "createdAt": "2026-08-20",
             "updatedAt": "2026-08-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -139,17 +139,6 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-08-25",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 649,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/649'>Fix phi computations in STT_info</a>",
-            "author": "ponyisi",
-            "createdAt": "2026-08-27",
-            "updatedAt": "2026-08-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -540,6 +529,17 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 95,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/95'>Use upstream ACTS converters</a>",
+            "author": "madbaron",
+            "createdAt": "2026-08-30",
+            "updatedAt": "2026-08-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>key4hep-dev-utils",
             "num": 2,
             "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/2'>[wip] Add a workflow to run clang-format and push back the changes</a>",
@@ -666,7 +666,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/88'>Tracking: fix post-fit TrackState, reset TGeoManager before each fit, correct the Jacobian, remove noise tracks from GGTF output and suppress error messages with debugLvl=INFO</a>",
             "author": "andread3vita",
             "createdAt": "2026-07-28",
-            "updatedAt": "2026-08-26",
+            "updatedAt": "2026-08-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
