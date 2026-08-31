@@ -29,7 +29,7 @@
             "author": "davidlange6",
             "createdAt": "2026-03-14",
             "updatedAt": "2026-08-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": "SanghyunKo"
         },
@@ -62,7 +62,7 @@
             "author": "armin-ilg",
             "createdAt": "2026-07-03",
             "updatedAt": "2026-08-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -90,22 +90,11 @@
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 639,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/639'>Group and fix dangling vis definitions for each ALLEGRO version</a>",
-            "author": "apausa",
-            "createdAt": "2026-08-17",
-            "updatedAt": "2026-08-24",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 643,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/643'>Group and fix dangling vis definitions for each CLD version</a>",
             "author": "apausa",
             "createdAt": "2026-08-20",
-            "updatedAt": "2026-08-21",
+            "updatedAt": "2026-08-31",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -138,8 +127,8 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/648'>Update to the SR Mask geometry in the MDI Region</a>",
             "author": "neskongarr",
             "createdAt": "2026-08-25",
-            "updatedAt": "2026-08-25",
-            "mergeOk": "yes",
+            "updatedAt": "2026-08-31",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -216,6 +205,17 @@
             "author": "tmadlener",
             "createdAt": "2026-08-28",
             "updatedAt": "2026-08-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 516,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/516'>Fix documentation of reco particle vertex relation & links</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-31",
+            "updatedAt": "2026-08-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -424,7 +424,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/162'>DelphesEDM4HepConverter: keep energy/mass/momentum consistency; add pdgid for tracks and leptons</a>",
             "author": "davidlange6",
             "createdAt": "2026-08-28",
-            "updatedAt": "2026-08-28",
+            "updatedAt": "2026-08-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -512,7 +512,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/87'>ci: drop ACTS TGeo plugin build</a>",
             "author": "jmcarcell",
             "createdAt": "2026-07-28",
-            "updatedAt": "2026-08-26",
+            "updatedAt": "2026-08-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -534,7 +534,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/95'>Use upstream ACTS converters</a>",
             "author": "madbaron",
             "createdAt": "2026-08-30",
-            "updatedAt": "2026-08-30",
+            "updatedAt": "2026-08-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -743,7 +743,7 @@
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/51'>Upstream FastJet algorithm from MuonCollider fork</a>",
             "author": "aloeliger",
             "createdAt": "2026-03-18",
-            "updatedAt": "2026-08-29",
+            "updatedAt": "2026-08-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1469,7 +1469,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/253'>Upstream muon collider calo digis.</a>",
             "author": "aloeliger",
             "createdAt": "2026-04-24",
-            "updatedAt": "2026-08-29",
+            "updatedAt": "2026-08-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1502,7 +1502,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/281'>Gaudi port of calorimeter digitisers used by ILD and MAIA</a>",
             "author": "madbaron",
             "createdAt": "2026-08-29",
-            "updatedAt": "2026-08-29",
+            "updatedAt": "2026-08-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1658,6 +1658,28 @@
             "createdAt": "2026-08-03",
             "updatedAt": "2026-08-12",
             "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>GenToAna-Tutorial",
+            "num": 11,
+            "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/11'>Add CITATION.cff and .zenodo.json</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-08-31",
+            "updatedAt": "2026-08-31",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>GenToAna-Tutorial",
+            "num": 12,
+            "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/12'>Add FCC-hh examples as advanced tasks</a>",
+            "author": "bistapf",
+            "createdAt": "2026-08-31",
+            "updatedAt": "2026-08-31",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         }
