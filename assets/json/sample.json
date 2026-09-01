@@ -7,7 +7,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-06-04",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -18,7 +18,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-06-04",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +29,7 @@
             "author": "davidlange6",
             "createdAt": "2026-03-14",
             "updatedAt": "2026-08-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
         },
@@ -40,7 +40,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-06-04",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -51,7 +51,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-06-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +62,7 @@
             "author": "armin-ilg",
             "createdAt": "2026-07-03",
             "updatedAt": "2026-08-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +73,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-08-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +84,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
             "updatedAt": "2026-08-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +95,7 @@
             "author": "apausa",
             "createdAt": "2026-08-20",
             "updatedAt": "2026-08-31",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -106,7 +106,7 @@
             "author": "apausa",
             "createdAt": "2026-08-20",
             "updatedAt": "2026-08-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -117,7 +117,7 @@
             "author": "apausa",
             "createdAt": "2026-08-20",
             "updatedAt": "2026-08-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -128,7 +128,18 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-08-31",
-            "mergeOk": "no",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 650,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/650'>ALLEGRO HCAL geometry update</a>",
+            "author": "mattiasoldani",
+            "createdAt": "2026-08-31",
+            "updatedAt": "2026-08-31",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -204,18 +215,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/515'>Fix error prone retrieval of track states via location from Track</a>",
             "author": "tmadlener",
             "createdAt": "2026-08-28",
-            "updatedAt": "2026-08-28",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
-            "num": 516,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/516'>Fix documentation of reco particle vertex relation & links</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-08-31",
-            "updatedAt": "2026-08-31",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -282,7 +282,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -293,7 +293,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -304,7 +304,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-04-10",
             "updatedAt": "2026-08-01",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -314,20 +314,9 @@
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
-            "updatedAt": "2026-08-20",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 919,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/919'>Bump int128/docker-manifest-create-action from 2.26.0 to 2.27.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-08-29",
-            "updatedAt": "2026-08-29",
-            "mergeOk": "yes",
-            "labels": "dependencies \ngithub_actions",
             "assignees": ""
         },
         {
@@ -369,7 +358,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-doc/pull/155'>Add issue template for documentation issues</a>",
             "author": "Panzerkampfwagen-del",
             "createdAt": "2026-08-26",
-            "updatedAt": "2026-08-27",
+            "updatedAt": "2026-08-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -644,7 +633,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
-            "updatedAt": "2026-08-25",
+            "updatedAt": "2026-08-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -801,6 +790,17 @@
             "updatedAt": "2025-08-21",
             "mergeOk": "no",
             "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-julia-fwk",
+            "num": 109,
+            "title": "<a href='https://github.com/key4hep/key4hep-julia-fwk/pull/109'>Update JuliaFormatter requirement from 1 to 1, 2.13</a>",
+            "author": "dependabot",
+            "createdAt": "2026-09-01",
+            "updatedAt": "2026-09-01",
+            "mergeOk": "yes",
+            "labels": "dependencies \njulia",
             "assignees": ""
         },
         {
@@ -1042,6 +1042,17 @@
             "createdAt": "2025-03-03",
             "updatedAt": "2025-03-07",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 198,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/198'>Update README.md for eedE</a>",
+            "author": "apausa",
+            "createdAt": "2026-08-31",
+            "updatedAt": "2026-08-31",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1480,7 +1491,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/271'>IDEA o2 seeded ECAL clustering algorithms</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-07-03",
-            "updatedAt": "2026-08-26",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "jbeirer"
@@ -1502,7 +1513,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/281'>Gaudi port of calorimeter digitisers used by ILD and MAIA</a>",
             "author": "madbaron",
             "createdAt": "2026-08-29",
-            "updatedAt": "2026-08-31",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1640,6 +1651,17 @@
             "assignees": ""
         },
         {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 75,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/75'>Update dependency katex to v0.18.5</a>",
+            "author": "renovate",
+            "createdAt": "2026-08-31",
+            "updatedAt": "2026-09-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "hep-fcc/<br>FCCAnalysesWeb",
             "num": 4,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalysesWeb/pull/4'>docs: add links for fit and extract commands</a>",
@@ -1674,12 +1696,12 @@
         },
         {
             "repo": "hep-fcc/<br>GenToAna-Tutorial",
-            "num": 12,
-            "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/12'>Add FCC-hh examples as advanced tasks</a>",
-            "author": "bistapf",
+            "num": 16,
+            "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/16'>Update the Lumi and .gitignore</a>",
+            "author": "Ang-Li-93",
             "createdAt": "2026-08-31",
             "updatedAt": "2026-08-31",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         }
