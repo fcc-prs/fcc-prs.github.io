@@ -24,17 +24,6 @@
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 578,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/578'>account for phi symmetry in idea calo to reduce # of volumes</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-03-14",
-            "updatedAt": "2026-08-27",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "SanghyunKo"
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 590,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/590'>[WIP] Use more hierarchical drivers for FCCee trackers</a>",
             "author": "tmadlener",
@@ -127,7 +116,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/648'>Update to the SR Mask geometry in the MDI Region</a>",
             "author": "neskongarr",
             "createdAt": "2026-08-25",
-            "updatedAt": "2026-08-31",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -138,7 +127,18 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/650'>ALLEGRO HCAL geometry update</a>",
             "author": "mattiasoldani",
             "createdAt": "2026-08-31",
-            "updatedAt": "2026-08-31",
+            "updatedAt": "2026-09-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 651,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/651'>Update CODEOWNERS</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-01",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -270,7 +270,29 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
             "createdAt": "2026-07-06",
-            "updatedAt": "2026-08-25",
+            "updatedAt": "2026-09-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 423,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/423'>Set the CellID encoding of overlaid collections in initialize()</a>",
+            "author": "madbaron",
+            "createdAt": "2026-09-01",
+            "updatedAt": "2026-09-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 425,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/425'>fix: protect against out of bounds access</a>",
+            "author": "madbaron",
+            "createdAt": "2026-09-01",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -282,7 +304,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -293,7 +315,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -304,7 +326,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-04-10",
             "updatedAt": "2026-08-01",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -529,6 +551,17 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>k4Clue",
+            "num": 84,
+            "title": "<a href='https://github.com/key4hep/k4Clue/pull/84'>Add CLUEstering 2.12 compatibility</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-01",
+            "updatedAt": "2026-09-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>key4hep-dev-utils",
             "num": 2,
             "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/2'>[wip] Add a workflow to run clang-format and push back the changes</a>",
@@ -672,12 +705,23 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 97,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/97'>Add CMake flags gating Tracking and DCHdigi</a>",
+            "author": "madbaron",
+            "createdAt": "2026-09-01",
+            "updatedAt": "2026-09-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>key4hep-reco-validation",
             "num": 20,
             "title": "<a href='https://github.com/key4hep/key4hep-reco-validation/pull/20'>Merge validation tooling, parallelize CI pipelines, and update web dashboard</a>",
             "author": "TimLdl",
             "createdAt": "2026-08-26",
-            "updatedAt": "2026-08-27",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -732,7 +776,7 @@
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/51'>Upstream FastJet algorithm from MuonCollider fork</a>",
             "author": "aloeliger",
             "createdAt": "2026-03-18",
-            "updatedAt": "2026-08-31",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -842,7 +886,7 @@
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
             "author": "Jullianwatts",
             "createdAt": "2026-08-22",
-            "updatedAt": "2026-08-25",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -992,17 +1036,6 @@
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
-            "num": 294,
-            "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/294'>[WIP] First DECal / SiW ECal commit</a>",
-            "author": "tonyPbA",
-            "createdAt": "2018-03-07",
-            "updatedAt": "2018-05-07",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCSW",
             "num": 457,
             "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/457'>update computing documentation</a>",
             "author": "clementhelsens",
@@ -1048,10 +1081,10 @@
         {
             "repo": "hep-fcc/<br>fcc-tutorials",
             "num": 198,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/198'>Update README.md for eedE</a>",
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/198'>Update README.md about eedE</a>",
             "author": "apausa",
             "createdAt": "2026-08-31",
-            "updatedAt": "2026-08-31",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1162,39 +1195,6 @@
             "author": "vasilllis",
             "createdAt": "2026-08-27",
             "updatedAt": "2026-08-27",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>tkLayout",
-            "num": 1,
-            "title": "<a href='https://github.com/HEP-FCC/tkLayout/pull/1'>Simplify CMake Configuration and fix compilation error with c++17</a>",
-            "author": "vvolkl",
-            "createdAt": "2019-03-07",
-            "updatedAt": "2019-03-07",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>tkLayout",
-            "num": 2,
-            "title": "<a href='https://github.com/HEP-FCC/tkLayout/pull/2'>FCChh_v4.01: add configuration files for tilted layout</a>",
-            "author": "vvolkl",
-            "createdAt": "2019-03-07",
-            "updatedAt": "2019-03-07",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>tkLayout",
-            "num": 3,
-            "title": "<a href='https://github.com/HEP-FCC/tkLayout/pull/3'>FCCee Vertex designs</a>",
-            "author": "vvolkl",
-            "createdAt": "2019-03-07",
-            "updatedAt": "2019-03-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1662,6 +1662,17 @@
             "assignees": ""
         },
         {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 76,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/76'>Update module github.com/coreos/go-oidc/v3 to v3.21.0</a>",
+            "author": "renovate",
+            "createdAt": "2026-09-02",
+            "updatedAt": "2026-09-02",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "hep-fcc/<br>FCCAnalysesWeb",
             "num": 4,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalysesWeb/pull/4'>docs: add links for fit and extract commands</a>",
@@ -1689,18 +1700,18 @@
             "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/11'>Add CITATION.cff and .zenodo.json</a>",
             "author": "kjvbrt",
             "createdAt": "2026-08-31",
-            "updatedAt": "2026-08-31",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>GenToAna-Tutorial",
-            "num": 16,
-            "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/16'>Update the Lumi and .gitignore</a>",
-            "author": "Ang-Li-93",
-            "createdAt": "2026-08-31",
-            "updatedAt": "2026-08-31",
+            "num": 17,
+            "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/17'>Gen/ee: the fixes after</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-01",
+            "updatedAt": "2026-09-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
