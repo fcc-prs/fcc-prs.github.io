@@ -17,7 +17,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/509'>Add CI workflow for geometry validation with histcmp</a>",
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
-            "updatedAt": "2026-09-03",
+            "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -79,17 +79,6 @@
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 643,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/643'>Group and fix dangling vis definitions for each CLD version</a>",
-            "author": "apausa",
-            "createdAt": "2026-08-20",
-            "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
-            "labels": "CLD",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 645,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/645'>Group and fix dangling vis definitions for FCChh</a>",
             "author": "apausa",
@@ -102,10 +91,10 @@
         {
             "repo": "key4hep/<br>k4geo",
             "num": 646,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/646'>[WIP] Provide color palette with values recognized by ROOT </a>",
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/646'>Group and fix dangling vis definitions in FCCee_ILD </a>",
             "author": "apausa",
             "createdAt": "2026-08-20",
-            "updatedAt": "2026-09-03",
+            "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -116,7 +105,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/648'>Update to the SR Mask geometry in the MDI Region</a>",
             "author": "neskongarr",
             "createdAt": "2026-08-25",
-            "updatedAt": "2026-09-03",
+            "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -127,7 +116,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/651'>Update CODEOWNERS</a>",
             "author": "jmcarcell",
             "createdAt": "2026-09-01",
-            "updatedAt": "2026-09-03",
+            "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -139,6 +128,28 @@
             "author": "jbeirer",
             "createdAt": "2026-09-03",
             "updatedAt": "2026-09-03",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 655,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/655'>Decouple remaining vis tag from MDI</a>",
+            "author": "apausa",
+            "createdAt": "2026-09-04",
+            "updatedAt": "2026-09-04",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 657,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/657'>Remove unused HCal Tile Barrel index</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-05",
+            "updatedAt": "2026-09-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -194,7 +205,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -205,18 +216,7 @@
             "author": "BrieucF",
             "createdAt": "2026-03-30",
             "updatedAt": "2026-05-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
-            "num": 518,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/518'>Discover Python tests with pytest</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-02",
-            "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -270,7 +270,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
             "createdAt": "2026-07-06",
-            "updatedAt": "2026-09-03",
+            "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -281,7 +281,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/425'>fix: protect against out of bounds access</a>",
             "author": "madbaron",
             "createdAt": "2026-09-01",
-            "updatedAt": "2026-09-03",
+            "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -336,7 +336,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-doc/pull/113'>Rework the landing page to not just be a TOC</a>",
             "author": "tmadlener",
             "createdAt": "2025-09-27",
-            "updatedAt": "2026-09-02",
+            "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -595,17 +595,6 @@
             "assignees": ""
         },
         {
-            "repo": "key4hep/<br>key4hep-actions",
-            "num": 55,
-            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/55'>Use LCG default for Alma 9 nightly builds</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-21",
-            "updatedAt": "2026-08-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "key4hep/<br>k4RecTracker",
             "num": 72,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/72'>[WIP] Simple track merging</a>",
@@ -700,6 +689,17 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-03",
             "updatedAt": "2026-09-03",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 100,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/100'>changed DCHdigi_v02 to WireTrackerDigi_v01</a>",
+            "author": "alex-schmidty",
+            "createdAt": "2026-09-04",
+            "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -805,23 +805,12 @@
         },
         {
             "repo": "key4hep/<br>k4Reco",
-            "num": 51,
-            "title": "<a href='https://github.com/key4hep/k4Reco/pull/51'>Upstream FastJet algorithm from MuonCollider fork</a>",
-            "author": "aloeliger",
-            "createdAt": "2026-03-18",
-            "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Reco",
             "num": 63,
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/63'>Port LCFIPlus and LCFIVertx to EDM4hep</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-02",
             "updatedAt": "2026-08-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1139,7 +1128,7 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/198'>Update README.md about eedE</a>",
             "author": "apausa",
             "createdAt": "2026-08-31",
-            "updatedAt": "2026-09-03",
+            "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1244,6 +1233,17 @@
             "assignees": ""
         },
         {
+            "repo": "hep-fcc/<br>FCCDIRAC",
+            "num": 19,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/19'>ZH ZZ WW datasets in test campaign summer2026</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-04",
+            "updatedAt": "2026-09-04",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "hep-fcc/<br>EventProducer",
             "num": 309,
             "title": "<a href='https://github.com/HEP-FCC/EventProducer/pull/309'>param_FCCee: add the 5 Bd -> D0 h0 EvtGen processes </a>",
@@ -1305,7 +1305,7 @@
             "author": "BrieucF",
             "createdAt": "2022-10-08",
             "updatedAt": "2022-10-12",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "Do not merge",
             "assignees": ""
         },
@@ -1327,7 +1327,7 @@
             "author": "kjvbrt",
             "createdAt": "2023-06-29",
             "updatedAt": "2024-04-25",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1382,7 +1382,7 @@
             "author": "thisismeamir",
             "createdAt": "2025-12-10",
             "updatedAt": "2026-02-17",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1426,7 +1426,7 @@
             "author": "forthommel",
             "createdAt": "2026-05-10",
             "updatedAt": "2026-05-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1437,7 +1437,7 @@
             "author": "captainvogon",
             "createdAt": "2026-06-25",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1448,18 +1448,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-16",
             "updatedAt": "2026-07-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 537,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/537'>Fix legacy vertexing: drop ill-conditioned tracks and skip unneeded momenta-at-vertex computation</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-08-05",
-            "updatedAt": "2026-08-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1469,39 +1458,6 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
             "createdAt": "2026-08-11",
-            "updatedAt": "2026-08-11",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 540,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/540'>Fix tests in Key4hep@LCG stacks</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-21",
-            "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 541,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/541'>Align Key4hep build options with test workflow</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-21",
-            "updatedAt": "2026-08-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 545,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/545'>ci: cancel superseded Build and Test runs</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-04",
             "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
@@ -1514,7 +1470,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1536,7 +1492,7 @@
             "author": "aloeliger",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-08-31",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1546,21 +1502,10 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/271'>IDEA o2 seeded ECAL clustering algorithms</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-07-03",
-            "updatedAt": "2026-09-01",
+            "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "jbeirer"
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 278,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/278'>More efficient data storage for ReadCaloCrosstalkMap.</a>",
-            "author": "scott-snyder",
-            "createdAt": "2026-07-30",
-            "updatedAt": "2026-08-26",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
@@ -1673,6 +1618,17 @@
             "assignees": ""
         },
         {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 388,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/388'>FIXED: STT digitizer</a>",
+            "author": "alex-schmidty",
+            "createdAt": "2026-09-04",
+            "updatedAt": "2026-09-04",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "hep-fcc/<br>root2gltf",
             "num": 2,
             "title": "<a href='https://github.com/HEP-FCC/root2gltf/pull/2'>Full conversion</a>",
@@ -1733,7 +1689,7 @@
             "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/17'>Gen/ee: the fixes after</a>",
             "author": "kjvbrt",
             "createdAt": "2026-09-01",
-            "updatedAt": "2026-09-01",
+            "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
