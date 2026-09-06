@@ -7,7 +7,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -18,7 +18,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-09-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +29,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +40,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +62,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +73,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +95,7 @@
             "author": "apausa",
             "createdAt": "2026-08-20",
             "updatedAt": "2026-09-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -106,7 +106,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -117,7 +117,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-01",
             "updatedAt": "2026-09-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -139,18 +139,7 @@
             "author": "apausa",
             "createdAt": "2026-09-04",
             "updatedAt": "2026-09-04",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 657,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/657'>Remove unused HCal Tile Barrel index</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-05",
-            "updatedAt": "2026-09-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -205,7 +194,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -216,7 +205,18 @@
             "author": "BrieucF",
             "createdAt": "2026-03-30",
             "updatedAt": "2026-05-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 520,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/520'>Remove deprecated Cluster phi aliases</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-05",
+            "updatedAt": "2026-09-05",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -325,7 +325,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
-            "updatedAt": "2026-09-01",
+            "updatedAt": "2026-09-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -699,7 +699,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/100'>changed DCHdigi_v02 to WireTrackerDigi_v01</a>",
             "author": "alex-schmidty",
             "createdAt": "2026-09-04",
-            "updatedAt": "2026-09-04",
+            "updatedAt": "2026-09-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -820,7 +820,7 @@
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/65'>Split the propagation-time correction into independent hit-time and time-window flags</a>",
             "author": "jburzy",
             "createdAt": "2026-09-02",
-            "updatedAt": "2026-09-03",
+            "updatedAt": "2026-09-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1068,17 +1068,6 @@
             "assignees": ""
         },
         {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 174,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/174'>Add compatibility with LCG stack</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-03",
-            "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>FCCSW",
             "num": 457,
             "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/457'>update computing documentation</a>",
@@ -1305,7 +1294,7 @@
             "author": "BrieucF",
             "createdAt": "2022-10-08",
             "updatedAt": "2022-10-12",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "Do not merge",
             "assignees": ""
         },
@@ -1327,7 +1316,7 @@
             "author": "kjvbrt",
             "createdAt": "2023-06-29",
             "updatedAt": "2024-04-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1382,7 +1371,7 @@
             "author": "thisismeamir",
             "createdAt": "2025-12-10",
             "updatedAt": "2026-02-17",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1426,7 +1415,7 @@
             "author": "forthommel",
             "createdAt": "2026-05-10",
             "updatedAt": "2026-05-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1437,7 +1426,7 @@
             "author": "captainvogon",
             "createdAt": "2026-06-25",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1448,7 +1437,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-16",
             "updatedAt": "2026-07-30",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1470,7 +1459,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1492,7 +1481,7 @@
             "author": "aloeliger",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-08-31",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1513,7 +1502,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/281'>Gaudi port of calorimeter digitisers used by ILD and MAIA</a>",
             "author": "madbaron",
             "createdAt": "2026-08-29",
-            "updatedAt": "2026-09-01",
+            "updatedAt": "2026-09-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1623,7 +1612,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/388'>FIXED: STT digitizer</a>",
             "author": "alex-schmidty",
             "createdAt": "2026-09-04",
-            "updatedAt": "2026-09-04",
+            "updatedAt": "2026-09-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1649,6 +1638,17 @@
             "mergeOk": "yes",
             "labels": "bug",
             "assignees": "apausa"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 82,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/82'>Update dependency katex to v0.18.6</a>",
+            "author": "renovate",
+            "createdAt": "2026-09-05",
+            "updatedAt": "2026-09-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCAnalysesWeb",
