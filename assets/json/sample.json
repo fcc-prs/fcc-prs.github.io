@@ -83,7 +83,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/645'>Group and fix dangling vis definitions for FCChh</a>",
             "author": "apausa",
             "createdAt": "2026-08-20",
-            "updatedAt": "2026-09-03",
+            "updatedAt": "2026-09-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -94,7 +94,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/646'>Group and fix dangling vis definitions in FCCee_ILD </a>",
             "author": "apausa",
             "createdAt": "2026-08-20",
-            "updatedAt": "2026-09-04",
+            "updatedAt": "2026-09-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -138,7 +138,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/655'>Decouple remaining vis tag from MDI</a>",
             "author": "apausa",
             "createdAt": "2026-09-04",
-            "updatedAt": "2026-09-04",
+            "updatedAt": "2026-09-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -281,7 +281,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/425'>fix: protect against out of bounds access</a>",
             "author": "madbaron",
             "createdAt": "2026-09-01",
-            "updatedAt": "2026-09-06",
+            "updatedAt": "2026-09-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -304,7 +304,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -315,7 +315,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -336,7 +336,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-doc/pull/113'>Rework the landing page to not just be a TOC</a>",
             "author": "tmadlener",
             "createdAt": "2025-09-27",
-            "updatedAt": "2026-09-04",
+            "updatedAt": "2026-09-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -633,7 +633,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
-            "updatedAt": "2026-08-31",
+            "updatedAt": "2026-09-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -666,8 +666,8 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/92'>TrackdNdxDelphesBased Fix</a>",
             "author": "s6anloes",
             "createdAt": "2026-08-07",
-            "updatedAt": "2026-08-27",
-            "mergeOk": "no",
+            "updatedAt": "2026-09-07",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -677,7 +677,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/97'>Add CMake flags gating Tracking and DCHdigi</a>",
             "author": "madbaron",
             "createdAt": "2026-09-01",
-            "updatedAt": "2026-09-06",
+            "updatedAt": "2026-09-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -688,7 +688,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/100'>changed DCHdigi_v02 to WireTrackerDigi_v01</a>",
             "author": "alex-schmidty",
             "createdAt": "2026-09-04",
-            "updatedAt": "2026-09-06",
+            "updatedAt": "2026-09-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1106,7 +1106,7 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/198'>Update README.md about eedE</a>",
             "author": "apausa",
             "createdAt": "2026-08-31",
-            "updatedAt": "2026-09-04",
+            "updatedAt": "2026-09-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1120,6 +1120,17 @@
             "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 201,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/201'>Link dd4hep2root from k4geo instead of static copy</a>",
+            "author": "apausa",
+            "createdAt": "2026-09-07",
+            "updatedAt": "2026-09-07",
+            "mergeOk": "yes",
+            "labels": "",
             "assignees": ""
         },
         {
@@ -1228,7 +1239,7 @@
             "author": "vasilllis",
             "createdAt": "2026-08-18",
             "updatedAt": "2026-08-18",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1239,7 +1250,7 @@
             "author": "vasilllis",
             "createdAt": "2026-08-27",
             "updatedAt": "2026-08-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1480,7 +1491,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/271'>IDEA o2 seeded ECAL clustering algorithms</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-07-03",
-            "updatedAt": "2026-09-06",
+            "updatedAt": "2026-09-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "jbeirer"
@@ -1525,7 +1536,7 @@
             "author": "panwarlsweet",
             "createdAt": "2024-09-13",
             "updatedAt": "2024-09-18",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1646,6 +1657,28 @@
             "author": "renovate",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-09-07",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 84,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/84'>Update dependency marked to v18.0.12</a>",
+            "author": "renovate",
+            "createdAt": "2026-09-08",
+            "updatedAt": "2026-09-08",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 85,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/85'>Update module github.com/jackc/pgx/v5 to v5.11.0</a>",
+            "author": "renovate",
+            "createdAt": "2026-09-08",
+            "updatedAt": "2026-09-08",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
