@@ -50,7 +50,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/612'>Adding FCC-SEED as option to all detectors and refactor IDEA/ALLEGRO vertex detector</a>",
             "author": "armin-ilg",
             "createdAt": "2026-07-03",
-            "updatedAt": "2026-09-14",
+            "updatedAt": "2026-09-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -116,7 +116,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/662'>Map volumes to their closest predefined ROOT color</a>",
             "author": "apausa",
             "createdAt": "2026-09-11",
-            "updatedAt": "2026-09-14",
+            "updatedAt": "2026-09-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -193,7 +193,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/521'>build: fix hardcoded assumption that ROOT dictionaries are built</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-13",
-            "updatedAt": "2026-09-14",
+            "updatedAt": "2026-09-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -573,6 +573,17 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>key4hep-dev-utils",
+            "num": 23,
+            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/23'>Fix: cmake cxx standard error message missing quotes</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-15",
+            "updatedAt": "2026-09-15",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>key4hep-actions",
             "num": 11,
             "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/11'>Add a pre-commit workflow</a>",
@@ -623,7 +634,7 @@
             "author": "muhammadsahil5030",
             "createdAt": "2026-04-07",
             "updatedAt": "2026-08-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -634,7 +645,7 @@
             "author": "BrieucF",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-08-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -645,7 +656,7 @@
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
             "updatedAt": "2026-09-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -656,29 +667,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-06-04",
             "updatedAt": "2026-08-18",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 88,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/88'>Tracking: fix post-fit TrackState, reset TGeoManager before each fit, correct the Jacobian, remove noise tracks from GGTF output and suppress error messages with debugLvl=INFO</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-07-28",
-            "updatedAt": "2026-09-14",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "SanghyunKo"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 92,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/92'>TrackdNdxDelphesBased Fix</a>",
-            "author": "s6anloes",
-            "createdAt": "2026-08-07",
-            "updatedAt": "2026-09-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -700,6 +689,28 @@
             "author": "alex-schmidty",
             "createdAt": "2026-09-04",
             "updatedAt": "2026-09-09",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 101,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/101'>TrackFitter: Fix units in the helix-to-cartesian conversion + Fixed broken associations between hits and tracks introduced during the filtering stage</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-09-15",
+            "updatedAt": "2026-09-15",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 102,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-09-15",
+            "updatedAt": "2026-09-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -886,7 +897,7 @@
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
             "author": "Jullianwatts",
             "createdAt": "2026-08-22",
-            "updatedAt": "2026-09-14",
+            "updatedAt": "2026-09-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1069,23 +1080,12 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-tutorials",
-            "num": 198,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/198'>Update README.md about eedE</a>",
-            "author": "apausa",
-            "createdAt": "2026-08-31",
-            "updatedAt": "2026-09-15",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-tutorials",
             "num": 200,
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/200'>Grid computing in HEP: basic concepts</a>",
             "author": "michmx",
             "createdAt": "2026-09-04",
             "updatedAt": "2026-09-04",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "enhancement",
             "assignees": ""
         },
@@ -1095,8 +1095,8 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/201'>Link dd4hep2root from k4geo instead of static copy</a>",
             "author": "apausa",
             "createdAt": "2026-09-07",
-            "updatedAt": "2026-09-07",
-            "mergeOk": "no",
+            "updatedAt": "2026-09-15",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1414,7 +1414,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
             "createdAt": "2026-08-11",
-            "updatedAt": "2026-09-14",
+            "updatedAt": "2026-09-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1668,6 +1668,17 @@
             "author": "renovate",
             "createdAt": "2026-09-08",
             "updatedAt": "2026-09-08",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 87,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/87'>Update module modernc.org/sqlite to v1.59.0</a>",
+            "author": "renovate",
+            "createdAt": "2026-09-15",
+            "updatedAt": "2026-09-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
