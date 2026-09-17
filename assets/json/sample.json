@@ -7,7 +7,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -18,7 +18,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-09-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +29,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +40,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +62,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +73,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -83,7 +83,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/648'>Update to the SR Mask geometry in the MDI Region</a>",
             "author": "neskongarr",
             "createdAt": "2026-08-25",
-            "updatedAt": "2026-09-14",
+            "updatedAt": "2026-09-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -95,7 +95,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-01",
             "updatedAt": "2026-09-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -105,7 +105,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/658'>Updated MUSIC geometry with instrumented nozzles</a>",
             "author": "casarsa",
             "createdAt": "2026-09-08",
-            "updatedAt": "2026-09-14",
+            "updatedAt": "2026-09-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -117,7 +117,7 @@
             "author": "apausa",
             "createdAt": "2026-09-11",
             "updatedAt": "2026-09-15",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -128,7 +128,7 @@
             "author": "tmadlener",
             "createdAt": "2025-05-05",
             "updatedAt": "2026-08-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -199,6 +199,17 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 522,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/522'>Install generated C++ module interface</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>k4FWCore",
             "num": 312,
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/312'>[WIP] Add a service to allow retrieving collections to which an object belongs</a>",
@@ -249,7 +260,7 @@
             "author": "madbaron",
             "createdAt": "2026-07-06",
             "updatedAt": "2026-09-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -260,7 +271,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-03",
             "updatedAt": "2026-09-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -271,7 +282,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-09",
             "updatedAt": "2026-09-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -282,7 +293,7 @@
             "author": "madbaron",
             "createdAt": "2026-09-09",
             "updatedAt": "2026-09-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -293,7 +304,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-10",
             "updatedAt": "2026-09-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -326,6 +337,17 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
             "updatedAt": "2026-09-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 922,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/922'>Add fish setup script</a>",
+            "author": "madbaron",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -381,7 +403,7 @@
             "author": "clementhelsens",
             "createdAt": "2021-03-15",
             "updatedAt": "2025-09-26",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -392,7 +414,7 @@
             "author": "selvaggi",
             "createdAt": "2026-08-26",
             "updatedAt": "2026-08-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -403,7 +425,7 @@
             "author": "davidlange6",
             "createdAt": "2026-08-28",
             "updatedAt": "2026-08-31",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -414,7 +436,7 @@
             "author": "kjvbrt",
             "createdAt": "2024-04-04",
             "updatedAt": "2025-03-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -447,7 +469,7 @@
             "author": "jmcarcell",
             "createdAt": "2025-08-11",
             "updatedAt": "2026-05-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -458,7 +480,7 @@
             "author": "Dr-Stubborn",
             "createdAt": "2026-07-07",
             "updatedAt": "2026-07-07",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -491,7 +513,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-07-28",
             "updatedAt": "2026-08-31",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -502,7 +524,7 @@
             "author": "Baucki1",
             "createdAt": "2026-08-28",
             "updatedAt": "2026-09-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -513,7 +535,7 @@
             "author": "madbaron",
             "createdAt": "2026-08-30",
             "updatedAt": "2026-08-31",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -524,7 +546,7 @@
             "author": "tmadlener",
             "createdAt": "2026-09-10",
             "updatedAt": "2026-09-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -540,13 +562,24 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 98,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/98'>Fix compatibility with updated ACTS APIs</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-17",
+            "updatedAt": "2026-09-17",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>k4Clue",
             "num": 84,
             "title": "<a href='https://github.com/key4hep/k4Clue/pull/84'>Add CLUEstering 2.12 compatibility</a>",
             "author": "jmcarcell",
             "createdAt": "2026-09-01",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -568,17 +601,6 @@
             "author": "jmcarcell",
             "createdAt": "2025-03-25",
             "updatedAt": "2026-09-09",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-dev-utils",
-            "num": 23,
-            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/23'>Fix: cmake cxx standard error message missing quotes</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -667,7 +689,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-06-04",
             "updatedAt": "2026-08-18",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -678,7 +700,7 @@
             "author": "madbaron",
             "createdAt": "2026-09-01",
             "updatedAt": "2026-09-07",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -843,7 +865,7 @@
             "author": "dirkzerwas",
             "createdAt": "2026-06-09",
             "updatedAt": "2026-07-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -887,7 +909,7 @@
             "author": "Archil-AD",
             "createdAt": "2026-05-06",
             "updatedAt": "2026-05-28",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -897,7 +919,7 @@
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
             "author": "Jullianwatts",
             "createdAt": "2026-08-22",
-            "updatedAt": "2026-09-15",
+            "updatedAt": "2026-09-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1073,7 +1095,7 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/162'>update doc about GitHub PR cycle</a>",
             "author": "atolosadelgado",
             "createdAt": "2025-03-03",
-            "updatedAt": "2025-03-07",
+            "updatedAt": "2026-09-16",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -1414,7 +1436,95 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
             "createdAt": "2026-08-11",
-            "updatedAt": "2026-09-15",
+            "updatedAt": "2026-09-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 549,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/549'>Add ghost association of truth particles to jets</a>",
+            "author": "afroch",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 550,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/550'>Add hadron ghost labels for jets</a>",
+            "author": "afroch",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 551,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/551'>Add parton ghost label for jets</a>",
+            "author": "afroch",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 552,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/552'>Add ATLAS-style truth labels for jet constituents</a>",
+            "author": "afroch",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 553,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/553'>Add truth jets matched to reconstructed jets</a>",
+            "author": "afroch",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 554,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/554'>Add truth labels and truth jets to the weaver example</a>",
+            "author": "afroch",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 557,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
+            "author": "bndikt",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCeePhysicsStudies",
+            "num": 61,
+            "title": "<a href='https://github.com/HEP-FCC/FCCeePhysicsStudies/pull/61'>Add FSR beam parameters</a>",
+            "author": "jeyserma",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1426,7 +1536,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1459,7 +1569,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-07-03",
             "updatedAt": "2026-09-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": "jbeirer"
         },
@@ -1618,72 +1728,6 @@
             "assignees": "apausa"
         },
         {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 82,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/82'>Update dependency katex to v0.18.7</a>",
-            "author": "renovate",
-            "createdAt": "2026-09-05",
-            "updatedAt": "2026-09-07",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 83,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/83'>Update dependency dompurify to v3.4.15</a>",
-            "author": "renovate",
-            "createdAt": "2026-09-06",
-            "updatedAt": "2026-09-07",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 84,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/84'>Update dependency marked to v18.0.13</a>",
-            "author": "renovate",
-            "createdAt": "2026-09-08",
-            "updatedAt": "2026-09-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 85,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/85'>Update module github.com/jackc/pgx/v5 to v5.11.0</a>",
-            "author": "renovate",
-            "createdAt": "2026-09-08",
-            "updatedAt": "2026-09-08",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 86,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/86'>Update module golang.org/x/oauth2 to v0.37.0</a>",
-            "author": "renovate",
-            "createdAt": "2026-09-08",
-            "updatedAt": "2026-09-08",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 87,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/87'>Update module modernc.org/sqlite to v1.59.0</a>",
-            "author": "renovate",
-            "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-15",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>FCCAnalysesWeb",
             "num": 4,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalysesWeb/pull/4'>docs: add links for fit and extract commands</a>",
@@ -1706,23 +1750,23 @@
             "assignees": ""
         },
         {
-            "repo": "hep-fcc/<br>GenToAna-Tutorial",
+            "repo": "hep-fcc/<br>LiveSoftwareTutorials",
             "num": 11,
-            "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/11'>Add CITATION.cff and .zenodo.json</a>",
+            "title": "<a href='https://github.com/HEP-FCC/LiveSoftwareTutorials/pull/11'>Add CITATION.cff and .zenodo.json</a>",
             "author": "kjvbrt",
             "createdAt": "2026-08-31",
             "updatedAt": "2026-09-01",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
         {
-            "repo": "hep-fcc/<br>GenToAna-Tutorial",
+            "repo": "hep-fcc/<br>LiveSoftwareTutorials",
             "num": 17,
-            "title": "<a href='https://github.com/HEP-FCC/GenToAna-Tutorial/pull/17'>Gen/ee: the fixes after</a>",
+            "title": "<a href='https://github.com/HEP-FCC/LiveSoftwareTutorials/pull/17'>Gen/ee: the fixes after</a>",
             "author": "kjvbrt",
             "createdAt": "2026-09-01",
-            "updatedAt": "2026-09-04",
+            "updatedAt": "2026-09-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
