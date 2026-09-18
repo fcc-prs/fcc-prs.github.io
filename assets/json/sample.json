@@ -7,7 +7,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -18,7 +18,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-09-04",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +29,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +40,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -50,7 +50,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/612'>Adding FCC-SEED as option to all detectors and refactor IDEA/ALLEGRO vertex detector</a>",
             "author": "armin-ilg",
             "createdAt": "2026-07-03",
-            "updatedAt": "2026-09-15",
+            "updatedAt": "2026-09-17",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -62,7 +62,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +73,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -83,7 +83,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/648'>Update to the SR Mask geometry in the MDI Region</a>",
             "author": "neskongarr",
             "createdAt": "2026-08-25",
-            "updatedAt": "2026-09-16",
+            "updatedAt": "2026-09-17",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -95,17 +95,6 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-01",
             "updatedAt": "2026-09-09",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 658,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/658'>Updated MUSIC geometry with instrumented nozzles</a>",
-            "author": "casarsa",
-            "createdAt": "2026-09-08",
-            "updatedAt": "2026-09-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -117,7 +106,18 @@
             "author": "apausa",
             "createdAt": "2026-09-11",
             "updatedAt": "2026-09-15",
-            "mergeOk": "no",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 665,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/665'>Set shared flag to false if single thread</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-09-17",
+            "updatedAt": "2026-09-17",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -128,7 +128,7 @@
             "author": "tmadlener",
             "createdAt": "2025-05-05",
             "updatedAt": "2026-08-05",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -193,7 +193,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/521'>build: fix hardcoded assumption that ROOT dictionaries are built</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-13",
-            "updatedAt": "2026-09-15",
+            "updatedAt": "2026-09-17",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -260,7 +260,7 @@
             "author": "madbaron",
             "createdAt": "2026-07-06",
             "updatedAt": "2026-09-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -271,7 +271,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-03",
             "updatedAt": "2026-09-10",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -282,7 +282,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-09",
             "updatedAt": "2026-09-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -292,8 +292,8 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/429'>Simplify the background particle index mapping</a>",
             "author": "madbaron",
             "createdAt": "2026-09-09",
-            "updatedAt": "2026-09-10",
-            "mergeOk": "no",
+            "updatedAt": "2026-09-17",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -304,7 +304,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-10",
             "updatedAt": "2026-09-10",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -347,7 +347,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/922'>Add fish setup script</a>",
             "author": "madbaron",
             "createdAt": "2026-09-16",
-            "updatedAt": "2026-09-16",
+            "updatedAt": "2026-09-17",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -403,7 +403,7 @@
             "author": "clementhelsens",
             "createdAt": "2021-03-15",
             "updatedAt": "2025-09-26",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -414,7 +414,7 @@
             "author": "selvaggi",
             "createdAt": "2026-08-26",
             "updatedAt": "2026-08-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -425,7 +425,7 @@
             "author": "davidlange6",
             "createdAt": "2026-08-28",
             "updatedAt": "2026-08-31",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -436,7 +436,7 @@
             "author": "kjvbrt",
             "createdAt": "2024-04-04",
             "updatedAt": "2025-03-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -469,7 +469,7 @@
             "author": "jmcarcell",
             "createdAt": "2025-08-11",
             "updatedAt": "2026-05-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -480,7 +480,7 @@
             "author": "Dr-Stubborn",
             "createdAt": "2026-07-07",
             "updatedAt": "2026-07-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -508,22 +508,11 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 87,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/87'>ci: drop ACTS TGeo plugin build</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-07-28",
-            "updatedAt": "2026-08-31",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
             "num": 94,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/94'>Fix CUDA output tensor for metric learning model</a>",
             "author": "Baucki1",
             "createdAt": "2026-08-28",
-            "updatedAt": "2026-09-10",
+            "updatedAt": "2026-09-17",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -534,41 +523,19 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/95'>Use upstream ACTS converters</a>",
             "author": "madbaron",
             "createdAt": "2026-08-30",
-            "updatedAt": "2026-08-31",
+            "updatedAt": "2026-09-17",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 96,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/96'>Make pre-commit workflow triggerable in UI</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-09-10",
-            "updatedAt": "2026-09-10",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 97,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/97'>fix: require --compactFile in CKF, GNN, and geometry-visualization options</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-10",
-            "updatedAt": "2026-09-10",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 98,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/98'>Fix compatibility with updated ACTS APIs</a>",
-            "author": "jmcarcell",
+            "num": 103,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/103'>add edge sorting/flipping to reproduce acorn workflow</a>",
+            "author": "madbaron",
             "createdAt": "2026-09-17",
             "updatedAt": "2026-09-17",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -579,7 +546,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-01",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -656,7 +623,7 @@
             "author": "muhammadsahil5030",
             "createdAt": "2026-04-07",
             "updatedAt": "2026-08-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -667,7 +634,7 @@
             "author": "BrieucF",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-08-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -678,7 +645,7 @@
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
             "updatedAt": "2026-09-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -700,7 +667,7 @@
             "author": "madbaron",
             "createdAt": "2026-09-01",
             "updatedAt": "2026-09-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -710,7 +677,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/100'>changed DCHdigi_v02 to WireTrackerDigi_v01</a>",
             "author": "alex-schmidty",
             "createdAt": "2026-09-04",
-            "updatedAt": "2026-09-09",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -721,10 +688,10 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/101'>TrackFitter: Fix units in the helix-to-cartesian conversion + Fixed broken associations between hits and tracks introduced during the filtering stage</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-15",
+            "updatedAt": "2026-09-17",
             "mergeOk": "yes",
             "labels": "",
-            "assignees": ""
+            "assignees": "SanghyunKo"
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -732,10 +699,10 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-15",
+            "updatedAt": "2026-09-17",
             "mergeOk": "yes",
             "labels": "",
-            "assignees": ""
+            "assignees": "SanghyunKo"
         },
         {
             "repo": "key4hep/<br>key4hep-reco-validation",
@@ -865,7 +832,7 @@
             "author": "dirkzerwas",
             "createdAt": "2026-06-09",
             "updatedAt": "2026-07-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -908,8 +875,8 @@
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/30'>Changes for ALLEGRO [WIP]</a>",
             "author": "Archil-AD",
             "createdAt": "2026-05-06",
-            "updatedAt": "2026-05-28",
-            "mergeOk": "no",
+            "updatedAt": "2026-09-18",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -919,7 +886,7 @@
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
             "author": "Jullianwatts",
             "createdAt": "2026-08-22",
-            "updatedAt": "2026-09-16",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1051,7 +1018,7 @@
             "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/7'>Intial commit of the dQdxAnalyser</a>",
             "author": "ueinhaus",
             "createdAt": "2026-07-15",
-            "updatedAt": "2026-08-26",
+            "updatedAt": "2026-09-17",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1091,17 +1058,6 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-tutorials",
-            "num": 162,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/162'>update doc about GitHub PR cycle</a>",
-            "author": "atolosadelgado",
-            "createdAt": "2025-03-03",
-            "updatedAt": "2026-09-16",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-tutorials",
             "num": 200,
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/200'>Grid computing in HEP: basic concepts</a>",
             "author": "michmx",
@@ -1109,17 +1065,6 @@
             "updatedAt": "2026-09-04",
             "mergeOk": "yes",
             "labels": "enhancement",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-tutorials",
-            "num": 201,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/201'>Link dd4hep2root from k4geo instead of static copy</a>",
-            "author": "apausa",
-            "createdAt": "2026-09-07",
-            "updatedAt": "2026-09-15",
-            "mergeOk": "yes",
-            "labels": "",
             "assignees": ""
         },
         {
@@ -1436,7 +1381,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
             "createdAt": "2026-08-11",
-            "updatedAt": "2026-09-16",
+            "updatedAt": "2026-09-17",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1536,7 +1481,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1553,23 +1498,12 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 253,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/253'>Upstream muon collider calo digis.</a>",
-            "author": "aloeliger",
-            "createdAt": "2026-04-24",
-            "updatedAt": "2026-08-31",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
             "num": 271,
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/271'>IDEA o2 seeded ECAL clustering algorithms</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-07-03",
             "updatedAt": "2026-09-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": "jbeirer"
         },
@@ -1590,7 +1524,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/283'>Use Gaudi run wrapper to configure CTest environments</a>",
             "author": "jbeirer",
             "createdAt": "2026-09-14",
-            "updatedAt": "2026-09-14",
+            "updatedAt": "2026-09-17",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1646,7 +1580,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-08-26",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1668,7 +1602,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-08-25",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1679,18 +1613,7 @@
             "author": "armin-ilg",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-08-27",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 386,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/386'>Added track validation option for IDEA and ctests</a>",
-            "author": "TimLdl",
-            "createdAt": "2026-08-27",
-            "updatedAt": "2026-08-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1701,6 +1624,17 @@
             "author": "alex-schmidty",
             "createdAt": "2026-09-04",
             "updatedAt": "2026-09-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 391,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/391'>Set shared flag to false if single thread</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-09-17",
+            "updatedAt": "2026-09-17",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1756,7 +1690,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-08-31",
             "updatedAt": "2026-09-01",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
