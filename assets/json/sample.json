@@ -50,7 +50,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/612'>Adding FCC-SEED as option to all detectors and refactor IDEA/ALLEGRO vertex detector</a>",
             "author": "armin-ilg",
             "createdAt": "2026-07-03",
-            "updatedAt": "2026-09-17",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -72,7 +72,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
-            "updatedAt": "2026-09-03",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -83,7 +83,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/648'>Update to the SR Mask geometry in the MDI Region</a>",
             "author": "neskongarr",
             "createdAt": "2026-08-25",
-            "updatedAt": "2026-09-17",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -94,7 +94,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/651'>Update CODEOWNERS</a>",
             "author": "jmcarcell",
             "createdAt": "2026-09-01",
-            "updatedAt": "2026-09-09",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -105,7 +105,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/662'>Map volumes to their closest predefined ROOT color</a>",
             "author": "apausa",
             "createdAt": "2026-09-11",
-            "updatedAt": "2026-09-15",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -116,7 +116,18 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/665'>Set shared flag to false if single thread</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-17",
-            "updatedAt": "2026-09-17",
+            "updatedAt": "2026-09-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 666,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/666'>Fix ALLEGRO HCAL Endcap pseudo-layer position calculation for PandoraPFA</a>",
+            "author": "Archil-AD",
+            "createdAt": "2026-09-18",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -271,18 +282,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-03",
             "updatedAt": "2026-09-10",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
-            "num": 428,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/428'>Fix pre-commit checks</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-09",
-            "updatedAt": "2026-09-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -292,7 +292,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/429'>Simplify the background particle index mapping</a>",
             "author": "madbaron",
             "createdAt": "2026-09-09",
-            "updatedAt": "2026-09-17",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -350,6 +350,39 @@
             "updatedAt": "2026-09-17",
             "mergeOk": "yes",
             "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 923,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/923'>Bump docker/setup-buildx-action from 4.3.0 to 4.4.1</a>",
+            "author": "dependabot",
+            "createdAt": "2026-09-19",
+            "updatedAt": "2026-09-19",
+            "mergeOk": "yes",
+            "labels": "dependencies \ngithub_actions",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 924,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/924'>Bump int128/docker-manifest-create-action from 2.27.0 to 2.28.0</a>",
+            "author": "dependabot",
+            "createdAt": "2026-09-19",
+            "updatedAt": "2026-09-19",
+            "mergeOk": "yes",
+            "labels": "dependencies \ngithub_actions",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 925,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/925'>Bump docker/build-push-action from 7.3.0 to 7.4.0</a>",
+            "author": "dependabot",
+            "createdAt": "2026-09-19",
+            "updatedAt": "2026-09-19",
+            "mergeOk": "yes",
+            "labels": "dependencies \ngithub_actions",
             "assignees": ""
         },
         {
@@ -513,7 +546,7 @@
             "author": "Baucki1",
             "createdAt": "2026-08-28",
             "updatedAt": "2026-09-17",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -524,7 +557,7 @@
             "author": "madbaron",
             "createdAt": "2026-08-30",
             "updatedAt": "2026-09-17",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -535,7 +568,7 @@
             "author": "madbaron",
             "createdAt": "2026-09-17",
             "updatedAt": "2026-09-17",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -655,7 +688,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/84'>Add MUONdigitizer: cluster-based digitizer for IDEA muon system</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-06-04",
-            "updatedAt": "2026-08-18",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -666,7 +699,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/97'>Add CMake flags gating Tracking and DCHdigi</a>",
             "author": "madbaron",
             "createdAt": "2026-09-01",
-            "updatedAt": "2026-09-07",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -872,7 +905,7 @@
         {
             "repo": "key4hep/<br>k4GaudiPandora",
             "num": 30,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/30'>Changes for ALLEGRO [WIP]</a>",
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/30'>Changes for ALLEGRO</a>",
             "author": "Archil-AD",
             "createdAt": "2026-05-06",
             "updatedAt": "2026-09-18",
@@ -1062,7 +1095,7 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/200'>Grid computing in HEP: basic concepts</a>",
             "author": "michmx",
             "createdAt": "2026-09-04",
-            "updatedAt": "2026-09-04",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "enhancement",
             "assignees": ""
@@ -1381,7 +1414,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
             "createdAt": "2026-08-11",
-            "updatedAt": "2026-09-17",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1457,17 +1490,6 @@
             "num": 557,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
             "author": "bndikt",
-            "createdAt": "2026-09-16",
-            "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCeePhysicsStudies",
-            "num": 61,
-            "title": "<a href='https://github.com/HEP-FCC/FCCeePhysicsStudies/pull/61'>Add FSR beam parameters</a>",
-            "author": "jeyserma",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
             "mergeOk": "yes",
@@ -1580,7 +1602,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-08-26",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1602,7 +1624,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-08-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1613,7 +1635,7 @@
             "author": "armin-ilg",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-08-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1634,7 +1656,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/391'>Set shared flag to false if single thread</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-17",
-            "updatedAt": "2026-09-17",
+            "updatedAt": "2026-09-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
