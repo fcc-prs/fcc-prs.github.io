@@ -127,7 +127,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/666'>Fix ALLEGRO HCAL Endcap pseudo-layer position calculation for PandoraPFA</a>",
             "author": "Archil-AD",
             "createdAt": "2026-09-18",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-09-19",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -309,13 +309,24 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 431,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/431'>Add --evt-max alias to k4run</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-19",
+            "updatedAt": "2026-09-19",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>key4hep-spack",
             "num": 794,
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/794'>Add a `key4hep-sim-reco` environment and build it in an image</a>",
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -326,7 +337,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -336,53 +347,9 @@
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
-            "updatedAt": "2026-09-11",
+            "updatedAt": "2026-09-19",
             "mergeOk": "yes",
             "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 922,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/922'>Add fish setup script</a>",
-            "author": "madbaron",
-            "createdAt": "2026-09-16",
-            "updatedAt": "2026-09-17",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 923,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/923'>Bump docker/setup-buildx-action from 4.3.0 to 4.4.1</a>",
-            "author": "dependabot",
-            "createdAt": "2026-09-19",
-            "updatedAt": "2026-09-19",
-            "mergeOk": "yes",
-            "labels": "dependencies \ngithub_actions",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 924,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/924'>Bump int128/docker-manifest-create-action from 2.27.0 to 2.28.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-09-19",
-            "updatedAt": "2026-09-19",
-            "mergeOk": "yes",
-            "labels": "dependencies \ngithub_actions",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 925,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/925'>Bump docker/build-push-action from 7.3.0 to 7.4.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-09-19",
-            "updatedAt": "2026-09-19",
-            "mergeOk": "yes",
-            "labels": "dependencies \ngithub_actions",
             "assignees": ""
         },
         {
@@ -545,7 +512,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/94'>Fix CUDA output tensor for metric learning model</a>",
             "author": "Baucki1",
             "createdAt": "2026-08-28",
-            "updatedAt": "2026-09-17",
+            "updatedAt": "2026-09-19",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -556,7 +523,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/95'>Use upstream ACTS converters</a>",
             "author": "madbaron",
             "createdAt": "2026-08-30",
-            "updatedAt": "2026-09-17",
+            "updatedAt": "2026-09-19",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -567,7 +534,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/103'>add edge sorting/flipping to reproduce acorn workflow</a>",
             "author": "madbaron",
             "createdAt": "2026-09-17",
-            "updatedAt": "2026-09-17",
+            "updatedAt": "2026-09-19",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
