@@ -83,18 +83,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/648'>Update to the SR Mask geometry in the MDI Region</a>",
             "author": "neskongarr",
             "createdAt": "2026-08-25",
-            "updatedAt": "2026-09-18",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 651,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/651'>Update CODEOWNERS</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-01",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -281,8 +270,8 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/427'>Refactor test components to functional algorithms</a>",
             "author": "jmcarcell",
             "createdAt": "2026-09-03",
-            "updatedAt": "2026-09-10",
-            "mergeOk": "no",
+            "updatedAt": "2026-09-20",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -292,7 +281,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/429'>Simplify the background particle index mapping</a>",
             "author": "madbaron",
             "createdAt": "2026-09-09",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -303,7 +292,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/430'>Fix clangd NRVO warnings in location helpers</a>",
             "author": "jmcarcell",
             "createdAt": "2026-09-10",
-            "updatedAt": "2026-09-10",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -314,7 +303,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/431'>Add --evt-max alias to k4run</a>",
             "author": "jmcarcell",
             "createdAt": "2026-09-19",
-            "updatedAt": "2026-09-19",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -326,7 +315,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -337,7 +326,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -402,8 +391,8 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/31'>Fix energy</a>",
             "author": "clementhelsens",
             "createdAt": "2021-03-15",
-            "updatedAt": "2025-09-26",
-            "mergeOk": "yes",
+            "updatedAt": "2026-09-20",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -413,7 +402,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/161'>Store photon direction and pointing resolution</a>",
             "author": "selvaggi",
             "createdAt": "2026-08-26",
-            "updatedAt": "2026-08-27",
+            "updatedAt": "2026-09-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -424,8 +413,8 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/162'>DelphesEDM4HepConverter: keep energy/mass/momentum consistency; add pdgid for tracks and leptons</a>",
             "author": "davidlange6",
             "createdAt": "2026-08-28",
-            "updatedAt": "2026-08-31",
-            "mergeOk": "yes",
+            "updatedAt": "2026-09-20",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -501,7 +490,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/72'>Expand support for 4D tracking</a>",
             "author": "jburzy",
             "createdAt": "2026-07-04",
-            "updatedAt": "2026-07-10",
+            "updatedAt": "2026-09-20",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -513,7 +502,7 @@
             "author": "Baucki1",
             "createdAt": "2026-08-28",
             "updatedAt": "2026-09-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -523,7 +512,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/95'>Use upstream ACTS converters</a>",
             "author": "madbaron",
             "createdAt": "2026-08-30",
-            "updatedAt": "2026-09-19",
+            "updatedAt": "2026-09-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -534,7 +523,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/103'>add edge sorting/flipping to reproduce acorn workflow</a>",
             "author": "madbaron",
             "createdAt": "2026-09-17",
-            "updatedAt": "2026-09-19",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -568,6 +557,17 @@
             "author": "jmcarcell",
             "createdAt": "2025-03-25",
             "updatedAt": "2026-09-09",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-dev-utils",
+            "num": 25,
+            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/25'>Add CI check for synchronized defaults</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-20",
+            "updatedAt": "2026-09-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
