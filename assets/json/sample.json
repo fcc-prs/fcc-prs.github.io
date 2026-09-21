@@ -50,7 +50,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/612'>Adding FCC-SEED as option to all detectors and refactor IDEA/ALLEGRO vertex detector</a>",
             "author": "armin-ilg",
             "createdAt": "2026-07-03",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -94,7 +94,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/662'>Map volumes to their closest predefined ROOT color</a>",
             "author": "apausa",
             "createdAt": "2026-09-11",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -105,7 +105,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/665'>Set shared flag to false if single thread</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-17",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -116,7 +116,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/666'>Fix ALLEGRO HCAL Endcap pseudo-layer position calculation for PandoraPFA</a>",
             "author": "Archil-AD",
             "createdAt": "2026-09-18",
-            "updatedAt": "2026-09-19",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -193,7 +193,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/521'>build: fix hardcoded assumption that ROOT dictionaries are built</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-13",
-            "updatedAt": "2026-09-17",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -215,7 +215,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/312'>[WIP] Add a service to allow retrieving collections to which an object belongs</a>",
             "author": "tmadlener",
             "createdAt": "2025-05-12",
-            "updatedAt": "2025-05-21",
+            "updatedAt": "2026-09-21",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -226,7 +226,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/352'>Upstream SequenceLoader from ILDConfig</a>",
             "author": "Zehvogel",
             "createdAt": "2025-10-23",
-            "updatedAt": "2025-11-21",
+            "updatedAt": "2026-09-21",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -237,7 +237,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/364'>Add a base algorithm to create NTuples</a>",
             "author": "jmcarcell",
             "createdAt": "2025-12-01",
-            "updatedAt": "2025-12-23",
+            "updatedAt": "2026-09-21",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -248,7 +248,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/372'>Add Gaudi Functional C++ Class Generator</a>",
             "author": "ianna",
             "createdAt": "2026-01-16",
-            "updatedAt": "2026-07-31",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -259,18 +259,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
             "createdAt": "2026-07-06",
-            "updatedAt": "2026-09-11",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
-            "num": 427,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/427'>Refactor test components to functional algorithms</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-03",
-            "updatedAt": "2026-09-20",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -281,28 +270,6 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/429'>Simplify the background particle index mapping</a>",
             "author": "madbaron",
             "createdAt": "2026-09-09",
-            "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
-            "num": 430,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/430'>Fix clangd NRVO warnings in location helpers</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-10",
-            "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
-            "num": 431,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/431'>Add --evt-max alias to k4run</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-19",
             "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
@@ -354,17 +321,6 @@
         },
         {
             "repo": "key4hep/<br>key4hep-doc",
-            "num": 154,
-            "title": "<a href='https://github.com/key4hep/key4hep-doc/pull/154'>Docs: list required system packages for cvmfs setup</a>",
-            "author": "Panzerkampfwagen-del",
-            "createdAt": "2026-08-26",
-            "updatedAt": "2026-09-02",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-doc",
             "num": 155,
             "title": "<a href='https://github.com/key4hep/key4hep-doc/pull/155'>Add issue template for documentation issues</a>",
             "author": "Panzerkampfwagen-del",
@@ -386,13 +342,24 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 162,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/pull/162'>Docs: link LCG prerequisites for CVMFS setup</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-21",
+            "updatedAt": "2026-09-21",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>k4SimDelphes",
             "num": 31,
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/31'>Fix energy</a>",
             "author": "clementhelsens",
             "createdAt": "2021-03-15",
             "updatedAt": "2026-09-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -414,7 +381,7 @@
             "author": "davidlange6",
             "createdAt": "2026-08-28",
             "updatedAt": "2026-09-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -502,7 +469,7 @@
             "author": "Baucki1",
             "createdAt": "2026-08-28",
             "updatedAt": "2026-09-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -655,10 +622,10 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/84'>Add MUONdigitizer: cluster-based digitizer for IDEA muon system</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-06-04",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
-            "assignees": ""
+            "assignees": "ueinhaus"
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -677,7 +644,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/100'>changed DCHdigi_v02 to WireTrackerDigi_v01</a>",
             "author": "alex-schmidty",
             "createdAt": "2026-09-04",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -875,7 +842,7 @@
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/30'>Changes for ALLEGRO</a>",
             "author": "Archil-AD",
             "createdAt": "2026-05-06",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1315,8 +1282,8 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/502'>support index-based selection</a>",
             "author": "goblirsc",
             "createdAt": "2026-02-16",
-            "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "updatedAt": "2026-09-21",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1623,7 +1590,18 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/391'>Set shared flag to false if single thread</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-17",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-09-21",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 392,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/392'>[ALLEGRO] Include TRAPPIST in o1_v3 and o2_v1 config</a>",
+            "author": "jacofan",
+            "createdAt": "2026-09-21",
+            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1691,6 +1669,83 @@
             "createdAt": "2026-09-01",
             "updatedAt": "2026-09-16",
             "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1606,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1606'>feat: AdePT physics list plugin for e+/e-/gamma offload to GPU [WIP]</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-04-11",
+            "updatedAt": "2026-07-28",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1626,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1626'>feat: add support for python geometry plugins</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-04-30",
+            "updatedAt": "2026-07-08",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1658,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1658'>[DRAFT POC] Add Arrow IPC stream writer for EDM4hep output</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-08-11",
+            "updatedAt": "2026-08-20",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1664,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1664'>feat: honor DD4HEP_LIBRARY_PATH for plugin search</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-08-24",
+            "updatedAt": "2026-09-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1672,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1672'>Add cvmfs/LCG-based macOS workflow</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-09-06",
+            "updatedAt": "2026-09-09",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1678,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1678'>DDSim: outputconfig: fix example for multi-threaded running for user \u2026</a>",
+            "author": "andresailer",
+            "createdAt": "2026-09-17",
+            "updatedAt": "2026-09-21",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1682,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1682'>AssimpWriter: Drop need for rootcsg</a>",
+            "author": "andresailer",
+            "createdAt": "2026-09-21",
+            "updatedAt": "2026-09-21",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         }
