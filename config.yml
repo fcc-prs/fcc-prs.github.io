@@ -1,0 +1,13 @@
+organizations:
+  - key4hep
+  - hep-fcc
+
+# Individual repos from other organizations.
+# Each entry needs an owner and name.
+# Example:
+# repositories:
+#   - owner: some-org
+#     name: some-repo
+repositories:
+  - owner: AIDASoft
+    name: DD4hep

@@ -2,11 +2,11 @@ name: get fcc pull requests
 
 on:
   schedule:
-    # Runs at 00:00 UTC every day
+    # Runs at 02:00 UTC every day
     - cron: '0 2 * * *'
   # Allows you to manually trigger the action anytime from the GitHub Actions tab
   workflow_dispatch:
-      
+
 jobs:
   update_prs:
     permissions:
@@ -17,23 +17,23 @@ jobs:
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v7
-        with: 
+        with:
           ref: ${{ github.head_ref }}
           persist-credentials: true
-      - name: rungh
-        run: |
-          gh extension install --force heaths/gh-merge-json
-          gh api graphql --paginate -f query='query($endCursor: String) { organization(login: "key4hep") { repositories(first: 100, after: $endCursor, isArchived: false) { nodes { name pullRequests(first: 30 states: OPEN) { nodes { number title author { login } createdAt updatedAt labels(first: 10) { nodes { name } } assignees(first: 10) { nodes { login } } mergeable url } } } pageInfo {hasNextPage, endCursor} } } }' | gh merge-json > key4hep.json
-          gh api graphql --paginate -f query='query($endCursor: String) { organization(login: "hep-fcc") { repositories(first: 100, after: $endCursor, isArchived: false) { nodes { name pullRequests(first: 30 states: OPEN) { nodes { number title author { login } createdAt updatedAt labels(first: 10) { nodes { name } } assignees(first: 10) { nodes { login } } mergeable url } } } pageInfo {hasNextPage, endCursor} } } }' | gh merge-json > hep-fcc.json
+      - name: Install Python dependencies
+        run: pip install pyyaml
+      - name: Fetch pull requests
+        run: python3 assets/scripts/fetch_prs.py config.yml
         env:
           GH_TOKEN: ${{ secrets.FCC_GH_TOKEN }}
       - name: Write timestamp
         run: |
           printf '{"updated_at": "%s"}' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > assets/json/last_updated.json
-      - name: translategh
-        run: ls -l; python3 assets/scripts/reformulate_json.py key4hep.json hep-fcc.json; mv data.json assets/json/sample.json; mv repo_data.json assets/json/.; rm key4hep.json hep-fcc.json
+      - name: Process JSON
+        run: |
+          python3 assets/scripts/reformulate_json.py all_prs.json
+          mv data.json assets/json/sample.json
+          mv repo_data.json assets/json/.
+          rm all_prs.json
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v7
-    
-        
-
