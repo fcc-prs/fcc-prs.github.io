@@ -1,12 +1,56 @@
 {
-    "updated_at": "2026-09-22T09:45:23Z",
+    "updated_at": "2026-09-22T09:51:51Z",
     "data": [
         {
             "org": "key4hep",
-            "repo": "key4hep-images",
-            "num": 34,
-            "title": "Add zstd to build images",
-            "url": "https://github.com/key4hep/key4hep-images/pull/34",
+            "repo": "k4geo",
+            "num": 662,
+            "title": "Map volumes to their closest predefined ROOT color",
+            "url": "https://github.com/key4hep/k4geo/pull/662",
+            "author": "apausa",
+            "mergedAt": "2026-09-22",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 651,
+            "title": "Update CODEOWNERS",
+            "url": "https://github.com/key4hep/k4geo/pull/651",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-21",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 431,
+            "title": "Add --evt-max alias to k4run",
+            "url": "https://github.com/key4hep/k4FWCore/pull/431",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-21",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 430,
+            "title": "Fix clangd NRVO warnings in location helpers",
+            "url": "https://github.com/key4hep/k4FWCore/pull/430",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-21",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 427,
+            "title": "Refactor test components to functional algorithms",
+            "url": "https://github.com/key4hep/k4FWCore/pull/427",
             "author": "jmcarcell",
             "mergedAt": "2026-09-21",
             "mergedBy": "jmcarcell",
@@ -25,6 +69,185 @@
         },
         {
             "org": "key4hep",
+            "repo": "key4hep-images",
+            "num": 34,
+            "title": "Add zstd to build images",
+            "url": "https://github.com/key4hep/key4hep-images/pull/34",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-21",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1681,
+            "title": "DDCAD: remove CSG-based exporter",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1681",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-21",
+            "mergedBy": "andresailer",
+            "labels": []
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1680,
+            "title": "Use non-deprecated ROOT RVersion header",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1680",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-21",
+            "mergedBy": "andresailer",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 195,
+            "title": "feat(ci): run AI PR reviews on Kimi K3 with a GLM-5.2 fallback",
+            "url": "https://github.com/key4hep/k4Bench/pull/195",
+            "author": "jbeirer",
+            "mergedAt": "2026-09-20",
+            "mergedBy": "jbeirer",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 196,
+            "title": "fix(ci): keep PR-Agent in user deployment mode for AI reviews",
+            "url": "https://github.com/key4hep/k4Bench/pull/196",
+            "author": "jbeirer",
+            "mergedAt": "2026-09-20",
+            "mergedBy": "jbeirer",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 194,
+            "title": "feat(ci): add AI review scripts and PR-Agent call settings",
+            "url": "https://github.com/key4hep/k4Bench/pull/194",
+            "author": "jbeirer",
+            "mergedAt": "2026-09-20",
+            "mergedBy": "jbeirer",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 922,
+            "title": "Add fish setup script",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/922",
+            "author": "madbaron",
+            "mergedAt": "2026-09-19",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 923,
+            "title": "Bump docker/setup-buildx-action from 4.3.0 to 4.4.1",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/923",
+            "author": "dependabot",
+            "mergedAt": "2026-09-19",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ]
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 924,
+            "title": "Bump int128/docker-manifest-create-action from 2.27.0 to 2.28.0",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/924",
+            "author": "dependabot",
+            "mergedAt": "2026-09-19",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ]
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 925,
+            "title": "Bump docker/build-push-action from 7.3.0 to 7.4.0",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/925",
+            "author": "dependabot",
+            "mergedAt": "2026-09-19",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ]
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 104,
+            "title": "fix: support named ACTS material-map fields",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/104",
+            "author": "paulgessinger",
+            "mergedAt": "2026-09-19",
+            "mergedBy": "madbaron",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 193,
+            "title": "feat(ci): add CERN-backed AI PR reviews with repository guidance",
+            "url": "https://github.com/key4hep/k4Bench/pull/193",
+            "author": "jbeirer",
+            "mergedAt": "2026-09-19",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "Review effort 3/5"
+            ]
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 428,
+            "title": "Fix pre-commit checks",
+            "url": "https://github.com/key4hep/k4FWCore/pull/428",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-18",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-doc",
+            "num": 161,
+            "title": "Bump soupsieve from 2.8.4 to 2.9",
+            "url": "https://github.com/key4hep/key4hep-doc/pull/161",
+            "author": "dependabot",
+            "mergedAt": "2026-09-18",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "python"
+            ]
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 102,
+            "title": "Use AxisSpec for blueprint material binning",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/102",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-18",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
             "repo": "k4GaudiPandora",
             "num": 54,
             "title": "Fix PFO comparison for current EDM4hep",
@@ -32,6 +255,180 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-18",
             "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 189,
+            "title": "chore(deps): bump matplotlib from 3.11.1 to 3.11.2 in /dashboard",
+            "url": "https://github.com/key4hep/k4Bench/pull/189",
+            "author": "dependabot",
+            "mergedAt": "2026-09-18",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "python"
+            ]
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 190,
+            "title": "chore(deps): bump matplotlib from 3.11.1 to 3.11.2",
+            "url": "https://github.com/key4hep/k4Bench/pull/190",
+            "author": "dependabot",
+            "mergedAt": "2026-09-18",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "python"
+            ]
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 192,
+            "title": "test(links): skip Zenodo badge check while zenodo.org blocks CERN traffic",
+            "url": "https://github.com/key4hep/k4Bench/pull/192",
+            "author": "jbeirer",
+            "mergedAt": "2026-09-18",
+            "mergedBy": "jbeirer",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 191,
+            "title": "chore(deps): update pymdown-extensions requirement from >=11.0.2 to >=12.0",
+            "url": "https://github.com/key4hep/k4Bench/pull/191",
+            "author": "dependabot",
+            "mergedAt": "2026-09-18",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "python"
+            ]
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-tutorials",
+            "num": 201,
+            "title": "Link dd4hep2root from k4geo instead of static copy",
+            "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/201",
+            "author": "apausa",
+            "mergedAt": "2026-09-18",
+            "mergedBy": "michmx",
+            "labels": []
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCCeePhysicsStudies",
+            "num": 61,
+            "title": "Add FSR beam parameters",
+            "url": "https://github.com/HEP-FCC/FCCeePhysicsStudies/pull/61",
+            "author": "jeyserma",
+            "mergedAt": "2026-09-18",
+            "mergedBy": "kjvbrt",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 658,
+            "title": "Updated MUSIC geometry with instrumented nozzles",
+            "url": "https://github.com/key4hep/k4geo/pull/658",
+            "author": "casarsa",
+            "mergedAt": "2026-09-17",
+            "mergedBy": "tmadlener",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 98,
+            "title": "Fix compatibility with updated ACTS APIs",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/98",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-17",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 97,
+            "title": "fix: require --compactFile in CKF, GNN, and geometry-visualization options",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/97",
+            "author": "jbeirer",
+            "mergedAt": "2026-09-17",
+            "mergedBy": "tmadlener",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 101,
+            "title": "Add python formatting via ruff to pre-commit hooks and CI",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/101",
+            "author": "tmadlener",
+            "mergedAt": "2026-09-17",
+            "mergedBy": "tmadlener",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 99,
+            "title": "Update clang format configuration to be consistent with the rest of Key4hep",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/99",
+            "author": "tmadlener",
+            "mergedAt": "2026-09-17",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 96,
+            "title": "Make pre-commit workflow triggerable in UI",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/96",
+            "author": "tmadlener",
+            "mergedAt": "2026-09-17",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 87,
+            "title": "ci: drop ACTS TGeo plugin build",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/87",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-17",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "k4RecCalorimeter",
+            "num": 284,
+            "title": "fix: only look for Boost when building tests",
+            "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/284",
+            "author": "madbaron",
+            "mergedAt": "2026-09-17",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 386,
+            "title": "Added track validation option for IDEA and ctests",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/386",
+            "author": "TimLdl",
+            "mergedAt": "2026-09-17",
+            "mergedBy": "BrieucF",
             "labels": []
         },
         {
@@ -54,6 +451,152 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-16",
             "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 84,
+            "title": "Update dependency marked to v18.0.13",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/84",
+            "author": "renovate",
+            "mergedAt": "2026-09-16",
+            "mergedBy": "kjvbrt",
+            "labels": []
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 86,
+            "title": "Update module golang.org/x/oauth2 to v0.37.0",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/86",
+            "author": "renovate",
+            "mergedAt": "2026-09-16",
+            "mergedBy": "kjvbrt",
+            "labels": []
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 83,
+            "title": "Update dependency dompurify to v3.4.15",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/83",
+            "author": "renovate",
+            "mergedAt": "2026-09-16",
+            "mergedBy": "kjvbrt",
+            "labels": []
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 85,
+            "title": "Update module github.com/jackc/pgx/v5 to v5.11.0",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/85",
+            "author": "renovate",
+            "mergedAt": "2026-09-16",
+            "mergedBy": "kjvbrt",
+            "labels": []
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 87,
+            "title": "Update module modernc.org/sqlite to v1.59.0",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/87",
+            "author": "renovate",
+            "mergedAt": "2026-09-16",
+            "mergedBy": "kjvbrt",
+            "labels": []
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 82,
+            "title": "Update dependency katex to v0.18.7",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/82",
+            "author": "renovate",
+            "mergedAt": "2026-09-16",
+            "mergedBy": "kjvbrt",
+            "labels": []
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 88,
+            "title": "Track DIRAC/iLCDirac production IDs on campaign-assigned requests",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/88",
+            "author": "kjvbrt",
+            "mergedAt": "2026-09-16",
+            "mergedBy": "kjvbrt",
+            "labels": []
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1676,
+            "title": "build(deps): bump cvmfs-contrib/github-action-cvmfs from 5.5 to 5.6",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1676",
+            "author": "dependabot",
+            "mergedAt": "2026-09-16",
+            "mergedBy": "andresailer",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ]
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 188,
+            "title": "feat(regression): add reported-only anon RSS growth, event schema version and measurement stability",
+            "url": "https://github.com/key4hep/k4Bench/pull/188",
+            "author": "jbeirer",
+            "mergedAt": "2026-09-15",
+            "mergedBy": "jbeirer",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 187,
+            "title": "feat(regression): record allocated and virtual memory unjudged",
+            "url": "https://github.com/key4hep/k4Bench/pull/187",
+            "author": "jbeirer",
+            "mergedAt": "2026-09-15",
+            "mergedBy": "jbeirer",
+            "labels": []
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-tutorials",
+            "num": 198,
+            "title": "Update README.md about eedE",
+            "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/198",
+            "author": "apausa",
+            "mergedAt": "2026-09-15",
+            "mergedBy": "michmx",
+            "labels": []
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1663,
+            "title": "Geant4Output2EDM4hep: get run from worker context",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1663",
+            "author": "andresailer",
+            "mergedAt": "2026-09-15",
+            "mergedBy": "andresailer",
+            "labels": []
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1666,
+            "title": "Modified FCC MDI Synchrotron Radiation Mask geometry",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1666",
+            "author": "neskongarr",
+            "mergedAt": "2026-09-15",
+            "mergedBy": "andresailer",
             "labels": []
         }
     ]
