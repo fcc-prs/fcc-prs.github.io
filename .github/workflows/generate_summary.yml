@@ -1,0 +1,28 @@
+name: generate weekly PR summary
+
+on:
+  schedule:
+    # Runs every Monday at 07:00 UTC (one hour after the daily merged PR fetch)
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+
+jobs:
+  generate_summary:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository to the runner
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.head_ref }}
+          persist-credentials: true
+      - name: Install Python dependencies
+        run: pip install anthropic
+      - name: Generate summary
+        run: python3 assets/scripts/generate_summary.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v7

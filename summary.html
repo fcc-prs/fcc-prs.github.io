@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FCC Weekly Changes Summary</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>FCC Weekly Changes Summary</h1>
+    <p>AI-generated summary of the most important pull requests merged in the last week.</p>
+    <p id="period" class="last-updated"></p>
+    <p id="last-updated" class="last-updated"></p>
+    <p>
+      <a href="/">&larr; Open pull requests</a>
+      &nbsp;&mdash;&nbsp;
+      <a href="/merged.html">Recently merged</a>
+      &nbsp;&mdash;&nbsp;
+      <a href="/assets/json/summary.json">JSON</a>
+    </p>
+  </div>
+  <div class="container">
+    <div id="summary-container"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script type="module" src="/assets/js/summary_script.js"></script>
+</body>
+</html>
