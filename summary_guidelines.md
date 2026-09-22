@@ -21,7 +21,11 @@ Prioritise in this order:
 
 ## Style
 
-- Each bullet: one or two sentences — what changed and why it matters or what
-  downstream impact it may have
-- Link the PR as [org/repo#num](url)
-- Aim for 5–15 bullets total
+- Group all notable PRs from the same repository into a single bullet.
+- Bullet format:
+    **[org/repo](repo_url)** — narrative description of the combined changes,
+    referencing each PR inline as [#num](pr_url).
+- Each bullet: two to four sentences covering the most important changes in that
+  repo and any downstream impact.
+- If a repository has only one notable PR, a single sentence is fine.
+- Aim for 3–8 repo bullets in total.
