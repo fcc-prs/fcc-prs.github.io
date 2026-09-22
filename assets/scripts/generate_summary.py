@@ -3,7 +3,11 @@ import os
 import sys
 from datetime import datetime, timezone
 
-import anthropic
+from api_client import get_client
+
+# Pricing for claude-opus-4-7 (USD per million tokens)
+PRICE_INPUT_PER_MTOK = 5.0
+PRICE_OUTPUT_PER_MTOK = 25.0
 
 
 def load_merged_data(path):
@@ -47,6 +51,14 @@ def extract_text(response):
     return ""
 
 
+def compute_cost(usage):
+    return round(
+        (usage.input_tokens * PRICE_INPUT_PER_MTOK
+         + usage.output_tokens * PRICE_OUTPUT_PER_MTOK) / 1_000_000,
+        6,
+    )
+
+
 data_path = sys.argv[1] if len(sys.argv) > 1 else "assets/json/merged_data.json"
 data = load_merged_data(data_path)
 prs = data.get("data", [])
@@ -61,11 +73,7 @@ else:
 
 prompt = build_prompt(prs, period_start, period_end)
 
-client = anthropic.Anthropic(
-    api_key="placeholder",  # Portkey uses x-portkey-api-key, not x-api-key
-    base_url=os.environ["ANTHROPIC_BASE_URL"],
-    default_headers={"x-portkey-api-key": os.environ["ANTHROPIC_API_KEY"]},
-)
+client = get_client()
 
 system = (
     "You are a technical editor for the FCC (Future Circular Collider) and Key4hep "
@@ -86,15 +94,24 @@ with client.messages.stream(
 summary_text = extract_text(response)
 print(f"Received {len(summary_text)} chars of summary.", flush=True)
 
+usage = response.usage
+cost = compute_cost(usage)
+print(f"Usage: {usage.input_tokens} in / {usage.output_tokens} out — ${cost:.6f}", flush=True)
+
 output = {
     "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     "period_start": period_start,
     "period_end": period_end,
-    "summary": summary_text,
+    "summary": summary_text.split("\n"),
+    "usage": {
+        "input_tokens": usage.input_tokens,
+        "output_tokens": usage.output_tokens,
+    },
+    "cost_usd": cost,
 }
 
 out_path = sys.argv[2] if len(sys.argv) > 2 else "assets/json/summary.json"
 with open(out_path, "w", encoding="utf-8") as f:
-    json.dump(output, f, indent=4)
+    json.dump(output, f, indent=2, ensure_ascii=False)
 
 print(f"Wrote {out_path}", flush=True)

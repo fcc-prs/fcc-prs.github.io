@@ -12,8 +12,11 @@ if (periodEl && jsonData.period_start && jsonData.period_end) {
 
 const container = document.getElementById('summary-container');
 if (container) {
-  if (jsonData.summary) {
-    container.innerHTML = marked.parse(jsonData.summary);
+  const summaryText = Array.isArray(jsonData.summary)
+    ? jsonData.summary.join('\n')
+    : jsonData.summary;
+  if (summaryText) {
+    container.innerHTML = marked.parse(summaryText);
   } else {
     container.textContent = 'No summary available yet. Check back after the next Monday run.';
   }
