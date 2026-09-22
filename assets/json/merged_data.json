@@ -1,6 +1,48 @@
 {
-    "updated_at": "2026-09-22T10:53:12Z",
+    "updated_at": "2026-09-22T12:49:31Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 666,
+            "title": "[ALLEGRO] Fix HCAL Endcap pseudo-layer position calculation for PandoraPFA",
+            "url": "https://github.com/key4hep/k4geo/pull/666",
+            "author": "Archil-AD",
+            "mergedAt": "2026-09-22",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- ALLEGRO HCAL Endcap pseudo-layer position calculation is fixed for PandoraPFA.\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 70,
+                "deletions": 24,
+                "files": 2
+            },
+            "files": [
+                "detector/calorimeter/HCalThreePartsEndcap_o1_v02_geo.cpp",
+                "detector/calorimeter/HCalThreePartsEndcap_o1_v04_geo.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @jmcarcell ,\r\n\r\nis the configuration failure for alma nightly build (libzstd not found) a temporary glitch or related to some recent changes in e.g. DD4hep that need to be propagated to the alma9 environment?"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> Hi @jmcarcell ,\r\n> \r\n> is the configuration failure for alma nightly build (libzstd not found) a temporary glitch or related to some recent changes in e.g. DD4hep that need to be propagated to the alma9 environment?\r\n\r\nI guess https://github.com/key4hep/key4hep-images/pull/35 will fix it"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Yes, it's fixed now"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @jbeirer \r\nI think @Archil-AD has implemented the changes that you requested, and the tests are all green.\r\nIf you are happy with the changes can you please approve the PR?\r\nThanks :)"
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [],
+            "reviews_total": 6
+        },
         {
             "org": "key4hep",
             "repo": "k4geo",
@@ -17,6 +59,9 @@
                 "deletions": 0,
                 "files": 1
             },
+            "files": [
+                "utils/dd4hep2root.py"
+            ],
             "comments": [
                 {
                     "author": "apausa",
@@ -43,6 +88,10 @@
                 "deletions": 7,
                 "files": 2
             },
+            "files": [
+                "README.md",
+                "edm4hep.yaml"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [
@@ -53,6 +102,51 @@
                 }
             ],
             "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 103,
+            "title": "add edge sorting/flipping to reproduce acorn workflow",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/103",
+            "author": "madbaron",
+            "mergedAt": "2026-09-22",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Added SortEdges flag to re-orient edges from the hit closer to the interaction point to the one further out, matching the convention used during training\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 393,
+                "deletions": 47,
+                "files": 11
+            },
+            "files": [
+                "GNNTrackFinding/README.md",
+                "GNNTrackFinding/include/EdgeDirection.h",
+                "GNNTrackFinding/options/runGNNTrackFinding.py",
+                "GNNTrackFinding/src/CCAndWalkTrackBuilding.cpp",
+                "GNNTrackFinding/src/CCAndWalkTrackBuilding.h",
+                "GNNTrackFinding/src/GNNTrackFinder.cpp",
+                "GNNTrackFinding/src/GNNTrackFinder.h",
+                "GNNTrackFinding/src/OnnxMetricLearning.cpp",
+                "GNNTrackFinding/src/OnnxMetricLearning.h",
+                "test/unittests/CMakeLists.txt",
+                "test/unittests/EdgeDirectionTests.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "> In the grand scheme of things, does this (*the sorting of edges*) have to be configurable from the Gaudi algorithm? I.e. are there pipelines where we do not have/want this?\n> \n> This is ~essentially independent of #94, right?\n\nToday we have ~2 pipelines and they both come from acorn, so they both \u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "In the grand scheme of things, does this (*the sorting of edges*) have to be configurable from the Gaudi algorithm? I.e. are there pipelines where we do not have/want this?\n\nThis is ~essentially independent of #94, right?"
+                }
+            ],
+            "reviews_total": 13
         },
         {
             "org": "hep-fcc",
@@ -72,6 +166,18 @@
                 "deletions": 245,
                 "files": 10
             },
+            "files": [
+                "README.md",
+                "__tests__/handleInput.test.ts",
+                "package-lock.json",
+                "package.json",
+                "src/concatenateOutput.ts",
+                "src/handleInput.ts",
+                "src/index.ts",
+                "src/lib/constants.ts",
+                "src/lib/utils/generateConfig.ts",
+                "src/lib/utils/optimizeGraphics.ts"
+            ],
             "comments": [
                 {
                     "author": "apausa",
@@ -118,6 +224,9 @@
                 "deletions": 5,
                 "files": 1
             },
+            "files": [
+                "CODEOWNERS"
+            ],
             "comments": [
                 {
                     "author": "tmadlener",
@@ -172,6 +281,10 @@
                 "deletions": 3,
                 "files": 2
             },
+            "files": [
+                "README.md",
+                "k4FWCore/scripts/k4run"
+            ],
             "comments": [
                 {
                     "author": "jmcarcell",
@@ -228,6 +341,9 @@
                 "deletions": 8,
                 "files": 1
             },
+            "files": [
+                "k4FWCore/include/k4FWCore/Transformer.h"
+            ],
             "comments": [
                 {
                     "author": "tmadlener",
@@ -264,6 +380,24 @@
                 "deletions": 435,
                 "files": 16
             },
+            "files": [
+                "test/k4FWCoreTest/CMakeLists.txt",
+                "test/k4FWCoreTest/options/TestAlgorithmWithTFile.py",
+                "test/k4FWCoreTest/options/TestOverlayTiming.py",
+                "test/k4FWCoreTest/options/readMarlinWrapperCollection.py",
+                "test/k4FWCoreTest/scripts/CheckOutputFiles.py",
+                "test/k4FWCoreTest/src/components/ExampleCellIDEncodingInitConsumer.cpp",
+                "test/k4FWCoreTest/src/components/ExampleFunctionalMetadataConsumer.cpp",
+                "test/k4FWCoreTest/src/components/ExampleFunctionalProducer.cpp",
+                "test/k4FWCoreTest/src/components/ExampleFunctionalProducerMultiple.cpp",
+                "test/k4FWCoreTest/src/components/ExampleFunctionalProducerRuntimeCollections.cpp",
+                "test/k4FWCoreTest/src/components/ExampleFunctionalProducerWithMarlinWrapper.cpp",
+                "test/k4FWCoreTest/src/components/ExampleFunctionalProducerWithTFile.cpp",
+                "test/k4FWCoreTest/src/components/k4FWCoreTest_AlgorithmWithTFile.cpp",
+                "test/k4FWCoreTest/src/components/k4FWCoreTest_AlgorithmWithTFile.h",
+                "test/k4FWCoreTest/src/components/k4FWCoreTest_CreateMarlinWrapperCollection.cpp",
+                "test/k4FWCoreTest/src/components/k4FWCoreTest_CreateMarlinWrapperCollection.h"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -285,6 +419,12 @@
                 "deletions": 6,
                 "files": 4
             },
+            "files": [
+                "Docker/alma10/alma10-build/Dockerfile",
+                "Docker/alma9/alma9-build/Dockerfile",
+                "Docker/ubuntu24/ubuntu24-build/Dockerfile",
+                "Docker/ubuntu26/ubuntu26-build/Dockerfile"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -306,6 +446,12 @@
                 "deletions": 5,
                 "files": 4
             },
+            "files": [
+                "Docker/alma10/alma10-build/Dockerfile",
+                "Docker/alma9/alma9-build/Dockerfile",
+                "Docker/ubuntu24/ubuntu24-build/Dockerfile",
+                "Docker/ubuntu26/ubuntu26-build/Dockerfile"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -327,6 +473,13 @@
                 "deletions": 679,
                 "files": 5
             },
+            "files": [
+                "DDCAD/CMakeLists.txt",
+                "DDCAD/include/DDCAD/ASSIMPWriter.h",
+                "DDCAD/src/ASSIMPWriter.cpp",
+                "DDCAD/src/plugins/CADPlugins.cpp",
+                "examples/DDCAD/CMakeLists.txt"
+            ],
             "comments": [
                 {
                     "author": "andresailer",
@@ -373,6 +526,12 @@
                 "deletions": 0,
                 "files": 4
             },
+            "files": [
+                "DDCore/include/DD4hep/Memory.h",
+                "DDCore/include/DD4hep/Plugins.h",
+                "DDG4/examples/initAClick.C",
+                "examples/LHeD/scripts/initAClick.C"
+            ],
             "comments": [
                 {
                     "author": "github-actions",
@@ -399,6 +558,9 @@
                 "deletions": 53,
                 "files": 1
             },
+            "files": [
+                ".github/workflows/ai-pr-review.yml"
+            ],
             "comments": [
                 {
                     "author": "github-actions",
@@ -433,6 +595,9 @@
                 "deletions": 0,
                 "files": 1
             },
+            "files": [
+                ".github/scripts/ai_pr_review.py"
+            ],
             "comments": [
                 {
                     "author": "codecov-commenter",
@@ -459,6 +624,11 @@
                 "deletions": 3,
                 "files": 3
             },
+            "files": [
+                ".github/scripts/ai_pr_review.py",
+                ".github/scripts/ai_pr_review.sh",
+                ".pr_agent.toml"
+            ],
             "comments": [
                 {
                     "author": "github-actions",
@@ -489,6 +659,9 @@
                 "deletions": 9,
                 "files": 1
             },
+            "files": [
+                "packages/key4hep-stack/common.py"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -513,6 +686,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                ".github/workflows/docker-build-push-template.yaml"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -537,6 +713,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                ".github/workflows/image-template.yaml"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -561,6 +740,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                ".github/workflows/docker-build-push-template.yaml"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -582,6 +764,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                "k4ActsTracking/src/components/MaterialMappingAlg.cpp"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -605,6 +790,11 @@
                 "deletions": 0,
                 "files": 3
             },
+            "files": [
+                ".github/ai-review-instructions.md",
+                ".github/workflows/ai-pr-review.yml",
+                ".pr_agent.toml"
+            ],
             "comments": [
                 {
                     "author": "codecov-commenter",
@@ -651,6 +841,14 @@
                 "deletions": 6,
                 "files": 6
             },
+            "files": [
+                ".github/workflows/pre-commit.yml",
+                "test/k4FWCoreTest/CMakeLists.txt",
+                "test/k4FWCoreTest/options/ExampleFunctionalProducerMultiple.py",
+                "test/k4FWCoreTest/options/TestAlgorithmWithTFile.py",
+                "test/k4FWCoreTest/options/checkExampleEventData.py",
+                "test/k4FWCoreTest/options/checkLoadedFileProperties.py"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -675,6 +873,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                "requirements.txt"
+            ],
             "comments": [
                 {
                     "author": "github-actions",
@@ -701,6 +902,9 @@
                 "deletions": 7,
                 "files": 1
             },
+            "files": [
+                "k4ActsTracking/src/components/DD4hepBlueprintConstruction.cpp"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -722,6 +926,9 @@
                 "deletions": 2,
                 "files": 1
             },
+            "files": [
+                "test/scripts/compare-pfos.py"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -746,6 +953,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                "dashboard/requirements.txt"
+            ],
             "comments": [
                 {
                     "author": "codecov-commenter",
@@ -775,6 +985,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                "dashboard/requirements.txt"
+            ],
             "comments": [
                 {
                     "author": "codecov-commenter",
@@ -801,6 +1014,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                "tests/integration/test_links.py"
+            ],
             "comments": [
                 {
                     "author": "codecov-commenter",
@@ -830,6 +1046,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                "docs/requirements.txt"
+            ],
             "comments": [
                 {
                     "author": "codecov-commenter",
@@ -856,6 +1075,11 @@
                 "deletions": 10,
                 "files": 3
             },
+            "files": [
+                ".gitignore",
+                "4-full-detector-sim/FCCeeGeneralOverview/FCCeeGeneralOverview.md",
+                "4-full-detector-sim/Visualization/Visualization.md"
+            ],
             "comments": [
                 {
                     "author": "kjvbrt",
@@ -882,6 +1106,9 @@
                 "deletions": 0,
                 "files": 1
             },
+            "files": [
+                "General/README.md"
+            ],
             "comments": [
                 {
                     "author": "kjvbrt",
@@ -908,6 +1135,23 @@
                 "deletions": 12,
                 "files": 15
             },
+            "files": [
+                "MuColl/MuSIC/compact/MuSIC_v2/ECalBarrel_crilin.xml",
+                "MuColl/MuSIC/compact/MuSIC_v2/ECalEndcap_crilin.xml",
+                "MuColl/MuSIC/compact/MuSIC_v2/HCalEndcap_o1_v01_01.xml",
+                "MuColl/MuSIC/compact/MuSIC_v2/materials.xml",
+                "MuColl/MuSIC/compact/MuSIC_v3/Beampipe_o1_v01_02.xml",
+                "MuColl/MuSIC/compact/MuSIC_v3/ForwardTracker.xml",
+                "MuColl/MuSIC/compact/MuSIC_v3/MuSIC_v3.xml",
+                "MuColl/MuSIC/compact/MuSIC_v3/Nozzle_10deg_v2.xml",
+                "MuColl/MuSIC/compact/MuSIC_v3/README.md",
+                "MuColl/MuSIC/compact/MuSIC_v3/Vertex_o2_v06_01.xml",
+                "MuColl/MuSIC/compact/MuSIC_v3/YokeBarrel_o1_v01_01.xml",
+                "MuColl/MuSIC/compact/MuSIC_v3/YokeEndcap_o1_v01_01.xml",
+                "MuColl/MuSIC/compact/MuSIC_v3/text_description.md",
+                "MuColl/MuSIC/compact/README.md",
+                "test/CMakeLists.txt"
+            ],
             "comments": [
                 {
                     "author": "madbaron",
@@ -974,6 +1218,11 @@
                 "deletions": 5,
                 "files": 3
             },
+            "files": [
+                "k4ActsTracking/src/components/ACTSSeededCKFTrackingAlg.cxx",
+                "k4ActsTracking/src/components/ActsTestPropagator.cpp",
+                "k4ActsTracking/src/components/CKFTrackingAlg.cpp"
+            ],
             "comments": [
                 {
                     "author": "tmadlener",
@@ -1016,6 +1265,11 @@
                 "deletions": 1,
                 "files": 3
             },
+            "files": [
+                "GNNTrackFinding/options/runGNNTrackFinding.py",
+                "k4ActsTracking/examples/test_visualize_acts_geo.py",
+                "test/options/_ckf_helpers.py"
+            ],
             "comments": [
                 {
                     "author": "tmadlener",
@@ -1042,6 +1296,16 @@
                 "deletions": 33,
                 "files": 8
             },
+            "files": [
+                ".pre-commit-config.yaml",
+                ".ruff.toml",
+                "GNNTrackFinding/options/runGNNTrackFinding.py",
+                "k4ActsTracking/examples/compare_material_tracks.py",
+                "k4ActsTracking/examples/material_recording_chunk.py",
+                "k4ActsTracking/examples/plot_steps.py",
+                "test/options/LUXE_CKFTracking.py",
+                "test/options/MAIA_CKFTrackingAlg.py"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -1063,6 +1327,38 @@
                 "deletions": 4921,
                 "files": 56
             },
+            "files": [
+                ".clang-format",
+                "GNNTrackFinding/include/ONNXInferenceModel.h",
+                "GNNTrackFinding/src/CCAndWalkTrackBuilding.cpp",
+                "GNNTrackFinding/src/CCAndWalkTrackBuilding.h",
+                "GNNTrackFinding/src/GNNTrackFinder.cpp",
+                "GNNTrackFinding/src/GNNTrackFinder.h",
+                "GNNTrackFinding/src/ONNXInferenceModel.cpp",
+                "GNNTrackFinding/src/OnnxMetricLearning.cpp",
+                "GNNTrackFinding/src/OnnxMetricLearning.h",
+                "GNNTrackFinding/src/PaddedEdgeRemoval.cpp",
+                "GNNTrackFinding/src/PaddedEdgeRemoval.h",
+                "k4ActsTracking/include/k4ActsTracking/ACTSAlgBase.hxx",
+                "k4ActsTracking/include/k4ActsTracking/ACTSDuplicateRemoval.hxx",
+                "k4ActsTracking/include/k4ActsTracking/ACTSSeededCKFTrackingAlg.hxx",
+                "k4ActsTracking/include/k4ActsTracking/ActsGaudiLogger.h",
+                "k4ActsTracking/include/k4ActsTracking/CKFRunner.hxx",
+                "k4ActsTracking/include/k4ActsTracking/CKFTracking.hxx",
+                "k4ActsTracking/include/k4ActsTracking/CellIDSelector.h",
+                "k4ActsTracking/include/k4ActsTracking/FilterTracksAlg.hxx",
+                "k4ActsTracking/include/k4ActsTracking/GeometryContainers.hxx",
+                "k4ActsTracking/include/k4ActsTracking/GeometryIdMappingTool.hxx",
+                "k4ActsTracking/include/k4ActsTracking/GeometryIdSelector.hxx",
+                "k4ActsTracking/include/k4ActsTracking/Helpers.hxx",
+                "k4ActsTracking/include/k4ActsTracking/HitFeatures.hxx",
+                "k4ActsTracking/include/k4ActsTracking/IActsGeoSvc.h",
+                "k4ActsTracking/include/k4ActsTracking/KFRunner.hxx",
+                "k4ActsTracking/include/k4ActsTracking/Measurement.hxx",
+                "k4ActsTracking/include/k4ActsTracking/MeasurementCalibrator.hxx",
+                "k4ActsTracking/include/k4ActsTracking/RunnerCommon.hxx",
+                "k4ActsTracking/include/k4ActsTracking/SourceLink.hxx"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -1084,6 +1380,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                ".github/workflows/pre-commit.yml"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -1105,6 +1404,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                ".github/workflows/acts-master-ci.yml"
+            ],
             "comments": [
                 {
                     "author": "tmadlener",
@@ -1131,6 +1433,9 @@
                 "deletions": 2,
                 "files": 1
             },
+            "files": [
+                "RecCaloCommon/CMakeLists.txt"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -1152,6 +1457,12 @@
                 "deletions": 107,
                 "files": 4
             },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/ctest_sim_digi_reco.sh",
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/ctest_sim_digi_reco.sh",
+                "FCCee/FullSim/IDEA/IDEA_o1_v03/ctest_sim_digi_reco.sh",
+                "FCCee/FullSim/IDEA/IDEA_o1_v03/run_digi_reco.py"
+            ],
             "comments": [
                 {
                     "author": "BrieucF",
@@ -1184,6 +1495,9 @@
                 "deletions": 1,
                 "files": 1
             },
+            "files": [
+                "defaults/cmake/Key4hepConfig.cmake"
+            ],
             "comments": [
                 {
                     "author": "jmcarcell",
@@ -1210,6 +1524,9 @@
                 "deletions": 0,
                 "files": 1
             },
+            "files": [
+                ".github/workflows/validate-cmake-config.yml"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -1231,6 +1548,10 @@
                 "deletions": 39,
                 "files": 2
             },
+            "files": [
+                "Makefile",
+                "static/vendor/marked.min.js"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -1252,6 +1573,10 @@
                 "deletions": 2,
                 "files": 2
             },
+            "files": [
+                "go.mod",
+                "go.sum"
+            ],
             "comments": [
                 {
                     "author": "renovate",
@@ -1278,6 +1603,10 @@
                 "deletions": 3,
                 "files": 2
             },
+            "files": [
+                "Makefile",
+                "static/vendor/purify.min.js"
+            ],
             "comments": [
                 {
                     "author": "renovate",
@@ -1304,6 +1633,10 @@
                 "deletions": 1,
                 "files": 2
             },
+            "files": [
+                "go.mod",
+                "go.sum"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -1325,6 +1658,10 @@
                 "deletions": 2,
                 "files": 2
             },
+            "files": [
+                "go.mod",
+                "go.sum"
+            ],
             "comments": [
                 {
                     "author": "renovate",
@@ -1351,6 +1688,11 @@
                 "deletions": 3,
                 "files": 3
             },
+            "files": [
+                "Makefile",
+                "static/vendor/katex/katex.min.css",
+                "static/vendor/katex/katex.min.js"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -1372,6 +1714,18 @@
                 "deletions": 2,
                 "files": 10
             },
+            "files": [
+                "cmd/fcc-drs/main.go",
+                "internal/db/postgres.go",
+                "internal/db/sqlite.go",
+                "internal/handlers/handlers.go",
+                "internal/handlers/pipeline.go",
+                "internal/handlers/production_ids.go",
+                "internal/models/production_id.go",
+                "internal/models/update.go",
+                "templates/partials/production_ids.html",
+                "templates/partials/request_detail.html"
+            ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
@@ -1396,6 +1750,12 @@
                 "deletions": 7,
                 "files": 4
             },
+            "files": [
+                ".github/workflows/clang-tidy.yml",
+                ".github/workflows/coverity.yml",
+                ".github/workflows/linux.yml",
+                ".github/workflows/python.yml"
+            ],
             "comments": [
                 {
                     "author": "github-actions",
@@ -1422,6 +1782,38 @@
                 "deletions": 227,
                 "files": 37
             },
+            "files": [
+                "dashboard/stats.py",
+                "dashboard/tabs/_regression_flags.py",
+                "dashboard/tabs/_regression_trend.py",
+                "dashboard/tabs/detectors_overview.py",
+                "dashboard/tabs/event_memory.py",
+                "dashboard/tabs/impact.py",
+                "dashboard/tabs/trends.py",
+                "dashboard/ui_utils.py",
+                "docs/glossary.md",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/features/dashboard.md",
+                "docs/user-guide/features/timing-plugins.md",
+                "k4bench/analysis/loader.py",
+                "k4bench/analysis/plots/_theme.py",
+                "k4bench/analysis/plots/overview.py",
+                "k4bench/analysis/trend.py",
+                "k4bench/labels.py",
+                "k4bench/metrics.py",
+                "k4bench/plugin/event_schema.py",
+                "k4bench/regression/email.py",
+                "k4bench/regression/engine.py",
+                "k4bench/regression/report_builder.py",
+                "k4bench/runner/executor.py",
+                "plugin/k4BenchTimingAction.cpp",
+                "tests/integration/test_plugin_build.py",
+                "tests/unit/test_analysis_loader.py",
+                "tests/unit/test_analysis_trend_noise.py",
+                "tests/unit/test_dashboard_detectors_overview.py",
+                "tests/unit/test_dashboard_event_views_apptest.py",
+                "tests/unit/test_dashboard_stability.py"
+            ],
             "comments": [
                 {
                     "author": "codecov-commenter",
@@ -1448,6 +1840,38 @@
                 "deletions": 202,
                 "files": 34
             },
+            "files": [
+                "dashboard/tabs/_regression_trend.py",
+                "dashboard/tabs/detectors_overview.py",
+                "dashboard/tabs/event_memory.py",
+                "dashboard/tabs/event_timing.py",
+                "dashboard/tabs/impact.py",
+                "dashboard/tabs/trends.py",
+                "dashboard/ui_utils.py",
+                "docs/getting-started/first-workflow.md",
+                "docs/glossary.md",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/features/dashboard.md",
+                "docs/user-guide/features/timing-plugins.md",
+                "k4bench/analysis/loader.py",
+                "k4bench/analysis/plots/_theme.py",
+                "k4bench/analysis/plots/overview.py",
+                "k4bench/analysis/trend.py",
+                "k4bench/labels.py",
+                "k4bench/plugin/runtime.py",
+                "k4bench/regression/email.py",
+                "k4bench/regression/report_builder.py",
+                "k4bench/results/model.py",
+                "k4bench/runner/executor.py",
+                "plugin/k4BenchTimingAction.cpp",
+                "tests/integration/test_plugin_build.py",
+                "tests/unit/test_analysis_loader.py",
+                "tests/unit/test_analysis_plots.py",
+                "tests/unit/test_analysis_trend_noise.py",
+                "tests/unit/test_dashboard_detectors_overview.py",
+                "tests/unit/test_dashboard_event_views_apptest.py",
+                "tests/unit/test_dashboard_impact.py"
+            ],
             "comments": [
                 {
                     "author": "codecov-commenter",
@@ -1474,6 +1898,12 @@
                 "deletions": 33,
                 "files": 4
             },
+            "files": [
+                "2-gen-and-fastsim/2-4-eedE/README.md",
+                "2-gen-and-fastsim/2-4-eedE/eede_Zbb_example.png",
+                "2-gen-and-fastsim/2-4-eedE/eede_Zbb_filtering.png",
+                "2-gen-and-fastsim/2-4-eedE/eede_upload.png"
+            ],
             "comments": [
                 {
                     "author": "apausa",
@@ -1514,6 +1944,19 @@
                 "deletions": 89,
                 "files": 11
             },
+            "files": [
+                ".github/workflows/linux.yml",
+                "DDG4/edm4hep/Geant4Output2EDM4hep.cpp",
+                "DDG4/include/DDG4/Geant4EventAction.h",
+                "DDG4/include/DDG4/Geant4Kernel.h",
+                "DDG4/include/DDG4/Geant4Output2ROOT.h",
+                "DDG4/lcio/Geant4Output2LCIO.cpp",
+                "DDG4/src/Geant4EventAction.cpp",
+                "DDG4/src/Geant4Kernel.cpp",
+                "DDG4/src/Geant4Output2ROOT.cpp",
+                "DDTest/CMakeLists.txt",
+                "DDTest/python/compare_simulation_output.py"
+            ],
             "comments": [
                 {
                     "author": "github-actions",
@@ -1582,6 +2025,10 @@
                 "deletions": 1,
                 "files": 2
             },
+            "files": [
+                "DDDetectors/include/DDDetectors/OtherDetectorHelpers.h",
+                "DDDetectors/src/Mask_o1_v01_geo.cpp"
+            ],
             "comments": [
                 {
                     "author": "github-actions",
