@@ -1,5 +1,5 @@
 {
-    "updated_at": "2026-09-22T09:51:51Z",
+    "updated_at": "2026-09-22T10:53:12Z",
     "data": [
         {
             "org": "key4hep",
@@ -10,7 +10,97 @@
             "author": "apausa",
             "mergedAt": "2026-09-22",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "To ease the review process, please consider the following before opening a pull request:\r\n- [x] the code is sufficiently well documented (e.g. inline comments)\r\n- [x] the relevant README(s) were updated. See e.g. https://github.com/key4hep/k4geo/blob/main/detector/calorimeter/README.md or https://github.com/key4hep/k4geo/blob/main/FCCee/IDEA/compact/README.md\r\n- [x] the code is covered by tests. See https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\r\n- [x] the PR source branch has been rebased (`--ff-only`) to `k4geo/main`\r\n- [x] the PR does not contain any additions or modifications that do not belong to it\r\n- [x] The release notes below contain a succinct and comprehensive description of the changes that are sufficiently self-explanatory\r\n\r\nIf you are modifying detector dimen\u2026",
+            "diff": {
+                "additions": 34,
+                "deletions": 0,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "apausa",
+                    "body": "Fixes part of #616"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 6
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 524,
+            "title": "Hide deprecated Track::getTrackState(int32_t) overload from Cling/cppyy",
+            "url": "https://github.com/key4hep/EDM4hep/pull/524",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-22",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Hide deprecated Track::getTrackState(int32_t) overload from Cling/cppyy\r\n\r\nENDRELEASENOTES\r\n\r\ncppyy seems to select the wrong overload and this will only be there until it is removed.\r\n\r\nFix https://github.com/key4hep/EDM4hep/issues/523",
+            "diff": {
+                "additions": 9,
+                "deletions": 7,
+                "files": 2
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "\ud83d\ude35\u200d\ud83d\udcab coming full circle here with our code gen. We are now reading in c++ code via yaml to generate c++ code with pre-processor directives which are then fed to another c++ based code generator to be ignored again... \ud83d\ude48"
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "root2gltf",
+            "num": 15,
+            "title": "Shrink overlapping children volumes",
+            "url": "https://github.com/HEP-FCC/root2gltf/pull/15",
+            "author": "apausa",
+            "mergedAt": "2026-09-22",
+            "mergedBy": "kjvbrt",
+            "labels": [
+                "bug"
+            ],
+            "body": "- Create constant for depth in `generateConfig.ts`\r\n- Shrink children nodes with same size and position as parent in `optimizeGraphics.ts`\r\n- Add graphics related constants to `constants.ts`\r\n- Fix missing field bug in `concatenateOutput.ts`\r\n- Review and clean up conversion logic in `handleInput.ts `\r\n- Reduce `numFaces` build option to 1000 in `index.ts`\r\n- Improve transparency (from 40% to 100%) in `index.ts`\r\n- Update `package-lock.json`\r\n- Update `README.md`\r\n- Fix failing tests accordingly\r\n- Bump up version number",
+            "diff": {
+                "additions": 428,
+                "deletions": 245,
+                "files": 10
+            },
+            "comments": [
+                {
+                    "author": "apausa",
+                    "body": "**ALLEGRO o2 v01 -- Depth 3, numFaces 1000, with overlapping children shrinkage (not noticeable)**\r\n<img width=\"3440\" height=\"1440\" alt=\"image\" src=\"https://github.com/user-attachments/assets/cd2e1473-dbd2-4fb6-846a-0c01f3b6d15b\" />\r\n\r\n**CLD o4 v05 -- Depth 3, numFaces 1000, with overlapping childre\u2026"
+                },
+                {
+                    "author": "apausa",
+                    "body": "Since shrinkage is not noticeable due to volumes having the same color I tested with IDEA o1 v01, here the yellow \"envelopes\" (parent volumes) and gray children are now rendered as distinct.\r\n\r\n<img width=\"3440\" height=\"1440\" alt=\"image\" src=\"https://github.com/user-attachments/assets/efaacf47-f7e4-\u2026"
+                },
+                {
+                    "author": "apausa",
+                    "body": "Changing the shrinkage factor to 0.9999 instead of 0.999 brings back overlapping / tesellation\r\n\r\n<img width=\"476\" height=\"672\" alt=\"image\" src=\"https://github.com/user-attachments/assets/abf4e3be-391d-4327-bd6e-0e3fecdbf74c\" />"
+                },
+                {
+                    "author": "apausa",
+                    "body": "**Mapping to the closest colors predefined by Root** \r\n\r\nALLEGRO o2 v01 -- Depth 3, numFaces 1000, with overlapping children shrinkage (not noticeable)\r\n\r\n<img width=\"3440\" height=\"1408\" alt=\"image\" src=\"https://github.com/user-attachments/assets/06f50508-0a0e-4265-a82b-8af07fbf81e4\" />\r\n\r\nCLD o4 v0\u2026"
+                },
+                {
+                    "author": "apausa",
+                    "body": "Related issue: https://github.com/key4hep/k4geo/issues/616"
+                },
+                {
+                    "author": "apausa",
+                    "body": "Related PR: https://github.com/key4hep/k4geo/pull/662"
+                }
+            ],
+            "comments_total": 6,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -21,7 +111,50 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-21",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "Please comment if other people should be changed, and I will add them.\r\n\r\nBEGINRELEASENOTES\r\n - Remove Lorenzo Pezzotti as CODEOWNER for FCCee IDEA geometries\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 5,
+                "deletions": 5,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Nothing against this change here. Abusing the PR to launch a discussion on whether we want some more fine-grained ownership for the detector drivers? Currently the top level CODEOWNERS get a notification for every PR (and there are quite a few in k4geo) whereas detector concept ownership only notifi\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Maybe we could remove Frank since he doesn't reply often; actually it will he harder for him to see if we mention him if he gets an email for everything that is happening. And Nazar from the muon collider hasn't been active.\r\n\r\n> Nothing against this change here. Abusing the PR to launch a discussio\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I think removing Frank is a good idea. Would definitely increase the S/N for him ;)\r\n\r\n> Don't most PRs have also changes in the xmls together with the cpp files? \r\n\r\nI think usually yes, but there were some cases recently where there were only cpp changes. E.g. https://github.com/key4hep/k4geo/pull\u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "Hi @jmcarcell, could you please also add me as global (as well as /FCCee) owner?"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "> I think removing Frank is a good idea. Would definitely increase the S/N for him ;)\r\n> \r\n> > Don't most PRs have also changes in the xmls together with the cpp files?\r\n> \r\n> I think usually yes, but there were some cases recently where there were only cpp changes. E.g. #578, #549, #602, #621, #633\u2026"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "What about adding @danieljeans and @tmadlener  as code-owners for `FCCee/ILD_FCCee/`, for completness' sake?"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Done"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> What about adding @danieljeans and @tmadlener as code-owners for FCCee/ILD_FCCee/, for completness' sake?\r\n\r\nActually, Daniel can be removed from all ILD parts as he is no longer working on ILD at the moment."
+                }
+            ],
+            "comments_total": 8,
+            "reviews": [],
+            "reviews_total": 12
         },
         {
             "org": "key4hep",
@@ -32,7 +165,52 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-21",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Add `--evt-max` as a k4run alias for the Gaudi event limit, to make it clear it's the same as `ApplicationMgr.EvtMax`\r\n\r\nENDRELEASENOTES\r\n\r\nIf both aliases are passed, argparse uses the last value provided.\r\n\r\n@dudarboh",
+            "diff": {
+                "additions": 9,
+                "deletions": 3,
+                "files": 2
+            },
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "It is always set: https://github.com/key4hep/k4FWCore/blob/main/python/k4FWCore/ApplicationMgr.py#L105 \r\nOtherwise I guess the default from Gaudi (-1) applies if not set"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Maybe we can put the `-1` default into the python arguments as well explicitly? That would make the chase for figuring out what the default is and where it comes from a bit easier."
+                },
+                {
+                    "author": "dudarboh",
+                    "body": "When generating events using [PythiaInterface](https://github.com/key4hep/k4Gen/blob/80f6c6606a4cdc3174c05ac5a3ddf8e95aee0c9a/k4Gen/src/components/PythiaInterface.h)  the number of events to generate set in the pythia card settings is completely ignored it seems.\r\n```\r\nMain:numberOfEvents = 100     \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "That might be something that needs fixing in `k4Gen`? E.g. https://github.com/key4hep/k4SimDelphes/blob/51aa8edaa5e0012519e211a600959e79eab5d625/standalone/src/DelphesPythia8Reader.h#L91 and then issuing an early stop in case that is reached.\r\n\r\nThe current default is already `-1`, so simply stating\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "> Maybe we can put the `-1` default into the python arguments as well explicitly? That would make the chase for figuring out what the default is and where it comes from a bit easier.\r\n\r\nNo because the argument overrides anything in the steering files as it is now, I've put in the description."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "> That might be something that needs fixing in `k4Gen`? E.g. [key4hep/k4SimDelphes@`51aa8ed`/standalone/src/DelphesPythia8Reader.h#L91](https://github.com/key4hep/k4SimDelphes/blob/51aa8edaa5e0012519e211a600959e79eab5d625/standalone/src/DelphesPythia8Reader.h#L91) and then issuing an early stop in c\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> No because the argument overrides anything in the steering files as it is now, I've put in the description.\r\n\r\nAh yes, forgot about that."
+                }
+            ],
+            "comments_total": 7,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Do we already have it default to *run all events*? I guess we do, but is simply not setting `ApplicationMgr().EvtMax` where it happens?"
+                }
+            ],
+            "reviews_total": 2
         },
         {
             "org": "key4hep",
@@ -43,7 +221,32 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-21",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Avoid clangd NRVO (named return value optimization, -Wnrvo, \"not eliding copy on return\") warnings in location helpers\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 8,
+                "deletions": 8,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Out of curiosity, is NRVO now happening with naming a concrete type in the signature? And do you know why it behaves differently with `auto`?"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "It seems it's a limitation of clang (https://github.com/llvm/llvm-project/issues/95280). The type is the same in both cases"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "OK, interesting. I think it potentially also increases readability for new-comers (and maybe doxygen), so I would say we go ahead with this."
+                }
+            ],
+            "reviews_total": 1
         },
         {
             "org": "key4hep",
@@ -54,7 +257,17 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-21",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Refactor test components to use functional algorithms.\n   - Replace the legacy ROOT-file producer with a functional producer.\n   - Replace the legacy Marlin-wrapper producer with a functional generic-collection producer.\n   - Consolidate CellID metadata validation in the functional metadata consumer.\n   - Centralize expected output collection definitions in the output-file check.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 270,
+                "deletions": 435,
+                "files": 16
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 6
         },
         {
             "org": "key4hep",
@@ -65,7 +278,17 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-21",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "Continuation of https://github.com/key4hep/key4hep-images/pull/34, this is actually needed when Arrow is built with zstd.",
+            "diff": {
+                "additions": 6,
+                "deletions": 6,
+                "files": 4
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -76,7 +299,17 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-21",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "It's required from the system in LCG stacks and is causing issues like:\r\n```\r\n  -- Checking for module 'libzstd'\r\n  --   No package 'libzstd' found\r\n  CMake Error at /cvmfs/sft.cern.ch/lcg/releases/CMake/3.30.6-34165/x86_64-el9-gcc16-opt/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake:233 (message):\r\n    Could NOT find zstdAlt (missing: ZSTD_LIB ZSTD_INCLUDE_DIR)\r\n```",
+            "diff": {
+                "additions": 5,
+                "deletions": 5,
+                "files": 4
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "AIDASoft",
@@ -87,7 +320,42 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-21",
             "mergedBy": "andresailer",
-            "labels": []
+            "labels": [],
+            "body": "ROOT made RCsg and CsgOps.h private in [root-project/root#23421](https://github.com/root-project/root/pull/23421). DDCAD's ASSIMP writer uses that API to tessellate every exported shape, so it can no longer consume a current ROOT installation.\r\n\r\nQuestion, what to do with this? This PR is the removal of what is using this CSG exporter. An alternative would be to make it a dependency of DD4hep.\r\n\r\nBEGINRELEASENOTES\r\n - Remove the CSG-dependent CAD export path because ROOT's RCsg library is now private.\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 679,
+                "files": 5
+            },
+            "comments": [
+                {
+                    "author": "andresailer",
+                    "body": "I am not convinced that simply removing the assimpwriter is the correct way forward. either we find an alternative library, or complain to ROOT to keep Rcsg public."
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200210h 31m 52s \u23f1\ufe0f\n\u2007\u2008374 tests\u2003\u2007\u2008374 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008322 runs\u200a\u20033\u2008322 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit e4a2913e.\n\n[test-results]:data:application/gzip;base64,H4sIAFvlsGoC/13Myw7CIBCF4VdpWLuAoRXwZQxySSa2xXBZGd9dJLVFV5Pvn+Q8icfZJXIZmDwNJBXMh2yJOmNYq7lQDGqq35yax6+uqRjzn+\u2026"
+                },
+                {
+                    "author": "ferdymercury",
+                    "body": "> we find an alternative library\r\n\r\nside note: Csg was derived from https://github.com/dtecta/solid3 so it could be maybe that one.\r\n\r\nside question: would it be ok to have it in ROOT/CsgOps.h rather than CsgOps.h ?"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "I may have some implementation that just uses publicly available ROOT interfaces, but I need to do some more testing."
+                },
+                {
+                    "author": "andresailer",
+                    "body": "my (and :gemini:'s) implementation: #1682"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "I won't get the other mess sorted, so I will merge this to get the builds green and then revert it to get the functionality back."
+                }
+            ],
+            "comments_total": 6,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "AIDASoft",
@@ -98,7 +366,22 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-21",
             "mergedBy": "andresailer",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Replace direct inclusions of the deprecated `RVersion.h` with `ROOT/RVersion.hxx` in DDCore and the ROOT macro example\r\n\r\nENDRELEASENOTES\r\n\r\nThere are warnings when building with ROOT master (after https://github.com/root-project/root/pull/23253):\r\n```\r\n/build/jenkins/workspace/lcg_nightly_pipeline/install/dev3/ROOT/d77c3733/x86_64-el9-gcc15-opt/include/RVersion.h:4:2: warning: \"RVersion.h is deprecated and will be removed in a future release, please include\r\n  ROOT/RVersion.hxx instead\" [-W#warnings]\r\n  #warning \"RVersion.h is deprecated and will be removed in a future release, please include ROOT/RVersion.hxx instead\"\r\n```",
+            "diff": {
+                "additions": 32,
+                "deletions": 0,
+                "files": 4
+            },
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200210h 58m 58s \u23f1\ufe0f\n\u2007\u2008380 tests\u2003\u2007\u2008380 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008376 runs\u200a\u20033\u2008376 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 3710c195.\n\n[test-results]:data:application/gzip;base64,H4sIAF26r2oC/13MQQ7CIBRF0a00jB0UfpGPmzFAS0Jsi6Ewaty7lFRBh/e85O3EunnayK2jeOnIllysNaagovNrbpAcDsprPHbA/lP3LRnzTw\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -109,7 +392,30 @@
             "author": "jbeirer",
             "mergedAt": "2026-09-20",
             "mergedBy": "jbeirer",
-            "labels": []
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement\n\n\n___\n\n### **Description**\n- Split workflow into command-selection and review jobs\n\n- Run reviews on Kimi K3 with GLM-5.2 fallback\n\n- Move docker invocation and gating into scripts\n\n- Matrix review per command; always clean containers\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  request[\"request job: select commands via ai_pr_review.py\"] -- \"commands output\" --> review[\"review job matrix (self-hosted)\"]\n  review -- \"primary attempt\" --> kimi[\"Run with Kimi K3\"]\n  kimi -- \"on failure\" --> glm[\"Run with GLM-5.2\"]\n  review -- \"always\" --> cleanup[\"Remove leftover containers\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr\u2026",
+            "diff": {
+                "additions": 54,
+                "deletions": 53,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- b7cf7b9 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/195?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -120,7 +426,22 @@
             "author": "jbeirer",
             "mergedAt": "2026-09-20",
             "mergedBy": "jbeirer",
-            "labels": []
+            "labels": [],
+            "body": "",
+            "diff": {
+                "additions": 2,
+                "deletions": 0,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/196?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -131,7 +452,26 @@
             "author": "jbeirer",
             "mergedAt": "2026-09-20",
             "mergedBy": "jbeirer",
-            "labels": []
+            "labels": [],
+            "body": "Adds the two scripts that will drive the AI PR review, and moves PR-Agent's call settings out of the workflow into `.pr_agent.toml`.\r\n\r\nNothing is wired up yet: no workflow references the scripts, so reviews keep running exactly as they do today. A follow-up switches the workflow over to them, which is why this is split in two \u2014 with the scripts already on `main`, that follow-up can be reviewed by the pipeline it introduces.\r\n\r\n### Scripts\r\n\r\n`.github/scripts/ai_pr_review.py` does two jobs:\r\n\r\n- with `--check`, it reads the event and decides which commands it requests \u2014 same-repo non-draft pull requests, or a `/` command from a contributor \u2014 so the decision happens before any self-hosted runner is involved;\r\n- without it, the same file is the container entrypoint and calls `PRAgent().handl\u2026",
+            "diff": {
+                "additions": 111,
+                "deletions": 3,
+                "files": 3
+            },
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>Security concerns</strong><br><br>\n\n<strong>Missing fork-repository guard on comment path:</str\u2026"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/194?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -142,7 +482,17 @@
             "author": "madbaron",
             "mergedAt": "2026-09-19",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Added a second stack setup script for the fish shell\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 23,
+                "deletions": 9,
+                "files": 1
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 3
         },
         {
             "org": "key4hep",
@@ -156,7 +506,17 @@
             "labels": [
                 "dependencies",
                 "github_actions"
-            ]
+            ],
+            "body": "Bumps [docker/setup-buildx-action](https://github.com/docker/setup-buildx-action) from 4.3.0 to 4.4.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/docker/setup-buildx-action/releases\">docker/setup-buildx-action's releases</a>.</em></p>\n<blockquote>\n<h2>v4.4.1</h2>\n<ul>\n<li>Skip BuildKit image pre-pulls for explicit endpoints by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/setup-buildx-action/pull/624\">docker/setup-buildx-action#624</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/docker/setup-buildx-action/compare/v4.4.0...v4.4.1\">https://github.com/docker/setup-buildx-action/compare/v4.4.0...v4.4.1</a></p>\n<h2>v4.4.0</h2>\n<ul>\n<li>Use official \u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
         },
         {
             "org": "key4hep",
@@ -170,7 +530,17 @@
             "labels": [
                 "dependencies",
                 "github_actions"
-            ]
+            ],
+            "body": "Bumps [int128/docker-manifest-create-action](https://github.com/int128/docker-manifest-create-action) from 2.27.0 to 2.28.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/int128/docker-manifest-create-action/releases\">int128/docker-manifest-create-action's releases</a>.</em></p>\n<blockquote>\n<h2>v2.28.0</h2>\n<pre lang=\"yaml\"><code>uses: int128/docker-manifest-create-action@6edb43463bd4878b8cee224ca274378a3635d78f # v2.28.0\n</code></pre>\n<h2>What's Changed</h2>\n<ul>\n<li>chore(deps): update dependency <code>@\u200bbiomejs/biome</code> to v2.5.8 by <a href=\"https://github.com/renovate\"><code>@\u200brenovate</code></a>[bot] in <a href=\"https://redirect.github.com/int128/docker-manifest-create-action/pull/1209\">int128/docker-manifest-create-action#1209</a></li\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -184,7 +554,17 @@
             "labels": [
                 "dependencies",
                 "github_actions"
-            ]
+            ],
+            "body": "Bumps [docker/build-push-action](https://github.com/docker/build-push-action) from 7.3.0 to 7.4.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/docker/build-push-action/releases\">docker/build-push-action's releases</a>.</em></p>\n<blockquote>\n<h2>v7.4.0</h2>\n<ul>\n<li>Use the shared error helper for Buildx commands by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/build-push-action/pull/1620\">docker/build-push-action#1620</a></li>\n<li>Prevent workflow command injection in metadata logs by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/build-push-action/pull/1617\">docker/build-push-action#1617</a></li>\n<li>Bump <c\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -195,7 +575,17 @@
             "author": "paulgessinger",
             "mergedAt": "2026-09-19",
             "mergedBy": "madbaron",
-            "labels": []
+            "labels": [],
+            "body": "Handle the TrackingGeometryMaterial struct introduced by acts-project/acts#6123 while retaining support for released ACTS versions that use a pair.\r\n\r\n\r\nBEGINRELEASENOTES\r\n\r\n- Adapt to https://github.com/acts-project/acts/pull/6123\r\n \r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 9,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -208,7 +598,42 @@
             "mergedBy": "jbeirer",
             "labels": [
                 "Review effort 3/5"
-            ]
+            ],
+            "body": "fyi @bendavid this might be interesting to you (and others) as an alternative implementation to [hodor](https://github.com/mr-karan/hodor)\r\n\r\nMight also be interesting for other key4hep projects @BrieucF @andresailer @jmcarcell \r\n\r\n<!-- pr-agent-generated -->\r\n### **User description**\r\n## Summary\r\n\r\nAdds an AI-assisted pull request review workflow for k4Bench using PR-Agent through the CERN AI Gateway.\r\n\r\nThe workflow runs automatically for new and updated PRs and can also react to review/comment events. It runs on the existing CERN self-hosted runners, uses a pinned PR-Agent container, and avoids exposing the CERN API key to forks or bot-triggered events.\r\n\r\nRepository-specific review guidance is added in `.github/ai-review-instructions.md`, covering the main k4Bench correctness concerns \u2026",
+            "diff": {
+                "additions": 397,
+                "deletions": 0,
+                "files": 3
+            },
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/193?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[PR Description](https://github.com/key4hep/k4Bench/pull/193)** updated to latest commit (https://github.com/key4hep/k4Bench/commit/8fab65f021ccf226ffdb175e5414a3dcc3032f75)"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\u23f1\ufe0f&nbsp;<strong>Estimated effort to review</strong>: 3 \ud83d\udd35\ud83d\udd35\ud83d\udd35\u26aa\u26aa</td></tr>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security conc\u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "## AI review commands\r\n\r\nThe AI reviewer runs `/review` automatically when a PR is opened and on every push. Anyone who has already contributed to this repository (owners, members, collaborators, previous contributors) can request more by commenting on a PR. The comment must start with the command. \u2026"
+                },
+                {
+                    "author": "bendavid",
+                    "body": "For complex tasks GLM 5.2 can generate very long reasoning so you might need to set max tokens all the way to 131072\r\n\r\nIt might be preferred to use the Kimi K3 model in any case."
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> For complex tasks GLM 5.2 can generate very long reasoning so you might need to set max tokens all the way to 131072\r\n> \r\n> It might be preferred to use the Kimi K3 model in any case.\r\n\r\nRight, I did use GLM initially as Kimi seemed to have some server-side issues, but they seem fixed now. Now usi\u2026"
+                }
+            ],
+            "comments_total": 6,
+            "reviews": [],
+            "reviews_total": 3
         },
         {
             "org": "key4hep",
@@ -219,7 +644,17 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-18",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "Fixes the pre-commit failures in #427.\n\nBEGINRELEASENOTES\n - Fix pre-commit validation for the functional test component refactor.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 6,
+                "files": 6
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -233,7 +668,22 @@
             "labels": [
                 "dependencies",
                 "python"
-            ]
+            ],
+            "body": "Bumps [soupsieve](https://github.com/facelessuser/soupsieve) from 2.8.4 to 2.9.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/soupsieve/releases\">soupsieve's releases</a>.</em></p>\n<blockquote>\n<h2>2.9</h2>\n<ul>\n<li><strong>NEW</strong>: Drop Python 3.9 support.</li>\n<li><strong>NEW</strong>: Lazy compile selector patterns to improve initial import speed.</li>\n<li><strong>FIX</strong>: Correct <code>:nth-child</code>/<code>:nth-of-type</code> (and <code>-last-</code> variants) for <code>An+B</code> values whose sequence steps onto\nindex 0 or onto the last child (e.g. <code>:nth-child(2n-2)</code>, <code>:nth-child(n-1)</code>, <code>:nth-child(n+5)</code>), which previously\nmatched the wrong elements or nothing at all (<a href=\"http\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-09-18 05:36 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -244,7 +694,17 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-18",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Replace deprecated (https://github.com/acts-project/acts/pull/5738)  material-binning APIs with AxisSpec\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 7,
+                "deletions": 7,
+                "files": 1
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -255,7 +715,17 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-18",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Fix PFO comparison with current EDM4hep (https://github.com/key4hep/EDM4hep/pull/520)\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -269,7 +739,22 @@
             "labels": [
                 "dependencies",
                 "python"
-            ]
+            ],
+            "body": "Bumps [matplotlib](https://github.com/matplotlib/matplotlib) from 3.11.1 to 3.11.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/matplotlib/matplotlib/releases\">matplotlib's releases</a>.</em></p>\n<blockquote>\n<h2>REL: v3.11.2</h2>\n<p>This is the second bugfix release of the 3.11.x series.</p>\n<p>This release contains several bug-fixes and adjustments:</p>\n<ul>\n<li>Speed up RGBA-stage image resampling</li>\n<li>Fix <code>hexbin</code> clipping in PDF output</li>\n<li>Fix <code>\\text</code> with internal braces</li>\n<li>Fix some crashes and make some checks more robust to unlikely cases</li>\n<li>Fix frame skew when saving GIF animations with <code>PillowWriter</code></li>\n<li>Fix HiDPI handling in Qt toolbar and WebAgg embeddings</li>\n<li>Fix <cod\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/189?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -283,7 +768,22 @@
             "labels": [
                 "dependencies",
                 "python"
-            ]
+            ],
+            "body": "Bumps [matplotlib](https://github.com/matplotlib/matplotlib) from 3.11.1 to 3.11.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/matplotlib/matplotlib/releases\">matplotlib's releases</a>.</em></p>\n<blockquote>\n<h2>REL: v3.11.2</h2>\n<p>This is the second bugfix release of the 3.11.x series.</p>\n<p>This release contains several bug-fixes and adjustments:</p>\n<ul>\n<li>Speed up RGBA-stage image resampling</li>\n<li>Fix <code>hexbin</code> clipping in PDF output</li>\n<li>Fix <code>\\text</code> with internal braces</li>\n<li>Fix some crashes and make some checks more robust to unlikely cases</li>\n<li>Fix frame skew when saving GIF animations with <code>PillowWriter</code></li>\n<li>Fix HiDPI handling in Qt toolbar and WebAgg embeddings</li>\n<li>Fix <cod\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/190?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -294,7 +794,22 @@
             "author": "jbeirer",
             "mergedAt": "2026-09-18",
             "mergedBy": "jbeirer",
-            "labels": []
+            "labels": [],
+            "body": "Zenodo seems to block certain bot traffic to avoid server outages, which causes the CI tests to fail. Exclude check from tests.",
+            "diff": {
+                "additions": 17,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/192?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -308,7 +823,22 @@
             "labels": [
                 "dependencies",
                 "python"
-            ]
+            ],
+            "body": "Updates the requirements on [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/pymdown-extensions/releases\">pymdown-extensions's releases</a>.</em></p>\n<blockquote>\n<h2>12.0</h2>\n<ul>\n<li>\n<p><strong>BREAK</strong>: BetterEm: Complete rewrite. There may be some subtle differences between legacy behavior and new\nCommonMark behavior.</p>\n<ul>\n<li><code>*</code> and <code>_</code> emphasis are handled at the same time to provide more natural nesting.</li>\n<li>More performant.</li>\n<li>CommonMark compliant.</li>\n</ul>\n</li>\n<li>\n<p><strong>BREAK</strong>: Tilde, Caret, Mark: Rewritten and now built upon the latest BetterEm logic.</p>\n<ul>\n<\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/191?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -319,7 +849,22 @@
             "author": "apausa",
             "mergedAt": "2026-09-18",
             "mergedBy": "michmx",
-            "labels": []
+            "labels": [],
+            "body": "- [Add .vscode to .gitignore](https://github.com/HEP-FCC/fcc-tutorials/commit/3dcac962a9ac9a3f8f1c848348ab203ae27f5432)\r\n- [Link dd4hep2root from k4geo](https://github.com/HEP-FCC/fcc-tutorials/commit/ef76f873758b3d4ad9d1d7acff3051e265d0bb1a)",
+            "diff": {
+                "additions": 11,
+                "deletions": 10,
+                "files": 3
+            },
+            "comments": [
+                {
+                    "author": "kjvbrt",
+                    "body": "Good for now, should be a proper command inside Key4hep environment."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 1
         },
         {
             "org": "hep-fcc",
@@ -330,7 +875,22 @@
             "author": "jeyserma",
             "mergedAt": "2026-09-18",
             "mergedBy": "kjvbrt",
-            "labels": []
+            "labels": [],
+            "body": "Updated FSR lattice parameters. Reference to the FSR.\r\n\r\nThese values are still for the GHC lattice, while we switched to the new LCC optics. However, for LCC, the beam parameters above the Z pole are not yet available. In any case, at the IP, the beam parameters between LCC and GHC are similar.",
+            "diff": {
+                "additions": 11,
+                "deletions": 0,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "kjvbrt",
+                    "body": "Thanks @jeyserma"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -341,7 +901,62 @@
             "author": "casarsa",
             "mergedAt": "2026-09-17",
             "mergedBy": "tmadlener",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n\r\n* Introduce MuSIC_v3, an updated MuSIC detector geometry.\r\n* Instrument each nozzle with three silicon-detector disks forming the Forward Tracker, housed in air gaps within the nozzle.\r\n* Reduce the number of vertex barrel and endcap layers and correct their layer IDs.\r\n* Remove the yoke iron and use the HCAL barrel as the magnetic flux return.\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 1482,
+                "deletions": 12,
+                "files": 15
+            },
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "Thanks @casarsa for preparing this PR!\r\n\r\nAs a general comment, I'd suggest to include in v3 only the files that actually changed wrt to the previous versions, and otherwise link to those in the previous versions when nothing changed without adding duplicated files.\r\n\r\nI'll add a couple more detaile\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "These are pre-existing issues, but you may want to fix them for v3.\r\n\r\n- The largest overlap in the detector is `Vertex` \u2194 `NozzleW_right` by **3.04 cm**, at the vertex envelope corner (local point r \u2248 3.5 cm, z = 38 cm).\r\n- `BCH2` and `BCH2_composite` coexist. They are very different materials: `BC\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "One last thing: please remember to add Music v3 to the list of tests https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt"
+                },
+                {
+                    "author": "casarsa",
+                    "body": "> These are pre-existing issues, but you may want to fix them for v3.\r\n> \r\n> * The largest overlap in the detector is `Vertex` \u2194 `NozzleW_right` by **3.04 cm**, at the vertex envelope corner (local point r \u2248 3.5 cm, z = 38 cm).\r\n> * `BCH2` and `BCH2_composite` coexist. They are very different materi\u2026"
+                },
+                {
+                    "author": "casarsa",
+                    "body": "> One last thing: please remember to add Music v3 to the list of tests https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\r\n\r\nAdded."
+                },
+                {
+                    "author": "casarsa",
+                    "body": "> Thanks @casarsa for preparing this PR!\r\n> \r\n> As a general comment, I'd suggest to include in v3 only the files that actually changed wrt to the previous versions, and otherwise link to those in the previous versions when nothing changed without adding duplicated files.\r\n> \r\n> I'll add a couple mo\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> > Thanks @casarsa for preparing this PR!\r\n> > As a general comment, I'd suggest to include in v3 only the files that actually changed wrt to the previous versions, and otherwise link to those in the previous versions when nothing changed without adding duplicated files.\r\n> > I'll add a couple more\u2026"
+                },
+                {
+                    "author": "casarsa",
+                    "body": "Thank you for the review, @madbaron. I had decided what to import from v2 with a simple diff. I've gone now through the files in v3 one by one.\r\n\r\nFiles changed in v3:\r\n- MuSIC_v3.xml, ForwardTracker.xml (new), Nozzle_10deg_v2.xml (profile parameterised, gaps for the forward tracker, BCH2);\r\n- Beamp\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> So, I can additionally take from MuSIC_v2 as they are: InnerTracker_o2_v07_01.xml, OuterTracker_o2_v07_01.xml, HCalBarrel_o1_v01_01.xml, and Solenoid_o1_v01_01.xml.\r\n\r\nI think we should do this\r\n \r\n> With minimal changes in v2, I could make reusable in v3: materials.xml, ECalBarrel_crilin.xml, ECa\u2026"
+                },
+                {
+                    "author": "casarsa",
+                    "body": "> > So, I can additionally take from MuSIC_v2 as they are: InnerTracker_o2_v07_01.xml, OuterTracker_o2_v07_01.xml, HCalBarrel_o1_v01_01.xml, and Solenoid_o1_v01_01.xml.\r\n> \r\n> I think we should do this\r\n> \r\n> > With minimal changes in v2, I could make reusable in v3: materials.xml, ECalBarrel_crilin\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Thanks @casarsa! \r\nThe PR looks good to me - though I'd ask you to update the PR description to use the key4hep-style release notes:\r\n\r\nBEGINRELEASENOTES\r\n- Thank you for writing the text to appear in the release notes. It will show up\r\n  exactly as it appears between the two ALL CAPS lines\r\n- ...\r\n\u2026"
+                }
+            ],
+            "comments_total": 11,
+            "reviews": [],
+            "reviews_total": 15
         },
         {
             "org": "key4hep",
@@ -352,7 +967,38 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-17",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Fix k4ActsTracking compatibility with the current ACTS propagator and grid-bin finder APIs after https://github.com/acts-project/acts/pull/6004\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 5,
+                "deletions": 5,
+                "files": 3
+            },
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "How do we deal with these actually? We will have to fix things here to make the nightlies pass, because we build acts from main there. On the other hand if someone wants to build a local version of k4ActsTracking on top of a release they will no longer be able to do so. (Plus all the release based w\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "There is no other way since sometimes ACTS does incompatible changes and it would be very hard to check on the current version."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "In principle we have an ACTS main/master build already in the CI here, so we could drop back to using tagged acts versions for the Key4hep nightlies?"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "But that doesn't really solve the issue that we have k4ActsTracking@main in the ACTS CI..."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "The CI workflows that are still using an older tag / version of acts will fail after this until they are updated to a version of acts that has these changes already in."
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -363,7 +1009,22 @@
             "author": "jbeirer",
             "mergedAt": "2026-09-17",
             "mergedBy": "tmadlener",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Fixed a cryptic Gaudi `TypeError`/`ValueError` when `--compactFile` was omitted in `CLD_CKFTracking.py`, `runGNNTrackFinding.py`, and `test_visualize_acts_geo.py` by making the argument required, with a clear error message.\r\n\r\nENDRELEASENOTES\r\n\r\n## Summary\r\n\r\n`--compactFile` was optional in several options scripts. When omitted, the resulting `None` reached `GeoSvc`'s `detectors` property as `[None]`, which failed deep in Gaudi's `PropertyProxy._isCompatible` with a cryptic `TypeError: NoneType takes no arguments` / `ValueError: received an instance of <class 'NoneType'>, but <class 'NoneType'> expected for property detectors`.\r\n\r\nMarking `--compactFile` `required=True` in the three affected scripts fails fast with a readable argparse error instead.",
+            "diff": {
+                "additions": 3,
+                "deletions": 1,
+                "files": 3
+            },
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "pre-commit failures are pre-existing, see #96"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 2
         },
         {
             "org": "key4hep",
@@ -374,7 +1035,17 @@
             "author": "tmadlener",
             "mergedAt": "2026-09-17",
             "mergedBy": "tmadlener",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Enforce formatting of pyhton files via ruff in pre-commit and CI\r\n\r\nENDRELEASENOTES\r\n\r\n\r\nfixes #100",
+            "diff": {
+                "additions": 37,
+                "deletions": 33,
+                "files": 8
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -385,7 +1056,17 @@
             "author": "tmadlener",
             "mergedAt": "2026-09-17",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Update the `.clang-format` configuration to the one the rest of Key4hep uses\r\n- Format all c++ files to comply\r\n\r\nENDRELEASENOTES\r\n\r\n\r\nThe `.clang-format` file is now the same as https://github.com/key4hep/key4hep-dev-utils/blob/main/defaults/.clang-format",
+            "diff": {
+                "additions": 5069,
+                "deletions": 4921,
+                "files": 56
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -396,7 +1077,17 @@
             "author": "tmadlener",
             "mergedAt": "2026-09-17",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Make it possible to trigger the pre-commit workflow from the github UI\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 6,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 2
         },
         {
             "org": "key4hep",
@@ -407,7 +1098,22 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-17",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "Remove the unused TGeo plugin from the ACTS master CI build configuration.",
+            "diff": {
+                "additions": 0,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "checking if simply retriggering CI makes it pass. Failure looks like an environment issue."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -418,7 +1124,17 @@
             "author": "madbaron",
             "mergedAt": "2026-09-17",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- `RecCaloCommon`: move `find_package(boost_timer)` and `find_package(boost_unit_test_framework)` inside the `if(BUILD_TESTING)` block. Only the test executables (`IDMap_test.exe`, `phihelper_test.exe`) link against Boost, so configuring with `-DBUILD_TESTING=OFF` no longer requires Boost to be built with the `timer` and `test` components.\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 4,
+                "deletions": 2,
+                "files": 1
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -429,7 +1145,28 @@
             "author": "TimLdl",
             "mergedAt": "2026-09-17",
             "mergedBy": "BrieucF",
-            "labels": []
+            "labels": [],
+            "body": "Built on #379\r\n\r\nI added the same changes to IDEA and made the option available in the ctests",
+            "diff": {
+                "additions": 194,
+                "deletions": 107,
+                "files": 4
+            },
+            "comments": [
+                {
+                    "author": "BrieucF",
+                    "body": "Thank you Tim!"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "copilot-pull-request-reviewer",
+                    "state": "COMMENTED",
+                    "body": "## Pull request overview\n\nThis PR extends the \u201crun tracking validation\u201d CLI option introduced in #379 to the IDEA full-sim digitization/reconstruction steering, and exposes that switch through the IDEA and ALLEGRO ctest wrapper scripts.\n\n**Changes:**\n- Added `--addTruthTracks` and `--runTrkValidatio\u2026"
+                }
+            ],
+            "reviews_total": 1
         },
         {
             "org": "key4hep",
@@ -440,7 +1177,22 @@
             "author": "tmadlener",
             "mergedAt": "2026-09-16",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Fix missing closing quotes in error message of cmake default config\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "This should be now in all the repositories that use `Key4hepConfig.cmake`"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -451,7 +1203,17 @@
             "author": "jmcarcell",
             "mergedAt": "2026-09-16",
             "mergedBy": "jmcarcell",
-            "labels": []
+            "labels": [],
+            "body": "",
+            "diff": {
+                "additions": 18,
+                "deletions": 0,
+                "files": 1
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -462,7 +1224,17 @@
             "author": "renovate",
             "mergedAt": "2026-09-16",
             "mergedBy": "kjvbrt",
-            "labels": []
+            "labels": [],
+            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [marked](https://marked.js.org) ([source](https://redirect.github.com/markedjs/marked)) | `18.0.11` \u2192 `18.0.13` | ![age](https://developer.mend.io/api/mc/badges/age/npm/marked/18.0.13?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/marked/18.0.11/18.0.13?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>markedjs/marked (marked)</summary>\n\n### [`v18.0.13`](https://redirect.github.com/markedjs/marked/compare/v18.0.12...634f81064433ffd12a6f2c7e8a5ae1b89c3ef4f1)\n\n[Compare Source](https://redirect.github.com/markedjs/marked/compare/v18.0.12...v18.0.13)\n\n###\u2026",
+            "diff": {
+                "additions": 39,
+                "deletions": 39,
+                "files": 2
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -473,7 +1245,22 @@
             "author": "renovate",
             "mergedAt": "2026-09-16",
             "mergedBy": "kjvbrt",
-            "labels": []
+            "labels": [],
+            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [golang.org/x/oauth2](https://pkg.go.dev/golang.org/x/oauth2) | [`v0.36.0` \u2192 `v0.37.0`](https://cs.opensource.google/go/x/oauth2/+/refs/tags/v0.36.0...refs/tags/v0.37.0) | ![age](https://developer.mend.io/api/mc/badges/age/go/golang.org%2fx%2foauth2/v0.37.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/go/golang.org%2fx%2foauth2/v0.36.0/v0.37.0?slim=true) |\n\n---\n\n### Configuration\n\n\ud83d\udcc5 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n\ud83d\udea6 **Automerge**: Disabled by config. Please merge th\u2026",
+            "diff": {
+                "additions": 4,
+                "deletions": 2,
+                "files": 2
+            },
+            "comments": [
+                {
+                    "author": "renovate",
+                    "body": "### \u2139\ufe0f Artifact update notice\n\n##### File name: go.mod\n\nIn order to perform the update(s) described in the table above, Renovate ran the `go get` command, which resulted in the following additional change(s):\n\n\n- The `go` directive was updated for compatibility reasons\n\n\nDetails:\n\n\n| **Package** | *\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -484,7 +1271,22 @@
             "author": "renovate",
             "mergedAt": "2026-09-16",
             "mergedBy": "kjvbrt",
-            "labels": []
+            "labels": [],
+            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [dompurify](https://redirect.github.com/cure53/DOMPurify) | `3.4.14` \u2192 `3.4.15` | ![age](https://developer.mend.io/api/mc/badges/age/npm/dompurify/3.4.15?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/dompurify/3.4.14/3.4.15?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>cure53/DOMPurify (dompurify)</summary>\n\n### [`v3.4.15`](https://redirect.github.com/cure53/DOMPurify/releases/tag/3.4.15): DOMPurify 3.4.15\n\n[Compare Source](https://redirect.github.com/cure53/DOMPurify/compare/3.4.14...3.4.15)\n\n- Added better clobbering hardening when XML content \u2026",
+            "diff": {
+                "additions": 3,
+                "deletions": 3,
+                "files": 2
+            },
+            "comments": [
+                {
+                    "author": "renovate",
+                    "body": "### Edited/Blocked Notification\n\nRenovate will not automatically rebase this PR, because it does not recognize the last commit author and assumes somebody else may have edited the PR.\n\nYou can manually request rebase by checking the rebase/retry box above.\n\n \u26a0\ufe0f **Warning**: custom changes will be lo\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -495,7 +1297,17 @@
             "author": "renovate",
             "mergedAt": "2026-09-16",
             "mergedBy": "kjvbrt",
-            "labels": []
+            "labels": [],
+            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [github.com/jackc/pgx/v5](https://redirect.github.com/jackc/pgx) | `v5.10.0` \u2192 `v5.11.0` | ![age](https://developer.mend.io/api/mc/badges/age/go/github.com%2fjackc%2fpgx%2fv5/v5.11.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/go/github.com%2fjackc%2fpgx%2fv5/v5.10.0/v5.11.0?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>jackc/pgx (github.com/jackc/pgx/v5)</summary>\n\n### [`v5.11.0`](https://redirect.github.com/jackc/pgx/releases/tag/v5.11.0)\n\n[Compare Source](https://redirect.github.com/jackc/pgx/compare/v5.10.0...v5.11.0)\n\nThis release adds direct \u2026",
+            "diff": {
+                "additions": 3,
+                "deletions": 1,
+                "files": 2
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -506,7 +1318,22 @@
             "author": "renovate",
             "mergedAt": "2026-09-16",
             "mergedBy": "kjvbrt",
-            "labels": []
+            "labels": [],
+            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [modernc.org/sqlite](https://gitlab.com/cznic/sqlite) | `v1.58.0` \u2192 `v1.59.0` | ![age](https://developer.mend.io/api/mc/badges/age/go/modernc.org%2fsqlite/v1.59.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/go/modernc.org%2fsqlite/v1.58.0/v1.59.0?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>cznic/sqlite (modernc.org/sqlite)</summary>\n\n### [`v1.59.0`](https://gitlab.com/cznic/sqlite/compare/v1.58.0...v1.59.0)\n\n[Compare Source](https://gitlab.com/cznic/sqlite/compare/v1.58.0...v1.59.0)\n\n</details>\n\n---\n\n### Configuration\n\n\ud83d\udcc5 **Schedule**: (UTC)\n\n- Br\u2026",
+            "diff": {
+                "additions": 6,
+                "deletions": 2,
+                "files": 2
+            },
+            "comments": [
+                {
+                    "author": "renovate",
+                    "body": "### \u2139\ufe0f Artifact update notice\n\n##### File name: go.mod\n\nIn order to perform the update(s) described in the table above, Renovate ran the `go get` command, which resulted in the following additional change(s):\n\n\n- 1 additional dependency was updated\n\n\nDetails:\n\n\n| **Package**        | **Change**     \u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -517,7 +1344,17 @@
             "author": "renovate",
             "mergedAt": "2026-09-16",
             "mergedBy": "kjvbrt",
-            "labels": []
+            "labels": [],
+            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [katex](https://katex.org) ([source](https://redirect.github.com/KaTeX/KaTeX)) | `0.18.5` \u2192 `0.18.7` | ![age](https://developer.mend.io/api/mc/badges/age/npm/katex/0.18.7?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/katex/0.18.5/0.18.7?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>KaTeX/KaTeX (katex)</summary>\n\n### [`v0.18.7`](https://redirect.github.com/KaTeX/KaTeX/blob/HEAD/CHANGELOG.md#0187-2026-09-06)\n\n[Compare Source](https://redirect.github.com/KaTeX/KaTeX/compare/v0.18.6...v0.18.7)\n\n##### Features\n\n- add \\reflectbox and \\mapsfrom support \u2026",
+            "diff": {
+                "additions": 3,
+                "deletions": 3,
+                "files": 3
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -528,7 +1365,17 @@
             "author": "kjvbrt",
             "mergedAt": "2026-09-16",
             "mergedBy": "kjvbrt",
-            "labels": []
+            "labels": [],
+            "body": "- Add a `production_ids` table (coordinator-only, one-to-many per request) to record DIRAC/iLCDirac production IDs, each with an optional label\n- Only shown/usable once a request is assigned to a campaign, both in the UI and enforced server-side\n- Adding/removing an entry logs to the request's activity feed\n- No outbound link to the DIRAC portal yet \u2014 plain text for now, easy to wire up once a URL pattern is available",
+            "diff": {
+                "additions": 254,
+                "deletions": 2,
+                "files": 10
+            },
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "AIDASoft",
@@ -542,7 +1389,22 @@
             "labels": [
                 "dependencies",
                 "github_actions"
-            ]
+            ],
+            "body": "Bumps [cvmfs-contrib/github-action-cvmfs](https://github.com/cvmfs-contrib/github-action-cvmfs) from 5.5 to 5.6.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/cvmfs-contrib/github-action-cvmfs/releases\">cvmfs-contrib/github-action-cvmfs's releases</a>.</em></p>\n<blockquote>\n<h2>v5.6</h2>\n<h2>What's Changed</h2>\n<ul>\n<li><code>v4</code> -&gt; <code>v5</code> in Readme by <a href=\"https://github.com/vvolkl\"><code>@\u200bvvolkl</code></a> in <a href=\"https://redirect.github.com/cvmfs-contrib/github-action-cvmfs/pull/62\">cvmfs-contrib/github-action-cvmfs#62</a></li>\n<li>fix: update actions/cache@v5 to hash-pinned version (v5.0.5) by <a href=\"https://github.com/wdconinc\"><code>@\u200bwdconinc</code></a> in <a href=\"https://redirect.github.com/cvmfs-contrib/git\u2026",
+            "diff": {
+                "additions": 7,
+                "deletions": 7,
+                "files": 4
+            },
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200211h 38m 1s \u23f1\ufe0f\n\u2007\u2008380 tests\u2003\u2007\u2008380 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008376 runs\u200a\u20033\u2008376 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 4d6d6e97.\n\n[test-results]:data:application/gzip;base64,H4sIAKbXqWoC/12Myw7CIBQFf6Vh7aL08vRnTOWR3NgWQ2Fl/HeRVEE3J5k5yTyIx8Xt5DxQdRrInjE1sjnOCcNWmFGlaFHlTe8f1Pihy56N+Vc\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -553,7 +1415,22 @@
             "author": "jbeirer",
             "mergedAt": "2026-09-15",
             "mergedBy": "jbeirer",
-            "labels": []
+            "labels": [],
+            "body": "## Summary\r\n\r\nThis PR extends the event-level memory monitoring and regression tooling with three related improvements:\r\n\r\n- adds a robust anonymous RSS growth metric in MB/event;\r\n- versions the event timing JSON format so future schema changes can be handled safely;\r\n- adds measurement-stability information to the dashboard to make normal run-to-run variation easier to interpret.\r\n\r\nThe anonymous RSS growth metric is intentionally **reported-only**. It is shown in reports and the dashboard, but is not used to classify regressions.\r\n\r\n## Anonymous RSS growth\r\n\r\nThe event timing plugin already records anonymous RSS per event. This PR derives an additional\r\n\r\n`rss_anon_slope_mb_per_event`\r\n\r\nmetric from that history.\r\n\r\nThe slope is calculated with a Theil-Sen estimator to make it robust ag\u2026",
+            "diff": {
+                "additions": 1315,
+                "deletions": 227,
+                "files": 37
+            },
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": "### :x: 1 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 1843 | 1 | 1842 | 22 |\n<details><summary>View the top 1 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_links.py::test_link_resolves[https://zenodo.o\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -564,7 +1441,22 @@
             "author": "jbeirer",
             "mergedAt": "2026-09-15",
             "mergedBy": "jbeirer",
-            "labels": []
+            "labels": [],
+            "body": "## What this changes\r\n\r\nThis PR changes how k4Bench measures and judges memory regressions after #186 showed that total RSS is not reproducible enough on the nightly runners.\r\n\r\nThe regression engine now judges memory using two quantities that are not affected by CVMFS page invalidation, while keeping the existing RSS measurements as diagnostics:\r\n\r\n| Metric | Source | Judged? |\r\n|---|---|---|\r\n| `peak_vmem_mb` | `VmPeak`, read once by the event plugin | **yes** |\r\n| `mean_rss_anon_mb` | per-event `RssAnon` | **yes** |\r\n| `peak_rss_mb` | `/usr/bin/time -v` | reported only |\r\n| `mean_rss_mb` | per-event `VmRSS` | reported only |\r\n| `mean_rss_file_mb` | per-event `RssFile` | reported only |\r\n\r\nNothing is removed: the existing RSS values remain in the results, trend data and dashboard. Only w\u2026",
+            "diff": {
+                "additions": 975,
+                "deletions": 202,
+                "files": 34
+            },
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": "### :x: 1 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 1772 | 1 | 1771 | 17 |\n<details><summary>View the top 1 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_links.py::test_link_resolves[https://zenodo.o\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -575,7 +1467,36 @@
             "author": "apausa",
             "mergedAt": "2026-09-15",
             "mergedBy": "michmx",
-            "labels": []
+            "labels": [],
+            "body": "- Update README.md with information about the new features and functionalities.\r\n- Replace images with the current interface.\r\n- Add image showing filtered out particles.",
+            "diff": {
+                "additions": 53,
+                "deletions": 33,
+                "files": 4
+            },
+            "comments": [
+                {
+                    "author": "apausa",
+                    "body": "Hi @michmx, the tests are not being ran, can you please take a look at the GitHub Action? I believe the nightly stack should be sourced with `--spack`. Thank you"
+                },
+                {
+                    "author": "michmx",
+                    "body": "Hi @apausa . Sorry for the late reply. Addresing the issue at https://github.com/HEP-FCC/fcc-tutorials/pull/202.\r\n\r\n(It is related to https://github.com/key4hep/key4hep-images/issues/32)"
+                },
+                {
+                    "author": "apausa",
+                    "body": "Hi @michmx, just force-pushed. This can be merged, as well as #201. Thank you!"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [
+                {
+                    "author": "michmx",
+                    "state": "APPROVED",
+                    "body": "Thanks a lot for this update! I could follow it easily. \r\n\r\nI am just leaving a couple of suggestions. And let's wait for @kjvbrt to give the green light after addressing his comments."
+                }
+            ],
+            "reviews_total": 7
         },
         {
             "org": "AIDASoft",
@@ -586,7 +1507,64 @@
             "author": "andresailer",
             "mergedAt": "2026-09-15",
             "mergedBy": "andresailer",
-            "labels": []
+            "labels": [],
+            "body": "This will need some more work, ~~the current status writes one run per thread.~~\r\n\r\n\r\nBEGINRELEASENOTES\r\n- Geant4OutputAction: In multi-threaded mode, make sure the ingested runparameters and fileparameters end up in the output, fixes #1660\r\n  -  Fixed locking endRun action of the outputaction\r\n- Geant4Output2LCIO: fix locking of output writing in multi-threaded mode\r\n- Geant4Output2ROOT: fix locking of output writing in multi-threaded mode\r\n- Tests: added comparison of run and metadata trees if they exist in the output\r\n\r\n\r\nENDRELEASENOTES\r\n\r\n\r\nTODO\r\n\r\n- [x] Output2ROOT\r\n- [x] Output2LCIO: ~~writes one run per thread~~\r\n- ~~Common refactor?~~",
+            "diff": {
+                "additions": 230,
+                "deletions": 89,
+                "files": 11
+            },
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u20029h 34m 2s \u23f1\ufe0f\n\u2007\u2008380 tests\u2003\u2007\u2008380 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008376 runs\u200a\u20033\u2008376 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit ccb56066.\n\n[test-results]:data:application/gzip;base64,H4sIABkQqGoC/12MSw7CIBQAr9KwdoF8XsHLGAq85MW2GAor493FptrqcmaSeTCkMS7s0p3NqWNLpbJTqNkVSnNjqZQSTbVa3l0a/qHrUr3/Vze6\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> the current status writes one run per thread.\r\n\r\nI'm assuming a \"trivial\" solution employing `std::call_once` doesn't do the trick? Might be a bit trickier if there are multiple runs as well as multiple threads..."
+                },
+                {
+                    "author": "andresailer",
+                    "body": "> Somewhat related: Can we handle multiple runs in flight in a multi-threaded context correctly in DD4hep/ddsim? I think at least from the podio side things should keep working, as long as all runs are added to a worker context at some point.\r\n\r\nUnless I already forgot again: run information is read\u2026"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "> deceptively\r\n\r\nIndeed"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "EventReader test fails only in 107a\r\n106: no EDM4hepFileReader, podio is too old\r\n107a: issue with\r\n```\r\n16: Warning in <TClass::Init>: no dictionary for class podio::root_utils::CollectionWriteInfo is available\r\n```\r\n(podio 1.2.0)\r\n\r\n109: this warning is not present (podio 1.7.0)\r\n\r\nStill weird why\u2026"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "> Still weird why it started failing so, need to investigate.\r\n\r\nBecause we just turned on EDM4hep for the CI"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "What is the file version with which the input file has been written? (`podio-dump` on the input file should tell you). Since podio doesn't make forward compatibility guarantees, it's possible that the input file is too new for certain stacks."
+                },
+                {
+                    "author": "andresailer",
+                    "body": "> possible that the input file is too new for certain stacks.\r\n\r\n106\r\n---\r\n podio-dump crashes\r\n\r\n107a\r\n----\r\n\r\n```\r\nTClass::Init:0: RuntimeWarning: no dictionary for class podio::root_utils::CollectionWriteInfo is available\r\ninput file: ../DDTest/inputFiles/ZH250_ISR.edm4hep.root\r\n            (writ\u2026"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "I am going to disable the edm4hep filereader test for podio < 1.6"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "Any more comments @tmadlener @wdconinc ? I dumped my patch into :gemini: and fixed a couple typos and bad use of unique_ptr::release instead of reset."
+                }
+            ],
+            "comments_total": 10,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "This looks deceptively simple in the end, but I think following your comments / explanations it should be correct.\n\nSomewhat related: Can we handle multiple runs in flight in a multi-threaded context correctly in DD4hep/ddsim? I think at least from the podio side things should keep working, as long \u2026"
+                }
+            ],
+            "reviews_total": 26
         },
         {
             "org": "AIDASoft",
@@ -597,7 +1575,46 @@
             "author": "neskongarr",
             "mergedAt": "2026-09-15",
             "mergedBy": "andresailer",
-            "labels": []
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n\r\n- DDDetectors/src/Mask_o1_v01_geo.cpp: Added a new type 'kUpstreamTrapezoid' in the DDDetectors/include/DDDetectors/OtherDetectorHelpers.h to process non-cylindrically symmetric cases when processing Mask objects. (cf. k4geo [PR](https://github.com/key4hep/k4geo/pull/648)).\r\n\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 94,
+                "deletions": 1,
+                "files": 2
+            },
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u20029h 37m 54s \u23f1\ufe0f\n\u2007\u2008380 tests\u2003\u2007\u2008380 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008316 runs\u200a\u20033\u2008316 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 442119fd.\n\n[test-results]:data:application/gzip;base64,H4sIAPgXqGoC/12MSw7CIBQAr9KwdlE+QvUypuFB8mJbDJ9V4919kirocmaS2ZnHxSV2Hfh0GlgqmBtBiXPGsBFLpY0iRTW/u5zGD91SsfZf3fF\u2026"
+                },
+                {
+                    "author": "neskongarr",
+                    "body": "I implemented the PR linkand modified xml file in the k4geo repo. Thanks!"
+                },
+                {
+                    "author": "neskongarr",
+                    "body": "> This is fine from my side. But might the issues with overlaps discussed in the k4geo issue still requiring changes here?\r\n\r\nThe overlaps issue will be tackled sometime in the future at k4geo level, so no DD4hep changes are foreseen"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [
+                {
+                    "author": "andresailer",
+                    "state": "CHANGES_REQUESTED",
+                    "body": "Could you also post a link to the k4geo PR, and also the XML snippet that is interpreted by these changes please?"
+                },
+                {
+                    "author": "andresailer",
+                    "state": "CHANGES_REQUESTED",
+                    "body": "Sorry, first time I look at this outside my phone."
+                },
+                {
+                    "author": "andresailer",
+                    "state": "APPROVED",
+                    "body": "This is fine from my side. But  might the issues with overlaps discussed in the k4geo issue still requiring changes here?"
+                }
+            ],
+            "reviews_total": 6
         }
     ]
 }
