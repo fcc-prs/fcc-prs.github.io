@@ -22,7 +22,12 @@
   </div>
   <div class="container">
     <div id="summary-container"></div>
+    <div id="omitted-section" style="margin-top:1.5em"></div>
   </div>
+  <style>
+    #omitted-section details summary { cursor: pointer; font-weight: bold; }
+    #omitted-section ul { margin-top: 0.4em; }
+  </style>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script type="module" src="/assets/js/summary_script.js"></script>
 </body>

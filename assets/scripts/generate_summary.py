@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone
 
@@ -13,6 +14,13 @@ PRICE_OUTPUT_PER_MTOK = 25.0
 def load_merged_data(path):
     with open(path) as f:
         return json.load(f)
+
+
+def load_guidelines(path):
+    if not os.path.exists(path):
+        return ""
+    with open(path) as f:
+        return f.read().strip()
 
 
 def format_pr(pr):
@@ -35,7 +43,7 @@ def format_pr(pr):
     return "\n".join(lines)
 
 
-def build_prompt(prs, period_start, period_end):
+def build_prompt(prs, period_start, period_end, guidelines):
     pr_blocks = "\n\n".join(format_pr(pr) for pr in prs) if prs else "(no merged PRs this period)"
 
     return f"""\
@@ -46,23 +54,50 @@ from {period_start} to {period_end}, each with its description and discussion.
 
 ---
 
+{guidelines}
+
 Using the descriptions and comments above to judge importance and downstream impact, \
-produce a bulleted list of the most noteworthy changes. For each bullet:
-- Format the PR reference as a Markdown link, e.g. [key4hep/k4geo#662](url)
-- Write one or two sentences: what changed, and why it matters or what impact it may have
+produce your response in exactly two sections.
 
-Prioritise in this order:
-1. Breaking changes or API/interface modifications with potential downstream impact
-2. Significant new physics or reconstruction features
-3. Important bug fixes that affect correctness or usability
+**Section 1 — `## Summary`**
+A bulleted list following the Include/Style rules above.
 
-**Exclude entirely:**
-- Pure build-system, CMake, or test-infrastructure changes with no user-visible effect
-- CI/CD configuration changes
-- Trivial bot dependency bumps (dependabot, renovate)
-- Code style, linting, or minor cleanup
+**Section 2 — `## Omitted`**
+For every PR you chose NOT to include, one line each:
+`- [org/repo#num](url) — one-sentence reason for exclusion`
 
-Aim for 5-15 bullets. Format the entire response as Markdown."""
+Format the entire response as Markdown."""
+
+
+def parse_output(text):
+    """Split model output into summary paragraphs and omitted list."""
+    omitted_match = re.search(r'^##\s+omitted\s*$', text, re.IGNORECASE | re.MULTILINE)
+    if omitted_match:
+        summary_raw = text[:omitted_match.start()].strip()
+        omitted_raw = text[omitted_match.end():].strip()
+    else:
+        summary_raw = text.strip()
+        omitted_raw = ""
+
+    summary_raw = re.sub(r'^##\s+summary\s*\n', '', summary_raw, flags=re.IGNORECASE).strip()
+    summary_paragraphs = [p for p in summary_raw.split("\n\n") if p.strip()]
+
+    omitted = []
+    for line in omitted_raw.splitlines():
+        line = line.strip()
+        if not line or not line.startswith("-"):
+            continue
+        link_match = re.match(r'-\s+\[([^\]]+)\]\(([^)]+)\)\s+[—-]+\s+(.*)', line)
+        if link_match:
+            omitted.append({
+                "pr": link_match.group(1),
+                "url": link_match.group(2),
+                "reason": link_match.group(3).strip(),
+            })
+        else:
+            omitted.append({"pr": line.lstrip("- "), "url": "", "reason": ""})
+
+    return summary_paragraphs, omitted
 
 
 def extract_text(response):
@@ -81,7 +116,11 @@ def compute_cost(usage):
 
 
 data_path = sys.argv[1] if len(sys.argv) > 1 else "assets/json/merged_data.json"
+guidelines_path = sys.argv[2] if len(sys.argv) > 2 else "summary_guidelines.md"
+out_path = sys.argv[3] if len(sys.argv) > 3 else "assets/json/summary.json"
+
 data = load_merged_data(data_path)
+guidelines = load_guidelines(guidelines_path)
 prs = data.get("data", [])
 
 if prs:
@@ -92,7 +131,7 @@ else:
     period_end = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     period_start = period_end
 
-prompt = build_prompt(prs, period_start, period_end)
+prompt = build_prompt(prs, period_start, period_end, guidelines)
 
 client = get_client()
 
@@ -112,8 +151,11 @@ with client.messages.stream(
 ) as stream:
     response = stream.get_final_message()
 
-summary_text = extract_text(response)
-print(f"Received {len(summary_text)} chars of summary.", flush=True)
+raw_text = extract_text(response)
+print(f"Received {len(raw_text)} chars of output.", flush=True)
+
+summary_paragraphs, omitted = parse_output(raw_text)
+print(f"Summary: {len(summary_paragraphs)} paragraph(s), Omitted: {len(omitted)} PR(s).", flush=True)
 
 usage = response.usage
 cost = compute_cost(usage)
@@ -123,7 +165,8 @@ output = {
     "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     "period_start": period_start,
     "period_end": period_end,
-    "summary": [p for p in summary_text.split("\n\n") if p.strip()],
+    "summary": summary_paragraphs,
+    "omitted": omitted,
     "usage": {
         "input_tokens": usage.input_tokens,
         "output_tokens": usage.output_tokens,
@@ -131,7 +174,6 @@ output = {
     "cost_usd": cost,
 }
 
-out_path = sys.argv[2] if len(sys.argv) > 2 else "assets/json/summary.json"
 with open(out_path, "w", encoding="utf-8") as f:
     json.dump(output, f, indent=2, ensure_ascii=False)
 

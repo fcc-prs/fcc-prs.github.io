@@ -21,3 +21,28 @@ if (container) {
     container.textContent = 'No summary available yet. Check back after the next Monday run.';
   }
 }
+
+const omitted = jsonData.omitted || [];
+const omittedSection = document.getElementById('omitted-section');
+if (omittedSection && omitted.length > 0) {
+  const details = document.createElement('details');
+  const summary = document.createElement('summary');
+  summary.textContent = `Omitted PRs (${omitted.length})`;
+  details.appendChild(summary);
+
+  const ul = document.createElement('ul');
+  omitted.forEach(item => {
+    const li = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = item.url || '#';
+    link.textContent = item.pr;
+    link.target = '_blank';
+    li.appendChild(link);
+    if (item.reason) {
+      li.appendChild(document.createTextNode(` — ${item.reason}`));
+    }
+    ul.appendChild(li);
+  });
+  details.appendChild(ul);
+  omittedSection.appendChild(details);
+}
