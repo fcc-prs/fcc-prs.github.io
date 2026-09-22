@@ -70,19 +70,13 @@ function renderNav(index, currentDate) {
 }
 
 function renderSummary(data) {
-  const updatedEl = document.getElementById('last-updated');
-  if (updatedEl) {
-    updatedEl.textContent = data.updated_at
-      ? 'Last updated: ' + new Date(data.updated_at).toUTCString()
-      : '';
-  }
-
   const periodEl = document.getElementById('period');
   if (periodEl) {
     periodEl.textContent = (data.period_start && data.period_end)
       ? `Period: ${data.period_start} to ${data.period_end}`
       : '';
   }
+
 
   const container = document.getElementById('summary-container');
   if (container) {
