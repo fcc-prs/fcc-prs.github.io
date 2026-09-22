@@ -1,115 +1,122 @@
 {
-  "updated_at": "2026-09-22T11:33:45Z",
+  "updated_at": "2026-09-22T11:39:36Z",
   "period_start": "2026-09-15",
   "period_end": "2026-09-22",
   "summary": [
-    "- [AIDASoft/DD4hep#1663](https://github.com/AIDASoft/DD4hep/pull/1663) — `Geant4Output2EDM4hep`/`LCIO`/`ROOT` now correctly retrieve run info from the worker context in multi-threaded mode, fixing missing run/file parameters and locking issues in the output writers; also adds a test comparing run and metadata trees. Important correctness fix for multi-threaded ddsim output.\n- [AIDASoft/DD4hep#1681](https://github.com/AIDASoft/DD4hep/pull/1681) — Removes the CSG-based DDCAD/ASSIMP CAD exporter because ROOT made `RCsg`/`CsgOps.h` private. This is a temporary functionality removal to restore builds against current ROOT; a replacement using public ROOT interfaces is being worked on in #1682.\n- [AIDASoft/DD4hep#1666](https://github.com/AIDASoft/DD4hep/pull/1666) — Adds a new `kUpstreamTrapezoid` mask type in `OtherDetectorHelpers.h` to support non-cylindrically-symmetric FCC MDI Synchrotron Radiation Mask geometries (paired with k4geo#648).\n- [key4hep/k4geo#658](https://github.com/key4hep/k4geo/pull/658) — Introduces `MuSIC_v3`: instruments each nozzle with three silicon Forward Tracker disks, reduces vertex barrel/endcap layers and fixes their IDs, and removes the yoke iron so the HCAL barrel serves as the flux return. Major update for the Muon Collider detector concept.\n- [key4hep/k4geo#662](https://github.com/key4hep/k4geo/pull/662) — Maps geometry volumes to their nearest predefined ROOT color, improving visualization consistency (part of the ongoing effort in k4geo#616 and root2gltf#15).\n- [key4hep/EDM4hep#524](https://github.com/key4hep/EDM4hep/pull/524) — Hides the deprecated `Track::getTrackState(int32_t)` overload from Cling/cppyy, working around a Python binding issue where cppyy selected the wrong overload (fixes #523).\n- [key4hep/k4FWCore#431](https://github.com/key4hep/k4FWCore/pull/431) — Adds `--evt-max` as a `k4run` alias for the Gaudi event limit, making it explicit that it corresponds to `ApplicationMgr.EvtMax`. User-visible CLI improvement.\n- [key4hep/k4FWCore#427](https://github.com/key4hep/k4FWCore/pull/427) — Refactors test components to the functional algorithm API: replaces legacy ROOT-file and Marlin-wrapper producers with functional equivalents, consolidates CellID metadata validation, and centralizes expected output-collection definitions.\n- [key4hep/k4ActsTracking#98](https://github.com/key4hep/k4ActsTracking/pull/98) — Adapts k4ActsTracking to the updated ACTS propagator and grid-bin-finder APIs (acts-project/acts#6004); note that this breaks builds against older tagged ACTS releases, prompting discussion about switching Key4hep nightlies to tagged ACTS.\n- [key4hep/k4ActsTracking#104](https://github.com/key4hep/k4ActsTracking/pull/104) — Handles the new `TrackingGeometryMaterial` struct from ACTS while retaining support for released ACTS versions that use a pair-based interface.\n- [key4hep/k4ActsTracking#97](https://github.com/key4hep/k4ActsTracking/pull/97) — Makes `--compactFile` a required argument in `CLD_CKFTracking.py`, `runGNNTrackFinding.py`, and `test_visualize_acts_geo.py`, replacing a cryptic Gaudi `TypeError` with a clear argparse error.\n- [key4hep/k4GaudiPandora#54](https://github.com/key4hep/k4GaudiPandora/pull/54) — Fixes PFO comparison to be compatible with the current EDM4hep (adapts to EDM4hep#520).\n- [HEP-FCC/root2gltf#15](https://github.com/HEP-FCC/root2gltf/pull/15) — Shrinks children volumes overlapping with parents, reduces default `numFaces` to 1000, raises transparency to 100%, and cleans up the conversion pipeline, producing clearer detector visualizations (with sample renderings for ALLEGRO, CLD and IDEA).\n- [HEP-FCC/FCC-config#386](https://github.com/HEP-FCC/FCC-config/pull/386) — Extends the tracking-validation CLI option to IDEA full-sim digitization/reconstruction and exposes it via IDEA and ALLEGRO ctest wrappers (`--addTruthTracks`, `--runTrkValidation`).\n- [HEP-FCC/FCCeePhysicsStudies#61](https://github.com/HEP-FCC/FCCeePhysicsStudies/pull/61) — Adds updated FSR lattice beam parameters (still GHC-based, since LCC values above the Z pole are not yet available)."
+    "- **[AIDASoft/DD4hep](https://github.com/AIDASoft/DD4hep)** — [#1663](https://github.com/AIDASoft/DD4hep/pull/1663) fixes a longstanding multi-threading correctness issue in `Geant4OutputAction`: run and file parameters ingested during simulation now correctly land in the output for both EDM4hep and LCIO writers, addressing [#1660](https://github.com/AIDASoft/DD4hep/issues/1660) where previously one run was written per thread. [#1666](https://github.com/AIDASoft/DD4hep/pull/1666) adds a new `kUpstreamTrapezoid` mask type in `Mask_o1_v01_geo.cpp` to handle non-cylindrically symmetric FCC MDI synchrotron radiation masks (paired with k4geo [#648](https://github.com/key4hep/k4geo/pull/648)). [#1681](https://github.com/AIDASoft/DD4hep/pull/1681) removes the CSG-based ASSIMP CAD exporter because ROOT made `RCsg`/`CsgOps.h` private — this is a functionality regression that will be restored via a follow-up (#1682) using only public ROOT APIs.",
+    "- **[key4hep/k4geo](https://github.com/key4hep/k4geo)** — [#658](https://github.com/key4hep/k4geo/pull/658) introduces `MuSIC_v3`, a substantially updated Muon Collider detector geometry: each nozzle is now instrumented with three silicon disks forming a Forward Tracker, vertex barrel/endcap layers have been reduced (with corrected layer IDs), and the yoke iron is removed in favour of the HCAL barrel acting as the magnetic flux return; v3 was cleaned up to reuse unchanged v2 subsystems rather than duplicate files. [#662](https://github.com/key4hep/k4geo/pull/662) maps geometry volumes to their nearest predefined ROOT colour, improving visual consistency of geometry displays.",
+    "- **[key4hep/EDM4hep](https://github.com/key4hep/EDM4hep)** — [#524](https://github.com/key4hep/EDM4hep/pull/524) hides the deprecated `Track::getTrackState(int32_t)` overload from Cling/cppyy, which was silently selecting the wrong overload in Python bindings (fixes [#523](https://github.com/key4hep/EDM4hep/issues/523)). A workaround until the deprecated method is removed entirely.",
+    "- **[key4hep/k4FWCore](https://github.com/key4hep/k4FWCore)** — [#431](https://github.com/key4hep/k4FWCore/pull/431) adds a `--evt-max` alias to `k4run` matching Gaudi's `ApplicationMgr.EvtMax`, making the event-limit option more discoverable (note: the CLI value still overrides steering-file settings). [#427](https://github.com/key4hep/k4FWCore/pull/427) modernises test components to use functional algorithms, replacing legacy ROOT-file and Marlin-wrapper producers and consolidating CellID metadata validation.",
+    "- **[key4hep/k4ActsTracking](https://github.com/key4hep/k4ActsTracking)** — [#98](https://github.com/key4hep/k4ActsTracking/pull/98), [#102](https://github.com/key4hep/k4ActsTracking/pull/102) and [#104](https://github.com/key4hep/k4ActsTracking/pull/104) adapt to several breaking ACTS API changes (propagator and grid-bin finder rework in acts-project/acts#6004, deprecated material-binning APIs replaced with `AxisSpec`, and support for the new `TrackingGeometryMaterial` struct from acts-project/acts#6123). As discussed by maintainers, this may temporarily break builds against older tagged ACTS versions in downstream release-based workflows. [#97](https://github.com/key4hep/k4ActsTracking/pull/97) also makes `--compactFile` required in the CKF, GNN and geometry-visualisation option scripts, replacing a cryptic Gaudi `TypeError` with a clean argparse error.",
+    "- **[key4hep/k4GaudiPandora](https://github.com/key4hep/k4GaudiPandora)** — [#54](https://github.com/key4hep/k4GaudiPandora/pull/54) fixes PFO comparison to be compatible with the current EDM4hep interface after [EDM4hep#520](https://github.com/key4hep/EDM4hep/pull/520).",
+    "- **[HEP-FCC/FCC-config](https://github.com/HEP-FCC/FCC-config)** — [#386](https://github.com/HEP-FCC/FCC-config/pull/386) extends the tracking-validation option (`--addTruthTracks`, `--runTrkValidation`) to the IDEA full-simulation digitisation/reconstruction steering and exposes the switch through the IDEA and ALLEGRO ctest wrappers, building on the earlier ALLEGRO work in #379.",
+    "- **[HEP-FCC/root2gltf](https://github.com/HEP-FCC/root2gltf)** — [#15](https://github.com/HEP-FCC/root2gltf/pull/15) shrinks child volumes overlapping their parents so nested detector volumes render as distinct in the glTF output, reduces `numFaces` default to 1000, bumps default transparency to 100%, and cleans up conversion logic and configuration constants — noticeable improvements for FCC geometry visualisation of ALLEGRO, CLD and IDEA models."
   ],
   "omitted": [
     {
       "pr": "key4hep/k4geo#651",
       "url": "https://github.com/key4hep/k4geo/pull/651",
-      "reason": "CODEOWNERS reshuffle, no code impact."
+      "reason": "CODEOWNERS bookkeeping only."
     },
     {
       "pr": "key4hep/k4FWCore#430",
       "url": "https://github.com/key4hep/k4FWCore/pull/430",
-      "reason": "Cosmetic fix for clangd NRVO warnings, no behavior change."
+      "reason": "clangd NRVO warning cleanup, no user-visible effect."
     },
     {
       "pr": "key4hep/k4FWCore#428",
       "url": "https://github.com/key4hep/k4FWCore/pull/428",
-      "reason": "Pre-commit fixup for #427."
+      "reason": "pre-commit fixup for #427."
     },
     {
-      "pr": "[key4hep/key4hep-images#35](https://github.com/key4hep/key4hep-images/pull/35) and [#34](https://github.com/key4hep/key4hep-images/pull/34) — Build-image tweaks adding zstd, no user-visible effect.",
+      "pr": "[key4hep/key4hep-images#34](https://github.com/key4hep/key4hep-images/pull/34), [#35](https://github.com/key4hep/key4hep-images/pull/35) — build-image tweaks (zstd) with no user-facing behaviour change.",
       "url": "",
       "reason": ""
     },
     {
       "pr": "AIDASoft/DD4hep#1680",
       "url": "https://github.com/AIDASoft/DD4hep/pull/1680",
-      "reason": "Mechanical migration to non-deprecated `ROOT/RVersion.hxx` header."
+      "reason": "mechanical migration to non-deprecated `ROOT/RVersion.hxx` header."
     },
     {
-      "pr": "AIDASoft/DD4hep#1676",
-      "url": "https://github.com/AIDASoft/DD4hep/pull/1676",
-      "reason": "Dependabot bump of a GitHub Action."
+      "pr": "[key4hep/k4Bench#193](https://github.com/key4hep/k4Bench/pull/193), [#194](https://github.com/key4hep/k4Bench/pull/194), [#195](https://github.com/key4hep/k4Bench/pull/195), [#196](https://github.com/key4hep/k4Bench/pull/196) — CI/AI-review tooling, no physics or user-code impact.",
+      "url": "",
+      "reason": ""
     },
     {
-      "pr": "[key4hep/k4Bench#193](https://github.com/key4hep/k4Bench/pull/193), [#194](https://github.com/key4hep/k4Bench/pull/194), [#195](https://github.com/key4hep/k4Bench/pull/195), [#196](https://github.com/key4hep/k4Bench/pull/196) — CI/AI-review workflow setup, not user-facing.",
+      "pr": "[key4hep/k4Bench#187](https://github.com/key4hep/k4Bench/pull/187), [#188](https://github.com/key4hep/k4Bench/pull/188) — internal benchmarking/regression tooling refinements.",
+      "url": "",
+      "reason": ""
+    },
+    {
+      "pr": "[key4hep/k4Bench#189](https://github.com/key4hep/k4Bench/pull/189), [#190](https://github.com/key4hep/k4Bench/pull/190), [#191](https://github.com/key4hep/k4Bench/pull/191) — dependabot bumps.",
       "url": "",
       "reason": ""
     },
     {
       "pr": "key4hep/k4Bench#192",
       "url": "https://github.com/key4hep/k4Bench/pull/192",
-      "reason": "CI-only workaround for Zenodo link check."
-    },
-    {
-      "pr": "[key4hep/k4Bench#189](https://github.com/key4hep/k4Bench/pull/189), [#190](https://github.com/key4hep/k4Bench/pull/190), [#191](https://github.com/key4hep/k4Bench/pull/191) — Dependabot dependency bumps.",
-      "url": "",
-      "reason": ""
-    },
-    {
-      "pr": "[key4hep/k4Bench#188](https://github.com/key4hep/k4Bench/pull/188), [#187](https://github.com/key4hep/k4Bench/pull/187) — Internal benchmarking/regression-tooling refinements, no impact on other Key4hep users.",
-      "url": "",
-      "reason": ""
+      "reason": "CI link-check workaround."
     },
     {
       "pr": "key4hep/key4hep-spack#922",
       "url": "https://github.com/key4hep/key4hep-spack/pull/922",
-      "reason": "Adds a fish-shell setup script, minor user convenience."
+      "reason": "fish shell setup script, minor UX addition."
     },
     {
-      "pr": "[key4hep/key4hep-spack#923](https://github.com/key4hep/key4hep-spack/pull/923), [#924](https://github.com/key4hep/key4hep-spack/pull/924), [#925](https://github.com/key4hep/key4hep-spack/pull/925) — Dependabot GitHub Action bumps.",
-      "url": "",
-      "reason": ""
-    },
-    {
-      "pr": "key4hep/k4ActsTracking#102",
-      "url": "https://github.com/key4hep/k4ActsTracking/pull/102",
-      "reason": "Mechanical migration from deprecated ACTS material-binning API to `AxisSpec`."
-    },
-    {
-      "pr": "[key4hep/k4ActsTracking#101](https://github.com/key4hep/k4ActsTracking/pull/101), [#99](https://github.com/key4hep/k4ActsTracking/pull/99), [#96](https://github.com/key4hep/k4ActsTracking/pull/96), [#87](https://github.com/key4hep/k4ActsTracking/pull/87) — Formatting, pre-commit, clang-format alignment and CI cleanup.",
-      "url": "",
-      "reason": ""
-    },
-    {
-      "pr": "[key4hep/key4hep-dev-utils#23](https://github.com/key4hep/key4hep-dev-utils/pull/23), [#24](https://github.com/key4hep/key4hep-dev-utils/pull/24) — Small CMake error-message fix and CI validation.",
-      "url": "",
-      "reason": ""
-    },
-    {
-      "pr": "HEP-FCC/k4RecCalorimeter#284",
-      "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/284",
-      "reason": "Pure build-system change moving Boost detection under `BUILD_TESTING`."
-    },
-    {
-      "pr": "[HEP-FCC/fcc-tutorials#201](https://github.com/HEP-FCC/fcc-tutorials/pull/201), [#198](https://github.com/HEP-FCC/fcc-tutorials/pull/198) — Documentation updates only.",
+      "pr": "[key4hep/key4hep-spack#923](https://github.com/key4hep/key4hep-spack/pull/923), [#924](https://github.com/key4hep/key4hep-spack/pull/924), [#925](https://github.com/key4hep/key4hep-spack/pull/925) — dependabot GitHub Actions bumps.",
       "url": "",
       "reason": ""
     },
     {
       "pr": "key4hep/key4hep-doc#161",
       "url": "https://github.com/key4hep/key4hep-doc/pull/161",
-      "reason": "Dependabot bump."
+      "reason": "dependabot bump."
     },
     {
-      "pr": "[HEP-FCC/fcc-drs#82](https://github.com/HEP-FCC/fcc-drs/pull/82), [#83](https://github.com/HEP-FCC/fcc-drs/pull/83), [#84](https://github.com/HEP-FCC/fcc-drs/pull/84), [#85](https://github.com/HEP-FCC/fcc-drs/pull/85), [#86](https://github.com/HEP-FCC/fcc-drs/pull/86), [#87](https://github.com/HEP-FCC/fcc-drs/pull/87) — Renovate dependency updates for the FCC data-request service.",
+      "pr": "[key4hep/key4hep-dev-utils#23](https://github.com/key4hep/key4hep-dev-utils/pull/23), [#24](https://github.com/key4hep/key4hep-dev-utils/pull/24) — CMake error-message quoting and CI validation, no user impact.",
+      "url": "",
+      "reason": ""
+    },
+    {
+      "pr": "[key4hep/k4ActsTracking#87](https://github.com/key4hep/k4ActsTracking/pull/87), [#96](https://github.com/key4hep/k4ActsTracking/pull/96), [#99](https://github.com/key4hep/k4ActsTracking/pull/99), [#101](https://github.com/key4hep/k4ActsTracking/pull/101) — CI, clang-format, ruff pre-commit and formatting-only changes.",
+      "url": "",
+      "reason": ""
+    },
+    {
+      "pr": "HEP-FCC/k4RecCalorimeter#284",
+      "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/284",
+      "reason": "CMake refactor moving Boost into `BUILD_TESTING` block, no runtime effect."
+    },
+    {
+      "pr": "[HEP-FCC/fcc-tutorials#198](https://github.com/HEP-FCC/fcc-tutorials/pull/198), [#201](https://github.com/HEP-FCC/fcc-tutorials/pull/201) — documentation/tutorial updates.",
+      "url": "",
+      "reason": ""
+    },
+    {
+      "pr": "HEP-FCC/FCCeePhysicsStudies#61",
+      "url": "https://github.com/HEP-FCC/FCCeePhysicsStudies/pull/61",
+      "reason": "updated FSR beam parameters, internal configuration."
+    },
+    {
+      "pr": "[HEP-FCC/fcc-drs#82](https://github.com/HEP-FCC/fcc-drs/pull/82), [#83](https://github.com/HEP-FCC/fcc-drs/pull/83), [#84](https://github.com/HEP-FCC/fcc-drs/pull/84), [#85](https://github.com/HEP-FCC/fcc-drs/pull/85), [#86](https://github.com/HEP-FCC/fcc-drs/pull/86), [#87](https://github.com/HEP-FCC/fcc-drs/pull/87) — renovate dependency bumps.",
       "url": "",
       "reason": ""
     },
     {
       "pr": "HEP-FCC/fcc-drs#88",
       "url": "https://github.com/HEP-FCC/fcc-drs/pull/88",
-      "reason": "Internal DRS feature (DIRAC production ID tracking), not part of the physics/software stack."
+      "reason": "feature specific to the DRS request-tracking web app, not part of the HEP software stack."
+    },
+    {
+      "pr": "AIDASoft/DD4hep#1676",
+      "url": "https://github.com/AIDASoft/DD4hep/pull/1676",
+      "reason": "dependabot GitHub Action bump."
     }
   ],
   "usage": {
-    "input_tokens": 29160,
-    "output_tokens": 3651
+    "input_tokens": 29246,
+    "output_tokens": 3721
   },
-  "cost_usd": 0.237075
+  "cost_usd": 0.239255
 }
