@@ -67,7 +67,7 @@ def fetch_repo_merged_prs(owner, name):
     query = (
         'query {'
         f'  repository(owner: "{owner}", name: "{name}") {{'
-        '    pullRequests(first: 50, states: MERGED) {'
+        '    pullRequests(first: 50, states: MERGED, orderBy: {field: UPDATED_AT, direction: DESC}) {'
         '      nodes {'
         '        number title'
         '        author { login }'
