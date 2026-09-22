@@ -117,9 +117,13 @@ def compute_cost(usage):
     )
 
 
-data_path = sys.argv[1] if len(sys.argv) > 1 else "assets/json/merged_data.json"
-guidelines_path = sys.argv[2] if len(sys.argv) > 2 else "summary_guidelines.md"
-out_path = sys.argv[3] if len(sys.argv) > 3 else "assets/json/summary.json"
+args = [a for a in sys.argv[1:] if not a.startswith("--")]
+flags = {a for a in sys.argv[1:] if a.startswith("--")}
+
+data_path = args[0] if len(args) > 0 else "assets/json/merged_data.json"
+guidelines_path = args[1] if len(args) > 1 else "summary_guidelines.md"
+out_path = args[2] if len(args) > 2 else "assets/json/summary.json"
+scheduled = "--scheduled" in flags
 
 data = load_merged_data(data_path)
 guidelines = load_guidelines(guidelines_path)
@@ -180,3 +184,21 @@ with open(out_path, "w", encoding="utf-8") as f:
     json.dump(output, f, indent=2, ensure_ascii=False)
 
 print(f"Wrote {out_path}", flush=True)
+
+if scheduled:
+    snapshot = {k: v for k, v in output.items() if k != "omitted"}
+    snapshots_dir = os.path.join(os.path.dirname(os.path.abspath(out_path)), "summaries")
+    os.makedirs(snapshots_dir, exist_ok=True)
+
+    snapshot_path = os.path.join(snapshots_dir, f"{period_end}.json")
+    with open(snapshot_path, "w", encoding="utf-8") as f:
+        json.dump(snapshot, f, indent=2, ensure_ascii=False)
+    print(f"Wrote snapshot {snapshot_path}", flush=True)
+
+    index_path = os.path.join(snapshots_dir, "index.json")
+    index = json.load(open(index_path)) if os.path.exists(index_path) else []
+    if period_end not in index:
+        index = [period_end] + index
+        with open(index_path, "w", encoding="utf-8") as f:
+            json.dump(index, f, indent=2)
+        print(f"Updated index: {index}", flush=True)

@@ -15,14 +15,18 @@
     <p><a href="/assets/json/summary.json">JSON</a></p>
   </div>
   <div class="container">
+    <div id="nav"></div>
     <div id="summary-container"></div>
     <div id="omitted-section" style="margin-top:1.5em"></div>
   </div>
   <style>
+    #nav { display: flex; align-items: center; gap: 0.8em; margin-bottom: 1.2em; }
+    #nav a { text-decoration: none; }
+    #nav a.nav-disabled { color: #aaa; pointer-events: none; }
     #omitted-section details summary { cursor: pointer; font-weight: bold; }
     #omitted-section ul { margin-top: 0.4em; }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script type="module" src="/assets/js/summary_script.js"></script>
+  <script src="/assets/js/summary_script.js"></script>
 </body>
 </html>

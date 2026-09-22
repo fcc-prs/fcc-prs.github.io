@@ -20,7 +20,10 @@ jobs:
       - name: Install Python dependencies
         run: pip install anthropic
       - name: Generate summary
-        run: python3 assets/scripts/generate_summary.py
+        run: |
+          EXTRA=""
+          if [ "${{ github.event_name }}" = "schedule" ]; then EXTRA="--scheduled"; fi
+          python3 assets/scripts/generate_summary.py $EXTRA
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
