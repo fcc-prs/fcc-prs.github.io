@@ -123,7 +123,7 @@ output = {
     "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     "period_start": period_start,
     "period_end": period_end,
-    "summary": summary_text.split("\n"),
+    "summary": [p for p in summary_text.split("\n\n") if p.strip()],
     "usage": {
         "input_tokens": usage.input_tokens,
         "output_tokens": usage.output_tokens,

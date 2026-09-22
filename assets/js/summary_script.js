@@ -13,7 +13,7 @@ if (periodEl && jsonData.period_start && jsonData.period_end) {
 const container = document.getElementById('summary-container');
 if (container) {
   const summaryText = Array.isArray(jsonData.summary)
-    ? jsonData.summary.join('\n')
+    ? jsonData.summary.join('\n\n')
     : jsonData.summary;
   if (summaryText) {
     container.innerHTML = marked.parse(summaryText);
