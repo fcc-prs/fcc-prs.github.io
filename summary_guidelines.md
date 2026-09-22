@@ -28,4 +28,5 @@ Prioritise in this order:
 - Each bullet: two to four sentences covering the most important changes in that
   repo and any downstream impact.
 - If a repository has only one notable PR, a single sentence is fine.
-- Aim for 3–8 repo bullets in total.
+- Include every repository that has at least one PR meeting the Include criteria above;
+  do not cap the number of bullets.
