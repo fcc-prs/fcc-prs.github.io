@@ -9,8 +9,12 @@ import yaml
 def gh_graphql(query):
     result = subprocess.run(
         ['gh', 'api', 'graphql', '-f', f'query={query}'],
-        capture_output=True, text=True, check=True
+        capture_output=True, text=True
     )
+    if result.returncode != 0:
+        print(f'gh stderr: {result.stderr}', flush=True)
+        print(f'gh stdout: {result.stdout}', flush=True)
+        result.check_returncode()
     return json.loads(result.stdout)
 
 
@@ -26,7 +30,7 @@ def fetch_org_repos(org):
             f'    repositories(first: 100{after}, isArchived: false) {{'
             '      nodes {'
             '        name'
-            '        pullRequests(first: 50, states: MERGED, orderBy: {field: UPDATED_AT, direction: DESC}) {'
+            '        pullRequests(first: 50, states: MERGED) {'
             '          nodes {'
             '            number title'
             '            author { login }'
@@ -58,7 +62,7 @@ def fetch_repo_merged_prs(owner, name):
     query = (
         'query {'
         f'  repository(owner: "{owner}", name: "{name}") {{'
-        '    pullRequests(first: 50, states: MERGED, orderBy: {field: UPDATED_AT, direction: DESC}) {'
+        '    pullRequests(first: 50, states: MERGED) {'
         '      nodes {'
         '        number title'
         '        author { login }'
