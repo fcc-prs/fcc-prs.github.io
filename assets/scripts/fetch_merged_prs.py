@@ -1,25 +1,33 @@
 import json
 import subprocess
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 
 import yaml
 
+MAX_RETRIES = 5
+
 
 def gh_graphql(query):
-    result = subprocess.run(
-        ['gh', 'api', 'graphql', '-f', f'query={query}'],
-        capture_output=True, text=True
-    )
-    if result.returncode != 0:
-        print(f'gh stderr: {result.stderr}', flush=True)
-        print(f'gh stdout: {result.stdout}', flush=True)
-        result.check_returncode()
-    return json.loads(result.stdout)
+    for attempt in range(MAX_RETRIES):
+        result = subprocess.run(
+            ['gh', 'api', 'graphql', '-f', f'query={query}'],
+            capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            return json.loads(result.stdout)
+        print(f'Attempt {attempt + 1} failed — stderr: {result.stderr.strip()}', flush=True)
+        if attempt < MAX_RETRIES - 1:
+            wait = 2 ** attempt
+            print(f'Retrying in {wait}s...', flush=True)
+            time.sleep(wait)
+    result.check_returncode()
 
 
-def fetch_org_repos(org):
-    all_repos = []
+def fetch_org_repo_names(org):
+    """Return a list of repo names for the org (no PR data)."""
+    names = []
     cursor = None
 
     while True:
@@ -28,34 +36,31 @@ def fetch_org_repos(org):
             'query {'
             f'  organization(login: "{org}") {{'
             f'    repositories(first: 100{after}, isArchived: false) {{'
-            '      nodes {'
-            '        name'
-            '        pullRequests(first: 50, states: MERGED) {'
-            '          nodes {'
-            '            number title'
-            '            author { login }'
-            '            mergedAt'
-            '            mergedBy { login }'
-            '            labels(first: 10) { nodes { name } }'
-            '            url'
-            '          }'
-            '        }'
-            '      }'
+            '      nodes { name }'
             '      pageInfo { hasNextPage endCursor }'
             '    }'
             '  }'
             '}'
         )
-
         data = gh_graphql(query)
         page = data['data']['organization']['repositories']
-        all_repos.extend(page['nodes'])
+        names.extend(n['name'] for n in page['nodes'])
 
         if not page['pageInfo']['hasNextPage']:
             break
         cursor = page['pageInfo']['endCursor']
 
-    return all_repos
+    return names
+
+
+def fetch_org_repos(org):
+    """Fetch merged PRs for each repo in the org, one repo at a time."""
+    repo_names = fetch_org_repo_names(org)
+    repos = []
+    for name in repo_names:
+        prs = fetch_repo_merged_prs(org, name)
+        repos.append({'name': name, 'pullRequests': {'nodes': prs}})
+    return repos
 
 
 def fetch_repo_merged_prs(owner, name):

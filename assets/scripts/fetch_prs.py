@@ -1,15 +1,26 @@
 import json
 import subprocess
 import sys
+import time
 import yaml
+
+MAX_RETRIES = 5
 
 
 def gh_graphql(query):
-    result = subprocess.run(
-        ['gh', 'api', 'graphql', '-f', f'query={query}'],
-        capture_output=True, text=True, check=True
-    )
-    return json.loads(result.stdout)
+    for attempt in range(MAX_RETRIES):
+        result = subprocess.run(
+            ['gh', 'api', 'graphql', '-f', f'query={query}'],
+            capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            return json.loads(result.stdout)
+        print(f'Attempt {attempt + 1} failed — stderr: {result.stderr.strip()}', flush=True)
+        if attempt < MAX_RETRIES - 1:
+            wait = 2 ** attempt
+            print(f'Retrying in {wait}s...', flush=True)
+            time.sleep(wait)
+    result.check_returncode()
 
 
 def fetch_org_repos(org):
