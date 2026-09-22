@@ -1,4 +1,60 @@
 {
-    "updated_at": null,
-    "data": []
+    "updated_at": "2026-09-22T09:45:23Z",
+    "data": [
+        {
+            "org": "key4hep",
+            "repo": "key4hep-images",
+            "num": 34,
+            "title": "Add zstd to build images",
+            "url": "https://github.com/key4hep/key4hep-images/pull/34",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-21",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-images",
+            "num": 35,
+            "title": "Add Zstandard development packages to build images",
+            "url": "https://github.com/key4hep/key4hep-images/pull/35",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-21",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GaudiPandora",
+            "num": 54,
+            "title": "Fix PFO comparison for current EDM4hep",
+            "url": "https://github.com/key4hep/k4GaudiPandora/pull/54",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-18",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-dev-utils",
+            "num": 23,
+            "title": "Fix: cmake cxx standard error message missing quotes",
+            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/23",
+            "author": "tmadlener",
+            "mergedAt": "2026-09-16",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-dev-utils",
+            "num": 24,
+            "title": "Validate Key4hep CMake configuration in CI",
+            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/24",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-16",
+            "mergedBy": "jmcarcell",
+            "labels": []
+        }
+    ]
 }
