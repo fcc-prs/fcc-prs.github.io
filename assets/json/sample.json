@@ -13,10 +13,10 @@
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 666,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/666'>[ALLEGRO] Fix HCAL Endcap pseudo-layer position calculation for PandoraPFA</a>",
-            "author": "Archil-AD",
-            "createdAt": "2026-09-18",
+            "num": 625,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-03",
             "updatedAt": "2026-09-22",
             "mergeOk": "yes",
             "labels": "",
@@ -29,18 +29,7 @@
             "author": "andread3vita",
             "createdAt": "2026-09-17",
             "updatedAt": "2026-09-22",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 625,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-03",
-            "updatedAt": "2026-09-22",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -51,7 +40,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +51,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-09-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +62,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +73,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +84,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -106,7 +95,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -123,23 +112,12 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
-            "num": 524,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/524'>Hide deprecated Track::getTrackState(int32_t) overload from Cling/cppyy</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-22",
-            "updatedAt": "2026-09-22",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
             "num": 521,
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/521'>build: fix hardcoded assumption that ROOT dictionaries are built</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-13",
             "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -150,7 +128,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -161,7 +139,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -172,7 +150,7 @@
             "author": "BrieucF",
             "createdAt": "2026-03-30",
             "updatedAt": "2026-05-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -358,7 +336,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/162'>DelphesEDM4HepConverter: keep energy/mass/momentum consistency; add pdgid for tracks and leptons</a>",
             "author": "davidlange6",
             "createdAt": "2026-08-28",
-            "updatedAt": "2026-09-20",
+            "updatedAt": "2026-09-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -453,22 +431,11 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 103,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/103'>add edge sorting/flipping to reproduce acorn workflow</a>",
-            "author": "madbaron",
-            "createdAt": "2026-09-17",
-            "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
             "num": 95,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/95'>Use upstream ACTS converters</a>",
             "author": "madbaron",
             "createdAt": "2026-08-30",
-            "updatedAt": "2026-09-20",
+            "updatedAt": "2026-09-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -783,6 +750,17 @@
         },
         {
             "repo": "key4hep/<br>key4hep-tutorials",
+            "num": 33,
+            "title": "<a href='https://github.com/key4hep/key4hep-tutorials/pull/33'>Add Generate Gaudi Functionals tutorial</a>",
+            "author": "ianna",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-tutorials",
             "num": 30,
             "title": "<a href='https://github.com/key4hep/key4hep-tutorials/pull/30'>[WIP] Add initial version of the cheat sheet.</a>",
             "author": "dudarboh",
@@ -833,6 +811,17 @@
             "createdAt": "2025-05-28",
             "updatedAt": "2025-05-30",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 59,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/59'>Create k4GaudiPandora namespace to avoid symbol name clashes</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-22",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1531,6 +1520,17 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
+            "num": 393,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/393'>Add IDEA Delphes/EDM4hep cards and update ZH/ZZ/WW generator cards</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
             "num": 391,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/391'>Set shared flag to false if single thread</a>",
             "author": "andread3vita",
@@ -1627,17 +1627,6 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>root2gltf",
-            "num": 15,
-            "title": "<a href='https://github.com/HEP-FCC/root2gltf/pull/15'>Shrink overlapping children volumes</a>",
-            "author": "apausa",
-            "createdAt": "2026-07-30",
-            "updatedAt": "2026-09-22",
-            "mergeOk": "yes",
-            "labels": "bug",
-            "assignees": "apausa"
         },
         {
             "repo": "hep-fcc/<br>root2gltf",
@@ -1755,7 +1744,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1678'>DDSim: outputconfig: fix example for multi-threaded running for user \u2026</a>",
             "author": "andresailer",
             "createdAt": "2026-09-17",
-            "updatedAt": "2026-09-21",
+            "updatedAt": "2026-09-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
