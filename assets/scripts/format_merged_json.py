@@ -53,6 +53,7 @@ def process_prs(prs, org, repo):
                 'deletions': pr.get('deletions', 0),
                 'files': pr.get('changedFiles', 0),
             },
+            'files': [n['path'] for n in pr.get('files', {}).get('nodes', [])],
             'comments': comments,
             'comments_total': comments_data.get('totalCount', len(comments)),
             'reviews': reviews,

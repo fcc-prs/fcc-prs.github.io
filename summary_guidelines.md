@@ -19,6 +19,13 @@ Prioritise in this order:
   interface, with no new functionality or user-visible change. Indicator: diff is
   purely renaming or replacing deprecated symbols, no new parameters or behaviours.
 
+## Repository-specific rules
+
+- **key4hep/k4geo**: only include PRs that touch the FCC detector folders or the
+  detector driver files used by FCC detectors. Ignore PRs that only affect other
+  experiments' geometries (e.g. ILD, CLIC, MuColl) unless the change is to a
+  shared driver also used by FCC.
+
 ## Style
 
 - Group all notable PRs from the same repository into a single bullet.

@@ -33,6 +33,8 @@ def format_pr(pr):
     ]
     if pr.get('labels'):
         lines.append(f"Labels: {', '.join(pr['labels'])}")
+    if pr.get('files'):
+        lines.append(f"Changed files: {', '.join(pr['files'])}")
     if pr.get('body'):
         lines.append(f"Description: {pr['body']}")
     for r in pr.get('reviews', []):
@@ -56,8 +58,8 @@ from {period_start} to {period_end}, each with its description and discussion.
 
 {guidelines}
 
-Using the descriptions and comments above to judge importance and downstream impact, \
-produce your response in exactly two sections.
+Using the descriptions, changed file paths, and comments above to judge importance \
+and downstream impact, produce your response in exactly two sections.
 
 **Section 1 — `## Summary`**
 A bulleted list following the Include/Style rules above.

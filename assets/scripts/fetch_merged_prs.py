@@ -76,6 +76,7 @@ def fetch_repo_merged_prs(owner, name):
         '        mergedBy { login }'
         '        labels(first: 10) { nodes { name } }'
         '        url'
+        '        files(first: 30) { nodes { path } }'
         '        comments(last: 100) { totalCount nodes { author { login } body } }'
         '        reviews(first: 20) { totalCount nodes { state author { login } body } }'
         '      }'
