@@ -133,14 +133,16 @@ async function navigate(date, index) {
   const currentDate = (hash && index.includes(hash)) ? hash : (index[0] || null);
 
   let data;
-  if (currentDate) {
+  const isLatest = currentDate === index[0];
+  if (isLatest || !currentDate) {
+    // Always use summary.json for the latest week so manual re-runs are reflected immediately
+    data = await loadFallback();
+  } else {
     try {
       data = await loadSnapshot(currentDate);
     } catch {
       data = await loadFallback();
     }
-  } else {
-    data = await loadFallback();
   }
 
   renderSummary(data);
