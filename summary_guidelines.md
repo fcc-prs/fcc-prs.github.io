@@ -21,10 +21,12 @@ Prioritise in this order:
 
 ## Repository-specific rules
 
-- **key4hep/k4geo**: only include PRs that touch the FCC detector folders or the
-  detector driver files used by FCC detectors. Ignore PRs that only affect other
-  experiments' geometries (e.g. ILD, CLIC, MuColl) unless the change is to a
-  shared driver also used by FCC.
+- **key4hep/k4geo**: only include PRs where at least one changed file is under an
+  FCC-related path (e.g. `FCCee/`, `FCC/`, `ALLEGRO`, `IDEA`, `CLD`) or is a
+  detector driver file (under `detector/`) that is referenced by an FCC compact
+  file. Exclude any PR whose changed files are entirely within non-FCC experiment
+  folders such as `MuColl/`, `ILD/`, `CLIC/`, `LUXE/`, `SiD/` — even if the PR
+  description mentions shared components.
 
 ## Style
 
