@@ -7,7 +7,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -18,7 +18,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-09-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +29,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +40,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -50,7 +50,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/612'>Adding FCC-SEED as option to all detectors and refactor IDEA/ALLEGRO vertex detector</a>",
             "author": "armin-ilg",
             "createdAt": "2026-07-03",
-            "updatedAt": "2026-09-21",
+            "updatedAt": "2026-09-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -72,7 +72,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-09-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -90,22 +90,11 @@
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 662,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/662'>Map volumes to their closest predefined ROOT color</a>",
-            "author": "apausa",
-            "createdAt": "2026-09-11",
-            "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 665,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/665'>Set shared flag to false if single thread</a>",
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/665'>[IDEA] Set shared flag to false if single thread</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-17",
-            "updatedAt": "2026-09-21",
+            "updatedAt": "2026-09-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -113,10 +102,10 @@
         {
             "repo": "key4hep/<br>k4geo",
             "num": 666,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/666'>Fix ALLEGRO HCAL Endcap pseudo-layer position calculation for PandoraPFA</a>",
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/666'>[ALLEGRO] Fix HCAL Endcap pseudo-layer position calculation for PandoraPFA</a>",
             "author": "Archil-AD",
             "createdAt": "2026-09-18",
-            "updatedAt": "2026-09-21",
+            "updatedAt": "2026-09-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -210,6 +199,17 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 524,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/524'>Hide deprecated Track::getTrackState(int32_t) overload from Cling/cppyy</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>k4FWCore",
             "num": 312,
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/312'>[WIP] Add a service to allow retrieving collections to which an object belongs</a>",
@@ -248,7 +248,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/372'>Add Gaudi Functional C++ Class Generator</a>",
             "author": "ianna",
             "createdAt": "2026-01-16",
-            "updatedAt": "2026-09-21",
+            "updatedAt": "2026-09-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1046,6 +1046,17 @@
             "assignees": ""
         },
         {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 206,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/206'>Update Delphes+EvtGen sample generation to latest Key4hep stack</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "hep-fcc/<br>FCCDIRAC",
             "num": 5,
             "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/5'>Fixes for productions</a>",
@@ -1755,7 +1766,106 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1682'>AssimpWriter: Drop need for rootcsg</a>",
             "author": "andresailer",
             "createdAt": "2026-09-21",
+            "updatedAt": "2026-09-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>LCContent",
+            "num": 25,
+            "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/25'>PseudoLayer plugin for ALLEGRO (initial version)</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2025-02-14",
+            "updatedAt": "2025-06-11",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>LCContent",
+            "num": 33,
+            "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/33'>[WIP] Particle flow reconstruction algorithms for IDEA option2 detector</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-07-13",
+            "updatedAt": "2026-08-26",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>LCContent",
+            "num": 41,
+            "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/41'>Maia/theta energy</a>",
+            "author": "Jullianwatts",
+            "createdAt": "2026-08-24",
+            "updatedAt": "2026-09-20",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>LCContent",
+            "num": 43,
+            "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/43'>Add BIB hit flagging in CaloHitPrep, options to exclude from clustering steps, recovery algorithm to re-associate </a>",
+            "author": "trholmes",
+            "createdAt": "2026-09-03",
+            "updatedAt": "2026-09-03",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>LCContent",
+            "num": 45,
+            "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/45'>Add a local customization point to calorimeter hits</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-21",
             "updatedAt": "2026-09-21",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>PandoraSDK",
+            "num": 34,
+            "title": "<a href='https://github.com/PandoraPFAOrg/PandoraSDK/pull/34'>Add optical hit support</a>",
+            "author": "AndyChappell",
+            "createdAt": "2026-08-19",
+            "updatedAt": "2026-08-19",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>PandoraSDK",
+            "num": 35,
+            "title": "<a href='https://github.com/PandoraPFAOrg/PandoraSDK/pull/35'>Macro Updates</a>",
+            "author": "CrossR",
+            "createdAt": "2026-08-20",
+            "updatedAt": "2026-08-20",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>PandoraSDK",
+            "num": 37,
+            "title": "<a href='https://github.com/PandoraPFAOrg/PandoraSDK/pull/37'>PossibleBIB flag for use in muon colliders</a>",
+            "author": "trholmes",
+            "createdAt": "2026-09-03",
+            "updatedAt": "2026-09-21",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "iLCSoft/<br>DDMarlinPandora",
+            "num": 32,
+            "title": "<a href='https://github.com/iLCSoft/DDMarlinPandora/pull/32'>WIP: changes needed for ALLEGRO</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2025-03-21",
+            "updatedAt": "2025-10-13",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
