@@ -62,8 +62,9 @@ else:
 prompt = build_prompt(prs, period_start, period_end)
 
 client = anthropic.Anthropic(
-    api_key=os.environ["ANTHROPIC_API_KEY"],
+    api_key="placeholder",  # Portkey uses x-portkey-api-key, not x-api-key
     base_url=os.environ["ANTHROPIC_BASE_URL"],
+    default_headers={"x-portkey-api-key": os.environ["ANTHROPIC_API_KEY"]},
 )
 
 system = (
