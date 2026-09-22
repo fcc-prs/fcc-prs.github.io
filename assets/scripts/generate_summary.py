@@ -15,33 +15,54 @@ def load_merged_data(path):
         return json.load(f)
 
 
-def build_prompt(prs, period_start, period_end):
-    lines = []
-    for pr in prs:
-        lines.append(
-            f"- {pr['org']}/{pr['repo']} #{pr['num']}: {pr['title']} "
-            f"(author: {pr['author']}, merged by: {pr['mergedBy']})"
-            + (f" [labels: {', '.join(pr['labels'])}]" if pr.get('labels') else "")
-        )
+def format_pr(pr):
+    lines = [
+        f"### {pr['org']}/{pr['repo']}#{pr['num']}: {pr['title']}",
+        f"URL: {pr['url']}",
+        f"Author: {pr['author']} | Merged by: {pr['mergedBy']} | Date: {pr['mergedAt']}",
+        f"Diff: +{pr['diff']['additions']} -{pr['diff']['deletions']}, {pr['diff']['files']} file(s) changed"
+        f" | {pr.get('comments_total', 0)} comment(s), {pr.get('reviews_total', 0)} review(s)",
+    ]
+    if pr.get('labels'):
+        lines.append(f"Labels: {', '.join(pr['labels'])}")
+    if pr.get('body'):
+        lines.append(f"Description: {pr['body']}")
+    for r in pr.get('reviews', []):
+        if r.get('body'):
+            lines.append(f"Review ({r['state']}) by {r['author']}: {r['body']}")
+    for c in pr.get('comments', []):
+        lines.append(f"Comment by {c['author']}: {c['body']}")
+    return "\n".join(lines)
 
-    pr_list = "\n".join(lines) if lines else "(no merged PRs this period)"
+
+def build_prompt(prs, period_start, period_end):
+    pr_blocks = "\n\n".join(format_pr(pr) for pr in prs) if prs else "(no merged PRs this period)"
 
     return f"""\
-Here are the pull requests merged in the FCC/Key4hep HEP software ecosystem \
-from {period_start} to {period_end}:
+Below are pull requests merged in the FCC/Key4hep HEP software ecosystem \
+from {period_start} to {period_end}, each with its description and discussion.
 
-{pr_list}
+{pr_blocks}
 
-Produce a concise bulleted list of the most important changes. Prioritise:
-1. Breaking changes with potential downstream impact on dependent packages or user code
-2. Significant new features
-3. Important bug fixes
+---
 
-For each bullet, include the repository and PR number (e.g. key4hep/k4geo#662) and a \
-one-sentence explanation of why it matters to physicists or downstream developers.
-Omit routine CI bumps, trivial dependency/bot updates, minor documentation edits, \
-and other low-impact changes.
-Aim for 5-15 bullets total. Format as Markdown."""
+Using the descriptions and comments above to judge importance and downstream impact, \
+produce a bulleted list of the most noteworthy changes. For each bullet:
+- Format the PR reference as a Markdown link, e.g. [key4hep/k4geo#662](url)
+- Write one or two sentences: what changed, and why it matters or what impact it may have
+
+Prioritise in this order:
+1. Breaking changes or API/interface modifications with potential downstream impact
+2. Significant new physics or reconstruction features
+3. Important bug fixes that affect correctness or usability
+
+**Exclude entirely:**
+- Pure build-system, CMake, or test-infrastructure changes with no user-visible effect
+- CI/CD configuration changes
+- Trivial bot dependency bumps (dependabot, renovate)
+- Code style, linting, or minor cleanup
+
+Aim for 5-15 bullets. Format the entire response as Markdown."""
 
 
 def extract_text(response):

@@ -11,9 +11,32 @@ def get_login(node):
     return node['login'] if node else ''
 
 
+def truncate(s, n):
+    if not s:
+        return ''
+    s = s.strip()
+    return s if len(s) <= n else s[:n] + '…'
+
+
 def process_prs(prs, org, repo):
     rows = []
     for pr in prs:
+        comments_data = pr.get('comments', {})
+        comments = [
+            {'author': get_login(c.get('author')), 'body': truncate(c.get('body', ''), 300)}
+            for c in comments_data.get('nodes', [])
+            if c.get('body', '').strip()
+        ]
+        reviews_data = pr.get('reviews', {})
+        reviews = [
+            {
+                'author': get_login(r.get('author')),
+                'state': r.get('state', ''),
+                'body': truncate(r.get('body', ''), 300),
+            }
+            for r in reviews_data.get('nodes', [])
+            if r.get('body', '').strip()
+        ]
         rows.append({
             'org': org,
             'repo': repo,
@@ -24,6 +47,16 @@ def process_prs(prs, org, repo):
             'mergedAt': date_only(pr.get('mergedAt', '')),
             'mergedBy': get_login(pr.get('mergedBy')),
             'labels': [n['name'] for n in pr.get('labels', {}).get('nodes', [])],
+            'body': truncate(pr.get('body', ''), 800),
+            'diff': {
+                'additions': pr.get('additions', 0),
+                'deletions': pr.get('deletions', 0),
+                'files': pr.get('changedFiles', 0),
+            },
+            'comments': comments,
+            'comments_total': comments_data.get('totalCount', len(comments)),
+            'reviews': reviews,
+            'reviews_total': reviews_data.get('totalCount', len(reviews)),
         })
     return rows
 
