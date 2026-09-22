@@ -35,7 +35,7 @@ def fetch_org_repos(org):
             f'    repositories(first: 100{after}, isArchived: false) {{'
             '      nodes {'
             '        name'
-            '        pullRequests(first: 30, states: OPEN) {'
+            '        pullRequests(first: 100, states: OPEN, orderBy: {field: UPDATED_AT, direction: DESC}) {'
             '          nodes {'
             '            number title'
             '            author { login }'
