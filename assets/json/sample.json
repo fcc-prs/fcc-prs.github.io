@@ -293,7 +293,7 @@
             "author": "Panzerkampfwagen-del",
             "createdAt": "2026-08-27",
             "updatedAt": "2026-09-02",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -304,7 +304,7 @@
             "author": "Panzerkampfwagen-del",
             "createdAt": "2026-08-26",
             "updatedAt": "2026-09-02",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -315,7 +315,7 @@
             "author": "dudarboh",
             "createdAt": "2026-01-13",
             "updatedAt": "2026-01-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -541,6 +541,17 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 102,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-09-15",
+            "updatedAt": "2026-09-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 101,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/101'>TrackFitter: Fix units in the helix-to-cartesian conversion + Fixed broken associations between hits and tracks introduced during the filtering stage</a>",
             "author": "andread3vita",
@@ -571,17 +582,6 @@
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 102,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-17",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "SanghyunKo"
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
