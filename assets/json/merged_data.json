@@ -1,6 +1,344 @@
 {
-    "updated_at": "2026-09-22T12:49:31Z",
+    "updated_at": "2026-09-23T10:37:23Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 612,
+            "title": "Adding FCC-SEED as option to all detectors and refactor IDEA/ALLEGRO vertex detector",
+            "url": "https://github.com/key4hep/k4geo/pull/612",
+            "author": "armin-ilg",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "To ease the review process, please consider the following before opening a pull request:\r\n- [x] the code is sufficiently well documented (e.g. inline comments)\r\n- [x] the relevant README(s) were updated. See e.g. https://github.com/key4hep/k4geo/blob/main/detector/calorimeter/README.md or https://github.com/key4hep/k4geo/blob/main/FCCee/IDEA/compact/README.md\r\n- [x] the code is covered by tests. See https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\r\n- [x] the PR source branch has been rebased (`--ff-only`) to `k4geo/main`\r\n- [x] the PR does not contain any additions or modifications that do not belong to it\r\n- [x] The release notes below contain a succinct and comprehensive description of the changes that are sufficiently self-explanatory\r\n\r\nIf you are modifying detector dimen\u2026",
+            "diff": {
+                "additions": 9329,
+                "deletions": 1084,
+                "files": 84
+            },
+            "files": [
+                "CMakeLists.txt",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/DectDimensions.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/display.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/DectDimensions.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/display.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o2_v01/DectDimensions.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o2_v01/display.xml",
+                "FCCee/ALLEGRO/compact/README.md",
+                "FCCee/CLD/compact/CLD_o2_v08/CLD_o2_v08.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/BeamInstrumentation_o3_v02_fitShield.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/Beampipe_o4_v05.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/CLD_o2_v09.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/ECalBarrel_o2_v01_03.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/ECalEndcap_o2_v01_03.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/HCalBarrel_o1_v01_01.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/HCalEndcap_o1_v01_01.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/InnerTrackerBarrelModuleDown.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/InnerTrackerBarrelModuleUp.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/InnerTracker_o2_v08.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/LumiCal_o3_v02_05.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/OuterTrackerBarrelModuleDown.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/OuterTrackerBarrelModuleUp.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/OuterTracker_o2_v08.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/Solenoid_o1_v01_02.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/TrackerDiskModuleIn.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/TrackerDiskModuleOut.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/Vertex_o4_v08_smallBP.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/YokeBarrel_o1_v01_02.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/YokeEndcap_o1_v01_02.xml",
+                "FCCee/CLD/compact/CLD_o2_v09/display.xml"
+            ],
+            "comments": [
+                {
+                    "author": "Zehvogel",
+                    "body": "For CLD I think it would fit our versioning scheme better if you add the FCC-SEED as a new option, i.e. `CLD_o5_v01` :)"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "> For CLD I think it would fit our versioning scheme better if you add the FCC-SEED as a new option, i.e. `CLD_o5_v01` :)\r\n\r\nThe FCC-SEED option is now added as CLD_o5_v01, and the CLD disk material budget fix is CLD_o1_v09 (see https://github.com/key4hep/k4geo/issues/613)"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "Hi. The PR is now ready for review.\r\n\r\n@Victor-Schwan @tmadlener : Do you want FCC-SEED to be the default vertex detector in ILD?\r\n\r\n@BrieucF @giovannimarchiori : This PR includes the changes for ALLEGRO (pixel pitches and only one layer of Silicon Wrapper). FCC-SEED can be used for the inner vertex\u2026"
+                },
+                {
+                    "author": "Zehvogel",
+                    "body": "Hi @armin-ilg thank you for the contribution!\r\n\r\nThis is a particularly CLD-centric problem, but I think the PR would benefit from a cleanup of the commit history.\r\nIn the case of changes to CLD, we would like a structure similar to\r\n1. Copy version X as basis for version Y\r\n2. Add feature Z to vers\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": ">  @Victor-Schwan @tmadlener : Do you want FCC-SEED to be the default vertex detector in ILD?\r\n\r\nI think for now we prefer to stay with the current version to not introduce yet another moving part into our efforts of getting a full tracking/reconstruction chain going. We would then switch to this on\u2026"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "> > @Victor-Schwan @tmadlener : Do you want FCC-SEED to be the default vertex detector in ILD?\r\n> \r\n> I think for now we prefer to stay with the current version to not introduce yet another moving part into our efforts of getting a full tracking/reconstruction chain going. We would then switch to th\u2026"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "> Hi @armin-ilg thank you for the contribution!\r\n> \r\n> This is a particularly CLD-centric problem, but I think the PR would benefit from a cleanup of the commit history. In the case of changes to CLD, we would like a structure similar to\r\n> \r\n> 1. Copy version X as basis for version Y\r\n> 2. Add feat\u2026"
+                },
+                {
+                    "author": "Zehvogel",
+                    "body": "Hi @armin-ilg, I appreciate the attempt, but this still looks like I will not be able to review it in a reasonable time. If you would rebase your changes on top of the current main, instead of this merge commit chaos, I think the history would approach being readable...\r\n\r\nI know that it can be a ve\u2026"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "> Hi @armin-ilg, I appreciate the attempt, but this still looks like I will not be able to review it in a reasonable time. If you would rebase your changes on top of the current main, instead of this merge commit chaos, I think the history would approach being readable...\r\n> \r\n> I know that it can b\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @armin-ilg, thanks a lot! The changes for ALLEGRO (resolutions, 1 layer in Si-wrapper) are consistent with the requests from the tracker group. I would suggest to document these modifications in https://github.com/key4hep/k4geo/tree/main/FCCee/ALLEGRO/compact/README.md.\r\n\r\n It is not clear to me \u2026"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "> Hi @armin-ilg, thanks a lot! The changes for ALLEGRO (resolutions, 1 layer in Si-wrapper) are consistent with the requests from the tracker group. I would suggest to document these modifications in https://github.com/key4hep/k4geo/tree/main/FCCee/ALLEGRO/compact/README.md.\r\n> \r\n> It is not clear t\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Ciao @lopezzot  - would you have time to review this PR from IDEA's side?\r\n\r\n@Zehvogel  what about CLD?"
+                },
+                {
+                    "author": "lopezzot",
+                    "body": "> Ciao @lopezzot - would you have time to review this PR from IDEA's side?\r\n\r\nHi @giovannimarchiori, thank you for the question, but unfortunately I am not directly involved in the IDEA simulation anymore as I changed institute."
+                },
+                {
+                    "author": "SanghyunKo",
+                    "body": "@lopezzot @giovannimarchiori Hello guys, we discussed about this in yesterday's full simulation meeting, and I'll take a look from the IDEA side. Thanks for the message though."
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "Missing a review from ILD (@tmadlener) and CLD (@Zehvogel  @andresailer)"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "@tmadlener there was some earlier message from you where you answered Armin's question but no formal review/approval of this PR - is it good from ILD's perspective?"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "Thanks for all the help and feedback!"
+                }
+            ],
+            "comments_total": 17,
+            "reviews": [
+                {
+                    "author": "giovannimarchiori",
+                    "state": "APPROVED",
+                    "body": "looks good to me from ALLEGRO's perspective"
+                },
+                {
+                    "author": "SanghyunKo",
+                    "state": "COMMENTED",
+                    "body": "The refactoring part for IDEA generally looks okay. But my codex found a couple of potential bugs:"
+                },
+                {
+                    "author": "Zehvogel",
+                    "state": "CHANGES_REQUESTED",
+                    "body": "Overall, this looks very good already. Some nitpicks and a question below. :)"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Apologies, From ILD side this looks good. I have left a comment below about the potentially confusing placement of the SEED xml file for CLD."
+                }
+            ],
+            "reviews_total": 36
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4SimDelphes",
+            "num": 163,
+            "title": "Use current Delphes APIs in standalone and framework",
+            "url": "https://github.com/key4hep/k4SimDelphes/pull/163",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Replace deprecated Delphes initialization and processing calls.\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 6,
+                "deletions": 6,
+                "files": 2
+            },
+            "files": [
+                "framework/k4SimDelphes/src/k4SimDelphesAlg.cpp",
+                "standalone/src/DelphesMain.h"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4SimDelphes",
+            "num": 161,
+            "title": "Store photon direction and pointing resolution",
+            "url": "https://github.com/key4hep/k4SimDelphes/pull/161",
+            "author": "selvaggi",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- stores photon pointing angles in `ITheta` and `IPhi` and error in `directionError` \r\n- computes and stores hit position error in `positionError` for `errorPhi `and `errorTheta`\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 36,
+                "deletions": 10,
+                "files": 1
+            },
+            "files": [
+                "converter/src/DelphesEDM4HepConverter.cc"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "The required version of Delphes would need to be bumped but there is no version with https://github.com/delphes/delphes/commit/ce7f11971764791c95708aa68e3f6864e49911db yet. Where CI fails is because the latest tag of Delphes is being used."
+                },
+                {
+                    "author": "selvaggi",
+                    "body": "@jmcarcell, I can make a tag, but shouldn't the CI use the latest commit?"
+                },
+                {
+                    "author": "selvaggi",
+                    "body": "Made a new tag: https://github.com/delphes/delphes/releases/tag/3.5.2pre02"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Alma9 already has the new version of Delphes but seems to take a while to update here."
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 106,
+            "title": "Build the EDM4hep plugin in CI",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/106",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Build the EDM4hep plugin in CI\n\nENDRELEASENOTES\n\nFor https://github.com/key4hep/k4ActsTracking/pull/95",
+            "diff": {
+                "additions": 1,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/acts-master-ci.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 395,
+            "title": "[ALLEGRO, IDEA] - fix crash of k4run due to DCHdigi_v02 -> WireTrackerDigi_v01 renaming",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/395",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "Should address https://github.com/HEP-FCC/FCC-config/issues/394",
+            "diff": {
+                "additions": 6,
+                "deletions": 6,
+                "files": 2
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/run_digi_reco.py",
+                "FCCee/FullSim/IDEA/IDEA_o1_v03/run_digi_reco.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 388,
+            "title": "[ALLEGRO] - include STT digitiser in reconstruction",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/388",
+            "author": "alex-schmidty",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "STT digitizer now functional in run_digi_reco.py. To use STT and not DCH digitizer, use Gaudi property isSTT \r\n\r\nDepends on https://github.com/key4hep/k4RecTracker/pull/100",
+            "diff": {
+                "additions": 20,
+                "deletions": 19,
+                "files": 1
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/run_digi_reco.py"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Thank you @alex-schmidty ! \r\nI fixed a little problem with indentation and changed the output to INFO. Apart from that your code looks good to me"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "OK we should be able to fix this by changing the property  \"WireTrackerName\" of GenfitTrackFitter (https://github.com/key4hep/k4RecTracker/blob/679c268f0672cf0b9b926b5325121199d281d3c3/Tracking/components/GenfitTrackFitter.cpp#L459) - let's try"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "@s6anloes maybe you know what is happening here (?). Could the new WireTracker_info have some problems with ALLEGRO?"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "ok, with the change of WireTrackerName in the GenfitTrackFitter configuration the test passes successfully. We can merge and start looking at tracks reconstructed with the STT ;)"
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [
+                {
+                    "author": "giovannimarchiori",
+                    "state": "DISMISSED",
+                    "body": "Great!"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "state": "COMMENTED",
+                    "body": "The ALLEGRO_o2_v01 test fails\n\nGenfitTrackFitter  WARNING WireTracker_info unexpected error: map::at. This may indicate missing drift chamber or configuration issues.\n...\nGGTFTrackFinder       INFO Processing event number: 0\n  TUnixSystem::Di...   FATAL segmentation violation\n\nDo we need some change\u2026"
+                }
+            ],
+            "reviews_total": 8
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 393,
+            "title": "Add IDEA Delphes/EDM4hep cards and update ZH/ZZ/WW generator cards",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/393",
+            "author": "kjvbrt",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Copies `card_IDEA.tcl` and `edm4hep_IDEA.tcl` from the `pre_summer2026` branch, since `main` currently has no EDM4hep steering card for the IDEA detector. Also updates `p8_ee_ZH_ecm240.cmd`, `p8_ee_ZZ_ecm240.cmd` and `p8_ee_WW_ecm240.cmd` to their newer `winter2023` versions.",
+            "diff": {
+                "additions": 1057,
+                "deletions": 3,
+                "files": 5
+            },
+            "files": [
+                "FCCee/Delphes/card_IDEA.tcl",
+                "FCCee/Delphes/edm4hep_IDEA.tcl",
+                "FCCee/Generator/Pythia8/p8_ee_WW_ecm240.cmd",
+                "FCCee/Generator/Pythia8/p8_ee_ZH_ecm240.cmd",
+                "FCCee/Generator/Pythia8/p8_ee_ZZ_ecm240.cmd"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "k4geo",
@@ -105,6 +443,35 @@
         },
         {
             "org": "key4hep",
+            "repo": "key4hep-doc",
+            "num": 162,
+            "title": "Docs: link LCG prerequisites for CVMFS setup",
+            "url": "https://github.com/key4hep/key4hep-doc/pull/162",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-22",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Replaces distro-specific CVMFS package instructions that would become stale after the LCG transition with the LCG Docs prerequisites page, as suggested in the review of #154.",
+            "diff": {
+                "additions": 9,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "docs/getting_started/setup.md"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": ":rocket: Documentation preview: https://key4hep.github.io/key4hep-doc/pr-preview/pr-162/\n\nIt becomes available once the github pages deployment has completed,\nis updated on every push and is removed once this PR is closed.\n<!-- Sticky Pull Request Commentpr-preview -->"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
             "repo": "k4ActsTracking",
             "num": 103,
             "title": "add edge sorting/flipping to reproduce acorn workflow",
@@ -147,6 +514,102 @@
                 }
             ],
             "reviews_total": 13
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 100,
+            "title": "changed DCHdigi_v02 to WireTrackerDigi_v01",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/100",
+            "author": "alex-schmidty",
+            "mergedAt": "2026-09-22",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Changed name of DCHdigi_v02 to WireTrackerDigi_v01. WireTrackerDigi_v01 is now compatible with DCH digitization and STT digitization. Still need to update tests in WireTrackerDigi.  \r\n\r\nUpdate WireTrackerDigi_v01 expects \"isSTT\" Gaudi Property (set to false by default for DCH). \"isSTT == true\" changes \"nphi\" to \"tube\" and uses \"sector\" in cellID where \"sector\" was set to 0 previously.",
+            "diff": {
+                "additions": 71,
+                "deletions": 63,
+                "files": 26
+            },
+            "files": [
+                "CMakeLists.txt",
+                "README.md",
+                "Tracking/components/GenfitTrackFitter.cpp",
+                "Tracking/src/genfit_interfaces/GenfitWireMeasurement.cpp",
+                "WireTrackerDigi/CMakeLists.txt",
+                "WireTrackerDigi/README.md",
+                "WireTrackerDigi/dataFormatExtension/driftChamberHit.yaml",
+                "WireTrackerDigi/include/AlgData.h",
+                "WireTrackerDigi/include/DCHdigi_v01.h",
+                "WireTrackerDigi/include/DCHsimpleDigitizer.h",
+                "WireTrackerDigi/include/DCHsimpleDigitizerExtendedEdm.h",
+                "WireTrackerDigi/include/WireTrackerDigi_v01.h",
+                "WireTrackerDigi/src/DCHdigi_v01.cpp",
+                "WireTrackerDigi/src/DCHsimpleDigitizer.cpp",
+                "WireTrackerDigi/src/DCHsimpleDigitizerExtendedEdm.cpp",
+                "WireTrackerDigi/src/WireTrackerDigi_v01.cpp",
+                "WireTrackerDigi/test/runDCHsimpleDigitizer.py",
+                "WireTrackerDigi/test/runDCHsimpleDigitizerExtendedEdm.py",
+                "WireTrackerDigi/test/test_DCHdigi/check_DCHdigi_output.py",
+                "WireTrackerDigi/test/test_DCHdigi/compact/DCH_standalone_o1_v02.xml",
+                "WireTrackerDigi/test/test_DCHdigi/compact/elements_o1_v01.xml",
+                "WireTrackerDigi/test/test_DCHdigi/compact/materials_o1_v02.xml",
+                "WireTrackerDigi/test/test_DCHdigi/runDCHdigi.py",
+                "WireTrackerDigi/test/test_DCHdigi/runDCHdigiV2.py",
+                "WireTrackerDigi/test/test_DCHdigi/sim_steering.py",
+                "WireTrackerDigi/test/test_DCHdigi/test_DCHdigi.sh"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Wouldn't it be simpler to keep DCHDigi_v01, DCHDigi_v02 as they were (so that code using DCHDigi_v02 is not broken), add WireTrackerDigi_v01, avoid the alias WireTrackerDigi_v01 <->DCHDigi_v02, and in the README explain that the main difference between WireTrackerDigi_v01 and DCHDigi_v02 is that the\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I think it's possible to use `DECLARE_COMPONENT` twice in the same algorithm so that the rename can happen but the old one can still exist. Maybe check if this true"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "> Wouldn't it be simpler to keep DCHDigi_v01, DCHDigi_v02 as they were (so that code using DCHDigi_v02 is not broken), add WireTrackerDigi_v01, avoid the alias WireTrackerDigi_v01 <->DCHDigi_v02, and in the README explain that the main difference between WireTrackerDigi_v01 and DCHDigi_v02 is that t\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "maybe at least document in the README that this works also for STT?\r\n\r\nI see this change\r\n\r\n In comparison to DCHdigi_v01, this version will produce only one DigiHit per cell, combining all SimHits in the same\r\n=> \r\nIn comparison to WireTrackerDigi_v01, this version will produce only one DigiHit per\u2026"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "> In comparison to DCH_v01, this version works for both drift chambers and straw-tube trackers and will produce only one DigiHit per cell, combining all SimHits in the same\r\n\r\nYes indeed, and in addition the README should make clear that the Functional used to be called `DCHdigi_v02` and is still av\u2026"
+                },
+                {
+                    "author": "alex-schmidty",
+                    "body": "I changed the readme files, the Gaudi property description, updated the paths in CMakeLists.txt. I also fixed an error in WireTrackerDigi_v01 (changed type of m_wt_info to dd4hep::rec::WireTracker_info_struct*). Please let me know if I missed anything else."
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @alex-schmidty ,\r\nthanks! There are a few places where the code or comments still refer to the drift chamber, I put a certain number of suggestions where the comments/code can be made more agnostic about DCH vs STT. Overall the changes are very good, thanks!"
+                },
+                {
+                    "author": "ponyisi",
+                    "body": "Just for the record @alex-schmidty , this needs the update to the Genfit tracking code as well (so track fitting does not crash), and the `set(PackageName WireTrackerDigi)` fix in `WireTrackerDigi/CMakeLists.txt` ."
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "For the failing pre-commit test you'll have to run \r\n`clang-format --style=file -i WireTrackerDigi/include/WireTrackerDigi_v01.h`\r\nor fix the formatting issues outlined [here](https://github.com/key4hep/k4RecTracker/actions/runs/35304444500/job/105505069558?pr=100) manually"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @alex-schmidty can you please look at the pre-commit failures and fix the code accordingly?\r\nThanks!"
+                }
+            ],
+            "comments_total": 10,
+            "reviews": [
+                {
+                    "author": "s6anloes",
+                    "state": "APPROVED",
+                    "body": "I approve/have no comments for this PR, but I was also the person to suggest these changes in the first place, so I welcome any other person to have a look"
+                }
+            ],
+            "reviews_total": 14
         },
         {
             "org": "hep-fcc",
@@ -1730,338 +2193,6 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1676,
-            "title": "build(deps): bump cvmfs-contrib/github-action-cvmfs from 5.5 to 5.6",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1676",
-            "author": "dependabot",
-            "mergedAt": "2026-09-16",
-            "mergedBy": "andresailer",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [cvmfs-contrib/github-action-cvmfs](https://github.com/cvmfs-contrib/github-action-cvmfs) from 5.5 to 5.6.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/cvmfs-contrib/github-action-cvmfs/releases\">cvmfs-contrib/github-action-cvmfs's releases</a>.</em></p>\n<blockquote>\n<h2>v5.6</h2>\n<h2>What's Changed</h2>\n<ul>\n<li><code>v4</code> -&gt; <code>v5</code> in Readme by <a href=\"https://github.com/vvolkl\"><code>@\u200bvvolkl</code></a> in <a href=\"https://redirect.github.com/cvmfs-contrib/github-action-cvmfs/pull/62\">cvmfs-contrib/github-action-cvmfs#62</a></li>\n<li>fix: update actions/cache@v5 to hash-pinned version (v5.0.5) by <a href=\"https://github.com/wdconinc\"><code>@\u200bwdconinc</code></a> in <a href=\"https://redirect.github.com/cvmfs-contrib/git\u2026",
-            "diff": {
-                "additions": 7,
-                "deletions": 7,
-                "files": 4
-            },
-            "files": [
-                ".github/workflows/clang-tidy.yml",
-                ".github/workflows/coverity.yml",
-                ".github/workflows/linux.yml",
-                ".github/workflows/python.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200211h 38m 1s \u23f1\ufe0f\n\u2007\u2008380 tests\u2003\u2007\u2008380 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008376 runs\u200a\u20033\u2008376 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 4d6d6e97.\n\n[test-results]:data:application/gzip;base64,H4sIAKbXqWoC/12Myw7CIBQFf6Vh7aL08vRnTOWR3NgWQ2Fl/HeRVEE3J5k5yTyIx8Xt5DxQdRrInjE1sjnOCcNWmFGlaFHlTe8f1Pihy56N+Vc\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 188,
-            "title": "feat(regression): add reported-only anon RSS growth, event schema version and measurement stability",
-            "url": "https://github.com/key4hep/k4Bench/pull/188",
-            "author": "jbeirer",
-            "mergedAt": "2026-09-15",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "## Summary\r\n\r\nThis PR extends the event-level memory monitoring and regression tooling with three related improvements:\r\n\r\n- adds a robust anonymous RSS growth metric in MB/event;\r\n- versions the event timing JSON format so future schema changes can be handled safely;\r\n- adds measurement-stability information to the dashboard to make normal run-to-run variation easier to interpret.\r\n\r\nThe anonymous RSS growth metric is intentionally **reported-only**. It is shown in reports and the dashboard, but is not used to classify regressions.\r\n\r\n## Anonymous RSS growth\r\n\r\nThe event timing plugin already records anonymous RSS per event. This PR derives an additional\r\n\r\n`rss_anon_slope_mb_per_event`\r\n\r\nmetric from that history.\r\n\r\nThe slope is calculated with a Theil-Sen estimator to make it robust ag\u2026",
-            "diff": {
-                "additions": 1315,
-                "deletions": 227,
-                "files": 37
-            },
-            "files": [
-                "dashboard/stats.py",
-                "dashboard/tabs/_regression_flags.py",
-                "dashboard/tabs/_regression_trend.py",
-                "dashboard/tabs/detectors_overview.py",
-                "dashboard/tabs/event_memory.py",
-                "dashboard/tabs/impact.py",
-                "dashboard/tabs/trends.py",
-                "dashboard/ui_utils.py",
-                "docs/glossary.md",
-                "docs/reference/file-formats.md",
-                "docs/user-guide/features/dashboard.md",
-                "docs/user-guide/features/timing-plugins.md",
-                "k4bench/analysis/loader.py",
-                "k4bench/analysis/plots/_theme.py",
-                "k4bench/analysis/plots/overview.py",
-                "k4bench/analysis/trend.py",
-                "k4bench/labels.py",
-                "k4bench/metrics.py",
-                "k4bench/plugin/event_schema.py",
-                "k4bench/regression/email.py",
-                "k4bench/regression/engine.py",
-                "k4bench/regression/report_builder.py",
-                "k4bench/runner/executor.py",
-                "plugin/k4BenchTimingAction.cpp",
-                "tests/integration/test_plugin_build.py",
-                "tests/unit/test_analysis_loader.py",
-                "tests/unit/test_analysis_trend_noise.py",
-                "tests/unit/test_dashboard_detectors_overview.py",
-                "tests/unit/test_dashboard_event_views_apptest.py",
-                "tests/unit/test_dashboard_stability.py"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": "### :x: 1 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 1843 | 1 | 1842 | 22 |\n<details><summary>View the top 1 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_links.py::test_link_resolves[https://zenodo.o\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 187,
-            "title": "feat(regression): record allocated and virtual memory unjudged",
-            "url": "https://github.com/key4hep/k4Bench/pull/187",
-            "author": "jbeirer",
-            "mergedAt": "2026-09-15",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "## What this changes\r\n\r\nThis PR changes how k4Bench measures and judges memory regressions after #186 showed that total RSS is not reproducible enough on the nightly runners.\r\n\r\nThe regression engine now judges memory using two quantities that are not affected by CVMFS page invalidation, while keeping the existing RSS measurements as diagnostics:\r\n\r\n| Metric | Source | Judged? |\r\n|---|---|---|\r\n| `peak_vmem_mb` | `VmPeak`, read once by the event plugin | **yes** |\r\n| `mean_rss_anon_mb` | per-event `RssAnon` | **yes** |\r\n| `peak_rss_mb` | `/usr/bin/time -v` | reported only |\r\n| `mean_rss_mb` | per-event `VmRSS` | reported only |\r\n| `mean_rss_file_mb` | per-event `RssFile` | reported only |\r\n\r\nNothing is removed: the existing RSS values remain in the results, trend data and dashboard. Only w\u2026",
-            "diff": {
-                "additions": 975,
-                "deletions": 202,
-                "files": 34
-            },
-            "files": [
-                "dashboard/tabs/_regression_trend.py",
-                "dashboard/tabs/detectors_overview.py",
-                "dashboard/tabs/event_memory.py",
-                "dashboard/tabs/event_timing.py",
-                "dashboard/tabs/impact.py",
-                "dashboard/tabs/trends.py",
-                "dashboard/ui_utils.py",
-                "docs/getting-started/first-workflow.md",
-                "docs/glossary.md",
-                "docs/reference/file-formats.md",
-                "docs/user-guide/features/dashboard.md",
-                "docs/user-guide/features/timing-plugins.md",
-                "k4bench/analysis/loader.py",
-                "k4bench/analysis/plots/_theme.py",
-                "k4bench/analysis/plots/overview.py",
-                "k4bench/analysis/trend.py",
-                "k4bench/labels.py",
-                "k4bench/plugin/runtime.py",
-                "k4bench/regression/email.py",
-                "k4bench/regression/report_builder.py",
-                "k4bench/results/model.py",
-                "k4bench/runner/executor.py",
-                "plugin/k4BenchTimingAction.cpp",
-                "tests/integration/test_plugin_build.py",
-                "tests/unit/test_analysis_loader.py",
-                "tests/unit/test_analysis_plots.py",
-                "tests/unit/test_analysis_trend_noise.py",
-                "tests/unit/test_dashboard_detectors_overview.py",
-                "tests/unit/test_dashboard_event_views_apptest.py",
-                "tests/unit/test_dashboard_impact.py"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": "### :x: 1 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 1772 | 1 | 1771 | 17 |\n<details><summary>View the top 1 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_links.py::test_link_resolves[https://zenodo.o\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-tutorials",
-            "num": 198,
-            "title": "Update README.md about eedE",
-            "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/198",
-            "author": "apausa",
-            "mergedAt": "2026-09-15",
-            "mergedBy": "michmx",
-            "labels": [],
-            "body": "- Update README.md with information about the new features and functionalities.\r\n- Replace images with the current interface.\r\n- Add image showing filtered out particles.",
-            "diff": {
-                "additions": 53,
-                "deletions": 33,
-                "files": 4
-            },
-            "files": [
-                "2-gen-and-fastsim/2-4-eedE/README.md",
-                "2-gen-and-fastsim/2-4-eedE/eede_Zbb_example.png",
-                "2-gen-and-fastsim/2-4-eedE/eede_Zbb_filtering.png",
-                "2-gen-and-fastsim/2-4-eedE/eede_upload.png"
-            ],
-            "comments": [
-                {
-                    "author": "apausa",
-                    "body": "Hi @michmx, the tests are not being ran, can you please take a look at the GitHub Action? I believe the nightly stack should be sourced with `--spack`. Thank you"
-                },
-                {
-                    "author": "michmx",
-                    "body": "Hi @apausa . Sorry for the late reply. Addresing the issue at https://github.com/HEP-FCC/fcc-tutorials/pull/202.\r\n\r\n(It is related to https://github.com/key4hep/key4hep-images/issues/32)"
-                },
-                {
-                    "author": "apausa",
-                    "body": "Hi @michmx, just force-pushed. This can be merged, as well as #201. Thank you!"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [
-                {
-                    "author": "michmx",
-                    "state": "APPROVED",
-                    "body": "Thanks a lot for this update! I could follow it easily. \r\n\r\nI am just leaving a couple of suggestions. And let's wait for @kjvbrt to give the green light after addressing his comments."
-                }
-            ],
-            "reviews_total": 7
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1663,
-            "title": "Geant4Output2EDM4hep: get run from worker context",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1663",
-            "author": "andresailer",
-            "mergedAt": "2026-09-15",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "This will need some more work, ~~the current status writes one run per thread.~~\r\n\r\n\r\nBEGINRELEASENOTES\r\n- Geant4OutputAction: In multi-threaded mode, make sure the ingested runparameters and fileparameters end up in the output, fixes #1660\r\n  -  Fixed locking endRun action of the outputaction\r\n- Geant4Output2LCIO: fix locking of output writing in multi-threaded mode\r\n- Geant4Output2ROOT: fix locking of output writing in multi-threaded mode\r\n- Tests: added comparison of run and metadata trees if they exist in the output\r\n\r\n\r\nENDRELEASENOTES\r\n\r\n\r\nTODO\r\n\r\n- [x] Output2ROOT\r\n- [x] Output2LCIO: ~~writes one run per thread~~\r\n- ~~Common refactor?~~",
-            "diff": {
-                "additions": 230,
-                "deletions": 89,
-                "files": 11
-            },
-            "files": [
-                ".github/workflows/linux.yml",
-                "DDG4/edm4hep/Geant4Output2EDM4hep.cpp",
-                "DDG4/include/DDG4/Geant4EventAction.h",
-                "DDG4/include/DDG4/Geant4Kernel.h",
-                "DDG4/include/DDG4/Geant4Output2ROOT.h",
-                "DDG4/lcio/Geant4Output2LCIO.cpp",
-                "DDG4/src/Geant4EventAction.cpp",
-                "DDG4/src/Geant4Kernel.cpp",
-                "DDG4/src/Geant4Output2ROOT.cpp",
-                "DDTest/CMakeLists.txt",
-                "DDTest/python/compare_simulation_output.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u20029h 34m 2s \u23f1\ufe0f\n\u2007\u2008380 tests\u2003\u2007\u2008380 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008376 runs\u200a\u20033\u2008376 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit ccb56066.\n\n[test-results]:data:application/gzip;base64,H4sIABkQqGoC/12MSw7CIBQAr9KwdoF8XsHLGAq85MW2GAor493FptrqcmaSeTCkMS7s0p3NqWNLpbJTqNkVSnNjqZQSTbVa3l0a/qHrUr3/Vze6\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> the current status writes one run per thread.\r\n\r\nI'm assuming a \"trivial\" solution employing `std::call_once` doesn't do the trick? Might be a bit trickier if there are multiple runs as well as multiple threads..."
-                },
-                {
-                    "author": "andresailer",
-                    "body": "> Somewhat related: Can we handle multiple runs in flight in a multi-threaded context correctly in DD4hep/ddsim? I think at least from the podio side things should keep working, as long as all runs are added to a worker context at some point.\r\n\r\nUnless I already forgot again: run information is read\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "> deceptively\r\n\r\nIndeed"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "EventReader test fails only in 107a\r\n106: no EDM4hepFileReader, podio is too old\r\n107a: issue with\r\n```\r\n16: Warning in <TClass::Init>: no dictionary for class podio::root_utils::CollectionWriteInfo is available\r\n```\r\n(podio 1.2.0)\r\n\r\n109: this warning is not present (podio 1.7.0)\r\n\r\nStill weird why\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "> Still weird why it started failing so, need to investigate.\r\n\r\nBecause we just turned on EDM4hep for the CI"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "What is the file version with which the input file has been written? (`podio-dump` on the input file should tell you). Since podio doesn't make forward compatibility guarantees, it's possible that the input file is too new for certain stacks."
-                },
-                {
-                    "author": "andresailer",
-                    "body": "> possible that the input file is too new for certain stacks.\r\n\r\n106\r\n---\r\n podio-dump crashes\r\n\r\n107a\r\n----\r\n\r\n```\r\nTClass::Init:0: RuntimeWarning: no dictionary for class podio::root_utils::CollectionWriteInfo is available\r\ninput file: ../DDTest/inputFiles/ZH250_ISR.edm4hep.root\r\n            (writ\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "I am going to disable the edm4hep filereader test for podio < 1.6"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "Any more comments @tmadlener @wdconinc ? I dumped my patch into :gemini: and fixed a couple typos and bad use of unique_ptr::release instead of reset."
-                }
-            ],
-            "comments_total": 10,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "This looks deceptively simple in the end, but I think following your comments / explanations it should be correct.\n\nSomewhat related: Can we handle multiple runs in flight in a multi-threaded context correctly in DD4hep/ddsim? I think at least from the podio side things should keep working, as long \u2026"
-                }
-            ],
-            "reviews_total": 26
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1666,
-            "title": "Modified FCC MDI Synchrotron Radiation Mask geometry",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1666",
-            "author": "neskongarr",
-            "mergedAt": "2026-09-15",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n\r\n- DDDetectors/src/Mask_o1_v01_geo.cpp: Added a new type 'kUpstreamTrapezoid' in the DDDetectors/include/DDDetectors/OtherDetectorHelpers.h to process non-cylindrically symmetric cases when processing Mask objects. (cf. k4geo [PR](https://github.com/key4hep/k4geo/pull/648)).\r\n\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 94,
-                "deletions": 1,
-                "files": 2
-            },
-            "files": [
-                "DDDetectors/include/DDDetectors/OtherDetectorHelpers.h",
-                "DDDetectors/src/Mask_o1_v01_geo.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u20029h 37m 54s \u23f1\ufe0f\n\u2007\u2008380 tests\u2003\u2007\u2008380 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008316 runs\u200a\u20033\u2008316 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 442119fd.\n\n[test-results]:data:application/gzip;base64,H4sIAPgXqGoC/12MSw7CIBQAr9KwdlE+QvUypuFB8mJbDJ9V4919kirocmaS2ZnHxSV2Hfh0GlgqmBtBiXPGsBFLpY0iRTW/u5zGD91SsfZf3fF\u2026"
-                },
-                {
-                    "author": "neskongarr",
-                    "body": "I implemented the PR linkand modified xml file in the k4geo repo. Thanks!"
-                },
-                {
-                    "author": "neskongarr",
-                    "body": "> This is fine from my side. But might the issues with overlaps discussed in the k4geo issue still requiring changes here?\r\n\r\nThe overlaps issue will be tackled sometime in the future at k4geo level, so no DD4hep changes are foreseen"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [
-                {
-                    "author": "andresailer",
-                    "state": "CHANGES_REQUESTED",
-                    "body": "Could you also post a link to the k4geo PR, and also the XML snippet that is interpreted by these changes please?"
-                },
-                {
-                    "author": "andresailer",
-                    "state": "CHANGES_REQUESTED",
-                    "body": "Sorry, first time I look at this outside my phone."
-                },
-                {
-                    "author": "andresailer",
-                    "state": "APPROVED",
-                    "body": "This is fine from my side. But  might the issues with overlaps discussed in the k4geo issue still requiring changes here?"
-                }
-            ],
-            "reviews_total": 6
         }
     ]
 }
