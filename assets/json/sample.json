@@ -6,7 +6,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
-            "updatedAt": "2026-09-22",
+            "updatedAt": "2026-09-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -105,7 +105,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/521'>build: fix hardcoded assumption that ROOT dictionaries are built</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-13",
-            "updatedAt": "2026-09-21",
+            "updatedAt": "2026-09-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -173,6 +173,28 @@
             "createdAt": "2022-08-08",
             "updatedAt": "2026-05-23",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 434,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/434'>Fix the background event cursor in OverlayTiming</a>",
+            "author": "madbaron",
+            "createdAt": "2026-09-23",
+            "updatedAt": "2026-09-23",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 433,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/433'>Fix boolean properties on the k4run command line</a>",
+            "author": "madbaron",
+            "createdAt": "2026-09-23",
+            "updatedAt": "2026-09-23",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -425,7 +447,7 @@
             "author": "Baucki1",
             "createdAt": "2026-08-28",
             "updatedAt": "2026-09-22",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1421,17 +1443,6 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 271,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/271'>IDEA o2 seeded ECAL clustering algorithms</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-07-03",
-            "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "jbeirer"
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
             "num": 193,
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/193'>Calculate cluster direction from longitudinal samplings</a>",
             "author": "giovannimarchiori",
@@ -1503,7 +1514,7 @@
             "author": "andread3vita",
             "createdAt": "2026-09-17",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1525,7 +1536,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1536,7 +1547,7 @@
             "author": "Victor-Schwan",
             "createdAt": "2026-08-19",
             "updatedAt": "2026-08-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
