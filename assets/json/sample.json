@@ -178,19 +178,19 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 434,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/434'>Fix the background event cursor in OverlayTiming</a>",
+            "num": 433,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/433'>Fix boolean properties on the k4run command line</a>",
             "author": "madbaron",
             "createdAt": "2026-09-23",
-            "updatedAt": "2026-09-23",
+            "updatedAt": "2026-09-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 433,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/433'>Fix boolean properties on the k4run command line</a>",
+            "num": 434,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/434'>Fix the background event cursor in OverlayTiming</a>",
             "author": "madbaron",
             "createdAt": "2026-09-23",
             "updatedAt": "2026-09-23",
@@ -463,6 +463,17 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>k4EDM4hep2LcioConv",
+            "num": 135,
+            "title": "<a href='https://github.com/key4hep/k4EDM4hep2LcioConv/pull/135'>Remove obsolete EDM4hep version guards</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-24",
+            "updatedAt": "2026-09-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>key4hep-dev-utils",
             "num": 25,
             "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/25'>Add CI check for synchronized defaults</a>",
@@ -530,22 +541,22 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 102,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
+            "num": 101,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/101'>TrackFitter: Fix units in the helix-to-cartesian conversion + Fixed broken associations between hits and tracks introduced during the filtering stage</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-23",
+            "updatedAt": "2026-09-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 101,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/101'>TrackFitter: Fix units in the helix-to-cartesian conversion + Fixed broken associations between hits and tracks introduced during the filtering stage</a>",
+            "num": 102,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-23",
+            "updatedAt": "2026-09-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
@@ -1029,7 +1040,7 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/206'>Update Delphes+EvtGen sample generation to latest Key4hep stack</a>",
             "author": "kjvbrt",
             "createdAt": "2026-09-22",
-            "updatedAt": "2026-09-23",
+            "updatedAt": "2026-09-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1498,23 +1509,12 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
-            "num": 384,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/384'>[ALLEGRO] Updating vertex and silicon wrapper resolutions and wrapper layers</a>",
-            "author": "armin-ilg",
-            "createdAt": "2026-08-25",
-            "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
             "num": 391,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/391'>[IDEA] Set shared flag to false if single thread</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-17",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1525,7 +1525,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1536,7 +1536,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1547,7 +1547,7 @@
             "author": "Victor-Schwan",
             "createdAt": "2026-08-19",
             "updatedAt": "2026-08-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1777,7 +1777,7 @@
             "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/41'>Maia/theta energy</a>",
             "author": "Jullianwatts",
             "createdAt": "2026-08-24",
-            "updatedAt": "2026-09-20",
+            "updatedAt": "2026-09-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
