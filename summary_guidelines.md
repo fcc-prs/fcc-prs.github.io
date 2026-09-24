@@ -30,6 +30,9 @@ Prioritise in this order:
 
 ## Style
 
+- A PR that belongs in Omitted must NOT appear in the Summary section at all — not even
+  as a placeholder, cross-reference, or "see Omitted" note. The two sections are mutually
+  exclusive: every PR appears in exactly one of them.
 - Group all notable PRs from the same repository into a single bullet.
 - Bullet format:
     **[org/repo](repo_url)** — narrative description of the combined changes,
