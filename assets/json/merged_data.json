@@ -1,6 +1,66 @@
 {
-    "updated_at": "2026-09-23T10:37:23Z",
+    "updated_at": "2026-09-24T10:55:52Z",
     "data": [
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 384,
+            "title": "[ALLEGRO] Updating vertex and silicon wrapper resolutions and wrapper layers",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/384",
+            "author": "armin-ilg",
+            "mergedAt": "2026-09-24",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "Hi. This PR is linked to the one in k4geo (https://github.com/key4hep/k4geo/pull/612) that refactores the IDEA/ALLEGRO vertex detector and updates the vertex detector and silicon wrapper pitches and resolves https://github.com/key4hep/k4geo/issues/617. This PR should not be merged before https://github.com/key4hep/k4geo/pull/612 is merged.\r\n\r\nFollowing the recent change of baseline for the ALLEGRO inner detector (https://indico.cern.ch/event/1702794/#1-introduction), the resolutions are updated to 3 \u00b5m spatial and 5 ns timing resolution in the whole vertex detector and 50 \u00b5m/sqrt(12) spatial resolution in the silicon wrapper. \r\n\r\nFurthermore, thanks to a recent change in k4geo (https://github.com/key4hep/k4geo/commit/0f226a98e85e739d79fc8d56fb6e738aecc22167), the array length of the resolu\u2026",
+            "diff": {
+                "additions": 50,
+                "deletions": 42,
+                "files": 2
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/run_digi_reco.py",
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/run_digi_reco.py"
+            ],
+            "comments": [
+                {
+                    "author": "BrieucF",
+                    "body": "Hi Armin thanks!\r\n\r\n> here the resolutions are updated to 3 \u00b5m spatial and 5 ns timing resolution in the whole vertex detector and 50 \u00b5m/sqrt(12) spatial resolution in the vertex detector.\r\n\r\nI think you meant \"and 50 \u00b5m/sqrt(12) spatial resolution in the silicon wrapper\"?"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "> Hi Armin thanks!\r\n> \r\n> > here the resolutions are updated to 3 \u00b5m spatial and 5 ns timing resolution in the whole vertex detector and 50 \u00b5m/sqrt(12) spatial resolution in the vertex detector.\r\n> \r\n> I think you meant \"and 50 \u00b5m/sqrt(12) spatial resolution in the silicon wrapper\"?\r\n\r\nThanks, fixed\u2026"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "Don't quite understand why the test fails like this:\r\n```\r\n  TDecompChol::De...   ERROR matrix not positive definite\r\n  genfit::Exception thrown with excString:\r\n  KalmanFitterInfo::calcAverageState: ill-conditioned covariance matrix.\r\n  in line: 149 in file: /build/jenkins/workspace/lcg_nightly_pip\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @armin-ilg is the test failing in your local work area where you have also the updated version of k4geo? Otherwise it might not be surprising that the test of the CI fails since you made some updates here that require the changes of https://github.com/key4hep/k4geo/pull/612 that is not yet merged\u2026"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "> Hi @armin-ilg is the test failing in your local work area where you have also the updated version of k4geo? Otherwise it might not be surprising that the test of the CI fails since you made some updates here that require the changes of [key4hep/k4geo#612](https://github.com/key4hep/k4geo/pull/612)\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Let's run the tests tomorrow once we have a nightly with the code from https://github.com/key4hep/k4geo/pull/612 \r\n@armin-ilg meanwhile we merged a certain number of PRs that affect these scripts so make sure your code is up-to-date"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "tests were running but timed out, retrying.."
+                }
+            ],
+            "comments_total": 7,
+            "reviews": [
+                {
+                    "author": "giovannimarchiori",
+                    "state": "APPROVED",
+                    "body": "Thanks Armin!"
+                }
+            ],
+            "reviews_total": 1
+        },
         {
             "org": "key4hep",
             "repo": "k4geo",
@@ -146,6 +206,84 @@
         },
         {
             "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 429,
+            "title": "Simplify the background particle index mapping",
+            "url": "https://github.com/key4hep/k4FWCore/pull/429",
+            "author": "madbaron",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Follow-up to @davidlange6's review comment in https://github.com/key4hep/k4FWCore/pull/413#discussion_r3933115912. The code it points at predates that PR, so it is split out here against `main`.\r\n\r\n`OverlayTiming` built two `std::map`s per background frame to translate background particle indices into output ones. They are redundant: the background particles are cloned in order, so the copy of background particle `i` always lands at `offset + i`.\r\n\r\nDropping them also fixes a guard on the relation wiring: it skipped a relation when the target particle had no relations of its own, rather than when the index pointed outside the background collection. A particle referenced as a daughter whose own parent list is empty, was therefore silently dropped.\r\n\r\nBEGINRELEASENOTES\r\n- Simplify the backgr\u2026",
+            "diff": {
+                "additions": 58,
+                "deletions": 42,
+                "files": 3
+            },
+            "files": [
+                "k4FWCore/components/OverlayTiming.cpp",
+                "test/k4FWCoreTest/scripts/CheckOutputFiles.py",
+                "test/k4FWCoreTest/src/components/ExampleFunctionalProducerMultiple.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "> This looks like it could also be a bit of a performance improvement given that we replace a map lookup with a pure indexing. Did you by any chance measure that? I don't think it's necessary to do so explicitly, but if by chance the number exists, I would be interested if the lookup is in any way s\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Thanks for that benchmark. That speedup is more than I would have expected, but it probably heavily relies on the actual MCParticle tree / setup. In any case it effectively can't be slower and it will use less memory by construction since we eliminate a complete per-event map."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Shall we get this merged?\r\n(I'm happy to take care of any possible follow ups in a later PR)"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Unless someone still comments here, I will merge on Monday."
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "This looks like it could also be a bit of a performance improvement given that we replace a map lookup with a pure indexing. Did you by any chance measure that? I don't think it's necessary to do so explicitly, but if by chance the number exists, I would be interested if the lookup is in any way som\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "This looks good to me. Maybe @davidlange6 wants to have another looks since he first spotted / suggested this.\n\npre-commit failures are unrelated to these changes, I think. They are at least also present on `main` and likely due to the switch in stacks with different versions of `clang-tidy`."
+                }
+            ],
+            "reviews_total": 22
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 927,
+            "title": "k4reccalorimeter: set BUILD_TESTING from run_tests",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/927",
+            "author": "madbaron",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "HEP-FCC/k4RecCalorimeter#284 moved the boost_timer and boost_unit_test_framework lookups inside if(BUILD_TESTING), but the project does include(CTest), which defaults BUILD_TESTING to ON. Since the recipe did not set it, configuring still required boost+timer, which is not necessarily provided in the stack (it is not in mucoll-stack).\r\n\r\nBEGINRELEASENOTES\r\n- Set k4RecCalorimeter's cmake BUILD_TESTING flag consistently with what is done in the other packages in the stack\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 1,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "packages/k4reccalorimeter/package.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
             "repo": "k4SimDelphes",
             "num": 163,
             "title": "Use current Delphes APIs in standalone and framework",
@@ -213,6 +351,64 @@
         {
             "org": "key4hep",
             "repo": "k4ActsTracking",
+            "num": 105,
+            "title": "Add pass-through GNN stage for debugging pipelines",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/105",
+            "author": "madbaron",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Added pass-through stage `ClassifiedEdgePrinting` to ease the validation of the GNN pipeline with external frameworks\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 229,
+                "deletions": 1,
+                "files": 7
+            },
+            "files": [
+                "GNNTrackFinding/CMakeLists.txt",
+                "GNNTrackFinding/README.md",
+                "GNNTrackFinding/src/ClassifiedEdgePrinting.cpp",
+                "GNNTrackFinding/src/ClassifiedEdgePrinting.h",
+                "GNNTrackFinding/src/GNNTrackFinder.cpp",
+                "GNNTrackFinding/src/OnnxMetricLearning.cpp",
+                "GNNTrackFinding/src/OnnxMetricLearning.h"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "> Would it make sense to have this log the edge information to a file rather than just dumping it to stdout?\r\n\r\nIn general, probably. The current experience is that usually dumping a few edges is enough to do most of the debugging and the scores either match perfectly or are always off.\r\n\r\nIf you wa\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "OK. In that case I would say we defer it until it's necessary. Mainly because then we don't have to discuss format, etc. now ;)"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> Another conceptual question. This currently prints from the metric learning stage but then again from the newly introduced printing \"classifier\". Both of these are toggled by the output level for the algorithm and as far as I can see, the outputs are essentially (expected?) to be the same for the \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Sounds good. Didn't think about the fact that edges might be dropped as well."
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Would it make sense to have this log the edge information to a file rather than just dumping it to stdout?"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Another conceptual question. This currently prints from the metric learning stage but then again from the newly introduced printing \"classifier\". Both of these are toggled by the output level for the algorithm and as far as I can see, the outputs are essentially (expected?) to be the same for the fe\u2026"
+                }
+            ],
+            "reviews_total": 2
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
             "num": 106,
             "title": "Build the EDM4hep plugin in CI",
             "url": "https://github.com/key4hep/k4ActsTracking/pull/106",
@@ -233,6 +429,184 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 103,
+            "title": "Fixed DCHdigi_v02 alias",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/103",
+            "author": "s6anloes",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Fixed the `DCHdigi_v02` alias for the `WireTrackerDigi_v01`\r\n\r\nENDRELEASENOTES\r\n\r\nBackward-compatible solution to https://github.com/HEP-FCC/FCC-config/issues/394#issuecomment-5792268987.\r\nWe used the wrong command to define the alias `DCHdigi_v02`, this PR updates to the correct one",
+            "diff": {
+                "additions": 1,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "WireTrackerDigi/include/WireTrackerDigi_v01.h"
+            ],
+            "comments": [
+                {
+                    "author": "s6anloes",
+                    "body": "@giovannimarchiori \r\nThis fix was discussed in-person with @jmcarcell . I ran the FCC-Config CI locally and it ran without errors"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "> @giovannimarchiori This fix was discussed in-person with @jmcarcell . I ran the FCC-Config CI locally and it ran without errors\r\n\r\nI imagine you ran before the fix from today, if so it looks good."
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "Yes, I did not update my local FCC-Config repo\r\nI also ran other Gaudi script containing `DCHdigi_v02` to make sure"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "It would be good if someone checks tomorrow with the stack to confirm that `DCHdigi_v02` still works (`WireTrackerDigi_v01`) we can know from CI."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Just as another input, https://github.com/key4hep/k4GaudiPandora/pull/59, with essentially the same thing works for me locally as well"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "For both @andread3vita and me, calling `DCHdigi_v02` works again with the newest nightly"
+                }
+            ],
+            "comments_total": 6,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "k4RecCalorimeter",
+            "num": 271,
+            "title": "IDEA o2 seeded ECAL clustering algorithms",
+            "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/271",
+            "author": "SanghyunKo",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Add \"seeded\" ECAL clustering algorithms (`CaloDrivenClusterSeeding`, `TrackDrivenClusterSeeding`, `ClusterSeedMerging`, and `ClusterSeedGrower`)\r\n- Add CI test for the IDEA o2 reconstruction chain\r\n\r\nENDRELEASENOTES\r\n\r\nAdds the calorimeter reconstruction chain for the IDEA o2 dual-readout calorimeter (segmented-crystal ECAL + capillary-tube HCAL).\r\n\r\n#### CreateOpticalCaloCells (RecCalorimeter)\r\nTurns optical-photon SimCalorimeterHits into CalorimeterHits (energy = signal \u00d7 calibration, position from the SimHit) and links each cell to its truth energy-deposit SimHit. Truth matching uses the full cellID by default; `maskCherenkovForTruthLink` drops the `cherenkov` field so the crystal ECAL's scint and Cherenkov readings link to their shared deposit, while the tube HCAL \u2026",
+            "diff": {
+                "additions": 2666,
+                "deletions": 0,
+                "files": 15
+            },
+            "files": [
+                "RecCalorimeter/src/components/CreateOpticalCaloCells.cpp",
+                "RecCalorimeter/src/components/CreateOpticalCaloCells.h",
+                "RecFCCeeCalorimeter/CMakeLists.txt",
+                "RecFCCeeCalorimeter/src/components/CaloDrivenClusterSeeding.cpp",
+                "RecFCCeeCalorimeter/src/components/CaloDrivenClusterSeeding.h",
+                "RecFCCeeCalorimeter/src/components/ClusterSeedGrower.cpp",
+                "RecFCCeeCalorimeter/src/components/ClusterSeedGrower.h",
+                "RecFCCeeCalorimeter/src/components/ClusterSeedMerging.cpp",
+                "RecFCCeeCalorimeter/src/components/ClusterSeedMerging.h",
+                "RecFCCeeCalorimeter/src/components/ClusterSeedingBase.h",
+                "RecFCCeeCalorimeter/src/components/TrackDrivenClusterSeeding.cpp",
+                "RecFCCeeCalorimeter/src/components/TrackDrivenClusterSeeding.h",
+                "RecFCCeeCalorimeter/tests/options/IDEA_o2_v01_reco.py",
+                "RecFCCeeCalorimeter/tests/options/check_IDEAo2_reco.py",
+                "RecFCCeeCalorimeter/tests/options/test_IDEAo2_reco.sh"
+            ],
+            "comments": [
+                {
+                    "author": "jbeirer",
+                    "body": "Hi @SanghyunKo,\r\n\r\nthis looks good to me now, thanks for addressing all the comments.\r\n\r\nDo you maybe have any slides or other studies validating the clustering performance that you could link in the PR description? I think it would be useful to have some reference for the physics performance/valida\u2026"
+                },
+                {
+                    "author": "SanghyunKo",
+                    "body": "@jbeirer Sure, I added the link to my talk in the PR description."
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "I think the Ubuntu26 failure happens because the tests load the stack's older k4RecCalorimeter plugins instead of the ones built from this PR, I think https://github.com/HEP-FCC/k4RecCalorimeter/pull/283 should fix this"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "This is ready to go, time for last comments or :+1: for merging"
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [],
+            "reviews_total": 40
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "k4RecCalorimeter",
+            "num": 282,
+            "title": "Set GAUDI_PLUGIN_PATH for tests",
+            "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/282",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "## Summary\n- Set `GAUDI_PLUGIN_PATH` for every CTest test environment.\n- Include the build tree and all three calorimeter plugin target directories, while retaining inherited plugin and library paths.\n\n## Testing\n- `git diff --check`\n- CMake configuration is blocked before project generation because the environment lacks Gaudi's AIDA development dependency.\n\nBEGINRELEASENOTES\n - Set `GAUDI_PLUGIN_PATH` for CTest runs so in-tree calorimeter plugins are discoverable.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 3,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "jbeirer",
+                    "body": "Sorry, I only saw this PR after opening #283, which fixes the same issue in a different way: the tests run through Gaudi's generated build/run wrapper and set_test_env() is removed, so there's no path list to maintain"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 396,
+            "title": "[ALLEGRO] include STT hits in track finder, and fix perfect track fitter",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/396",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-09-23",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "This PR concerns ALLEGRO_o2_v01 (the version with the STT instead of the DCH)\r\nWith this PR, STT Digis are now used in the track finding step.\r\nAlso, the PR fixes a crash if track validation is enabled (WireTrackerName was not setup correctly) and passes STT digis->sim hit links to perfect track finder/fitter",
+            "diff": {
+                "additions": 4,
+                "deletions": 5,
+                "files": 1
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/run_digi_reco.py"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Tagging @sfranchel @BrieucF @s6anloes"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "mmm the tests fails because k4DetectorPerformance (TrackingValidation) can't be found\r\n```\r\n     from Configurables import TrackingValidation\r\n  ImportError: cannot import name 'TrackingValidation' from 'Gaudi.Configurables' (unknown location)\r\n```\r\nshould I just remove the --runTrkValidation option\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "decided to go along the easy path and restore previous behaviour of tests (no track validation alg run in the tests). To make it work I think we would have to modify the CMakeLists to introduce a dependency on k4DetectorPerformance and set the proper environment variables for the tests."
+                },
+                {
+                    "author": "BrieucF",
+                    "body": "> decided to go along the easy path and restore previous behaviour of tests (no track validation alg run in the tests). To make it work I think we would have to modify the CMakeLists to introduce a dependency on k4DetectorPerformance and set the proper environment variables for the tests.\r\n\r\nOk, can\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Tests run fine and I take @BrieucF and @jmcarcell comments as a go ahead for merging this PR (the change mentioned by Juan is rather for k4RecTracker - first - and then to be propagated here, if we go that way). So I'll merge"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 3
         },
         {
             "org": "hep-fcc",
@@ -1584,89 +1958,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4geo",
-            "num": 658,
-            "title": "Updated MUSIC geometry with instrumented nozzles",
-            "url": "https://github.com/key4hep/k4geo/pull/658",
-            "author": "casarsa",
-            "mergedAt": "2026-09-17",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n\r\n* Introduce MuSIC_v3, an updated MuSIC detector geometry.\r\n* Instrument each nozzle with three silicon-detector disks forming the Forward Tracker, housed in air gaps within the nozzle.\r\n* Reduce the number of vertex barrel and endcap layers and correct their layer IDs.\r\n* Remove the yoke iron and use the HCAL barrel as the magnetic flux return.\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 1482,
-                "deletions": 12,
-                "files": 15
-            },
-            "files": [
-                "MuColl/MuSIC/compact/MuSIC_v2/ECalBarrel_crilin.xml",
-                "MuColl/MuSIC/compact/MuSIC_v2/ECalEndcap_crilin.xml",
-                "MuColl/MuSIC/compact/MuSIC_v2/HCalEndcap_o1_v01_01.xml",
-                "MuColl/MuSIC/compact/MuSIC_v2/materials.xml",
-                "MuColl/MuSIC/compact/MuSIC_v3/Beampipe_o1_v01_02.xml",
-                "MuColl/MuSIC/compact/MuSIC_v3/ForwardTracker.xml",
-                "MuColl/MuSIC/compact/MuSIC_v3/MuSIC_v3.xml",
-                "MuColl/MuSIC/compact/MuSIC_v3/Nozzle_10deg_v2.xml",
-                "MuColl/MuSIC/compact/MuSIC_v3/README.md",
-                "MuColl/MuSIC/compact/MuSIC_v3/Vertex_o2_v06_01.xml",
-                "MuColl/MuSIC/compact/MuSIC_v3/YokeBarrel_o1_v01_01.xml",
-                "MuColl/MuSIC/compact/MuSIC_v3/YokeEndcap_o1_v01_01.xml",
-                "MuColl/MuSIC/compact/MuSIC_v3/text_description.md",
-                "MuColl/MuSIC/compact/README.md",
-                "test/CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "madbaron",
-                    "body": "Thanks @casarsa for preparing this PR!\r\n\r\nAs a general comment, I'd suggest to include in v3 only the files that actually changed wrt to the previous versions, and otherwise link to those in the previous versions when nothing changed without adding duplicated files.\r\n\r\nI'll add a couple more detaile\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "These are pre-existing issues, but you may want to fix them for v3.\r\n\r\n- The largest overlap in the detector is `Vertex` \u2194 `NozzleW_right` by **3.04 cm**, at the vertex envelope corner (local point r \u2248 3.5 cm, z = 38 cm).\r\n- `BCH2` and `BCH2_composite` coexist. They are very different materials: `BC\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "One last thing: please remember to add Music v3 to the list of tests https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt"
-                },
-                {
-                    "author": "casarsa",
-                    "body": "> These are pre-existing issues, but you may want to fix them for v3.\r\n> \r\n> * The largest overlap in the detector is `Vertex` \u2194 `NozzleW_right` by **3.04 cm**, at the vertex envelope corner (local point r \u2248 3.5 cm, z = 38 cm).\r\n> * `BCH2` and `BCH2_composite` coexist. They are very different materi\u2026"
-                },
-                {
-                    "author": "casarsa",
-                    "body": "> One last thing: please remember to add Music v3 to the list of tests https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\r\n\r\nAdded."
-                },
-                {
-                    "author": "casarsa",
-                    "body": "> Thanks @casarsa for preparing this PR!\r\n> \r\n> As a general comment, I'd suggest to include in v3 only the files that actually changed wrt to the previous versions, and otherwise link to those in the previous versions when nothing changed without adding duplicated files.\r\n> \r\n> I'll add a couple mo\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> > Thanks @casarsa for preparing this PR!\r\n> > As a general comment, I'd suggest to include in v3 only the files that actually changed wrt to the previous versions, and otherwise link to those in the previous versions when nothing changed without adding duplicated files.\r\n> > I'll add a couple more\u2026"
-                },
-                {
-                    "author": "casarsa",
-                    "body": "Thank you for the review, @madbaron. I had decided what to import from v2 with a simple diff. I've gone now through the files in v3 one by one.\r\n\r\nFiles changed in v3:\r\n- MuSIC_v3.xml, ForwardTracker.xml (new), Nozzle_10deg_v2.xml (profile parameterised, gaps for the forward tracker, BCH2);\r\n- Beamp\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> So, I can additionally take from MuSIC_v2 as they are: InnerTracker_o2_v07_01.xml, OuterTracker_o2_v07_01.xml, HCalBarrel_o1_v01_01.xml, and Solenoid_o1_v01_01.xml.\r\n\r\nI think we should do this\r\n \r\n> With minimal changes in v2, I could make reusable in v3: materials.xml, ECalBarrel_crilin.xml, ECa\u2026"
-                },
-                {
-                    "author": "casarsa",
-                    "body": "> > So, I can additionally take from MuSIC_v2 as they are: InnerTracker_o2_v07_01.xml, OuterTracker_o2_v07_01.xml, HCalBarrel_o1_v01_01.xml, and Solenoid_o1_v01_01.xml.\r\n> \r\n> I think we should do this\r\n> \r\n> > With minimal changes in v2, I could make reusable in v3: materials.xml, ECalBarrel_crilin\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "Thanks @casarsa! \r\nThe PR looks good to me - though I'd ask you to update the PR description to use the key4hep-style release notes:\r\n\r\nBEGINRELEASENOTES\r\n- Thank you for writing the text to appear in the release notes. It will show up\r\n  exactly as it appears between the two ALL CAPS lines\r\n- ...\r\n\u2026"
-                }
-            ],
-            "comments_total": 11,
-            "reviews": [],
-            "reviews_total": 15
-        },
-        {
-            "org": "key4hep",
             "repo": "k4ActsTracking",
             "num": 98,
             "title": "Fix compatibility with updated ACTS APIs",
@@ -1775,136 +2066,6 @@
             "reviews_total": 0
         },
         {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 99,
-            "title": "Update clang format configuration to be consistent with the rest of Key4hep",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/99",
-            "author": "tmadlener",
-            "mergedAt": "2026-09-17",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Update the `.clang-format` configuration to the one the rest of Key4hep uses\r\n- Format all c++ files to comply\r\n\r\nENDRELEASENOTES\r\n\r\n\r\nThe `.clang-format` file is now the same as https://github.com/key4hep/key4hep-dev-utils/blob/main/defaults/.clang-format",
-            "diff": {
-                "additions": 5069,
-                "deletions": 4921,
-                "files": 56
-            },
-            "files": [
-                ".clang-format",
-                "GNNTrackFinding/include/ONNXInferenceModel.h",
-                "GNNTrackFinding/src/CCAndWalkTrackBuilding.cpp",
-                "GNNTrackFinding/src/CCAndWalkTrackBuilding.h",
-                "GNNTrackFinding/src/GNNTrackFinder.cpp",
-                "GNNTrackFinding/src/GNNTrackFinder.h",
-                "GNNTrackFinding/src/ONNXInferenceModel.cpp",
-                "GNNTrackFinding/src/OnnxMetricLearning.cpp",
-                "GNNTrackFinding/src/OnnxMetricLearning.h",
-                "GNNTrackFinding/src/PaddedEdgeRemoval.cpp",
-                "GNNTrackFinding/src/PaddedEdgeRemoval.h",
-                "k4ActsTracking/include/k4ActsTracking/ACTSAlgBase.hxx",
-                "k4ActsTracking/include/k4ActsTracking/ACTSDuplicateRemoval.hxx",
-                "k4ActsTracking/include/k4ActsTracking/ACTSSeededCKFTrackingAlg.hxx",
-                "k4ActsTracking/include/k4ActsTracking/ActsGaudiLogger.h",
-                "k4ActsTracking/include/k4ActsTracking/CKFRunner.hxx",
-                "k4ActsTracking/include/k4ActsTracking/CKFTracking.hxx",
-                "k4ActsTracking/include/k4ActsTracking/CellIDSelector.h",
-                "k4ActsTracking/include/k4ActsTracking/FilterTracksAlg.hxx",
-                "k4ActsTracking/include/k4ActsTracking/GeometryContainers.hxx",
-                "k4ActsTracking/include/k4ActsTracking/GeometryIdMappingTool.hxx",
-                "k4ActsTracking/include/k4ActsTracking/GeometryIdSelector.hxx",
-                "k4ActsTracking/include/k4ActsTracking/Helpers.hxx",
-                "k4ActsTracking/include/k4ActsTracking/HitFeatures.hxx",
-                "k4ActsTracking/include/k4ActsTracking/IActsGeoSvc.h",
-                "k4ActsTracking/include/k4ActsTracking/KFRunner.hxx",
-                "k4ActsTracking/include/k4ActsTracking/Measurement.hxx",
-                "k4ActsTracking/include/k4ActsTracking/MeasurementCalibrator.hxx",
-                "k4ActsTracking/include/k4ActsTracking/RunnerCommon.hxx",
-                "k4ActsTracking/include/k4ActsTracking/SourceLink.hxx"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 96,
-            "title": "Make pre-commit workflow triggerable in UI",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/96",
-            "author": "tmadlener",
-            "mergedAt": "2026-09-17",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Make it possible to trigger the pre-commit workflow from the github UI\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 6,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/pre-commit.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 2
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 87,
-            "title": "ci: drop ACTS TGeo plugin build",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/87",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-17",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Remove the unused TGeo plugin from the ACTS master CI build configuration.",
-            "diff": {
-                "additions": 0,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/acts-master-ci.yml"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "checking if simply retriggering CI makes it pass. Failure looks like an environment issue."
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "k4RecCalorimeter",
-            "num": 284,
-            "title": "fix: only look for Boost when building tests",
-            "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/284",
-            "author": "madbaron",
-            "mergedAt": "2026-09-17",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- `RecCaloCommon`: move `find_package(boost_timer)` and `find_package(boost_unit_test_framework)` inside the `if(BUILD_TESTING)` block. Only the test executables (`IDMap_test.exe`, `phihelper_test.exe`) link against Boost, so configuring with `-DBUILD_TESTING=OFF` no longer requires Boost to be built with the `timer` and `test` components.\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 4,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "RecCaloCommon/CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "hep-fcc",
             "repo": "FCC-config",
             "num": 386,
@@ -1941,258 +2102,6 @@
                 }
             ],
             "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 23,
-            "title": "Fix: cmake cxx standard error message missing quotes",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/23",
-            "author": "tmadlener",
-            "mergedAt": "2026-09-16",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Fix missing closing quotes in error message of cmake default config\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "defaults/cmake/Key4hepConfig.cmake"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "This should be now in all the repositories that use `Key4hepConfig.cmake`"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 24,
-            "title": "Validate Key4hep CMake configuration in CI",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/24",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-16",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 18,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/validate-cmake-config.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 84,
-            "title": "Update dependency marked to v18.0.13",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/84",
-            "author": "renovate",
-            "mergedAt": "2026-09-16",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [marked](https://marked.js.org) ([source](https://redirect.github.com/markedjs/marked)) | `18.0.11` \u2192 `18.0.13` | ![age](https://developer.mend.io/api/mc/badges/age/npm/marked/18.0.13?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/marked/18.0.11/18.0.13?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>markedjs/marked (marked)</summary>\n\n### [`v18.0.13`](https://redirect.github.com/markedjs/marked/compare/v18.0.12...634f81064433ffd12a6f2c7e8a5ae1b89c3ef4f1)\n\n[Compare Source](https://redirect.github.com/markedjs/marked/compare/v18.0.12...v18.0.13)\n\n###\u2026",
-            "diff": {
-                "additions": 39,
-                "deletions": 39,
-                "files": 2
-            },
-            "files": [
-                "Makefile",
-                "static/vendor/marked.min.js"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 86,
-            "title": "Update module golang.org/x/oauth2 to v0.37.0",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/86",
-            "author": "renovate",
-            "mergedAt": "2026-09-16",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [golang.org/x/oauth2](https://pkg.go.dev/golang.org/x/oauth2) | [`v0.36.0` \u2192 `v0.37.0`](https://cs.opensource.google/go/x/oauth2/+/refs/tags/v0.36.0...refs/tags/v0.37.0) | ![age](https://developer.mend.io/api/mc/badges/age/go/golang.org%2fx%2foauth2/v0.37.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/go/golang.org%2fx%2foauth2/v0.36.0/v0.37.0?slim=true) |\n\n---\n\n### Configuration\n\n\ud83d\udcc5 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n\ud83d\udea6 **Automerge**: Disabled by config. Please merge th\u2026",
-            "diff": {
-                "additions": 4,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                "go.mod",
-                "go.sum"
-            ],
-            "comments": [
-                {
-                    "author": "renovate",
-                    "body": "### \u2139\ufe0f Artifact update notice\n\n##### File name: go.mod\n\nIn order to perform the update(s) described in the table above, Renovate ran the `go get` command, which resulted in the following additional change(s):\n\n\n- The `go` directive was updated for compatibility reasons\n\n\nDetails:\n\n\n| **Package** | *\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 83,
-            "title": "Update dependency dompurify to v3.4.15",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/83",
-            "author": "renovate",
-            "mergedAt": "2026-09-16",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [dompurify](https://redirect.github.com/cure53/DOMPurify) | `3.4.14` \u2192 `3.4.15` | ![age](https://developer.mend.io/api/mc/badges/age/npm/dompurify/3.4.15?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/dompurify/3.4.14/3.4.15?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>cure53/DOMPurify (dompurify)</summary>\n\n### [`v3.4.15`](https://redirect.github.com/cure53/DOMPurify/releases/tag/3.4.15): DOMPurify 3.4.15\n\n[Compare Source](https://redirect.github.com/cure53/DOMPurify/compare/3.4.14...3.4.15)\n\n- Added better clobbering hardening when XML content \u2026",
-            "diff": {
-                "additions": 3,
-                "deletions": 3,
-                "files": 2
-            },
-            "files": [
-                "Makefile",
-                "static/vendor/purify.min.js"
-            ],
-            "comments": [
-                {
-                    "author": "renovate",
-                    "body": "### Edited/Blocked Notification\n\nRenovate will not automatically rebase this PR, because it does not recognize the last commit author and assumes somebody else may have edited the PR.\n\nYou can manually request rebase by checking the rebase/retry box above.\n\n \u26a0\ufe0f **Warning**: custom changes will be lo\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 85,
-            "title": "Update module github.com/jackc/pgx/v5 to v5.11.0",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/85",
-            "author": "renovate",
-            "mergedAt": "2026-09-16",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [github.com/jackc/pgx/v5](https://redirect.github.com/jackc/pgx) | `v5.10.0` \u2192 `v5.11.0` | ![age](https://developer.mend.io/api/mc/badges/age/go/github.com%2fjackc%2fpgx%2fv5/v5.11.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/go/github.com%2fjackc%2fpgx%2fv5/v5.10.0/v5.11.0?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>jackc/pgx (github.com/jackc/pgx/v5)</summary>\n\n### [`v5.11.0`](https://redirect.github.com/jackc/pgx/releases/tag/v5.11.0)\n\n[Compare Source](https://redirect.github.com/jackc/pgx/compare/v5.10.0...v5.11.0)\n\nThis release adds direct \u2026",
-            "diff": {
-                "additions": 3,
-                "deletions": 1,
-                "files": 2
-            },
-            "files": [
-                "go.mod",
-                "go.sum"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 87,
-            "title": "Update module modernc.org/sqlite to v1.59.0",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/87",
-            "author": "renovate",
-            "mergedAt": "2026-09-16",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [modernc.org/sqlite](https://gitlab.com/cznic/sqlite) | `v1.58.0` \u2192 `v1.59.0` | ![age](https://developer.mend.io/api/mc/badges/age/go/modernc.org%2fsqlite/v1.59.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/go/modernc.org%2fsqlite/v1.58.0/v1.59.0?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>cznic/sqlite (modernc.org/sqlite)</summary>\n\n### [`v1.59.0`](https://gitlab.com/cznic/sqlite/compare/v1.58.0...v1.59.0)\n\n[Compare Source](https://gitlab.com/cznic/sqlite/compare/v1.58.0...v1.59.0)\n\n</details>\n\n---\n\n### Configuration\n\n\ud83d\udcc5 **Schedule**: (UTC)\n\n- Br\u2026",
-            "diff": {
-                "additions": 6,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                "go.mod",
-                "go.sum"
-            ],
-            "comments": [
-                {
-                    "author": "renovate",
-                    "body": "### \u2139\ufe0f Artifact update notice\n\n##### File name: go.mod\n\nIn order to perform the update(s) described in the table above, Renovate ran the `go get` command, which resulted in the following additional change(s):\n\n\n- 1 additional dependency was updated\n\n\nDetails:\n\n\n| **Package**        | **Change**     \u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 82,
-            "title": "Update dependency katex to v0.18.7",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/82",
-            "author": "renovate",
-            "mergedAt": "2026-09-16",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [katex](https://katex.org) ([source](https://redirect.github.com/KaTeX/KaTeX)) | `0.18.5` \u2192 `0.18.7` | ![age](https://developer.mend.io/api/mc/badges/age/npm/katex/0.18.7?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/katex/0.18.5/0.18.7?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>KaTeX/KaTeX (katex)</summary>\n\n### [`v0.18.7`](https://redirect.github.com/KaTeX/KaTeX/blob/HEAD/CHANGELOG.md#0187-2026-09-06)\n\n[Compare Source](https://redirect.github.com/KaTeX/KaTeX/compare/v0.18.6...v0.18.7)\n\n##### Features\n\n- add \\reflectbox and \\mapsfrom support \u2026",
-            "diff": {
-                "additions": 3,
-                "deletions": 3,
-                "files": 3
-            },
-            "files": [
-                "Makefile",
-                "static/vendor/katex/katex.min.css",
-                "static/vendor/katex/katex.min.js"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 88,
-            "title": "Track DIRAC/iLCDirac production IDs on campaign-assigned requests",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/88",
-            "author": "kjvbrt",
-            "mergedAt": "2026-09-16",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "- Add a `production_ids` table (coordinator-only, one-to-many per request) to record DIRAC/iLCDirac production IDs, each with an optional label\n- Only shown/usable once a request is assigned to a campaign, both in the UI and enforced server-side\n- Adding/removing an entry logs to the request's activity feed\n- No outbound link to the DIRAC portal yet \u2014 plain text for now, easy to wire up once a URL pattern is available",
-            "diff": {
-                "additions": 254,
-                "deletions": 2,
-                "files": 10
-            },
-            "files": [
-                "cmd/fcc-drs/main.go",
-                "internal/db/postgres.go",
-                "internal/db/sqlite.go",
-                "internal/handlers/handlers.go",
-                "internal/handlers/pipeline.go",
-                "internal/handlers/production_ids.go",
-                "internal/models/production_id.go",
-                "internal/models/update.go",
-                "templates/partials/production_ids.html",
-                "templates/partials/request_detail.html"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
         }
     ]
 }
