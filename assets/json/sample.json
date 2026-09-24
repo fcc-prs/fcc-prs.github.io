@@ -2,10 +2,10 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 667,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/667'> XML to ROOT conversion bug fixes</a>",
-            "author": "apausa",
-            "createdAt": "2026-09-24",
+            "num": 625,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-03",
             "updatedAt": "2026-09-24",
             "mergeOk": "yes",
             "labels": "",
@@ -13,10 +13,10 @@
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 625,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-03",
+            "num": 667,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/667'> XML to ROOT conversion bug fixes</a>",
+            "author": "apausa",
+            "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
             "mergeOk": "yes",
             "labels": "",
@@ -116,7 +116,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/521'>build: fix hardcoded assumption that ROOT dictionaries are built</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-13",
-            "updatedAt": "2026-09-23",
+            "updatedAt": "2026-09-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -315,7 +315,7 @@
             "author": "tmadlener",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -337,7 +337,7 @@
             "author": "dudarboh",
             "createdAt": "2026-01-13",
             "updatedAt": "2026-01-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -545,6 +545,17 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/97'>Add CMake flags gating Tracking and DCHdigi</a>",
             "author": "madbaron",
             "createdAt": "2026-09-01",
+            "updatedAt": "2026-09-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 104,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/104'>remove Delphes dep</a>",
+            "author": "madbaron",
+            "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
             "mergeOk": "yes",
             "labels": "",
@@ -998,17 +1009,6 @@
             "createdAt": "2026-05-06",
             "updatedAt": "2026-05-06",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 197,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/197'>fix(dashboard): stop caching WebEOS stalls as missing data </a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-24",
-            "updatedAt": "2026-09-24",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
