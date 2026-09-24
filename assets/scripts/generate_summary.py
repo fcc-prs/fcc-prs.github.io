@@ -65,7 +65,7 @@ and downstream impact, produce your response in exactly two sections.
 A bulleted list following the Include/Style rules above.
 
 **Section 2 — `## Omitted`**
-For every PR you chose NOT to include, one line each:
+For every PR you chose NOT to include, one line per PR — never group multiple PRs on one line:
 `- [org/repo#num](url) — one-sentence reason for exclusion`
 
 Format the entire response as Markdown."""

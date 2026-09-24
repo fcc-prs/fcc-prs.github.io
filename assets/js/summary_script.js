@@ -100,7 +100,7 @@ function renderSummary(data) {
       summary.textContent = `Omitted PRs (${omitted.length})`;
       details.appendChild(summary);
       const ul = document.createElement('ul');
-      omitted.forEach(item => {
+      omitted.filter(item => item.url).forEach(item => {
         const li = document.createElement('li');
         const link = document.createElement('a');
         link.href = item.url || '#';
