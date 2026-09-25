@@ -2,17 +2,6 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 667,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/667'> XML to ROOT conversion bug fixes</a>",
-            "author": "apausa",
-            "createdAt": "2026-09-24",
-            "updatedAt": "2026-09-25",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 625,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
             "author": "jmcarcell",
@@ -40,7 +29,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +51,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +62,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +73,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +84,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -261,6 +250,17 @@
             "createdAt": "2025-05-12",
             "updatedAt": "2026-09-21",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 928,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/928'>key4hep-external-stack: depends_on ms-gsl instead of cppgsl</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-09-25",
+            "updatedAt": "2026-09-25",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -776,7 +776,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-tutorials/pull/33'>Add Generate Gaudi Functionals tutorial</a>",
             "author": "ianna",
             "createdAt": "2026-09-22",
-            "updatedAt": "2026-09-24",
+            "updatedAt": "2026-09-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1520,6 +1520,17 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
+            "num": 383,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/383'>[IDEA] option 2 reconstruction config & CTest</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-08-24",
+            "updatedAt": "2026-09-25",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
             "num": 398,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/398'>[ALLEGRO] Factorize the common Gaudi configuration between o1 and o2</a>",
             "author": "BrieucF",
@@ -1553,23 +1564,12 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
-            "num": 383,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/383'>[IDEA] option 2 reconstruction config & CTest</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-08-24",
-            "updatedAt": "2026-09-25",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
             "num": 391,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/391'>[IDEA] Set shared flag to false if single thread</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-17",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1591,7 +1591,7 @@
             "author": "Victor-Schwan",
             "createdAt": "2026-08-19",
             "updatedAt": "2026-08-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1734,7 +1734,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-07-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1767,7 +1767,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-09-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1789,7 +1789,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
