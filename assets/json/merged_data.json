@@ -1,6 +1,303 @@
 {
-    "updated_at": "2026-09-24T10:55:52Z",
+    "updated_at": "2026-09-25T10:58:26Z",
     "data": [
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 392,
+            "title": "[ALLEGRO] Include TRAPPIST in o1_v3 and o2_v1 config",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/392",
+            "author": "jacofan",
+            "mergedAt": "2026-09-25",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "Add TRAPPIST inference and particle identification in ALLEGRO's configuration files.",
+            "diff": {
+                "additions": 304,
+                "deletions": 42,
+                "files": 4
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/ctest_sim_digi_reco.sh",
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/run_digi_reco.py",
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/ctest_sim_digi_reco.sh",
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/run_digi_reco.py"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Ciao @jacofan \r\nexcellent! It might be a good idea to edit tests for o1_v03 (https://github.com/giovannimarchiori/FCC-config/blob/main/FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/ctest_sim_digi_reco.sh) and o1_v02 to run Trappist - at least as an option. Would the test time become much longer if we run Tra\u2026"
+                },
+                {
+                    "author": "jacofan",
+                    "body": "Ciao @giovannimarchiori! I added tests for both o1_v03 and o2_v01. For o1_v03, the local test runtime increases from 523 s to 553 s with TRAPPIST enabled. Since the overhead is small, I included TRAPPIST in the baseline rather than making it optional."
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "@jacofan can you remind me - we only have a model for topoclusters? I noticed that for SW clusters you didn't add the same option"
+                },
+                {
+                    "author": "jacofan",
+                    "body": "@giovannimarchiori I have an ONNX model for SW as well. I didn\u2019t add it because TRAPPIST uses the output of `PairCaloClustersPi0` (the invariant-mass pi0 finder), and, according to the [documentation slides referenced in the current sequence](https://github.com/HEP-FCC/FCC-config/blob/68e5d504afa960\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "I think It would be interesting to add it also for SW clusters with some clear \"FIXME\" in the script to indicate what potentially is not optimised. This would allow us to already assess the performance with SW clusters in this non-optimised scenario and establish a lower bound on it\r\n@BrieucF what d\u2026"
+                },
+                {
+                    "author": "BrieucF",
+                    "body": "> I think It would be interesting to add it also for SW clusters with some clear \"FIXME\" in the script to indicate what potentially is not optimised. This would allow us to already assess the performance with SW clusters in this non-optimised scenario and establish a lower bound on it @BrieucF what \u2026"
+                },
+                {
+                    "author": "jacofan",
+                    "body": "TRAPPIST is now available for SW clusters. I also made `PairCaloClustersPi0` work with clusters that don't have `ShapeParameters`"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @jacofan I added some very minor comments, in general the PR looks good, let's wait for Juan to follow-up on his previous comment"
+                }
+            ],
+            "comments_total": 8,
+            "reviews": [],
+            "reviews_total": 12
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 432,
+            "title": "Support Gaudi 41 EventContext data handle API",
+            "url": "https://github.com/key4hep/k4FWCore/pull/432",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-24",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "This supports [Gaudi MR !1888](https://gitlab.cern.ch/gaudi/Gaudi/-/merge_requests/1888), which changes the DataHandle API to use `EventContext` and is expected in Gaudi 41. This is needed to make CI pass in that MR, since k4FWCore is also tested there.\r\n\r\nBEGINRELEASENOTES\r\n - Support the EventContext data handle API introduced with Gaudi 41.\r\n - Some tests that use the handles still use the \"old way\" of not passing anything\r\n\r\nENDRELEASENOTES\r\n\r\nNothing changes for existing algorithms, only those using `DataHandles` can pass the `EventContext` now. I left a few tests with the empty `createAndPut()`.",
+            "diff": {
+                "additions": 95,
+                "deletions": 20,
+                "files": 5
+            },
+            "files": [
+                "k4FWCore/components/EventHeaderCreator.cpp",
+                "k4FWCore/components/Reader.cpp",
+                "k4FWCore/include/k4FWCore/DataHandle.h",
+                "k4FWCore/include/k4FWCore/FunctionalUtils.h",
+                "k4FWCore/include/k4FWCore/Transformer.h"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "I'll merge this to make CI pass in Gaudi"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-doc",
+            "num": 165,
+            "title": "Update github actions and introduce dependabot setup",
+            "url": "https://github.com/key4hep/key4hep-doc/pull/165",
+            "author": "tmadlener",
+            "mergedAt": "2026-09-24",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Update all github actions and pin them via hash\r\n- Introduce dependabot setup to automate this in the future\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 8,
+                "deletions": 2,
+                "files": 3
+            },
+            "files": [
+                ".github/dependabot.yml",
+                ".github/workflows/generate_overview.yml",
+                ".github/workflows/pr-deploy.yml"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": ":rocket: Documentation preview: https://key4hep.github.io/key4hep-doc/pr-preview/pr-165/\n\nIt becomes available once the github pages deployment has completed,\nis updated on every push and is removed once this PR is closed.\n<!-- Sticky Pull Request Commentpr-preview -->"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-doc",
+            "num": 164,
+            "title": "Only match toctree entries when fetching upstream PR sources",
+            "url": "https://github.com/key4hep/key4hep-doc/pull/164",
+            "author": "tmadlener",
+            "mergedAt": "2026-09-24",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Matching the bare file name of the upstream PR file anywhere in the top level files picks up unrelated lines (e.g. markdown links to README.md on the landing page), resulting in fetching a file called '-'. Require the reference to be a whole toctree entry prefixed with the upstream repository name.\r\n\r\n\r\nBEGINRELEASENOTES\r\n- Fix bug in preview generation for dependent PRs introduced by re-organizing of landing page\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 5,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "scripts/fetch_upstream_pr_sources.sh"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-09-24 14:27 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 95,
+            "title": "Use upstream ACTS converters",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/95",
+            "author": "madbaron",
+            "mergedAt": "2026-09-24",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Use the centralised ACTS EDM4hep converter (`ActsPlugins::EDM4hepUtil`) instead of the local conversion code. `ACTS2edm4hep_track` is now a thin wrapper around `writeTrack`, and the seed (`AtFirstHit`) and calorimeter (`AtCalorimeter`) track states are built with `writeTrackState`.\r\n- Remove `ACTS2edm4hep_trackState`, whose LCIO parameter conversion and covariance packing are now provided by the ACTS plugin.\r\n- Fix the track state covariance layout: it now follows the EDM4hep parameter order (`edm4hep::TrackParams`), so downstream consumers read the correct elements.\r\n- Link against `Acts::PluginEDM4hep`.\r\n\r\nENDRELEASENOTES\r\n\r\nFollow-up to the discussion in https://github.com/key4hep/k4ActsTracking/issues/44: the conversion we maintain here predates the ACTS EDM4hep pl\u2026",
+            "diff": {
+                "additions": 91,
+                "deletions": 249,
+                "files": 10
+            },
+            "files": [
+                ".github/workflows/acts-master-ci.yml",
+                "CMakeLists.txt",
+                "k4ActsTracking/CMakeLists.txt",
+                "k4ActsTracking/include/k4ActsTracking/ACTSSeededCKFTrackingAlg.hxx",
+                "k4ActsTracking/include/k4ActsTracking/CKFRunner.hxx",
+                "k4ActsTracking/include/k4ActsTracking/Helpers.hxx",
+                "k4ActsTracking/include/k4ActsTracking/KFRunner.hxx",
+                "k4ActsTracking/include/k4ActsTracking/RunnerCommon.hxx",
+                "k4ActsTracking/src/components/ACTSSeededCKFTrackingAlg.cxx",
+                "k4ActsTracking/src/components/Helpers.cxx"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "I haven't looked at the code yet, but I think the small differences will only affect muon collider so far, right? The most visible one is the missing track states, I suppose. Do you know, does the original behavior come from MarlinTrk?"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> I haven't looked at the code yet, but I think the small differences will only affect muon collider so far, right? \r\n\r\nYes, I think so.\r\n\r\n> The most visible one is the missing track states, I suppose. Do you know, does the original behavior come from MarlinTrk?\r\n\r\nI don't know for sure, but I susp\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Rebased and formatted correctly to comply with the new `.clang-format` rules."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Key4hep nightlies based CI should start working again tomorrow (resp. once there is a nightly with the changes from #98).\r\n\r\nIs there anything in here still left to do that prevent us from merging?"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I think that as soon as the ACTS master goes green (needs https://github.com/key4hep/k4ActsTracking/pull/102) we could merge.\r\nThough I note I had tested this only with some month-old version."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "ACTS master based CI fails with some linker error. I am investigating why at the moment."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "@tmadlener @jmcarcell is it possible that the alma9 nightly builds acts without +edm4hep?"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "It is, I thought it was enabled. I'll have a look"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> ACTS master based CI fails with some linker error. I am investigating why at the moment.\r\n\r\nNo longer. Making ACTS use the system / stack nlohmann json library removes whatever library / symbol mismatch was there. Waiting for tests to go green. \r\n\r\nUnless there are more comments, I will merge this\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "> @jmcarcell in case it's not yet the case for the LCG stacks, building acts with `-DACTS_USE_SYSTEM_NLOHMANN_JSON=ON` will become necessary to not break nightlies.\r\n\r\nBut if the nightlies pass that shouldn't happen? I'm not sure why the ACTS master workflow failed, probably it has to do with the fl\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> `-DACTS_USE_SYSTEM_LIBS=ON`\r\n\r\nturns on `DACTS_USE_SYSTEM_NLOHMANN_JSON=ON`:\r\n\r\nhttps://github.com/acts-project/acts/blob/3c6eb8bd8b9d1cf475a503601d2e929c4193bdb6/CMakeLists.txt#L74"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> But if the nightlies pass that shouldn't happen?\r\n\r\nYes. Sorry, I didn't think far enough here. This is clearly already setup properly."
+                }
+            ],
+            "comments_total": 12,
+            "reviews": [],
+            "reviews_total": 3
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 197,
+            "title": "fix(dashboard): stop caching WebEOS stalls as missing data ",
+            "url": "https://github.com/key4hep/k4Bench/pull/197",
+            "author": "jbeirer",
+            "mergedAt": "2026-09-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Tests\n\n\n___\n\n### **Description**\n- Distinguish transient WebEOS stalls from absent data\n  - New `IncompleteFetch` exception carrying partial results\n  - 404 treated as an answer; timeouts/5xx are not\n\n- Add `strict=True` mode to remote fetch/list functions\n\n- Never cache incomplete results; return partials with a toast\n\n- Retry once on 502/503/504 with longer read timeout\n\n- Warn instead of \"no reports yet\" when listings fail\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  remote[\"k4bench.remote strict=True fetches\"] -- \"transient failure\" --> exc[\"IncompleteFetch(partial, failures)\"]\n  exc -- \"content\" --> keep[\"_keep_complete: toast + return partial uncached\"]\n  exc -- \"discovery\" --> raise[\"raise to caller\"]\n  raise -- \"fal\u2026",
+            "diff": {
+                "additions": 979,
+                "deletions": 92,
+                "files": 10
+            },
+            "files": [
+                "dashboard/remote_cache.py",
+                "dashboard/tabs/_regression_trend.py",
+                "dashboard/tabs/detectors_overview.py",
+                "dashboard/tabs/regressions.py",
+                "dashboard/tabs/stack_changes.py",
+                "k4bench/remote.py",
+                "tests/unit/test_dashboard_candidate_nights.py",
+                "tests/unit/test_dashboard_overview_apptest.py",
+                "tests/unit/test_dashboard_remote_cache.py",
+                "tests/unit/test_remote.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/975628b88cef0684ecdd4923d8f7363226783398)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 18,828 in / 9 out / 18,837 total\n- Time cost: 742.9s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/197?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/197#issuecomment-5818240463)** updated to latest commit https://github.com/key4hep/k4Bench/commit/56f178a332630fe3c5290750de3f4af5b3450d84"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 56f178a -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/197#issuecomment-5818240463)** updated to latest commit https://github.com/key4hep/k4Bench/commit/975628b88cef0684ecdd4923d8f7363226783398"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 22,928 in / 544 out / 23,472 total\n- Time cost: 747.5s\n- AI calls: 1\n\n</detail\u2026"
+                }
+            ],
+            "comments_total": 7,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "hep-fcc",
             "repo": "FCC-config",
@@ -1693,86 +1990,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-doc",
-            "num": 161,
-            "title": "Bump soupsieve from 2.8.4 to 2.9",
-            "url": "https://github.com/key4hep/key4hep-doc/pull/161",
-            "author": "dependabot",
-            "mergedAt": "2026-09-18",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [soupsieve](https://github.com/facelessuser/soupsieve) from 2.8.4 to 2.9.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/soupsieve/releases\">soupsieve's releases</a>.</em></p>\n<blockquote>\n<h2>2.9</h2>\n<ul>\n<li><strong>NEW</strong>: Drop Python 3.9 support.</li>\n<li><strong>NEW</strong>: Lazy compile selector patterns to improve initial import speed.</li>\n<li><strong>FIX</strong>: Correct <code>:nth-child</code>/<code>:nth-of-type</code> (and <code>-last-</code> variants) for <code>An+B</code> values whose sequence steps onto\nindex 0 or onto the last child (e.g. <code>:nth-child(2n-2)</code>, <code>:nth-child(n-1)</code>, <code>:nth-child(n+5)</code>), which previously\nmatched the wrong elements or nothing at all (<a href=\"http\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-09-18 05:36 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 102,
-            "title": "Use AxisSpec for blueprint material binning",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/102",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Replace deprecated (https://github.com/acts-project/acts/pull/5738)  material-binning APIs with AxisSpec\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 7,
-                "deletions": 7,
-                "files": 1
-            },
-            "files": [
-                "k4ActsTracking/src/components/DD4hepBlueprintConstruction.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4GaudiPandora",
-            "num": 54,
-            "title": "Fix PFO comparison for current EDM4hep",
-            "url": "https://github.com/key4hep/k4GaudiPandora/pull/54",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Fix PFO comparison with current EDM4hep (https://github.com/key4hep/EDM4hep/pull/520)\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "test/scripts/compare-pfos.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4Bench",
             "num": 189,
             "title": "chore(deps): bump matplotlib from 3.11.1 to 3.11.2 in /dashboard",
@@ -1895,213 +2112,6 @@
             "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-tutorials",
-            "num": 201,
-            "title": "Link dd4hep2root from k4geo instead of static copy",
-            "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/201",
-            "author": "apausa",
-            "mergedAt": "2026-09-18",
-            "mergedBy": "michmx",
-            "labels": [],
-            "body": "- [Add .vscode to .gitignore](https://github.com/HEP-FCC/fcc-tutorials/commit/3dcac962a9ac9a3f8f1c848348ab203ae27f5432)\r\n- [Link dd4hep2root from k4geo](https://github.com/HEP-FCC/fcc-tutorials/commit/ef76f873758b3d4ad9d1d7acff3051e265d0bb1a)",
-            "diff": {
-                "additions": 11,
-                "deletions": 10,
-                "files": 3
-            },
-            "files": [
-                ".gitignore",
-                "4-full-detector-sim/FCCeeGeneralOverview/FCCeeGeneralOverview.md",
-                "4-full-detector-sim/Visualization/Visualization.md"
-            ],
-            "comments": [
-                {
-                    "author": "kjvbrt",
-                    "body": "Good for now, should be a proper command inside Key4hep environment."
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCCeePhysicsStudies",
-            "num": 61,
-            "title": "Add FSR beam parameters",
-            "url": "https://github.com/HEP-FCC/FCCeePhysicsStudies/pull/61",
-            "author": "jeyserma",
-            "mergedAt": "2026-09-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Updated FSR lattice parameters. Reference to the FSR.\r\n\r\nThese values are still for the GHC lattice, while we switched to the new LCC optics. However, for LCC, the beam parameters above the Z pole are not yet available. In any case, at the IP, the beam parameters between LCC and GHC are similar.",
-            "diff": {
-                "additions": 11,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "General/README.md"
-            ],
-            "comments": [
-                {
-                    "author": "kjvbrt",
-                    "body": "Thanks @jeyserma"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 98,
-            "title": "Fix compatibility with updated ACTS APIs",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/98",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-17",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Fix k4ActsTracking compatibility with the current ACTS propagator and grid-bin finder APIs after https://github.com/acts-project/acts/pull/6004\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 5,
-                "deletions": 5,
-                "files": 3
-            },
-            "files": [
-                "k4ActsTracking/src/components/ACTSSeededCKFTrackingAlg.cxx",
-                "k4ActsTracking/src/components/ActsTestPropagator.cpp",
-                "k4ActsTracking/src/components/CKFTrackingAlg.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "How do we deal with these actually? We will have to fix things here to make the nightlies pass, because we build acts from main there. On the other hand if someone wants to build a local version of k4ActsTracking on top of a release they will no longer be able to do so. (Plus all the release based w\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "There is no other way since sometimes ACTS does incompatible changes and it would be very hard to check on the current version."
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "In principle we have an ACTS main/master build already in the CI here, so we could drop back to using tagged acts versions for the Key4hep nightlies?"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "But that doesn't really solve the issue that we have k4ActsTracking@main in the ACTS CI..."
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "The CI workflows that are still using an older tag / version of acts will fail after this until they are updated to a version of acts that has these changes already in."
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 97,
-            "title": "fix: require --compactFile in CKF, GNN, and geometry-visualization options",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/97",
-            "author": "jbeirer",
-            "mergedAt": "2026-09-17",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Fixed a cryptic Gaudi `TypeError`/`ValueError` when `--compactFile` was omitted in `CLD_CKFTracking.py`, `runGNNTrackFinding.py`, and `test_visualize_acts_geo.py` by making the argument required, with a clear error message.\r\n\r\nENDRELEASENOTES\r\n\r\n## Summary\r\n\r\n`--compactFile` was optional in several options scripts. When omitted, the resulting `None` reached `GeoSvc`'s `detectors` property as `[None]`, which failed deep in Gaudi's `PropertyProxy._isCompatible` with a cryptic `TypeError: NoneType takes no arguments` / `ValueError: received an instance of <class 'NoneType'>, but <class 'NoneType'> expected for property detectors`.\r\n\r\nMarking `--compactFile` `required=True` in the three affected scripts fails fast with a readable argparse error instead.",
-            "diff": {
-                "additions": 3,
-                "deletions": 1,
-                "files": 3
-            },
-            "files": [
-                "GNNTrackFinding/options/runGNNTrackFinding.py",
-                "k4ActsTracking/examples/test_visualize_acts_geo.py",
-                "test/options/_ckf_helpers.py"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "pre-commit failures are pre-existing, see #96"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 2
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 101,
-            "title": "Add python formatting via ruff to pre-commit hooks and CI",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/101",
-            "author": "tmadlener",
-            "mergedAt": "2026-09-17",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Enforce formatting of pyhton files via ruff in pre-commit and CI\r\n\r\nENDRELEASENOTES\r\n\r\n\r\nfixes #100",
-            "diff": {
-                "additions": 37,
-                "deletions": 33,
-                "files": 8
-            },
-            "files": [
-                ".pre-commit-config.yaml",
-                ".ruff.toml",
-                "GNNTrackFinding/options/runGNNTrackFinding.py",
-                "k4ActsTracking/examples/compare_material_tracks.py",
-                "k4ActsTracking/examples/material_recording_chunk.py",
-                "k4ActsTracking/examples/plot_steps.py",
-                "test/options/LUXE_CKFTracking.py",
-                "test/options/MAIA_CKFTrackingAlg.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCC-config",
-            "num": 386,
-            "title": "Added track validation option for IDEA and ctests",
-            "url": "https://github.com/HEP-FCC/FCC-config/pull/386",
-            "author": "TimLdl",
-            "mergedAt": "2026-09-17",
-            "mergedBy": "BrieucF",
-            "labels": [],
-            "body": "Built on #379\r\n\r\nI added the same changes to IDEA and made the option available in the ctests",
-            "diff": {
-                "additions": 194,
-                "deletions": 107,
-                "files": 4
-            },
-            "files": [
-                "FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/ctest_sim_digi_reco.sh",
-                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/ctest_sim_digi_reco.sh",
-                "FCCee/FullSim/IDEA/IDEA_o1_v03/ctest_sim_digi_reco.sh",
-                "FCCee/FullSim/IDEA/IDEA_o1_v03/run_digi_reco.py"
-            ],
-            "comments": [
-                {
-                    "author": "BrieucF",
-                    "body": "Thank you Tim!"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [
-                {
-                    "author": "copilot-pull-request-reviewer",
-                    "state": "COMMENTED",
-                    "body": "## Pull request overview\n\nThis PR extends the \u201crun tracking validation\u201d CLI option introduced in #379 to the IDEA full-sim digitization/reconstruction steering, and exposes that switch through the IDEA and ALLEGRO ctest wrapper scripts.\n\n**Changes:**\n- Added `--addTruthTracks` and `--runTrkValidatio\u2026"
-                }
-            ],
-            "reviews_total": 1
         }
     ]
 }
