@@ -2,21 +2,21 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 625,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-03",
-            "updatedAt": "2026-09-24",
+            "num": 667,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/667'> XML to ROOT conversion bug fixes</a>",
+            "author": "apausa",
+            "createdAt": "2026-09-24",
+            "updatedAt": "2026-09-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 667,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/667'> XML to ROOT conversion bug fixes</a>",
-            "author": "apausa",
-            "createdAt": "2026-09-24",
+            "num": 625,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-03",
             "updatedAt": "2026-09-24",
             "mergeOk": "yes",
             "labels": "",
@@ -116,7 +116,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/521'>build: fix hardcoded assumption that ROOT dictionaries are built</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-13",
-            "updatedAt": "2026-09-24",
+            "updatedAt": "2026-09-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -365,6 +365,17 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
+            "num": 62,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/62'>make ordering match hepmc</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-09-25",
+            "updatedAt": "2026-09-25",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
             "num": 48,
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/48'>Adding standard Key4hep workflows</a>",
             "author": "kjvbrt",
@@ -541,11 +552,33 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 84,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/84'>Add MUONdigitizer: cluster-based digitizer for IDEA muon system</a>",
+            "author": "mahmoudali2",
+            "createdAt": "2026-06-04",
+            "updatedAt": "2026-09-25",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "ueinhaus"
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 97,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/97'>Add CMake flags gating Tracking and DCHdigi</a>",
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/97'>Add CMake flags gating Tracking</a>",
             "author": "madbaron",
             "createdAt": "2026-09-01",
-            "updatedAt": "2026-09-24",
+            "updatedAt": "2026-09-25",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 81,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
+            "author": "JonaDilg",
+            "createdAt": "2026-05-07",
+            "updatedAt": "2026-09-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -556,7 +589,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/104'>remove Delphes dep</a>",
             "author": "madbaron",
             "createdAt": "2026-09-24",
-            "updatedAt": "2026-09-24",
+            "updatedAt": "2026-09-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -582,28 +615,6 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 84,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/84'>Add MUONdigitizer: cluster-based digitizer for IDEA muon system</a>",
-            "author": "mahmoudali2",
-            "createdAt": "2026-06-04",
-            "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "ueinhaus"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 81,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
-            "author": "JonaDilg",
-            "createdAt": "2026-05-07",
-            "updatedAt": "2026-09-08",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -1194,7 +1205,18 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
             "createdAt": "2026-08-11",
-            "updatedAt": "2026-09-23",
+            "updatedAt": "2026-09-25",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 557,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
+            "author": "bndikt",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1217,17 +1239,6 @@
             "author": "goblirsc",
             "createdAt": "2026-02-16",
             "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 557,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
-            "author": "bndikt",
-            "createdAt": "2026-09-16",
-            "updatedAt": "2026-09-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1509,11 +1520,33 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
-            "num": 392,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/392'>[ALLEGRO] Include TRAPPIST in o1_v3 and o2_v1 config</a>",
-            "author": "jacofan",
-            "createdAt": "2026-09-21",
-            "updatedAt": "2026-09-24",
+            "num": 398,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/398'>[ALLEGRO] Factorize the common Gaudi configuration between o1 and o2</a>",
+            "author": "BrieucF",
+            "createdAt": "2026-09-25",
+            "updatedAt": "2026-09-25",
+            "mergeOk": "yes",
+            "labels": "draft",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 230,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/230'>[ALLEGRO] add flag to run pandora</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2025-01-15",
+            "updatedAt": "2026-09-25",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 397,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/397'>[ALLEGRO] remove some hardcoded numbers</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-09-24",
+            "updatedAt": "2026-09-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1524,18 +1557,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/383'>[IDEA] option 2 reconstruction config & CTest</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-08-24",
-            "updatedAt": "2026-09-24",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 397,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/397'>[ALLEGRO] remove some hardcoded numbers</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-09-24",
-            "updatedAt": "2026-09-24",
+            "updatedAt": "2026-09-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1547,7 +1569,7 @@
             "author": "andread3vita",
             "createdAt": "2026-09-17",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1569,17 +1591,6 @@
             "author": "Victor-Schwan",
             "createdAt": "2026-08-19",
             "updatedAt": "2026-08-19",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 230,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/230'>add flag to run pandora</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2025-01-15",
-            "updatedAt": "2025-06-30",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -1723,7 +1734,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-07-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1756,7 +1767,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-09-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1778,7 +1789,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
