@@ -1,6 +1,137 @@
 {
-    "updated_at": "2026-09-25T10:58:26Z",
+    "updated_at": "2026-09-26T10:38:56Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 667,
+            "title": " XML to ROOT conversion bug fixes",
+            "url": "https://github.com/key4hep/k4geo/pull/667",
+            "author": "apausa",
+            "mergedAt": "2026-09-25",
+            "mergedBy": "s6anloes",
+            "labels": [],
+            "body": "To ease the review process, please consider the following before opening a pull request:\r\n- [x] the code is sufficiently well documented (e.g. inline comments)\r\n- [x] the relevant README(s) were updated. See e.g. https://github.com/key4hep/k4geo/blob/main/detector/calorimeter/README.md or https://github.com/key4hep/k4geo/blob/main/FCCee/IDEA/compact/README.md\r\n- [x] the code is covered by tests. See https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\r\n- [x] the PR source branch has been rebased (`--ff-only`) to `k4geo/main`\r\n- [x] the PR does not contain any additions or modifications that do not belong to it\r\n- [x] The release notes below contain a succinct and comprehensive description of the changes that are sufficiently self-explanatory\r\n\r\nIf you are modifying detector dimen\u2026",
+            "diff": {
+                "additions": 7,
+                "deletions": 3,
+                "files": 2
+            },
+            "files": [
+                "FCCee/IDEA/compact/IDEA_o1_v01/IDEA_o1_v01.xml",
+                "utils/dd4hep2root.py"
+            ],
+            "comments": [
+                {
+                    "author": "s6anloes",
+                    "body": "Hi Pablo,\r\nthese two fixes seem unrelated, so typically one would do two separate PRs for this. Given how minor the change in the `IDEA_o1_v01` XML file is, I think it's fine this time though.\r\nA question about the colours: What was the consequence of the predefined colours not being approximated? W\u2026"
+                },
+                {
+                    "author": "apausa",
+                    "body": "Hi @s6anloes, thank you your comment. Running `ROOT.gROOT.GetListOfColors()` after the files are loaded retrieves every color, not only predefined ones. Therefore `if colorNumber not in cachedColors` was never met as all colors were cached."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "When dealing with visualizations you'll have to test often (unfortunately, I know this can very annoying since you have to do it yourself instead of having a program tell you that something works in the command line) because that means that https://github.com/key4hep/k4geo/pull/662 wasn't working"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Looks good, any comments @s6anloes? :+1: if you want me to merge"
+                },
+                {
+                    "author": "apausa",
+                    "body": "Hi @jmcarcell, the problem originated from one of the suggestions you made. Maybe you had a program tell you that something works in the command line instead of testing yourself? \r\n\r\n<img width=\"774\" height=\"417\" alt=\"Screenshot 2026-09-25 at 15 03 14\" src=\"https://github.com/user-attachments/assets\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I don't have anything; I tried playing with [Xvfb](https://xorg.freedesktop.org/archive/X11R7.7/doc/man/man1/Xvfb.1.xhtml) once but didn't get anywhere to try to automate displays, since it is something I can not easily test in the Key4hep stacks."
+                }
+            ],
+            "comments_total": 6,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 198,
+            "title": "chore(deps): bump streamlit from 1.63.0 to 1.64.0 in /dashboard",
+            "url": "https://github.com/key4hep/k4Bench/pull/198",
+            "author": "dependabot",
+            "mergedAt": "2026-09-25",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [streamlit](https://github.com/streamlit/streamlit) from 1.63.0 to 1.64.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/streamlit/streamlit/releases\">streamlit's releases</a>.</em></p>\n<blockquote>\n<h2>1.64.0</h2>\n<!-- raw HTML omitted -->\n<h2>What's Changed</h2>\n<h3>New Features \ud83c\udf89</h3>\n<ul>\n<li>[feature] Add <code>on_change=&quot;ignore&quot;</code> mode to st.number_input by <a href=\"https://github.com/lukasmasuch\"><code>@\u200blukasmasuch</code></a> in <a href=\"https://redirect.github.com/streamlit/streamlit/pull/16649\">streamlit/streamlit#16649</a></li>\n<li>[fix] Support asyncio.get_event_loop() in scripts by <a href=\"https://github.com/sfc-gh-lwilby-1\"><code>@\u200bsfc-gh-lwilby-1</code></a> in <a href=\"https://redirect.github.com/streamlit/st\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "dashboard/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 199,
+            "title": "chore(deps): bump streamlit from 1.63.0 to 1.64.0",
+            "url": "https://github.com/key4hep/k4Bench/pull/199",
+            "author": "dependabot",
+            "mergedAt": "2026-09-25",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [streamlit](https://github.com/streamlit/streamlit) from 1.63.0 to 1.64.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/streamlit/streamlit/releases\">streamlit's releases</a>.</em></p>\n<blockquote>\n<h2>1.64.0</h2>\n<!-- raw HTML omitted -->\n<h2>What's Changed</h2>\n<h3>New Features \ud83c\udf89</h3>\n<ul>\n<li>[feature] Add <code>on_change=&quot;ignore&quot;</code> mode to st.number_input by <a href=\"https://github.com/lukasmasuch\"><code>@\u200blukasmasuch</code></a> in <a href=\"https://redirect.github.com/streamlit/streamlit/pull/16649\">streamlit/streamlit#16649</a></li>\n<li>[fix] Support asyncio.get_event_loop() in scripts by <a href=\"https://github.com/sfc-gh-lwilby-1\"><code>@\u200bsfc-gh-lwilby-1</code></a> in <a href=\"https://redirect.github.com/streamlit/st\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "dashboard/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 200,
+            "title": "chore(deps): update pymdown-extensions requirement from >=12.0 to >=12.0.1",
+            "url": "https://github.com/key4hep/k4Bench/pull/200",
+            "author": "dependabot",
+            "mergedAt": "2026-09-25",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Updates the requirements on [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/pymdown-extensions/releases\">pymdown-extensions's releases</a>.</em></p>\n<blockquote>\n<h2>12.0.1</h2>\n<ul>\n<li><strong>FIX</strong>: BetterEm: fix a case with new logic.</li>\n</ul>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/facelessuser/pymdown-extensions/commit/0e0060d09fc06735c8d7d937d05ffb244cf3da0c\"><code>0e0060d</code></a> Update changelog</li>\n<li><a href=\"https://github.com/facelessuser/pymdown-extensions/commit/136d324819721ba62128338db5f0ebd97658684e\"><code>136d324</code></a> Add test for a fixe\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "docs/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "hep-fcc",
             "repo": "FCC-config",
@@ -60,6 +191,35 @@
             "comments_total": 8,
             "reviews": [],
             "reviews_total": 12
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1684,
+            "title": "Make vertex consistent for edm4hep reader and hepmc reader",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1684",
+            "author": "davidlange6",
+            "mergedAt": "2026-09-25",
+            "mergedBy": "andresailer",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- EDM4hepReader: Change vertex to the end vertex of the parent-less particle. If there is no end vertex, the end vertex defaults to (0,0,0), matching HepMC3EventReader behaviour.  \r\n\r\nENDRELEASENOTES\r\n\r\npartially close key4hep/k4gen#61.  Together with https://github.com/key4hep/k4Gen/pull/62 i am able to fully consistent results using hepmc and edm4hep as the intermediate layer between pythia and ddsim.",
+            "diff": {
+                "additions": 6,
+                "deletions": 3,
+                "files": 1
+            },
+            "files": [
+                "DDG4/edm4hep/EDM4hepFileReader.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200210h 25m 14s \u23f1\ufe0f\n\u2007\u2008374 tests\u2003\u2007\u2008373 \u2705\u20030 \ud83d\udca4\u20031 \u274c\n3\u2008322 runs\u200a\u20033\u2008321 \u2705\u20030 \ud83d\udca4\u20031 \u274c\n\nFor more details on these failures, see [this check](https://github.com/AIDASoft/DD4hep/runs/108047926211).\n\nResults for commit 20abe446.\n\n[test-results]:data:application/gzip;base64,H\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -474,9 +634,13 @@
                 {
                     "author": "armin-ilg",
                     "body": "Thanks for all the help and feedback!"
+                },
+                {
+                    "author": "k4bench-bot",
+                    "body": "<!-- k4bench-blame-comment:v1 window=2026-09-23..2026-09-24 -->\n<!-- k4bench-blame-facts:f59656d3172dabb2 -->\n<!-- k4bench-blame-cumulative:v2 eNrNmd2O2jAQRl-l4hoqSFsElyVQQAWVAtpVu1pZThhBhGNbtmF3377mZyEJ4WKFmKnEBUSQM-cj4HHm6anyfTTq9ae_mArYtt6oVCuvrSZrfq2BaNeWcdxo1pR2_rBuMQD2N4oYxGl790ap2CDkosONAeFfv\u2026"
                 }
             ],
-            "comments_total": 17,
+            "comments_total": 18,
             "reviews": [
                 {
                     "author": "giovannimarchiori",
@@ -1779,111 +1943,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 922,
-            "title": "Add fish setup script",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/922",
-            "author": "madbaron",
-            "mergedAt": "2026-09-19",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Added a second stack setup script for the fish shell\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 23,
-                "deletions": 9,
-                "files": 1
-            },
-            "files": [
-                "packages/key4hep-stack/common.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 3
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 923,
-            "title": "Bump docker/setup-buildx-action from 4.3.0 to 4.4.1",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/923",
-            "author": "dependabot",
-            "mergedAt": "2026-09-19",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [docker/setup-buildx-action](https://github.com/docker/setup-buildx-action) from 4.3.0 to 4.4.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/docker/setup-buildx-action/releases\">docker/setup-buildx-action's releases</a>.</em></p>\n<blockquote>\n<h2>v4.4.1</h2>\n<ul>\n<li>Skip BuildKit image pre-pulls for explicit endpoints by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/setup-buildx-action/pull/624\">docker/setup-buildx-action#624</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/docker/setup-buildx-action/compare/v4.4.0...v4.4.1\">https://github.com/docker/setup-buildx-action/compare/v4.4.0...v4.4.1</a></p>\n<h2>v4.4.0</h2>\n<ul>\n<li>Use official \u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/docker-build-push-template.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 924,
-            "title": "Bump int128/docker-manifest-create-action from 2.27.0 to 2.28.0",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/924",
-            "author": "dependabot",
-            "mergedAt": "2026-09-19",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [int128/docker-manifest-create-action](https://github.com/int128/docker-manifest-create-action) from 2.27.0 to 2.28.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/int128/docker-manifest-create-action/releases\">int128/docker-manifest-create-action's releases</a>.</em></p>\n<blockquote>\n<h2>v2.28.0</h2>\n<pre lang=\"yaml\"><code>uses: int128/docker-manifest-create-action@6edb43463bd4878b8cee224ca274378a3635d78f # v2.28.0\n</code></pre>\n<h2>What's Changed</h2>\n<ul>\n<li>chore(deps): update dependency <code>@\u200bbiomejs/biome</code> to v2.5.8 by <a href=\"https://github.com/renovate\"><code>@\u200brenovate</code></a>[bot] in <a href=\"https://redirect.github.com/int128/docker-manifest-create-action/pull/1209\">int128/docker-manifest-create-action#1209</a></li\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/image-template.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 925,
-            "title": "Bump docker/build-push-action from 7.3.0 to 7.4.0",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/925",
-            "author": "dependabot",
-            "mergedAt": "2026-09-19",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [docker/build-push-action](https://github.com/docker/build-push-action) from 7.3.0 to 7.4.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/docker/build-push-action/releases\">docker/build-push-action's releases</a>.</em></p>\n<blockquote>\n<h2>v7.4.0</h2>\n<ul>\n<li>Use the shared error helper for Buildx commands by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/build-push-action/pull/1620\">docker/build-push-action#1620</a></li>\n<li>Prevent workflow command injection in metadata logs by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/build-push-action/pull/1617\">docker/build-push-action#1617</a></li>\n<li>Bump <c\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/docker-build-push-template.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4ActsTracking",
             "num": 104,
             "title": "fix: support named ACTS material-map fields",
@@ -1958,160 +2017,6 @@
             "comments_total": 6,
             "reviews": [],
             "reviews_total": 3
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4FWCore",
-            "num": 428,
-            "title": "Fix pre-commit checks",
-            "url": "https://github.com/key4hep/k4FWCore/pull/428",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Fixes the pre-commit failures in #427.\n\nBEGINRELEASENOTES\n - Fix pre-commit validation for the functional test component refactor.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 6,
-                "files": 6
-            },
-            "files": [
-                ".github/workflows/pre-commit.yml",
-                "test/k4FWCoreTest/CMakeLists.txt",
-                "test/k4FWCoreTest/options/ExampleFunctionalProducerMultiple.py",
-                "test/k4FWCoreTest/options/TestAlgorithmWithTFile.py",
-                "test/k4FWCoreTest/options/checkExampleEventData.py",
-                "test/k4FWCoreTest/options/checkLoadedFileProperties.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 189,
-            "title": "chore(deps): bump matplotlib from 3.11.1 to 3.11.2 in /dashboard",
-            "url": "https://github.com/key4hep/k4Bench/pull/189",
-            "author": "dependabot",
-            "mergedAt": "2026-09-18",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [matplotlib](https://github.com/matplotlib/matplotlib) from 3.11.1 to 3.11.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/matplotlib/matplotlib/releases\">matplotlib's releases</a>.</em></p>\n<blockquote>\n<h2>REL: v3.11.2</h2>\n<p>This is the second bugfix release of the 3.11.x series.</p>\n<p>This release contains several bug-fixes and adjustments:</p>\n<ul>\n<li>Speed up RGBA-stage image resampling</li>\n<li>Fix <code>hexbin</code> clipping in PDF output</li>\n<li>Fix <code>\\text</code> with internal braces</li>\n<li>Fix some crashes and make some checks more robust to unlikely cases</li>\n<li>Fix frame skew when saving GIF animations with <code>PillowWriter</code></li>\n<li>Fix HiDPI handling in Qt toolbar and WebAgg embeddings</li>\n<li>Fix <cod\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "dashboard/requirements.txt"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/189?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 190,
-            "title": "chore(deps): bump matplotlib from 3.11.1 to 3.11.2",
-            "url": "https://github.com/key4hep/k4Bench/pull/190",
-            "author": "dependabot",
-            "mergedAt": "2026-09-18",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [matplotlib](https://github.com/matplotlib/matplotlib) from 3.11.1 to 3.11.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/matplotlib/matplotlib/releases\">matplotlib's releases</a>.</em></p>\n<blockquote>\n<h2>REL: v3.11.2</h2>\n<p>This is the second bugfix release of the 3.11.x series.</p>\n<p>This release contains several bug-fixes and adjustments:</p>\n<ul>\n<li>Speed up RGBA-stage image resampling</li>\n<li>Fix <code>hexbin</code> clipping in PDF output</li>\n<li>Fix <code>\\text</code> with internal braces</li>\n<li>Fix some crashes and make some checks more robust to unlikely cases</li>\n<li>Fix frame skew when saving GIF animations with <code>PillowWriter</code></li>\n<li>Fix HiDPI handling in Qt toolbar and WebAgg embeddings</li>\n<li>Fix <cod\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "dashboard/requirements.txt"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/190?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 192,
-            "title": "test(links): skip Zenodo badge check while zenodo.org blocks CERN traffic",
-            "url": "https://github.com/key4hep/k4Bench/pull/192",
-            "author": "jbeirer",
-            "mergedAt": "2026-09-18",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Zenodo seems to block certain bot traffic to avoid server outages, which causes the CI tests to fail. Exclude check from tests.",
-            "diff": {
-                "additions": 17,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "tests/integration/test_links.py"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/192?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 191,
-            "title": "chore(deps): update pymdown-extensions requirement from >=11.0.2 to >=12.0",
-            "url": "https://github.com/key4hep/k4Bench/pull/191",
-            "author": "dependabot",
-            "mergedAt": "2026-09-18",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Updates the requirements on [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/pymdown-extensions/releases\">pymdown-extensions's releases</a>.</em></p>\n<blockquote>\n<h2>12.0</h2>\n<ul>\n<li>\n<p><strong>BREAK</strong>: BetterEm: Complete rewrite. There may be some subtle differences between legacy behavior and new\nCommonMark behavior.</p>\n<ul>\n<li><code>*</code> and <code>_</code> emphasis are handled at the same time to provide more natural nesting.</li>\n<li>More performant.</li>\n<li>CommonMark compliant.</li>\n</ul>\n</li>\n<li>\n<p><strong>BREAK</strong>: Tilde, Caret, Mark: Rewritten and now built upon the latest BetterEm logic.</p>\n<ul>\n<\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "docs/requirements.txt"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/191?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
         }
     ]
 }
