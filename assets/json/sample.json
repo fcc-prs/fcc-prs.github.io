@@ -2,22 +2,22 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 625,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-03",
-            "updatedAt": "2026-09-24",
+            "num": 665,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/665'>[IDEA] Set shared flag to false if single thread</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-09-17",
+            "updatedAt": "2026-09-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 665,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/665'>[IDEA] Set shared flag to false if single thread</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-09-17",
-            "updatedAt": "2026-09-22",
+            "num": 625,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-03",
+            "updatedAt": "2026-09-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -838,6 +838,17 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 30,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/30'>Changes for ALLEGRO</a>",
+            "author": "Archil-AD",
+            "createdAt": "2026-05-06",
+            "updatedAt": "2026-09-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
             "num": 55,
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/55'>Loop the LCCaloHit factory through the Pandora machinery</a>",
             "author": "tmadlener",
@@ -865,17 +876,6 @@
             "author": "tmadlener",
             "createdAt": "2026-09-22",
             "updatedAt": "2026-09-22",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 30,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/30'>Changes for ALLEGRO</a>",
-            "author": "Archil-AD",
-            "createdAt": "2026-05-06",
-            "updatedAt": "2026-09-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1020,17 +1020,6 @@
             "createdAt": "2026-05-06",
             "updatedAt": "2026-05-06",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 201,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/201'>fix(blame): judge host changes per machine and sample the run's own geometry first</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-25",
-            "updatedAt": "2026-09-27",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
