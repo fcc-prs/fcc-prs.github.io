@@ -1,5 +1,5 @@
 {
-    "updated_at": "2026-09-26T10:38:56Z",
+    "updated_at": "2026-09-27T11:11:03Z",
     "data": [
         {
             "org": "key4hep",
@@ -637,7 +637,7 @@
                 },
                 {
                     "author": "k4bench-bot",
-                    "body": "<!-- k4bench-blame-comment:v1 window=2026-09-23..2026-09-24 -->\n<!-- k4bench-blame-facts:f59656d3172dabb2 -->\n<!-- k4bench-blame-cumulative:v2 eNrNmd2O2jAQRl-l4hoqSFsElyVQQAWVAtpVu1pZThhBhGNbtmF3377mZyEJ4WKFmKnEBUSQM-cj4HHm6anyfTTq9ae_mArYtt6oVCuvrSZrfq2BaNeWcdxo1pR2_rBuMQD2N4oYxGl790ap2CDkosONAeFfv\u2026"
+                    "body": "<!-- k4bench-blame-comment:v1 window=2026-09-23..2026-09-24 -->\n<!-- k4bench-blame-facts:dbae52afe58655d3 -->\n<!-- k4bench-blame-cumulative:v2 eNrNm21v2koQhf9KxedwZdxCyccbhybRJWoaUKt7q2q1mCmxsNfW2iTtv78LNOD3kMKeqVQpqhXlmXP2xTOz669fO3-Px6Or-48i7olH523nrPNjOBCDd10Kz7sL3-8NunGSmcdpoBYhCeqKnnNFn80TFYvR7\u2026"
                 }
             ],
             "comments_total": 18,
@@ -1940,83 +1940,6 @@
             "comments_total": 2,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 104,
-            "title": "fix: support named ACTS material-map fields",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/104",
-            "author": "paulgessinger",
-            "mergedAt": "2026-09-19",
-            "mergedBy": "madbaron",
-            "labels": [],
-            "body": "Handle the TrackingGeometryMaterial struct introduced by acts-project/acts#6123 while retaining support for released ACTS versions that use a pair.\r\n\r\n\r\nBEGINRELEASENOTES\r\n\r\n- Adapt to https://github.com/acts-project/acts/pull/6123\r\n \r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 9,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "k4ActsTracking/src/components/MaterialMappingAlg.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 193,
-            "title": "feat(ci): add CERN-backed AI PR reviews with repository guidance",
-            "url": "https://github.com/key4hep/k4Bench/pull/193",
-            "author": "jbeirer",
-            "mergedAt": "2026-09-19",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "Review effort 3/5"
-            ],
-            "body": "fyi @bendavid this might be interesting to you (and others) as an alternative implementation to [hodor](https://github.com/mr-karan/hodor)\r\n\r\nMight also be interesting for other key4hep projects @BrieucF @andresailer @jmcarcell \r\n\r\n<!-- pr-agent-generated -->\r\n### **User description**\r\n## Summary\r\n\r\nAdds an AI-assisted pull request review workflow for k4Bench using PR-Agent through the CERN AI Gateway.\r\n\r\nThe workflow runs automatically for new and updated PRs and can also react to review/comment events. It runs on the existing CERN self-hosted runners, uses a pinned PR-Agent container, and avoids exposing the CERN API key to forks or bot-triggered events.\r\n\r\nRepository-specific review guidance is added in `.github/ai-review-instructions.md`, covering the main k4Bench correctness concerns \u2026",
-            "diff": {
-                "additions": 397,
-                "deletions": 0,
-                "files": 3
-            },
-            "files": [
-                ".github/ai-review-instructions.md",
-                ".github/workflows/ai-pr-review.yml",
-                ".pr_agent.toml"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/193?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[PR Description](https://github.com/key4hep/k4Bench/pull/193)** updated to latest commit (https://github.com/key4hep/k4Bench/commit/8fab65f021ccf226ffdb175e5414a3dcc3032f75)"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\u23f1\ufe0f&nbsp;<strong>Estimated effort to review</strong>: 3 \ud83d\udd35\ud83d\udd35\ud83d\udd35\u26aa\u26aa</td></tr>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security conc\u2026"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "## AI review commands\r\n\r\nThe AI reviewer runs `/review` automatically when a PR is opened and on every push. Anyone who has already contributed to this repository (owners, members, collaborators, previous contributors) can request more by commenting on a PR. The comment must start with the command. \u2026"
-                },
-                {
-                    "author": "bendavid",
-                    "body": "For complex tasks GLM 5.2 can generate very long reasoning so you might need to set max tokens all the way to 131072\r\n\r\nIt might be preferred to use the Kimi K3 model in any case."
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "> For complex tasks GLM 5.2 can generate very long reasoning so you might need to set max tokens all the way to 131072\r\n> \r\n> It might be preferred to use the Kimi K3 model in any case.\r\n\r\nRight, I did use GLM initially as Kimi seemed to have some server-side issues, but they seem fixed now. Now usi\u2026"
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [],
-            "reviews_total": 3
         }
     ]
 }
