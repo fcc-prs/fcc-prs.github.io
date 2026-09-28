@@ -1,6 +1,180 @@
 {
-    "updated_at": "2026-09-27T11:11:03Z",
+    "updated_at": "2026-09-28T12:36:11Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 436,
+            "title": "Require Gaudi v41r1 for EventContext data handle API",
+            "url": "https://github.com/key4hep/k4FWCore/pull/436",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-28",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Require Gaudi v41r1 or later for the EventContext data handle API.\r\n\r\nENDRELEASENOTES\r\n\r\nIt didn't make it to 41.0. Continuation of [key4hep/k4FWCore#432](https://github.com/key4hep/k4FWCore/pull/432).",
+            "diff": {
+                "additions": 11,
+                "deletions": 10,
+                "files": 5
+            },
+            "files": [
+                "k4FWCore/components/Reader.cpp",
+                "k4FWCore/include/k4FWCore/Consumer.h",
+                "k4FWCore/include/k4FWCore/DataHandle.h",
+                "k4FWCore/include/k4FWCore/FunctionalUtils.h",
+                "k4FWCore/include/k4FWCore/Transformer.h"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4EDM4hep2LcioConv",
+            "num": 135,
+            "title": "Remove obsolete EDM4hep version guards",
+            "url": "https://github.com/key4hep/k4EDM4hep2LcioConv/pull/135",
+            "author": "jmcarcell",
+            "mergedAt": "2026-09-28",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Remove obsolete EDM4hep version guards from conversion and comparison code.\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 1,
+                "deletions": 25,
+                "files": 6
+            },
+            "files": [
+                "CMakeLists.txt",
+                "k4EDM4hep2LcioConv/include/k4EDM4hep2LcioConv/k4EDM4hep2LcioConv.ipp",
+                "k4EDM4hep2LcioConv/include/k4EDM4hep2LcioConv/k4Lcio2EDM4hepConv.ipp",
+                "tests/edm4hep_to_lcio.cpp",
+                "tests/src/CompareEDM4hepLCIO.cc",
+                "tests/src/CompareEDM4hepLCIO.h"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Done"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "if we remove these, we should also make sure to require EDM4hep >= 1.0 here\n\nhttps://github.com/key4hep/k4EDM4hep2LcioConv/blob/d00af791f4679017f0f6850d0c2978105d13832d/CMakeLists.txt#L19-L21"
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 201,
+            "title": "fix(blame): judge host changes per machine and sample the run's own geometry first",
+            "url": "https://github.com/key4hep/k4Bench/pull/201",
+            "author": "jbeirer",
+            "mergedAt": "2026-09-27",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Bug fix\n\n\n___\n\n### **Description**\n- Add evidence summary (sweep table, event records, geometry touches) computed from measurements, shown before diffs in both blame prompts\n\n- Judge host changes per machine using each machine's own level, and sample the run's own compact directory first in diff samples\n\n- Restructure the cross-configuration review to answer per scope with per-row overrides, replacing per-row scoring\n\n- Add event profiles, per-host levels, removal sweeps, and structural geometry diff reading to the attribution pipeline\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"Report + Provenance\"] --> B[\"window_sweeps\"]\n  A --> C[\"detector_touches\"]\n  B --> D[\"Evidence Summary\"]\n  C --> D\n  D --> E[\"Ranker Prompt\u2026",
+            "diff": {
+                "additions": 7471,
+                "deletions": 518,
+                "files": 35
+            },
+            "files": [
+                ".github/scripts/blame_comment.py",
+                ".github/scripts/blame_report.py",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/features/pr-comments.md",
+                "k4bench/blame/attribute.py",
+                "k4bench/blame/builder.py",
+                "k4bench/blame/comment.py",
+                "k4bench/blame/evidence.py",
+                "k4bench/blame/geometry.py",
+                "k4bench/blame/github.py",
+                "k4bench/blame/prompt.py",
+                "k4bench/blame/rank.py",
+                "k4bench/blame/summary.py",
+                "k4bench/blame/sweep.py",
+                "k4bench/regression/history.py",
+                "k4bench/regression/models.py",
+                "k4bench/regression/regions.py",
+                "k4bench/regression/render.py",
+                "k4bench/regression/report_builder.py",
+                "tests/integration/test_blame_k4geo612_incident.py",
+                "tests/integration/test_regression_report.py",
+                "tests/unit/test_blame_attribute.py",
+                "tests/unit/test_blame_builder.py",
+                "tests/unit/test_blame_comment.py",
+                "tests/unit/test_blame_evidence.py",
+                "tests/unit/test_blame_geometry.py",
+                "tests/unit/test_blame_github.py",
+                "tests/unit/test_blame_prompt.py",
+                "tests/unit/test_blame_rank.py",
+                "tests/unit/test_blame_summary.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/fb60df7a0c6fbb2af1ca4b115b2ad8184d7a6c6b)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 38,003 in / 9 out / 38,012 total\n- Time cost: 493.6s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/201?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/201#issuecomment-5839844335)** updated to latest commit https://github.com/key4hep/k4Bench/commit/764f18de703ee7f6e645734c4258bff3ad1071a4"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- be2cdf7 -->\n\nLatest suggestions up to be2cdf7\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/201#issuecomment-5839844335)** updated to latest commit https://github.com/key4hep/k4Bench/commit/a6e164e67344cbdb506a3496cd2efa693a033094"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/201#issuecomment-5839844335)** updated to latest commit https://github.com/key4hep/k4Bench/commit/9469385b3452834e1b9cefdd0625c66da516fa1e"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/201#issuecomment-5839844335)** updated to latest commit https://github.com/key4hep/k4Bench/commit/be2cdf7725f6503917a1f18083eed84830f60cc8"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/GLM-5.2-NGT\n- Tokens: 301,316 in / 425 out / 301,741 total\n- Time cost: 1302.8s\n- AI calls: 2\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/201#issuecomment-5839844335)** updated to latest commit https://github.com/key4hep/k4Bench/commit/fb60df7a0c6fbb2af1ca4b115b2ad8184d7a6c6b"
+                }
+            ],
+            "comments_total": 13,
+            "reviews": [],
+            "reviews_total": 1
+        },
         {
             "org": "key4hep",
             "repo": "k4geo",
@@ -1508,63 +1682,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4geo",
-            "num": 651,
-            "title": "Update CODEOWNERS",
-            "url": "https://github.com/key4hep/k4geo/pull/651",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-21",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Please comment if other people should be changed, and I will add them.\r\n\r\nBEGINRELEASENOTES\r\n - Remove Lorenzo Pezzotti as CODEOWNER for FCCee IDEA geometries\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 5,
-                "deletions": 5,
-                "files": 1
-            },
-            "files": [
-                "CODEOWNERS"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Nothing against this change here. Abusing the PR to launch a discussion on whether we want some more fine-grained ownership for the detector drivers? Currently the top level CODEOWNERS get a notification for every PR (and there are quite a few in k4geo) whereas detector concept ownership only notifi\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Maybe we could remove Frank since he doesn't reply often; actually it will he harder for him to see if we mention him if he gets an email for everything that is happening. And Nazar from the muon collider hasn't been active.\r\n\r\n> Nothing against this change here. Abusing the PR to launch a discussio\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I think removing Frank is a good idea. Would definitely increase the S/N for him ;)\r\n\r\n> Don't most PRs have also changes in the xmls together with the cpp files? \r\n\r\nI think usually yes, but there were some cases recently where there were only cpp changes. E.g. https://github.com/key4hep/k4geo/pull\u2026"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "Hi @jmcarcell, could you please also add me as global (as well as /FCCee) owner?"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "> I think removing Frank is a good idea. Would definitely increase the S/N for him ;)\r\n> \r\n> > Don't most PRs have also changes in the xmls together with the cpp files?\r\n> \r\n> I think usually yes, but there were some cases recently where there were only cpp changes. E.g. #578, #549, #602, #621, #633\u2026"
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "What about adding @danieljeans and @tmadlener  as code-owners for `FCCee/ILD_FCCee/`, for completness' sake?"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Done"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> What about adding @danieljeans and @tmadlener as code-owners for FCCee/ILD_FCCee/, for completness' sake?\r\n\r\nActually, Daniel can be removed from all ILD parts as he is no longer working on ILD at the moment."
-                }
-            ],
-            "comments_total": 8,
-            "reviews": [],
-            "reviews_total": 12
-        },
-        {
-            "org": "key4hep",
             "repo": "k4FWCore",
             "num": 431,
             "title": "Add --evt-max alias to k4run",
@@ -1624,138 +1741,6 @@
             "reviews_total": 2
         },
         {
-            "org": "key4hep",
-            "repo": "k4FWCore",
-            "num": 430,
-            "title": "Fix clangd NRVO warnings in location helpers",
-            "url": "https://github.com/key4hep/k4FWCore/pull/430",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-21",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Avoid clangd NRVO (named return value optimization, -Wnrvo, \"not eliding copy on return\") warnings in location helpers\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 8,
-                "deletions": 8,
-                "files": 1
-            },
-            "files": [
-                "k4FWCore/include/k4FWCore/Transformer.h"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Out of curiosity, is NRVO now happening with naming a concrete type in the signature? And do you know why it behaves differently with `auto`?"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "It seems it's a limitation of clang (https://github.com/llvm/llvm-project/issues/95280). The type is the same in both cases"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "APPROVED",
-                    "body": "OK, interesting. I think it potentially also increases readability for new-comers (and maybe doxygen), so I would say we go ahead with this."
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4FWCore",
-            "num": 427,
-            "title": "Refactor test components to functional algorithms",
-            "url": "https://github.com/key4hep/k4FWCore/pull/427",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-21",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Refactor test components to use functional algorithms.\n   - Replace the legacy ROOT-file producer with a functional producer.\n   - Replace the legacy Marlin-wrapper producer with a functional generic-collection producer.\n   - Consolidate CellID metadata validation in the functional metadata consumer.\n   - Centralize expected output collection definitions in the output-file check.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 270,
-                "deletions": 435,
-                "files": 16
-            },
-            "files": [
-                "test/k4FWCoreTest/CMakeLists.txt",
-                "test/k4FWCoreTest/options/TestAlgorithmWithTFile.py",
-                "test/k4FWCoreTest/options/TestOverlayTiming.py",
-                "test/k4FWCoreTest/options/readMarlinWrapperCollection.py",
-                "test/k4FWCoreTest/scripts/CheckOutputFiles.py",
-                "test/k4FWCoreTest/src/components/ExampleCellIDEncodingInitConsumer.cpp",
-                "test/k4FWCoreTest/src/components/ExampleFunctionalMetadataConsumer.cpp",
-                "test/k4FWCoreTest/src/components/ExampleFunctionalProducer.cpp",
-                "test/k4FWCoreTest/src/components/ExampleFunctionalProducerMultiple.cpp",
-                "test/k4FWCoreTest/src/components/ExampleFunctionalProducerRuntimeCollections.cpp",
-                "test/k4FWCoreTest/src/components/ExampleFunctionalProducerWithMarlinWrapper.cpp",
-                "test/k4FWCoreTest/src/components/ExampleFunctionalProducerWithTFile.cpp",
-                "test/k4FWCoreTest/src/components/k4FWCoreTest_AlgorithmWithTFile.cpp",
-                "test/k4FWCoreTest/src/components/k4FWCoreTest_AlgorithmWithTFile.h",
-                "test/k4FWCoreTest/src/components/k4FWCoreTest_CreateMarlinWrapperCollection.cpp",
-                "test/k4FWCoreTest/src/components/k4FWCoreTest_CreateMarlinWrapperCollection.h"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 6
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-images",
-            "num": 35,
-            "title": "Add Zstandard development packages to build images",
-            "url": "https://github.com/key4hep/key4hep-images/pull/35",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-21",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Continuation of https://github.com/key4hep/key4hep-images/pull/34, this is actually needed when Arrow is built with zstd.",
-            "diff": {
-                "additions": 6,
-                "deletions": 6,
-                "files": 4
-            },
-            "files": [
-                "Docker/alma10/alma10-build/Dockerfile",
-                "Docker/alma9/alma9-build/Dockerfile",
-                "Docker/ubuntu24/ubuntu24-build/Dockerfile",
-                "Docker/ubuntu26/ubuntu26-build/Dockerfile"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-images",
-            "num": 34,
-            "title": "Add zstd to build images",
-            "url": "https://github.com/key4hep/key4hep-images/pull/34",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-21",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "It's required from the system in LCG stacks and is causing issues like:\r\n```\r\n  -- Checking for module 'libzstd'\r\n  --   No package 'libzstd' found\r\n  CMake Error at /cvmfs/sft.cern.ch/lcg/releases/CMake/3.30.6-34165/x86_64-el9-gcc16-opt/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake:233 (message):\r\n    Could NOT find zstdAlt (missing: ZSTD_LIB ZSTD_INCLUDE_DIR)\r\n```",
-            "diff": {
-                "additions": 5,
-                "deletions": 5,
-                "files": 4
-            },
-            "files": [
-                "Docker/alma10/alma10-build/Dockerfile",
-                "Docker/alma9/alma9-build/Dockerfile",
-                "Docker/ubuntu24/ubuntu24-build/Dockerfile",
-                "Docker/ubuntu26/ubuntu26-build/Dockerfile"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "AIDASoft",
             "repo": "DD4hep",
             "num": 1681,
@@ -1805,139 +1790,6 @@
                 }
             ],
             "comments_total": 6,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1680,
-            "title": "Use non-deprecated ROOT RVersion header",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1680",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-21",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Replace direct inclusions of the deprecated `RVersion.h` with `ROOT/RVersion.hxx` in DDCore and the ROOT macro example\r\n\r\nENDRELEASENOTES\r\n\r\nThere are warnings when building with ROOT master (after https://github.com/root-project/root/pull/23253):\r\n```\r\n/build/jenkins/workspace/lcg_nightly_pipeline/install/dev3/ROOT/d77c3733/x86_64-el9-gcc15-opt/include/RVersion.h:4:2: warning: \"RVersion.h is deprecated and will be removed in a future release, please include\r\n  ROOT/RVersion.hxx instead\" [-W#warnings]\r\n  #warning \"RVersion.h is deprecated and will be removed in a future release, please include ROOT/RVersion.hxx instead\"\r\n```",
-            "diff": {
-                "additions": 32,
-                "deletions": 0,
-                "files": 4
-            },
-            "files": [
-                "DDCore/include/DD4hep/Memory.h",
-                "DDCore/include/DD4hep/Plugins.h",
-                "DDG4/examples/initAClick.C",
-                "examples/LHeD/scripts/initAClick.C"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200210h 58m 58s \u23f1\ufe0f\n\u2007\u2008380 tests\u2003\u2007\u2008380 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008376 runs\u200a\u20033\u2008376 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 3710c195.\n\n[test-results]:data:application/gzip;base64,H4sIAF26r2oC/13MQQ7CIBRF0a00jB0UfpGPmzFAS0Jsi6Ewaty7lFRBh/e85O3EunnayK2jeOnIllysNaagovNrbpAcDsprPHbA/lP3LRnzTw\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 195,
-            "title": "feat(ci): run AI PR reviews on Kimi K3 with a GLM-5.2 fallback",
-            "url": "https://github.com/key4hep/k4Bench/pull/195",
-            "author": "jbeirer",
-            "mergedAt": "2026-09-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement\n\n\n___\n\n### **Description**\n- Split workflow into command-selection and review jobs\n\n- Run reviews on Kimi K3 with GLM-5.2 fallback\n\n- Move docker invocation and gating into scripts\n\n- Matrix review per command; always clean containers\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  request[\"request job: select commands via ai_pr_review.py\"] -- \"commands output\" --> review[\"review job matrix (self-hosted)\"]\n  review -- \"primary attempt\" --> kimi[\"Run with Kimi K3\"]\n  kimi -- \"on failure\" --> glm[\"Run with GLM-5.2\"]\n  review -- \"always\" --> cleanup[\"Remove leftover containers\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr\u2026",
-            "diff": {
-                "additions": 54,
-                "deletions": 53,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/ai-pr-review.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- b7cf7b9 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/195?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 196,
-            "title": "fix(ci): keep PR-Agent in user deployment mode for AI reviews",
-            "url": "https://github.com/key4hep/k4Bench/pull/196",
-            "author": "jbeirer",
-            "mergedAt": "2026-09-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 2,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                ".github/scripts/ai_pr_review.py"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/196?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 194,
-            "title": "feat(ci): add AI review scripts and PR-Agent call settings",
-            "url": "https://github.com/key4hep/k4Bench/pull/194",
-            "author": "jbeirer",
-            "mergedAt": "2026-09-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Adds the two scripts that will drive the AI PR review, and moves PR-Agent's call settings out of the workflow into `.pr_agent.toml`.\r\n\r\nNothing is wired up yet: no workflow references the scripts, so reviews keep running exactly as they do today. A follow-up switches the workflow over to them, which is why this is split in two \u2014 with the scripts already on `main`, that follow-up can be reviewed by the pipeline it introduces.\r\n\r\n### Scripts\r\n\r\n`.github/scripts/ai_pr_review.py` does two jobs:\r\n\r\n- with `--check`, it reads the event and decides which commands it requests \u2014 same-repo non-draft pull requests, or a `/` command from a contributor \u2014 so the decision happens before any self-hosted runner is involved;\r\n- without it, the same file is the container entrypoint and calls `PRAgent().handl\u2026",
-            "diff": {
-                "additions": 111,
-                "deletions": 3,
-                "files": 3
-            },
-            "files": [
-                ".github/scripts/ai_pr_review.py",
-                ".github/scripts/ai_pr_review.sh",
-                ".pr_agent.toml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>Security concerns</strong><br><br>\n\n<strong>Missing fork-repository guard on comment path:</str\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/194?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 2,
             "reviews": [],
             "reviews_total": 0
         }
