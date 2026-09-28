@@ -2,7 +2,7 @@ import json
 import os
 import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from api_client import get_client
 
@@ -129,13 +129,9 @@ data = load_merged_data(data_path)
 guidelines = load_guidelines(guidelines_path)
 prs = data.get("data", [])
 
-if prs:
-    dates = [pr["mergedAt"] for pr in prs if pr.get("mergedAt")]
-    period_start = min(dates) if dates else ""
-    period_end = max(dates) if dates else ""
-else:
-    period_end = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    period_start = period_end
+now = datetime.now(timezone.utc)
+period_end = now.strftime("%Y-%m-%d")
+period_start = (now - timedelta(days=7)).strftime("%Y-%m-%d")
 
 prompt = build_prompt(prs, period_start, period_end, guidelines)
 
