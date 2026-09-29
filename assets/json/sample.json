@@ -2,6 +2,17 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 668,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/668'>Make dd4hep2root available when sourcing key4hep</a>",
+            "author": "apausa",
+            "createdAt": "2026-09-29",
+            "updatedAt": "2026-09-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 625,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
             "author": "jmcarcell",
@@ -167,6 +178,28 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
+            "num": 438,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/438'>Use the Gaudi major version check for the empty type list</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-29",
+            "updatedAt": "2026-09-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 437,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/437'>Install the python package to GAUDI_INSTALL_PYTHONDIR</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-29",
+            "updatedAt": "2026-09-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
             "num": 413,
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
@@ -249,7 +282,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-25",
             "updatedAt": "2026-09-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -260,7 +293,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -271,7 +304,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -325,7 +358,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/162'>DelphesEDM4HepConverter: keep energy/mass/momentum consistency; add pdgid for tracks and leptons</a>",
             "author": "davidlange6",
             "createdAt": "2026-08-28",
-            "updatedAt": "2026-09-23",
+            "updatedAt": "2026-09-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -420,23 +453,34 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 94,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/94'>Fix CUDA output tensor for metric learning model</a>",
-            "author": "Baucki1",
-            "createdAt": "2026-08-28",
-            "updatedAt": "2026-09-24",
+            "num": 72,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/72'>Expand support for 4D tracking</a>",
+            "author": "jburzy",
+            "createdAt": "2026-07-04",
+            "updatedAt": "2026-09-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 72,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/72'>Expand support for 4D tracking</a>",
-            "author": "jburzy",
-            "createdAt": "2026-07-04",
-            "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "num": 108,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add outside-in and two-way CKF tracking</a>",
+            "author": "mlarson02",
+            "createdAt": "2026-09-29",
+            "updatedAt": "2026-09-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 94,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/94'>Fix CUDA output tensor for metric learning model</a>",
+            "author": "Baucki1",
+            "createdAt": "2026-08-28",
+            "updatedAt": "2026-09-24",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -519,6 +563,28 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 101,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/101'>TrackFitter: Fix units in the helix-to-cartesian conversion + Fixed broken associations between hits and tracks introduced during the filtering stage</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-09-15",
+            "updatedAt": "2026-09-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 81,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
+            "author": "JonaDilg",
+            "createdAt": "2026-05-07",
+            "updatedAt": "2026-09-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 102,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
             "author": "andread3vita",
@@ -541,17 +607,6 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 101,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/101'>TrackFitter: Fix units in the helix-to-cartesian conversion + Fixed broken associations between hits and tracks introduced during the filtering stage</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-28",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "SanghyunKo"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
             "num": 84,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/84'>Add MUONdigitizer: cluster-based digitizer for IDEA muon system</a>",
             "author": "mahmoudali2",
@@ -560,17 +615,6 @@
             "mergeOk": "no",
             "labels": "",
             "assignees": "ueinhaus"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 81,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
-            "author": "JonaDilg",
-            "createdAt": "2026-05-07",
-            "updatedAt": "2026-09-25",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -710,7 +754,7 @@
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/71'>Upstreaming remaining k4reco algorithms</a>",
             "author": "madbaron",
             "createdAt": "2026-09-28",
-            "updatedAt": "2026-09-28",
+            "updatedAt": "2026-09-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1020,6 +1064,17 @@
             "createdAt": "2022-11-10",
             "updatedAt": "2022-11-16",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 207,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/207'>Update documentation to reflect script retrieval</a>",
+            "author": "apausa",
+            "createdAt": "2026-09-29",
+            "updatedAt": "2026-09-29",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1579,7 +1634,7 @@
             "title": "<a href='https://github.com/HEP-FCC/root2gltf/pull/17'>Optionally assign a random color to volumes with an undefined, black or white value</a>",
             "author": "apausa",
             "createdAt": "2026-09-28",
-            "updatedAt": "2026-09-28",
+            "updatedAt": "2026-09-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1620,7 +1675,7 @@
         {
             "repo": "hep-fcc/<br>fcc-drs",
             "num": 95,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/95'>Update module modernc.org/sqlite to v1.60.0</a>",
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/95'>Update module modernc.org/sqlite to v1.60.1</a>",
             "author": "renovate",
             "createdAt": "2026-09-29",
             "updatedAt": "2026-09-29",
