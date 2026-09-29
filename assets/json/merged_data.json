@@ -1,6 +1,132 @@
 {
-    "updated_at": "2026-09-28T12:36:11Z",
+    "updated_at": "2026-09-29T11:58:09Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 929,
+            "title": "Add tracking variant to k4RecTracker",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/929",
+            "author": "madbaron",
+            "mergedAt": "2026-09-29",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Add \"tracking\" variant to k4rectracking recipe to steer the K4RECTRACKER_TRACKING flag\r\n- Rename base branch/spec of the k4rectracking to main \r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 17,
+                "deletions": 8,
+                "files": 1
+            },
+            "files": [
+                "packages/k4rectracker/package.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 4
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 665,
+            "title": "[IDEA] Set shared flag to false if single thread",
+            "url": "https://github.com/key4hep/k4geo/pull/665",
+            "author": "andread3vita",
+            "mergedAt": "2026-09-28",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n\r\n- Set the flag controlling how workers share events to `false` when running in single-threaded mode. This change applies to the steering file in the examples.\r\n\r\nENDRELEASENOTES\r\n\r\nDear All,\r\nI open this PR to address [this](https://github.com/AIDASoft/DD4hep/issues/1677) issue. This PR is a follow-up of [this other PR](https://github.com/AIDASoft/DD4hep/pull/1678).\r\n\r\nCheers,\r\nAndrea",
+            "diff": {
+                "additions": 11,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "example/SteeringFile_IDEA_o1_v03.py"
+            ],
+            "comments": [
+                {
+                    "author": "BrieucF",
+                    "body": "Hi Andrea, thanks! Can you propagate this to FCC-config as well?"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> Hi Andrea, thanks! Can you propagate this to FCC-config as well?\r\n\r\nAlready done :)"
+                },
+                {
+                    "author": "BrieucF",
+                    "body": "> > Hi Andrea, thanks! Can you propagate this to FCC-config as well?\r\n> \r\n> Already done :)\r\n\r\nIndeed, sorry I missed it. Thanks!"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "Now this PR depends on https://github.com/AIDASoft/DD4hep/pull/1678 so it can be approved only once the other one is approved and merged. This is due to the last commit, where I have changed the kernel used in the plugin"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "Currently the release build fails, because it's not recognising `numberOfThreads`:\r\n\r\n```  \r\nTraceback (most recent call last):\r\n    File \"/cvmfs/sw.hsf.org/key4hep/releases/2026-04-08/x86_64-almalinux9-gcc14.2.0-opt/dd4hep/1.36-ayzyfq/bin/ddsim\", line 24, in <module>\r\n      sys.exit(RUNNER.run())\r\n\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I added a comment and removed an unrelated removal of a line. It should be good to go now and backwards compatible."
+                }
+            ],
+            "comments_total": 6,
+            "reviews": [],
+            "reviews_total": 10
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 433,
+            "title": "Fix boolean properties on the k4run command line",
+            "url": "https://github.com/key4hep/k4FWCore/pull/433",
+            "author": "madbaron",
+            "mergedAt": "2026-09-28",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Boolean properties could not be switched off from the command line:\r\n- when the property is set in the options file, argparse is given type=bool, and bool(\"False\") is True\r\n- when the property is left at its default, its value is propertyNoValue (a string), so the argument is parsed as a string and Gaudi later converts it with bool(\"False\"), which is again True\r\n\r\nParse boolean properties (detected from the value or, if unset, from the default) with a dedicated parser that accepts True/False, true/false and 1/0 and rejects anything else. A bare flag (e.g. \"--MetadataSvc.SkipIfSameValue\") now means True instead of setting None, which Gaudi converted to False.\r\n\r\nAdd tests for switching off a property set in the options file, one left at its default, a bare flag and an invalid value.\r\n\r\nBEGI\u2026",
+            "diff": {
+                "additions": 59,
+                "deletions": 0,
+                "files": 3
+            },
+            "files": [
+                "k4FWCore/scripts/k4run",
+                "test/k4FWCoreTest/CMakeLists.txt",
+                "test/k4FWCoreTest/options/Testk4runBoolProperties.py"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "I guess this one is also necessary for the tests in #434?\r\n\r\nFor me this looks good and can be merged. I would do so later today, unless stopped."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> I guess this one is also necessary for the tests in #434?\r\n\r\nNot really, but it won't harm I think"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Ah right. Because that uses the path that is already working, i.e. the `True` path."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I think @Zehvogel found this a long time ago."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Thank you!"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Huh, interesting that no one else has stumbled over this yet. Looks good to me, minor comment about what a flag should accept in this case."
+                }
+            ],
+            "reviews_total": 9
+        },
         {
             "org": "key4hep",
             "repo": "k4FWCore",
@@ -68,6 +194,146 @@
                 }
             ],
             "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 97,
+            "title": "Add CMake flags gating Tracking",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/97",
+            "author": "madbaron",
+            "mergedAt": "2026-09-28",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "This PR enables the compilation of the package in the muon collider software stack (which doesn't ship Marlin/LCIO) in preparation for the migration of the charge trasport digitisers discussed in https://github.com/MuonColliderSoft/MuonCVXDDigitiser/issues/17.\r\n\r\nBEGINRELEASENOTES\r\n- Add K4RECTRACKER_TRACKING CMake flag (default=ON) gating the compilation of the FCCee tracking \r\n\r\nENDRELEASENOTES\r\n\r\nThe dependencies of Tracking on MarlinUtil can actually be cleaned up by using the pandora helix class and a few more things could be streamlined. I'd be happy to take care of these in follow-up PRs if a more general cleanup is desirable!",
+            "diff": {
+                "additions": 19,
+                "deletions": 7,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "I do think that having digitisers in a place and pattern recognition/tracking software in another would be tidier, especially as k4ActsTracking already sits in its own package, but we can take baby steps on the way there.\r\n\r\nI'll be happy to take care of the spack updates as soon as this lands. I do\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "This is annoying to maintain since there are extra 4 options. Can you not update Delphes in your stack to reduce the options to one? If you are using the latest tag in Spack it's a very old one."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> This is annoying to maintain since there are extra 4 options. Can you not update Delphes in your stack to reduce the options to one? If you are using the latest tag in Spack it's a very old one.\r\n\r\nHappy to do that for now if you feel strongly about it, please let me know.\r\n\r\nThe Delphes dependenc\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "@andread3vita @s6anloes any (strong) opinions on this one? I assume you would be the most likely to be affected by this(?)"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Renamed the `K4RECTRACKER_DCH_DIGITISERS` to `K4RECTRACKER_WIRETRACKER_DIGITISERS` to be consistent with the name change in #100.\r\n\r\nI would like to get this merged soon. If no one complains, I will do so either tomorrow or the day after."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I still think this looks very ugly and is bound to fail since it requires assigning all the dependencies correctly to each option, if they are going to be used together either both false or true then we could have a single option for either all or only the stuff that doesn't have the \"heavy\" depende\u2026"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "The delphes dependence was introduced in https://github.com/key4hep/k4RecTracker/pull/61/.\r\nWould you suggest removing the `TrackdNdxDelphesBased` alltogether? \r\nTbh, I don't think it is used very much, but one never knows"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "> @andread3vita @s6anloes any (strong) opinions on this one? I assume you would be the most likely to be affected by this(?)\r\n\r\nOpinions on the gating of the digitisers? I don't I have a strong one. Would anything change for people who build with the digitisers?"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> > @andread3vita @s6anloes any (strong) opinions on this one? I assume you would be the most likely to be affected by this(?)\n> \n> Opinions on the gating of the digitisers? I don't I have a strong one. Would anything change for people who build with the digitisers?\n> \n\nNo, these are on by default. \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> , if they are going to be used together either both false or true then we could have a single option for either all or only the stuff that doesn't have the \"heavy\" dependencies. Removing the Delphes dependency also would be great\r\n\r\nI think our main motivation was to build without iLCSoft packages\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> The delphes dependence was introduced in #61. Would you suggest removing the `TrackdNdxDelphesBased` alltogether? Tbh, I don't think it is used very much, but one never knows\r\n\r\nI can offer this https://github.com/key4hep/k4RecTracker/pull/104, which reimplements the functionality locally while fi\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I've removed the wiretracker gate from this PR to make this mergeable right away.\r\n\r\nWe can discuss the Delphes dependency and if/how we want to remove it in #104"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Then why not put it also under the same flag (with a different name)? If it ends up being removed (seems like not soon?) then it keeps working and if not you can build without Delphes."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I guess it was a matter of taste, as I couldn't come up with a sensible flag name that would make sense outside of this conversation"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Ok, let's go with this as it is"
+                }
+            ],
+            "comments_total": 15,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Stating the obvious first: This will need propagation to the spack and/or lcgcmake packages.\n\nFor me nothing speaks against this. I suppose the other option would be to split off the digitisers into a separate repository or package where we have none of these dependencies. We discussed this a while \u2026"
+                }
+            ],
+            "reviews_total": 2
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "root2gltf",
+            "num": 16,
+            "title": "Declare depth as argument instead of config property",
+            "url": "https://github.com/HEP-FCC/root2gltf/pull/16",
+            "author": "apausa",
+            "mergedAt": "2026-09-28",
+            "mergedBy": "apausa",
+            "labels": [],
+            "body": "- Declare depth as argument instead of config property to enable full conversion \r\n- Rename remaining config properties\r\n- Provide updated config files",
+            "diff": {
+                "additions": 481,
+                "deletions": 209,
+                "files": 26
+            },
+            "files": [
+                "LICENSE",
+                "README.md",
+                "__tests__/index.test.ts",
+                "__tests__/lib/utils/generateConfig.test.ts",
+                "bin/cli.js",
+                "configs/ALLEGRO/ALLEGRO_o1_v01.config.json",
+                "configs/ALLEGRO/ALLEGRO_o1_v02.config.json",
+                "configs/ALLEGRO/ALLEGRO_o1_v03.config.json",
+                "configs/ALLEGRO/ALLEGRO_o2_v01.config.json",
+                "configs/ALLEGRO_o2_v01.config.json",
+                "configs/CLD/CLD_o2_v05.config.json",
+                "configs/CLD/CLD_o2_v06.config.json",
+                "configs/CLD/CLD_o2_v07.config.json",
+                "configs/CLD/CLD_o2_v08.config.json",
+                "configs/CLD/CLD_o3_v01.config.json",
+                "configs/CLD/CLD_o4_v05.config.json",
+                "configs/CLD_o4_v05.config.json",
+                "configs/IDEA/IDEA_o1_v01.config.json",
+                "configs/IDEA/IDEA_o1_v02.config.json",
+                "configs/ILD_FCCee/ILD_FCCee_v01.config.json",
+                "configs/ILD_FCCee/ILD_FCCee_v02.config.json",
+                "package.json",
+                "src/index.ts",
+                "src/lib/constants.ts",
+                "src/lib/types/converter.ts",
+                "src/lib/utils/generateConfig.ts"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -1392,66 +1658,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4geo",
-            "num": 662,
-            "title": "Map volumes to their closest predefined ROOT color",
-            "url": "https://github.com/key4hep/k4geo/pull/662",
-            "author": "apausa",
-            "mergedAt": "2026-09-22",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "To ease the review process, please consider the following before opening a pull request:\r\n- [x] the code is sufficiently well documented (e.g. inline comments)\r\n- [x] the relevant README(s) were updated. See e.g. https://github.com/key4hep/k4geo/blob/main/detector/calorimeter/README.md or https://github.com/key4hep/k4geo/blob/main/FCCee/IDEA/compact/README.md\r\n- [x] the code is covered by tests. See https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\r\n- [x] the PR source branch has been rebased (`--ff-only`) to `k4geo/main`\r\n- [x] the PR does not contain any additions or modifications that do not belong to it\r\n- [x] The release notes below contain a succinct and comprehensive description of the changes that are sufficiently self-explanatory\r\n\r\nIf you are modifying detector dimen\u2026",
-            "diff": {
-                "additions": 34,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "utils/dd4hep2root.py"
-            ],
-            "comments": [
-                {
-                    "author": "apausa",
-                    "body": "Fixes part of #616"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 6
-        },
-        {
-            "org": "key4hep",
-            "repo": "EDM4hep",
-            "num": 524,
-            "title": "Hide deprecated Track::getTrackState(int32_t) overload from Cling/cppyy",
-            "url": "https://github.com/key4hep/EDM4hep/pull/524",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-22",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Hide deprecated Track::getTrackState(int32_t) overload from Cling/cppyy\r\n\r\nENDRELEASENOTES\r\n\r\ncppyy seems to select the wrong overload and this will only be there until it is removed.\r\n\r\nFix https://github.com/key4hep/EDM4hep/issues/523",
-            "diff": {
-                "additions": 9,
-                "deletions": 7,
-                "files": 2
-            },
-            "files": [
-                "README.md",
-                "edm4hep.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "APPROVED",
-                    "body": "\ud83d\ude35\u200d\ud83d\udcab coming full circle here with our code gen. We are now reading in c++ code via yaml to generate c++ code with pre-processor directives which are then fed to another c++ based code generator to be ignored again... \ud83d\ude48"
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
             "repo": "key4hep-doc",
             "num": 162,
             "title": "Docs: link LCG prerequisites for CVMFS setup",
@@ -1478,51 +1684,6 @@
             "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 103,
-            "title": "add edge sorting/flipping to reproduce acorn workflow",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/103",
-            "author": "madbaron",
-            "mergedAt": "2026-09-22",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Added SortEdges flag to re-orient edges from the hit closer to the interaction point to the one further out, matching the convention used during training\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 393,
-                "deletions": 47,
-                "files": 11
-            },
-            "files": [
-                "GNNTrackFinding/README.md",
-                "GNNTrackFinding/include/EdgeDirection.h",
-                "GNNTrackFinding/options/runGNNTrackFinding.py",
-                "GNNTrackFinding/src/CCAndWalkTrackBuilding.cpp",
-                "GNNTrackFinding/src/CCAndWalkTrackBuilding.h",
-                "GNNTrackFinding/src/GNNTrackFinder.cpp",
-                "GNNTrackFinding/src/GNNTrackFinder.h",
-                "GNNTrackFinding/src/OnnxMetricLearning.cpp",
-                "GNNTrackFinding/src/OnnxMetricLearning.h",
-                "test/unittests/CMakeLists.txt",
-                "test/unittests/EdgeDirectionTests.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "madbaron",
-                    "body": "> In the grand scheme of things, does this (*the sorting of edges*) have to be configurable from the Gaudi algorithm? I.e. are there pipelines where we do not have/want this?\n> \n> This is ~essentially independent of #94, right?\n\nToday we have ~2 pipelines and they both come from acorn, so they both \u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "In the grand scheme of things, does this (*the sorting of edges*) have to be configurable from the Gaudi algorithm? I.e. are there pipelines where we do not have/want this?\n\nThis is ~essentially independent of #94, right?"
-                }
-            ],
-            "reviews_total": 13
         },
         {
             "org": "key4hep",
@@ -1619,179 +1780,6 @@
                 }
             ],
             "reviews_total": 14
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "root2gltf",
-            "num": 15,
-            "title": "Shrink overlapping children volumes",
-            "url": "https://github.com/HEP-FCC/root2gltf/pull/15",
-            "author": "apausa",
-            "mergedAt": "2026-09-22",
-            "mergedBy": "kjvbrt",
-            "labels": [
-                "bug"
-            ],
-            "body": "- Create constant for depth in `generateConfig.ts`\r\n- Shrink children nodes with same size and position as parent in `optimizeGraphics.ts`\r\n- Add graphics related constants to `constants.ts`\r\n- Fix missing field bug in `concatenateOutput.ts`\r\n- Review and clean up conversion logic in `handleInput.ts `\r\n- Reduce `numFaces` build option to 1000 in `index.ts`\r\n- Improve transparency (from 40% to 100%) in `index.ts`\r\n- Update `package-lock.json`\r\n- Update `README.md`\r\n- Fix failing tests accordingly\r\n- Bump up version number",
-            "diff": {
-                "additions": 428,
-                "deletions": 245,
-                "files": 10
-            },
-            "files": [
-                "README.md",
-                "__tests__/handleInput.test.ts",
-                "package-lock.json",
-                "package.json",
-                "src/concatenateOutput.ts",
-                "src/handleInput.ts",
-                "src/index.ts",
-                "src/lib/constants.ts",
-                "src/lib/utils/generateConfig.ts",
-                "src/lib/utils/optimizeGraphics.ts"
-            ],
-            "comments": [
-                {
-                    "author": "apausa",
-                    "body": "**ALLEGRO o2 v01 -- Depth 3, numFaces 1000, with overlapping children shrinkage (not noticeable)**\r\n<img width=\"3440\" height=\"1440\" alt=\"image\" src=\"https://github.com/user-attachments/assets/cd2e1473-dbd2-4fb6-846a-0c01f3b6d15b\" />\r\n\r\n**CLD o4 v05 -- Depth 3, numFaces 1000, with overlapping childre\u2026"
-                },
-                {
-                    "author": "apausa",
-                    "body": "Since shrinkage is not noticeable due to volumes having the same color I tested with IDEA o1 v01, here the yellow \"envelopes\" (parent volumes) and gray children are now rendered as distinct.\r\n\r\n<img width=\"3440\" height=\"1440\" alt=\"image\" src=\"https://github.com/user-attachments/assets/efaacf47-f7e4-\u2026"
-                },
-                {
-                    "author": "apausa",
-                    "body": "Changing the shrinkage factor to 0.9999 instead of 0.999 brings back overlapping / tesellation\r\n\r\n<img width=\"476\" height=\"672\" alt=\"image\" src=\"https://github.com/user-attachments/assets/abf4e3be-391d-4327-bd6e-0e3fecdbf74c\" />"
-                },
-                {
-                    "author": "apausa",
-                    "body": "**Mapping to the closest colors predefined by Root** \r\n\r\nALLEGRO o2 v01 -- Depth 3, numFaces 1000, with overlapping children shrinkage (not noticeable)\r\n\r\n<img width=\"3440\" height=\"1408\" alt=\"image\" src=\"https://github.com/user-attachments/assets/06f50508-0a0e-4265-a82b-8af07fbf81e4\" />\r\n\r\nCLD o4 v0\u2026"
-                },
-                {
-                    "author": "apausa",
-                    "body": "Related issue: https://github.com/key4hep/k4geo/issues/616"
-                },
-                {
-                    "author": "apausa",
-                    "body": "Related PR: https://github.com/key4hep/k4geo/pull/662"
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4FWCore",
-            "num": 431,
-            "title": "Add --evt-max alias to k4run",
-            "url": "https://github.com/key4hep/k4FWCore/pull/431",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-21",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Add `--evt-max` as a k4run alias for the Gaudi event limit, to make it clear it's the same as `ApplicationMgr.EvtMax`\r\n\r\nENDRELEASENOTES\r\n\r\nIf both aliases are passed, argparse uses the last value provided.\r\n\r\n@dudarboh",
-            "diff": {
-                "additions": 9,
-                "deletions": 3,
-                "files": 2
-            },
-            "files": [
-                "README.md",
-                "k4FWCore/scripts/k4run"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "It is always set: https://github.com/key4hep/k4FWCore/blob/main/python/k4FWCore/ApplicationMgr.py#L105 \r\nOtherwise I guess the default from Gaudi (-1) applies if not set"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Maybe we can put the `-1` default into the python arguments as well explicitly? That would make the chase for figuring out what the default is and where it comes from a bit easier."
-                },
-                {
-                    "author": "dudarboh",
-                    "body": "When generating events using [PythiaInterface](https://github.com/key4hep/k4Gen/blob/80f6c6606a4cdc3174c05ac5a3ddf8e95aee0c9a/k4Gen/src/components/PythiaInterface.h)  the number of events to generate set in the pythia card settings is completely ignored it seems.\r\n```\r\nMain:numberOfEvents = 100     \u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "That might be something that needs fixing in `k4Gen`? E.g. https://github.com/key4hep/k4SimDelphes/blob/51aa8edaa5e0012519e211a600959e79eab5d625/standalone/src/DelphesPythia8Reader.h#L91 and then issuing an early stop in case that is reached.\r\n\r\nThe current default is already `-1`, so simply stating\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "> Maybe we can put the `-1` default into the python arguments as well explicitly? That would make the chase for figuring out what the default is and where it comes from a bit easier.\r\n\r\nNo because the argument overrides anything in the steering files as it is now, I've put in the description."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "> That might be something that needs fixing in `k4Gen`? E.g. [key4hep/k4SimDelphes@`51aa8ed`/standalone/src/DelphesPythia8Reader.h#L91](https://github.com/key4hep/k4SimDelphes/blob/51aa8edaa5e0012519e211a600959e79eab5d625/standalone/src/DelphesPythia8Reader.h#L91) and then issuing an early stop in c\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> No because the argument overrides anything in the steering files as it is now, I've put in the description.\r\n\r\nAh yes, forgot about that."
-                }
-            ],
-            "comments_total": 7,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Do we already have it default to *run all events*? I guess we do, but is simply not setting `ApplicationMgr().EvtMax` where it happens?"
-                }
-            ],
-            "reviews_total": 2
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1681,
-            "title": "DDCAD: remove CSG-based exporter",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1681",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-21",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "ROOT made RCsg and CsgOps.h private in [root-project/root#23421](https://github.com/root-project/root/pull/23421). DDCAD's ASSIMP writer uses that API to tessellate every exported shape, so it can no longer consume a current ROOT installation.\r\n\r\nQuestion, what to do with this? This PR is the removal of what is using this CSG exporter. An alternative would be to make it a dependency of DD4hep.\r\n\r\nBEGINRELEASENOTES\r\n - Remove the CSG-dependent CAD export path because ROOT's RCsg library is now private.\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 679,
-                "files": 5
-            },
-            "files": [
-                "DDCAD/CMakeLists.txt",
-                "DDCAD/include/DDCAD/ASSIMPWriter.h",
-                "DDCAD/src/ASSIMPWriter.cpp",
-                "DDCAD/src/plugins/CADPlugins.cpp",
-                "examples/DDCAD/CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "andresailer",
-                    "body": "I am not convinced that simply removing the assimpwriter is the correct way forward. either we find an alternative library, or complain to ROOT to keep Rcsg public."
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200210h 31m 52s \u23f1\ufe0f\n\u2007\u2008374 tests\u2003\u2007\u2008374 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008322 runs\u200a\u20033\u2008322 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit e4a2913e.\n\n[test-results]:data:application/gzip;base64,H4sIAFvlsGoC/13Myw7CIBCF4VdpWLuAoRXwZQxySSa2xXBZGd9dJLVFV5Pvn+Q8icfZJXIZmDwNJBXMh2yJOmNYq7lQDGqq35yax6+uqRjzn+\u2026"
-                },
-                {
-                    "author": "ferdymercury",
-                    "body": "> we find an alternative library\r\n\r\nside note: Csg was derived from https://github.com/dtecta/solid3 so it could be maybe that one.\r\n\r\nside question: would it be ok to have it in ROOT/CsgOps.h rather than CsgOps.h ?"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "I may have some implementation that just uses publicly available ROOT interfaces, but I need to do some more testing."
-                },
-                {
-                    "author": "andresailer",
-                    "body": "my (and :gemini:'s) implementation: #1682"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "I won't get the other mess sorted, so I will merge this to get the builds green and then revert it to get the functionality back."
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [],
-            "reviews_total": 0
         }
     ]
 }
