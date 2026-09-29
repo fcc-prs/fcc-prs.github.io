@@ -7,7 +7,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
             "updatedAt": "2026-09-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -18,7 +18,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-21",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +40,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -51,7 +51,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +62,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +73,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -233,11 +233,11 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 929,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/929'>Add tracking variant to k4RecTracker</a>",
-            "author": "madbaron",
-            "createdAt": "2026-09-28",
-            "updatedAt": "2026-09-28",
+            "num": 911,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-16",
+            "updatedAt": "2026-09-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -249,18 +249,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-25",
             "updatedAt": "2026-09-25",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 911,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-16",
-            "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -271,7 +260,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -282,7 +271,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -530,6 +519,17 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 102,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-09-15",
+            "updatedAt": "2026-09-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 104,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/104'>remove Delphes dep</a>",
             "author": "madbaron",
@@ -543,17 +543,6 @@
             "repo": "key4hep/<br>k4RecTracker",
             "num": 101,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/101'>TrackFitter: Fix units in the helix-to-cartesian conversion + Fixed broken associations between hits and tracks introduced during the filtering stage</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-28",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "SanghyunKo"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 102,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-15",
             "updatedAt": "2026-09-28",
@@ -820,7 +809,7 @@
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/30'>Changes for ALLEGRO</a>",
             "author": "Archil-AD",
             "createdAt": "2026-05-06",
-            "updatedAt": "2026-09-27",
+            "updatedAt": "2026-09-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1498,21 +1487,21 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
-            "num": 383,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/383'>[IDEA] option 2 reconstruction config & CTest</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-08-24",
-            "updatedAt": "2026-09-28",
+            "num": 391,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/391'>[IDEA] Set shared flag to false if single thread</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-09-17",
+            "updatedAt": "2026-09-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
-            "num": 391,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/391'>[IDEA] Set shared flag to false if single thread</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-09-17",
+            "num": 383,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/383'>[IDEA] option 2 reconstruction config & CTest</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-08-24",
             "updatedAt": "2026-09-28",
             "mergeOk": "yes",
             "labels": "",
@@ -1624,6 +1613,17 @@
             "author": "neskongarr",
             "createdAt": "2026-09-28",
             "updatedAt": "2026-09-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 95,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/95'>Update module modernc.org/sqlite to v1.60.0</a>",
+            "author": "renovate",
+            "createdAt": "2026-09-29",
+            "updatedAt": "2026-09-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1766,7 +1766,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1672'>Add cvmfs/LCG-based macOS workflow</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-06",
-            "updatedAt": "2026-09-28",
+            "updatedAt": "2026-09-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1877,17 +1877,6 @@
             "author": "CrossR",
             "createdAt": "2026-08-20",
             "updatedAt": "2026-08-20",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "PandoraPFAOrg/<br>PandoraSDK",
-            "num": 37,
-            "title": "<a href='https://github.com/PandoraPFAOrg/PandoraSDK/pull/37'>PossibleBIB flag for use in muon colliders</a>",
-            "author": "trholmes",
-            "createdAt": "2026-09-03",
-            "updatedAt": "2026-09-21",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
