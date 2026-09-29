@@ -1,5 +1,6 @@
 const SNAPSHOTS_BASE = '/assets/json/summaries';
 const FALLBACK = '/assets/json/summary.json';
+const CURRENT_KEY = 'current';
 
 async function loadIndex() {
   try {
@@ -23,43 +24,51 @@ async function loadFallback() {
   return await res.json();
 }
 
-function renderNav(index, currentDate) {
+// Full nav list is [CURRENT_KEY, ...index] where CURRENT_KEY always loads summary.json.
+// currentLabel is the period_end from summary.json, used to label the current entry.
+function renderNav(index, currentKey, currentLabel) {
   const nav = document.getElementById('nav');
   if (!nav) return;
   nav.innerHTML = '';
-  if (index.length <= 1) return;
 
-  const currentIdx = index.indexOf(currentDate);
+  // All entries: current + weekly snapshots
+  const allKeys = [CURRENT_KEY, ...index];
+  if (allKeys.length <= 1) return; // only current, no snapshots yet
+
+  const labels = { [CURRENT_KEY]: `${currentLabel} (current)` };
+  index.forEach(d => { labels[d] = d; });
+
+  const currentIdx = allKeys.indexOf(currentKey);
 
   // ← Prev (older = higher index)
-  const prevDate = index[currentIdx + 1];
+  const prevKey = allKeys[currentIdx + 1];
   const prevLink = document.createElement('a');
   prevLink.textContent = '← Prev';
-  if (prevDate) {
-    prevLink.href = `#${prevDate}`;
-    prevLink.addEventListener('click', e => { e.preventDefault(); navigate(prevDate, index); });
+  if (prevKey) {
+    prevLink.href = `#${prevKey}`;
+    prevLink.addEventListener('click', e => { e.preventDefault(); navigate(prevKey, index, currentLabel); });
   } else {
     prevLink.classList.add('nav-disabled');
   }
 
   // dropdown
   const select = document.createElement('select');
-  index.forEach(date => {
+  allKeys.forEach(key => {
     const opt = document.createElement('option');
-    opt.value = date;
-    opt.textContent = date;
-    if (date === currentDate) opt.selected = true;
+    opt.value = key;
+    opt.textContent = labels[key];
+    if (key === currentKey) opt.selected = true;
     select.appendChild(opt);
   });
-  select.addEventListener('change', () => navigate(select.value, index));
+  select.addEventListener('change', () => navigate(select.value, index, currentLabel));
 
   // Next → (newer = lower index)
-  const nextDate = index[currentIdx - 1];
+  const nextKey = allKeys[currentIdx - 1];
   const nextLink = document.createElement('a');
   nextLink.textContent = 'Next →';
-  if (nextDate) {
-    nextLink.href = `#${nextDate}`;
-    nextLink.addEventListener('click', e => { e.preventDefault(); navigate(nextDate, index); });
+  if (nextKey) {
+    nextLink.href = `#${nextKey}`;
+    nextLink.addEventListener('click', e => { e.preventDefault(); navigate(nextKey, index, currentLabel); });
   } else {
     nextLink.classList.add('nav-disabled');
   }
@@ -77,7 +86,6 @@ function renderSummary(data) {
       : '';
   }
 
-
   const container = document.getElementById('summary-container');
   if (container) {
     const summaryText = Array.isArray(data.summary)
@@ -86,7 +94,7 @@ function renderSummary(data) {
     if (summaryText) {
       container.innerHTML = marked.parse(summaryText);
     } else {
-      container.textContent = 'No summary available yet. Check back after the next Monday run.';
+      container.textContent = 'No summary available yet.';
     }
   }
 
@@ -116,35 +124,41 @@ function renderSummary(data) {
   }
 }
 
-async function navigate(date, index) {
+async function navigate(key, index, currentLabel) {
   try {
-    const data = await loadSnapshot(date);
+    let data;
+    if (key === CURRENT_KEY) {
+      data = await loadFallback();
+      history.replaceState(null, '', window.location.pathname);
+    } else {
+      data = await loadSnapshot(key);
+      history.replaceState(null, '', `#${key}`);
+    }
     renderSummary(data);
-    renderNav(index, date);
-    history.replaceState(null, '', `#${date}`);
+    renderNav(index, key, currentLabel);
   } catch (e) {
     console.error(e);
   }
 }
 
 (async () => {
-  const index = await loadIndex();
+  const [index, currentData] = await Promise.all([loadIndex(), loadFallback()]);
+  const currentLabel = currentData.period_end || '';
+
   const hash = window.location.hash.replace('#', '');
-  const currentDate = (hash && index.includes(hash)) ? hash : (index[0] || null);
+  const activeKey = (hash && index.includes(hash)) ? hash : CURRENT_KEY;
 
   let data;
-  const isLatest = currentDate === index[0];
-  if (isLatest || !currentDate) {
-    // Always use summary.json for the latest week so manual re-runs are reflected immediately
-    data = await loadFallback();
+  if (activeKey === CURRENT_KEY) {
+    data = currentData;
   } else {
     try {
-      data = await loadSnapshot(currentDate);
+      data = await loadSnapshot(activeKey);
     } catch {
-      data = await loadFallback();
+      data = currentData;
     }
   }
 
   renderSummary(data);
-  if (currentDate) renderNav(index, currentDate);
+  renderNav(index, activeKey, currentLabel);
 })();

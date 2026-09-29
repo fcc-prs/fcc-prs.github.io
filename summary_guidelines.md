@@ -28,6 +28,13 @@ Prioritise in this order:
   folders such as `MuColl/`, `ILD/`, `CLIC/`, `LUXE/`, `SiD/` — even if the PR
   description mentions shared components.
 
+## Tense and voice
+
+- Use the **past tense** for all descriptions, as if reporting completed work.
+  - Correct: "The full seeded ECAL clustering chain was added…", "DCHdigi_v02 was renamed…", "Support for Gaudi 41 was added…"
+  - Incorrect: "Adds the full seeded ECAL clustering chain…", "Renames DCHdigi_v02…", "Adds support for Gaudi 41…"
+- Avoid filler connectors such as "Also", "Additionally", "Furthermore", "Now", "Moreover". Start each clause or sentence directly with its subject.
+
 ## Style
 
 - A PR that belongs in Omitted must NOT appear in the Summary section at all — not even
