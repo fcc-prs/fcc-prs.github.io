@@ -2,23 +2,12 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 668,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/668'>Make dd4hep2root available when sourcing key4hep</a>",
-            "author": "apausa",
-            "createdAt": "2026-09-29",
-            "updatedAt": "2026-09-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 625,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
             "updatedAt": "2026-09-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +18,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -51,7 +40,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +51,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +62,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +73,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -180,17 +169,6 @@
             "repo": "key4hep/<br>k4FWCore",
             "num": 438,
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/438'>Use the Gaudi major version check for the empty type list</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-29",
-            "updatedAt": "2026-09-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
-            "num": 437,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/437'>Install the python package to GAUDI_INSTALL_PYTHONDIR</a>",
             "author": "jmcarcell",
             "createdAt": "2026-09-29",
             "updatedAt": "2026-09-29",
@@ -574,17 +552,6 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 81,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
-            "author": "JonaDilg",
-            "createdAt": "2026-05-07",
-            "updatedAt": "2026-09-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
             "num": 102,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
             "author": "andread3vita",
@@ -593,6 +560,17 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 81,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
+            "author": "JonaDilg",
+            "createdAt": "2026-05-07",
+            "updatedAt": "2026-09-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
