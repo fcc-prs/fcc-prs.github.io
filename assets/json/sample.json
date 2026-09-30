@@ -2,6 +2,17 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 669,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/669'>Alfa detector concept</a>",
+            "author": "Edler1",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-09-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 625,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
             "author": "jmcarcell",
@@ -84,7 +95,7 @@
             "author": "tmadlener",
             "createdAt": "2025-05-05",
             "updatedAt": "2026-08-05",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +106,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-13",
             "updatedAt": "2026-09-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -106,7 +117,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -117,7 +128,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -128,7 +139,7 @@
             "author": "BrieucF",
             "createdAt": "2026-03-30",
             "updatedAt": "2026-05-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -237,7 +248,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
-            "updatedAt": "2026-09-29",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -249,7 +260,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-25",
             "updatedAt": "2026-09-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -260,7 +271,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -271,7 +282,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -321,23 +332,12 @@
         },
         {
             "repo": "key4hep/<br>k4SimDelphes",
-            "num": 162,
-            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/162'>DelphesEDM4HepConverter: keep energy/mass/momentum consistency; add pdgid for tracks and leptons</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-08-28",
-            "updatedAt": "2026-09-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4SimDelphes",
             "num": 31,
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/31'>Fix energy</a>",
             "author": "clementhelsens",
             "createdAt": "2021-03-15",
             "updatedAt": "2026-09-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -552,23 +552,12 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 105,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/105'>Clean up CMakeLists.txt</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-30",
-            "updatedAt": "2026-09-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
             "num": 81,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
             "updatedAt": "2026-09-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -579,7 +568,7 @@
             "author": "madbaron",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-28",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -612,7 +601,7 @@
             "author": "BrieucF",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-08-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -882,8 +871,8 @@
         },
         {
             "repo": "key4hep/<br>DDML",
-            "num": 17,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/17'>Add a very basic runtime check setup</a>",
+            "num": 16,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/16'>Initialize the inference model early</a>",
             "author": "tmadlener",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-09-30",
@@ -898,18 +887,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-09-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>DDML",
-            "num": 20,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/20'>Make sure to only copy data that the model has actually returned</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-24",
-            "updatedAt": "2026-09-30",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -919,17 +897,6 @@
             "title": "<a href='https://github.com/key4hep/DDML/pull/3'>Trigger fix</a>",
             "author": "peter-mckeown",
             "createdAt": "2025-06-03",
-            "updatedAt": "2026-09-30",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>DDML",
-            "num": 16,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/16'>Initialize the inference model early</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-24",
             "updatedAt": "2026-09-30",
             "mergeOk": "no",
             "labels": "",
@@ -948,23 +915,23 @@
         },
         {
             "repo": "key4hep/<br>DDML",
-            "num": 18,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/18'>Fix CaloClouds3 configuration to use proper model for Endcap</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-24",
-            "updatedAt": "2026-04-24",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>DDML",
             "num": 15,
             "title": "<a href='https://github.com/key4hep/DDML/pull/15'>Add Par04 style Parallel World Placements</a>",
             "author": "peter-mckeown",
             "createdAt": "2026-03-10",
             "updatedAt": "2026-03-10",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4DetectorPerformance",
+            "num": 10,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/10'>TrackingValidation: fix truth parameters and matching, align with ACTS</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-09-30",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1487,17 +1454,6 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 285,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/285'>Require onnxruntime 1.16.0 and remove FindONNXRuntime.cmake</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-30",
-            "updatedAt": "2026-09-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
             "num": 193,
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/193'>Calculate cluster direction from longitudinal samplings</a>",
             "author": "giovannimarchiori",
@@ -1558,7 +1514,7 @@
             "author": "BrieucF",
             "createdAt": "2026-09-25",
             "updatedAt": "2026-09-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "draft",
             "assignees": ""
         },
@@ -1580,7 +1536,7 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1591,7 +1547,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1602,7 +1558,7 @@
             "author": "Victor-Schwan",
             "createdAt": "2026-08-19",
             "updatedAt": "2026-08-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1865,7 +1821,7 @@
             "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/41'>Maia/theta energy</a>",
             "author": "Jullianwatts",
             "createdAt": "2026-08-24",
-            "updatedAt": "2026-09-24",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
