@@ -84,7 +84,7 @@
             "author": "tmadlener",
             "createdAt": "2025-05-05",
             "updatedAt": "2026-08-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +95,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-13",
             "updatedAt": "2026-09-25",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -106,7 +106,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -117,7 +117,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -128,7 +128,7 @@
             "author": "BrieucF",
             "createdAt": "2026-03-30",
             "updatedAt": "2026-05-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -167,22 +167,11 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 438,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/438'>Use the Gaudi major version check for the empty type list</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-09-29",
-            "updatedAt": "2026-09-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
             "num": 413,
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
             "createdAt": "2026-07-06",
-            "updatedAt": "2026-09-28",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -193,7 +182,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/434'>Fix the background event cursor in OverlayTiming</a>",
             "author": "madbaron",
             "createdAt": "2026-09-23",
-            "updatedAt": "2026-09-28",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -260,7 +249,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-25",
             "updatedAt": "2026-09-25",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -271,7 +260,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -282,7 +271,7 @@
             "author": "tmadlener",
             "createdAt": "2025-09-24",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -336,7 +325,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/162'>DelphesEDM4HepConverter: keep energy/mass/momentum consistency; add pdgid for tracks and leptons</a>",
             "author": "davidlange6",
             "createdAt": "2026-08-28",
-            "updatedAt": "2026-09-29",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -431,11 +420,11 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 72,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/72'>Expand support for 4D tracking</a>",
-            "author": "jburzy",
-            "createdAt": "2026-07-04",
-            "updatedAt": "2026-09-29",
+            "num": 109,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Draft: Add initial ACTS adaptive multi-vertex finder</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -446,6 +435,17 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add outside-in and two-way CKF tracking</a>",
             "author": "mlarson02",
             "createdAt": "2026-09-29",
+            "updatedAt": "2026-09-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 72,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/72'>Expand support for 4D tracking</a>",
+            "author": "jburzy",
+            "createdAt": "2026-07-04",
             "updatedAt": "2026-09-29",
             "mergeOk": "yes",
             "labels": "",
@@ -479,7 +479,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/25'>Add CI check for synchronized defaults</a>",
             "author": "jmcarcell",
             "createdAt": "2026-09-20",
-            "updatedAt": "2026-09-20",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -541,25 +541,25 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 101,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/101'>TrackFitter: Fix units in the helix-to-cartesian conversion + Fixed broken associations between hits and tracks introduced during the filtering stage</a>",
+            "num": 102,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-29",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 102,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-29",
+            "num": 105,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/105'>Clean up CMakeLists.txt</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
-            "assignees": "SanghyunKo"
+            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -827,6 +827,17 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 59,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/59'>Create k4GaudiPandora namespace to avoid symbol name clashes</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
             "num": 30,
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/30'>Changes for ALLEGRO</a>",
             "author": "Archil-AD",
@@ -860,17 +871,6 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 59,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/59'>Create k4GaudiPandora namespace to avoid symbol name clashes</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-09-22",
-            "updatedAt": "2026-09-22",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GaudiPandora",
             "num": 52,
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/52'>[WIP] Pandora interface for the IDEA detector</a>",
             "author": "SanghyunKo",
@@ -882,11 +882,11 @@
         },
         {
             "repo": "key4hep/<br>DDML",
-            "num": 20,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/20'>Make sure to only copy data that the model has actually returned</a>",
+            "num": 17,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/17'>Add a very basic runtime check setup</a>",
             "author": "tmadlener",
             "createdAt": "2026-04-24",
-            "updatedAt": "2026-06-23",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -897,7 +897,40 @@
             "title": "<a href='https://github.com/key4hep/DDML/pull/19'>Add python module to streamline configuration for downstream consumers</a>",
             "author": "tmadlener",
             "createdAt": "2026-04-24",
-            "updatedAt": "2026-04-28",
+            "updatedAt": "2026-09-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>DDML",
+            "num": 20,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/20'>Make sure to only copy data that the model has actually returned</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-24",
+            "updatedAt": "2026-09-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>DDML",
+            "num": 3,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/3'>Trigger fix</a>",
+            "author": "peter-mckeown",
+            "createdAt": "2025-06-03",
+            "updatedAt": "2026-09-30",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>DDML",
+            "num": 16,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/16'>Initialize the inference model early</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-24",
+            "updatedAt": "2026-09-30",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -909,28 +942,6 @@
             "author": "tmadlener",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-04-28",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>DDML",
-            "num": 16,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/16'>Initialize the inference model early</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-24",
-            "updatedAt": "2026-04-28",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>DDML",
-            "num": 17,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/17'>Add a very basic runtime check setup</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-24",
-            "updatedAt": "2026-04-27",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -958,13 +969,24 @@
             "assignees": ""
         },
         {
-            "repo": "key4hep/<br>DDML",
-            "num": 3,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/3'>Trigger fix</a>",
+            "repo": "key4hep/<br>k4DetectorPerformance",
+            "num": 9,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/9'>Draft: Add vertex validation plots</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-09-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4DetectorPerformance",
+            "num": 6,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/6'>Add Di-Photon Performance Benchmark</a>",
             "author": "peter-mckeown",
-            "createdAt": "2025-06-03",
-            "updatedAt": "2025-06-03",
-            "mergeOk": "no",
+            "createdAt": "2026-05-06",
+            "updatedAt": "2026-09-30",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1000,17 +1022,6 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
-        },
-        {
-            "repo": "key4hep/<br>k4DetectorPerformance",
-            "num": 6,
-            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/6'>Add Di-Photon Performance Benchmark</a>",
-            "author": "peter-mckeown",
-            "createdAt": "2026-05-06",
-            "updatedAt": "2026-05-06",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1051,7 +1062,7 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/207'>Update documentation to reflect script retrieval</a>",
             "author": "apausa",
             "createdAt": "2026-09-29",
-            "updatedAt": "2026-09-29",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1476,6 +1487,17 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 285,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/285'>Require onnxruntime 1.16.0 and remove FindONNXRuntime.cmake</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-09-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
             "num": 193,
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/193'>Calculate cluster direction from longitudinal samplings</a>",
             "author": "giovannimarchiori",
@@ -1531,23 +1553,12 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
-            "num": 383,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/383'>[IDEA] option 2 reconstruction config & CTest</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-08-24",
-            "updatedAt": "2026-09-28",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
             "num": 398,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/398'>[ALLEGRO] Factorize the common Gaudi configuration between o1 and o2</a>",
             "author": "BrieucF",
             "createdAt": "2026-09-25",
             "updatedAt": "2026-09-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "draft",
             "assignees": ""
         },
@@ -1569,7 +1580,7 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-25",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1580,7 +1591,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1591,7 +1602,7 @@
             "author": "Victor-Schwan",
             "createdAt": "2026-08-19",
             "updatedAt": "2026-08-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1612,7 +1623,7 @@
             "title": "<a href='https://github.com/HEP-FCC/root2gltf/pull/17'>Optionally assign a random color to volumes with an undefined, black or white value</a>",
             "author": "apausa",
             "createdAt": "2026-09-28",
-            "updatedAt": "2026-09-29",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1634,7 +1645,7 @@
             "title": "<a href='https://github.com/HEP-FCC/phoenix-at-fcc/pull/28'>Link detectors</a>",
             "author": "apausa",
             "createdAt": "2026-09-24",
-            "updatedAt": "2026-09-28",
+            "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
