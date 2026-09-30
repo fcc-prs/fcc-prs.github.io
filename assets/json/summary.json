@@ -1,45 +1,50 @@
 {
-  "updated_at": "2026-09-29T13:42:04Z",
-  "period_start": "2026-09-22",
-  "period_end": "2026-09-29",
+  "updated_at": "2026-09-30T13:17:23Z",
+  "period_start": "2026-09-23",
+  "period_end": "2026-09-30",
   "summary": [
-    "- **[key4hep/k4FWCore](https://github.com/key4hep/k4FWCore)** — Boolean properties can now be reliably toggled from the `k4run` command line: a dedicated parser was added that accepts `True/False`, `true/false`, `1/0` and rejects anything else, fixing cases where `--Prop False` was silently converted to `True` ([#433](https://github.com/key4hep/k4FWCore/pull/433)). Support for the new `EventContext` data handle API introduced in Gaudi 41 was added and then hardened by requiring Gaudi v41r1 or later ([#432](https://github.com/key4hep/k4FWCore/pull/432), [#436](https://github.com/key4hep/k4FWCore/pull/436)). The `OverlayTiming` background particle index mapping was simplified from per-frame `std::map` lookups to direct indexing, which also fixed a silent-drop bug where daughter particles with empty parent lists were skipped, and delivered a measurable speedup ([#429](https://github.com/key4hep/k4FWCore/pull/429)).\n- **[key4hep/k4geo](https://github.com/key4hep/k4geo)** — The IDEA/ALLEGRO vertex detector was refactored and the FCC-SEED option was added across detectors (with new `CLD_o5_v01`), and ALLEGRO pixel pitches and Silicon Wrapper layer count were updated; requires downstream config updates ([#612](https://github.com/key4hep/k4geo/pull/612)). The ALLEGRO HCAL Endcap pseudo-layer position calculation used by PandoraPFA was corrected ([#666](https://github.com/key4hep/k4geo/pull/666)). The IDEA steering example was updated to set the workers event-sharing flag to `false` when running single-threaded ([#665](https://github.com/key4hep/k4geo/pull/665)), and a bug in the XML→ROOT color caching path was fixed alongside a minor IDEA_o1_v01 XML tweak ([#667](https://github.com/key4hep/k4geo/pull/667)).\n- **[key4hep/k4RecTracker](https://github.com/key4hep/k4RecTracker)** — `DCHdigi_v02` was renamed to `WireTrackerDigi_v01`, generalising the digitiser to work for both drift chambers and straw-tube trackers via a new `isSTT` Gaudi property that changes cellID field usage; the old name is still available via a backward-compatible alias ([#100](https://github.com/key4hep/k4RecTracker/pull/100), [#103](https://github.com/key4hep/k4RecTracker/pull/103)). A `K4RECTRACKER_TRACKING` CMake flag was added to gate compilation of the FCCee tracking components, enabling builds in stacks without Marlin/LCIO (e.g. muon collider) ([#97](https://github.com/key4hep/k4RecTracker/pull/97)).\n- **[key4hep/k4ActsTracking](https://github.com/key4hep/k4ActsTracking)** — The local EDM4hep track conversion code was replaced with the upstream `ActsPlugins::EDM4hepUtil`; `ACTS2edm4hep_track` is now a thin wrapper around `writeTrack`, seed (`AtFirstHit`) and calorimeter (`AtCalorimeter`) track states are built with `writeTrackState`, and the track state covariance layout was fixed to follow `edm4hep::TrackParams` order so downstream consumers now read the correct elements ([#95](https://github.com/key4hep/k4ActsTracking/pull/95)). A pass-through `ClassifiedEdgePrinting` stage was added to ease external validation of the GNN pipeline ([#105](https://github.com/key4hep/k4ActsTracking/pull/105)).\n- **[key4hep/k4EDM4hep2LcioConv](https://github.com/key4hep/k4EDM4hep2LcioConv)** — Obsolete EDM4hep version guards were removed from the conversion and comparison code, and the package now requires EDM4hep ≥ 1.0 ([#135](https://github.com/key4hep/k4EDM4hep2LcioConv/pull/135)).\n- **[key4hep/k4SimDelphes](https://github.com/key4hep/k4SimDelphes)** — Photon pointing information from Delphes is now propagated to EDM4hep: pointing angles are stored in `ITheta`/`IPhi` with `directionError`, and hit position uncertainties are stored via `positionError` for `errorPhi`/`errorTheta` ([#161](https://github.com/key4hep/k4SimDelphes/pull/161)). Deprecated Delphes initialization/processing calls in the standalone and framework paths were replaced with current APIs ([#163](https://github.com/key4hep/k4SimDelphes/pull/163)).\n- **[AIDASoft/DD4hep](https://github.com/AIDASoft/DD4hep)** — The EDM4hep file reader was made consistent with the HepMC3 reader: the vertex is now taken from the end vertex of the parent-less particle (defaulting to (0,0,0) when absent), enabling consistent results between the two intermediate layers between Pythia and `ddsim` ([#1684](https://github.com/AIDASoft/DD4hep/pull/1684)).\n- **[HEP-FCC/k4RecCalorimeter](https://github.com/HEP-FCC/k4RecCalorimeter)** — A full seeded ECAL clustering chain for the IDEA o2 dual-readout calorimeter was added, comprising `CaloDrivenClusterSeeding`, `TrackDrivenClusterSeeding`, `ClusterSeedMerging`, `ClusterSeedGrower`, and a new `CreateOpticalCaloCells` that turns optical-photon SimCalorimeterHits into CalorimeterHits and links each cell to its truth energy deposit (with a `maskCherenkovForTruthLink` option); a CI test for the IDEA o2 reconstruction chain was also added ([#271](https://github.com/HEP-FCC/k4RecCalorimeter/pull/271)).\n- **[HEP-FCC/FCC-config](https://github.com/HEP-FCC/FCC-config)** — ALLEGRO configurations gained TRAPPIST inference and π0 particle identification for both topoclusters and SW clusters in `o1_v03` and `o2_v01` ([#392](https://github.com/HEP-FCC/FCC-config/pull/392)). ALLEGRO vertex and Silicon Wrapper resolutions were updated to 3 µm spatial / 5 ns timing and 50 µm/√12 respectively, following the recent baseline change ([#384](https://github.com/HEP-FCC/FCC-config/pull/384)). The ALLEGRO_o2_v01 reconstruction now includes the STT digitiser and STT hits in track finding, with a fix to the perfect track fitter/finder wiring ([#388](https://github.com/HEP-FCC/FCC-config/pull/388), [#396](https://github.com/HEP-FCC/FCC-config/pull/396)); ALLEGRO and IDEA scripts were also updated to follow the `DCHdigi_v02` → `WireTrackerDigi_v01` rename ([#395](https://github.com/HEP-FCC/FCC-config/pull/395)). IDEA Delphes/EDM4hep cards were added and ZH/ZZ/WW Pythia8 generator cards updated to winter2023 versions ([#393](https://github.com/HEP-FCC/FCC-config/pull/393)).\n- **[HEP-FCC/root2gltf](https://github.com/HEP-FCC/root2gltf)** — Depth is now declared as a CLI argument rather than a config property, enabling full geometry conversion; remaining config properties were renamed and updated config files were shipped for ALLEGRO, CLD, IDEA, and ILD_FCCee ([#16](https://github.com/HEP-FCC/root2gltf/pull/16))."
+    "- **[key4hep/k4FWCore](https://github.com/key4hep/k4FWCore)** — Support for the Gaudi 41 `EventContext` data handle API was added in [#432](https://github.com/key4hep/k4FWCore/pull/432), with the requirement subsequently bumped to Gaudi v41r1 in [#436](https://github.com/key4hep/k4FWCore/pull/436) and the `EmptyTypeList` guard reverted to a major-version-only check in [#438](https://github.com/key4hep/k4FWCore/pull/438). A long-standing bug where boolean properties could not be switched off from the `k4run` command line was fixed in [#433](https://github.com/key4hep/k4FWCore/pull/433), with a dedicated parser now accepting `True/False`, `true/false`, and `1/0`. The python package install path was switched to `GAUDI_INSTALL_PYTHONDIR` in [#437](https://github.com/key4hep/k4FWCore/pull/437) to accommodate Gaudi v41r0's new layout (broken IOSvc builds), and the `OverlayTiming` background particle index mapping was simplified in [#429](https://github.com/key4hep/k4FWCore/pull/429), also fixing a bug where daughter particles with empty parent lists were silently dropped.\n- **[key4hep/k4MarlinWrapper](https://github.com/key4hep/k4MarlinWrapper)** — The deprecated `inputReader` module was removed in [#489](https://github.com/key4hep/k4MarlinWrapper/pull/489); users must migrate to `k4MarlinWrapper.io_helpers` as `PodioInput` has been removed from k4FWCore.\n- **[key4hep/k4RecTracker](https://github.com/key4hep/k4RecTracker)** — A `K4RECTRACKER_TRACKING` CMake flag (default ON) was added in [#97](https://github.com/key4hep/k4RecTracker/pull/97) to gate the FCCee tracking components, enabling builds in stacks lacking Marlin/LCIO (e.g. muon collider). The `DCHdigi_v02` alias for `WireTrackerDigi_v01` was fixed in [#103](https://github.com/key4hep/k4RecTracker/pull/103), restoring backward compatibility.\n- **[key4hep/k4ActsTracking](https://github.com/key4hep/k4ActsTracking)** — The local EDM4hep conversion code was replaced by the upstream `ActsPlugins::EDM4hepUtil` in [#95](https://github.com/key4hep/k4ActsTracking/pull/95). A track state covariance layout bug was fixed so it now follows the EDM4hep `edm4hep::TrackParams` order; downstream consumers previously read the wrong elements. A pass-through `ClassifiedEdgePrinting` stage was added in [#105](https://github.com/key4hep/k4ActsTracking/pull/105) to aid GNN pipeline validation against external frameworks.\n- **[key4hep/EDM4hep](https://github.com/key4hep/EDM4hep)** — Include-what-you-use suggestions were applied across utilities, tools, and tests in [#525](https://github.com/key4hep/EDM4hep/pull/525), touching public headers such as `ParticleIDUtils.h`, `kinematics.h`, `vector_utils.h`, and `cov_matrix_utils.h`; downstream consumers may need to add previously transitively included headers.\n- **[key4hep/k4EDM4hep2LcioConv](https://github.com/key4hep/k4EDM4hep2LcioConv)** — Obsolete EDM4hep version guards were removed and the minimum EDM4hep requirement was raised to ≥ 1.0 in [#135](https://github.com/key4hep/k4EDM4hep2LcioConv/pull/135).\n- **[key4hep/k4geo](https://github.com/key4hep/k4geo)** — The IDEA `SteeringFile_IDEA_o1_v03.py` was updated in [#665](https://github.com/key4hep/k4geo/pull/665) to set the event-sharing flag to `false` when running single-threaded (paired with a DD4hep change). XML-to-ROOT conversion bugs were fixed in [#667](https://github.com/key4hep/k4geo/pull/667), correcting predefined-color handling in `dd4hep2root.py` and an issue in the IDEA_o1_v01 XML. The `dd4hep2root` script was also made available when sourcing Key4hep in [#668](https://github.com/key4hep/k4geo/pull/668).\n- **[HEP-FCC/k4RecCalorimeter](https://github.com/HEP-FCC/k4RecCalorimeter)** — A full seeded ECAL clustering chain for the IDEA o2 dual-readout calorimeter was added in [#271](https://github.com/HEP-FCC/k4RecCalorimeter/pull/271), introducing `CaloDrivenClusterSeeding`, `TrackDrivenClusterSeeding`, `ClusterSeedMerging`, and `ClusterSeedGrower`, plus a new `CreateOpticalCaloCells` algorithm that converts optical-photon SimHits into CalorimeterHits with truth links, and a full CI reconstruction test for the IDEA o2 chain.\n- **[HEP-FCC/FCC-config](https://github.com/HEP-FCC/FCC-config)** — For ALLEGRO, TRAPPIST inference and pi0 identification (for both topoclusters and, with FIXMEs, SW clusters) were integrated into the o1_v03 and o2_v01 reconstruction chains in [#392](https://github.com/HEP-FCC/FCC-config/pull/392). Vertex and silicon wrapper resolutions were updated to 3 µm spatial / 5 ns timing (vertex) and 50 µm/√12 (silicon wrapper) in [#384](https://github.com/HEP-FCC/FCC-config/pull/384) following the new inner-detector baseline. STT digitised hits were included in the track finder and a track-fitter/validator crash was fixed in [#396](https://github.com/HEP-FCC/FCC-config/pull/396).\n- **[AIDASoft/DD4hep](https://github.com/AIDASoft/DD4hep)** — The `EDM4hepFileReader` vertex handling was made consistent with the HepMC3 reader in [#1684](https://github.com/AIDASoft/DD4hep/pull/1684): the vertex now uses the end vertex of the parent-less particle, defaulting to (0,0,0) if absent, enabling fully consistent results when using either HepMC or EDM4hep as intermediate between Pythia and ddsim.\n- **[HEP-FCC/root2gltf](https://github.com/HEP-FCC/root2gltf)** — Depth was moved from a config property to a CLI argument in [#16](https://github.com/HEP-FCC/root2gltf/pull/16), enabling full geometry conversion, with remaining config properties renamed and all bundled detector configs (ALLEGRO, CLD, IDEA, ILD_FCCee) updated accordingly."
   ],
   "omitted": [
     {
+      "pr": "key4hep/DDML#28",
+      "url": "https://github.com/key4hep/DDML/pull/28",
+      "reason": "CI workflow update only."
+    },
+    {
       "pr": "key4hep/key4hep-spack#929",
       "url": "https://github.com/key4hep/key4hep-spack/pull/929",
-      "reason": "Packaging recipe change adding a build variant, no user-visible behaviour change."
+      "reason": "Spack recipe update to expose the new k4RecTracker tracking variant."
     },
     {
       "pr": "key4hep/key4hep-spack#927",
       "url": "https://github.com/key4hep/key4hep-spack/pull/927",
-      "reason": "Pure Spack recipe tweak setting `BUILD_TESTING`, no user-visible effect."
+      "reason": "Spack recipe cleanup setting BUILD_TESTING for consistency."
     },
     {
       "pr": "key4hep/k4Bench#201",
       "url": "https://github.com/key4hep/k4Bench/pull/201",
-      "reason": "Internal benchmarking/blame tooling refinement, no HEP-user-facing impact."
-    },
-    {
-      "pr": "key4hep/k4Bench#198",
-      "url": "https://github.com/key4hep/k4Bench/pull/198",
-      "reason": "Trivial dependabot bump of streamlit."
-    },
-    {
-      "pr": "key4hep/k4Bench#199",
-      "url": "https://github.com/key4hep/k4Bench/pull/199",
-      "reason": "Trivial dependabot bump of streamlit."
-    },
-    {
-      "pr": "key4hep/k4Bench#200",
-      "url": "https://github.com/key4hep/k4Bench/pull/200",
-      "reason": "Trivial dependabot bump of pymdown-extensions."
+      "reason": "Internal benchmarking blame/attribution tooling, no user-facing HEP impact."
     },
     {
       "pr": "key4hep/k4Bench#197",
       "url": "https://github.com/key4hep/k4Bench/pull/197",
-      "reason": "Internal dashboard caching fix, no user-facing HEP impact."
+      "reason": "Dashboard caching fix, internal tooling only."
+    },
+    {
+      "pr": "key4hep/k4Bench#198",
+      "url": "https://github.com/key4hep/k4Bench/pull/198",
+      "reason": "Trivial dependabot streamlit bump."
+    },
+    {
+      "pr": "key4hep/k4Bench#199",
+      "url": "https://github.com/key4hep/k4Bench/pull/199",
+      "reason": "Trivial dependabot streamlit bump."
+    },
+    {
+      "pr": "key4hep/k4Bench#200",
+      "url": "https://github.com/key4hep/k4Bench/pull/200",
+      "reason": "Trivial dependabot pymdown-extensions bump."
     },
     {
       "pr": "key4hep/key4hep-doc#165",
@@ -49,22 +54,17 @@
     {
       "pr": "key4hep/key4hep-doc#164",
       "url": "https://github.com/key4hep/key4hep-doc/pull/164",
-      "reason": "Docs preview script fix, no user-visible content change."
+      "reason": "Documentation preview script bug fix, no user-facing impact."
     },
     {
-      "pr": "key4hep/key4hep-doc#162",
-      "url": "https://github.com/key4hep/key4hep-doc/pull/162",
-      "reason": "Minor documentation link update."
-    },
-    {
-      "pr": "key4hep/k4ActsTracking#106",
-      "url": "https://github.com/key4hep/k4ActsTracking/pull/106",
-      "reason": "CI-only change to build the EDM4hep plugin."
+      "pr": "HEP-FCC/k4RecCalorimeter#282",
+      "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/282",
+      "reason": "Pure build/test infrastructure change (GAUDI_PLUGIN_PATH for CTest), superseded by a different approach."
     }
   ],
   "usage": {
-    "input_tokens": 33598,
-    "output_tokens": 3483
+    "input_tokens": 27278,
+    "output_tokens": 3187
   },
-  "cost_usd": 0.255065
+  "cost_usd": 0.216065
 }
