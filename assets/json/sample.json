@@ -178,21 +178,21 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 413,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
+            "num": 434,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/434'>Fix the background event cursor in OverlayTiming</a>",
             "author": "madbaron",
-            "createdAt": "2026-07-06",
-            "updatedAt": "2026-09-30",
+            "createdAt": "2026-09-23",
+            "updatedAt": "2026-10-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 434,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/434'>Fix the background event cursor in OverlayTiming</a>",
+            "num": 413,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
-            "createdAt": "2026-09-23",
+            "createdAt": "2026-07-06",
             "updatedAt": "2026-09-30",
             "mergeOk": "yes",
             "labels": "",
@@ -244,17 +244,6 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 932,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/932'>add wget build dependency to k4actstracking</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-01",
-            "updatedAt": "2026-10-01",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
             "num": 911,
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
@@ -271,7 +260,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-25",
             "updatedAt": "2026-09-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -282,18 +271,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 794,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/794'>Add a `key4hep-sim-reco` environment and build it in an image</a>",
-            "author": "tmadlener",
-            "createdAt": "2025-09-24",
-            "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -431,6 +409,17 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 110,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/110'>switch to externaldata</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-01",
+            "updatedAt": "2026-10-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 72,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/72'>Expand support for 4D tracking</a>",
             "author": "jburzy",
@@ -491,7 +480,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-01",
             "updatedAt": "2026-10-01",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -502,7 +491,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-20",
             "updatedAt": "2026-10-01",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -513,7 +502,7 @@
             "author": "jmcarcell",
             "createdAt": "2025-03-25",
             "updatedAt": "2026-09-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -524,7 +513,7 @@
             "author": "tmadlener",
             "createdAt": "2023-07-14",
             "updatedAt": "2025-08-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -574,9 +563,9 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 107,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/107'>New SimTrackerHitCellMerger Functional (Multitransformer: SimTrackerHitCollection -> SimTrackerHitCollection)</a>",
-            "author": "s6anloes",
+            "num": 108,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/108'>changed default value of ReadoutWindowDuration_ns 450->600</a>",
+            "author": "alex-schmidty",
             "createdAt": "2026-10-01",
             "updatedAt": "2026-10-01",
             "mergeOk": "yes",
@@ -589,10 +578,21 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-15",
-            "updatedAt": "2026-09-30",
-            "mergeOk": "no",
+            "updatedAt": "2026-10-01",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 107,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/107'>New SimTrackerHitCellMerger Functional (Multitransformer: SimTrackerHitCollection -> SimTrackerHitCollection)</a>",
+            "author": "s6anloes",
+            "createdAt": "2026-10-01",
+            "updatedAt": "2026-10-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -601,7 +601,7 @@
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
             "updatedAt": "2026-09-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -645,7 +645,7 @@
             "author": "BrieucF",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-08-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -937,8 +937,8 @@
         },
         {
             "repo": "key4hep/<br>DDML",
-            "num": 19,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/19'>Add python module to streamline configuration for downstream consumers</a>",
+            "num": 22,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/22'>Make it possible to run inference on models that cannot be exported </a>",
             "author": "tmadlener",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-10-01",
@@ -948,12 +948,12 @@
         },
         {
             "repo": "key4hep/<br>DDML",
-            "num": 22,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/22'>Make it possible to run inference on models that cannot be exported </a>",
+            "num": 19,
+            "title": "<a href='https://github.com/key4hep/DDML/pull/19'>Add python module to streamline configuration for downstream consumers</a>",
             "author": "tmadlener",
             "createdAt": "2026-04-24",
             "updatedAt": "2026-10-01",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1080,23 +1080,23 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-tutorials",
-            "num": 206,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/206'>Update Delphes+EvtGen sample generation to latest Key4hep stack</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-09-22",
-            "updatedAt": "2026-09-30",
-            "mergeOk": "yes",
+            "num": 207,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/207'>Update documentation to reflect script retrieval</a>",
+            "author": "apausa",
+            "createdAt": "2026-09-29",
+            "updatedAt": "2026-10-01",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>fcc-tutorials",
-            "num": 207,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/207'>Update documentation to reflect script retrieval</a>",
-            "author": "apausa",
-            "createdAt": "2026-09-29",
+            "num": 206,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/206'>Update Delphes+EvtGen sample generation to latest Key4hep stack</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-22",
             "updatedAt": "2026-09-30",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1107,7 +1107,7 @@
             "author": "michmx",
             "createdAt": "2026-09-04",
             "updatedAt": "2026-09-18",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "enhancement",
             "assignees": ""
         },
@@ -1575,6 +1575,28 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
+            "num": 398,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/398'>[ALLEGRO] Factorize the common Gaudi configuration between o1 and o2</a>",
+            "author": "BrieucF",
+            "createdAt": "2026-09-25",
+            "updatedAt": "2026-10-01",
+            "mergeOk": "yes",
+            "labels": "draft",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 401,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/401'>[ALLEGRO] changed ReadoutWindowDuration_ns variable 450->600 in stt_digitizer</a>",
+            "author": "alex-schmidty",
+            "createdAt": "2026-10-01",
+            "updatedAt": "2026-10-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
             "num": 391,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/391'>[IDEA] Set shared flag to false if single thread</a>",
             "author": "andread3vita",
@@ -1582,17 +1604,6 @@
             "updatedAt": "2026-09-29",
             "mergeOk": "yes",
             "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 398,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/398'>[ALLEGRO] Factorize the common Gaudi configuration between o1 and o2</a>",
-            "author": "BrieucF",
-            "createdAt": "2026-09-25",
-            "updatedAt": "2026-09-27",
-            "mergeOk": "yes",
-            "labels": "draft",
             "assignees": ""
         },
         {
@@ -1646,7 +1657,7 @@
             "author": "panwarlsweet",
             "createdAt": "2024-09-13",
             "updatedAt": "2024-09-18",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1686,7 +1697,7 @@
         {
             "repo": "hep-fcc/<br>fcc-drs",
             "num": 92,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/92'>Update dependency katex to v0.18.10</a>",
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/92'>Update dependency katex to v0.18.11</a>",
             "author": "renovate",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-10-01",
