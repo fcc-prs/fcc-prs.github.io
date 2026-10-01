@@ -1,0 +1,108 @@
+import json
+import subprocess
+import sys
+import time
+import yaml
+
+MAX_RETRIES = 5
+
+
+def gh_graphql(query):
+    for attempt in range(MAX_RETRIES):
+        result = subprocess.run(
+            ['gh', 'api', 'graphql', '-f', f'query={query}'],
+            capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            return json.loads(result.stdout)
+        print(f'Attempt {attempt + 1} failed — stderr: {result.stderr.strip()}', flush=True)
+        if attempt < MAX_RETRIES - 1:
+            wait = 2 ** attempt
+            print(f'Retrying in {wait}s...', flush=True)
+            time.sleep(wait)
+    result.check_returncode()
+
+
+def fetch_org_repos(org):
+    all_repos = []
+    cursor = None
+
+    while True:
+        after = f', after: "{cursor}"' if cursor else ''
+        query = (
+            'query {'
+            f'  organization(login: "{org}") {{'
+            f'    repositories(first: 100{after}, isArchived: false) {{'
+            '      nodes {'
+            '        name'
+            '        issues(first: 100, states: OPEN, orderBy: {field: UPDATED_AT, direction: DESC}) {'
+            '          nodes {'
+            '            number title'
+            '            author { login }'
+            '            createdAt updatedAt'
+            '            labels(first: 10) { nodes { name } }'
+            '            assignees(first: 10) { nodes { login } }'
+            '            url'
+            '          }'
+            '        }'
+            '      }'
+            '      pageInfo { hasNextPage endCursor }'
+            '    }'
+            '  }'
+            '}'
+        )
+
+        data = gh_graphql(query)
+        page = data['data']['organization']['repositories']
+        all_repos.extend(page['nodes'])
+
+        if not page['pageInfo']['hasNextPage']:
+            break
+        cursor = page['pageInfo']['endCursor']
+
+    return all_repos
+
+
+def fetch_repo_issues(owner, name):
+    query = (
+        'query {'
+        f'  repository(owner: "{owner}", name: "{name}") {{'
+        '    issues(first: 100, states: OPEN) {'
+        '      nodes {'
+        '        number title'
+        '        author { login }'
+        '        createdAt updatedAt'
+        '        labels(first: 10) { nodes { name } }'
+        '        assignees(first: 10) { nodes { login } }'
+        '        url'
+        '      }'
+        '    }'
+        '  }'
+        '}'
+    )
+    data = gh_graphql(query)
+    return data['data']['repository']['issues']['nodes']
+
+
+config_path = sys.argv[1] if len(sys.argv) > 1 else 'config.yml'
+with open(config_path) as f:
+    config = yaml.safe_load(f)
+
+output = {'orgs': [], 'repos': []}
+
+for org in config.get('organizations', []):
+    print(f'Fetching org: {org}', flush=True)
+    repos = fetch_org_repos(org)
+    output['orgs'].append({'login': org, 'repositories': repos})
+
+for repo in config.get('repositories') or []:
+    owner = repo['owner']
+    name = repo['name']
+    print(f'Fetching repo: {owner}/{name}', flush=True)
+    issues = fetch_repo_issues(owner, name)
+    output['repos'].append({'owner': owner, 'name': name, 'issues': {'nodes': issues}})
+
+with open('all_issues.json', 'w') as f:
+    json.dump(output, f, indent=2)
+
+print('Wrote all_issues.json', flush=True)

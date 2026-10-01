@@ -43,12 +43,8 @@ Prioritise in this order:
 - If every PR from a given repository is excluded, that repository must be omitted from
   the Summary entirely — no bullet, no heading, no mention. It will be represented only
   through its individual entries in the Omitted section.
-- Group all notable PRs from the same repository into a single bullet.
+- One bullet per pull request — do not group multiple PRs into a single bullet.
 - Bullet format:
-    **[org/repo](repo_url)** — narrative description of the combined changes,
-    referencing each PR inline as [#num](pr_url).
-- Each bullet: two to four sentences covering the most important changes in that
-  repo and any downstream impact.
-- If a repository has only one notable PR, a single sentence is fine.
-- Include every repository that has at least one PR meeting the Include criteria above;
-  do not cap the number of bullets.
+    **[org/repo#num](pr_url)** — one to three sentences describing the change,
+    its motivation, and any downstream impact.
+- Include every PR that meets the Include criteria above; do not cap the number of bullets.

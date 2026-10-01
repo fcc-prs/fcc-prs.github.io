@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FCC Open PR Summary</title>
+  <title>FCC Open Issues Summary</title>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>FCC Open Pull Request Summary</h1>
+    <h1>FCC Open Issues Summary</h1>
     <p id="last-updated" class="last-updated"></p>
     <p>
-      <a href="/issues.html">Open issues &rarr;</a>
+      <a href="/">&larr; Open pull requests</a>
       &nbsp;&mdash;&nbsp;
       <a href="/merged.html">Recently merged pull requests &rarr;</a>
       &nbsp;&mdash;&nbsp;
@@ -23,7 +23,7 @@
     <div id="repo-table-container"></div>
   </div>
   <div class="container">
-    <h2>Open Pull Requests</h2>
+    <h2>Open Issues</h2>
     <input type="text" id="myInput" onkeyup="searcher()" placeholder="Search...">
     <div id="table-container"></div>
   </div>
@@ -61,7 +61,7 @@
             <button id="pr-modal-open-btn" class="btn-primary" type="button">Open GitHub Editor &rarr;</button>
             <p class="hint" style="margin-top: 10px;">Content not pre-filled?
               <button id="pr-modal-copy-btn" class="btn-secondary btn-small" type="button">Copy JSON</button>
-              and paste it into a new file under <code>assets/json/patches/</code>.
+              and paste it into a new file under <code>assets/json/issue_patches/</code>.
             </p>
             <textarea id="pr-modal-json-area" class="pr-modal-json-area hidden" readonly rows="6" aria-label="JSON content fallback"></textarea>
           </div>
@@ -87,8 +87,8 @@
       el.textContent = 'Last updated: ' + new Date(data.updated_at).toUTCString();
     }
   </script>
-  <script type="module" src="/assets/js/repo_script.js"></script>
-  <script type="module" src="/assets/js/pr_script.js"></script>
+  <script type="module" src="/assets/js/issues_repo_script.js"></script>
+  <script type="module" src="/assets/js/issue_script.js"></script>
   <script src="/assets/js/searcher.js"></script>
   <link href="https://cdn.jsdelivr.net/gh/tofsjonas/sortable@latest/dist/sortable.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/gh/tofsjonas/sortable@latest/dist/sortable.min.js"></script>
