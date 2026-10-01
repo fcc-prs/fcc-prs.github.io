@@ -1,1 +1,4594 @@
-{"data": []}
+{
+    "data": [
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 616,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/616'>Colors defined in XML get lost</a>",
+            "author": "apausa",
+            "createdAt": "2026-07-15",
+            "updatedAt": "2026-09-28",
+            "labels": "",
+            "assignees": "apausa"
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 664,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/664'>Clean up the examples folder</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-15",
+            "updatedAt": "2026-09-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 393,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/393'>Possibility of sharing colour / visibility attribute definitions across all k4geo models</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-09-20",
+            "updatedAt": "2026-09-10",
+            "labels": "question \ndiscussion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 627,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/627'>Synchronise IDEA_o2 fibre calo cellID encodings between the barrel and endcap</a>",
+            "author": "s6anloes",
+            "createdAt": "2026-08-04",
+            "updatedAt": "2026-08-24",
+            "labels": "enhancement \nIDEA",
+            "assignees": "s6anloes"
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 647,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/647'>Speed up Crystal Dual-Readout Simulation</a>",
+            "author": "s6anloes",
+            "createdAt": "2026-08-24",
+            "updatedAt": "2026-08-24",
+            "labels": "enhancement \nIDEA",
+            "assignees": "s6anloes"
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 496,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/496'>Material Scan Issue - No material in barrel region</a>",
+            "author": "SmartinaK",
+            "createdAt": "2025-07-21",
+            "updatedAt": "2026-08-03",
+            "labels": "bug \nALLEGRO",
+            "assignees": "jmcarcell"
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 613,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/613'>Half the material budget in CLD vertex disks</a>",
+            "author": "armin-ilg",
+            "createdAt": "2026-07-09",
+            "updatedAt": "2026-07-15",
+            "labels": "bug \nCLD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 601,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/601'>Adjust ECalBarrel_NobleLiquid_InclinedTrapezoids_o1_v03_geo.cpp for sensitive material other than LAr</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-05-29",
+            "updatedAt": "2026-05-29",
+            "labels": "",
+            "assignees": "giovannimarchiori"
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 568,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/568'>Discussion: Necessity for a Readout ID \"schema\"</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-02-23",
+            "updatedAt": "2026-03-25",
+            "labels": "ILD \nIDEA \nCLD \ndiscussion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 464,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/464'>ALLEGRO HCAL/ECAL geometry overlaps</a>",
+            "author": "atolosadelgado",
+            "createdAt": "2025-04-14",
+            "updatedAt": "2026-03-10",
+            "labels": "enhancement \nALLEGRO",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 576,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/576'>Deduplication of copied files</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-03-06",
+            "updatedAt": "2026-03-06",
+            "labels": "enhancement \nIDEA \nALLEGRO \nCLD \ndiscussion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 389,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/389'>why not use tan(angle) ?</a>",
+            "author": "danieljeans",
+            "createdAt": "2024-09-12",
+            "updatedAt": "2026-02-25",
+            "labels": "good first issue \nCLD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 550,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/550'>VertexEndcap_o1_v06 does not create layer (sub) DetElements</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-12",
+            "updatedAt": "2025-12-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 430,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/430'>MDI_o1_v01 : beampipe filled with air</a>",
+            "author": "danieljeans",
+            "createdAt": "2025-01-31",
+            "updatedAt": "2025-11-21",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 537,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/537'>Optimize process lookup using Geant4 model catalog</a>",
+            "author": "atolosadelgado",
+            "createdAt": "2025-10-31",
+            "updatedAt": "2025-10-31",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 520,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/520'>Possible misplaced/rotated SR mask in commonMDI version 1</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2025-10-02",
+            "updatedAt": "2025-10-15",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 473,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/473'>Consider adopting non-cylindrical tracking region in IDEA and ALLEGRO to suppress Lumical secondaries</a>",
+            "author": "atolosadelgado",
+            "createdAt": "2025-05-13",
+            "updatedAt": "2025-08-13",
+            "labels": "enhancement \nIDEA \nALLEGRO",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 474,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/474'>Suspected Navigation Issue with Generic Trapezoid in FCCee IDEA Drift Chamber Geometry</a>",
+            "author": "atolosadelgado",
+            "createdAt": "2025-05-13",
+            "updatedAt": "2025-08-13",
+            "labels": "IDEA",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 472,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/472'>Proposal to Add Full Simulation Chain Tests</a>",
+            "author": "atolosadelgado",
+            "createdAt": "2025-05-12",
+            "updatedAt": "2025-05-15",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 449,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/449'>Add FCCconfig tests to k4geo</a>",
+            "author": "atolosadelgado",
+            "createdAt": "2025-03-24",
+            "updatedAt": "2025-03-24",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 414,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/414'>FCC-ALLEGRO, EMBarrel_dz variable used to create fields is defined inside the ECAL compact file</a>",
+            "author": "atolosadelgado",
+            "createdAt": "2024-12-11",
+            "updatedAt": "2024-12-11",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 405,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/405'>Add running material plot scripts to CI</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-10-24",
+            "updatedAt": "2024-10-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 380,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/380'>Getting correct stave from dd4hep::VolumeManager for different ILD Hadronic Calorimeter</a>",
+            "author": "ggrenier",
+            "createdAt": "2024-08-23",
+            "updatedAt": "2024-09-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 377,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/377'>12 detector constructors defined in k4geo are not called from any compact file</a>",
+            "author": "atolosadelgado",
+            "createdAt": "2024-08-19",
+            "updatedAt": "2024-08-21",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 338,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/338'>[FCC] Centralize common detector components</a>",
+            "author": "BrieucF",
+            "createdAt": "2024-06-05",
+            "updatedAt": "2024-06-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 392,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/392'>Migration of RefitProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2026-08-20",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 391,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/391'>Migration of RefitFinal</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2026-04-28",
+            "labels": "Marlin Migration \nUsed by CLD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 461,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/461'>Migration of dEdxAnalyser</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2026-04-20",
+            "labels": "Marlin Migration",
+            "assignees": "ueinhaus"
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 469,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/469'>Marlin processor migration</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-05",
+            "updatedAt": "2025-12-17",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 370,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/370'>Migration of OverlayTimingGeneric</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by CLD \nPorted to Gaudi",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 285,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/285'>Migration of ConformalTrackingV2</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by CLD \nPorted to Gaudi",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 366,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/366'>Migration of Overlay</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 369,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/369'>Migration of OverlayTiming</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 467,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/467'>Migration of validationPreProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 466,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/466'>Migration of validateDST_SinglePhotonProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 465,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/465'>Migration of validateAutoProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 464,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/464'>Migration of photonCorrectionProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 463,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/463'>Migration of hybridRecoProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 462,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/462'>Migration of garlicCutCalculator</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 460,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/460'>Migration of anaPix</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 459,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/459'>Migration of ZHllqq5CFit</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 458,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/458'>Migration of ZH5CFit</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 457,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/457'>Migration of ZFinder</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 456,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/456'>Migration of WWZZProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 455,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/455'>Migration of WWCategorisationProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 454,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/454'>Migration of WW5CFit</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 453,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/453'>Migration of VertexViewer</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 452,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/452'>Migration of VTXNoiseHits</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 451,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/451'>Migration of VTXNoiseClusters</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 450,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/450'>Migration of VTXDigitizer</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 449,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/449'>Migration of VTXDigiProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 448,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/448'>Migration of VTXBgClusters</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 447,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/447'>Migration of V0Finder</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 446,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/446'>Migration of TruthVertexFinder</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 445,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/445'>Migration of TruthTracker</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 444,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/444'>Migration of TruthTrackFinder</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 443,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/443'>Migration of TrueTrackCritAnalyser</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 442,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/442'>Migration of TrueMCintoRecoForJets</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 441,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/441'>Migration of TrueJet</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 440,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/440'>Migration of TrackingFeedbackProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 439,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/439'>Migration of TrackerHitCounter</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 438,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/438'>Migration of TrackZVertexGrouping</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 437,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/437'>Migration of TrackToRecoParticleConverter</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 436,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/436'>Migration of TrackToPFOConverterProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 435,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/435'>Migration of TrackSubsetProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 434,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/434'>Migration of TrackResponseAdjuster</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 433,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/433'>Migration of TrackPickProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 432,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/432'>Migration of TrackLengthProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 431,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/431'>Migration of TrackEfficiency</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 430,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/430'>Migration of TrackChecker</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by CLD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 429,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/429'>Migration of TrackCheckMCTruth</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 428,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/428'>Migration of TopTester</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 427,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/427'>Migration of ThrustReconstruction</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 425,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/425'>Migration of TauFinder</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 424,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/424'>Migration of TaJetClustering</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 423,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/423'>Migration of TTBarExample</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 422,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/422'>Migration of TPCDigiProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 421,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/421'>Migration of TOFEstimators</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 420,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/420'>Migration of TJjetsPFOAnalysisProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 419,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/419'>Migration of StoreVariablesForDeepMLFlavorTagger</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 418,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/418'>Migration of StepAnalyser</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 417,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/417'>Migration of StdHepReader</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 416,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/416'>Migration of Statusmonitor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD \nUsed by CLD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 415,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/415'>Migration of SplitCollectionByLayer</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 414,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/414'>Migration of Sphere</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 411,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/411'>Migration of SimpleVertexProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 408,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/408'>Migration of SimpleFastMCProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 407,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/407'>Migration of SimpleFCalDigi</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 406,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/406'>Migration of SimpleCaloDigi</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 405,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/405'>Migration of SimDigitalToEnergy</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 404,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/404'>Migration of SimDigitalLinkToParticles</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 403,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/403'>Migration of SimDigital</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 402,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/402'>Migration of SiliconTracking_MarlinTrk</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 401,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/401'>Migration of SiliconEndcapTracking</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 400,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/400'>Migration of SiTracker_dEdxProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 399,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/399'>Migration of ShowerStudy</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 398,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/398'>Migration of SetTrackerHitExtensions</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 397,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/397'>Migration of SelectReconstructedParticle</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 396,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/396'>Migration of SelectNthEventsProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 395,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/395'>Migration of SelectEvents</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 394,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/394'>Migration of SLDCorrection</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 393,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/393'>Migration of Residuals</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 390,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/390'>Migration of ReconstructedParticleParticleIDFilterProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 389,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/389'>Migration of ReconstructedParticleImpl_CopyProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 388,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/388'>Migration of RecoMCTruthLinker</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD \nUsed by CLD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 383,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/383'>Migration of ReadBeamCal</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 382,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/382'>Migration of ReadBTaggingVariables</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 381,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/381'>Migration of QuarkJetPairing</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 380,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/380'>Migration of PrepareRECParticles</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 379,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/379'>Migration of Pi0Tree</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 378,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/378'>Migration of PhotonResponseAdjuster</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 377,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/377'>Migration of PfoAnalysis</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration \nUsed by ILD",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 375,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/375'>Migration of ParticleNetTaggerProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 374,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/374'>Migration of PandoraPFACalibrator</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 373,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/373'>Migration of PIDTree</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 372,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/372'>Migration of PGDBP</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 371,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/371'>Migration of PFOID</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 368,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/368'>Migration of OverlayEvents</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 367,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/367'>Migration of OverlayBX</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 365,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/365'>Migration of OverlapChecker</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 364,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/364'>Migration of NewLDCCaloDigi</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 363,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/363'>Migration of NNClusterProcessor</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 362,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/362'>Migration of MomentumCov</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 358,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/358'>Migration of MassConstraintFitter</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MarlinWrapper",
+            "num": 356,
+            "title": "<a href='https://github.com/key4hep/k4MarlinWrapper/issues/356'>Migration of MCTruthJetEnergy</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-02",
+            "updatedAt": "2025-12-08",
+            "labels": "Marlin Migration",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 512,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/512'>Potentially misleading meaning of `positionError` in `Cluster`</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-26",
+            "updatedAt": "2026-08-27",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 514,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/514'>Cluster directionError should be a CovMatrix2f instead of a Vector3f</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-26",
+            "updatedAt": "2026-08-26",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 499,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/499'>Easy access to quantities derived from EDM4hep datatype members from TTree->Draw</a>",
+            "author": "BrieucF",
+            "createdAt": "2026-05-19",
+            "updatedAt": "2026-08-13",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 479,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/479'>Should we add a `to` method to the Vectors for easier interoperability with vector libraries?</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-02-04",
+            "updatedAt": "2026-03-17",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 487,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/487'>Generalized quantitiy attached to Tracks</a>",
+            "author": "BrieucF",
+            "createdAt": "2026-03-06",
+            "updatedAt": "2026-03-06",
+            "labels": "enhancement \ndiscussion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 462,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/462'>Addition of `CellIDDecoder` utility</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-11-11",
+            "updatedAt": "2025-11-11",
+            "labels": "enhancement \nquestion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 192,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/192'>Feature request: data type for storing jet parameters</a>",
+            "author": "wdconinc",
+            "createdAt": "2023-02-21",
+            "updatedAt": "2025-09-08",
+            "labels": "enhancement \ndiscussion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 416,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/416'>Some columns are not storable using `RDataFrame::Snapshot`</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-03-10",
+            "updatedAt": "2025-04-29",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 147,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/147'>SimCalorimeterHit and CaloHitContribution: missing fields used in EIC production</a>",
+            "author": "wdconinc",
+            "createdAt": "2022-03-15",
+            "updatedAt": "2025-04-15",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 382,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/382'>Rawhits removed from TrackerHits</a>",
+            "author": "andresailer",
+            "createdAt": "2024-11-21",
+            "updatedAt": "2025-04-09",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 423,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/423'>Covariance matrix in ReconstructedParticle is misleading</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-03-25",
+            "updatedAt": "2025-03-25",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 396,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/396'>Make `PIDHandler` available and work from python</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-12-20",
+            "updatedAt": "2024-12-20",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 386,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/386'>How to store run information</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-12-02",
+            "updatedAt": "2024-12-02",
+            "labels": "enhancement \ndiscussion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 323,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/323'>Better integration of datatypes for the drift chamber study of CEPC into EDM4hep</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-06-18",
+            "updatedAt": "2024-06-26",
+            "labels": "discussion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 241,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/241'>discussion: Handling of Event meta data (e.g. event number, run number, etc.)</a>",
+            "author": "tmadlener",
+            "createdAt": "2023-11-20",
+            "updatedAt": "2023-11-20",
+            "labels": "discussion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 228,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/228'>FCCAnalyses samples</a>",
+            "author": "kjvbrt",
+            "createdAt": "2023-09-21",
+            "updatedAt": "2023-09-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 161,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/161'>Add local Measurement{1,2,3}D classes</a>",
+            "author": "paulgessinger",
+            "createdAt": "2022-06-24",
+            "updatedAt": "2022-06-24",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 103,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/103'>EDM4hep usage in RDataFrame (or similar high level libraries)</a>",
+            "author": "tmadlener",
+            "createdAt": "2020-12-08",
+            "updatedAt": "2020-12-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 435,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/435'>OverlayTiming: the overlaid background depends on an event's position in the job, not on the event itself</a>",
+            "author": "madbaron",
+            "createdAt": "2026-09-24",
+            "updatedAt": "2026-09-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 426,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/426'>Possibility to conditionally run parts of the chain for certain events</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-02",
+            "updatedAt": "2026-09-02",
+            "labels": "question",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 407,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/407'>Add helper to add commonly used cli arguments</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-28",
+            "updatedAt": "2026-04-28",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 402,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/402'>Re-usable configuration (fragments) support</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-21",
+            "updatedAt": "2026-04-28",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 358,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/358'>Should the GeoSvc implementation live in k4FWCore?</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-11-11",
+            "updatedAt": "2026-04-28",
+            "labels": "question",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 401,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/401'>Possibility to have multiple writers</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-20",
+            "updatedAt": "2026-04-22",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 332,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/332'>NTuple service example</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-06-25",
+            "updatedAt": "2025-12-23",
+            "labels": "documentation \nenhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 309,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/309'>Documentation about Functional algorithms needs to be updated</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-04-28",
+            "updatedAt": "2025-09-25",
+            "labels": "documentation",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 331,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/331'>Define a format for the configuration metadata and tool to rerun a job from it</a>",
+            "author": "jmcarcell",
+            "createdAt": "2025-06-24",
+            "updatedAt": "2025-06-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 330,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/330'>Interface types should be accepted as inputs / outputs to Functional algorithms</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-06-23",
+            "updatedAt": "2025-06-23",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 25,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/25'>Input of non-podio-collection types.</a>",
+            "author": "vvolkl",
+            "createdAt": "2020-11-23",
+            "updatedAt": "2025-05-26",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 311,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/311'>Discussion: Should collection IDs be assigned for collections in the TES?</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-05-06",
+            "updatedAt": "2025-05-20",
+            "labels": "documentation \nquestion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 294,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/294'>UniqueIDGenSvc uniqueness and reproducibility considerations</a>",
+            "author": "m-fila",
+            "createdAt": "2025-02-26",
+            "updatedAt": "2025-02-26",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 246,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/246'>downstream consumer tests are no longer run?</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-10-08",
+            "updatedAt": "2024-10-08",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 238,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/238'>Does the `IOSvc` support pasing `std::vector<T>` via the TES?</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-09-19",
+            "updatedAt": "2024-09-26",
+            "labels": "question",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 854,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/issues/854'>key4hep-sim-reco-ubuntu24: reco-image lacks ddsim/k4run; lcws-tutorial crashes (Geant4Kernel bad_function_call) with 2026-02-* nightly-compatible sample</a>",
+            "author": "Oxygrpgen",
+            "createdAt": "2026-02-18",
+            "updatedAt": "2026-02-19",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 761,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/issues/761'>GDB pretty printers not available by default on Alma 9</a>",
+            "author": "jmcarcell",
+            "createdAt": "2025-06-19",
+            "updatedAt": "2026-02-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 847,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/issues/847'>Medium and long term plans for the Key4hep stack</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-01-29",
+            "updatedAt": "2026-01-29",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 825,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/issues/825'>Add ILDConfig</a>",
+            "author": "dudarboh",
+            "createdAt": "2025-12-03",
+            "updatedAt": "2025-12-04",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 502,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/issues/502'>Known issues</a>",
+            "author": "jmcarcell",
+            "createdAt": "2023-06-27",
+            "updatedAt": "2025-04-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 688,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/issues/688'>pytorch CUDA support within key4hep environment</a>",
+            "author": "dudarboh",
+            "createdAt": "2024-12-16",
+            "updatedAt": "2025-01-22",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 692,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/issues/692'>Feature request: disconnect package repository better from stack provisioning</a>",
+            "author": "wdconinc",
+            "createdAt": "2025-01-07",
+            "updatedAt": "2025-01-10",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 346,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/issues/346'>Inclusion of EIC packages in key4hep-spack</a>",
+            "author": "wdconinc",
+            "createdAt": "2022-04-18",
+            "updatedAt": "2022-09-27",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 149,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/issues/149'>Configuration scopes and placement of packages.yaml</a>",
+            "author": "tmadlener",
+            "createdAt": "2021-01-14",
+            "updatedAt": "2021-01-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 125,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/125'>Setup via cvmfs should mention which system libraries / packages are expected to be available</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-01-30",
+            "updatedAt": "2026-08-26",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 140,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/140'>Improvements for algorithm / component overview</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-16",
+            "updatedAt": "2026-04-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 137,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/137'>Minor issues with algorithm / processor overview pages</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-08",
+            "updatedAt": "2026-04-08",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 119,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/119'>The documentation for setting up Key4hep via spack is outdated</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-08",
+            "updatedAt": "2025-12-08",
+            "labels": "documentation",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 114,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/114'>Issue template specifically for documentation issues</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-09-27",
+            "updatedAt": "2025-09-27",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 101,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/101'>Plan for general restructuring of documentation</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-09-26",
+            "updatedAt": "2025-09-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 106,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/106'>Generate and publish (and cross-link) API reference for packages</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-09-26",
+            "updatedAt": "2025-09-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 102,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/102'>Re-organize the EDM4hep / podio introduction</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-09-26",
+            "updatedAt": "2025-09-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 105,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/105'>Create an overview page for DD4hep & k4geo</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-09-26",
+            "updatedAt": "2025-09-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 104,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/104'>Create a k4FWCore overview page</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-09-26",
+            "updatedAt": "2025-09-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 103,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/103'>Create a general introduction to Gaudi</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-09-26",
+            "updatedAt": "2025-09-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 83,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/83'>Make it easier to change sources for externally pulled documentation</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-12-23",
+            "updatedAt": "2024-12-23",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-doc",
+            "num": 32,
+            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/32'>Update talks and presentation section in documentation</a>",
+            "author": "andresailer",
+            "createdAt": "2022-05-23",
+            "updatedAt": "2022-05-23",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4-project-template",
+            "num": 13,
+            "title": "<a href='https://github.com/key4hep/k4-project-template/issues/13'>Helper scripts for easier setup of new empty projects</a>",
+            "author": "tmadlener",
+            "createdAt": "2022-11-21",
+            "updatedAt": "2022-11-22",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4-project-template",
+            "num": 12,
+            "title": "<a href='https://github.com/key4hep/k4-project-template/issues/12'>Add RPATH treatment to project template</a>",
+            "author": "andresailer",
+            "createdAt": "2022-08-19",
+            "updatedAt": "2022-08-19",
+            "labels": "good first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4-project-template",
+            "num": 10,
+            "title": "<a href='https://github.com/key4hep/k4-project-template/issues/10'>Discussion: Do we want a basic pre-commit workflow in the project-template?</a>",
+            "author": "tmadlener",
+            "createdAt": "2022-03-03",
+            "updatedAt": "2022-03-03",
+            "labels": "enhancement \nquestion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 151,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/151'>Test PythiaConverter_ee_Z_bbbar crashes</a>",
+            "author": "jmcarcell",
+            "createdAt": "2025-10-13",
+            "updatedAt": "2025-10-14",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 149,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/149'>Support conversion of Delphes output format events to edm4hep</a>",
+            "author": "bistapf",
+            "createdAt": "2025-06-17",
+            "updatedAt": "2025-06-17",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 132,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/132'>DelphesHepMC3_EDM4HEP</a>",
+            "author": "BrieucF",
+            "createdAt": "2024-10-10",
+            "updatedAt": "2025-04-09",
+            "labels": "enhancement \ngood first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 135,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/135'>Particle ID meta data should be populated</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-10-25",
+            "updatedAt": "2024-10-25",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 124,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/124'>Possible feature for Delphes inputs</a>",
+            "author": "chekanov",
+            "createdAt": "2024-07-15",
+            "updatedAt": "2024-07-15",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 99,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/99'>Better interface for magnetic field access</a>",
+            "author": "vvolkl",
+            "createdAt": "2022-12-13",
+            "updatedAt": "2022-12-13",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 89,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/89'>Store cross section into the output</a>",
+            "author": "tmadlener",
+            "createdAt": "2022-06-01",
+            "updatedAt": "2022-06-01",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 77,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/77'>Delphes TrkCov matrix updated</a>",
+            "author": "andresailer",
+            "createdAt": "2022-05-08",
+            "updatedAt": "2022-05-24",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 73,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/73'>Add documentation for framework integrated usage</a>",
+            "author": "tmadlener",
+            "createdAt": "2022-03-03",
+            "updatedAt": "2022-05-10",
+            "labels": "documentation",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 76,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/76'>Handling of `EFlowTrack`, `EFlowPhotons`, `EFlowNeutralHadrons`?</a>",
+            "author": "andresailer",
+            "createdAt": "2022-05-08",
+            "updatedAt": "2022-05-10",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 70,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/70'>docs: Update \"Known Issues\" section</a>",
+            "author": "vvolkl",
+            "createdAt": "2022-02-28",
+            "updatedAt": "2022-03-03",
+            "labels": "documentation",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 48,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/48'>Delphes muons without reconstructed particle</a>",
+            "author": "tmadlener",
+            "createdAt": "2021-05-03",
+            "updatedAt": "2021-05-03",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 44,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/44'>[framework] output configuration with string</a>",
+            "author": "vvolkl",
+            "createdAt": "2021-04-29",
+            "updatedAt": "2021-04-29",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 41,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/41'>[framework] return map from MCParticleDelphesConverter</a>",
+            "author": "vvolkl",
+            "createdAt": "2021-04-29",
+            "updatedAt": "2021-04-29",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 38,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/38'>Add test for EvtGen Charge Conjugation bug</a>",
+            "author": "vvolkl",
+            "createdAt": "2021-04-29",
+            "updatedAt": "2021-04-29",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 33,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/33'>CLI parsing in DelphesHepMC_EDM4HEP is faulty</a>",
+            "author": "vvolkl",
+            "createdAt": "2021-04-06",
+            "updatedAt": "2021-04-06",
+            "labels": "",
+            "assignees": "vvolkl"
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 15,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/15'>Proper setting of mother and daughter relations for MCParticles</a>",
+            "author": "tmadlener",
+            "createdAt": "2020-12-04",
+            "updatedAt": "2020-12-04",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 12,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/12'>How to organize tests and where to get and store input data</a>",
+            "author": "tmadlener",
+            "createdAt": "2020-11-24",
+            "updatedAt": "2020-11-26",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 9,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/9'>Add LHEF event weights to edm4hep output</a>",
+            "author": "vvolkl",
+            "createdAt": "2020-11-19",
+            "updatedAt": "2020-11-23",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 3,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/3'> Larger MCRecoAssocation collection than RecoParticles collection when using DelphesPythia8_EDM4HEP</a>",
+            "author": "vvolkl",
+            "createdAt": "2020-11-09",
+            "updatedAt": "2020-11-19",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 61,
+            "title": "<a href='https://github.com/key4hep/k4Gen/issues/61'>Inconsistent ddsim output for Pythia-generated EDM4hep ROOT and HepMC inputs</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-09-23",
+            "updatedAt": "2026-10-01",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 60,
+            "title": "<a href='https://github.com/key4hep/k4Gen/issues/60'>Main:numberOfEvents config from pythia card is not used with PythiaInterface.</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-09-21",
+            "updatedAt": "2026-09-24",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 59,
+            "title": "<a href='https://github.com/key4hep/k4Gen/issues/59'>pythia.py vertex smearing values</a>",
+            "author": "Olmichu22",
+            "createdAt": "2026-09-14",
+            "updatedAt": "2026-09-14",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 52,
+            "title": "<a href='https://github.com/key4hep/k4Gen/issues/52'>Set the helicity when it becomes available</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-08-19",
+            "updatedAt": "2026-09-03",
+            "labels": "good first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 46,
+            "title": "<a href='https://github.com/key4hep/k4Gen/issues/46'>Custom DECAY.DEC for inclusive samples</a>",
+            "author": "larsroehrig",
+            "createdAt": "2025-02-03",
+            "updatedAt": "2025-02-11",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 23,
+            "title": "<a href='https://github.com/key4hep/k4Gen/issues/23'>Implement KKMCeeInterface and HerwigInterface</a>",
+            "author": "gganis",
+            "createdAt": "2023-04-26",
+            "updatedAt": "2023-04-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 22,
+            "title": "<a href='https://github.com/key4hep/k4Gen/issues/22'>PythiaInterface should produce directly events in EDM format, at least as an option</a>",
+            "author": "gganis",
+            "createdAt": "2023-04-26",
+            "updatedAt": "2023-04-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 16,
+            "title": "<a href='https://github.com/key4hep/k4Gen/issues/16'>Mass not filled when converting from HepMC to EDM4hep</a>",
+            "author": "vvolkl",
+            "createdAt": "2022-10-20",
+            "updatedAt": "2022-10-20",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 4,
+            "title": "<a href='https://github.com/key4hep/k4Gen/issues/4'>Port Evtgen interface changes from k4SimDelphes</a>",
+            "author": "vvolkl",
+            "createdAt": "2021-05-25",
+            "updatedAt": "2021-05-25",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 107,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/107'>Cleanup some of the historical handling of different acts versions</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-24",
+            "updatedAt": "2026-09-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 89,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/89'>Investigate possibility to get rid of torch-scatter</a>",
+            "author": "madbaron",
+            "createdAt": "2026-08-06",
+            "updatedAt": "2026-08-06",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 77,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/77'>Tracking issue: remaining work for full 4D tracking support</a>",
+            "author": "jburzy",
+            "createdAt": "2026-07-10",
+            "updatedAt": "2026-07-10",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 56,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/56'>More efficient handoff between EDM4hep & ACTS EDM</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-27",
+            "updatedAt": "2026-04-30",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Clue",
+            "num": 49,
+            "title": "<a href='https://github.com/key4hep/k4Clue/issues/49'>`podio::UserDataCollection` in CLUENtuplizer?</a>",
+            "author": "ebrondol",
+            "createdAt": "2023-09-06",
+            "updatedAt": "2023-09-06",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Clue",
+            "num": 37,
+            "title": "<a href='https://github.com/key4hep/k4Clue/issues/37'>CLUE implementation in GPU gives only outliers</a>",
+            "author": "ebrondol",
+            "createdAt": "2023-01-24",
+            "updatedAt": "2023-01-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Clue",
+            "num": 16,
+            "title": "<a href='https://github.com/key4hep/k4Clue/issues/16'>Move CLUE algo in external library</a>",
+            "author": "ebrondol",
+            "createdAt": "2022-01-27",
+            "updatedAt": "2022-01-27",
+            "labels": "enhancement",
+            "assignees": "ebrondol"
+        },
+        {
+            "repo": "key4hep/<br>k4EDM4hep2LcioConv",
+            "num": 134,
+            "title": "<a href='https://github.com/key4hep/k4EDM4hep2LcioConv/issues/134'>lcio2edm4hep conversion fails with a confusing error message</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2026-08-06",
+            "updatedAt": "2026-08-06",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4EDM4hep2LcioConv",
+            "num": 131,
+            "title": "<a href='https://github.com/key4hep/k4EDM4hep2LcioConv/issues/131'>Conversion from edm4hep to LCIO of edm4hep::RecDqdx does not work</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2026-01-30",
+            "updatedAt": "2026-03-10",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4EDM4hep2LcioConv",
+            "num": 116,
+            "title": "<a href='https://github.com/key4hep/k4EDM4hep2LcioConv/issues/116'>Trying to create an LCRelation collection from a extension::SenseWireHitSimTrackerHitLinkCollection which is not supported</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2025-03-24",
+            "updatedAt": "2025-03-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4EDM4hep2LcioConv",
+            "num": 111,
+            "title": "<a href='https://github.com/key4hep/k4EDM4hep2LcioConv/issues/111'>LCIO to EDM4hep conversion still loses collection parameters</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-02-07",
+            "updatedAt": "2025-02-10",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4EDM4hep2LcioConv",
+            "num": 92,
+            "title": "<a href='https://github.com/key4hep/k4EDM4hep2LcioConv/issues/92'>No conversion of `ReconstructedParticle` to `ReconstructedParticle` relations</a>",
+            "author": "Zehvogel",
+            "createdAt": "2024-08-29",
+            "updatedAt": "2024-08-29",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4EDM4hep2LcioConv",
+            "num": 19,
+            "title": "<a href='https://github.com/key4hep/k4EDM4hep2LcioConv/issues/19'>README needs to be updated to include LCIO -> EDM4hep direction as well</a>",
+            "author": "tmadlener",
+            "createdAt": "2023-06-26",
+            "updatedAt": "2023-06-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4EDM4hep2LcioConv",
+            "num": 18,
+            "title": "<a href='https://github.com/key4hep/k4EDM4hep2LcioConv/issues/18'>Conversion of collection metadata</a>",
+            "author": "tmadlener",
+            "createdAt": "2023-06-13",
+            "updatedAt": "2023-06-13",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-dev-utils",
+            "num": 22,
+            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/issues/22'>Add LCContent to auto-update key4hep-build workflow</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-19",
+            "updatedAt": "2026-08-21",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-actions",
+            "num": 39,
+            "title": "<a href='https://github.com/key4hep/key4hep-actions/issues/39'>Generalize artifact uploading</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-04-21",
+            "updatedAt": "2026-04-21",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-actions",
+            "num": 28,
+            "title": "<a href='https://github.com/key4hep/key4hep-actions/issues/28'>Consider using cmake presets for better configurability of individual packages</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-12-18",
+            "updatedAt": "2025-12-18",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>TrackerPerformanceScripts",
+            "num": 12,
+            "title": "<a href='https://github.com/key4hep/TrackerPerformanceScripts/issues/12'>Add possibility to run sim and reco as grid jobs using dirac</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-06-03",
+            "updatedAt": "2025-06-03",
+            "labels": "enhancement \ngood first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>TrackerPerformanceScripts",
+            "num": 10,
+            "title": "<a href='https://github.com/key4hep/TrackerPerformanceScripts/issues/10'>Benchmarking of sim and reco jobs</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2024-06-12",
+            "updatedAt": "2024-06-12",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>TrackerPerformanceScripts",
+            "num": 9,
+            "title": "<a href='https://github.com/key4hep/TrackerPerformanceScripts/issues/9'>analysis_tracking does not import params from config file</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2024-06-12",
+            "updatedAt": "2024-06-12",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>TrackerPerformanceScripts",
+            "num": 4,
+            "title": "<a href='https://github.com/key4hep/TrackerPerformanceScripts/issues/4'>Bug: Check and rerun event simulation if jobs crashed</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2024-06-03",
+            "updatedAt": "2024-06-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>TrackerPerformanceScripts",
+            "num": 8,
+            "title": "<a href='https://github.com/key4hep/TrackerPerformanceScripts/issues/8'>Move ResVDX_UV_ from condorJobs_reco to config file?</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2024-06-11",
+            "updatedAt": "2024-06-11",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>TrackerPerformanceScripts",
+            "num": 7,
+            "title": "<a href='https://github.com/key4hep/TrackerPerformanceScripts/issues/7'>condorJobs_reco almost duplicate of condorJobs_sim</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2024-06-07",
+            "updatedAt": "2024-06-07",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>TrackerPerformanceScripts",
+            "num": 6,
+            "title": "<a href='https://github.com/key4hep/TrackerPerformanceScripts/issues/6'>Job submission where?</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2024-06-03",
+            "updatedAt": "2024-06-03",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>TrackerPerformanceScripts",
+            "num": 5,
+            "title": "<a href='https://github.com/key4hep/TrackerPerformanceScripts/issues/5'>Cloning in the batch jobs?</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2024-06-03",
+            "updatedAt": "2024-06-03",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 90,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/issues/90'>Rename C++ component library to avoid Python module collision with Tracking directory</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2026-08-04",
+            "updatedAt": "2026-08-11",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 31,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/issues/31'>MarlinUtil HelixClass should not be used</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-08-23",
+            "updatedAt": "2025-07-02",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-reco-validation",
+            "num": 7,
+            "title": "<a href='https://github.com/key4hep/key4hep-reco-validation/issues/7'>Warning emails do no provide any usefull information</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-07-24",
+            "updatedAt": "2025-07-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-reco-validation",
+            "num": 5,
+            "title": "<a href='https://github.com/key4hep/key4hep-reco-validation/issues/5'>ARC photon count vs. theta plot</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-06-06",
+            "updatedAt": "2025-06-10",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>eede",
+            "num": 91,
+            "title": "<a href='https://github.com/key4hep/eede/issues/91'>Don't reset MCParticle tree filters between events</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-03-12",
+            "updatedAt": "2026-02-05",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>eede",
+            "num": 86,
+            "title": "<a href='https://github.com/key4hep/eede/issues/86'>pT and other more convenient variables in filters</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-12-02",
+            "updatedAt": "2026-02-05",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>eede",
+            "num": 92,
+            "title": "<a href='https://github.com/key4hep/eede/issues/92'>Put particles without connections into separate line</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-03-20",
+            "updatedAt": "2025-03-20",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>eede",
+            "num": 85,
+            "title": "<a href='https://github.com/key4hep/eede/issues/85'>Embedding capability</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-12-02",
+            "updatedAt": "2024-12-02",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>eede",
+            "num": 12,
+            "title": "<a href='https://github.com/key4hep/eede/issues/12'>particles/antiparticles names</a>",
+            "author": "brauliorivas",
+            "createdAt": "2024-05-05",
+            "updatedAt": "2024-05-08",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 96,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/96'>Digitised muon system hits have no time</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-07-07",
+            "updatedAt": "2026-07-07",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 35,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/35'>Known Issues</a>",
+            "author": "Zehvogel",
+            "createdAt": "2024-06-13",
+            "updatedAt": "2026-07-07",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 89,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/89'>Tracking acceptance electrons</a>",
+            "author": "doloresgarcia",
+            "createdAt": "2025-10-27",
+            "updatedAt": "2026-06-30",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 65,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/65'>Migrate to Gaudi-native overlay algorithm</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-02-13",
+            "updatedAt": "2026-01-29",
+            "labels": "enhancement \ngood first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 25,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/25'>Tracking issue for displaced tracks and electron reconstruction efficiency</a>",
+            "author": "nitasad",
+            "createdAt": "2024-03-07",
+            "updatedAt": "2025-10-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 68,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/68'>Track pulls are not-optimal</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-03-19",
+            "updatedAt": "2025-10-08",
+            "labels": "help wanted",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 87,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/87'>Jet Clustering & Tagging</a>",
+            "author": "saracreates",
+            "createdAt": "2025-07-04",
+            "updatedAt": "2025-07-04",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 61,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/61'>Transverse impact parameter discrepancy between full and fast simulation</a>",
+            "author": "saracreates",
+            "createdAt": "2025-01-20",
+            "updatedAt": "2025-06-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 80,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/80'>`cld_steer.py` incompatible with geometries pre `CLD_o2_v07`</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-05-20",
+            "updatedAt": "2025-05-20",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 76,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/76'>Re-calibrate LumiCalReconstruction?</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-04-30",
+            "updatedAt": "2025-05-07",
+            "labels": "good first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 79,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/79'>Split-up lcio collection patching and move it to where it is needed</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-05-02",
+            "updatedAt": "2025-05-02",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 71,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/71'>How to propagate a track to the IP and to the calorimeter surface</a>",
+            "author": "andread3vita",
+            "createdAt": "2025-03-31",
+            "updatedAt": "2025-04-09",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 43,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/43'>Pandora sometimes misses obvious-looking track cluster associations</a>",
+            "author": "Zehvogel",
+            "createdAt": "2024-07-16",
+            "updatedAt": "2025-03-20",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 52,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/52'>CLD fullsim for FCCee:  muon->pion misidentification at 2-7 GeV using PandoraPF</a>",
+            "author": "mcepeda",
+            "createdAt": "2024-09-17",
+            "updatedAt": "2024-09-26",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 50,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/50'>Using cylindrical surfaces for track reconstruction in iLCSoft</a>",
+            "author": "armin-ilg",
+            "createdAt": "2024-08-14",
+            "updatedAt": "2024-08-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 45,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/45'>Add TOF</a>",
+            "author": "Zehvogel",
+            "createdAt": "2024-07-16",
+            "updatedAt": "2024-07-16",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 23,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/23'>Intermittent Missing Hits in Vertex/Tracker During Reconstruction Process</a>",
+            "author": "nitasad",
+            "createdAt": "2024-01-09",
+            "updatedAt": "2024-04-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 27,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/27'>Add silicon dEdx?</a>",
+            "author": "Zehvogel",
+            "createdAt": "2024-03-19",
+            "updatedAt": "2024-03-19",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 16,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/16'>Add mini-DST reconstruction</a>",
+            "author": "Zehvogel",
+            "createdAt": "2023-11-13",
+            "updatedAt": "2023-11-13",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Reco",
+            "num": 69,
+            "title": "<a href='https://github.com/key4hep/k4Reco/issues/69'>Exception in conformal tracking: Too many tracks found</a>",
+            "author": "AuroraPerego",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-22",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-tutorials",
+            "num": 29,
+            "title": "<a href='https://github.com/key4hep/key4hep-tutorials/issues/29'>Analysis tutorial files were moved</a>",
+            "author": "Zehvogel",
+            "createdAt": "2025-11-13",
+            "updatedAt": "2025-11-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-tutorials",
+            "num": 24,
+            "title": "<a href='https://github.com/key4hep/key4hep-tutorials/issues/24'>No input files for tutorial available</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2025-07-30",
+            "updatedAt": "2025-09-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-tutorials",
+            "num": 17,
+            "title": "<a href='https://github.com/key4hep/key4hep-tutorials/issues/17'>Run tutorials in CI</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-10-09",
+            "updatedAt": "2025-03-10",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-tutorials",
+            "num": 11,
+            "title": "<a href='https://github.com/key4hep/key4hep-tutorials/issues/11'>Input file permissions too strict?</a>",
+            "author": "Zehvogel",
+            "createdAt": "2024-06-17",
+            "updatedAt": "2025-03-10",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 88,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/88'>CI fails on LCG stacks</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-09-04",
+            "updatedAt": "2026-09-04",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 87,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/87'>Muon pair distributions</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2026-07-15",
+            "updatedAt": "2026-07-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 86,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/86'>Whizard slow down</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-07-07",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 84,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/84'>Herwig</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2026-06-05",
+            "updatedAt": "2026-06-05",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 46,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/46'>ZH Sherpa versus Madgraph, Whizard</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2025-06-19",
+            "updatedAt": "2025-06-20",
+            "labels": "",
+            "assignees": "apricePhy"
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 33,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/33'>Madgraph + Pythia with ISR</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2025-03-13",
+            "updatedAt": "2025-05-28",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 30,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/30'>ZHDecay settings</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2025-02-14",
+            "updatedAt": "2025-02-27",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 28,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/28'>Pythia AlphaStrong setting in datacard</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2025-01-23",
+            "updatedAt": "2025-01-23",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 17,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/17'>Directory creation</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2024-06-05",
+            "updatedAt": "2024-06-05",
+            "labels": "enhancement",
+            "assignees": "apricePhy"
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 13,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/13'>Photon process</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2024-04-24",
+            "updatedAt": "2024-06-04",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 12,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/12'>Spin/Polarization per particle in HepMC</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2024-04-22",
+            "updatedAt": "2024-04-23",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 11,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/11'>SHERPA HEPMC output</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2024-04-18",
+            "updatedAt": "2024-04-19",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 5,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/5'>ZH and ZHDecay runs incomplete</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2024-03-21",
+            "updatedAt": "2024-03-22",
+            "labels": "",
+            "assignees": "apricePhy"
+        },
+        {
+            "repo": "key4hep/<br>k4GeneratorsConfig",
+            "num": 7,
+            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/issues/7'>WHIZARD GenCrossSection error message</a>",
+            "author": "dirkzerwas",
+            "createdAt": "2024-03-21",
+            "updatedAt": "2024-03-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-julia-fwk",
+            "num": 95,
+            "title": "<a href='https://github.com/key4hep/key4hep-julia-fwk/issues/95'>impact of logging</a>",
+            "author": "Moelf",
+            "createdAt": "2025-07-30",
+            "updatedAt": "2025-07-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-julia-fwk",
+            "num": 65,
+            "title": "<a href='https://github.com/key4hep/key4hep-julia-fwk/issues/65'>PNG graph output crashes randomly</a>",
+            "author": "m-fila",
+            "createdAt": "2025-03-18",
+            "updatedAt": "2025-03-18",
+            "labels": "bug \nvisualization",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-julia-fwk",
+            "num": 10,
+            "title": "<a href='https://github.com/key4hep/key4hep-julia-fwk/issues/10'>Parsing graphML prints warning</a>",
+            "author": "m-fila",
+            "createdAt": "2024-06-20",
+            "updatedAt": "2024-06-20",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 60,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/60'>Should track extrapolation to the calorimeter face live in a separate algorithm?</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-22",
+            "labels": "question",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 58,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/58'>EDM4hep to Pandora conversion only handles `TrackerHitPlane`s</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-22",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 57,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/57'>DDPandoraPFANewAlgorithm takes different input types than Marlin processor</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 56,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/56'>Symbol name clashes with `DDMarlinPandora` library</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-22",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 53,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/53'>Pandora reconstruction crashes in DDPfoCreator.cc \u2014 related to ClusterShapes</a>",
+            "author": "Archil-AD",
+            "createdAt": "2026-09-17",
+            "updatedAt": "2026-09-18",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 39,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/39'>ALLEGRO specialisations almost certainly not working as expected</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-17",
+            "updatedAt": "2026-09-17",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 41,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/41'>The Pandora algorithm name carries too much historical baggage</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-17",
+            "updatedAt": "2026-08-18",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 42,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/42'>Digitizers should probably not live here</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-17",
+            "updatedAt": "2026-08-18",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 45,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/45'>Potential trivial code duplication for getting inner magnetic field</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-18",
+            "updatedAt": "2026-08-18",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 43,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/43'>Revisit some of the specializations that exist for certain parts</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-17",
+            "updatedAt": "2026-08-17",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 40,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/40'>Cleanup / decluttering of k4GaudiPandora</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-17",
+            "updatedAt": "2026-08-17",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 38,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/38'>Remember to switch CalculateTrackTimeAtCalorimeter to k4actstracking time</a>",
+            "author": "madbaron",
+            "createdAt": "2026-08-17",
+            "updatedAt": "2026-08-17",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 32,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/32'>Get rid of TrackSystemName</a>",
+            "author": "madbaron",
+            "createdAt": "2026-08-12",
+            "updatedAt": "2026-08-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 10,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/10'>DDCaloDigi: implement dead / miscalib tool</a>",
+            "author": "andresailer",
+            "createdAt": "2025-03-21",
+            "updatedAt": "2025-04-09",
+            "labels": "good first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MLJetTagger",
+            "num": 7,
+            "title": "<a href='https://github.com/key4hep/k4MLJetTagger/issues/7'>Improve primary vertex fit -> improve jet tagger</a>",
+            "author": "saracreates",
+            "createdAt": "2025-04-25",
+            "updatedAt": "2025-04-25",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MLJetTagger",
+            "num": 4,
+            "title": "<a href='https://github.com/key4hep/k4MLJetTagger/issues/4'>Modify README for usage in CLDConfig</a>",
+            "author": "saracreates",
+            "createdAt": "2025-04-24",
+            "updatedAt": "2025-04-24",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MLJetTagger",
+            "num": 3,
+            "title": "<a href='https://github.com/key4hep/k4MLJetTagger/issues/3'>Implement stable release</a>",
+            "author": "saracreates",
+            "createdAt": "2025-04-24",
+            "updatedAt": "2025-04-24",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>DDML",
+            "num": 32,
+            "title": "<a href='https://github.com/key4hep/DDML/issues/32'>Tests could be more specific and also check geometry triggers and different regions</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-09-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>DDML",
+            "num": 29,
+            "title": "<a href='https://github.com/key4hep/DDML/issues/29'>Configuration of output name for calo entry recording should be DD4hep configurable</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-09-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>DDML",
+            "num": 26,
+            "title": "<a href='https://github.com/key4hep/DDML/issues/26'>Potential overrun of outputs for high energy (>220-250 GeV) showers</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-28",
+            "updatedAt": "2026-08-28",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4CEDViewer",
+            "num": 5,
+            "title": "<a href='https://github.com/key4hep/k4CEDViewer/issues/5'>MCParticle drawing ignores endpoint of particle</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-07-08",
+            "updatedAt": "2026-07-08",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 478,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/478'>Example/test fails</a>",
+            "author": "atolosadelgado",
+            "createdAt": "2024-10-15",
+            "updatedAt": "2024-10-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 430,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/430'>CreateCaloCellPositions with hard coded system ID</a>",
+            "author": "BrieucF",
+            "createdAt": "2020-12-02",
+            "updatedAt": "2020-12-02",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 428,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/428'>Gaudi algorithm to add non-zero crossing angle, ...</a>",
+            "author": "gganis",
+            "createdAt": "2020-11-19",
+            "updatedAt": "2020-11-19",
+            "labels": "enhancement \ntodo \ngood first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 427,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/427'>ParticleGun should be able to decay short lived particles, such as taus</a>",
+            "author": "gganis",
+            "createdAt": "2020-11-19",
+            "updatedAt": "2020-11-19",
+            "labels": "enhancement \ntodo \ngood first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 422,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/422'>Error in GDML parsing when using spack installation</a>",
+            "author": "vvolkl",
+            "createdAt": "2020-11-06",
+            "updatedAt": "2020-11-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 404,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/404'>MC matching using ToMC - many matches show large momentum differences</a>",
+            "author": "donalhill",
+            "createdAt": "2020-09-28",
+            "updatedAt": "2020-10-09",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 406,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/406'>Deduplicate FCCeeCLD detector code</a>",
+            "author": "vvolkl",
+            "createdAt": "2020-09-30",
+            "updatedAt": "2020-09-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 405,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/405'>genParticle vertex coordinates always zero even for particles which should have some displacement</a>",
+            "author": "donalhill",
+            "createdAt": "2020-09-29",
+            "updatedAt": "2020-09-29",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 397,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/397'>set noclobber interferes with FCC sw setup</a>",
+            "author": "cleonido",
+            "createdAt": "2020-09-10",
+            "updatedAt": "2020-09-11",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 389,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/389'>Remove redundant calls to find_package(\"dd4hep\")</a>",
+            "author": "vvolkl",
+            "createdAt": "2020-06-01",
+            "updatedAt": "2020-06-01",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 388,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/388'>Update in Unit Handling in newer DD4hep versions</a>",
+            "author": "vvolkl",
+            "createdAt": "2020-06-01",
+            "updatedAt": "2020-06-01",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 378,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/378'>Compilation Warnings</a>",
+            "author": "vvolkl",
+            "createdAt": "2019-12-12",
+            "updatedAt": "2019-12-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 369,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/369'>Use / integrate prmon to monitor computing performance</a>",
+            "author": "vvolkl",
+            "createdAt": "2019-10-01",
+            "updatedAt": "2019-10-01",
+            "labels": "help wanted",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 363,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/363'>Delphes Output tools should be created by default.</a>",
+            "author": "vvolkl",
+            "createdAt": "2019-08-23",
+            "updatedAt": "2019-10-01",
+            "labels": "externals-required",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 323,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/323'>Use external installation of tricktrack when possible</a>",
+            "author": "vvolkl",
+            "createdAt": "2019-01-17",
+            "updatedAt": "2019-10-01",
+            "labels": "help wanted \ngood first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 326,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/326'>FCCSW external data files - re-organization</a>",
+            "author": "vvolkl",
+            "createdAt": "2019-02-22",
+            "updatedAt": "2019-10-01",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 343,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/343'>Data Structure for Calo Towers</a>",
+            "author": "vvolkl",
+            "createdAt": "2019-05-10",
+            "updatedAt": "2019-05-10",
+            "labels": "question",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCSW",
+            "num": 155,
+            "title": "<a href='https://github.com/HEP-FCC/FCCSW/issues/155'>FCCSW returns failure when running over a full LHE file</a>",
+            "author": "clementhelsens",
+            "createdAt": "2016-12-09",
+            "updatedAt": "2017-04-06",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-edm",
+            "num": 60,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-edm/issues/60'>Particle Vertex information duplicated</a>",
+            "author": "vvolkl",
+            "createdAt": "2018-10-22",
+            "updatedAt": "2018-10-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-edm",
+            "num": 52,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-edm/issues/52'>fcc-edm master not compatible with podio master (operator<< conflict)</a>",
+            "author": "cbernet",
+            "createdAt": "2017-12-20",
+            "updatedAt": "2018-01-10",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-edm",
+            "num": 51,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-edm/issues/51'>where is dag used? </a>",
+            "author": "cbernet",
+            "createdAt": "2017-10-05",
+            "updatedAt": "2017-10-05",
+            "labels": "",
+            "assignees": "cbernet \nalicerobson"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-edm",
+            "num": 50,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-edm/issues/50'> One to many relation jet->jets (for jet reclustering)</a>",
+            "author": "clementhelsens",
+            "createdAt": "2017-07-12",
+            "updatedAt": "2017-07-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-edm",
+            "num": 31,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-edm/issues/31'>TrajectoryPoints?</a>",
+            "author": "cbernet",
+            "createdAt": "2016-12-01",
+            "updatedAt": "2017-04-07",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-edm",
+            "num": 34,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-edm/issues/34'>Issues in the local installation of the standalone packages</a>",
+            "author": "Arturo91",
+            "createdAt": "2016-12-08",
+            "updatedAt": "2017-01-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 205,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/205'>Add \"How to get help\" information</a>",
+            "author": "michmx",
+            "createdAt": "2026-09-21",
+            "updatedAt": "2026-09-21",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 188,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/188'>Remove virtual machine section</a>",
+            "author": "amorenobr",
+            "createdAt": "2026-07-24",
+            "updatedAt": "2026-09-18",
+            "labels": "",
+            "assignees": "amorenobr"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 204,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/204'>Add explanations about Delphes cards and parametrizations</a>",
+            "author": "michmx",
+            "createdAt": "2026-09-18",
+            "updatedAt": "2026-09-18",
+            "labels": "",
+            "assignees": "bistapf"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 203,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/203'>Add an introduction for FCCAnalyses</a>",
+            "author": "michmx",
+            "createdAt": "2026-09-18",
+            "updatedAt": "2026-09-18",
+            "labels": "",
+            "assignees": "bndikt"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 189,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/189'>Update Windows section</a>",
+            "author": "amorenobr",
+            "createdAt": "2026-07-24",
+            "updatedAt": "2026-09-18",
+            "labels": "",
+            "assignees": "bndikt"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 196,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/196'>Add CONTRIBUTING.md and LICENCE.md</a>",
+            "author": "michmx",
+            "createdAt": "2026-08-28",
+            "updatedAt": "2026-08-28",
+            "labels": "maintenance",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 193,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/193'>Explanation of basic concepts in distributed computing</a>",
+            "author": "michmx",
+            "createdAt": "2026-08-21",
+            "updatedAt": "2026-08-21",
+            "labels": "",
+            "assignees": "michmx"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 187,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/187'>Review instructions on how to access LXPlus</a>",
+            "author": "amorenobr",
+            "createdAt": "2026-07-24",
+            "updatedAt": "2026-07-24",
+            "labels": "",
+            "assignees": "amorenobr"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 190,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/190'>Update SWAN tutorial</a>",
+            "author": "amorenobr",
+            "createdAt": "2026-07-24",
+            "updatedAt": "2026-07-24",
+            "labels": "",
+            "assignees": "amorenobr"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 183,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/183'>Fix links on \"Accessing computing facility capable of running Key4hep applications\"</a>",
+            "author": "michmx",
+            "createdAt": "2026-06-22",
+            "updatedAt": "2026-06-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 134,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/134'>Suggestion to add final plots in tutorials</a>",
+            "author": "amanmdesai",
+            "createdAt": "2023-05-24",
+            "updatedAt": "2023-05-30",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 80,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/80'>Fix inconsistencies in exploring-fcc-files</a>",
+            "author": "vvolkl",
+            "createdAt": "2022-09-30",
+            "updatedAt": "2022-09-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 67,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/67'>Migrate Particle Multiplicity Page to FCCAnalyses / edm4hep</a>",
+            "author": "vvolkl",
+            "createdAt": "2021-06-11",
+            "updatedAt": "2021-06-11",
+            "labels": "help wanted",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 45,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/45'>Tutorials don't work properly in the SWAN galley</a>",
+            "author": "omazapa",
+            "createdAt": "2020-07-15",
+            "updatedAt": "2020-07-17",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 43,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/43'>Add section on modifying Delphes cards and FCC output</a>",
+            "author": "vvolkl",
+            "createdAt": "2020-01-15",
+            "updatedAt": "2020-01-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>EventProducer",
+            "num": 236,
+            "title": "<a href='https://github.com/HEP-FCC/EventProducer/issues/236'>Duplicate entries in parameter files</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-11-20",
+            "updatedAt": "2026-06-25",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>EventProducer",
+            "num": 252,
+            "title": "<a href='https://github.com/HEP-FCC/EventProducer/issues/252'>Suspicious xsec for LHE files</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-02-20",
+            "updatedAt": "2025-02-20",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>EventProducer",
+            "num": 239,
+            "title": "<a href='https://github.com/HEP-FCC/EventProducer/issues/239'>running whizard with Pythia8</a>",
+            "author": "portalesHEP",
+            "createdAt": "2024-11-20",
+            "updatedAt": "2024-11-20",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>EventProducer",
+            "num": 228,
+            "title": "<a href='https://github.com/HEP-FCC/EventProducer/issues/228'>Switch to common/public installation of LHAPDF</a>",
+            "author": "bistapf",
+            "createdAt": "2024-10-30",
+            "updatedAt": "2024-10-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>EventProducer",
+            "num": 222,
+            "title": "<a href='https://github.com/HEP-FCC/EventProducer/issues/222'>Transferring environment with condor jobs causes errors</a>",
+            "author": "bistapf",
+            "createdAt": "2024-09-19",
+            "updatedAt": "2024-09-26",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>EventProducer",
+            "num": 221,
+            "title": "<a href='https://github.com/HEP-FCC/EventProducer/issues/221'>Jobs abort with `DeleteInterpProc called with active evals` in case of missing input files required by Delphes card</a>",
+            "author": "bistapf",
+            "createdAt": "2024-09-18",
+            "updatedAt": "2024-09-18",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>EventProducer",
+            "num": 154,
+            "title": "<a href='https://github.com/HEP-FCC/EventProducer/issues/154'>Sample dictionnary generation breaks when xsec not documented</a>",
+            "author": "portalesHEP",
+            "createdAt": "2023-01-12",
+            "updatedAt": "2023-01-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 560,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/560'>Modernize Python type annotation syntax</a>",
+            "author": "bndikt",
+            "createdAt": "2026-09-25",
+            "updatedAt": "2026-09-25",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 559,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/559'>Allow configuring DIRAC submission settings in the analysis script</a>",
+            "author": "bndikt",
+            "createdAt": "2026-09-24",
+            "updatedAt": "2026-09-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 558,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/558'>Support campaign-based input discovery for grid submission</a>",
+            "author": "bndikt",
+            "createdAt": "2026-09-24",
+            "updatedAt": "2026-09-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 555,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/555'>Apply CLI overrides consistently to sample-based run settings</a>",
+            "author": "bndikt",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 547,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/547'>Undefined CMake variables in doc/Doxyfile.in expand to empty</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-08",
+            "updatedAt": "2026-09-08",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 544,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/544'>Audit for member variables that are really per-call-scoped state</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-03",
+            "updatedAt": "2026-09-03",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 543,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/543'>Remove unused function parameters left unnamed by #539</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-03",
+            "updatedAt": "2026-09-03",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 515,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/515'>Issues encountered in LEP Data usage of FCCAnalyses</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-04-22",
+            "updatedAt": "2026-08-29",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 532,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/532'>Split $key4hep_stack test-file template variable into stack type and stack date</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-07-20",
+            "updatedAt": "2026-07-20",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 530,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/530'>Update AUTHORS section in man pages</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-07-20",
+            "updatedAt": "2026-07-20",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 526,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/526'>Reformat codebase to follow Key4hep's .clang-format style</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-07-20",
+            "updatedAt": "2026-07-20",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 511,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/511'>background processes not stacked/ ordered in cutflow plots</a>",
+            "author": "herrmannlena",
+            "createdAt": "2026-03-12",
+            "updatedAt": "2026-03-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 509,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/509'>Revamp how the authorship and contribution acknowledgement is handled</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-03-04",
+            "updatedAt": "2026-03-04",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 508,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/508'>Run C++ and Python formatters across the whole repo</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-03-04",
+            "updatedAt": "2026-03-04",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 420,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/420'>Add more functionality to plotting stage</a>",
+            "author": "bistapf",
+            "createdAt": "2024-11-13",
+            "updatedAt": "2026-02-17",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 504,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/504'>JetMatching and JetClustering</a>",
+            "author": "thisismeamir",
+            "createdAt": "2026-02-17",
+            "updatedAt": "2026-02-17",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 131,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/131'>kinematic fit</a>",
+            "author": "syWang0535",
+            "createdAt": "2022-04-06",
+            "updatedAt": "2026-02-17",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 498,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/498'>Consolidate how to specify output location</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-01-21",
+            "updatedAt": "2026-01-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 461,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/461'>Histmaker plotting without log scale</a>",
+            "author": "LoulouiseBipBip",
+            "createdAt": "2025-08-15",
+            "updatedAt": "2025-12-09",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 491,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/491'>Statbox for plots</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-12-05",
+            "updatedAt": "2025-12-05",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 486,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/486'>Support for `ROOT::Math::LorentzVector`</a>",
+            "author": "kjvbrt",
+            "createdAt": "2025-11-14",
+            "updatedAt": "2025-11-14",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 433,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/433'>Support for additional command line arguments in analysis final stage</a>",
+            "author": "bistapf",
+            "createdAt": "2025-03-10",
+            "updatedAt": "2025-03-10",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 429,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/429'>Working function to retrieve untagged jets</a>",
+            "author": "jd550179",
+            "createdAt": "2025-02-25",
+            "updatedAt": "2025-02-25",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 426,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/426'>Two tests do not pass by default running on any machine (for example without EOS)</a>",
+            "author": "jmcarcell",
+            "createdAt": "2025-02-19",
+            "updatedAt": "2025-02-19",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 417,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/417'>Cyclical link dependencies FastJet addon <-> FccAnalyses?</a>",
+            "author": "vvolkl",
+            "createdAt": "2024-10-28",
+            "updatedAt": "2025-01-14",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 414,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/414'>FCCanalysis plots function to normalize histograms (backgrounds and signal)</a>",
+            "author": "esitti",
+            "createdAt": "2024-10-24",
+            "updatedAt": "2024-10-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 413,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/413'>Reimplement event weights as standard behaviour</a>",
+            "author": "bistapf",
+            "createdAt": "2024-10-16",
+            "updatedAt": "2024-10-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 412,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/412'>Rename `process`  to `sample`</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-10-15",
+            "updatedAt": "2024-10-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 401,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/401'>RDF crash when running against December 2023 version of package</a>",
+            "author": "asciandr",
+            "createdAt": "2024-09-16",
+            "updatedAt": "2024-09-18",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 398,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/398'>Crash when tree not found</a>",
+            "author": "amagnan",
+            "createdAt": "2024-09-04",
+            "updatedAt": "2024-09-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 390,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/390'>minimize_sphericity results changed with ROOT 6.30</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-07-18",
+            "updatedAt": "2024-07-18",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 385,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/385'>Slurm batch submission support</a>",
+            "author": "AidanWiederhold",
+            "createdAt": "2024-07-05",
+            "updatedAt": "2024-07-05",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 380,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/380'>Define a set of printing analyzers for debugging purposes</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-06-27",
+            "updatedAt": "2024-06-27",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 338,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/338'>Add option to specify batch job output dir from the command line</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-01-17",
+            "updatedAt": "2024-01-17",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 337,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/337'>Implement rerunning of the failed jobs</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-01-17",
+            "updatedAt": "2024-01-17",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 336,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/336'>Use `htcondor` python bindings for batch submission</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-01-16",
+            "updatedAt": "2024-01-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 334,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/334'>[batch] Copy of output files might be not sucessful</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-01-12",
+            "updatedAt": "2024-01-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 295,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/295'>Missing streamer infos?</a>",
+            "author": "Zehvogel",
+            "createdAt": "2023-07-03",
+            "updatedAt": "2023-10-27",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 291,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/291'>Branch names change in podio</a>",
+            "author": "tmadlener",
+            "createdAt": "2023-06-06",
+            "updatedAt": "2023-06-06",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 280,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/280'>procDict should not be required for local files</a>",
+            "author": "gganis",
+            "createdAt": "2023-04-24",
+            "updatedAt": "2023-04-24",
+            "labels": "bug \nenhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 227,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/227'>addons headers are not properly installed</a>",
+            "author": "tmadlener",
+            "createdAt": "2022-11-15",
+            "updatedAt": "2022-11-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 179,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/179'>Runtime linker warnings when using 2022-05-24 nightlies</a>",
+            "author": "vvolkl",
+            "createdAt": "2022-05-24",
+            "updatedAt": "2022-05-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 158,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/158'>How to handle non valid input/output in functions</a>",
+            "author": "kjvbrt",
+            "createdAt": "2022-05-03",
+            "updatedAt": "2022-05-03",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 108,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/108'>Precision in interface with FastJet</a>",
+            "author": "gavinsalam",
+            "createdAt": "2021-09-20",
+            "updatedAt": "2021-09-21",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>glossary",
+            "num": 4,
+            "title": "<a href='https://github.com/HEP-FCC/glossary/issues/4'>Migrate to other platform than Gitbook</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-08-01",
+            "updatedAt": "2024-08-01",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>glossary",
+            "num": 3,
+            "title": "<a href='https://github.com/HEP-FCC/glossary/issues/3'>The summary is not published at the introduction page</a>",
+            "author": "kjvbrt",
+            "createdAt": "2024-08-01",
+            "updatedAt": "2024-08-01",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCeePhysicsStudies",
+            "num": 40,
+            "title": "<a href='https://github.com/HEP-FCC/FCCeePhysicsStudies/issues/40'>split of code between FCCAnalyses and FCCeePhysicsPerformance</a>",
+            "author": "jalimena",
+            "createdAt": "2022-04-28",
+            "updatedAt": "2022-05-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCeePhysicsStudies",
+            "num": 39,
+            "title": "<a href='https://github.com/HEP-FCC/FCCeePhysicsStudies/issues/39'>kinematics fitting tool</a>",
+            "author": "syWang0535",
+            "createdAt": "2022-04-10",
+            "updatedAt": "2022-04-11",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 280,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/280'>Desired location for digitizers migrated from other repositories</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-18",
+            "updatedAt": "2026-08-18",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 268,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/268'>Cells with zero noise RMS in ALLEGRO ECAL endcap</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-07-01",
+            "updatedAt": "2026-07-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 221,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/221'>Migrate to Gaudi functional and IOSvc for SiPM emulation algorithms</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-03-11",
+            "updatedAt": "2026-06-22",
+            "labels": "",
+            "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 248,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/248'>Adding \"calibrateCell\" function to ICalibrateCaloHitsTool</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-04-15",
+            "updatedAt": "2026-04-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 201,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/201'>Validate new code for ecal barrel<->endcap links</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-02-05",
+            "updatedAt": "2026-02-05",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 200,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/200'>Cleanup CellPositionsECalEndcapTurbineSegTool</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-02-04",
+            "updatedAt": "2026-02-04",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 27,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/27'>Performance issue related to BitFieldCoder::get</a>",
+            "author": "vvolkl",
+            "createdAt": "2022-07-01",
+            "updatedAt": "2025-09-25",
+            "labels": "good first issue \nhelp wanted",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 99,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/99'>CreateCaloCells vs CreateCaloCellsNoise</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2024-07-22",
+            "updatedAt": "2025-06-29",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 399,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/399'>Refactor Gaudi steering files avoiding code duplication</a>",
+            "author": "BrieucF",
+            "createdAt": "2026-09-25",
+            "updatedAt": "2026-09-25",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 372,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/372'>change test area to build/Testing/Temporary?</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-07-16",
+            "updatedAt": "2026-07-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 89,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/89'>Winter2023: Incorrect beamspot parameter in wzp6_*_ecm240 cards</a>",
+            "author": "portalesHEP",
+            "createdAt": "2023-01-19",
+            "updatedAt": "2023-01-19",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 88,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/88'>Winter2023: wzp6 ecm240 cards with incorrect pythia6 mH parameter</a>",
+            "author": "portalesHEP",
+            "createdAt": "2023-01-19",
+            "updatedAt": "2023-01-19",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>umb-template",
+            "num": 4,
+            "title": "<a href='https://github.com/HEP-FCC/umb-template/issues/4'>Can't search by uuid</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-04-14",
+            "updatedAt": "2026-05-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>umb-template",
+            "num": 5,
+            "title": "<a href='https://github.com/HEP-FCC/umb-template/issues/5'>Rename primary adaptation FCC Physics Events</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-05-21",
+            "updatedAt": "2026-05-21",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-sw-web",
+            "num": 1,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-sw-web/issues/1'>Meta issue for functionality enhancements</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-03-17",
+            "updatedAt": "2026-05-06",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 60,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/60'>Dependency Dashboard</a>",
+            "author": "renovate",
+            "createdAt": "2026-08-20",
+            "updatedAt": "2026-10-01",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 96,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/96'>Implement search across the dataset requests</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-09-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 94,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/94'>Markdown in additional notes does not render</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-24",
+            "updatedAt": "2026-09-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 93,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/93'>Additional notes in dataset request page should be expandable downwards</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-24",
+            "updatedAt": "2026-09-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 81,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/81'>Replace Makefile/curl frontend vendoring with a minimal package.json</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-09-02",
+            "updatedAt": "2026-09-02",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 68,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/68'>Add template-parsing smoke test and handler integration tests</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-08-20",
+            "updatedAt": "2026-08-20",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 61,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/61'>kaniko project archived \u2014 plan migration for CI image builds</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-08-20",
+            "updatedAt": "2026-08-20",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 44,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/44'>Platform monitoring</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-07-13",
+            "updatedAt": "2026-07-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 40,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/40'>Store request submission time explicitly</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-07-10",
+            "updatedAt": "2026-07-10",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 24,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/24'>Replace sed image tag patch with kustomize edit set image in CI</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-07-07",
+            "updatedAt": "2026-07-07",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 13,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/13'>Rename manager role to coordinator</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-06-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 12,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/12'>Campaign banner</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-06-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 11,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/11'>Add guidance on how to request a dataset</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-06-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 10,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/10'>Clean up stale mention relations on request edit</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-06-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 8,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/8'>Add campaign and Key4hep stack dropdown fields</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-06-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 7,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/7'>Add detector option and version field</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-06-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 6,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/6'>Add accelerator field</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-06-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 4,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/4'>Validation plots</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-06-30",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 1,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/1'>Stale mention relations not cleaned up on request edit</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-06-30",
+            "updatedAt": "2026-06-30",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalysesWeb",
+            "num": 3,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalysesWeb/issues/3'>Add dark mode</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-07-22",
+            "updatedAt": "2026-07-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalysesWeb",
+            "num": 2,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalysesWeb/issues/2'>Custom 404 page not served (CERN-wide error page overrides it)</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-07-22",
+            "updatedAt": "2026-07-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalysesWeb",
+            "num": 1,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalysesWeb/issues/1'>Add client-side search</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-07-22",
+            "updatedAt": "2026-07-22",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>LiveSoftwareTutorials",
+            "num": 15,
+            "title": "<a href='https://github.com/HEP-FCC/LiveSoftwareTutorials/issues/15'>Issues and other findings during the tutorial</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-31",
+            "updatedAt": "2026-09-08",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>LiveSoftwareTutorials",
+            "num": 8,
+            "title": "<a href='https://github.com/HEP-FCC/LiveSoftwareTutorials/issues/8'>Jupyter notebook export via jupytext</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-08-28",
+            "updatedAt": "2026-08-28",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 777,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/777'>Review Condition fix PR</a>",
+            "author": "petricm",
+            "createdAt": "2021-01-28",
+            "updatedAt": "2021-02-15",
+            "labels": "work in progress",
+            "assignees": "MarkusFrankATcernch"
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 924,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/924'>Handles : several issues of these user facing objects</a>",
+            "author": "sponce",
+            "createdAt": "2022-07-07",
+            "updatedAt": "2022-07-11",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1335,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1335'>Uniform random picking of points on detector surfaces for noise studies</a>",
+            "author": "wdconinc",
+            "createdAt": "2024-10-17",
+            "updatedAt": "2025-08-08",
+            "labels": "question",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1458,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1458'>Possible discrepancy between xml file and geometry converted into root file</a>",
+            "author": "andread3vita",
+            "createdAt": "2025-06-06",
+            "updatedAt": "2026-02-02",
+            "labels": "bug \nWaiting for caller",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1501,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1501'>Bug/Feature: Condense duplicated particle contributions in calorimeter</a>",
+            "author": "murnanedaniel",
+            "createdAt": "2025-09-16",
+            "updatedAt": "2026-02-25",
+            "labels": "enhancement \nquestion",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1568,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1568'>Sim hits between two sensitive volumes?</a>",
+            "author": "alexandertuna",
+            "createdAt": "2026-02-11",
+            "updatedAt": "2026-02-11",
+            "labels": "question",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1633,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1633'>Decouple DD4hep Readers/Writers into Separate Source and Injection/Build Stages</a>",
+            "author": "simonge",
+            "createdAt": "2026-05-19",
+            "updatedAt": "2026-07-15",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1643,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1643'>Non-determinism in hit ordering when multiple detectors share readout</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-06-10",
+            "updatedAt": "2026-06-11",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1657,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1657'>DDG4 reduces the generator status to 16 bits and gives no warning</a>",
+            "author": "meiyasan",
+            "createdAt": "2026-08-06",
+            "updatedAt": "2026-08-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1667,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1667'>LCIO output not writing runParameters</a>",
+            "author": "andresailer",
+            "createdAt": "2026-08-28",
+            "updatedAt": "2026-09-03",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1671,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1671'>CI: replace macOS brew install with lcgcmake install</a>",
+            "author": "andresailer",
+            "createdAt": "2026-09-06",
+            "updatedAt": "2026-09-06",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1677,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1677'>Duplication in the events saved in the output file using ddsim</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-09-17",
+            "updatedAt": "2026-09-17",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1683,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1683'>Bug about the thickness in DiskTracker_geo.cpp</a>",
+            "author": "qwert2333",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-09-23",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>LCContent",
+            "num": 44,
+            "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/issues/44'>\u03b8-only track-cluster chi decisions difference from full-chain in cluster merging</a>",
+            "author": "madbaron",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-09-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>PandoraSDK",
+            "num": 22,
+            "title": "<a href='https://github.com/PandoraPFAOrg/PandoraSDK/issues/22'>CalculateCellLengthScale - pointing cells</a>",
+            "author": "PandoraPFA",
+            "createdAt": "2025-04-10",
+            "updatedAt": "2025-04-10",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>PandoraSDK",
+            "num": 32,
+            "title": "<a href='https://github.com/PandoraPFAOrg/PandoraSDK/issues/32'>Build failure with modern CMake: `export_library_dependencies` removed (CMP0033)</a>",
+            "author": "thisismeamir",
+            "createdAt": "2026-05-01",
+            "updatedAt": "2026-05-01",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "iLCSoft/<br>DDMarlinPandora",
+            "num": 35,
+            "title": "<a href='https://github.com/iLCSoft/DDMarlinPandora/issues/35'>`CalorimeterHit` and `SimCalorimeterHit` linked with `RecoMCTruthLinker` sometimes have different cell ID</a>",
+            "author": "AuroraPerego",
+            "createdAt": "2025-07-08",
+            "updatedAt": "2026-01-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "iLCSoft/<br>DDMarlinPandora",
+            "num": 39,
+            "title": "<a href='https://github.com/iLCSoft/DDMarlinPandora/issues/39'>ILD reconstruction emits alot of warnings for Gap Hits</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-10-09",
+            "updatedAt": "2025-10-10",
+            "labels": "",
+            "assignees": ""
+        }
+    ]
+}
