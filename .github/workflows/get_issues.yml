@@ -1,0 +1,36 @@
+name: get fcc issues
+
+on:
+  schedule:
+    # Runs every 4 hours
+    - cron: '0 */4 * * *'
+  # Allows you to manually trigger the action anytime from the GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  update_issues:
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository to the runner
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.head_ref }}
+          persist-credentials: true
+      - name: Install Python dependencies
+        run: pip install pyyaml
+      - name: Fetch issues
+        run: python3 assets/scripts/fetch_issues.py config.yml
+        env:
+          GH_TOKEN: ${{ secrets.FCC_GH_TOKEN }}
+      - name: Process JSON
+        run: |
+          python3 assets/scripts/reformulate_issues_json.py all_issues.json
+          mv issues_data.json assets/json/.
+          mv issues_repo_data.json assets/json/.
+          rm all_issues.json
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v7
