@@ -244,22 +244,11 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 933,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/933'>make +cuda available only when +gnn in k4ActsTracking</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-02",
-            "updatedAt": "2026-10-02",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
             "num": 911,
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
-            "updatedAt": "2026-10-01",
+            "updatedAt": "2026-10-02",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -271,7 +260,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-25",
             "updatedAt": "2026-09-25",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -282,7 +271,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -293,7 +282,7 @@
             "author": "tmadlener",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -304,7 +293,7 @@
             "author": "Panzerkampfwagen-del",
             "createdAt": "2026-08-26",
             "updatedAt": "2026-09-02",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -315,7 +304,7 @@
             "author": "dudarboh",
             "createdAt": "2026-01-13",
             "updatedAt": "2026-01-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -421,20 +410,9 @@
         {
             "repo": "key4hep/<br>k4ActsTracking",
             "num": 109,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Draft: Add initial ACTS adaptive multi-vertex finder</a>",
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
             "author": "jbeirer",
             "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-02",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 94,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/94'>Fix CUDA output tensor for metric learning model</a>",
-            "author": "Baucki1",
-            "createdAt": "2026-08-28",
             "updatedAt": "2026-10-02",
             "mergeOk": "yes",
             "labels": "",
@@ -903,17 +881,6 @@
             "assignees": ""
         },
         {
-            "repo": "key4hep/<br>k4PFHitML",
-            "num": 4,
-            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/4'>fix unused variable error, skip events with no hits/tracks</a>",
-            "author": "herrmannlena",
-            "createdAt": "2026-10-02",
-            "updatedAt": "2026-10-02",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "key4hep/<br>DDML",
             "num": 22,
             "title": "<a href='https://github.com/key4hep/DDML/pull/22'>Make it possible to run inference on models that cannot be exported </a>",
@@ -960,7 +927,7 @@
         {
             "repo": "key4hep/<br>k4DetectorPerformance",
             "num": 9,
-            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/9'>Draft: Add vertex validation plots</a>",
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/9'>Add vertex validation plots</a>",
             "author": "jbeirer",
             "createdAt": "2026-09-30",
             "updatedAt": "2026-10-02",
@@ -1022,17 +989,6 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 203,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/203'>chore(deps): update pymdown-extensions requirement from >=12.0.1 to >=12.1</a>",
-            "author": "dependabot",
-            "createdAt": "2026-10-02",
-            "updatedAt": "2026-10-02",
-            "mergeOk": "yes",
-            "labels": "dependencies \npython",
-            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1668,6 +1624,17 @@
             "author": "neskongarr",
             "createdAt": "2026-09-28",
             "updatedAt": "2026-09-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 102,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/102'>Update Node.js to v24</a>",
+            "author": "renovate",
+            "createdAt": "2026-10-02",
+            "updatedAt": "2026-10-02",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
