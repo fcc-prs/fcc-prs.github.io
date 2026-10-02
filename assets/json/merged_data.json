@@ -1,6 +1,87 @@
 {
-    "updated_at": "2026-10-01T12:14:30Z",
+    "updated_at": "2026-10-02T11:44:25Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 110,
+            "title": "switch to externaldata",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/110",
+            "author": "madbaron",
+            "mergedAt": "2026-10-02",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Remove wget-based data retrieval in favour of ExternalData\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 40,
+                "deletions": 119,
+                "files": 16
+            },
+            "files": [
+                ".gitignore",
+                "data/CMakeLists.txt",
+                "data/MAIA_v0.json.md5",
+                "data/MAIA_v0.root.md5",
+                "data/MAIA_v0_gen3_material_map.json.md5",
+                "data/MAIA_v0_material.json.md5",
+                "data/MuColl_v1.json.md5",
+                "data/MuColl_v1.root.md5",
+                "data/MuSIC_v1.json.md5",
+                "data/MuSIC_v1.root.md5",
+                "data/MuSIC_v2.json.md5",
+                "data/MuSIC_v2.root.md5",
+                "data/download_files.sh",
+                "data/file_list.txt",
+                "data/material-maps.json.md5",
+                "doc/material_mapping.md"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "> Looks like the `.md5` files didn't make the commit?\r\n\r\n#failure"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Looks like the `.md5` files didn't make the commit?"
+                }
+            ],
+            "reviews_total": 10
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCCAnalyses",
+            "num": 561,
+            "title": "Update handling of condor logs and out with pre-edm4hep1 stack",
+            "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/561",
+            "author": "qgl90",
+            "mergedAt": "2026-10-02",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Changes needed to avoid spawning 10 retrials failures submission due to the HTCondor warnings on the way Log files are saved",
+            "diff": {
+                "additions": 9,
+                "deletions": 5,
+                "files": 2
+            },
+            "files": [
+                "python/run_analysis.py",
+                "python/run_fccanalysis.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "copilot-pull-request-reviewer",
+                    "state": "COMMENTED",
+                    "body": "<!-- ccr-overview-v2 -->\n\n## Copilot review overview\n\n### \ud83d\udfe1 Changes recommended\n\nSuccessful submissions emitting warnings can still be retried, creating duplicate job clusters.\n\n**Review effort:** Balanced  \n**Findings:** 2 <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github\u2026"
+                }
+            ],
+            "reviews_total": 9
+        },
         {
             "org": "key4hep",
             "repo": "key4hep-spack",
@@ -27,6 +108,35 @@
         },
         {
             "org": "key4hep",
+            "repo": "key4hep-dev-utils",
+            "num": 27,
+            "title": "Use the LCG nightlies to get the downstream packages",
+            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/27",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-01",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "The downstream-build has been broken since changing to the LCG stacks, time to fix it.\r\n\r\n - Get the packages to build in the downstream build from the LCG nightlies (`LCG_externals_<platform>.txt` of the release behind the sourced LCG view) instead of Spack\r\n   - All the transitive dependents in the key4hep and HEP-FCC organizations are built, sorted topologically, instead of a hardcoded build order\r\n   - The git URLs are taken from the lcgcmake toolchain at the commit used for the release\r\n   - FCCSW is never built\r\n   - Fall back to matching only the repository name, so that it works in forks\r\n\r\nNeeded for key4hep/key4hep-actions#56, this one has to be merged first.",
+            "diff": {
+                "additions": 164,
+                "deletions": 104,
+                "files": 1
+            },
+            "files": [
+                "scripts/fetch_and_checkout.py"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "I think this is mostly correct, maybe too many packages are built? It takes a bit long... To be tuned in the future."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
             "repo": "key4hep-actions",
             "num": 57,
             "title": "Pin external actions to commit SHAs",
@@ -46,6 +156,85 @@
                 "key4hep-build/action.yml",
                 "workflows/auto-commit.yaml",
                 "workflows/downstream-build.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 106,
+            "title": "Fix deprecated getTrackState usage in TrackMerger",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/106",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-01",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Replace `int32_t` location parameters with `edm4hep::TrackState::Location` enum type to resolve deprecation warnings.\r\n\r\nFixes:\r\n```\r\n/Workarea/14_k4rectracker/Tracking/components/TrackMerger.cpp:171:34: warning: 'std::optional<edm4hep::TrackState> edm4hep::Track::getTrackState(int32_t) const' is deprecated: Use getTrackState(edm4hep::TrackState::Location) instead [-Wdeprecated-declarations]\r\n```\r\n\r\nRelated: key4hep/EDM4hep#493 (added the new `getTrackState` method with `TrackState::Location` enum parameter)\r\n\r\nBEGINRELEASENOTES\r\n - Fix deprecated getTrackState usage in TrackMerger component by using `getTrackState` where it is needed.\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 9,
+                "deletions": 13,
+                "files": 1
+            },
+            "files": [
+                "Tracking/components/TrackMerger.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 3
+        },
+        {
+            "org": "key4hep",
+            "repo": "DDML",
+            "num": 34,
+            "title": "Add BIBAE_Two_Angle model",
+            "url": "https://github.com/key4hep/DDML/pull/34",
+            "author": "peter-mckeown",
+            "mergedAt": "2026-10-01",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n\r\n- Add BIBAE two angle model for retrieval via `ExternalData` \r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 0,
+                "files": 2
+            },
+            "files": [
+                "models/BIBAE_Two_Angle_Full_PP_cut.pt.md5",
+                "models/CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Thanks."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "DDML",
+            "num": 33,
+            "title": "Give some information about attempts to load models",
+            "url": "https://github.com/key4hep/DDML/pull/33",
+            "author": "tmadlener",
+            "mergedAt": "2026-10-01",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Make errors in model loading a bit easier to see from the log outputs\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 27,
+                "deletions": 7,
+                "files": 2
+            },
+            "files": [
+                "src/ONNXInference.cc",
+                "src/TorchInference.cc"
             ],
             "comments": [],
             "comments_total": 0,
@@ -91,6 +280,134 @@
                 }
             ],
             "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 202,
+            "title": "fix(nightly): wait for a stale CVMFS weekday slot before failing the release check",
+            "url": "https://github.com/key4hep/k4Bench/pull/202",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-01",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Tests\n\n\n___\n\n### **Description**\n- Retry release check while CVMFS serves stale slot\n\n- Read view identity before sourcing the setup\n\n- Add unit tests for retry and failure paths\n\n- Document matrix jobs' brief CVMFS wait\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"resolve-release names nightly release\"] --> B[\"benchmark job reads view identity\"]\n  B --> C{\"matches requested release?\"}\n  C -- \"no, within 360 s deadline\" --> D[\"sleep 30 s and re-read\"]\n  D --> C\n  C -- \"yes\" --> E[\"source setup and benchmark\"]\n  C -- \"no, deadline passed\" --> F[\"fail release check unsourced\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><\u2026",
+            "diff": {
+                "additions": 114,
+                "deletions": 18,
+                "files": 4
+            },
+            "files": [
+                ".github/scripts/nightly_benchmark.sh",
+                ".github/workflows/nightly.yml",
+                "tests/unit/test_nightly_release_check.py",
+                "tests/unit/test_provenance_stack.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/79ffc795de3fe4715c7207262ef011045b0c20f9)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 5,276 in / 9 out / 5,285 total\n- Time cost: 131.6s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/202?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/202#issuecomment-5930114823)** updated to latest commit https://github.com/key4hep/k4Bench/commit/4665db22ef130a021e5e72f2fa28487a3fd77e98"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 6,394 in / 9 out / 6,403 total\n- Time cost: 383.7s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/202#issuecomment-5930114823)** updated to latest commit https://github.com/key4hep/k4Bench/commit/33795764821c1c698989a81509b90d4425e9d334"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 3379576 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/202#issuecomment-5930114823)** updated to latest commit https://github.com/key4hep/k4Bench/commit/79ffc795de3fe4715c7207262ef011045b0c20f9"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 6,747 in / 9 out / 6,756 total\n- Time cost: 263.0s\n- AI calls: 1\n\n</details>"
+                }
+            ],
+            "comments_total": 9,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-tutorials",
+            "num": 208,
+            "title": "Link CONTRIBUTING, LICENSE and CODE_OF_CONDUCT from the root of the repository",
+            "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/208",
+            "author": "michmx",
+            "mergedAt": "2026-10-01",
+            "mergedBy": "amorenobr",
+            "labels": [
+                "maintenance"
+            ],
+            "body": "With this change, GitHub detects the license, contributing, and code of conduct and displays them in the repository:\r\n<img width=\"943\" height=\"231\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d1f88d8c-b4b6-4dc9-8fc6-29043bb9b2d1\" />\r\n\r\nThe links ensure that the information is shown on the webpage as well. \r\n\r\nCloses #196",
+            "diff": {
+                "additions": 182,
+                "deletions": 177,
+                "files": 7
+            },
+            "files": [
+                "7-contributing/CONDUCT.md",
+                "7-contributing/CONDUCT.md",
+                "7-contributing/LICENSE.md",
+                "7-contributing/LICENSE.md",
+                "7-contributing/README.md",
+                "7-contributing/README.md",
+                "CODE_OF_CONDUCT.md",
+                "CONTRIBUTING.md",
+                "LICENSE.md",
+                "conf.py"
+            ],
+            "comments": [
+                {
+                    "author": "michmx",
+                    "body": "For clarification: the actual content is almost identical to the current one\r\nhttps://github.com/HEP-FCC/fcc-tutorials/tree/main/7-contributing \r\n\r\nplus a minor change updating `/cvmfs/fcc.cern.ch --> /cvmfs/sw.hsf.org`"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 400,
+            "title": "Add Lambda_b to Lambda(1520) nu nu EvtGen card",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/400",
+            "author": "vasilllis",
+            "mergedAt": "2026-10-01",
+            "mergedBy": "vasilllis",
+            "labels": [],
+            "body": "Adds `Lb2L1520NuNu.dec` for Lambda_b0 -> Lambda(1520)0 nu_e anti-nu_e, followed by Lambda(1520)0 -> p+ K-, and the charge-conjugate chain.\r\n\r\ntested with 200 events with the winter2023 key4hep stack.",
+            "diff": {
+                "additions": 19,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "FCCee/Generator/EvtGen/Lb2L1520NuNu.dec"
+            ],
+            "comments": [],
+            "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
         },
@@ -1377,66 +1694,6 @@
             "reviews_total": 0
         },
         {
-            "org": "hep-fcc",
-            "repo": "FCC-config",
-            "num": 392,
-            "title": "[ALLEGRO] Include TRAPPIST in o1_v3 and o2_v1 config",
-            "url": "https://github.com/HEP-FCC/FCC-config/pull/392",
-            "author": "jacofan",
-            "mergedAt": "2026-09-25",
-            "mergedBy": "giovannimarchiori",
-            "labels": [],
-            "body": "Add TRAPPIST inference and particle identification in ALLEGRO's configuration files.",
-            "diff": {
-                "additions": 304,
-                "deletions": 42,
-                "files": 4
-            },
-            "files": [
-                "FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/ctest_sim_digi_reco.sh",
-                "FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/run_digi_reco.py",
-                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/ctest_sim_digi_reco.sh",
-                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/run_digi_reco.py"
-            ],
-            "comments": [
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Ciao @jacofan \r\nexcellent! It might be a good idea to edit tests for o1_v03 (https://github.com/giovannimarchiori/FCC-config/blob/main/FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/ctest_sim_digi_reco.sh) and o1_v02 to run Trappist - at least as an option. Would the test time become much longer if we run Tra\u2026"
-                },
-                {
-                    "author": "jacofan",
-                    "body": "Ciao @giovannimarchiori! I added tests for both o1_v03 and o2_v01. For o1_v03, the local test runtime increases from 523 s to 553 s with TRAPPIST enabled. Since the overhead is small, I included TRAPPIST in the baseline rather than making it optional."
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "@jacofan can you remind me - we only have a model for topoclusters? I noticed that for SW clusters you didn't add the same option"
-                },
-                {
-                    "author": "jacofan",
-                    "body": "@giovannimarchiori I have an ONNX model for SW as well. I didn\u2019t add it because TRAPPIST uses the output of `PairCaloClustersPi0` (the invariant-mass pi0 finder), and, according to the [documentation slides referenced in the current sequence](https://github.com/HEP-FCC/FCC-config/blob/68e5d504afa960\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "I think It would be interesting to add it also for SW clusters with some clear \"FIXME\" in the script to indicate what potentially is not optimised. This would allow us to already assess the performance with SW clusters in this non-optimised scenario and establish a lower bound on it\r\n@BrieucF what d\u2026"
-                },
-                {
-                    "author": "BrieucF",
-                    "body": "> I think It would be interesting to add it also for SW clusters with some clear \"FIXME\" in the script to indicate what potentially is not optimised. This would allow us to already assess the performance with SW clusters in this non-optimised scenario and establish a lower bound on it @BrieucF what \u2026"
-                },
-                {
-                    "author": "jacofan",
-                    "body": "TRAPPIST is now available for SW clusters. I also made `PairCaloClustersPi0` work with clusters that don't have `ShapeParameters`"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Hi @jacofan I added some very minor comments, in general the PR looks good, let's wait for Juan to follow-up on his previous comment"
-                }
-            ],
-            "comments_total": 8,
-            "reviews": [],
-            "reviews_total": 12
-        },
-        {
             "org": "AIDASoft",
             "repo": "DD4hep",
             "num": 1684,
@@ -1462,210 +1719,6 @@
                 }
             ],
             "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-doc",
-            "num": 165,
-            "title": "Update github actions and introduce dependabot setup",
-            "url": "https://github.com/key4hep/key4hep-doc/pull/165",
-            "author": "tmadlener",
-            "mergedAt": "2026-09-24",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Update all github actions and pin them via hash\r\n- Introduce dependabot setup to automate this in the future\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 8,
-                "deletions": 2,
-                "files": 3
-            },
-            "files": [
-                ".github/dependabot.yml",
-                ".github/workflows/generate_overview.yml",
-                ".github/workflows/pr-deploy.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": ":rocket: Documentation preview: https://key4hep.github.io/key4hep-doc/pr-preview/pr-165/\n\nIt becomes available once the github pages deployment has completed,\nis updated on every push and is removed once this PR is closed.\n<!-- Sticky Pull Request Commentpr-preview -->"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-doc",
-            "num": 164,
-            "title": "Only match toctree entries when fetching upstream PR sources",
-            "url": "https://github.com/key4hep/key4hep-doc/pull/164",
-            "author": "tmadlener",
-            "mergedAt": "2026-09-24",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Matching the bare file name of the upstream PR file anywhere in the top level files picks up unrelated lines (e.g. markdown links to README.md on the landing page), resulting in fetching a file called '-'. Require the reference to be a whole toctree entry prefixed with the upstream repository name.\r\n\r\n\r\nBEGINRELEASENOTES\r\n- Fix bug in preview generation for dependent PRs introduced by re-organizing of landing page\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 5,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "scripts/fetch_upstream_pr_sources.sh"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-09-24 14:27 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 95,
-            "title": "Use upstream ACTS converters",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/95",
-            "author": "madbaron",
-            "mergedAt": "2026-09-24",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Use the centralised ACTS EDM4hep converter (`ActsPlugins::EDM4hepUtil`) instead of the local conversion code. `ACTS2edm4hep_track` is now a thin wrapper around `writeTrack`, and the seed (`AtFirstHit`) and calorimeter (`AtCalorimeter`) track states are built with `writeTrackState`.\r\n- Remove `ACTS2edm4hep_trackState`, whose LCIO parameter conversion and covariance packing are now provided by the ACTS plugin.\r\n- Fix the track state covariance layout: it now follows the EDM4hep parameter order (`edm4hep::TrackParams`), so downstream consumers read the correct elements.\r\n- Link against `Acts::PluginEDM4hep`.\r\n\r\nENDRELEASENOTES\r\n\r\nFollow-up to the discussion in https://github.com/key4hep/k4ActsTracking/issues/44: the conversion we maintain here predates the ACTS EDM4hep pl\u2026",
-            "diff": {
-                "additions": 91,
-                "deletions": 249,
-                "files": 10
-            },
-            "files": [
-                ".github/workflows/acts-master-ci.yml",
-                "CMakeLists.txt",
-                "k4ActsTracking/CMakeLists.txt",
-                "k4ActsTracking/include/k4ActsTracking/ACTSSeededCKFTrackingAlg.hxx",
-                "k4ActsTracking/include/k4ActsTracking/CKFRunner.hxx",
-                "k4ActsTracking/include/k4ActsTracking/Helpers.hxx",
-                "k4ActsTracking/include/k4ActsTracking/KFRunner.hxx",
-                "k4ActsTracking/include/k4ActsTracking/RunnerCommon.hxx",
-                "k4ActsTracking/src/components/ACTSSeededCKFTrackingAlg.cxx",
-                "k4ActsTracking/src/components/Helpers.cxx"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "I haven't looked at the code yet, but I think the small differences will only affect muon collider so far, right? The most visible one is the missing track states, I suppose. Do you know, does the original behavior come from MarlinTrk?"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> I haven't looked at the code yet, but I think the small differences will only affect muon collider so far, right? \r\n\r\nYes, I think so.\r\n\r\n> The most visible one is the missing track states, I suppose. Do you know, does the original behavior come from MarlinTrk?\r\n\r\nI don't know for sure, but I susp\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Rebased and formatted correctly to comply with the new `.clang-format` rules."
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Key4hep nightlies based CI should start working again tomorrow (resp. once there is a nightly with the changes from #98).\r\n\r\nIs there anything in here still left to do that prevent us from merging?"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "I think that as soon as the ACTS master goes green (needs https://github.com/key4hep/k4ActsTracking/pull/102) we could merge.\r\nThough I note I had tested this only with some month-old version."
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "ACTS master based CI fails with some linker error. I am investigating why at the moment."
-                },
-                {
-                    "author": "madbaron",
-                    "body": "@tmadlener @jmcarcell is it possible that the alma9 nightly builds acts without +edm4hep?"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "It is, I thought it was enabled. I'll have a look"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> ACTS master based CI fails with some linker error. I am investigating why at the moment.\r\n\r\nNo longer. Making ACTS use the system / stack nlohmann json library removes whatever library / symbol mismatch was there. Waiting for tests to go green. \r\n\r\nUnless there are more comments, I will merge this\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "> @jmcarcell in case it's not yet the case for the LCG stacks, building acts with `-DACTS_USE_SYSTEM_NLOHMANN_JSON=ON` will become necessary to not break nightlies.\r\n\r\nBut if the nightlies pass that shouldn't happen? I'm not sure why the ACTS master workflow failed, probably it has to do with the fl\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> `-DACTS_USE_SYSTEM_LIBS=ON`\r\n\r\nturns on `DACTS_USE_SYSTEM_NLOHMANN_JSON=ON`:\r\n\r\nhttps://github.com/acts-project/acts/blob/3c6eb8bd8b9d1cf475a503601d2e929c4193bdb6/CMakeLists.txt#L74"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> But if the nightlies pass that shouldn't happen?\r\n\r\nYes. Sorry, I didn't think far enough here. This is clearly already setup properly."
-                }
-            ],
-            "comments_total": 12,
-            "reviews": [],
-            "reviews_total": 3
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 197,
-            "title": "fix(dashboard): stop caching WebEOS stalls as missing data ",
-            "url": "https://github.com/key4hep/k4Bench/pull/197",
-            "author": "jbeirer",
-            "mergedAt": "2026-09-24",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Tests\n\n\n___\n\n### **Description**\n- Distinguish transient WebEOS stalls from absent data\n  - New `IncompleteFetch` exception carrying partial results\n  - 404 treated as an answer; timeouts/5xx are not\n\n- Add `strict=True` mode to remote fetch/list functions\n\n- Never cache incomplete results; return partials with a toast\n\n- Retry once on 502/503/504 with longer read timeout\n\n- Warn instead of \"no reports yet\" when listings fail\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  remote[\"k4bench.remote strict=True fetches\"] -- \"transient failure\" --> exc[\"IncompleteFetch(partial, failures)\"]\n  exc -- \"content\" --> keep[\"_keep_complete: toast + return partial uncached\"]\n  exc -- \"discovery\" --> raise[\"raise to caller\"]\n  raise -- \"fal\u2026",
-            "diff": {
-                "additions": 979,
-                "deletions": 92,
-                "files": 10
-            },
-            "files": [
-                "dashboard/remote_cache.py",
-                "dashboard/tabs/_regression_trend.py",
-                "dashboard/tabs/detectors_overview.py",
-                "dashboard/tabs/regressions.py",
-                "dashboard/tabs/stack_changes.py",
-                "k4bench/remote.py",
-                "tests/unit/test_dashboard_candidate_nights.py",
-                "tests/unit/test_dashboard_overview_apptest.py",
-                "tests/unit/test_dashboard_remote_cache.py",
-                "tests/unit/test_remote.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/975628b88cef0684ecdd4923d8f7363226783398)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 18,828 in / 9 out / 18,837 total\n- Time cost: 742.9s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/197?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/197#issuecomment-5818240463)** updated to latest commit https://github.com/key4hep/k4Bench/commit/56f178a332630fe3c5290750de3f4af5b3450d84"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 56f178a -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/197#issuecomment-5818240463)** updated to latest commit https://github.com/key4hep/k4Bench/commit/975628b88cef0684ecdd4923d8f7363226783398"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 22,928 in / 544 out / 23,472 total\n- Time cost: 747.5s\n- AI calls: 1\n\n</detail\u2026"
-                }
-            ],
-            "comments_total": 7,
             "reviews": [],
             "reviews_total": 0
         }
