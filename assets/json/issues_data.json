@@ -1442,6 +1442,16 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
+            "num": 358,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/358'>Document the split between interface declaration and definition</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-11-11",
+            "updatedAt": "2026-10-02",
+            "labels": "documentation",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
             "num": 439,
             "title": "<a href='https://github.com/key4hep/k4FWCore/issues/439'>Less error prone / more pythonic configuration for OverlayTiming</a>",
             "author": "tmadlener",
@@ -1488,16 +1498,6 @@
             "createdAt": "2026-04-21",
             "updatedAt": "2026-04-28",
             "labels": "enhancement",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
-            "num": 358,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/358'>Should the GeoSvc implementation live in k4FWCore?</a>",
-            "author": "tmadlener",
-            "createdAt": "2025-11-11",
-            "updatedAt": "2026-04-28",
-            "labels": "question",
             "assignees": ""
         },
         {
@@ -1707,16 +1707,6 @@
             "author": "tmadlener",
             "createdAt": "2026-04-16",
             "updatedAt": "2026-04-16",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-doc",
-            "num": 137,
-            "title": "<a href='https://github.com/key4hep/key4hep-doc/issues/137'>Minor issues with algorithm / processor overview pages</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-04-08",
-            "updatedAt": "2026-04-08",
             "labels": "",
             "assignees": ""
         },
@@ -2898,16 +2888,6 @@
             "createdAt": "2026-09-22",
             "updatedAt": "2026-09-22",
             "labels": "question",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 58,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/58'>EDM4hep to Pandora conversion only handles `TrackerHitPlane`s</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-09-22",
-            "updatedAt": "2026-09-22",
-            "labels": "enhancement",
             "assignees": ""
         },
         {
@@ -4196,7 +4176,17 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/60'>Dependency Dashboard</a>",
             "author": "renovate",
             "createdAt": "2026-08-20",
-            "updatedAt": "2026-10-01",
+            "updatedAt": "2026-10-02",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 98,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/98'>create a production feed</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-10-02",
+            "updatedAt": "2026-10-02",
             "labels": "",
             "assignees": ""
         },
@@ -4227,16 +4217,6 @@
             "author": "kjvbrt",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 81,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/81'>Replace Makefile/curl frontend vendoring with a minimal package.json</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-09-02",
-            "updatedAt": "2026-09-02",
             "labels": "",
             "assignees": ""
         },
