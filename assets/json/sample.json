@@ -409,11 +409,22 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 111,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/111'>Update GNN to be consistent with upstream fixes</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-04",
+            "updatedAt": "2026-10-04",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 109,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
             "author": "jbeirer",
             "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-03",
+            "updatedAt": "2026-10-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1789,6 +1800,28 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1686,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1686'>Remove unused variable s_exit_handler_active</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-04",
+            "updatedAt": "2026-10-04",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1687,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1687'>Remove filesystem detection and require GCC 9+/Clang 11+</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-04",
+            "updatedAt": "2026-10-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
