@@ -82,7 +82,28 @@ def parse_output(text):
         omitted_raw = ""
 
     summary_raw = re.sub(r'^##\s+summary\s*\n', '', summary_raw, flags=re.IGNORECASE).strip()
-    summary_paragraphs = [p for p in summary_raw.split("\n\n") if p.strip()]
+
+    # Split into individual PR bullets by detecting lines that start a new bullet
+    # ("- **[org/repo..."). Collapse internal paragraph breaks within a bullet so
+    # that sub-bullets or wrapped prose don't create orphaned paragraphs.
+    bullet_start = re.compile(r'^- \*\*\[')
+    current: list[str] = []
+    summary_paragraphs: list[str] = []
+    for line in summary_raw.splitlines():
+        if bullet_start.match(line):
+            if current:
+                summary_paragraphs.append(' '.join(l.strip() for l in current if l.strip()))
+            current = [line]
+        elif current:
+            stripped = line.strip()
+            # Flatten sub-bullet markers into plain prose
+            if stripped.startswith('- '):
+                stripped = stripped[2:]
+            if stripped:
+                current.append(stripped)
+    if current:
+        summary_paragraphs.append(' '.join(l.strip() for l in current if l.strip()))
+    summary_paragraphs = [p for p in summary_paragraphs if p.strip()]
 
     omitted = []
     for line in omitted_raw.splitlines():
