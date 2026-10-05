@@ -10,14 +10,21 @@ Prioritise in this order:
 
 ## Exclude
 
-- Pure build-system or CMake changes with no user-visible effect (e.g. moving a
-  `find_package` inside a `BUILD_TESTING` block, adding a CMake minimum version bump)
-- CI/CD configuration changes
+- Build-system, CMake, and packaging changes, including install-path fixes, CMake
+  target migrations, and external-data or download-mechanism changes (e.g. moving a
+  `find_package` inside a `BUILD_TESTING` block, replacing wget with `ExternalData`,
+  switching to an upstream-provided CMake target)
+- CI/CD configuration changes, runtime CI checks, and test-infrastructure additions
 - Trivial bot dependency bumps (dependabot, renovate)
 - Code style, linting, or minor cleanup
 - Mechanical API migration PRs that only update call sites to a new but equivalent
   interface, with no new functionality or user-visible change. Indicator: diff is
   purely renaming or replacing deprecated symbols, no new parameters or behaviours.
+- Internal implementation fixes (buffer bounds, unit bookkeeping, edge-case guards)
+  that do not change user-observable physics output or cause crashes in production
+  FCC workflows
+- Fixes to example scripts, steering-file templates, or example configurations —
+  unless the example is a canonical production steering file
 
 ## Repository-specific rules
 
@@ -27,12 +34,16 @@ Prioritise in this order:
   file. Exclude any PR whose changed files are entirely within non-FCC experiment
   folders such as `MuColl/`, `ILD/`, `CLIC/`, `LUXE/`, `SiD/` — even if the PR
   description mentions shared components.
+- **All repositories**: exclude CMake flags or code guards added solely to enable
+  compilation in non-FCC experiment stacks (e.g. Muon Collider, ILD, SiD), even
+  if the change is in an otherwise FCC-relevant package.
 
 ## Tense and voice
 
-- Use the **past tense** for all descriptions, as if reporting completed work.
-  - Correct: "The full seeded ECAL clustering chain was added…", "DCHdigi_v02 was renamed…", "Support for Gaudi 41 was added…"
-  - Incorrect: "Adds the full seeded ECAL clustering chain…", "Renames DCHdigi_v02…", "Adds support for Gaudi 41…"
+- Keep descriptions concise and direct. Both past tense ("ECAL clustering chain added…") and
+  present tense ("Renames DCHdigi_v02…") are acceptable when the subject leads. Avoid
+  verbose passive constructions with an article: "The X was changed/added/fixed" — prefer
+  "X changed/added/fixed" or "Renames X…" with X as the direct subject.
 - Avoid filler connectors such as "Also", "Additionally", "Furthermore", "Now", "Moreover". Start each clause or sentence directly with its subject.
 
 ## Style
@@ -45,6 +56,8 @@ Prioritise in this order:
   through its individual entries in the Omitted section.
 - One bullet per pull request — do not group multiple PRs into a single bullet.
 - Bullet format:
-    **[org/repo#num](pr_url)** — one to three sentences describing the change,
+    **[org/repo#num](pr_url)** — one to two sentences describing the change,
     its motivation, and any downstream impact.
+- Omit implementation-level detail (internal code paths, variable names, data
+  structures). State what changed, why it matters, and any downstream impact.
 - Include every PR that meets the Include criteria above; do not cap the number of bullets.
