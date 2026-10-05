@@ -167,7 +167,7 @@ system = (
 print("Calling Claude API...", flush=True)
 with client.messages.stream(
     model="claude-opus-5-5",
-    max_tokens=4096,
+    max_tokens=8192,
     thinking={"type": "adaptive"},
     system=system,
     messages=[{"role": "user", "content": prompt}],
