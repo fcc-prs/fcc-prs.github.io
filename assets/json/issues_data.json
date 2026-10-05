@@ -1252,22 +1252,32 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
+            "num": 526,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/526'>Better handling of (track only) vertices</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-10-01",
+            "updatedAt": "2026-10-05",
+            "labels": "enhancement \ndiscussion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 530,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/530'>Feedback from DELPHI opendata to EDM4hep conversion</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-10-05",
+            "updatedAt": "2026-10-05",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
             "num": 527,
             "title": "<a href='https://github.com/key4hep/EDM4hep/issues/527'>Add a time uncertainty to TrackerHitPlane and TrackerHit3D</a>",
             "author": "jburzy",
             "createdAt": "2026-10-02",
             "updatedAt": "2026-10-03",
             "labels": "enhancement",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
-            "num": 526,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/526'>Better handling of (track only) vertices</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-10-01",
-            "updatedAt": "2026-10-01",
-            "labels": "enhancement \ndiscussion",
             "assignees": ""
         },
         {
@@ -3342,6 +3352,26 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 203,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/203'>Add an introduction for FCCAnalyses</a>",
+            "author": "michmx",
+            "createdAt": "2026-09-18",
+            "updatedAt": "2026-10-05",
+            "labels": "",
+            "assignees": "bndikt"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 189,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/189'>Update Windows section</a>",
+            "author": "amorenobr",
+            "createdAt": "2026-07-24",
+            "updatedAt": "2026-10-05",
+            "labels": "",
+            "assignees": "bndikt"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
             "num": 205,
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/205'>Add \"How to get help\" information</a>",
             "author": "michmx",
@@ -3369,26 +3399,6 @@
             "updatedAt": "2026-09-18",
             "labels": "",
             "assignees": "bistapf"
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-tutorials",
-            "num": 203,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/203'>Add an introduction for FCCAnalyses</a>",
-            "author": "michmx",
-            "createdAt": "2026-09-18",
-            "updatedAt": "2026-09-18",
-            "labels": "",
-            "assignees": "bndikt"
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-tutorials",
-            "num": 189,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/189'>Update Windows section</a>",
-            "author": "amorenobr",
-            "createdAt": "2026-07-24",
-            "updatedAt": "2026-09-18",
-            "labels": "",
-            "assignees": "bndikt"
         },
         {
             "repo": "hep-fcc/<br>fcc-tutorials",
@@ -4182,11 +4192,41 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-drs",
+            "num": 113,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/113'>Allow requesters to view the Campaigns page (currently coordinator-only)</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-10-05",
+            "updatedAt": "2026-10-05",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 112,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/112'>Desktop requests list: replace <table> with div-based rows (like mobile)</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-10-05",
+            "updatedAt": "2026-10-05",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 108,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/108'>Request edits in modal</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-10-05",
+            "updatedAt": "2026-10-05",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
             "num": 60,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/60'>Dependency Dashboard</a>",
             "author": "renovate",
             "createdAt": "2026-08-20",
-            "updatedAt": "2026-10-02",
+            "updatedAt": "2026-10-05",
             "labels": "",
             "assignees": ""
         },
@@ -4207,26 +4247,6 @@
             "author": "kjvbrt",
             "createdAt": "2026-09-30",
             "updatedAt": "2026-09-30",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 94,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/94'>Markdown in additional notes does not render</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-09-24",
-            "updatedAt": "2026-09-24",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 93,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/93'>Additional notes in dataset request page should be expandable downwards</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-09-24",
-            "updatedAt": "2026-09-24",
             "labels": "",
             "assignees": ""
         },
@@ -4324,16 +4344,6 @@
             "repo": "hep-fcc/<br>fcc-drs",
             "num": 8,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/8'>Add campaign and Key4hep stack dropdown fields</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-06-30",
-            "updatedAt": "2026-06-30",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 7,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/7'>Add detector option and version field</a>",
             "author": "kjvbrt",
             "createdAt": "2026-06-30",
             "updatedAt": "2026-06-30",
