@@ -1,21 +1,28 @@
 {
-  "updated_at": "2026-10-05T16:08:38Z",
+  "updated_at": "2026-10-05T16:11:54Z",
   "period_start": "2026-09-28",
   "period_end": "2026-10-05",
   "summary": [
-    "- **[key4hep/k4MarlinWrapper#489](https://github.com/key4hep/k4MarlinWrapper/pull/489)** — Removes the deprecated `inputReader` Python module. It depended on `PodioInput`, which is no longer in k4FWCore, so it would not work with the upcoming release anyway. Users should migrate to `k4MarlinWrapper.io_helpers`.",
-    "- **[hep-fcc/root2gltf#16](https://github.com/HEP-FCC/root2gltf/pull/16)** — Converts the geometry depth from a config property to a command-line argument so full-depth conversions are possible, and renames the remaining config properties. Existing config files need updating to the new schema; updated configs are provided for ALLEGRO, CLD, IDEA and ILD_FCCee.",
-    "- **[key4hep/DDML#19](https://github.com/key4hep/DDML/pull/19)** — Adds a `ddml` Python module providing `ddml_physics` and `add_shower_model`, plus pre-configured setups for the bundled models. It replaces the sprawling flag-driven `ddsim_steer.py` logic, and adding a new ML fast-sim model now only requires writing a `ModelConfig`.",
-    "- **[hep-fcc/fcc-drs#106](https://github.com/HEP-FCC/fcc-drs/pull/106)** — Adds a Detector(s) field to dataset requests, accepting comma-separated values such as IDEA, ALLEGRO, ALFA. The field is required whenever the Final Processing Stage is anything other than generation, is enforced on both client and server, and appears in notification emails.",
-    "- **[key4hep/k4SimDelphes#162](https://github.com/key4hep/k4SimDelphes/pull/162)** — The Delphes-to-EDM4hep converter now assigns the pion mass to all tracks that are not electrons or muons, keeping energy, mass and momentum consistent, including for jets and their constituents. It also sets the PDG ID on tracks and leptons, so analysts no longer need to infer particle type from the mass. This changes converter output slightly.",
-    "- **[key4hep/k4RecTracker#101](https://github.com/key4hep/k4RecTracker/pull/101)** — Fixes several problems in the GENFIT track fitter: incorrect units in the helix-to-Cartesian Jacobian and in the z0 conversion; a singular initial covariance in z0 when the seed is close to the reference point; broken hit–track associations introduced at the filtering stage. Track states now use GENFIT native extrapolation, with the first and last digitized hits as reference points for AtFirstHit and AtLastHit.",
-    "- **[key4hep/k4Reco#70](https://github.com/key4hep/k4Reco/pull/70)** — Adds `TrackerHit3D` conversion to the Gaudi KalTest track-fitting machinery so it behaves the same as the Marlin version, fixing a k4GaudiPandora reconstruction issue. FTD composite space-point hits are not yet handled.",
-    "- **[hep-fcc/FCC-config#383](https://github.com/HEP-FCC/FCC-config/pull/383)** — Adds a reconstruction configuration and a sim→digi→reco CTest for IDEA option 2 (`IDEA_o2_v01`), based on the reduced geometry. It follows the latest IDEA_o1 tracking and validation updates and depends on k4RecCalorimeter#271.",
-    "- **[hep-fcc/FCC-config#400](https://github.com/HEP-FCC/FCC-config/pull/400)** — Adds an EvtGen decay card for Λb⁰ → Λ(1520)⁰ νν̄, with Λ(1520)⁰ → pK⁻ and the charge-conjugate chain, for FCC-ee flavour studies.",
-    "- **[key4hep/DDML#16](https://github.com/key4hep/DDML/pull/16)** — Initializes ML inference models before the event loop instead of lazily, and initializes the geometry late enough for DD4hep settings to take effect. Showers now default to non-hadronic.",
-    "- **[key4hep/k4FWCore#433](https://github.com/key4hep/k4FWCore/pull/433)** — Fixes `k4run` so boolean properties can actually be switched off from the command line; previously `False"
+    "- **[key4hep/k4SimDelphes#162](https://github.com/key4hep/k4SimDelphes/pull/162)** — The Delphes-to-EDM4hep converter now assigns the pion mass to every track that is not an electron or muon, so energy, mass and momentum are consistent. It also sets PDG IDs on tracks and leptons, so analysts no longer need to infer particle identity from the mass. Converted outputs change slightly, and a new test catches lepton charge errors.",
+    "- **[key4hep/k4RecTracker#101](https://github.com/key4hep/k4RecTracker/pull/101)** — Fixes several problems in the GENFIT TrackFitter: wrong units in the helix-to-Cartesian Jacobian and in the z0 conversion; a singular initial z0 covariance; broken hit–track associations introduced during filtering. Fitted track states are now propagated with GENFIT's native extrapolation, with AtFirstHit/AtLastHit defined at the first and last digitised hits. The AtIP state is documented as not meaningful for displaced tracks.",
+    "- **[key4hep/k4MarlinWrapper#489](https://github.com/key4hep/k4MarlinWrapper/pull/489)** — Removes the deprecated `inputReader` Python module. It depended on `PodioInput`, which no longer exists in k4FWCore. Users must migrate to `k4MarlinWrapper.io_helpers`.",
+    "- **[key4hep/k4FWCore#433](https://github.com/key4hep/k4FWCore/pull/433)** — Fixes boolean properties on the `k4run` command line, which previously could not be switched off (`False` was interpreted as `True`). Booleans now accept True/False, true/false or 1/0 and reject anything else. A bare flag now means `True`.",
+    "- **[key4hep/DDML#19](https://github.com/key4hep/DDML/pull/19)** — Adds a `ddml` Python module providing `ddml_physics` and `add_shower_model`, plus pre-built configurations for the included models. It replaces the sprawling flag-driven `ddsim_steer.py` logic and streamlines ML fast-shower setup in ddsim steering files.",
+    "- **[key4hep/DDML#16](https://github.com/key4hep/DDML/pull/16)** — ML models are now initialised before the event loop instead of lazily, and geometry is initialised late enough for DD4hep settings to apply. The default now switches to non-hadron showers, which changes behaviour for existing configurations.",
+    "- **[HEP-FCC/FCC-config#383](https://github.com/HEP-FCC/FCC-config/pull/383)** — Adds a digitisation/reconstruction configuration and CTest for IDEA option 2, based on the reduced geometry. It is synchronised with the IDEA_o1 tracking and track-validation setup.",
+    "- **[HEP-FCC/FCC-config#400](https://github.com/HEP-FCC/FCC-config/pull/400)** — Adds an EvtGen decay card for Λb → Λ(1520) νν̄ with Λ(1520) → pK⁻, including the charge-conjugate chain, for FCC-ee flavour-physics samples.",
+    "- **[key4hep/k4Reco#70](https://github.com/key4hep/k4Reco/pull/70)** — Adds `TrackerHit3D` conversion to the Gaudi KalTest machinery so it behaves like the Marlin version, fixing k4GaudiPandora#58. FTD composite spacepoints (used in ILD reconstruction) are still not handled.",
+    "- **[HEP-FCC/root2gltf#16](https://github.com/HEP-FCC/root2gltf/pull/16)** — Moves the conversion depth from a config property to a command-line argument, enabling full-depth conversion. Remaining config properties are renamed, so existing config files must be updated to the new format.",
+    "- **[HEP-FCC/FCCAnalyses#561](https://github.com/HEP-FCC/FCCAnalyses/pull/561)** — Updates HTCondor log/output handling for pre-EDM4hep-1 stacks. HTCondor warnings about log-file placement are no longer treated as failures, which previously triggered up to 10 retried submissions.",
+    "- **[HEP-FCC/fcc-drs#106](https://github.com/HEP-FCC/fcc-drs/pull/106)** — Dataset requests gain a Detector(s) field, which accepts multiple comma-separated detectors (e.g. IDEA, ALLEGRO). The field is required whenever the Final Processing Stage is anything other than generation, enforced in the form and on the server. It appears in notification emails."
   ],
-  "omitted": [],
+  "omitted": [
+    {
+      "pr": "[HEP-FCC/fcc",
+      "url": "",
+      "reason": ""
+    }
+  ],
   "usage": {
     "input_tokens": 36314,
     "output_tokens": 4096
