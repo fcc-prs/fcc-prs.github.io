@@ -60,4 +60,5 @@ Prioritise in this order:
     its motivation, and any downstream impact.
 - Omit implementation-level detail (internal code paths, variable names, data
   structures). State what changed, why it matters, and any downstream impact.
-- Include every PR that meets the Include criteria above; do not cap the number of bullets.
+- Aim for at most 12 bullets. If more PRs qualify, apply the Include priority order to
+  select the most significant; move the rest to Omitted with reason "lower priority".

@@ -6,9 +6,9 @@ from datetime import datetime, timedelta, timezone
 
 from api_client import get_client
 
-# Pricing for claude-opus-4-7 (USD per million tokens)
-PRICE_INPUT_PER_MTOK = 5.0
-PRICE_OUTPUT_PER_MTOK = 25.0
+# Pricing for claude-opus-5-5 (USD per million tokens)
+PRICE_INPUT_PER_MTOK = 4.0
+PRICE_OUTPUT_PER_MTOK = 20.0
 
 
 def load_merged_data(path):
@@ -145,7 +145,7 @@ system = (
 
 print("Calling Claude API...", flush=True)
 with client.messages.stream(
-    model="claude-opus-4-7",
+    model="claude-opus-5-5",
     max_tokens=4096,
     thinking={"type": "adaptive"},
     system=system,
