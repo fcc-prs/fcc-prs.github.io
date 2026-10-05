@@ -65,8 +65,9 @@ and downstream impact, produce your response in exactly two sections.
 A bulleted list following the Include/Style rules above.
 
 **Section 2 — `## Omitted`**
-For every PR you chose NOT to include, one line per PR — never group multiple PRs on one line:
-`- [org/repo#num](url) — one-sentence reason for exclusion`
+For every PR you chose NOT to include, one entry per PR — never group multiple PRs on one line.
+Same format and length as Section 1 bullets (one to two sentences describing what the PR does):
+`- [org/repo#num](url) — description of the change`
 
 Format the entire response as Markdown."""
 
@@ -173,6 +174,12 @@ with client.messages.stream(
     messages=[{"role": "user", "content": prompt}],
 ) as stream:
     response = stream.get_final_message()
+
+if response.stop_reason == "max_tokens":
+    raise RuntimeError(
+        f"Output was truncated at {response.usage.output_tokens} tokens (max_tokens={8192}). "
+        "Increase max_tokens or reduce the prompt."
+    )
 
 raw_text = extract_text(response)
 print(f"Received {len(raw_text)} chars of output.", flush=True)
