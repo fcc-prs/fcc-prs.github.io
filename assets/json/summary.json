@@ -1,31 +1,286 @@
 {
-  "updated_at": "2026-10-05T16:11:54Z",
+  "updated_at": "2026-10-05T16:20:18Z",
   "period_start": "2026-09-28",
   "period_end": "2026-10-05",
   "summary": [
-    "- **[key4hep/k4SimDelphes#162](https://github.com/key4hep/k4SimDelphes/pull/162)** — The Delphes-to-EDM4hep converter now assigns the pion mass to every track that is not an electron or muon, so energy, mass and momentum are consistent. It also sets PDG IDs on tracks and leptons, so analysts no longer need to infer particle identity from the mass. Converted outputs change slightly, and a new test catches lepton charge errors.",
-    "- **[key4hep/k4RecTracker#101](https://github.com/key4hep/k4RecTracker/pull/101)** — Fixes several problems in the GENFIT TrackFitter: wrong units in the helix-to-Cartesian Jacobian and in the z0 conversion; a singular initial z0 covariance; broken hit–track associations introduced during filtering. Fitted track states are now propagated with GENFIT's native extrapolation, with AtFirstHit/AtLastHit defined at the first and last digitised hits. The AtIP state is documented as not meaningful for displaced tracks.",
-    "- **[key4hep/k4MarlinWrapper#489](https://github.com/key4hep/k4MarlinWrapper/pull/489)** — Removes the deprecated `inputReader` Python module. It depended on `PodioInput`, which no longer exists in k4FWCore. Users must migrate to `k4MarlinWrapper.io_helpers`.",
-    "- **[key4hep/k4FWCore#433](https://github.com/key4hep/k4FWCore/pull/433)** — Fixes boolean properties on the `k4run` command line, which previously could not be switched off (`False` was interpreted as `True`). Booleans now accept True/False, true/false or 1/0 and reject anything else. A bare flag now means `True`.",
-    "- **[key4hep/DDML#19](https://github.com/key4hep/DDML/pull/19)** — Adds a `ddml` Python module providing `ddml_physics` and `add_shower_model`, plus pre-built configurations for the included models. It replaces the sprawling flag-driven `ddsim_steer.py` logic and streamlines ML fast-shower setup in ddsim steering files.",
-    "- **[key4hep/DDML#16](https://github.com/key4hep/DDML/pull/16)** — ML models are now initialised before the event loop instead of lazily, and geometry is initialised late enough for DD4hep settings to apply. The default now switches to non-hadron showers, which changes behaviour for existing configurations.",
-    "- **[HEP-FCC/FCC-config#383](https://github.com/HEP-FCC/FCC-config/pull/383)** — Adds a digitisation/reconstruction configuration and CTest for IDEA option 2, based on the reduced geometry. It is synchronised with the IDEA_o1 tracking and track-validation setup.",
-    "- **[HEP-FCC/FCC-config#400](https://github.com/HEP-FCC/FCC-config/pull/400)** — Adds an EvtGen decay card for Λb → Λ(1520) νν̄ with Λ(1520) → pK⁻, including the charge-conjugate chain, for FCC-ee flavour-physics samples.",
-    "- **[key4hep/k4Reco#70](https://github.com/key4hep/k4Reco/pull/70)** — Adds `TrackerHit3D` conversion to the Gaudi KalTest machinery so it behaves like the Marlin version, fixing k4GaudiPandora#58. FTD composite spacepoints (used in ILD reconstruction) are still not handled.",
-    "- **[HEP-FCC/root2gltf#16](https://github.com/HEP-FCC/root2gltf/pull/16)** — Moves the conversion depth from a config property to a command-line argument, enabling full-depth conversion. Remaining config properties are renamed, so existing config files must be updated to the new format.",
-    "- **[HEP-FCC/FCCAnalyses#561](https://github.com/HEP-FCC/FCCAnalyses/pull/561)** — Updates HTCondor log/output handling for pre-EDM4hep-1 stacks. HTCondor warnings about log-file placement are no longer treated as failures, which previously triggered up to 10 retried submissions.",
-    "- **[HEP-FCC/fcc-drs#106](https://github.com/HEP-FCC/fcc-drs/pull/106)** — Dataset requests gain a Detector(s) field, which accepts multiple comma-separated detectors (e.g. IDEA, ALLEGRO). The field is required whenever the Final Processing Stage is anything other than generation, enforced in the form and on the server. It appears in notification emails."
+    "- **[key4hep/k4SimDelphes#162](https://github.com/key4hep/k4SimDelphes/pull/162)**: `DelphesEDM4HepConverter` keeps energy, mass and momentum consistent by assigning the pion mass to every track that is not an electron or muon. It also sets the PDG ID for tracks and leptons, so analysts no longer need to infer particle identity from the mass. Converted outputs change slightly, and a new test catches lepton charge mistakes.",
+    "- **[key4hep/k4RecTracker#101](https://github.com/key4hep/k4RecTracker/pull/101)**: Fixes `GenfitTrackFitter` correctness issues: Wrong units in the helix-to-Cartesian Jacobian and in the z0 conversion. A singular initial z0 covariance for seeds close to the reference point. Broken hit–track associations introduced during filtering. Track states are now built with GENFIT-native extrapolation, using the first and last digitized hits for `AtFirstHit` and `AtLastHit`. The `AtIP` state is documented as not meaningful for displaced tracks.",
+    "- **[key4hep/k4MarlinWrapper#489](https://github.com/key4hep/k4MarlinWrapper/pull/489)**: Removes the deprecated `inputReader` Python module, which relied on the now-removed `PodioInput`. Users must switch to `k4MarlinWrapper.io_helpers`.",
+    "- **[key4hep/DDML#19](https://github.com/key4hep/DDML/pull/19)**: Adds a `ddml` Python module that provides `ddml_physics`, `add_shower_model` and pre-built `ModelConfig`s for the included models. It replaces the sprawling flag-driven `ddsim_steer.py` logic and gives downstream ddsim steering files a streamlined way to set up ML fast-shower simulation.",
+    "- **[key4hep/DDML#16](https://github.com/key4hep/DDML/pull/16)**: Inference models are initialized before the event loop instead of lazily, and geometry is initialized late enough for DD4hep settings to be available. The default changes to non-hadron showers, which alters behaviour for configurations that relied on the previous default.",
+    "- **[key4hep/k4FWCore#433](https://github.com/key4hep/k4FWCore/pull/433)**: Fixes boolean properties on the `k4run` command line, which previously could never be switched off because `bool(\"False\")` evaluates to `True`. Booleans now accept True/False, true/false and 1/0 and reject anything else, and a bare flag means True.",
+    "- **[key4hep/k4Reco#70](https://github.com/key4hep/k4Reco/pull/70)**: Adds `TrackerHit3D` conversion to the Gaudi KalTest track machinery so it matches the Marlin behaviour (fixes k4GaudiPandora#58). FTD composite spacepoints remain unhandled.",
+    "- **[HEP-FCC/FCC-config#383](https://github.com/HEP-FCC/FCC-config/pull/383)**: Adds the IDEA option 2 (`IDEA_o2_v01`) digitization and reconstruction configuration, based on the reduced geometry, with a CTest. It incorporates the recent IDEA_o1 tracking updates and requires k4RecCalorimeter#271.",
+    "- **[HEP-FCC/FCC-config#400](https://github.com/HEP-FCC/FCC-config/pull/400)**: Adds the EvtGen decay card `Lb2L1520NuNu.dec` for Λb⁰ → Λ(1520)⁰ νν̄ with Λ(1520)⁰ → pK⁻, plus the charge-conjugate chain, for FCC-ee flavour studies.",
+    "- **[HEP-FCC/FCCAnalyses#561](https://github.com/HEP-FCC/FCCAnalyses/pull/561)**: Changes how HTCondor log and output files are handled with pre-EDM4hep-1 stacks. HTCondor warnings about log-file placement no longer trigger up to 10 spurious resubmission retries.",
+    "- **[HEP-FCC/fcc-drs#106](https://github.com/HEP-FCC/fcc-drs/pull/106)**: Adds a Detector(s) field to dataset requests, accepting comma-separated values such as IDEA, ALLEGRO or ALFA. The field is mandatory, enforced client- and server-side, whenever the Final Processing Stage is anything other than generation, and it is included in notification emails.",
+    "- **[HEP-FCC/root2gltf#16](https://github.com/HEP-FCC/root2gltf/pull/16)**: Conversion depth becomes a CLI argument instead of a config property, which enables full-depth conversions. The remaining config properties are renamed and updated config files are provided, so existing custom configs need updating."
   ],
   "omitted": [
     {
-      "pr": "[HEP-FCC/fcc",
-      "url": "",
-      "reason": ""
+      "pr": "HEP-FCC/fcc-drs#107",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/107",
+      "reason": "Development seed-data overhaul with no effect on production behaviour."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#105",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/105",
+      "reason": "Lower priority."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#104",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/104",
+      "reason": "Trivial renovate bot dependency bump."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#102",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/102",
+      "reason": "Trivial renovate bot dependency bump."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#103",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/103",
+      "reason": "CI configuration change."
+    },
+    {
+      "pr": "AIDASoft/DD4hep#1688",
+      "url": "https://github.com/AIDASoft/DD4hep/pull/1688",
+      "reason": "Fix to an example/test stepping action only."
+    },
+    {
+      "pr": "AIDASoft/DD4hep#1686",
+      "url": "https://github.com/AIDASoft/DD4hep/pull/1686",
+      "reason": "Minor cleanup of an unused variable."
+    },
+    {
+      "pr": "key4hep/key4hep-spack#933",
+      "url": "https://github.com/key4hep/key4hep-spack/pull/933",
+      "reason": "Packaging recipe change."
+    },
+    {
+      "pr": "key4hep/key4hep-doc#167",
+      "url": "https://github.com/key4hep/key4hep-doc/pull/167",
+      "reason": "Trivial dependabot dependency bump."
+    },
+    {
+      "pr": "key4hep/key4hep-doc#166",
+      "url": "https://github.com/key4hep/key4hep-doc/pull/166",
+      "reason": "Trivial dependabot dependency bump."
+    },
+    {
+      "pr": "key4hep/key4hep-doc#157",
+      "url": "https://github.com/key4hep/key4hep-doc/pull/157",
+      "reason": "Documentation-generation workflow tweak for repository links."
+    },
+    {
+      "pr": "key4hep/k4ActsTracking#94",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/94",
+      "reason": "Lower priority."
+    },
+    {
+      "pr": "key4hep/k4ActsTracking#110",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/110",
+      "reason": "Data download mechanism switched to ExternalData (build change)."
+    },
+    {
+      "pr": "key4hep/k4PFHitML#4",
+      "url": "https://github.com/key4hep/k4PFHitML/pull/4",
+      "reason": "Lower priority."
+    },
+    {
+      "pr": "key4hep/k4Bench#204",
+      "url": "https://github.com/key4hep/k4Bench/pull/204",
+      "reason": "CI configuration change."
+    },
+    {
+      "pr": "key4hep/k4Bench#203",
+      "url": "https://github.com/key4hep/k4Bench/pull/203",
+      "reason": "Trivial dependabot dependency bump."
+    },
+    {
+      "pr": "key4hep/k4Bench#202",
+      "url": "https://github.com/key4hep/k4Bench/pull/202",
+      "reason": "CI nightly workflow fix."
+    },
+    {
+      "pr": "HEP-FCC/phoenix-at-fcc#29",
+      "url": "https://github.com/HEP-FCC/phoenix-at-fcc/pull/29",
+      "reason": "Version number bump only."
+    },
+    {
+      "pr": "HEP-FCC/phoenix-at-fcc#28",
+      "url": "https://github.com/HEP-FCC/phoenix-at-fcc/pull/28",
+      "reason": "Lower priority."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#101",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/101",
+      "reason": "Build-system change to fetch frontend assets at Docker build time."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#100",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/100",
+      "reason": "Internal Go module rename with no user-visible change."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#99",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/99",
+      "reason": "README-only update."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#90",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/90",
+      "reason": "Trivial renovate bot dependency bump."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#92",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/92",
+      "reason": "Trivial renovate bot dependency bump."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#89",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/89",
+      "reason": "Trivial renovate bot dependency bump."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#95",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/95",
+      "reason": "Trivial renovate bot dependency bump."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#97",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/97",
+      "reason": "Build and packaging change for vendoring frontend libraries via npm."
+    },
+    {
+      "pr": "key4hep/key4hep-spack#931",
+      "url": "https://github.com/key4hep/key4hep-spack/pull/931",
+      "reason": "Packaging recipe change."
+    },
+    {
+      "pr": "key4hep/key4hep-dev-utils#27",
+      "url": "https://github.com/key4hep/key4hep-dev-utils/pull/27",
+      "reason": "CI downstream-build tooling change."
+    },
+    {
+      "pr": "key4hep/key4hep-actions#57",
+      "url": "https://github.com/key4hep/key4hep-actions/pull/57",
+      "reason": "CI configuration change."
+    },
+    {
+      "pr": "key4hep/k4RecTracker#106",
+      "url": "https://github.com/key4hep/k4RecTracker/pull/106",
+      "reason": "Mechanical migration away from a deprecated `getTrackState` overload."
+    },
+    {
+      "pr": "key4hep/DDML#34",
+      "url": "https://github.com/key4hep/DDML/pull/34",
+      "reason": "Adds an ExternalData model checksum (external-data change)."
+    },
+    {
+      "pr": "key4hep/DDML#33",
+      "url": "https://github.com/key4hep/DDML/pull/33",
+      "reason": "Minor logging improvement."
+    },
+    {
+      "pr": "HEP-FCC/fcc-tutorials#208",
+      "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/208",
+      "reason": "Repository maintenance of contributing/license files."
+    },
+    {
+      "pr": "HEP-FCC/root2gltf#17",
+      "url": "https://github.com/HEP-FCC/root2gltf/pull/17",
+      "reason": "Lower priority."
+    },
+    {
+      "pr": "key4hep/EDM4hep#525",
+      "url": "https://github.com/key4hep/EDM4hep/pull/525",
+      "reason": "Include-what-you-use cleanup."
+    },
+    {
+      "pr": "key4hep/k4FWCore#438",
+      "url": "https://github.com/key4hep/k4FWCore/pull/438",
+      "reason": "Build-compatibility fix for the Gaudi version check."
+    },
+    {
+      "pr": "key4hep/key4hep-spack#930",
+      "url": "https://github.com/key4hep/key4hep-spack/pull/930",
+      "reason": "Setup-script install-path update for the Gaudi 41 layout."
+    },
+    {
+      "pr": "key4hep/key4hep-dev-utils#26",
+      "url": "https://github.com/key4hep/key4hep-dev-utils/pull/26",
+      "reason": "Repository-maintenance tooling change."
+    },
+    {
+      "pr": "key4hep/k4RecTracker#105",
+      "url": "https://github.com/key4hep/k4RecTracker/pull/105",
+      "reason": "CMake cleanup."
+    },
+    {
+      "pr": "key4hep/DDML#18",
+      "url": "https://github.com/key4hep/DDML/pull/18",
+      "reason": "Fix to an example steering script configuration."
+    },
+    {
+      "pr": "key4hep/DDML#20",
+      "url": "https://github.com/key4hep/DDML/pull/20",
+      "reason": "Internal buffer-bounds fix with no previously observed output impact."
+    },
+    {
+      "pr": "key4hep/DDML#30",
+      "url": "https://github.com/key4hep/DDML/pull/30",
+      "reason": "Build-system configuration change."
+    },
+    {
+      "pr": "key4hep/DDML#31",
+      "url": "https://github.com/key4hep/DDML/pull/31",
+      "reason": "CMake target migration to upstream onnxruntime targets."
+    },
+    {
+      "pr": "key4hep/DDML#17",
+      "url": "https://github.com/key4hep/DDML/pull/17",
+      "reason": "Test-infrastructure addition."
+    },
+    {
+      "pr": "key4hep/DDML#28",
+      "url": "https://github.com/key4hep/DDML/pull/28",
+      "reason": "CI configuration change."
+    },
+    {
+      "pr": "HEP-FCC/k4RecCalorimeter#285",
+      "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/285",
+      "reason": "CMake target migration and removal of a find module."
+    },
+    {
+      "pr": "key4hep/k4geo#668",
+      "url": "https://github.com/key4hep/k4geo/pull/668",
+      "reason": "CMake install change touching no FCC detector paths."
+    },
+    {
+      "pr": "key4hep/k4FWCore#437",
+      "url": "https://github.com/key4hep/k4FWCore/pull/437",
+      "reason": "Install-path fix for the Gaudi 41 layout."
+    },
+    {
+      "pr": "key4hep/key4hep-spack#929",
+      "url": "https://github.com/key4hep/key4hep-spack/pull/929",
+      "reason": "Packaging recipe change."
+    },
+    {
+      "pr": "key4hep/k4geo#665",
+      "url": "https://github.com/key4hep/k4geo/pull/665",
+      "reason": "Fix to an example steering file only."
+    },
+    {
+      "pr": "key4hep/k4RecTracker#97",
+      "url": "https://github.com/key4hep/k4RecTracker/pull/97",
+      "reason": "CMake flag added to enable compilation in the Muon Collider stack."
     }
   ],
   "usage": {
     "input_tokens": 36314,
-    "output_tokens": 4096
+    "output_tokens": 7420
   },
-  "cost_usd": 0.227176
+  "cost_usd": 0.293656
 }
