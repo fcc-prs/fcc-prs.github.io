@@ -1,6 +1,228 @@
 {
-    "updated_at": "2026-10-04T11:39:49Z",
+    "updated_at": "2026-10-05T13:17:00Z",
     "data": [
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 106,
+            "title": "Add Detector(s) field, required for final processing stages other than generation",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/106",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "- New freeform Detector(s) field on requests, comma-separated for multiple (e.g. IDEA, ALLEGRO, ALFA), rendered as pills on the detail page\n- Required whenever Final Processing Stage is anything other than generation, enforced client-side (conditional field) and server-side (create + submit-to-pending)\n- Shown in notification emails alongside Final Processing Stage\n- Normalize \"Final Processing Stage\" wording everywhere (was inconsistently \"Processing Stage\" in a few spots)",
+            "diff": {
+                "additions": 106,
+                "deletions": 13,
+                "files": 10
+            },
+            "files": [
+                "internal/db/postgres.go",
+                "internal/db/sqlite.go",
+                "internal/handlers/handlers.go",
+                "internal/models/request.go",
+                "internal/notifications/notifier.go",
+                "static/style.css",
+                "templates/layout.html",
+                "templates/partials/detail_sections.html",
+                "templates/partials/request_detail.html",
+                "templates/partials/request_form.html"
+            ],
+            "comments": [
+                {
+                    "author": "kjvbrt",
+                    "body": "Fixes #7"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 107,
+            "title": "Overhaul seed data to showcase latest features and fix use_case bug",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/107",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "- Trim to 20 curated requests covering every status (including failed/cancelled, neither exercised before) and dataset_type/use_case value\n- Fix reconstruction_development, which didn't match the actual reconstruction_dev enum value and silently fell back to raw-string display\n- Add single- and multi-detector examples, campaigns actually linked via campaign_id (not just free-text), production IDs, markdown/math/table comments and internal notes, relations between requests, and a generator card",
+            "diff": {
+                "additions": 223,
+                "deletions": 220,
+                "files": 1
+            },
+            "files": [
+                "scripts/seed.sql"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 105,
+            "title": "Fix duplicate header on session expiry and silent 403s in htmx requests",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/105",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "- RequireAuth now sends HX-Redirect: /login for htmx requests instead of a plain 303, so the browser's XHR doesn't silently follow the redirect and partial-swap the full login page (header included) into whatever narrow target the original request specified\n- Add an htmx:responseError listener that shows the server's error text via the existing showAlert modal, since htmx doesn't swap 4xx/5xx responses by default and there was previously no feedback at all on a 403",
+            "diff": {
+                "additions": 17,
+                "deletions": 0,
+                "files": 2
+            },
+            "files": [
+                "internal/middleware/auth.go",
+                "templates/layout.html"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 104,
+            "title": "Update postgres Docker tag to v18",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/104",
+            "author": "renovate",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [postgres](https://hub.docker.com/_/postgres) ([source](https://redirect.github.com/docker-library/postgres)) | service | major | `17-alpine` \u2192 `18-alpine` |\n\n---\n\n### Configuration\n\n\ud83d\udcc5 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n\ud83d\udea6 **Automerge**: Disabled by config. Please merge this manually once you are satisfied.\n\n\u267b **Rebasing**: Whenever PR becomes conflicted, or you tick the rebase/retry checkbox.\n\n\ud83d\udd15 **Ignore**: Close this PR and you won't be reminded about this update again.\n\n---\n\n - [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check this box\n\n---\n\nThis PR was generated by [Mend Renovate](\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/docker-build.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 102,
+            "title": "Update Node.js to v24",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/102",
+            "author": "renovate",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "> \u2139\ufe0f **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [node](https://hub.docker.com/_/node) ([source](https://redirect.github.com/nodejs/node)) | stage | major | `22-alpine` \u2192 `24-alpine` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>nodejs/node (node)</summary>\n\n### [`v24.21.0`](https://redirect.github.com/nodejs/node/releases/tag/v24.21.0): 2026-09-08, Version 24.21.0 'Krypton' (LTS), @&#8203;aduh95\n\n[Compare Source](https://redirect.github.com/nodejs/node/compare/v24.20.0...v24.21.0)\n\n##### Notable Changes\n\n- \\[[`71106e1f17`](https://redirect.github.com/nodejs/node/commit/71106e1f17)] - **crypto**: update root certificates to NSS 3.126 (Node.js GitHub Bot) [#&#8203;65495](h\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "Dockerfile"
+            ],
+            "comments": [
+                {
+                    "author": "renovate",
+                    "body": "### Edited/Blocked Notification\n\nRenovate will not automatically rebase this PR, because it does not recognize the last commit author and assumes somebody else may have edited the PR.\n\nYou can manually request rebase by checking the rebase/retry box above.\n\n \u26a0\ufe0f **Warning**: custom changes will be lo\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 103,
+            "title": "Run the built image in CI, not just build it",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/103",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "- Add a Postgres service container and start fcc-drs:ci against it (the prod-tagged image requires a real DATABASE_URL \u2014 db.Init() is unconditional and log.Fatals on failure), then poll GET /login until it returns 200\n- /login is the target rather than / because GET / redirects unauthenticated requests via RequireAuth before the Dashboard handler (and its template rendering) ever runs; /login unconditionally parses layout.html, login.html, and every file under templates/partials/*.html via ParseGlob, and executes the template \u2014 the only place in CI a broken Go template would be caught, since go build doesn't check html/template syntax\n- Rename the job id from build to docker, since this workflow and build.yml both used \"build\" and showed as two identically-named checks on every PR (main ha\u2026",
+            "diff": {
+                "additions": 39,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/docker-build.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1688,
+            "title": "TestSteppingAction: don't suspend tracks that are already dead",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1688",
+            "author": "andresailer",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "andresailer",
+            "labels": [],
+            "body": "leads to G4Exception when tracks are restarted since 11.4.3\r\n\r\n\r\n\r\nBEGINRELEASENOTES\r\n- Test: TestSteppingAction: don't suspend tracks that are already dead leads to G4Exception when tracks are restarted since Geant4 11.4.3\r\n\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 3,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "examples/DDG4/src/TestSteppingAction.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200221h 42m 51s \u23f1\ufe0f\n\u2007\u2008374 tests\u2003\u2007\u2008374 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008322 runs\u200a\u20033\u2008322 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 69264e0a.\n\n[test-results]:data:application/gzip;base64,H4sIAOiRw2oC/12MSwrCMBQAr1KydpH/x8tISF8g2DaSz0q8uzHUNrqcGZgn8mGBjK4T0ZcJ5RrKSXNNtoS4NVaaKNJUq+XTmeJfuuXq3L+6h0\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1686,
+            "title": "Remove unused variable s_exit_handler_active",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1686",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "andresailer",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Remove unused variable `s_exit_handler_active`\r\n\r\nENDRELEASENOTES\r\n\r\nWarning (Clang 23):\r\n```\r\nDD4hep/DDCore/src/SignalHandler.cpp:32:15: warning: variable 's_exit_handler_active' set but not used [-Wunused-but-set-global]\r\n   32 |   static bool s_exit_handler_active = false;\r\n      |               ^\r\n1 warning generated\r\n```",
+            "diff": {
+                "additions": 0,
+                "deletions": 3,
+                "files": 1
+            },
+            "files": [
+                "DDCore/src/SignalHandler.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200210h 31m 45s \u23f1\ufe0f\n\u2007\u2008374 tests\u2003\u2007\u2008373 \u2705\u20030 \ud83d\udca4\u20031 \u274c\n3\u2008322 runs\u200a\u20033\u2008315 \u2705\u20030 \ud83d\udca4\u20037 \u274c\n\nFor more details on these failures, see [this check](https://github.com/AIDASoft/DD4hep/runs/111499234756).\n\nResults for commit 8a6c0843.\n\n[test-results]:data:application/gzip;base64,H\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "key4hep-spack",
@@ -1883,74 +2105,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4FWCore",
-            "num": 436,
-            "title": "Require Gaudi v41r1 for EventContext data handle API",
-            "url": "https://github.com/key4hep/k4FWCore/pull/436",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-28",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Require Gaudi v41r1 or later for the EventContext data handle API.\r\n\r\nENDRELEASENOTES\r\n\r\nIt didn't make it to 41.0. Continuation of [key4hep/k4FWCore#432](https://github.com/key4hep/k4FWCore/pull/432).",
-            "diff": {
-                "additions": 11,
-                "deletions": 10,
-                "files": 5
-            },
-            "files": [
-                "k4FWCore/components/Reader.cpp",
-                "k4FWCore/include/k4FWCore/Consumer.h",
-                "k4FWCore/include/k4FWCore/DataHandle.h",
-                "k4FWCore/include/k4FWCore/FunctionalUtils.h",
-                "k4FWCore/include/k4FWCore/Transformer.h"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4EDM4hep2LcioConv",
-            "num": 135,
-            "title": "Remove obsolete EDM4hep version guards",
-            "url": "https://github.com/key4hep/k4EDM4hep2LcioConv/pull/135",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-28",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Remove obsolete EDM4hep version guards from conversion and comparison code.\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 1,
-                "deletions": 25,
-                "files": 6
-            },
-            "files": [
-                "CMakeLists.txt",
-                "k4EDM4hep2LcioConv/include/k4EDM4hep2LcioConv/k4EDM4hep2LcioConv.ipp",
-                "k4EDM4hep2LcioConv/include/k4EDM4hep2LcioConv/k4Lcio2EDM4hepConv.ipp",
-                "tests/edm4hep_to_lcio.cpp",
-                "tests/src/CompareEDM4hepLCIO.cc",
-                "tests/src/CompareEDM4hepLCIO.h"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Done"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "if we remove these, we should also make sure to require EDM4hep >= 1.0 here\n\nhttps://github.com/key4hep/k4EDM4hep2LcioConv/blob/d00af791f4679017f0f6850d0c2978105d13832d/CMakeLists.txt#L19-L21"
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
             "repo": "k4RecTracker",
             "num": 97,
             "title": "Add CMake flags gating Tracking",
@@ -2088,112 +2242,6 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 201,
-            "title": "fix(blame): judge host changes per machine and sample the run's own geometry first",
-            "url": "https://github.com/key4hep/k4Bench/pull/201",
-            "author": "jbeirer",
-            "mergedAt": "2026-09-27",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Bug fix\n\n\n___\n\n### **Description**\n- Add evidence summary (sweep table, event records, geometry touches) computed from measurements, shown before diffs in both blame prompts\n\n- Judge host changes per machine using each machine's own level, and sample the run's own compact directory first in diff samples\n\n- Restructure the cross-configuration review to answer per scope with per-row overrides, replacing per-row scoring\n\n- Add event profiles, per-host levels, removal sweeps, and structural geometry diff reading to the attribution pipeline\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"Report + Provenance\"] --> B[\"window_sweeps\"]\n  A --> C[\"detector_touches\"]\n  B --> D[\"Evidence Summary\"]\n  C --> D\n  D --> E[\"Ranker Prompt\u2026",
-            "diff": {
-                "additions": 7471,
-                "deletions": 518,
-                "files": 35
-            },
-            "files": [
-                ".github/scripts/blame_comment.py",
-                ".github/scripts/blame_report.py",
-                "docs/reference/file-formats.md",
-                "docs/user-guide/features/pr-comments.md",
-                "k4bench/blame/attribute.py",
-                "k4bench/blame/builder.py",
-                "k4bench/blame/comment.py",
-                "k4bench/blame/evidence.py",
-                "k4bench/blame/geometry.py",
-                "k4bench/blame/github.py",
-                "k4bench/blame/prompt.py",
-                "k4bench/blame/rank.py",
-                "k4bench/blame/summary.py",
-                "k4bench/blame/sweep.py",
-                "k4bench/regression/history.py",
-                "k4bench/regression/models.py",
-                "k4bench/regression/regions.py",
-                "k4bench/regression/render.py",
-                "k4bench/regression/report_builder.py",
-                "tests/integration/test_blame_k4geo612_incident.py",
-                "tests/integration/test_regression_report.py",
-                "tests/unit/test_blame_attribute.py",
-                "tests/unit/test_blame_builder.py",
-                "tests/unit/test_blame_comment.py",
-                "tests/unit/test_blame_evidence.py",
-                "tests/unit/test_blame_geometry.py",
-                "tests/unit/test_blame_github.py",
-                "tests/unit/test_blame_prompt.py",
-                "tests/unit/test_blame_rank.py",
-                "tests/unit/test_blame_summary.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/fb60df7a0c6fbb2af1ca4b115b2ad8184d7a6c6b)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 38,003 in / 9 out / 38,012 total\n- Time cost: 493.6s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/201?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/201#issuecomment-5839844335)** updated to latest commit https://github.com/key4hep/k4Bench/commit/764f18de703ee7f6e645734c4258bff3ad1071a4"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- be2cdf7 -->\n\nLatest suggestions up to be2cdf7\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/201#issuecomment-5839844335)** updated to latest commit https://github.com/key4hep/k4Bench/commit/a6e164e67344cbdb506a3496cd2efa693a033094"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/201#issuecomment-5839844335)** updated to latest commit https://github.com/key4hep/k4Bench/commit/9469385b3452834e1b9cefdd0625c66da516fa1e"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "Failed to generate code suggestions for PR"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "Failed to generate code suggestions for PR"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/201#issuecomment-5839844335)** updated to latest commit https://github.com/key4hep/k4Bench/commit/be2cdf7725f6503917a1f18083eed84830f60cc8"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "Failed to generate code suggestions for PR"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/GLM-5.2-NGT\n- Tokens: 301,316 in / 425 out / 301,741 total\n- Time cost: 1302.8s\n- AI calls: 2\n\n</details>"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/201#issuecomment-5839844335)** updated to latest commit https://github.com/key4hep/k4Bench/commit/fb60df7a0c6fbb2af1ca4b115b2ad8184d7a6c6b"
-                }
-            ],
-            "comments_total": 13,
-            "reviews": [],
-            "reviews_total": 1
         }
     ]
 }
