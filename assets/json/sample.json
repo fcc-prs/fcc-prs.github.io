@@ -431,10 +431,10 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 112,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/112'>GNNTrackFinding: EdgeBuildingKnn, model loading errors and minor cleanup</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-04",
+            "num": 121,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/121'>Reduce CKF compilation memory by isolating ACTS implementations</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-06",
             "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
@@ -443,7 +443,7 @@
         {
             "repo": "key4hep/<br>k4ActsTracking",
             "num": 108,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add outside-in and two-way CKF tracking</a>",
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking and bug fix for propagateBackward</a>",
             "author": "mlarson02",
             "createdAt": "2026-09-29",
             "updatedAt": "2026-10-06",
@@ -453,10 +453,43 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 115,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/115'>Require the edge feature phi scale to be pi</a>",
+            "num": 120,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/120'>Remove unused headers in CKFTrackingAlg</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-06",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 119,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/119'>GNNTrackFinding: drop the redundant edge deduplication</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-06",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 117,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/117'>Gnn debug hook</a>",
             "author": "madbaron",
             "createdAt": "2026-10-05",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 113,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/113'>GNNTrackFinding: remove dead and duplicated code</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-04",
             "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
@@ -470,28 +503,6 @@
             "createdAt": "2026-07-04",
             "updatedAt": "2026-10-05",
             "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 117,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/117'>Gnn debug hook</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-05",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 113,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/113'>GNNTrackFinding: remove dead and duplicated code</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-04",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -607,10 +618,10 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 109,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/109'>Clean up TracksFromGenParticles and only extrapolate to the calorimeter when ExtrapolateToECal is set</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-05",
+            "num": 112,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/112'>[TrackFitter] Add reset of the global TGeoManager navigator before fitting each track</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-10-06",
             "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
@@ -618,8 +629,8 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 110,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/110'>Fix uninitialized variable warnings</a>",
+            "num": 109,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/109'>Clean up TracksFromGenParticles and only extrapolate to the calorimeter when ExtrapolateToECal is set</a>",
             "author": "jmcarcell",
             "createdAt": "2026-10-05",
             "updatedAt": "2026-10-06",
@@ -637,28 +648,6 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 112,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/112'>[TrackFitter] Add reset of the global TGeoManager navigator before fitting each track</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-10-06",
-            "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 102,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-09-15",
-            "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "SanghyunKo"
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -948,6 +937,17 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 51,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
+            "author": "Jullianwatts",
+            "createdAt": "2026-08-22",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
             "num": 55,
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/55'>Loop the LCCaloHit factory through the Pandora machinery</a>",
             "author": "tmadlener",
@@ -975,17 +975,6 @@
             "author": "Archil-AD",
             "createdAt": "2026-05-06",
             "updatedAt": "2026-09-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 51,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
-            "author": "Jullianwatts",
-            "createdAt": "2026-08-22",
-            "updatedAt": "2026-09-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1608,23 +1597,12 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 286,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/286'>Make PairCaloClustersPi0 more efficient.</a>",
-            "author": "scott-snyder",
-            "createdAt": "2026-10-03",
-            "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
             "num": 287,
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/287'>Further minor fixes for phi wrapping.</a>",
             "author": "scott-snyder",
             "createdAt": "2026-10-03",
-            "updatedAt": "2026-10-03",
-            "mergeOk": "yes",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1646,7 +1624,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1932,18 +1910,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-10-01",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "PandoraPFAOrg/<br>LCContent",
-            "num": 41,
-            "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/41'>Maia/theta energy</a>",
-            "author": "Jullianwatts",
-            "createdAt": "2026-08-24",
-            "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1954,7 +1921,7 @@
             "author": "trholmes",
             "createdAt": "2026-09-03",
             "updatedAt": "2026-09-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
