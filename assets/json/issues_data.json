@@ -1256,7 +1256,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/issues/526'>Better handling of (track only) vertices</a>",
             "author": "tmadlener",
             "createdAt": "2026-10-01",
-            "updatedAt": "2026-10-05",
+            "updatedAt": "2026-10-06",
             "labels": "enhancement \ndiscussion",
             "assignees": ""
         },
@@ -1462,6 +1462,16 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
+            "num": 309,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/309'>Documentation about Functional algorithms needs to be updated</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-04-28",
+            "updatedAt": "2026-10-06",
+            "labels": "documentation",
+            "assignees": "ianna"
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
             "num": 358,
             "title": "<a href='https://github.com/key4hep/k4FWCore/issues/358'>Document the split between interface declaration and definition</a>",
             "author": "tmadlener",
@@ -1538,16 +1548,6 @@
             "createdAt": "2025-06-25",
             "updatedAt": "2025-12-23",
             "labels": "documentation \nenhancement",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
-            "num": 309,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/issues/309'>Documentation about Functional algorithms needs to be updated</a>",
-            "author": "tmadlener",
-            "createdAt": "2025-04-28",
-            "updatedAt": "2025-09-25",
-            "labels": "documentation",
             "assignees": ""
         },
         {
@@ -2147,6 +2147,16 @@
             "author": "vvolkl",
             "createdAt": "2021-05-25",
             "updatedAt": "2021-05-25",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 118,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/118'>Upstreaming CPU/ONNX pipeline components from k4ActsTracking to acts' Gnn plugin</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-06",
+            "updatedAt": "2026-10-06",
             "labels": "",
             "assignees": ""
         },
