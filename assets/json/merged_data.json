@@ -1,6 +1,606 @@
 {
-    "updated_at": "2026-10-05T13:17:00Z",
+    "updated_at": "2026-10-06T12:35:40Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 208,
+            "title": "feat(benchmarks): bump ALLEGRO o1, CLD o2 and IDEA o1 to their latest versions and continue the old versions' regression series",
+            "url": "https://github.com/key4hep/k4Bench/pull/208",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\r\n\r\nUpdates the nightly benchmarks to use the latest detector geometry versions:\r\n\r\n- ALLEGRO o1: `v03` \u2192 `v04`\r\n- CLD o2: `v08` \u2192 `v09`\r\n- IDEA o1: `v03` \u2192 `v04`\r\n\r\nSince changing the detector configuration would otherwise start a completely new regression series, this PR also adds detector-version succession to the regression lineage. The new configurations can therefore continue the history of the versions they replace while still treating the switch itself as a distinct boundary.\r\n\r\nRegression reporting, blame attribution, ranking, emails and the dashboard are updated accordingly so that detector switches are handled explicitly and are not mistaken for software regressions.\r\n\r\nThe PR also:\r\n\r\n- makes same-release detector switches work correctly in regression windows\r\n- keeps\u2026",
+            "diff": {
+                "additions": 1002,
+                "deletions": 210,
+                "files": 48
+            },
+            "files": [
+                ".github/benchmarks/ALLEGRO_o1_v04.yml",
+                ".github/benchmarks/ALLEGRO_o2_v01.yml",
+                ".github/benchmarks/CLD_o2_v09.yml",
+                ".github/benchmarks/CLD_o3_v01.yml",
+                ".github/benchmarks/IDEA_o1_v04.yml",
+                ".github/benchmarks/IDEA_o2_v01.yml",
+                ".github/benchmarks/ILD_FCCee_v01.yml",
+                ".github/benchmarks/ILD_FCCee_v02.yml",
+                ".github/benchmarks/SiD.yml",
+                ".github/scripts/nightly_benchmark.sh",
+                ".github/workflows/benchmark-detector.yml",
+                ".github/workflows/nightly.yml",
+                "dashboard/app.py",
+                "dashboard/tabs/_blame.py",
+                "dashboard/tabs/regressions.py",
+                "dashboard/tabs/stack_changes.py",
+                "dashboard/ui_chrome.py",
+                "docs/developer-guide/development-setup.md",
+                "docs/getting-started/installation.md",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/blame/attribute.py",
+                "k4bench/blame/builder.py",
+                "k4bench/blame/comment.py",
+                "k4bench/blame/evidence.py",
+                "k4bench/blame/prompt.py",
+                "k4bench/blame/rank.py",
+                "k4bench/blame/sweep.py",
+                "k4bench/regression/email.py",
+                "k4bench/regression/engine.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": "### :x: 2 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 2069 | 2 | 2067 | 24 |\n<details><summary>View the top 2 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_geometry_patching.py::test_every_nightly_geom\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 904fe78 -->\n\nLatest suggestions up to 904fe78\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/904fe7808e97fb0d37d2c1acd35f61b9d08cebb9)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/208#issuecomment-6013807611)** updated to latest commit https://github.com/key4hep/k4Bench/commit/904fe7808e97fb0d37d2c1acd35f61b9d08cebb9"
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 207,
+            "title": "feat(nightly): allow dispatching a subset of benchmark jobs",
+            "url": "https://github.com/key4hep/k4Bench/pull/207",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **User description**\nAllows dispatching only a subset of configurations in the CI in case of individual failures\n\n\n___\n\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add `--only` filter to `list_benchmarks.py` for selecting specific jobs by config or config/sample name\n\n- Add `configs` workflow_dispatch input to nightly workflow, passed through to the list step\n\n- Add unit tests covering subset selection, grouping, and refusal of unknown names\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"nightly.yml workflow_dispatch\"] -- \"configs input\" --> B[\"list step: ONLY env var\"]\n  B -- \"--only argument\" --> C[\"list_benchmarks.py\"]\n  C -- \"argparse + _select()\" --> D[\"filtered grouped configs\"]\n  D -- \"GITHUB_OUTPUT\" --> E[\"benchmark\u2026",
+            "diff": {
+                "additions": 70,
+                "deletions": 5,
+                "files": 3
+            },
+            "files": [
+                ".github/scripts/list_benchmarks.py",
+                ".github/workflows/nightly.yml",
+                "tests/unit/test_list_benchmarks.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/207?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 206,
+            "title": "fix(nightly): default an absent sweep or verbose key to false in the benchmark matrix",
+            "url": "https://github.com/key4hep/k4Bench/pull/206",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **User description**\nFixes some CI issues observed after https://github.com/key4hep/k4Bench/pull/205\n\n\n___\n\n### **PR Type**\nBug fix, Tests\n\n\n___\n\n### **Description**\n- Split `sweep`/`verbose` into dedicated boolean key handling\n\n- Absent boolean keys now emit `false`, not empty string\n\n- Reject non-boolean `sweep`/`verbose` values with clear error\n\n- Add tests enforcing the `run_info.py` `--sweep` contract\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  YML[\"benchmark YAML files\"] -- \"sweep/verbose keys\" --> LB[\"list_benchmarks.py\"]\n  LB -- \"_bool(): absent -> false, invalid -> die\" --> REC[\"matrix record (true/false)\"]\n  REC -- \"SWEEP env var\" --> RI[\"run_info.py --sweep\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><th\u2026",
+            "diff": {
+                "additions": 65,
+                "deletions": 6,
+                "files": 2
+            },
+            "files": [
+                ".github/scripts/list_benchmarks.py",
+                "tests/unit/test_list_benchmarks.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 6,240 in / 9 out / 6,249 total\n- Time cost: 176.6s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/206?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 115,
+            "title": "Update dependency marked to v18.1.0",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/115",
+            "author": "renovate",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [marked](https://marked.js.org) ([source](https://redirect.github.com/markedjs/marked)) | [`18.0.14` \u2192 `18.1.0`](https://renovatebot.com/diffs/npm/marked/18.0.14/18.1.0) | ![age](https://developer.mend.io/api/mc/badges/age/npm/marked/18.1.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/marked/18.0.14/18.1.0?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>markedjs/marked (marked)</summary>\n\n### [`v18.1.0`](https://redirect.github.com/markedjs/marked/releases/tag/v18.1.0)\n\n[Compare Source](https://redirect.github.com/markedjs/marked/compare/v18.0.14.\u2026",
+            "diff": {
+                "additions": 5,
+                "deletions": 5,
+                "files": 2
+            },
+            "files": [
+                "package-lock.json",
+                "package.json"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1689,
+            "title": "correct edm4hep reader for new MDI synchrotron radiation file format",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1689",
+            "author": "davidlange6",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "andresailer",
+            "labels": [],
+            "body": "correct edm4hep reader for new MDI synchrotron radiation files that consist of a list of photons with no parent and whose vertex (rather than endpoint) should define the starting point in geant (in part a continuation of #1684)\r\n\r\nBEGINRELEASENOTES\r\n- EDM4hepReader: correct edm4hep reader for new MDI synchrotron radiation files that consist of a list of photons with no parent and whose vertex (rather than endpoint) should define the starting point in geant  \r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 8,
+                "deletions": 6,
+                "files": 1
+            },
+            "files": [
+                "DDG4/edm4hep/EDM4hepFileReader.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "andresailer",
+                    "body": "1) Do you mean synchrotron radiation?\r\n2) Do we need a similar fix for the HepMC3 reader?"
+                },
+                {
+                    "author": "davidlange6",
+                    "body": "sorry, not awake. yes - synchrotron radiation\r\n\r\nas for hepmc3.. good question - hepmc3 readers that I've found don't support this event structure. They appear to require a beam particle that has a vertex from which a photon could come.  That is fixable, and if fixed would need a corresponding chang\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200220h 0m 29s \u23f1\ufe0f\n\u2007\u2008374 tests\u2003\u2007\u2008374 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008322 runs\u200a\u20033\u2008322 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 9bf614a2.\n\n[test-results]:data:application/gzip;base64,H4sIABvBxGoC/12MQQ6DIBAAv2I49wALCvQzzYKQkKo0CKemfy81VmmPM5PMk/gwuZVcO6YuHVlLyCeNJWEOcaksgYKuqtb86VyKL93WYu2/uod\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1687,
+            "title": "Remove filesystem detection and require GCC 9.1+",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1687",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "andresailer",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - CMake: Remove filesystem detection logic and require GCC 9.1+\r\n\r\nENDRELEASENOTES\r\n\r\nTryFileSystem.cpp was being incorrectly installed to the cmake directory due to the `*.cpp` pattern in the install command.\r\n\r\nGCC 9.1+ and libc++ from LLVM 9+ have full std::filesystem support without needing extra link libraries. The complex detection that tested stdc++fs, c++fs, and Boost::filesystem fallback was only needed for older compilers like GCC 8.\r\n\r\n- Add a minimum GCC version check (9.1)\r\n- Remove try_compile-based filesystem detection loop\r\n- Remove Boost::filesystem fallback\r\n- Delete cmake/TryFileSystem.cpp (no longer needed)\r\n- Remove `*.cpp` from cmake install pattern\r\n- Remove `FS_LIBRARIES` and the `USE_BOOST_FILESYSTEM` code path in GaudiPluginService",
+            "diff": {
+                "additions": 9,
+                "deletions": 77,
+                "files": 5
+            },
+            "files": [
+                "CMakeLists.txt",
+                "GaudiPluginService/CMakeLists.txt",
+                "GaudiPluginService/src/PluginServiceV2.cpp",
+                "cmake/DD4hepBuild.cmake",
+                "cmake/TryFileSystem.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200220h 33m 33s \u23f1\ufe0f\n\u2007\u2008374 tests\u2003\u2007\u2008374 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008322 runs\u200a\u20033\u2008322 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit da9a8e32.\n\n[test-results]:data:application/gzip;base64,H4sIAMS9w2oC/12MSw7CIBQAr9KwdgG80oKXMU8+CbEthsKq8e4iqS26nJlkNuL8ZFdy7Zi8dGTNPp1kcsTkw1J47CmDokpNnw5j/6XbmrX+Vw\u2026"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "> TryFileSystem.cpp was being incorrectly installed to the cmake\r\n\r\nI think it was intentionally installed there, so that downstream projects could pick it up there."
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 531,
+            "title": "Make the lcg based workflow triggerable from the web UI",
+            "url": "https://github.com/key4hep/EDM4hep/pull/531",
+            "author": "tmadlener",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Make it possible to trigger the LCG based workflows from the github web UI\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 5,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/lcg_linux_with_podio.yml"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Things are failing on `dev3`. I think the reason is https://github.com/root-project/root/pull/21261. I haven't traced things back conclusively to this, but todays lcg dev3 build is the first to fail and this looks like the most likely commit / PR to have landed in that window."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I can have a look, that would be the third issue with that change today :smiley:"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 111,
+            "title": "Update GNN to be consistent with upstream fixes",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/111",
+            "author": "madbaron",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- GNNTrackFinding: require Acts >= 48.1.0 (or main) when `K4ACTSTRACKING_BUILD_GNN` is on, for [acts#5646](https://github.com/acts-project/acts/pull/5646) (node feature selection/scaling in `OnnxEdgeClassifier`) and [acts#6142](https://github.com/acts-project/acts/pull/6142) (features passed in the configured order). Checked after `find_package` rather than passed to it, since Acts declares `SameMajorVersion` compatibility, which would reject later major versions and main (999.999.999).\r\n- Drop the fallback to the pre-`ActsPlugins` Gnn headers and namespace aliases.\r\n- Edge classifier input features are now passed to the model in the order given and may be repeated.\r\n- Reject zero input scales (embedding, edge features, edge classifiers) in `initialize()`, instead of an \u2026",
+            "diff": {
+                "additions": 39,
+                "deletions": 87,
+                "files": 9
+            },
+            "files": [
+                "CMakeLists.txt",
+                "GNNTrackFinding/README.md",
+                "GNNTrackFinding/src/CCAndWalkTrackBuilding.h",
+                "GNNTrackFinding/src/ClassifiedEdgePrinting.h",
+                "GNNTrackFinding/src/GNNTrackFinder.cpp",
+                "GNNTrackFinding/src/GNNTrackFinder.h",
+                "GNNTrackFinding/src/OnnxMetricLearning.cpp",
+                "GNNTrackFinding/src/OnnxMetricLearning.h",
+                "GNNTrackFinding/src/PaddedEdgeRemoval.h"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 3
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 111,
+            "title": "Fix typo in CMakeLists",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/111",
+            "author": "JonaDilg",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Fix typo in CMakeLists of ARCdigi and VTXdigi that would install header files into `include/@{CMAKE_PROJECT_NAME}` instead of expanding `${CMAKE_PROJECT_NAME}`\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 2
+            },
+            "files": [
+                "ARCdigi/CMakeLists.txt",
+                "VTXdigi/CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Checked in CI that the files are installed now to the correct path"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 205,
+            "title": "refactor: split timed-process runner from ddsim and centralise run artifact contracts",
+            "url": "https://github.com/key4hep/k4Bench/pull/205",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement\n\n\n___\n\n### **Description**\n- Split timed-process execution into `k4bench/runner/process.py`\n\n- Centralize run artifact names in `k4bench/artifacts.py`\n\n- Extract `run_info.json` writer into `.github/scripts/run_info.py`\n\n- Add region schema validation via `k4bench/plugin/schema.py`\n\n- Reject benchmark configs colliding on one EOS directory\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  executor[\"runner.executor\"] -- \"builds ddsim command\" --> process[\"runner.process\"]\n  process -- \"runs under time -v\" --> parser[\"runner.parser\"]\n  artifacts[\"k4bench.artifacts\"] -- \"file-name contract\" --> loader[\"analysis.loader\"]\n  artifacts -- \"file-name contract\" --> reporter[\"results.reporter\"]\n  nightly[\"nightly_benchmark.sh\"] -- \"del\u2026",
+            "diff": {
+                "additions": 1038,
+                "deletions": 404,
+                "files": 30
+            },
+            "files": [
+                ".github/ai-review-instructions.md",
+                ".github/scripts/list_benchmarks.py",
+                ".github/scripts/nightly_benchmark.sh",
+                ".github/scripts/run_info.py",
+                "dashboard/ui_chrome.py",
+                "docs/architecture/component-diagrams.md",
+                "docs/architecture/overview.md",
+                "docs/developer-guide/repository-layout.md",
+                "docs/reference/file-formats.md",
+                "k4bench/analysis/loader.py",
+                "k4bench/analysis/trend.py",
+                "k4bench/artifacts.py",
+                "k4bench/benchmark/ddsim.py",
+                "k4bench/cli.py",
+                "k4bench/plugin/event_schema.py",
+                "k4bench/plugin/schema.py",
+                "k4bench/regression/regions.py",
+                "k4bench/remote.py",
+                "k4bench/results/reporter.py",
+                "k4bench/runner/executor.py",
+                "k4bench/runner/process.py",
+                "plugin/k4BenchTimingAction.cpp",
+                "tests/integration/test_plugin_build.py",
+                "tests/unit/test_analysis_loader.py",
+                "tests/unit/test_executor.py",
+                "tests/unit/test_list_benchmarks.py",
+                "tests/unit/test_plugin_schema.py",
+                "tests/unit/test_process.py",
+                "tests/unit/test_provenance_stack.py",
+                "tests/unit/test_run_info_writer.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/19aef166ec72e92eb8767951746dd8820b33253a)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/205#issuecomment-6000699047)** updated to latest commit https://github.com/key4hep/k4Bench/commit/19aef166ec72e92eb8767951746dd8820b33253a"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 25,423 in / 450 out / 25,873 total\n- Time cost: 935.3s\n- AI calls: 1\n\n</detail\u2026"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/205?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-tutorials",
+            "num": 206,
+            "title": "Update Delphes+EvtGen sample generation to latest Key4hep stack",
+            "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/206",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "michmx",
+            "labels": [],
+            "body": "Points the Pythia8+EvtGen sample generation section (2.2.2) of the fast simulation tutorial at the rolling `latest` Key4hep stack instead of the pinned 2022-12-23 release, and switches the FCC-config download links to the `main` branch, which has the current Delphes/EDM4hep cards for this workflow.",
+            "diff": {
+                "additions": 28,
+                "deletions": 30,
+                "files": 3
+            },
+            "files": [
+                "1-first-steps/prerequisites.md",
+                "2-gen-and-fastsim/2-1-event-generation/README.md",
+                "2-gen-and-fastsim/2-2-fastsim-delphes/README.md"
+            ],
+            "comments": [
+                {
+                    "author": "michmx",
+                    "body": "We discussed during the training and docs meeting that we can proceed with this PR."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 2
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "k4RecCalorimeter",
+            "num": 288,
+            "title": "fix names of files in example digi+reco script when using Pythia",
+            "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/288",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Quick bug fix in test scripts for FCC-hh, when Pythia is used (off by default).\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 3,
+                "deletions": 3,
+                "files": 1
+            },
+            "files": [
+                "RecFCChhCalorimeter/tests/options/FCChhBaselineSimDigiReco.sh"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 401,
+            "title": "[ALLEGRO] changed ReadoutWindowDuration_ns variable 450->600 in stt_digitizer",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/401",
+            "author": "alex-schmidty",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "450 ns time window is too small. 600 ns is the new default for stt_digitizer",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/run_digi_reco.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 114,
+            "title": "Replace priority dots with border accents and polish request views",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/114",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "- Replace priority pip dots with colored left-border accents on the dashboard, request list (desktop + mobile), and request detail page\n- Let coordinators/admins change priority via a selector on the mobile card and in the detail page header, matching the desktop list\n- Restructure the detail page header: back button top-left, status top-middle, priority top-right; edit button now flows next to the last word of multi-line titles\n- Fix several responsive bugs in the request list: a column reappearing at narrower widths, content getting clipped instead of scrolling, and the delete button getting squeezed away\n- Consolidate duplicate priority-related CSS color classes",
+            "diff": {
+                "additions": 354,
+                "deletions": 275,
+                "files": 12
+            },
+            "files": [
+                "internal/handlers/handlers.go",
+                "internal/handlers/pipeline.go",
+                "static/style.css",
+                "templates/index.html",
+                "templates/partials/detail_sections.html",
+                "templates/partials/priority_cell.html",
+                "templates/partials/recent_requests.html",
+                "templates/partials/request_card.html",
+                "templates/partials/request_detail.html",
+                "templates/partials/request_list.html",
+                "templates/partials/request_row.html",
+                "templates/partials/stats_cards.html"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 111,
+            "title": "Shrink Request Details grid gap to match Approvals/Activity spacing",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/111",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Bulma's is-variable is-3 doubles to a 1.5rem effective gap (each column pads all sides by the full value), vs. the 0.5rem gap-2 utility used for Approvals/Activity rows elsewhere on the same page. Switched both the display grid and its matching inline-edit form to is-1 (0.5rem total) to match.",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "templates/partials/detail_sections.html"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 110,
+            "title": "Fix non-resizable textareas and add auto-grow with a graceful fallback",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/110",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Fixes #93.\n\n- Notes (create form) and both comment textareas had resize:none with tiny fixed rows \u2014 enabled resize:vertical as the universal default\n- Layer field-sizing: content on top via @supports: supporting browsers get an auto-growing textarea with no resize handle/scrollbar for typical content, older browsers fall back to plain manual resize\n- Move resize off inline style attributes (which were silently overriding the stylesheet) into the stylesheet itself, so the @supports override can actually take effect\n- Reduce textarea border-radius so the native resize handle/scrollbar clash less with the rounded corner\n- Give the shared edit modal a larger min/max height than other textareas",
+            "diff": {
+                "additions": 18,
+                "deletions": 9,
+                "files": 4
+            },
+            "files": [
+                "static/style.css",
+                "templates/layout.html",
+                "templates/partials/activity.html",
+                "templates/partials/request_form.html"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 109,
+            "title": "Render Markdown in Additional Notes and remove dead edit templates",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/109",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-05",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Fixes #94.\n\n- Additional Notes was the only prose-type field missing data-md wiring \u2014 Title, Description, and comments already had it\n- Remove the orphaned detail_edit_description/detail_edit_notes templates, unreachable since #35 switched those edit buttons to the shared modal without deleting the old per-section forms",
+            "diff": {
+                "additions": 1,
+                "deletions": 37,
+                "files": 1
+            },
+            "files": [
+                "templates/partials/detail_sections.html"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "hep-fcc",
             "repo": "fcc-drs",
@@ -1976,272 +2576,6 @@
                 }
             ],
             "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 929,
-            "title": "Add tracking variant to k4RecTracker",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/929",
-            "author": "madbaron",
-            "mergedAt": "2026-09-29",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Add \"tracking\" variant to k4rectracking recipe to steer the K4RECTRACKER_TRACKING flag\r\n- Rename base branch/spec of the k4rectracking to main \r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 17,
-                "deletions": 8,
-                "files": 1
-            },
-            "files": [
-                "packages/k4rectracker/package.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 4
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4geo",
-            "num": 665,
-            "title": "[IDEA] Set shared flag to false if single thread",
-            "url": "https://github.com/key4hep/k4geo/pull/665",
-            "author": "andread3vita",
-            "mergedAt": "2026-09-28",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n\r\n- Set the flag controlling how workers share events to `false` when running in single-threaded mode. This change applies to the steering file in the examples.\r\n\r\nENDRELEASENOTES\r\n\r\nDear All,\r\nI open this PR to address [this](https://github.com/AIDASoft/DD4hep/issues/1677) issue. This PR is a follow-up of [this other PR](https://github.com/AIDASoft/DD4hep/pull/1678).\r\n\r\nCheers,\r\nAndrea",
-            "diff": {
-                "additions": 11,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "example/SteeringFile_IDEA_o1_v03.py"
-            ],
-            "comments": [
-                {
-                    "author": "BrieucF",
-                    "body": "Hi Andrea, thanks! Can you propagate this to FCC-config as well?"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "> Hi Andrea, thanks! Can you propagate this to FCC-config as well?\r\n\r\nAlready done :)"
-                },
-                {
-                    "author": "BrieucF",
-                    "body": "> > Hi Andrea, thanks! Can you propagate this to FCC-config as well?\r\n> \r\n> Already done :)\r\n\r\nIndeed, sorry I missed it. Thanks!"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "Now this PR depends on https://github.com/AIDASoft/DD4hep/pull/1678 so it can be approved only once the other one is approved and merged. This is due to the last commit, where I have changed the kernel used in the plugin"
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "Currently the release build fails, because it's not recognising `numberOfThreads`:\r\n\r\n```  \r\nTraceback (most recent call last):\r\n    File \"/cvmfs/sw.hsf.org/key4hep/releases/2026-04-08/x86_64-almalinux9-gcc14.2.0-opt/dd4hep/1.36-ayzyfq/bin/ddsim\", line 24, in <module>\r\n      sys.exit(RUNNER.run())\r\n\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "I added a comment and removed an unrelated removal of a line. It should be good to go now and backwards compatible."
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [],
-            "reviews_total": 10
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4FWCore",
-            "num": 433,
-            "title": "Fix boolean properties on the k4run command line",
-            "url": "https://github.com/key4hep/k4FWCore/pull/433",
-            "author": "madbaron",
-            "mergedAt": "2026-09-28",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Boolean properties could not be switched off from the command line:\r\n- when the property is set in the options file, argparse is given type=bool, and bool(\"False\") is True\r\n- when the property is left at its default, its value is propertyNoValue (a string), so the argument is parsed as a string and Gaudi later converts it with bool(\"False\"), which is again True\r\n\r\nParse boolean properties (detected from the value or, if unset, from the default) with a dedicated parser that accepts True/False, true/false and 1/0 and rejects anything else. A bare flag (e.g. \"--MetadataSvc.SkipIfSameValue\") now means True instead of setting None, which Gaudi converted to False.\r\n\r\nAdd tests for switching off a property set in the options file, one left at its default, a bare flag and an invalid value.\r\n\r\nBEGI\u2026",
-            "diff": {
-                "additions": 59,
-                "deletions": 0,
-                "files": 3
-            },
-            "files": [
-                "k4FWCore/scripts/k4run",
-                "test/k4FWCoreTest/CMakeLists.txt",
-                "test/k4FWCoreTest/options/Testk4runBoolProperties.py"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "I guess this one is also necessary for the tests in #434?\r\n\r\nFor me this looks good and can be merged. I would do so later today, unless stopped."
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> I guess this one is also necessary for the tests in #434?\r\n\r\nNot really, but it won't harm I think"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Ah right. Because that uses the path that is already working, i.e. the `True` path."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "I think @Zehvogel found this a long time ago."
-                },
-                {
-                    "author": "madbaron",
-                    "body": "Thank you!"
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Huh, interesting that no one else has stumbled over this yet. Looks good to me, minor comment about what a flag should accept in this case."
-                }
-            ],
-            "reviews_total": 9
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 97,
-            "title": "Add CMake flags gating Tracking",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/97",
-            "author": "madbaron",
-            "mergedAt": "2026-09-28",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "This PR enables the compilation of the package in the muon collider software stack (which doesn't ship Marlin/LCIO) in preparation for the migration of the charge trasport digitisers discussed in https://github.com/MuonColliderSoft/MuonCVXDDigitiser/issues/17.\r\n\r\nBEGINRELEASENOTES\r\n- Add K4RECTRACKER_TRACKING CMake flag (default=ON) gating the compilation of the FCCee tracking \r\n\r\nENDRELEASENOTES\r\n\r\nThe dependencies of Tracking on MarlinUtil can actually be cleaned up by using the pandora helix class and a few more things could be streamlined. I'd be happy to take care of these in follow-up PRs if a more general cleanup is desirable!",
-            "diff": {
-                "additions": 19,
-                "deletions": 7,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "madbaron",
-                    "body": "I do think that having digitisers in a place and pattern recognition/tracking software in another would be tidier, especially as k4ActsTracking already sits in its own package, but we can take baby steps on the way there.\r\n\r\nI'll be happy to take care of the spack updates as soon as this lands. I do\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "This is annoying to maintain since there are extra 4 options. Can you not update Delphes in your stack to reduce the options to one? If you are using the latest tag in Spack it's a very old one."
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> This is annoying to maintain since there are extra 4 options. Can you not update Delphes in your stack to reduce the options to one? If you are using the latest tag in Spack it's a very old one.\r\n\r\nHappy to do that for now if you feel strongly about it, please let me know.\r\n\r\nThe Delphes dependenc\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "@andread3vita @s6anloes any (strong) opinions on this one? I assume you would be the most likely to be affected by this(?)"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Renamed the `K4RECTRACKER_DCH_DIGITISERS` to `K4RECTRACKER_WIRETRACKER_DIGITISERS` to be consistent with the name change in #100.\r\n\r\nI would like to get this merged soon. If no one complains, I will do so either tomorrow or the day after."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "I still think this looks very ugly and is bound to fail since it requires assigning all the dependencies correctly to each option, if they are going to be used together either both false or true then we could have a single option for either all or only the stuff that doesn't have the \"heavy\" depende\u2026"
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "The delphes dependence was introduced in https://github.com/key4hep/k4RecTracker/pull/61/.\r\nWould you suggest removing the `TrackdNdxDelphesBased` alltogether? \r\nTbh, I don't think it is used very much, but one never knows"
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "> @andread3vita @s6anloes any (strong) opinions on this one? I assume you would be the most likely to be affected by this(?)\r\n\r\nOpinions on the gating of the digitisers? I don't I have a strong one. Would anything change for people who build with the digitisers?"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> > @andread3vita @s6anloes any (strong) opinions on this one? I assume you would be the most likely to be affected by this(?)\n> \n> Opinions on the gating of the digitisers? I don't I have a strong one. Would anything change for people who build with the digitisers?\n> \n\nNo, these are on by default. \u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> , if they are going to be used together either both false or true then we could have a single option for either all or only the stuff that doesn't have the \"heavy\" dependencies. Removing the Delphes dependency also would be great\r\n\r\nI think our main motivation was to build without iLCSoft packages\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> The delphes dependence was introduced in #61. Would you suggest removing the `TrackdNdxDelphesBased` alltogether? Tbh, I don't think it is used very much, but one never knows\r\n\r\nI can offer this https://github.com/key4hep/k4RecTracker/pull/104, which reimplements the functionality locally while fi\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "I've removed the wiretracker gate from this PR to make this mergeable right away.\r\n\r\nWe can discuss the Delphes dependency and if/how we want to remove it in #104"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Then why not put it also under the same flag (with a different name)? If it ends up being removed (seems like not soon?) then it keeps working and if not you can build without Delphes."
-                },
-                {
-                    "author": "madbaron",
-                    "body": "I guess it was a matter of taste, as I couldn't come up with a sensible flag name that would make sense outside of this conversation"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Ok, let's go with this as it is"
-                }
-            ],
-            "comments_total": 15,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Stating the obvious first: This will need propagation to the spack and/or lcgcmake packages.\n\nFor me nothing speaks against this. I suppose the other option would be to split off the digitisers into a separate repository or package where we have none of these dependencies. We discussed this a while \u2026"
-                }
-            ],
-            "reviews_total": 2
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "root2gltf",
-            "num": 16,
-            "title": "Declare depth as argument instead of config property",
-            "url": "https://github.com/HEP-FCC/root2gltf/pull/16",
-            "author": "apausa",
-            "mergedAt": "2026-09-28",
-            "mergedBy": "apausa",
-            "labels": [],
-            "body": "- Declare depth as argument instead of config property to enable full conversion \r\n- Rename remaining config properties\r\n- Provide updated config files",
-            "diff": {
-                "additions": 481,
-                "deletions": 209,
-                "files": 26
-            },
-            "files": [
-                "LICENSE",
-                "README.md",
-                "__tests__/index.test.ts",
-                "__tests__/lib/utils/generateConfig.test.ts",
-                "bin/cli.js",
-                "configs/ALLEGRO/ALLEGRO_o1_v01.config.json",
-                "configs/ALLEGRO/ALLEGRO_o1_v02.config.json",
-                "configs/ALLEGRO/ALLEGRO_o1_v03.config.json",
-                "configs/ALLEGRO/ALLEGRO_o2_v01.config.json",
-                "configs/ALLEGRO_o2_v01.config.json",
-                "configs/CLD/CLD_o2_v05.config.json",
-                "configs/CLD/CLD_o2_v06.config.json",
-                "configs/CLD/CLD_o2_v07.config.json",
-                "configs/CLD/CLD_o2_v08.config.json",
-                "configs/CLD/CLD_o3_v01.config.json",
-                "configs/CLD/CLD_o4_v05.config.json",
-                "configs/CLD_o4_v05.config.json",
-                "configs/IDEA/IDEA_o1_v01.config.json",
-                "configs/IDEA/IDEA_o1_v02.config.json",
-                "configs/ILD_FCCee/ILD_FCCee_v01.config.json",
-                "configs/ILD_FCCee/ILD_FCCee_v02.config.json",
-                "package.json",
-                "src/index.ts",
-                "src/lib/constants.ts",
-                "src/lib/types/converter.ts",
-                "src/lib/utils/generateConfig.ts"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
         }
     ]
 }
