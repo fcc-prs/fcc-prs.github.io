@@ -6,7 +6,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/669'>Alfa detector concept</a>",
             "author": "Edler1",
             "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-05",
+            "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -215,7 +215,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/434'>Fix the background event cursor in OverlayTiming</a>",
             "author": "madbaron",
             "createdAt": "2026-09-23",
-            "updatedAt": "2026-10-02",
+            "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -431,6 +431,17 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 112,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/112'>GNNTrackFinding: EdgeBuildingKnn, model loading errors and minor cleanup</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-04",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 72,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/72'>Expand support for 4D tracking</a>",
             "author": "jburzy",
@@ -475,23 +486,12 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 112,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/112'>GNNTrackFinding: EdgeBuildingKnn, model loading errors and minor cleanup</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-04",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
             "num": 109,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
             "author": "jbeirer",
             "createdAt": "2026-09-30",
             "updatedAt": "2026-10-05",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -607,6 +607,17 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 81,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
+            "author": "JonaDilg",
+            "createdAt": "2026-05-07",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 102,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
             "author": "andread3vita",
@@ -615,17 +626,6 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 81,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
-            "author": "JonaDilg",
-            "createdAt": "2026-05-07",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -1099,6 +1099,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 208,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/208'>feat(benchmarks): bump ALLEGRO o1, CLD o2 and IDEA o1 to their latest versions and continue the old versions' regression series</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-06",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1591,7 +1602,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-10-03",
             "updatedAt": "2026-10-05",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1602,7 +1613,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-10-03",
             "updatedAt": "2026-10-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1624,7 +1635,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1761,17 +1772,6 @@
             "assignees": ""
         },
         {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 115,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/115'>Update dependency marked to v18.1.0</a>",
-            "author": "renovate",
-            "createdAt": "2026-10-05",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>FCCAnalysesWeb",
             "num": 4,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalysesWeb/pull/4'>docs: add links for fit and extract commands</a>",
@@ -1832,8 +1832,8 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1626'>feat: add support for python geometry plugins</a>",
             "author": "wdconinc",
             "createdAt": "2026-04-30",
-            "updatedAt": "2026-07-08",
-            "mergeOk": "yes",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1855,7 +1855,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1866,7 +1866,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-09-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1876,8 +1876,8 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1678'>DDSim: outputconfig: fix example for multi-threaded running for user \u2026</a>",
             "author": "andresailer",
             "createdAt": "2026-09-17",
-            "updatedAt": "2026-09-22",
-            "mergeOk": "yes",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1888,18 +1888,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1687,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1687'>Remove filesystem detection and require GCC 9.1+</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-04",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
