@@ -2,6 +2,16 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 670,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/670'>VertexEndcap_detailed and VertexBarrel_detailed do not have geometry extensions with layer info</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-06",
+            "updatedAt": "2026-10-06",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 616,
             "title": "<a href='https://github.com/key4hep/k4geo/issues/616'>Colors defined in XML get lost</a>",
             "author": "apausa",
@@ -59,16 +69,6 @@
             "updatedAt": "2026-08-03",
             "labels": "bug \nALLEGRO",
             "assignees": "jmcarcell"
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 613,
-            "title": "<a href='https://github.com/key4hep/k4geo/issues/613'>Half the material budget in CLD vertex disks</a>",
-            "author": "armin-ilg",
-            "createdAt": "2026-07-09",
-            "updatedAt": "2026-07-15",
-            "labels": "bug \nCLD",
-            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4geo",
@@ -4196,7 +4196,7 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/60'>Dependency Dashboard</a>",
             "author": "renovate",
             "createdAt": "2026-08-20",
-            "updatedAt": "2026-10-05",
+            "updatedAt": "2026-10-06",
             "labels": "",
             "assignees": ""
         },
