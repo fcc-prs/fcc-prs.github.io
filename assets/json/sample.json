@@ -211,10 +211,10 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 434,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/434'>Fix the background event cursor in OverlayTiming</a>",
-            "author": "madbaron",
-            "createdAt": "2026-09-23",
+            "num": 440,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/440'>Fix a few OverlayTiming issues</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-06",
             "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
@@ -226,7 +226,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
             "createdAt": "2026-07-06",
-            "updatedAt": "2026-09-30",
+            "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -237,7 +237,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/372'>Add Gaudi Functional C++ Class Generator</a>",
             "author": "ianna",
             "createdAt": "2026-01-16",
-            "updatedAt": "2026-09-22",
+            "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -358,7 +358,7 @@
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/62'>make ordering match hepmc</a>",
             "author": "davidlange6",
             "createdAt": "2026-09-25",
-            "updatedAt": "2026-10-02",
+            "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -442,6 +442,28 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 108,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add outside-in and two-way CKF tracking</a>",
+            "author": "mlarson02",
+            "createdAt": "2026-09-29",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 115,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/115'>Require the edge feature phi scale to be pi</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-05",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 72,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/72'>Expand support for 4D tracking</a>",
             "author": "jburzy",
@@ -469,18 +491,7 @@
             "author": "madbaron",
             "createdAt": "2026-10-04",
             "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 115,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/115'>Require the edge feature phi scale to be pi</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-05",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -490,17 +501,6 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
             "author": "jbeirer",
             "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 108,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add outside-in and two-way CKF tracking</a>",
-            "author": "mlarson02",
-            "createdAt": "2026-09-29",
             "updatedAt": "2026-10-05",
             "mergeOk": "yes",
             "labels": "",
@@ -607,10 +607,43 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 81,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
-            "author": "JonaDilg",
-            "createdAt": "2026-05-07",
+            "num": 109,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/109'>Clean up TracksFromGenParticles and only extrapolate to the calorimeter when ExtrapolateToECal is set</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-05",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 110,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/110'>Fix uninitialized variable warnings</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-05",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 113,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/113'>[TrackMerger] Significance as new matching criterion</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2026-10-06",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 112,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/112'>[TrackFitter] Add reset of the global TGeoManager navigator before fitting each track</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-10-06",
             "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
@@ -622,29 +655,18 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/102'>TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-15",
-            "updatedAt": "2026-10-05",
+            "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 110,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/110'>Fix uninitialized variable warnings</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-05",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 109,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/109'>Clean up TracksFromGenParticles and only extrapolate to the calorimeter when ExtrapolateToECal is set</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-05",
-            "updatedAt": "2026-10-05",
+            "num": 81,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
+            "author": "JonaDilg",
+            "createdAt": "2026-05-07",
+            "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -842,7 +864,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-tutorials/pull/33'>Add Generate Gaudi Functionals tutorial</a>",
             "author": "ianna",
             "createdAt": "2026-09-22",
-            "updatedAt": "2026-09-25",
+            "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1036,6 +1058,17 @@
         },
         {
             "repo": "key4hep/<br>k4DetectorPerformance",
+            "num": 10,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/10'>TrackingValidation: fix truth parameters and matching, align with ACTS</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4DetectorPerformance",
             "num": 6,
             "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/6'>Add Di-Photon Performance Benchmark</a>",
             "author": "peter-mckeown",
@@ -1052,17 +1085,6 @@
             "author": "jbeirer",
             "createdAt": "2026-09-30",
             "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4DetectorPerformance",
-            "num": 10,
-            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/10'>TrackingValidation: fix truth parameters and matching, align with ACTS</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-02",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1099,17 +1121,6 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 208,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/208'>feat(benchmarks): bump ALLEGRO o1, CLD o2 and IDEA o1 to their latest versions and continue the old versions' regression series</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-06",
-            "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1601,7 +1612,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/286'>Make PairCaloClustersPi0 more efficient.</a>",
             "author": "scott-snyder",
             "createdAt": "2026-10-03",
-            "updatedAt": "2026-10-05",
+            "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1658,6 +1669,17 @@
             "createdAt": "2022-05-26",
             "updatedAt": "2022-05-26",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 402,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/402'>[WIP] [ALLEGRO] Proof of principle on using Si detailed digitiser in ALLEGRO</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-06",
+            "updatedAt": "2026-10-06",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1833,7 +1855,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1855,7 +1877,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1866,7 +1888,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-09-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1877,7 +1899,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-17",
             "updatedAt": "2026-10-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1888,7 +1910,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1920,7 +1942,7 @@
             "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/41'>Maia/theta energy</a>",
             "author": "Jullianwatts",
             "createdAt": "2026-08-24",
-            "updatedAt": "2026-10-05",
+            "updatedAt": "2026-10-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
