@@ -168,7 +168,7 @@ system = (
 print("Calling Claude API...", flush=True)
 with client.messages.stream(
     model="claude-opus-5-5",
-    max_tokens=8192,
+    max_tokens=16000,
     thinking={"type": "adaptive"},
     system=system,
     messages=[{"role": "user", "content": prompt}],
@@ -177,7 +177,7 @@ with client.messages.stream(
 
 if response.stop_reason == "max_tokens":
     raise RuntimeError(
-        f"Output was truncated at {response.usage.output_tokens} tokens (max_tokens={8192}). "
+        f"Output was truncated at {response.usage.output_tokens} tokens (max_tokens={16000}). "
         "Increase max_tokens or reduce the prompt."
     )
 
