@@ -2,6 +2,17 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 599,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/599'>FCChh TrackerOnly layout</a>",
+            "author": "tsulaiav",
+            "createdAt": "2026-05-22",
+            "updatedAt": "2026-10-07",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 669,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/669'>Alfa detector concept</a>",
             "author": "Edler1",
@@ -50,17 +61,6 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/615'>IDEA: Adding non-uniform muon-system builder and renaming muon system files</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
-            "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 599,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/599'>FCChh TrackerOnly layout</a>",
-            "author": "tsulaiav",
-            "createdAt": "2026-05-22",
             "updatedAt": "2026-09-03",
             "mergeOk": "yes",
             "labels": "",
@@ -222,17 +222,6 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 441,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/441'>Fix CollectionMerger copy mode, empty inputs and exception safety</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-07",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
             "num": 372,
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/372'>Add Gaudi Functional C++ Class Generator</a>",
             "author": "ianna",
@@ -365,6 +354,17 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
+            "num": 64,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/64'>Shift the event position in GaussSmearVertex and FlatSmearVertex so that beam particles are smeared too</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-07",
+            "updatedAt": "2026-10-07",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
             "num": 62,
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/62'>make ordering match hepmc</a>",
             "author": "davidlange6",
@@ -480,7 +480,7 @@
             "author": "jbeirer",
             "createdAt": "2026-09-30",
             "updatedAt": "2026-10-05",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -612,7 +612,7 @@
             "author": "andread3vita",
             "createdAt": "2026-10-06",
             "updatedAt": "2026-10-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -623,7 +623,7 @@
             "author": "s6anloes",
             "createdAt": "2026-10-01",
             "updatedAt": "2026-10-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -667,7 +667,7 @@
             "author": "BrieucF",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-08-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1608,33 +1608,22 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
+            "num": 403,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/403'>[ALLEGRO] add option to run conformal tracking with ALLEGRO Si hits in ALLEGRO reco sequence</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-07",
+            "updatedAt": "2026-10-07",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
             "num": 402,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/402'>[WIP] [ALLEGRO] Proof of principle on using Si detailed digitiser in ALLEGRO</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-06",
-            "updatedAt": "2026-10-06",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 398,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/398'>[ALLEGRO] Factorize the common Gaudi configuration between o1 and o2</a>",
-            "author": "BrieucF",
-            "createdAt": "2026-09-25",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 230,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/230'>[ALLEGRO] add flag to run pandora</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2025-01-15",
-            "updatedAt": "2026-09-25",
+            "updatedAt": "2026-10-07",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -1645,6 +1634,17 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/397'>[ALLEGRO] remove some hardcoded numbers</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-09-24",
+            "updatedAt": "2026-10-07",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 230,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/230'>[ALLEGRO] add flag to run pandora</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2025-01-15",
             "updatedAt": "2026-09-25",
             "mergeOk": "no",
             "labels": "",
@@ -1789,7 +1789,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1811,7 +1811,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1822,18 +1822,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-09-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1678,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1678'>DDSim: outputconfig: fix example for multi-threaded running for user \u2026</a>",
-            "author": "andresailer",
-            "createdAt": "2026-09-17",
-            "updatedAt": "2026-10-07",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1844,7 +1833,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1866,7 +1855,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-07",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1931,7 +1920,7 @@
             "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/46'>Add some user settable bits to the LCCaloHit</a>",
             "author": "tmadlener",
             "createdAt": "2026-09-24",
-            "updatedAt": "2026-09-24",
+            "updatedAt": "2026-10-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1966,6 +1955,17 @@
             "createdAt": "2026-08-20",
             "updatedAt": "2026-08-20",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>PandoraSDK",
+            "num": 40,
+            "title": "<a href='https://github.com/PandoraPFAOrg/PandoraSDK/pull/40'>Add a CI workflow that builds PandoraSDK and LCContent</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-07",
+            "updatedAt": "2026-10-07",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
