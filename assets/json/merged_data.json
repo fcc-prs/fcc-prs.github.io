@@ -1,6 +1,592 @@
 {
-    "updated_at": "2026-10-06T12:35:40Z",
+    "updated_at": "2026-10-07T12:28:56Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 440,
+            "title": "Fix a few OverlayTiming issues",
+            "url": "https://github.com/key4hep/k4FWCore/pull/440",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-07",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Fail initialization when UniqueIDGenSvc is unavailable.\r\n- Validate per-background-group property sizes (related: https://github.com/key4hep/k4FWCore/issues/439)\r\n- Correct the StartBackgroundEventIndex error and return StatusCode::FAILURE.\r\n- Reduce per-overlay-event logging from info to debug (currently it prints lots of messages)\r\n\r\nENDRELEASENOTES\r\n\r\nSome things found while reviewing other PRs.",
+            "diff": {
+                "additions": 17,
+                "deletions": 4,
+                "files": 1
+            },
+            "files": [
+                "k4FWCore/components/OverlayTiming.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 120,
+            "title": "Remove unused headers in CKFTrackingAlg",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/120",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-07",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Reduce CKFTrackingAlg.cpp compile memory by removing unused ACTS headers.\r\n\r\nENDRELEASENOTES\r\n\r\nMeasured peak compiler RSS decreased from approximately 1564 MiB to 1068 MiB (32%) for this translation unit.\r\n\r\nThere will be more PRs like this because it seems depending on what you do, you can make CI crash when building k4ActsTracking with the 2 GB RAM / core we are given.",
+            "diff": {
+                "additions": 0,
+                "deletions": 14,
+                "files": 1
+            },
+            "files": [
+                "k4ActsTracking/src/components/CKFTrackingAlg.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 122,
+            "title": "Remove ACTSSeededCKFTrackingAlg",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/122",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-07",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Remove the unused legacy algorithm and its now-unused `ACTSAlgBase`, `GeometryIdMappingTool` and `GeometryIdSelector` support, as requested in [this comment](https://github.com/key4hep/k4ActsTracking/pull/121#issuecomment-6032509647).\r\n\r\nBEGINRELEASENOTES\r\n - Remove `ACTSSeededCKFTrackingAlg` and its unused geometry helpers. Use `CKFTrackingAlg` instead.\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 2013,
+                "files": 11
+            },
+            "files": [
+                "README.md",
+                "k4ActsTracking/CMakeLists.txt",
+                "k4ActsTracking/include/k4ActsTracking/ACTSAlgBase.hxx",
+                "k4ActsTracking/include/k4ActsTracking/ACTSSeededCKFTrackingAlg.hxx",
+                "k4ActsTracking/include/k4ActsTracking/GeometryIdMappingTool.hxx",
+                "k4ActsTracking/include/k4ActsTracking/GeometryIdSelector.hxx",
+                "k4ActsTracking/src/components/ACTSAlgBase.cxx",
+                "k4ActsTracking/src/components/ACTSSeededCKFTrackingAlg.cxx",
+                "k4ActsTracking/src/components/CKFTrackingAlg.cpp",
+                "k4ActsTracking/src/components/GeometryIdMappingTool.cxx",
+                "k4ActsTracking/src/components/GeometryIdSelector.cxx"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "It probably doesn't matter too much, but it might have been nice to have a tag with this still in before removing it entirely."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I think v00-05 is perfectly fine for that"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 113,
+            "title": "GNNTrackFinding: remove dead and duplicated code",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/113",
+            "author": "madbaron",
+            "mergedAt": "2026-10-07",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- GNNTrackFinding: remove the unused `mlutils::{flatten,getDimensions,totalSize}` helpers and templated `runInference` overloads from `ONNXInferenceModel.h`.\r\n- GNNTrackFinding: use native Gaudi list properties instead of comma-separated strings. Old string configurations are rejected at configuration time. `parseList` / `parseMultiList` are removed.\r\n- Add a `HostTensorView` helper that replaces three copies of the host-copy code in the pipeline stages.\r\n- Remove the edge deduplication from the edge ordering and from `CCAndWalkTrackBuilding`. \r\n\r\nENDRELEASENOTES\r\n\r\nDepends on #115",
+            "diff": {
+                "additions": 127,
+                "deletions": 404,
+                "files": 10
+            },
+            "files": [
+                "GNNTrackFinding/README.md",
+                "GNNTrackFinding/include/ONNXInferenceModel.h",
+                "GNNTrackFinding/options/runGNNTrackFinding.py",
+                "GNNTrackFinding/src/CCAndWalkTrackBuilding.cpp",
+                "GNNTrackFinding/src/ClassifiedEdgePrinting.cpp",
+                "GNNTrackFinding/src/GNNTrackFinder.cpp",
+                "GNNTrackFinding/src/GNNTrackFinder.h",
+                "GNNTrackFinding/src/HostTensorView.h",
+                "GNNTrackFinding/src/PaddedEdgeRemoval.cpp",
+                "test/unittests/ONNXInferenceModelTests.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Haven't gone through this full yet, but I spotted one thing that is really puzzling me now, although I was the one who wrote the thing originally..."
+                }
+            ],
+            "reviews_total": 6
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 109,
+            "title": "Clean up TracksFromGenParticles and only extrapolate to the calorimeter when ExtrapolateToECal is set",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/109",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-07",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- TracksFromGenParticles: fix a bug where, with `ExtrapolateToECal=False`, the ECAL geometry members were left uninitialized but still read for every track, so tracks could randomly get calorimeter track states extrapolated with garbage geometry. All the members are now default-initialized and the extrapolation is only done when `ExtrapolateToECal` is set.\n- TracksFromGenParticles: return `StatusCode::FAILURE` with an error message instead of throwing when the calorimeter geometry lookup fails, remove the redundant `retrieved` flag and use separate pointers for the DRC, barrel and endcap extensions.\n- TracksFromGenParticles: store the system encoder as a member instead of a raw pointer, use a 64-bit type for the cellID (it was truncated to `uint`) and add missing includes\u2026",
+            "diff": {
+                "additions": 74,
+                "deletions": 74,
+                "files": 1
+            },
+            "files": [
+                "Tracking/components/TracksFromGenParticles.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "SanghyunKo",
+                    "state": "APPROVED",
+                    "body": "LGTM"
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GaudiPandora",
+            "num": 61,
+            "title": "Require EDM4hep 1.0",
+            "url": "https://github.com/key4hep/k4GaudiPandora/pull/61",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-07",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Require EDM4hep 1.0 and remove the pre-1.0 cluster phi compatibility check.\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 1,
+                "deletions": 6,
+                "files": 2
+            },
+            "files": [
+                "CMakeLists.txt",
+                "k4GaudiPandora/src/DDPfoCreator.cc"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 391,
+            "title": "[IDEA] Set shared flag to false if single thread",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/391",
+            "author": "andread3vita",
+            "mergedAt": "2026-10-07",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Dear All,\r\nI open this PR to address [this](https://github.com/AIDASoft/DD4hep/issues/1677) issue. This PR is a follow-up of [this other PR](https://github.com/AIDASoft/DD4hep/pull/1678).\r\n\r\nCheers,\r\nAndrea",
+            "diff": {
+                "additions": 13,
+                "deletions": 5,
+                "files": 4
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/SteeringFile_ALLEGRO_o1_v03.py",
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/SteeringFile_ALLEGRO_o2_v01.py",
+                "FCCee/FullSim/IDEA/IDEA_o1_v03/SteeringFile_IDEA_o1_v03.py",
+                "FCCee/FullSim/IDEA/IDEA_o2_v01/SteeringFile_IDEA_o2_v01.py"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @andread3vita \r\n\r\nare you sure that we need these changes for ALLEGRO?\r\nWhen I modify the ALLEGRO steering script to use\r\n\r\nSIM.numberOfThreads = 2\r\n\r\nthen, without any other modifications, I get in output log\r\n`DDSim            INFO Enabled ROOT thread safety for MT mode\r\n`\r\nand after this messa\u2026"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> Hi @andread3vita\r\n> \r\n> are you sure that we need these changes for ALLEGRO? When I modify the ALLEGRO steering script to use\r\n> \r\n> SIM.numberOfThreads = 2\r\n> \r\n> then, without any other modifications, I get in output log `DDSim INFO Enabled ROOT thread safety for MT mode ` and after this message\u2026"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "Now this PR depends on https://github.com/AIDASoft/DD4hep/pull/1678 so it can be approved only once the other one is approved and merged. This is due to the last commit, where I have changed the kernel used in the plugin"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "Hi @andread3vita , could you apply the fix that you have done in https://github.com/key4hep/k4geo/pull/665, here as well?"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "Hi @giovannimarchiori ,\r\ncould we re-run the tests?\r\nI think the failure was a temporary problem with the nightly stack, unrelated to this PR.\r\nIt would be good to have this one merged"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "Do you think we can close this PR?"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Do you mean merge? Why close it?"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> Do you mean merge? Why close it?\r\n\r\nah yes, merge"
+                }
+            ],
+            "comments_total": 8,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 434,
+            "title": "Fix the background event cursor in OverlayTiming",
+            "url": "https://github.com/key4hep/k4FWCore/pull/434",
+            "author": "madbaron",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Follow-up to https://github.com/key4hep/k4FWCore/pull/413, where these two issues came up. They predate that PR, so they are fixed here against `main`.\r\n\r\n`StartBackgroundEventIndex` was applied inside the event loop, so every group was reset to that index for every event and the same background events were overlaid over and over. The cursors are now positioned once in `initialize()`.\r\n\r\n`AllowReusingBackgroundFiles` was never enforced: the cursor was wrapped around with `%` right after each read, so the check for running out of background events could never trigger. The cursor now only wraps around when the next event is requested, and only if reusing is allowed. Otherwise the job fails with a message naming the group. Jobs that relied on the silent reuse need to set `AllowReusingBackgrou\u2026",
+            "diff": {
+                "additions": 165,
+                "deletions": 21,
+                "files": 6
+            },
+            "files": [
+                "doc/OverlayTiming.md",
+                "k4FWCore/components/OverlayTiming.cpp",
+                "k4FWCore/components/OverlayTiming.h",
+                "test/k4FWCoreTest/CMakeLists.txt",
+                "test/k4FWCoreTest/options/TestOverlayTimingBackgroundCursor.py",
+                "test/k4FWCoreTest/scripts/CheckOutputFiles.py"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "Just a note that I can't retry the downstream build, but the failure doesn't look related"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Downstream build looks like it was killed for using too much memory (or other resources)."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Hi @tmadlener, could we merge this and move ahead to the next bit?"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Generally seems to be doing what it claims, but I am not sure I fully get what the test is doing."
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "This looks good to me now that I understand what the test is doing \ud83d\ude05. I have put some observations about `OverlayTiming` unrelated to this PR into #439."
+                }
+            ],
+            "reviews_total": 8
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 115,
+            "title": "Require the edge feature phi scale to be pi",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/115",
+            "author": "madbaron",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- GNNTrackFinding: require `EdgeFeatureScales`, with a phi scale of pi (1% tolerance), when `ComputeEdgeFeatures` is set. The `dphi` wrap-around assumes phi is scaled by pi (ACORN / Acts `makeEdgeFeatures()` convention), so any other phi scale, or none, gave wrong `dphi`, `phislope` and `rphislope`. Such configurations now fail in `initialize()`.\n- README: document that the phi segmentation wraps around `phi = +/- pi` when `PhiOverlap` is non-zero, replacing the outdated note that it does not.\n\nENDRELEASENOTES\n\nDepends on #112. Split off from #112 as requested in https://github.com/key4hep/k4ActsTracking/pull/112#issuecomment-5990140559.\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
+            "diff": {
+                "additions": 54,
+                "deletions": 16,
+                "files": 5
+            },
+            "files": [
+                "GNNTrackFinding/README.md",
+                "GNNTrackFinding/src/GNNTrackFinder.cpp",
+                "GNNTrackFinding/src/GNNTrackFinder.h",
+                "GNNTrackFinding/src/OnnxMetricLearning.cpp",
+                "GNNTrackFinding/src/OnnxMetricLearning.h"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "> Conceptual question: Why have the feature scale for `phi` configurable at all if we fix it to `pi` in any case? Can we not just inject it into the right place internally after we have figured out if / where the `phi` feature is in the feature vector?\r\n\r\nI did ask myself a similar question. I kept \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Yeah that is a fair point."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Let's see what happens if I do *Squash and merge stack **`2`*** now :pray:"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> Let's see what happens if I do _Squash and merge stack **`2`**_ now \ud83d\ude4f\r\n\r\nOh no, I thought you wanted to make the stack very high and then set your personal record for PR merges/s!"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Now that we know how things work we can go for records. Current high score: 2 :joy:"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Conceptual question: Why have the feature scale for `phi` configurable at all if we fix it to `pi` in any case? Can we not just inject it into the right place internally after we have figured out if / where the `phi` feature is in the feature vector?"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "A few minor comments, mainly about formatting outputs / READMEs in the end."
+                }
+            ],
+            "reviews_total": 6
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 112,
+            "title": "GNNTrackFinding: EdgeBuildingKnn, model loading errors and minor cleanup",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/112",
+            "author": "madbaron",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- `EdgeBuildingKnn` is now an `int` and must be > 0. Its documentation now says that only the CUDA (FRNN) edge building caps the neighbours at this value; the CPU KD-tree only uses it to reserve memory.\n- ONNX model loading errors now carry the model path and the onnxruntime message and reach the Gaudi log, instead of being printed to stderr.\n- Fix CUDA-targeted embedding outputs in host memory staying on the CPU (latent, not reachable with the current output binding).\n- README: document that overlapping segments can produce duplicate tracks, and remove outdated items from the future-improvements list.\n\nENDRELEASENOTES\n\nDepends on #111. The phi wrap-around changes that were originally part of this PR are now in #115.",
+            "diff": {
+                "additions": 53,
+                "deletions": 39,
+                "files": 10
+            },
+            "files": [
+                "GNNTrackFinding/README.md",
+                "GNNTrackFinding/include/ONNXInferenceModel.h",
+                "GNNTrackFinding/options/runGNNTrackFinding.py",
+                "GNNTrackFinding/src/CCAndWalkTrackBuilding.cpp",
+                "GNNTrackFinding/src/GNNTrackFinder.cpp",
+                "GNNTrackFinding/src/GNNTrackFinder.h",
+                "GNNTrackFinding/src/ONNXInferenceModel.cpp",
+                "GNNTrackFinding/src/OnnxMetricLearning.cpp",
+                "GNNTrackFinding/src/OnnxMetricLearning.h",
+                "test/unittests/ONNXInferenceModelTests.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Apologies in advance for being annoying here, but can we split off some of the things here into separate commits / PRs? It would make it a bit easier to reason about why things are the way they are in the future. I think all the misc fixes are OK to stay in one, but the fixes related to the phi wrap\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> Apologies in advance for being annoying here, but can we split off some of the things here into separate commits / PRs? It would make it a bit easier to reason about why things are the way they are in the future. I think all the misc fixes are OK to stay in one, but the fixes related to the phi wr\u2026"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 5
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-dev-utils",
+            "num": 30,
+            "title": "Add HEP-FCC repositories to EXCLUDE list in check-commits-after-tag.sh",
+            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/30",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "scripts/check-commits-after-tag.sh"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-dev-utils",
+            "num": 29,
+            "title": "Remove CEPC from commit checks",
+            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/29",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Remove CEPC from the repositories checked for commits after the latest tag.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 1,
+                "deletions": 5,
+                "files": 1
+            },
+            "files": [
+                "scripts/check-commits-after-tag.sh"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 102,
+            "title": "TrackFinder: remove the track that stores the non-clustered hits + refactorization of the gaudi functional",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/102",
+            "author": "andread3vita",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n\r\n- Refactored GGTFTrackFinder by splitting the reconstruction workflow into dedicated functions for input preparation, ONNX inference, and track building, improving readability and maintainability.\r\n- Introduced a HitBatch structure to consistently store flattened model inputs together with the corresponding hit type, collection index, and hit index.\r\n- Fixed the bookkeeping of wire-hit collection indices, which previously caused hits from multiple wire input collections to be associated with the wrong collection.\r\n- Added filtering of noise/unclustered hits: cluster IDs less than or equal to zero no longer produce output tracks, and only successfully reconstructed tracks are written to the output collection.\r\n- Removed the use of track type 1 when saving reconstructed \u2026",
+            "diff": {
+                "additions": 306,
+                "deletions": 332,
+                "files": 4
+            },
+            "files": [
+                "Tracking/components/GGTFTrackFinder.cpp",
+                "Tracking/include/utils.h",
+                "Tracking/src/utils.cpp",
+                "Tracking/test/testTrackFitter/runTestTrackFitter.py"
+            ],
+            "comments": [
+                {
+                    "author": "andread3vita",
+                    "body": "Once this PR is merged, I\u2019ll open a follow-up PR to remove the ONNX dependency and use the PyTorch model directly. This will ensure consistent numerical results between the Python and C++ implementations."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Maybe you could expand on what else has changed? Hundreds of lines have been changed yet it seems like there was only a minor change"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> Maybe you could expand on what else has changed? Hundreds of lines have been changed yet it seems like there was only a minor change\r\n\r\nI\u2019ve updated the release notes to make the changes clearer"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Is there any validation with this? Do the results change or not and is that expected?"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> Is there any validation with this? Do the results change or not and is that expected?\r\n\r\nI validated the implementation by checking if the tracks reconstructed with the old and new versions were identical. They matched exactly, except for cluster 0, which is no longer stored in `GGTFTracks`."
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [
+                {
+                    "author": "SanghyunKo",
+                    "state": "COMMENTED",
+                    "body": "The refactoring looks okay, but I think the release note understates the actual changes. Could the release notes also mention the fixes that come with it?\n* The wire collection index that was never incremented (wrong collection with more than one wire input)\n* The leaked ONNX input/output names\n* Th\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "state": "COMMENTED",
+                    "body": "This review was done by Claude (AI), at @jmcarcell's request. I read the code but didn't build or run anything.\n\nThe main issues are the track type (all tracks now type 0, which the fitter treats as \"skip\" with the old config) and the unstable sort inside clusters; the rest are smaller."
+                }
+            ],
+            "reviews_total": 25
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 110,
+            "title": "Fix uninitialized variable warnings",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/110",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Fix uninitialized variable warnings in VTXdigitizerDetailed\n\nENDRELEASENOTES\n\nFixed these warnings by initializing dimX, dimY, and dimZ to 0.0:\n\n```\nk4RecTracker/VTXdigiDetailed/src/VTXdigitizerDetailed.cpp:592:14: warning: variable 'dimX' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]\n  592 |   } else if (std::string(solid.type()) == \"TGeoTrd2\") {\n      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nk4RecTracker/VTXdigiDetailed/src/VTXdigitizerDetailed.cpp:606:21: note: uninitialized use occurs here\n  606 |   float widthMin = -dimX / 2. / dd4hep::mm, widthMax = dimX / 2. / dd4hep::mm;\n      |                     ^~~~\nk4RecTracker/VTXdigiDetailed/src/VTXdigitizerDetailed.cpp:592:10: note: remove the 'if' if its condition is a\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 2,
+                "files": 2
+            },
+            "files": [
+                "Tracking/include/genfit_interfaces/GenfitMaterialInterface.h",
+                "VTXdigiDetailed/src/VTXdigitizerDetailed.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 209,
+            "title": "feat(benchmarks): automate detector version bumps from nightly",
+            "url": "https://github.com/key4hep/k4Bench/pull/209",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **User description**\n## Summary\r\n\r\nAutomates detector version bumps in k4Bench based on the detector versions available in the Key4hep nightly.\r\n\r\nThe new workflow detects newer geometry versions, prepares the corresponding benchmark configuration updates, and opens one PR per detector family. It also keeps the regression lineage information up to date so benchmark comparisons continue to use the appropriate predecessor.\r\n\r\nDetector-bump PRs are deliberately kept reviewable rather than being merged automatically. CI performs a lightweight one-event simulation of the changed geometry/steering combinations to catch broken geometry paths, incompatible steering files, or simulation startup failures before merging.\r\n\r\n## Main changes\r\n\r\n- add tooling to detect ne\u2026",
+            "diff": {
+                "additions": 1103,
+                "deletions": 26,
+                "files": 18
+            },
+            "files": [
+                ".github/actions/setup-detector-bump/action.yml",
+                ".github/benchmarks/IDEA_o2_v01.yml",
+                ".github/scripts/bump_detectors.py",
+                ".github/scripts/smoke_benchmarks.py",
+                ".github/workflows/benchmark-detector.yml",
+                ".github/workflows/ci.yml",
+                ".github/workflows/detector-bump.yml",
+                ".github/workflows/nightly.yml",
+                "docs/reference/configuration-reference.md",
+                "docs/reference/file-formats.md",
+                "k4bench/regression/lineage.py",
+                "tests/integration/test_geometry_patching.py",
+                "tests/unit/test_ai_pr_review.py",
+                "tests/unit/test_bump_detectors.py",
+                "tests/unit/test_dashboard_ui_state.py",
+                "tests/unit/test_regression_lineage.py",
+                "tests/unit/test_regression_report.py",
+                "tests/unit/test_smoke_benchmarks.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/209?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>Recommended focus are\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "k4Bench",
@@ -52,7 +638,7 @@
             "comments": [
                 {
                     "author": "codecov-commenter",
-                    "body": "### :x: 2 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 2069 | 2 | 2067 | 24 |\n<details><summary>View the top 2 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_geometry_patching.py::test_every_nightly_geom\u2026"
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/208?dropdown=cover\u2026"
                 },
                 {
                     "author": "github-actions",
@@ -60,14 +646,18 @@
                 },
                 {
                     "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/904fe7808e97fb0d37d2c1acd35f61b9d08cebb9)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/f1cf7d7d06259710044786b0aad7c8c0fb7ab70b)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
                 },
                 {
                     "author": "github-actions",
                     "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/208#issuecomment-6013807611)** updated to latest commit https://github.com/key4hep/k4Bench/commit/904fe7808e97fb0d37d2c1acd35f61b9d08cebb9"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/208#issuecomment-6013807611)** updated to latest commit https://github.com/key4hep/k4Bench/commit/f1cf7d7d06259710044786b0aad7c8c0fb7ab70b"
                 }
             ],
-            "comments_total": 4,
+            "comments_total": 5,
             "reviews": [],
             "reviews_total": 0
         },
@@ -147,6 +737,65 @@
             "comments_total": 3,
             "reviews": [],
             "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "k4RecCalorimeter",
+            "num": 289,
+            "title": "Fix unused lambda capture warning",
+            "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/289",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Fix unused lambda capture warning\r\n\r\nENDRELEASENOTES\r\nFixes:\r\n```\r\n/k4RecCalorimeter/RecFCCeeCalorimeter/src/components/CaloDrivenClusterSeeding.cpp:74:34: warning: lambda capture 'this' is not used [-Wunused-lambda-capture]\r\n   74 |   auto isLocalMax = [&energyMap, this](const uint64_t cellID, const float energy,\r\n      |                                ~~^~~\r\n```",
+            "diff": {
+                "additions": 1,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "RecFCCeeCalorimeter/src/components/CaloDrivenClusterSeeding.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "k4RecCalorimeter",
+            "num": 286,
+            "title": "Make PairCaloClustersPi0 more efficient.",
+            "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/286",
+            "author": "scott-snyder",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "PairCaloClustersPi0 tries to find all pairs of clusters with invariant mass consistent with the pi0 mass, subject to the constraint that no cluster is used by more than one pair.  It was doing this combinatoric problem by exhaustive search, which was exponential in both space and time. As a result, it was basically impossible to use the algorithm on hadronic events, as it would gobble up all available virtual memory.\r\n\r\nThe combinatoric problem is, however, equivalent to that of finding a maximum matching of a graph (<https://en.wikipedia.org/wiki/Matching_(graph_theory)>). Boost.graph supplies an algorithm (Galil, https://doi.org/10.1145/6462.6502) that solves this in N^3 time (and i think linear space). Rewrite this algorithm to use this.\r\n\r\n(A N^2 logN algorithm is known but not impleme\u2026",
+            "diff": {
+                "additions": 252,
+                "deletions": 258,
+                "files": 3
+            },
+            "files": [
+                "RecCalorimeter/CMakeLists.txt",
+                "RecCalorimeter/src/components/PairCaloClustersPi0.cpp",
+                "RecCalorimeter/src/components/PairCaloClustersPi0.h"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Thank you @scott-snyder . you didn't write it in your description but I guess that you checked on some not-too-busy event that you get the same pairs from the two versions of the algorithm?"
+                },
+                {
+                    "author": "scott-snyder",
+                    "body": "Yeah... actually i added cuts on DR and E until the existing algorithm would actually function on hadronic events, and then verified that the results were the same with this change, on both di-electron and hadronic events, modulo the output ordering.   With this change, the pi0 candidates are sorted\u2026"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 1
         },
         {
             "org": "hep-fcc",
@@ -246,6 +895,68 @@
             "comments_total": 2,
             "reviews": [],
             "reviews_total": 0
+        },
+        {
+            "org": "PandoraPFAOrg",
+            "repo": "LCContent",
+            "num": 41,
+            "title": "Add 2D(theta, energy)-dependent energy correction plugins",
+            "url": "https://github.com/PandoraPFAOrg/LCContent/pull/41",
+            "author": "Jullianwatts",
+            "mergedAt": "2026-10-06",
+            "mergedBy": "madbaron",
+            "labels": [],
+            "body": "These commits are from @trholmes. I am submitting a PR because downstream\r\nwork depends on them.\r\n\r\nAdds two energy correction plugins that look up a correction factor in a 2D\r\n(theta, energy) table instead of applying one flat constant per subdetector:\r\n\r\n- PhotonEMNonLinearity, electromagnetic\r\n- HadronicThetaEnergyBinned, hadronic\r\n\r\nThe correction is applied inside Pandora, after clustering and before PFOs are\r\nbuilt, so cluster energies, PFO energies, and jets all come out consistent and\r\nnothing has to be applied by hand downstream.\r\n\r\nAlso adds a three-argument RegisterNonLinearityEnergyCorrection overload taking\r\nthe bin edges and the table. The existing one-argument overload is unchanged,\r\nand with no table supplied the plugins fall back to it, which is the identity.\r\nSo this is a\u2026",
+            "diff": {
+                "additions": 745,
+                "deletions": 21,
+                "files": 14
+            },
+            "files": [
+                "include/LCContent.h",
+                "include/LCPlugins/LCEnergyCorrectionPlugins.h",
+                "include/LCPlugins/LCParticleIdPlugins.h",
+                "include/LCTopologicalAssociation/ConeBasedMergingAlgorithm.h",
+                "include/LCTopologicalAssociation/ProximityBasedMergingAlgorithm.h",
+                "include/LCTrackClusterAssociation/TrackClusterAssociationAlgorithm.h",
+                "src/LCContent.cc",
+                "src/LCPlugins/LCEnergyCorrectionPlugins.cc",
+                "src/LCPlugins/LCParticleIdPlugins.cc",
+                "src/LCTopologicalAssociation/ConeBasedMergingAlgorithm.cc",
+                "src/LCTopologicalAssociation/ProximityBasedMergingAlgorithm.cc",
+                "src/LCTrackClusterAssociation/TrackClusterAssociationAlgorithm.cc",
+                "test/CMakeLists.txt",
+                "test/LCThetaEnergyCorrectionTest.cc"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "Thanks for upstreaming these!\r\nI've confirmed the no-op claim holds: all four new XML flags default to `false`, and with no table registered the lookup returns the input energy unchanged.\r\n\r\nI tested this in `ghcr.io/muoncollidersoft/mucoll-sim-ubuntu24:post_3_1_test`, against PandoraSDK 3.4.2.\r\nThi\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I'll add a couple of tests for the new correction lookup and will take care of the deduplication of GetCorrection. \r\n\r\nI'm happy to do more if you need help!"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "One additional note before I forget. Once we settle on the coding details of the PR, we should document the xml keys in the docs"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I'd pull the trigger on Monday afternoon, unless something comes up in the meantime"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "It looks like everything from the last round was cleared up, so I'd set another \"merge timer\" for tomorrow's afternoon"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "The downstream-build CI failure is unrelated to this PR (see for example the nightly CI of k4gaudipandora https://github.com/key4hep/k4GaudiPandora/actions/workflows/key4hep-build.yaml which has been failing in the same way for a while, and relies on LCContent without the changes of this PR)."
+                }
+            ],
+            "comments_total": 6,
+            "reviews": [],
+            "reviews_total": 69
         },
         {
             "org": "key4hep",
@@ -1975,122 +2686,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4MarlinWrapper",
-            "num": 489,
-            "title": "Remove the deprecated inputReader module",
-            "url": "https://github.com/key4hep/k4MarlinWrapper/pull/489",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-30",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Remove the deprecated `inputReader` module, which uses `PodioInput` that has been removed. Use `k4MarlinWrapper.io_helpers` instead.\r\n\r\nENDRELEASENOTES\r\n\r\nThis has been flagged by tests that import everything in LCG stacks (probably only now because the location of the python folder has changed since Gaudi 41.0).",
-            "diff": {
-                "additions": 0,
-                "deletions": 72,
-                "files": 1
-            },
-            "files": [
-                "k4MarlinWrapper/python/k4MarlinWrapper/inputReader.py"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Do we still need to tag k4MarlinWrapper for the release?"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Nope, nothing has happened"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "OK. Not sure how long this deprecation warning has been there. But IIUC, this will no longer work in any case with the upcoming release, because the `PodioInput` is gone from `k4FWCore`."
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "EDM4hep",
-            "num": 525,
-            "title": "Apply include-what-you-use suggestions",
-            "url": "https://github.com/key4hep/EDM4hep/pull/525",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-30",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Apply the changes proposed by include-what-you-use, plus some manual clean up.\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 79,
-                "deletions": 12,
-                "files": 20
-            },
-            "files": [
-                "edm4hep/schema_evolution/src/OldLinkEvolution.cc",
-                "include/edm4hep/GeneratorToolInfo.h",
-                "test/read_events.h",
-                "test/test_rdf.cc",
-                "test/utils/test_covmatrix_utils.cpp",
-                "test/utils/test_extra_code.cpp",
-                "test/utils/test_kinematics.cpp",
-                "test/utils/test_pid_handler.cpp",
-                "test/utils/test_vector_utils.cpp",
-                "test/write_events.h",
-                "tools/include/edm4hep2json.hxx",
-                "tools/src/edm4hep2json.cxx",
-                "utils/include/edm4hep/utils/ParticleIDUtils.h",
-                "utils/include/edm4hep/utils/bit_utils.h",
-                "utils/include/edm4hep/utils/cov_matrix_utils.h",
-                "utils/include/edm4hep/utils/kinematics.h",
-                "utils/include/edm4hep/utils/vector_utils.h",
-                "utils/src/ParticleIDUtils.cc",
-                "utils/src/TrackUtils.cc",
-                "utils/src/dataframe.cc"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 2
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4FWCore",
-            "num": 438,
-            "title": "Use the Gaudi major version check for the empty type list",
-            "url": "https://github.com/key4hep/k4FWCore/pull/438",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-30",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Go back to checking only the Gaudi major version (41) for `EmptyTypeList` in `Consumer.h` and `Transformer.h`. The v41r1 requirement from #436 is only needed for the EventContext data handle API.\n\nENDRELEASENOTES\n\nThis fixes the warnings when building against Gaudi v41r0.",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                "k4FWCore/include/k4FWCore/Consumer.h",
-                "k4FWCore/include/k4FWCore/Transformer.h"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "So basically this was my mistake in https://github.com/key4hep/k4FWCore/pull/436; when I changed it in the other cases where the change in Gaudi didn't make it to 41.0, I also included these ones that were related to a different change (https://github.com/key4hep/k4FWCore/pull/410). The downside is \u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Have there been upstream changes in Gaudi that require this? Or why is this now necessary after #436?"
-                }
-            ],
-            "reviews_total": 2
-        },
-        {
-            "org": "key4hep",
             "repo": "key4hep-spack",
             "num": 930,
             "title": "Update k4_local_repo for the Gaudi 41 install layout",
@@ -2404,30 +2999,6 @@
             "reviews_total": 0
         },
         {
-            "org": "key4hep",
-            "repo": "DDML",
-            "num": 28,
-            "title": "Update Key4hep CI workflow to latest state",
-            "url": "https://github.com/key4hep/DDML/pull/28",
-            "author": "tmadlener",
-            "mergedAt": "2026-09-30",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Switch to latest version of Key4hep CI\r\n\r\nENDRELEASENOTES\r\n\r\nFixes #27",
-            "diff": {
-                "additions": 12,
-                "deletions": 27,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/key4hep.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "hep-fcc",
             "repo": "k4RecCalorimeter",
             "num": 285,
@@ -2508,74 +3079,6 @@
                 }
             ],
             "reviews_total": 10
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4geo",
-            "num": 668,
-            "title": "Make dd4hep2root available when sourcing key4hep",
-            "url": "https://github.com/key4hep/k4geo/pull/668",
-            "author": "apausa",
-            "mergedAt": "2026-09-29",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "To ease the review process, please consider the following before opening a pull request:\r\n- [x] the code is sufficiently well documented (e.g. inline comments)\r\n- [x] the relevant README(s) were updated. See e.g. https://github.com/key4hep/k4geo/blob/main/detector/calorimeter/README.md or https://github.com/key4hep/k4geo/blob/main/FCCee/IDEA/compact/README.md\r\n- [x] the code is covered by tests. See https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\r\n- [x] the PR source branch has been rebased (`--ff-only`) to `k4geo/main`\r\n- [x] the PR does not contain any additions or modifications that do not belong to it\r\n- [x] The release notes below contain a succinct and comprehensive description of the changes that are sufficiently self-explanatory\r\n\r\nIf you are modifying detector dimen\u2026",
-            "diff": {
-                "additions": 3,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "The downside is that someone looking for where this lives (for example, from a view that puts all `/bin` folders in one) may think it belongs to DD4hep because of the name"
-                },
-                {
-                    "author": "apausa",
-                    "body": "Just checked that everything works after applying the suggested changes. Thank you for the contribution @andresailer! :)"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 2
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4FWCore",
-            "num": 437,
-            "title": "Install the python package to GAUDI_INSTALL_PYTHONDIR",
-            "url": "https://github.com/key4hep/k4FWCore/pull/437",
-            "author": "jmcarcell",
-            "mergedAt": "2026-09-29",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Install the k4FWCore python package to `${GAUDI_INSTALL_PYTHONDIR}` instead of the hardcoded `python` directory, so that it ends up in the same directory as the `k4FWCorePluginsConf.py` generated by Gaudi.\r\n\r\nENDRELEASENOTES\r\n\r\nThe python sources of k4FWCore are installed to a hardcoded `python/k4FWCore`, but the `k4FWCorePluginsConf.py` generated by Gaudi is installed to `${GAUDI_INSTALL_PYTHONDIR}/k4FWCore`. Up to now both were the same directory because Gaudi defaulted `GAUDI_INSTALL_PYTHONDIR` to `python`.\r\n\r\nGaudi v41r0 changes the install layout: plugins (and their `.confdb`/`.components` files) are now installed to `lib/gaudi-plugins` (https://gitlab.cern.ch/gaudi/Gaudi/-/merge_requests/1928), and `GAUDI_INSTALL_PYTHONDIR` defaults to `lib/pythonX.Y/site-packag\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "python/CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "It seems to have there since at least 2020. Only now (since https://gitlab.cern.ch/gaudi/Gaudi/-/merge_requests/1955), the default value has been changed. I'll merge this today since the build today is broken, basically nothing with the IOSvc can run because of this."
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Which version of Gaudi introduced the `GAUDI_INSTALL_PYTHONDIR`? Resp. do we need to define a default value of `python` in case it's not set yet?"
-                }
-            ],
-            "reviews_total": 1
         }
     ]
 }
