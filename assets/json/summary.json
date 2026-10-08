@@ -1,66 +1,391 @@
 {
-  "updated_at": "2026-10-07T14:22:28Z",
-  "period_start": "2026-09-30",
-  "period_end": "2026-10-07",
+  "updated_at": "2026-10-08T14:21:01Z",
+  "period_start": "2026-10-01",
+  "period_end": "2026-10-08",
   "summary": [
-    "- **[key4hep/k4FWCore#434](https://github.com/key4hep/k4FWCore/pull/434)** — Fixes two long-standing `OverlayTiming` bugs. `StartBackgroundEventIndex` was reapplied every event, so the same background events were overlaid repeatedly. `AllowReusingBackgroundFiles` was never enforced. Jobs that silently relied on wrap-around reuse of background files will now fail unless reuse is explicitly allowed.",
-    "- **[key4hep/k4ActsTracking#122](https://github.com/key4hep/k4ActsTracking/pull/122)** — Removes the legacy `ACTSSeededCKFTrackingAlg` together with `ACTSAlgBase`, `GeometryIdMappingTool` and `GeometryIdSelector`. Users should migrate to `CKFTrackingAlg`; v00-05 is the last tag containing the old algorithm.",
-    "- **[key4hep/k4ActsTracking#113](https://github.com/key4hep/k4ActsTracking/pull/113)** — GNNTrackFinding now uses native Gaudi list properties instead of comma-separated strings, and old string-style configurations are rejected at configuration time. The PR also removes edge deduplication from edge ordering and `CCAndWalkTrackBuilding`, and drops unused ONNX helper APIs.",
-    "- **[key4hep/k4ActsTracking#115](https://github.com/key4hep/k4ActsTracking/pull/115)** — GNNTrackFinding now requires `EdgeFeatureScales` with a phi scale of π whenever `ComputeEdgeFeatures` is set. Any other configuration silently produced wrong `dphi`, `phislope` and `rphislope` edge features, and now fails in `initialize()`.",
-    "- **[key4hep/k4RecTracker#109](https://github.com/key4hep/k4RecTracker/pull/109)** — Fixes a `TracksFromGenParticles` bug where `ExtrapolateToECal=False` left the ECAL geometry uninitialized but still used it. As a result, tracks could randomly receive calorimeter track states extrapolated with garbage geometry. Extrapolation now only runs when requested, and geometry lookup failures return an error instead of throwing.",
-    "- **[key4hep/k4RecTracker#102](https://github.com/key4hep/k4RecTracker/pull/102)** — Refactors `GGTFTrackFinder` and fixes wire-hit bookkeeping that associated hits from multiple wire collections with the wrong collection. Noise/unclustered hits (cluster ID ≤ 0) no longer produce an output track, so `GGTFTracks` no longer contains the \"cluster 0\" track; other tracks are unchanged in validation.",
-    "- **[key4hep/k4RecTracker#101](https://github.com/key4hep/k4RecTracker/pull/101)** — Corrects units in the GENFIT helix-to-Cartesian Jacobian and the z0 conversion, and avoids a singular initial z0 covariance. Fitted states are now propagated with GENFIT's native extrapolation to the IP and to the first/last hits, which changes the EDM4hep track states produced by the track fitter.",
-    "- **[key4hep/k4SimDelphes#162](https://github.com/key4hep/k4SimDelphes/pull/162)** — The Delphes-to-EDM4hep converter now assigns the pion mass to non-lepton tracks so that energy, mass and momentum are consistent. It also sets the PDG ID for tracks and leptons, so analysts no longer need to infer particle identity from the mass. Reconstructed particle and jet four-momenta change slightly in Delphes-based analyses.",
-    "- **[hep-fcc/k4RecCalorimeter#286](https://github.com/HEP-FCC/k4RecCalorimeter/pull/286)** — Rewrites `PairCaloClustersPi0` as a maximum graph matching (Boost.Graph, O(N³)) in place of an exponential exhaustive search that exhausted memory on hadronic events. Results match the old algorithm apart from output ordering; π⁰ candidates are now sorted.",
-    "- **[PandoraPFAOrg/LCContent#41](https://github.com/PandoraPFAOrg/LCContent/pull/41)** — Adds 2D (θ, energy)-binned energy correction plugins for EM (`PhotonEMNonLinearity`) and hadronic (`HadronicThetaEnergyBinned`) clusters. The corrections are applied inside Pandora before PFO building, so cluster, PFO and jet energies stay consistent. All new options default to off, so existing configurations are unaffected.",
-    "- **[AIDASoft/DD4hep#1689](https://github.com/AIDASoft/DD4hep/pull/1689)** — The DDG4 EDM4hep reader now correctly handles the new MDI synchrotron-radiation files, which contain parentless photons. Those photons are now started in Geant4 at their vertex rather than at their endpoint.",
-    "- **[hep-fcc/FCC-config#383](https://github.com/HEP-FCC/FCC-config/pull/383)** — Adds a digitization/reconstruction configuration and a CTest for IDEA option 2 (IDEA_o2_v01), based on the reduced geometry and aligned with the IDEA_o1 tracking and validation setup."
+    "- **[key4hep/k4Gen#64](https://github.com/key4hep/k4Gen/pull/64)** — `GaussSmearVertex` and `FlatSmearVertex` now shift the HepMC3 event position together with all vertices. Beam particles previously stayed at (0,0,0) while the rest of the event was smeared; they now start at the smeared interaction point.",
+    "- **[AIDASoft/DD4hep#1678](https://github.com/AIDASoft/DD4hep/pull/1678)** — `Geant4EventAction` now throws if shared actions are used in single-threaded mode. Previously this could silently write events twice through user output plugins. The DDSim `OutputConfig` example for multi-threaded user output plugins is corrected; steering files using custom output plugins (e.g. IDEA) need the corresponding kernel change.",
+    "- **[key4hep/k4ActsTracking#122](https://github.com/key4hep/k4ActsTracking/pull/122)** — Removes the legacy `ACTSSeededCKFTrackingAlg`, along with `ACTSAlgBase`, `GeometryIdMappingTool` and `GeometryIdSelector`. Users must migrate to `CKFTrackingAlg`; v00-05 is the last tag containing the old algorithm.",
+    "- **[key4hep/k4ActsTracking#113](https://github.com/key4hep/k4ActsTracking/pull/113)** — GNNTrackFinding now uses native Gaudi list properties instead of comma-separated strings, and old string-style configurations are rejected at configuration time. The PR removes dead helpers and redundant edge deduplication.",
+    "- **[key4hep/k4ActsTracking#72](https://github.com/key4hep/k4ActsTracking/pull/72)** — Adds optional 4D (time-aware) tracking to `CKFTrackingAlg`, using hit time as a CKF measurement dimension and an ACTS doublet seed-finding time cut. Per-sensor time resolutions are configured through `HitTimeResolutions` as a placeholder until EDM4hep stores per-hit time errors. The feature requires a recent ACTS version.",
+    "- **[PandoraPFAOrg/LCContent#41](https://github.com/PandoraPFAOrg/LCContent/pull/41)** — Adds electromagnetic (`PhotonEMNonLinearity`) and hadronic (`HadronicThetaEnergyBinned`) energy correction plugins that use 2D (theta, energy) lookup tables. Corrections are applied inside Pandora so that cluster, PFO and jet energies stay consistent. Default behaviour is unchanged when no table is supplied.",
+    "- **[key4hep/k4Reco#72](https://github.com/key4hep/k4Reco/pull/72)** — ConformalTracking gains `ECalBarrelFaceSystemID` and `ECalEndcapFaceSystemID` properties for extrapolation to the calorimeter face, with ILD/CLD defaults. This lets detectors such as ALLEGRO use the extrapolation. ECALs identified by type flags are now installed in KalTest, and track fits no longer fail when no calorimeter-face state is found.",
+    "- **[key4hep/k4FWCore#434](https://github.com/key4hep/k4FWCore/pull/434)** — Fixes the `OverlayTiming` background cursor: `StartBackgroundEventIndex` was reapplied on every event, so the same background events were overlaid repeatedly. `AllowReusingBackgroundFiles` was never enforced. Jobs that relied on silent reuse of background events must now enable reuse explicitly.",
+    "- **[key4hep/k4RecTracker#109](https://github.com/key4hep/k4RecTracker/pull/109)** — Fixes a bug in `TracksFromGenParticles` that occurred with `ExtrapolateToECal=False`. Uninitialized ECAL geometry was still read, so tracks could get calorimeter track states extrapolated with garbage geometry. A cellID truncation is also fixed.",
+    "- **[key4hep/k4RecTracker#102](https://github.com/key4hep/k4RecTracker/pull/102)** — Fixes wrong collection association for wire hits in `GGTFTrackFinder` when there is more than one wire input collection. The finder no longer writes the track holding unclustered/noise hits, and only successfully reconstructed tracks are stored.",
+    "- **[HEP-FCC/k4RecCalorimeter#286](https://github.com/HEP-FCC/k4RecCalorimeter/pull/286)** — `PairCaloClustersPi0` now solves the pi0 cluster-pairing problem as a graph maximum matching with Boost.Graph instead of an exponential exhaustive search. This makes the algorithm usable on hadronic events. Results match the previous algorithm apart from output ordering.",
+    "- **[AIDASoft/DD4hep#1689](https://github.com/AIDASoft/DD4hep/pull/1689)** — The EDM4hep file reader now supports the new MDI synchrotron-radiation file format, which consists of parentless photons. For these photons, the vertex rather than the endpoint defines the Geant4 starting point."
   ],
   "omitted": [
     {
+      "pr": "key4hep/k4ActsTracking#126",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/126",
+      "reason": "Runs the ACTS master CI directly in the Key4hep job container, mounts CVMFS explicitly and pins the CI actions."
+    },
+    {
+      "pr": "PandoraPFAOrg/LCContent#45",
+      "url": "https://github.com/PandoraPFAOrg/LCContent/pull/45",
+      "reason": "Adds a local customization point to `LCCaloHit` so the calorimeter hit can be extended without changing PandoraSDK; no new functionality yet (lower priority)."
+    },
+    {
+      "pr": "PandoraPFAOrg/LCContent#47",
+      "url": "https://github.com/PandoraPFAOrg/LCContent/pull/47",
+      "reason": "Energy-correction plugins' `IsValid` now checks that scale factors are positive and finite (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4FWCore#441",
+      "url": "https://github.com/key4hep/k4FWCore/pull/441",
+      "reason": "Fixes `CollectionMerger` copy mode, rejects empty input lists that caused a segfault, and makes merging exception-safe (lower priority)."
+    },
+    {
       "pr": "key4hep/k4FWCore#440",
       "url": "https://github.com/key4hep/k4FWCore/pull/440",
-      "reason": "`OverlayTiming` now fails initialization when `UniqueIDGenSvc` is unavailable, validates per-group property sizes, fixes the `StartBackgroundEventIndex` error path, and reduces per-event logging to debug (lower priority)."
+      "reason": "Adds `OverlayTiming` initialization checks and property-size validation, and lowers per-event logging to debug (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4ActsTracking#123",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/123",
+      "reason": "Adds logging of the number of TBB threads used in `CKFTrackingAlg` seeding and CKF, for debugging."
+    },
+    {
+      "pr": "key4hep/k4ActsTracking#119",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/119",
+      "reason": "Drops redundant edge deduplication in GNNTrackFinding, which can change classifier scores in the last bits (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4ActsTracking#117",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/117",
+      "reason": "Replaces GNN classified-edge printing with a `GnnHook`-based debug printer that runs after every pipeline stage."
     },
     {
       "pr": "key4hep/k4ActsTracking#120",
       "url": "https://github.com/key4hep/k4ActsTracking/pull/120",
-      "reason": "Removes unused ACTS headers from `CKFTrackingAlg.cpp`, cutting peak compile memory by about 32%."
-    },
-    {
-      "pr": "key4hep/k4ActsTracking#112",
-      "url": "https://github.com/key4hep/k4ActsTracking/pull/112",
-      "reason": "`EdgeBuildingKnn` becomes a positive `int`, ONNX model-loading errors now reach the Gaudi log, and a latent CUDA output issue is fixed (lower priority)."
-    },
-    {
-      "pr": "key4hep/k4ActsTracking#111",
-      "url": "https://github.com/key4hep/k4ActsTracking/pull/111",
-      "reason": "GNNTrackFinding now requires Acts ≥ 48.1.0, passes edge classifier features in the configured order, and rejects zero input scales (lower priority)."
-    },
-    {
-      "pr": "key4hep/k4ActsTracking#94",
-      "url": "https://github.com/key4hep/k4ActsTracking/pull/94",
-      "reason": "Adds a dedicated CUDA path for ONNX metric-learning outputs so that downstream ACTS GNN stages run on the GPU (lower priority)."
-    },
-    {
-      "pr": "key4hep/k4ActsTracking#110",
-      "url": "https://github.com/key4hep/k4ActsTracking/pull/110",
-      "reason": "Replaces wget-based data retrieval with ExternalData."
+      "reason": "Removes unused ACTS headers to reduce compile memory for `CKFTrackingAlg`."
     },
     {
       "pr": "key4hep/k4GaudiPandora#61",
       "url": "https://github.com/key4hep/k4GaudiPandora/pull/61",
-      "reason": "Requires EDM4hep 1.0 and removes the pre-1.0 cluster-phi compatibility check."
+      "reason": "Requires EDM4hep 1.0 and drops the pre-1.0 cluster phi compatibility check."
     },
     {
-      "pr": "hep-fcc/FCC-config#391",
+      "pr": "HEP-FCC/FCC-config#398",
+      "url": "https://github.com/HEP-FCC/FCC-config/pull/398",
+      "reason": "Factorizes the common Gaudi digi/reco configuration of ALLEGRO o1 and o2 into a shared module (lower priority)."
+    },
+    {
+      "pr": "HEP-FCC/FCC-config#391",
       "url": "https://github.com/HEP-FCC/FCC-config/pull/391",
-      "reason": "Sets the shared flag to false for"
+      "reason": "Sets the shared-action flag according to thread count in the IDEA and ALLEGRO simulation steering files, following DD4hep#1678 (lower priority)."
+    },
+    {
+      "pr": "PandoraPFAOrg/LCContent#49",
+      "url": "https://github.com/PandoraPFAOrg/LCContent/pull/49",
+      "reason": "Supports the FieldMap-based persistency interface of PandoraSDK v03 while keeping backward compatibility (lower priority)."
+    },
+    {
+      "pr": "PandoraPFAOrg/LCContent#48",
+      "url": "https://github.com/PandoraPFAOrg/LCContent/pull/48",
+      "reason": "Adds a CI workflow that builds against PandoraSDK master."
+    },
+    {
+      "pr": "key4hep/k4ActsTracking#115",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/115",
+      "reason": "Requires a phi edge-feature scale of pi when `ComputeEdgeFeatures` is set, rejecting configurations that gave wrong dphi features (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4ActsTracking#112",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/112",
+      "reason": "Makes `EdgeBuildingKnn` an int, propagates ONNX model loading errors to the Gaudi log, and cleans up the GNN README (lower priority)."
+    },
+    {
+      "pr": "key4hep/key4hep-dev-utils#30",
+      "url": "https://github.com/key4hep/key4hep-dev-utils/pull/30",
+      "reason": "Adds HEP-FCC repositories to the exclude list of the commits-after-tag check script."
+    },
+    {
+      "pr": "key4hep/key4hep-dev-utils#29",
+      "url": "https://github.com/key4hep/key4hep-dev-utils/pull/29",
+      "reason": "Removes CEPC repositories from the commits-after-tag check."
+    },
+    {
+      "pr": "key4hep/k4RecTracker#110",
+      "url": "https://github.com/key4hep/k4RecTracker/pull/110",
+      "reason": "Fixes uninitialized-variable compiler warnings in `VTXdigitizerDetailed`."
+    },
+    {
+      "pr": "key4hep/k4Bench#208",
+      "url": "https://github.com/key4hep/k4Bench/pull/208",
+      "reason": "Bumps benchmark detectors to their latest versions and adds detector-version succession to the regression lineage."
+    },
+    {
+      "pr": "key4hep/k4Bench#209",
+      "url": "https://github.com/key4hep/k4Bench/pull/209",
+      "reason": "Automates detector version bump PRs for benchmarks based on the nightly stack."
+    },
+    {
+      "pr": "key4hep/k4Bench#207",
+      "url": "https://github.com/key4hep/k4Bench/pull/207",
+      "reason": "Allows dispatching a subset of nightly benchmark jobs."
+    },
+    {
+      "pr": "key4hep/k4Bench#206",
+      "url": "https://github.com/key4hep/k4Bench/pull/206",
+      "reason": "Defaults absent `sweep`/`verbose` keys to false in the benchmark matrix."
+    },
+    {
+      "pr": "HEP-FCC/k4RecCalorimeter#289",
+      "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/289",
+      "reason": "Fixes an unused lambda capture warning in `CaloDrivenClusterSeeding`."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#115",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/115",
+      "reason": "Renovate bump of marked to v18.1.0."
+    },
+    {
+      "pr": "AIDASoft/DD4hep#1687",
+      "url": "https://github.com/AIDASoft/DD4hep/pull/1687",
+      "reason": "Removes std::filesystem detection logic from CMake and requires GCC 9.1+."
+    },
+    {
+      "pr": "key4hep/EDM4hep#531",
+      "url": "https://github.com/key4hep/EDM4hep/pull/531",
+      "reason": "Makes the LCG-based workflow triggerable from the GitHub web UI."
+    },
+    {
+      "pr": "key4hep/k4ActsTracking#111",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/111",
+      "reason": "Requires Acts >= 48.1.0 for GNN builds and aligns the GNN code with upstream fixes to edge-classifier feature handling (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4RecTracker#111",
+      "url": "https://github.com/key4hep/k4RecTracker/pull/111",
+      "reason": "Fixes a CMake typo that installed ARCdigi and VTXdigi headers into the wrong path."
+    },
+    {
+      "pr": "key4hep/k4Bench#205",
+      "url": "https://github.com/key4hep/k4Bench/pull/205",
+      "reason": "Refactors the k4Bench timed-process runner and centralizes run artifact naming."
+    },
+    {
+      "pr": "HEP-FCC/fcc-tutorials#206",
+      "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/206",
+      "reason": "Updates the Delphes+EvtGen tutorial to the latest Key4hep stack and the FCC-config main branch."
+    },
+    {
+      "pr": "HEP-FCC/k4RecCalorimeter#288",
+      "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/288",
+      "reason": "Fixes file names in the FCC-hh example digi+reco test script when Pythia is used."
+    },
+    {
+      "pr": "HEP-FCC/FCC-config#401",
+      "url": "https://github.com/HEP-FCC/FCC-config/pull/401",
+      "reason": "Raises the ALLEGRO o2 STT digitizer readout window from 450 to 600 ns (lower priority)."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#114",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/114",
+      "reason": "Replaces priority dots with border accents and polishes request views in the dataset request system UI."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#111",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/111",
+      "reason": "Shrinks the Request Details grid gap for consistent spacing."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#110",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/110",
+      "reason": "Makes textareas resizable and adds auto-grow with a fallback."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#109",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/109",
+      "reason": "Renders Markdown in Additional Notes and removes dead edit templates."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#106",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/106",
+      "reason": "Adds a Detector(s) field to requests, required for processing stages beyond generation."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#107",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/107",
+      "reason": "Overhauls seed data and fixes a use_case enum mismatch."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#105",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/105",
+      "reason": "Fixes a duplicated header on session expiry and silent 403s in htmx requests."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#104",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/104",
+      "reason": "Renovate bump of the postgres CI image to v18."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#102",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/102",
+      "reason": "Renovate bump of Node.js to v24."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#103",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/103",
+      "reason": "Runs the built Docker image against Postgres in CI."
+    },
+    {
+      "pr": "AIDASoft/DD4hep#1688",
+      "url": "https://github.com/AIDASoft/DD4hep/pull/1688",
+      "reason": "Stops the example `TestSteppingAction` from suspending already-dead tracks, which caused G4Exceptions with Geant4 11.4.3."
+    },
+    {
+      "pr": "AIDASoft/DD4hep#1686",
+      "url": "https://github.com/AIDASoft/DD4hep/pull/1686",
+      "reason": "Removes an unused variable in `SignalHandler`."
+    },
+    {
+      "pr": "key4hep/key4hep-spack#933",
+      "url": "https://github.com/key4hep/key4hep-spack/pull/933",
+      "reason": "Makes the `+cuda` variant of k4ActsTracking available only with `+gnn`."
+    },
+    {
+      "pr": "key4hep/key4hep-doc#167",
+      "url": "https://github.com/key4hep/key4hep-doc/pull/167",
+      "reason": "Dependabot bump of urllib3 to 2.8.0."
+    },
+    {
+      "pr": "key4hep/key4hep-doc#166",
+      "url": "https://github.com/key4hep/key4hep-doc/pull/166",
+      "reason": "Dependabot bump of tornado to 6.5.9."
+    },
+    {
+      "pr": "key4hep/key4hep-doc#157",
+      "url": "https://github.com/key4hep/key4hep-doc/pull/157",
+      "reason": "Links previously unlinked packages to their repositories in the documentation overview pages."
+    },
+    {
+      "pr": "key4hep/k4ActsTracking#94",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/94",
+      "reason": "Fixes CUDA output tensor handling so GNN metric learning and edge classification stay on the GPU (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4ActsTracking#110",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/110",
+      "reason": "Replaces wget-based data download with CMake ExternalData."
+    },
+    {
+      "pr": "key4hep/k4Reco#70",
+      "url": "https://github.com/key4hep/k4Reco/pull/70",
+      "reason": "Adds `TrackerHit3D` conversion to the KalTest machinery to match the Marlin behaviour (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4PFHitML#4",
+      "url": "https://github.com/key4hep/k4PFHitML/pull/4",
+      "reason": "Skips events without calorimeter hits or tracks to avoid a crash, and removes an unused variable."
+    },
+    {
+      "pr": "key4hep/DDML#19",
+      "url": "https://github.com/key4hep/DDML/pull/19",
+      "reason": "Adds a `ddml` python module to streamline fast-simulation model configuration in ddsim steering files (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4Bench#204",
+      "url": "https://github.com/key4hep/k4Bench/pull/204",
+      "reason": "Enables auto-merge of Dependabot PRs once CI passes."
+    },
+    {
+      "pr": "key4hep/k4Bench#203",
+      "url": "https://github.com/key4hep/k4Bench/pull/203",
+      "reason": "Dependabot update of the pymdown-extensions requirement."
+    },
+    {
+      "pr": "HEP-FCC/FCCAnalyses#561",
+      "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/561",
+      "reason": "Adjusts HTCondor log handling to avoid spurious resubmission retries (lower priority)."
+    },
+    {
+      "pr": "HEP-FCC/phoenix-at-fcc#29",
+      "url": "https://github.com/HEP-FCC/phoenix-at-fcc/pull/29",
+      "reason": "Bumps the package version number to match the GitHub release."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#101",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/101",
+      "reason": "Fetches frontend libraries at Docker build time instead of committing them."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#100",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/100",
+      "reason": "Renames the Go module from dataset-tracker to fcc-drs."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#99",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/99",
+      "reason": "Links the CERN GitLab mirror in the README."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#90",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/90",
+      "reason": "Renovate bump of htmx to v2.0.11."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#92",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/92",
+      "reason": "Renovate bump of katex to v0.19.0."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#89",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/89",
+      "reason": "Renovate bump of marked to v18.0.14."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#95",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/95",
+      "reason": "Renovate bump of modernc.org/sqlite to v1.60.1."
+    },
+    {
+      "pr": "HEP-FCC/fcc-drs#97",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/97",
+      "reason": "Vendors frontend libraries via npm with a lockfile instead of curl/tar."
+    },
+    {
+      "pr": "key4hep/key4hep-dev-utils#27",
+      "url": "https://github.com/key4hep/key4hep-dev-utils/pull/27",
+      "reason": "Derives the downstream-build package list from the LCG nightlies instead of Spack."
+    },
+    {
+      "pr": "key4hep/k4RecTracker#106",
+      "url": "https://github.com/key4hep/k4RecTracker/pull/106",
+      "reason": "Replaces deprecated `getTrackState(int32_t)` calls with the `TrackState::Location` overload in `TrackMerger`."
+    },
+    {
+      "pr": "key4hep/DDML#34",
+      "url": "https://github.com/key4hep/DDML/pull/34",
+      "reason": "Adds the BIBAE two-angle model for retrieval via ExternalData."
+    },
+    {
+      "pr": "key4hep/DDML#33",
+      "url": "https://github.com/key4hep/DDML/pull/33",
+      "reason": "Makes model loading errors in DDML easier to spot in the logs."
+    },
+    {
+      "pr": "key4hep/k4Bench#202",
+      "url": "https://github.com/key4hep/k4Bench/pull/202",
+      "reason": "Waits for a stale CVMFS nightly slot to update before failing the benchmark release check."
+    },
+    {
+      "pr": "HEP-FCC/fcc-tutorials#208",
+      "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/208",
+      "reason": "Moves CONTRIBUTING, LICENSE and CODE_OF_CONDUCT to the tutorials repository root so GitHub detects them."
+    },
+    {
+      "pr": "HEP-FCC/FCC-config#400",
+      "url": "https://github.com/HEP-FCC/FCC-config/pull/400",
+      "reason": "Adds an EvtGen decay card for Lambda_b → Lambda(1520) ν ν̄ (lower priority)."
     }
   ],
   "usage": {
-    "input_tokens": 51784,
-    "output_tokens": 5
+    "input_tokens": 53617,
+    "output_tokens": 9450
   },
-  "cost_usd": 0.207236
+  "cost_usd": 0.403468
 }
