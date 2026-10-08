@@ -2,6 +2,17 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 671,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/671'>Add cylindrical surface plugins and use them for ALLEGRO</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-07",
+            "updatedAt": "2026-10-07",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 599,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/599'>FCChh TrackerOnly layout</a>",
             "author": "tsulaiav",
@@ -354,8 +365,8 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
-            "num": 64,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/64'>Shift the event position in GaussSmearVertex and FlatSmearVertex so that beam particles are smeared too</a>",
+            "num": 66,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/66'>Fix the energy and time of the particles in EDMToHepMCConverter</a>",
             "author": "jbeirer",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-07",
@@ -369,7 +380,18 @@
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/62'>make ordering match hepmc</a>",
             "author": "davidlange6",
             "createdAt": "2026-09-25",
-            "updatedAt": "2026-10-06",
+            "updatedAt": "2026-10-07",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 64,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/64'>Shift the event position in GaussSmearVertex and FlatSmearVertex so that beam particles are smeared too</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-07",
+            "updatedAt": "2026-10-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -436,6 +458,17 @@
             "author": "andresailer",
             "createdAt": "2026-08-13",
             "updatedAt": "2026-08-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 125,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/125'>Add absolute q/p term to the initial track covariance</a>",
+            "author": "jburzy",
+            "createdAt": "2026-10-07",
+            "updatedAt": "2026-10-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -777,6 +810,17 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-16",
             "updatedAt": "2024-07-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Reco",
+            "num": 72,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/72'>Make extrapolation to the calorimeter face configurable</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-07",
+            "updatedAt": "2026-10-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1609,7 +1653,7 @@
         {
             "repo": "hep-fcc/<br>FCC-config",
             "num": 403,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/403'>[ALLEGRO] add option to run conformal tracking with ALLEGRO Si hits in ALLEGRO reco sequence</a>",
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/403'>[ALLEGRO] add option to run conformal tracking with Si hits in reco sequence</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-07",
@@ -1668,7 +1712,7 @@
             "author": "Victor-Schwan",
             "createdAt": "2026-08-19",
             "updatedAt": "2026-08-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1789,7 +1833,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1811,7 +1855,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1822,7 +1866,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-09-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1833,7 +1877,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1855,7 +1899,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
