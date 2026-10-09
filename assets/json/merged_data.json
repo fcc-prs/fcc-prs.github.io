@@ -1,6 +1,60 @@
 {
-    "updated_at": "2026-10-08T12:38:27Z",
+    "updated_at": "2026-10-09T12:26:14Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 211,
+            "title": "chore(deps): bump peter-evans/create-pull-request from 7.0.11 to 8.1.1",
+            "url": "https://github.com/key4hep/k4Bench/pull/211",
+            "author": "dependabot",
+            "mergedAt": "2026-10-09",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [peter-evans/create-pull-request](https://github.com/peter-evans/create-pull-request) from 7.0.11 to 8.1.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/peter-evans/create-pull-request/releases\">peter-evans/create-pull-request's releases</a>.</em></p>\n<blockquote>\n<h2>Create Pull Request v8.1.1</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>build(deps-dev): bump the npm group with 2 updates by <a href=\"https://github.com/dependabot\"><code>@\u200bdependabot</code></a>[bot] in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4305\">peter-evans/create-pull-request#4305</a></li>\n<li>build(deps): bump minimatch by <a href=\"https://github.com/dependabot\"><code>@\u200bdependabot</code></a>[bot] in <a href=\"https://redirect.github.com/peter-\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/detector-bump.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 210,
+            "title": "chore(deps): bump streamlit from 1.64.0 to 1.65.0",
+            "url": "https://github.com/key4hep/k4Bench/pull/210",
+            "author": "dependabot",
+            "mergedAt": "2026-10-09",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [streamlit](https://github.com/streamlit/streamlit) from 1.64.0 to 1.65.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/streamlit/streamlit/releases\">streamlit's releases</a>.</em></p>\n<blockquote>\n<h2>1.65.0</h2>\n<!-- raw HTML omitted -->\n<h2>What's Changed</h2>\n<h3>New Features \ud83c\udf89</h3>\n<ul>\n<li>[feature] Add <code>on_change=&quot;ignore&quot;</code> mode to st.multiselect by <a href=\"https://github.com/lukasmasuch\"><code>@\u200blukasmasuch</code></a> in <a href=\"https://redirect.github.com/streamlit/streamlit/pull/16908\">streamlit/streamlit#16908</a></li>\n<li>[feature] Add <code>on_change=&quot;ignore&quot;</code> mode to st.radio by <a href=\"https://github.com/lukasmasuch\"><code>@\u200blukasmasuch</code></a> in <a href=\"https://redirect.github.co\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "dashboard/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "k4Gen",
@@ -103,6 +157,176 @@
             "comments_total": 1,
             "reviews": [],
             "reviews_total": 2
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "root2gltf",
+            "num": 18,
+            "title": "Add verbose option",
+            "url": "https://github.com/HEP-FCC/root2gltf/pull/18",
+            "author": "apausa",
+            "mergedAt": "2026-10-08",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "- Add verbose option both in CLI and API\r\n- Print children nodes per parent volume when verbose\r\n- Print color mapped to each volume when verbose\r\n- Move scene config object to constant\r\n- Solve `GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results` log message by changing `material_kind` from `lambert` to `default`. This has no impact on the resulting visualization.",
+            "diff": {
+                "additions": 119,
+                "deletions": 113,
+                "files": 10
+            },
+            "files": [
+                "README.md",
+                "bin/cli.js",
+                "package-lock.json",
+                "package.json",
+                "src/deduplicateOutput.ts",
+                "src/index.ts",
+                "src/lib/constants.ts",
+                "src/lib/types/converter.ts",
+                "src/lib/utils/assignColors.ts",
+                "src/lib/utils/generateConfig.ts"
+            ],
+            "comments": [
+                {
+                    "author": "apausa",
+                    "body": "Solved `GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results` log message by changing `material_kind` from `lambert` to `default` in scene config. This has no impact on the resulting visualization. \r\n\r\n<img width=\"678\" height=\"118\" alt=\"image\" src=\"https://github.com/user-att\u2026"
+                },
+                {
+                    "author": "apausa",
+                    "body": "Running the command with verbose flag \r\n\r\n<img width=\"1150\" height=\"497\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f314ff93-cd0c-4ec1-8035-be769037c6d6\" />"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 4
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-physics-events",
+            "num": 13,
+            "title": "Support HEAD requests on health endpoints",
+            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/13",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-08",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "`/healthz` and `/readyz` returned 405 for HEAD requests, which uptime monitors often use. Both now accept GET and HEAD.",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "backend/app/routers/health_router.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-physics-events",
+            "num": 10,
+            "title": "Add /healthz and /readyz endpoints with Kubernetes probes",
+            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/10",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-08",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Adds `/healthz` (liveness, no dependencies) and `/readyz` (checks the database, returns 503 when it is unavailable). The backend deployment gets startup and liveness probes on `/healthz`. `/readyz` is meant for external monitoring and is not used as a readiness probe, so the single pod keeps serving error responses during database outages. Both paths are excluded from the request logging.",
+            "diff": {
+                "additions": 85,
+                "deletions": 0,
+                "files": 3
+            },
+            "files": [
+                "backend/app/main.py",
+                "backend/app/routers/health_router.py",
+                "k8s/backend-deployment.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-physics-events",
+            "num": 11,
+            "title": "Fix backend mypy error and validate backend on GitHub",
+            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/11",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-08",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "mypy fails in the GitLab `validate-backend` job on `master` after #9, which skips the build and deploy stages. Fixes the error and adds a GitHub Actions workflow running the same ruff and mypy checks on PRs, so such errors show up before merging.",
+            "diff": {
+                "additions": 30,
+                "deletions": 1,
+                "files": 2
+            },
+            "files": [
+                ".github/workflows/validate.yml",
+                "backend/app/main.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-physics-events",
+            "num": 9,
+            "title": "Add CORS headers to 500 errors and hide exception details",
+            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/9",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-08",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Unhandled 500 errors bypassed `CORSMiddleware`, so the frontend showed them as CORS failures. They now carry CORS headers and no longer return the exception message to the client, and the handler logs only a one-line summary.\n\nRefs #8",
+            "diff": {
+                "additions": 23,
+                "deletions": 5,
+                "files": 1
+            },
+            "files": [
+                "backend/app/main.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1691,
+            "title": "fix(HepMC3EventReader): apply the length unit to the primary vertex position",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1691",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-08",
+            "mergedBy": "andresailer",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n-  HepMC3EventReader: apply the length unit to the primary vertex position\r\n\r\nENDRELEASENOTES\r\n\r\n## Summary\r\n\r\nApply the HepMC3 event length unit when setting the primary vertex position in `HepMC3EventReader`.\r\n\r\nThe particle production/end positions are already converted using `len_unit`, and the vertex time is converted as well, but the `x`, `y`, and `z` coordinates of the corresponding `Geant4Vertex` were previously used without applying the HepMC3 length unit.\r\n\r\nThis is invisible for HepMC3 files using millimetres, but gives incorrect vertex positions for events using centimetres.",
+            "diff": {
+                "additions": 3,
+                "deletions": 3,
+                "files": 1
+            },
+            "files": [
+                "DDG4/hepmc/HepMC3EventReader.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200218h 11m 41s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 657fb7c4.\n\n[test-results]:data:application/gzip;base64,H4sIAIaQx2oC/12PyQrCMBRFf6Vk7SJpfRn8GckIwbaRDKvivxtDbaPLcy4cuBtyfrYJ3QbCLwNKxeeTTIky+7BWpgCYVFXX/NknBl+6p6L1v3\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "PandoraPFAOrg",
@@ -2171,88 +2395,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-doc",
-            "num": 166,
-            "title": "Bump tornado from 6.5.8 to 6.5.9",
-            "url": "https://github.com/key4hep/key4hep-doc/pull/166",
-            "author": "dependabot",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "tmadlener",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [tornado](https://github.com/tornadoweb/tornado) from 6.5.8 to 6.5.9.\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/tornadoweb/tornado/blob/master/docs/releases.rst\">tornado's changelog</a>.</em></p>\n<blockquote>\n<h1>Release notes</h1>\n<p>.. toctree::\n:maxdepth: 2</p>\n<p>releases/v6.6.0\nreleases/v6.5.10\nreleases/v6.5.9\nreleases/v6.5.8\nreleases/v6.5.7\nreleases/v6.5.6\nreleases/v6.5.5\nreleases/v6.5.4\nreleases/v6.5.3\nreleases/v6.5.2\nreleases/v6.5.1\nreleases/v6.5.0\nreleases/v6.4.2\nreleases/v6.4.1\nreleases/v6.4.0\nreleases/v6.3.3\nreleases/v6.3.2\nreleases/v6.3.1\nreleases/v6.3.0\nreleases/v6.2.0\nreleases/v6.1.0\nreleases/v6.0.4\nreleases/v6.0.3\nreleases/v6.0.2\nreleases/v6.0.1\nreleases/v6.0.0\nreleases/v5.1.1\nreleases/v5.1.0\nreleases/v5.0.2\nreleases/v5.0.1\n\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-10-02 12:22 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-doc",
-            "num": 157,
-            "title": "Link packages without a repository mapping in the overview pages",
-            "url": "https://github.com/key4hep/key4hep-doc/pull/157",
-            "author": "Panzerkampfwagen-del",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Fixes the remaining unlinked packages from #137.\r\n\r\nBEGINRELEASENOTES \r\n- Pick up more repositories for mapping algorithms / processors to them\r\n\r\nENDRELEASENOTES\r\n\r\n#137 reported two issues: (1) the link in the note at the top of the pages is not displayed as a link \u2014 already fixed in #138 \u2014 and (2) some packages are not linked back to their GitHub repository. This PR addresses what is left of (2).\r\n\r\nOn the current processor overview page, four package headers render as plain text instead of links: `fcalclusterer`, `lcfiplus`, `pandoraanalysis` and `(unknown)`. There are two distinct root causes:\r\n\r\n- **Forks are excluded from the repository search.** `gh search repos` does not include forks unless explicitly requested. `iLCSoft/LCFIPlus` is a fork of `lcfiplus/LCFIPlus`, so it never mak\u2026",
-            "diff": {
-                "additions": 8,
-                "deletions": 0,
-                "files": 2
-            },
-            "files": [
-                ".github/workflows/generate_overview.yml",
-                "extra_repositories.json"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Pandoraanalysis can be found in https://github.com/PandoraPFAOrg/LCPandoraAnalysis.git"
-                },
-                {
-                    "author": "Panzerkampfwagen-del",
-                    "body": "Thanks! The name lookup only matches repository names, so a search over the org would not have found it either way. I added a small static map (extra_repositories.json) that gets picked up by the same *_repositories.json glob, mapping the PandoraAnalysis package to PandoraPFAOrg/LCPandoraAnalysis. T\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-10-02 12:17 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Thanks a lot for starting this. Another small comment LCFIPlus should actually link to https://github.com/lcfiplus/lcfiplus . The version in the iLCSoft organization is essentially a stale fork at this point."
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "And I think `(unknown)` is defined directly in `libMarlin`, i.e. in the core framework library itself. I have not confirmed whether this is true for all that are labelled as unknown though (and I think that might be a bit harder to check while still having to go through CI to have a suitable environ\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I have resolved conflicts and added the proper LCFIPlus repositories. I have removed following forks again and now pandora is also dynamically populated."
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4ActsTracking",
             "num": 94,
             "title": "Fix CUDA output tensor for metric learning model",
@@ -2291,86 +2433,6 @@
                 }
             ],
             "reviews_total": 4
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 110,
-            "title": "switch to externaldata",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/110",
-            "author": "madbaron",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Remove wget-based data retrieval in favour of ExternalData\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 40,
-                "deletions": 119,
-                "files": 16
-            },
-            "files": [
-                ".gitignore",
-                "data/CMakeLists.txt",
-                "data/MAIA_v0.json.md5",
-                "data/MAIA_v0.root.md5",
-                "data/MAIA_v0_gen3_material_map.json.md5",
-                "data/MAIA_v0_material.json.md5",
-                "data/MuColl_v1.json.md5",
-                "data/MuColl_v1.root.md5",
-                "data/MuSIC_v1.json.md5",
-                "data/MuSIC_v1.root.md5",
-                "data/MuSIC_v2.json.md5",
-                "data/MuSIC_v2.root.md5",
-                "data/download_files.sh",
-                "data/file_list.txt",
-                "data/material-maps.json.md5",
-                "doc/material_mapping.md"
-            ],
-            "comments": [
-                {
-                    "author": "madbaron",
-                    "body": "> Looks like the `.md5` files didn't make the commit?\r\n\r\n#failure"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Looks like the `.md5` files didn't make the commit?"
-                }
-            ],
-            "reviews_total": 10
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Reco",
-            "num": 70,
-            "title": "Add the conversion of TrackerHit3D in the KalTest machinery",
-            "url": "https://github.com/key4hep/k4Reco/pull/70",
-            "author": "tmadlener",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Add the conversion of `TrackerHit3D` in the KalTest machinery to make sure that this works the same as it did in the Marlin version\r\n\r\nENDRELEASENOTES\r\n\r\nFixes https://github.com/key4hep/k4GaudiPandora/issues/58",
-            "diff": {
-                "additions": 74,
-                "deletions": 30,
-                "files": 2
-            },
-            "files": [
-                "k4Reco/GaudiTrkUtils/include/GaudiDDKalTestTrack.h",
-                "k4Reco/GaudiTrkUtils/src/GaudiDDKalTestTrack.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "This does not yet solve yet another issue with ILD reconstruction, which is the fact that `FTD` hits are `COMPOSITE_SPACEPOINT`s, i.e. they are a combination of two 1D measurements. This is explicitly not handled yet:\r\n\r\nhttps://github.com/key4hep/k4GaudiPandora/blob/2afd7e6761937da628ac58a6cd098c2b\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 6
         },
         {
             "org": "key4hep",
@@ -2514,37 +2576,6 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCCAnalyses",
-            "num": 561,
-            "title": "Update handling of condor logs and out with pre-edm4hep1 stack",
-            "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/561",
-            "author": "qgl90",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Changes needed to avoid spawning 10 retrials failures submission due to the HTCondor warnings on the way Log files are saved",
-            "diff": {
-                "additions": 9,
-                "deletions": 5,
-                "files": 2
-            },
-            "files": [
-                "python/run_analysis.py",
-                "python/run_fccanalysis.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "copilot-pull-request-reviewer",
-                    "state": "COMMENTED",
-                    "body": "<!-- ccr-overview-v2 -->\n\n## Copilot review overview\n\n### \ud83d\udfe1 Changes recommended\n\nSuccessful submissions emitting warnings can still be retried, creating duplicate job clusters.\n\n**Review effort:** Balanced  \n**Findings:** 2 <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github\u2026"
-                }
-            ],
-            "reviews_total": 9
         },
         {
             "org": "hep-fcc",
@@ -2821,242 +2852,6 @@
                 "package.json",
                 "renovate.json",
                 "static/vendor/purify.min.js"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 27,
-            "title": "Use the LCG nightlies to get the downstream packages",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/27",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-01",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "The downstream-build has been broken since changing to the LCG stacks, time to fix it.\r\n\r\n - Get the packages to build in the downstream build from the LCG nightlies (`LCG_externals_<platform>.txt` of the release behind the sourced LCG view) instead of Spack\r\n   - All the transitive dependents in the key4hep and HEP-FCC organizations are built, sorted topologically, instead of a hardcoded build order\r\n   - The git URLs are taken from the lcgcmake toolchain at the commit used for the release\r\n   - FCCSW is never built\r\n   - Fall back to matching only the repository name, so that it works in forks\r\n\r\nNeeded for key4hep/key4hep-actions#56, this one has to be merged first.",
-            "diff": {
-                "additions": 164,
-                "deletions": 104,
-                "files": 1
-            },
-            "files": [
-                "scripts/fetch_and_checkout.py"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "I think this is mostly correct, maybe too many packages are built? It takes a bit long... To be tuned in the future."
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 106,
-            "title": "Fix deprecated getTrackState usage in TrackMerger",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/106",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-01",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Replace `int32_t` location parameters with `edm4hep::TrackState::Location` enum type to resolve deprecation warnings.\r\n\r\nFixes:\r\n```\r\n/Workarea/14_k4rectracker/Tracking/components/TrackMerger.cpp:171:34: warning: 'std::optional<edm4hep::TrackState> edm4hep::Track::getTrackState(int32_t) const' is deprecated: Use getTrackState(edm4hep::TrackState::Location) instead [-Wdeprecated-declarations]\r\n```\r\n\r\nRelated: key4hep/EDM4hep#493 (added the new `getTrackState` method with `TrackState::Location` enum parameter)\r\n\r\nBEGINRELEASENOTES\r\n - Fix deprecated getTrackState usage in TrackMerger component by using `getTrackState` where it is needed.\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 9,
-                "deletions": 13,
-                "files": 1
-            },
-            "files": [
-                "Tracking/components/TrackMerger.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 3
-        },
-        {
-            "org": "key4hep",
-            "repo": "DDML",
-            "num": 34,
-            "title": "Add BIBAE_Two_Angle model",
-            "url": "https://github.com/key4hep/DDML/pull/34",
-            "author": "peter-mckeown",
-            "mergedAt": "2026-10-01",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n\r\n- Add BIBAE two angle model for retrieval via `ExternalData` \r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 0,
-                "files": 2
-            },
-            "files": [
-                "models/BIBAE_Two_Angle_Full_PP_cut.pt.md5",
-                "models/CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Thanks."
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "DDML",
-            "num": 33,
-            "title": "Give some information about attempts to load models",
-            "url": "https://github.com/key4hep/DDML/pull/33",
-            "author": "tmadlener",
-            "mergedAt": "2026-10-01",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Make errors in model loading a bit easier to see from the log outputs\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 27,
-                "deletions": 7,
-                "files": 2
-            },
-            "files": [
-                "src/ONNXInference.cc",
-                "src/TorchInference.cc"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 202,
-            "title": "fix(nightly): wait for a stale CVMFS weekday slot before failing the release check",
-            "url": "https://github.com/key4hep/k4Bench/pull/202",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-01",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Tests\n\n\n___\n\n### **Description**\n- Retry release check while CVMFS serves stale slot\n\n- Read view identity before sourcing the setup\n\n- Add unit tests for retry and failure paths\n\n- Document matrix jobs' brief CVMFS wait\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"resolve-release names nightly release\"] --> B[\"benchmark job reads view identity\"]\n  B --> C{\"matches requested release?\"}\n  C -- \"no, within 360 s deadline\" --> D[\"sleep 30 s and re-read\"]\n  D --> C\n  C -- \"yes\" --> E[\"source setup and benchmark\"]\n  C -- \"no, deadline passed\" --> F[\"fail release check unsourced\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><\u2026",
-            "diff": {
-                "additions": 114,
-                "deletions": 18,
-                "files": 4
-            },
-            "files": [
-                ".github/scripts/nightly_benchmark.sh",
-                ".github/workflows/nightly.yml",
-                "tests/unit/test_nightly_release_check.py",
-                "tests/unit/test_provenance_stack.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/79ffc795de3fe4715c7207262ef011045b0c20f9)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 5,276 in / 9 out / 5,285 total\n- Time cost: 131.6s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/202?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/202#issuecomment-5930114823)** updated to latest commit https://github.com/key4hep/k4Bench/commit/4665db22ef130a021e5e72f2fa28487a3fd77e98"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 6,394 in / 9 out / 6,403 total\n- Time cost: 383.7s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/202#issuecomment-5930114823)** updated to latest commit https://github.com/key4hep/k4Bench/commit/33795764821c1c698989a81509b90d4425e9d334"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 3379576 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/202#issuecomment-5930114823)** updated to latest commit https://github.com/key4hep/k4Bench/commit/79ffc795de3fe4715c7207262ef011045b0c20f9"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 6,747 in / 9 out / 6,756 total\n- Time cost: 263.0s\n- AI calls: 1\n\n</details>"
-                }
-            ],
-            "comments_total": 9,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-tutorials",
-            "num": 208,
-            "title": "Link CONTRIBUTING, LICENSE and CODE_OF_CONDUCT from the root of the repository",
-            "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/208",
-            "author": "michmx",
-            "mergedAt": "2026-10-01",
-            "mergedBy": "amorenobr",
-            "labels": [
-                "maintenance"
-            ],
-            "body": "With this change, GitHub detects the license, contributing, and code of conduct and displays them in the repository:\r\n<img width=\"943\" height=\"231\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d1f88d8c-b4b6-4dc9-8fc6-29043bb9b2d1\" />\r\n\r\nThe links ensure that the information is shown on the webpage as well. \r\n\r\nCloses #196",
-            "diff": {
-                "additions": 182,
-                "deletions": 177,
-                "files": 7
-            },
-            "files": [
-                "7-contributing/CONDUCT.md",
-                "7-contributing/CONDUCT.md",
-                "7-contributing/LICENSE.md",
-                "7-contributing/LICENSE.md",
-                "7-contributing/README.md",
-                "7-contributing/README.md",
-                "CODE_OF_CONDUCT.md",
-                "CONTRIBUTING.md",
-                "LICENSE.md",
-                "conf.py"
-            ],
-            "comments": [
-                {
-                    "author": "michmx",
-                    "body": "For clarification: the actual content is almost identical to the current one\r\nhttps://github.com/HEP-FCC/fcc-tutorials/tree/main/7-contributing \r\n\r\nplus a minor change updating `/cvmfs/fcc.cern.ch --> /cvmfs/sw.hsf.org`"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCC-config",
-            "num": 400,
-            "title": "Add Lambda_b to Lambda(1520) nu nu EvtGen card",
-            "url": "https://github.com/HEP-FCC/FCC-config/pull/400",
-            "author": "vasilllis",
-            "mergedAt": "2026-10-01",
-            "mergedBy": "vasilllis",
-            "labels": [],
-            "body": "Adds `Lb2L1520NuNu.dec` for Lambda_b0 -> Lambda(1520)0 nu_e anti-nu_e, followed by Lambda(1520)0 -> p+ K-, and the charge-conjugate chain.\r\n\r\ntested with 200 events with the winter2023 key4hep stack.",
-            "diff": {
-                "additions": 19,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "FCCee/Generator/EvtGen/Lb2L1520NuNu.dec"
             ],
             "comments": [],
             "comments_total": 0,
