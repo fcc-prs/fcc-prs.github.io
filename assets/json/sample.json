@@ -106,7 +106,7 @@
             "author": "tmadlener",
             "createdAt": "2025-05-05",
             "updatedAt": "2026-08-05",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -273,6 +273,17 @@
             "updatedAt": "2026-09-21",
             "mergeOk": "no",
             "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 935,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/935'>Bump int128/docker-manifest-create-action from 2.28.0 to 2.29.0</a>",
+            "author": "dependabot",
+            "createdAt": "2026-10-10",
+            "updatedAt": "2026-10-10",
+            "mergeOk": "yes",
+            "labels": "dependencies \ngithub_actions",
             "assignees": ""
         },
         {
@@ -1641,22 +1652,22 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 290,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/290'>Fix O(N^2) loops in CreateTruthLinks</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-10-08",
-            "updatedAt": "2026-10-08",
+            "num": 287,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/287'>Further minor fixes for phi wrapping.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2026-10-03",
+            "updatedAt": "2026-10-10",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 287,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/287'>Further minor fixes for phi wrapping.</a>",
-            "author": "scott-snyder",
-            "createdAt": "2026-10-03",
-            "updatedAt": "2026-10-06",
+            "num": 290,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/290'>Fix O(N^2) loops in CreateTruthLinks</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-10-08",
+            "updatedAt": "2026-10-09",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
