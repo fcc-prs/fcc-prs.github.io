@@ -226,7 +226,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
             "createdAt": "2026-07-06",
-            "updatedAt": "2026-10-09",
+            "updatedAt": "2026-10-10",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -272,28 +272,6 @@
             "createdAt": "2025-05-12",
             "updatedAt": "2026-09-21",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 935,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/935'>Bump int128/docker-manifest-create-action from 2.28.0 to 2.29.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-10-10",
-            "updatedAt": "2026-10-10",
-            "mergeOk": "yes",
-            "labels": "dependencies \ngithub_actions",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 934,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/934'>Make it possible to source older lcg nightlies</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-10-09",
-            "updatedAt": "2026-10-09",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1145,6 +1123,17 @@
             "assignees": "keplerman417"
         },
         {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 214,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/214'>feat(plugin): add a Gaudi auditor that records per-component costs of k4run jobs</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-10",
+            "updatedAt": "2026-10-10",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "hep-fcc/<br>FCCSW",
             "num": 491,
             "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/491'>Fix tests.</a>",
@@ -1652,10 +1641,10 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 287,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/287'>Further minor fixes for phi wrapping.</a>",
-            "author": "scott-snyder",
-            "createdAt": "2026-10-03",
+            "num": 290,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/290'>Fix O(N^2) loops in CreateTruthLinks</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-10-08",
             "updatedAt": "2026-10-10",
             "mergeOk": "yes",
             "labels": "",
@@ -1663,11 +1652,11 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 290,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/290'>Fix O(N^2) loops in CreateTruthLinks</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-10-08",
-            "updatedAt": "2026-10-09",
+            "num": 287,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/287'>Further minor fixes for phi wrapping.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2026-10-03",
+            "updatedAt": "2026-10-10",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
