@@ -1,6 +1,170 @@
 {
-    "updated_at": "2026-10-09T12:26:14Z",
+    "updated_at": "2026-10-10T11:44:48Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 934,
+            "title": "Make it possible to source older lcg nightlies",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/934",
+            "author": "tmadlener",
+            "mergedAt": "2026-10-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Make it possible to source previous nightlies also for the LCG based stacks\n\nENDRELEASENOTES\n\nSimply because I just had a use for this. In my testing I haven't encountered any issues (at least not related to the sourcing of the appropriate setup script)",
+            "diff": {
+                "additions": 68,
+                "deletions": 6,
+                "files": 2
+            },
+            "files": [
+                ".github/workflows/test-setup-scripts.yaml",
+                "scripts/cvmfs/setup-nightlies.sh"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "There is a possible downside, if the build failed that day then you are sourcing the last successful one for that day, which may be (in theory) N weeks ago. But looks good, I'll sync now. I've also added some tests to CI"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 935,
+            "title": "Bump int128/docker-manifest-create-action from 2.28.0 to 2.29.0",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/935",
+            "author": "dependabot",
+            "mergedAt": "2026-10-10",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [int128/docker-manifest-create-action](https://github.com/int128/docker-manifest-create-action) from 2.28.0 to 2.29.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/int128/docker-manifest-create-action/releases\">int128/docker-manifest-create-action's releases</a>.</em></p>\n<blockquote>\n<h2>v2.29.0</h2>\n<pre lang=\"yaml\"><code>uses: int128/docker-manifest-create-action@a118e9fe12455375d4810aa318c20e6dba77288e # v2.29.0\n</code></pre>\n<h2>What's Changed</h2>\n<ul>\n<li>Update pnpm to v12 by <a href=\"https://github.com/int128-actions-tanpopo\"><code>@\u200bint128-actions-tanpopo</code></a>[bot] in <a href=\"https://redirect.github.com/int128/docker-manifest-create-action/pull/1240\">int128/docker-manifest-create-action#1240</a></li>\n<li>chore(deps): upda\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/image-template.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 213,
+            "title": "refactor: centralise the run store layout and read rank-group keys by name",
+            "url": "https://github.com/key4hep/k4Bench/pull/213",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-10",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\r\n\r\nThis PR centralises the benchmark run directory layout and replaces positional rank-group tuple access with named fields.\r\n\r\nThe run store layout (`detector/platform/stack/sample/date`) was previously constructed independently in several places, making it easy for the different readers to drift apart. The new `k4bench.layout` module provides shared helpers for constructing paths and URLs, naming release directories, and discovering local runs.\r\n\r\nThe main changes are:\r\n\r\n- Introduce `k4bench.layout` and use it across remote data access, local regression reports, dashboard views, and blame tooling.\r\n- Replace the nested directory traversal in the local report builder with a shared run directory iterator that skips reserved and temporary directories.\r\n- Replace the positional `\u2026",
+            "diff": {
+                "additions": 343,
+                "deletions": 94,
+                "files": 15
+            },
+            "files": [
+                ".github/scripts/blame_report.py",
+                ".github/scripts/nightly_benchmark.sh",
+                ".github/scripts/run_info.py",
+                "dashboard/tabs/regressions.py",
+                "dashboard/tabs/stack_changes.py",
+                "k4bench/blame/comment.py",
+                "k4bench/blame/models.py",
+                "k4bench/blame/reproduce.py",
+                "k4bench/layout.py",
+                "k4bench/regression/email.py",
+                "k4bench/regression/report_builder.py",
+                "k4bench/remote.py",
+                "tests/unit/test_blame_models.py",
+                "tests/unit/test_layout.py",
+                "tests/unit/test_regression_report.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/213?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4MarlinWrapper",
+            "num": 490,
+            "title": "Fix seed refresh per event",
+            "url": "https://github.com/key4hep/k4MarlinWrapper/pull/490",
+            "author": "Victor-Schwan",
+            "mergedAt": "2026-10-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Fix random seed refreshing\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 128,
+                "deletions": 4,
+                "files": 4
+            },
+            "files": [
+                "k4MarlinWrapper/src/components/MarlinProcessorWrapper.cpp",
+                "tests/CMakeLists.txt",
+                "tests/gaudi_opts/random_seeds.py",
+                "tests/src/MarlinRandomSeedChecker.cc"
+            ],
+            "comments": [
+                {
+                    "author": "Victor-Schwan",
+                    "body": "#254 made `MarlinProcessorWrapper` refresh the Marlin random seeds only once per event, detecting a new event by comparing the `LCEvent` pointer with the previous one. A new `LCEvent` is frequently allocated at the address of the previous one. The refresh is then skipped, and all Marlin processors d\u2026"
+                },
+                {
+                    "author": "Victor-Schwan",
+                    "body": "as discussed with @tmadlener"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I can reproduce the test failure (without the fix) locally. Looks like my \"fix\" from #254 did not consider compiler optimizations to be a thing.\r\n\r\nMainly FYI: @andresailer"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "> With the fix, the same 300 events have 298 distinct smearing patterns.\r\n\r\nI would say this is not very good, I'm sure modern random number generators can do 300/300, although you don't define what it means to be in the 298 group."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "It probably also depends on what Claude defines as *same smearing pattern*. Claude covered quite some ground here to figure out that the underlying problem is that seeds are not refreshed. I think the test is as good as we can get without involving a ton of machinery and it tests the main problem."
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 1
+        },
         {
             "org": "key4hep",
             "repo": "k4Bench",
@@ -52,6 +216,156 @@
             ],
             "comments": [],
             "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-physics-events",
+            "num": 17,
+            "title": "Enable TLS for database connections when available",
+            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/17",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-09",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "asyncpg never requested TLS, so DBOD instances that require an\nencrypted connection (like the new fcc-dami-test database) rejected\nevery connection attempt, crash-looping the backend on startup.\nDefaults to \"prefer\" so existing non-TLS databases are unaffected.",
+            "diff": {
+                "additions": 10,
+                "deletions": 1,
+                "files": 2
+            },
+            "files": [
+                "backend/app/config.conf",
+                "backend/app/storage/database.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-physics-events",
+            "num": 16,
+            "title": "Fix frontend API URL not taking effect at runtime",
+            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/16",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-09",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "METADATA_BROWSER_BACKEND_URL is only read at Docker build time, so\nsetting it in the runtime Secret never had any effect -- the deployed\nfrontend was always falling back to http://localhost:8000. Documents\nand adds NUXT_PUBLIC_API_BASE_URL, which Nitro does apply at container\nstartup, to the staging env template.",
+            "diff": {
+                "additions": 11,
+                "deletions": 1,
+                "files": 2
+            },
+            "files": [
+                "frontend/nuxt.config.ts",
+                "k8s/test/frontend.env.example"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-physics-events",
+            "num": 14,
+            "title": "Rename to DaMI and add staging environment",
+            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/14",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-09",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Renames the project to Dataset Metadata Interface (DaMI) at the code\nlevel (display strings, docstrings, frontend branding -- repo name\nand registry paths unchanged), and adds a staging deploy pipeline:\npushes to main now also deploy to a new fcc-dami-test OpenShift\nproject backed by its own DBOD instance, while prod continues to\nredeploy only on a git tag.",
+            "diff": {
+                "additions": 242,
+                "deletions": 98,
+                "files": 23
+            },
+            "files": [
+                ".gitlab-ci.yml",
+                "README.md",
+                "backend/app/config.conf",
+                "backend/app/main.py",
+                "backend/app/routers/entities_router.py",
+                "backend/app/routers/navigation_router.py",
+                "backend/app/storage/database_modules/__init__.py",
+                "backend/app/utils/config_utils.py",
+                "backend/app/utils/errors_utils.py",
+                "backend/app/utils/logging_utils.py",
+                "backend/app/utils/uuid_utils.py",
+                "docs/TUTORIAL.md",
+                "frontend/config/app.config.ts",
+                "frontend/package.json",
+                "k8s/test/backend-deployment.yaml",
+                "k8s/test/backend-service.yaml",
+                "k8s/test/backend-storage-pvc.yaml",
+                "k8s/test/backend.env.example",
+                "k8s/test/frontend-deployment.yaml",
+                "k8s/test/frontend-service.yaml",
+                "k8s/test/frontend.env.example",
+                "k8s/test/route-backend.yaml",
+                "k8s/test/route-frontend.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-physics-events",
+            "num": 15,
+            "title": "Add tag-triggered prod deploy",
+            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/15",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-09",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Adds a tag-triggered deploy-prod job and lets build-backend/build-frontend\nrun on tags too, so pushing a release tag deploys prod without requiring\nanother push to master. Needed to make the v0.1.1 release tag actually\ntrigger a pipeline.",
+            "diff": {
+                "additions": 81,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                ".gitlab-ci.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1694,
+            "title": "CMake: require boost 1.70 so we are sure there is a BoostConfg.cmake \u2026",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1694",
+            "author": "andresailer",
+            "mergedAt": "2026-10-09",
+            "mergedBy": "andresailer",
+            "labels": [],
+            "body": "\u2026file provided\n\n\n\nBEGINRELEASENOTES\n- CMake: Require Boost 1.70 and always use CONFIG in DD4hepConfig.cmake for Boost. To silence warning about CMP0167 in downstream projects.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 7,
+                "files": 2
+            },
+            "files": [
+                "CMakeLists.txt",
+                "cmake/DD4hepConfig.cmake.in"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200221h 0m 0s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 2aff8b31.\n\n[test-results]:data:application/gzip;base64,H4sIANLyyGoC/12Myw7CIBBFf6Vh7QIcgeLPNC0yCbEthsfK+O+OpLbo8pybe54M/ewSu3aiP3UsFZ8PupU4Zh9WYi0V56RozZ8dtPzSkIq1/+ru\u2026"
+                }
+            ],
+            "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
         },
@@ -2334,527 +2648,6 @@
                 }
             ],
             "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 933,
-            "title": "make +cuda available only when +gnn in k4ActsTracking",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/933",
-            "author": "madbaron",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Made +cuda available only when +gnn in k4ActsTracking\r\n- The default CPU-only build doesn't accidentally pick up torch+cuda\r\n\r\nENDRELEASENOTES\r\n\r\nLittle cleanup to avoid nonsensical ~gnn+cuda configuration",
-            "diff": {
-                "additions": 1,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "packages/k4actstracking/package.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 3
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-doc",
-            "num": 167,
-            "title": "Bump urllib3 from 2.7.0 to 2.8.0",
-            "url": "https://github.com/key4hep/key4hep-doc/pull/167",
-            "author": "dependabot",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "tmadlener",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [urllib3](https://github.com/urllib3/urllib3) from 2.7.0 to 2.8.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/urllib3/urllib3/releases\">urllib3's releases</a>.</em></p>\n<blockquote>\n<h2>2.8.0</h2>\n<h2>\ud83d\ude80 urllib3 is fundraising for HTTP/2 support</h2>\n<p><a href=\"https://sethmlarson.dev/urllib3-is-fundraising-for-http2-support\">urllib3 is raising ~$40,000 USD</a> to release HTTP/2 support and ensure long-term sustainable maintenance of the project. If your company or organization uses Python and would benefit from HTTP/2 support in Requests, pip, cloud SDKs, and thousands of other projects <a href=\"https://opencollective.com/urllib3\">please consider contributing financially</a> to ensure HTTP/2 support is developed sustainably and maintai\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": ":rocket: Documentation preview: https://key4hep.github.io/key4hep-doc/pr-preview/pr-167/\n\nIt becomes available once the github pages deployment has completed,\nis updated on every push and is removed once this PR is closed.\n<!-- Sticky Pull Request Commentpr-preview -->"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 94,
-            "title": "Fix CUDA output tensor for metric learning model",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/94",
-            "author": "Baucki1",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Small change to ONNXInferenceModel adding a dedicated CUDA path, binding ONNX outputs directly to CUDA device\r\n- Small fix to OnnxMetricLearning to ensure output tensor is on the correct device for buildEdgesFRNN (ACTS) when running on CUDA\r\n- Copy node feature input tensor for downstream pipeline (edge classifiers) directly into ACTS tensor on CUDA device memory to force ACTS' OnnxEdgeClassifier to run on CUDA (device is picked up from [input tensor](https://github.com/acts-project/acts/blob/main/Plugins/Gnn/src/OnnxEdgeClassifier.cpp#L115)); skips intermediate conversion to torch tensor to move to CUDA device (std::vector -> torchTensor -> ActsTensor)\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 113,
-                "deletions": 26,
-                "files": 3
-            },
-            "files": [
-                "GNNTrackFinding/include/ONNXInferenceModel.h",
-                "GNNTrackFinding/src/ONNXInferenceModel.cpp",
-                "GNNTrackFinding/src/OnnxMetricLearning.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "I have merged the main branch into this one taking care of the formatting changes along the way. In principle nothing should have changed in the process (apart from formatting) and the diff looks sensible to me. How hard is it to give this current version a go to actually check that nothing broke?"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "It took a moment, but I was able to rebuild the local CUDA-enabled stack and test this. \r\nNothing broke - I think this is ready to go."
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "The formatting that pre-commit complains about is pre-existing (due to the switch to LLVM 22 for the nightlies stack). (see e.g. #96)\n\n@jmcarcell is there anything we can do to the `.clang-format` to retain the LLVM 20 behavior? Otherwise we will have quite some formatting in the next few days / wee\u2026"
-                }
-            ],
-            "reviews_total": 4
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4PFHitML",
-            "num": 4,
-            "title": "fix unused variable error, skip events with no hits/tracks",
-            "url": "https://github.com/key4hep/k4PFHitML/pull/4",
-            "author": "herrmannlena",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "herrmannlena",
-            "labels": [],
-            "body": "- Skip events with no calorimeter hits or tracks before running the clustering model (fixes crash in nightly CI)\r\n- Remove unused variable `globalHitIndex`",
-            "diff": {
-                "additions": 10,
-                "deletions": 3,
-                "files": 2
-            },
-            "files": [
-                "k4PF-HitML/src/components/DataPreprocessing.cpp",
-                "k4PF-HitML/src/components/PFHitML.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "DDML",
-            "num": 19,
-            "title": "Add python module to streamline configuration for downstream consumers",
-            "url": "https://github.com/key4hep/DDML/pull/19",
-            "author": "tmadlener",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Add a `ddml` python module that provides `ddml_physics` as well as `add_shower_model` to streamline the setup of a fast sim model in ddsim steering files.\r\n  - Plus some pre-configured configurations for included models\r\n\r\nENDRELEASENOTES\r\n\r\n- [x] includes #17 \r\n- [x] includes #20 \r\n\r\nThe main motivation for this is that the current `ddsim_steer.py` has organically grown to something that is borderline unmaintainable with many almost but not quite orthogonal configuration options handled by individual flags and a bunch of `if-else` chains. Additionally with quite some duplication of code between ONNX and Torch inference libraries. This PR streamlines all of that, essentially making adding a new model writing a `ModelConfig` that encapsulates all the necessary configura\u2026",
-            "diff": {
-                "additions": 337,
-                "deletions": 421,
-                "files": 12
-            },
-            "files": [
-                ".gitignore",
-                "CMakeLists.txt",
-                "README.md",
-                "python/CMakeLists.txt",
-                "python/ddml/__init__.py",
-                "python/ddml/configs.py",
-                "python/ddml/geometry.py",
-                "python/ddml/model.py",
-                "python/ddml/setup_physics.py",
-                "scripts/ddsim_steer.py",
-                "tests/CMakeLists.txt",
-                "tests/check_test_outputs.py"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "The BIBAE  model is missing at the moment so CI will fail"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "This now also checks BIBAE. It does not yet check HDF5 loading (e.g. PionClouds) nor any of the ONNX versions. I would like to defer those to follow up PR(s) to unblock #22"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Make sure we keep the calo face entry recording added with #4 as an option for all of this."
-                }
-            ],
-            "reviews_total": 7
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 204,
-            "title": "ci: auto-merge dependabot PRs once CI passes",
-            "url": "https://github.com/key4hep/k4Bench/pull/204",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **User description**\nAdds a minimal workflow that enables GitHub native auto-merge (squash) on every Dependabot PR using the default `GITHUB_TOKEN`. The PR then merges automatically as soon as the required CI check passes.\r\n\r\nTwo repo settings changes accompany this (already applied):\r\n- **Allow auto-merge** enabled on the repository.\r\n- New repo ruleset **\"Require CI on main\"** making the `run` job of the Pipeline workflow a required status check on `main` \u2014 without it, auto-merge would merge immediately without waiting for CI.\r\n\r\nKnown limitation: merges performed via `GITHUB_TOKEN` do not trigger `push`-to-main workflows. In practice this only delays dashboard redeploys for `/dashboard` dependency bumps until the next nightly (Deploy Dashboard also runs o\u2026",
-            "diff": {
-                "additions": 18,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/dependabot-auto-merge.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/665ce0419fca2e6d8b9051c369c169591b51bc1a)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 665ce04 -->\n\nLatest suggestions up to 665ce04\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/204#issuecomment-5955709000)** updated to latest commit https://github.com/key4hep/k4Bench/commit/665ce0419fca2e6d8b9051c369c169591b51bc1a"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/204?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 4,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 203,
-            "title": "chore(deps): update pymdown-extensions requirement from >=12.0.1 to >=12.1",
-            "url": "https://github.com/key4hep/k4Bench/pull/203",
-            "author": "dependabot",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Updates the requirements on [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/pymdown-extensions/releases\">pymdown-extensions's releases</a>.</em></p>\n<blockquote>\n<h2>12.1</h2>\n<ul>\n<li><strong>NEW</strong>: SuperFences: Add optional <code>reset</code> function that can be specified for custom fences.</li>\n<li><strong>FIX</strong>: Tilde, Caret: Fix performance for long invalid delimiters.</li>\n</ul>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/facelessuser/pymdown-extensions/commit/9b896a8ae4ae2c9bbf42aa525925b245432fb3d2\"><code>9b896a8</code></a> Docs: Update theme</li>\n<li><a hr\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "docs/requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "phoenix-at-fcc",
-            "num": 29,
-            "title": "Bump up version number to match GitHub one",
-            "url": "https://github.com/HEP-FCC/phoenix-at-fcc/pull/29",
-            "author": "apausa",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "apausa",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "package.json"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 101,
-            "title": "Fetch frontend libraries at Docker build time instead of committing them",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/101",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "- Stop committing static/vendor/ (htmx, marked, katex, bulma, dompurify, Inter). The Dockerfile has a new `assets` stage that runs `npm ci` and copies the same files the Makefile already produces locally, via a shared scripts/vendor-assets.sh so the two can't drift apart\n- Inter moves from a direct Google Fonts curl to @fontsource-variable/inter (Fontsource org, same v20 source), so it goes through the same npm pipeline as everything else \u2014 font-family is now 'Inter Variable'\n- This removes the recurring need to manually check out each Renovate PR, run `make assets`, and push a fixup commit \u2014 there's nothing committed left to go stale\n- Replace .github/workflows/verify-vendor-assets.yml (only existed to catch that drift) with docker-build.yml, which builds the real image on every PR\n- Add \u2026",
-            "diff": {
-                "additions": 76,
-                "deletions": 216,
-                "files": 46
-            },
-            "files": [
-                ".dockerignore",
-                ".github/workflows/docker-build.yml",
-                ".github/workflows/verify-vendor-assets.yml",
-                ".gitignore",
-                "Dockerfile",
-                "Makefile",
-                "README.md",
-                "package-lock.json",
-                "package.json",
-                "scripts/vendor-assets.sh",
-                "static/style.css",
-                "static/vendor/bulma.min.css",
-                "static/vendor/fonts/inter-cyrillic-ext.woff2",
-                "static/vendor/fonts/inter-cyrillic.woff2",
-                "static/vendor/fonts/inter-greek-ext.woff2",
-                "static/vendor/fonts/inter-greek.woff2",
-                "static/vendor/fonts/inter-latin-ext.woff2",
-                "static/vendor/fonts/inter-latin.woff2",
-                "static/vendor/fonts/inter-vietnamese.woff2",
-                "static/vendor/fonts/inter.css",
-                "static/vendor/htmx.min.js",
-                "static/vendor/katex/auto-render.min.js",
-                "static/vendor/katex/fonts/KaTeX_AMS-Regular.woff2",
-                "static/vendor/katex/fonts/KaTeX_Caligraphic-Bold.woff2",
-                "static/vendor/katex/fonts/KaTeX_Caligraphic-Regular.woff2",
-                "static/vendor/katex/fonts/KaTeX_Fraktur-Bold.woff2",
-                "static/vendor/katex/fonts/KaTeX_Fraktur-Regular.woff2",
-                "static/vendor/katex/fonts/KaTeX_Main-Bold.woff2",
-                "static/vendor/katex/fonts/KaTeX_Main-BoldItalic.woff2",
-                "static/vendor/katex/fonts/KaTeX_Main-Italic.woff2"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 100,
-            "title": "Rename Go module from dataset-tracker to fcc-drs",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/100",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "The Go module was still named `dataset-tracker` (leftover from before the project settled on the fcc-drs name), while everything else \u2014 binary, repo, npm package \u2014 already uses `fcc-drs`. Renamed the module and updated all import paths across the 12 files that referenced it.",
-            "diff": {
-                "additions": 28,
-                "deletions": 28,
-                "files": 13
-            },
-            "files": [
-                "cmd/fcc-drs/main.go",
-                "go.mod",
-                "internal/handlers/admin.go",
-                "internal/handlers/auth.go",
-                "internal/handlers/campaigns.go",
-                "internal/handlers/generator_cards.go",
-                "internal/handlers/handlers.go",
-                "internal/handlers/pipeline.go",
-                "internal/handlers/production_ids.go",
-                "internal/handlers/profile.go",
-                "internal/handlers/relations.go",
-                "internal/middleware/auth.go",
-                "internal/notifications/notifier.go"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 99,
-            "title": "Link the GitLab mirror in the README",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/99",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Add a line near the top pointing to the CERN GitLab mirror (gitlab.cern.ch/hep-fcc/fcc-drs), which is where the actual CI/CD build and deployment pipeline runs \u2014 not mentioned anywhere in the README before.",
-            "diff": {
-                "additions": 2,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "README.md"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 90,
-            "title": "Update dependency htmx.org to v2.0.11",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/90",
-            "author": "renovate",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [htmx.org](https://htmx.org/) ([source](https://redirect.github.com/bigskysoftware/htmx)) | [`2.0.10` \u2192 `2.0.11`](https://renovatebot.com/diffs/npm/htmx.org/2.0.10/2.0.11) | ![age](https://developer.mend.io/api/mc/badges/age/npm/htmx.org/2.0.11?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/htmx.org/2.0.10/2.0.11?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>bigskysoftware/htmx (htmx.org)</summary>\n\n### [`v2.0.11`](https://redirect.github.com/bigskysoftware/htmx/blob/HEAD/CHANGELOG.md#2011---2026-09-22)\n\n[Compare Source](https://redirect.github.co\u2026",
-            "diff": {
-                "additions": 6,
-                "deletions": 6,
-                "files": 3
-            },
-            "files": [
-                "package-lock.json",
-                "package.json",
-                "static/vendor/htmx.min.js"
-            ],
-            "comments": [
-                {
-                    "author": "renovate",
-                    "body": "### Edited/Blocked Notification\n\nRenovate will not automatically rebase this PR, because it does not recognize the last commit author and assumes somebody else may have edited the PR.\n\nYou can manually request rebase by checking the rebase/retry box above.\n\n \u26a0\ufe0f **Warning**: custom changes will be lo\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 92,
-            "title": "Update dependency katex to v0.19.0",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/92",
-            "author": "renovate",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [katex](https://katex.org) ([source](https://redirect.github.com/KaTeX/KaTeX)) | [`0.18.7` \u2192 `0.19.0`](https://renovatebot.com/diffs/npm/katex/0.18.7/0.19.0) | ![age](https://developer.mend.io/api/mc/badges/age/npm/katex/0.19.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/katex/0.18.7/0.19.0?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>KaTeX/KaTeX (katex)</summary>\n\n### [`v0.19.0`](https://redirect.github.com/KaTeX/KaTeX/blob/HEAD/CHANGELOG.md#0190-2026-10-01)\n\n[Compare Source](https://redirect.github.com/KaTeX/KaTeX/compare/v0.18.11...v0.19.0)\u2026",
-            "diff": {
-                "additions": 7,
-                "deletions": 7,
-                "files": 4
-            },
-            "files": [
-                "package-lock.json",
-                "package.json",
-                "static/vendor/katex/katex.min.css",
-                "static/vendor/katex/katex.min.js"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 89,
-            "title": "Update dependency marked to v18.0.14",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/89",
-            "author": "renovate",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [marked](https://marked.js.org) ([source](https://redirect.github.com/markedjs/marked)) | [`18.0.13` \u2192 `18.0.14`](https://renovatebot.com/diffs/npm/marked/18.0.13/18.0.14) | ![age](https://developer.mend.io/api/mc/badges/age/npm/marked/18.0.14?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/marked/18.0.13/18.0.14?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>markedjs/marked (marked)</summary>\n\n### [`v18.0.14`](https://redirect.github.com/markedjs/marked/compare/v18.0.13...ef0704c58459e927c805b92a5cc7d0c629e6fe43)\n\n[Compare Source](https://redirect.\u2026",
-            "diff": {
-                "additions": 38,
-                "deletions": 36,
-                "files": 3
-            },
-            "files": [
-                "package-lock.json",
-                "package.json",
-                "static/vendor/marked.min.js"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 95,
-            "title": "Update module modernc.org/sqlite to v1.60.1",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/95",
-            "author": "renovate",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [modernc.org/sqlite](https://gitlab.com/cznic/sqlite) | `v1.59.0` \u2192 `v1.60.1` | ![age](https://developer.mend.io/api/mc/badges/age/go/modernc.org%2fsqlite/v1.60.1?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/go/modernc.org%2fsqlite/v1.59.0/v1.60.1?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>cznic/sqlite (modernc.org/sqlite)</summary>\n\n### [`v1.60.1`](https://gitlab.com/cznic/sqlite/compare/v1.60.0...v1.60.1)\n\n[Compare Source](https://gitlab.com/cznic/sqlite/compare/v1.60.0...v1.60.1)\n\n### [`v1.60.0`](https://gitlab.com/cznic/sqlite/compare/v1.59.0\u2026",
-            "diff": {
-                "additions": 12,
-                "deletions": 4,
-                "files": 2
-            },
-            "files": [
-                "go.mod",
-                "go.sum"
-            ],
-            "comments": [
-                {
-                    "author": "renovate",
-                    "body": "### \u2139\ufe0f Artifact update notice\n\n##### File name: go.mod\n\nIn order to perform the update(s) described in the table above, Renovate ran the `go get` command, which resulted in the following additional change(s):\n\n\n- 3 additional dependencies were updated\n\n\nDetails:\n\n\n| **Package**         | **Change** \u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 97,
-            "title": "Vendor frontend JS/CSS libraries via npm instead of curl/tar",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/97",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-02",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "- Add `package.json`/`package-lock.json` pinning htmx, marked, katex, bulma, and dompurify \u2014 gives the frontend deps an integrity-verified lockfile, closing the gap where `curl` just trusted whatever a CDN returned\n- `Makefile`'s `assets` target now runs `npm ci` + copies the needed minified files into `static/vendor/`, instead of `curl`/`tar`; katex no longer needs manual tarball extraction since npm already unpacks it\n- Remove the hand-written `customManagers` regexes from `renovate.json` \u2014 Renovate's built-in `npm` manager now handles version bumps and lockfile updates automatically\n- `verify-vendor-assets.yml` now sets up Node and also triggers on `package.json`/`package-lock.json`\n- Bump dompurify to 3.4.16, fixing a DOM XSS advisory (GHSA-p98j-92pf-mc4p) in 3.4.13\u20133.4.15 that `npm in\u2026",
-            "diff": {
-                "additions": 129,
-                "deletions": 69,
-                "files": 7
-            },
-            "files": [
-                ".github/workflows/verify-vendor-assets.yml",
-                ".gitignore",
-                "Makefile",
-                "package-lock.json",
-                "package.json",
-                "renovate.json",
-                "static/vendor/purify.min.js"
-            ],
-            "comments": [],
-            "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
         }
