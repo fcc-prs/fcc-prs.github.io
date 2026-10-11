@@ -1,5 +1,5 @@
 {
-    "updated_at": "2026-10-10T11:44:48Z",
+    "updated_at": "2026-10-11T11:57:33Z",
     "data": [
         {
             "org": "key4hep",
@@ -55,6 +55,252 @@
             ],
             "comments": [],
             "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 217,
+            "title": "feat(auditor): record per-component heap allocations, page faults, context switches and instruction counts",
+            "url": "https://github.com/key4hep/k4Bench/pull/217",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-10",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\r\n\r\nExtends the `k4BenchAuditor` with additional per-component performance metrics to better understand where Gaudi jobs spend resources beyond CPU and wall-clock time.\r\n\r\nThe auditor now records:\r\n\r\n- **Heap allocations:** Number of allocations, allocated bytes, net allocated bytes, peak heap usage, and largest allocation.\r\n- **Hardware counters:** Instructions executed and CPU cycles, providing metrics that are less sensitive to system load than timing measurements.\r\n- **Page faults:** Minor and major faults to help identify memory access and I/O overhead.\r\n- **Context switches:** Voluntary and involuntary switches to identify blocking and scheduling interference.\r\n\r\nHeap allocations are tracked through a new lightweight `LD_PRELOAD` library that wraps glibc's allocator and mai\u2026",
+            "diff": {
+                "additions": 1201,
+                "deletions": 78,
+                "files": 17
+            },
+            "files": [
+                "docs/architecture/overview.md",
+                "docs/developer-guide/repository-layout.md",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/commands.md",
+                "k4bench/analysis/components.py",
+                "k4bench/plugin/runtime.py",
+                "k4bench/runner/k4run.py",
+                "k4bench/runner/process.py",
+                "plugin/auditor/CMakeLists.txt",
+                "plugin/auditor/k4BenchAllocCounter.cpp",
+                "plugin/auditor/k4BenchAllocCounter.h",
+                "plugin/auditor/k4BenchAuditor.cpp",
+                "plugin/build.sh",
+                "tests/integration/test_plugin_build.py",
+                "tests/unit/test_analysis_components.py",
+                "tests/unit/test_plugin_runtime.py",
+                "tests/unit/test_runner_k4run.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/217?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 216,
+            "title": "feat(benchmark): add k4bench k4run to benchmark k4run jobs and their variants",
+            "url": "https://github.com/key4hep/k4Bench/pull/216",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-10",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add `k4bench k4run` benchmarking of Gaudi jobs\n  - New orchestrator, runner, auditor wiring, staged working directories\n  - Baseline plus `variant_<name>` runs per benchmark\n\n- Extract shared RunResult building from ddsim runner\n  - `runner/executor.py` renamed to `runner/ddsim.py`\n\n- Nightly CI resolves, records and uploads k4run jobs\n  - New `tool` config key, separate `_k4run/` EOS tree\n\n- Add CLD_o2_v09 reconstruction nightly benchmark configuration\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart TD\n  CLI[\"k4bench cli\"] -- \"k4run subcommand\" --> BK[\"benchmark.k4run orchestrator\"]\n  BK -- \"fresh staged work dir per run\" --> RK[\"runner.k4run + k4BenchAuditor\"]\n  RK -- \"timed process\" --> RR[\u2026",
+            "diff": {
+                "additions": 1918,
+                "deletions": 186,
+                "files": 42
+            },
+            "files": [
+                ".github/ai-review-instructions.md",
+                ".github/benchmarks/CLD_o2_v09_reco.yml",
+                ".github/scripts/benchmark_job.py",
+                ".github/scripts/bump_detectors.py",
+                ".github/scripts/list_benchmarks.py",
+                ".github/scripts/nightly_benchmark.sh",
+                ".github/scripts/run_info.py",
+                ".github/scripts/smoke_benchmarks.py",
+                "docs/architecture/component-diagrams.md",
+                "docs/architecture/overview.md",
+                "docs/developer-guide/repository-layout.md",
+                "docs/reference/api-reference.md",
+                "docs/reference/configuration-reference.md",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/commands.md",
+                "docs/user-guide/configuration.md",
+                "docs/user-guide/features/timing-plugins.md",
+                "docs/user-guide/overview.md",
+                "k4bench/benchmark/ddsim.py",
+                "k4bench/benchmark/k4run.py",
+                "k4bench/cli.py",
+                "k4bench/labels.py",
+                "k4bench/layout.py",
+                "k4bench/regression/report_builder.py",
+                "k4bench/results/reporter.py",
+                "k4bench/runner/ddsim.py",
+                "k4bench/runner/k4run.py",
+                "k4bench/runner/process.py",
+                "k4bench/runner/result.py",
+                "k4bench/runner/steering.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/216?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>Recommended focus are\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 9adedd3 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 2
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 215,
+            "title": "refactor(nightly): run each benchmark job from its whole matrix record in Python",
+            "url": "https://github.com/key4hep/k4Bench/pull/215",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-10",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\r\n\r\nRefactor the nightly benchmark execution to move job-specific logic from Bash into Python.\r\n\r\nPreviously, the workflow passed individual benchmark parameters as environment variables, and `nightly_benchmark.sh` handled input resolution, command construction, execution, and metadata generation. This PR replaces that interface with a single JSON job record produced by `list_benchmarks.py` and consumed by the new `benchmark_job.py`.\r\n\r\nThe refactoring:\r\n- Adds `benchmark_job.py` to resolve geometry, steering files, and input data, construct and execute the benchmark command, and collect run metadata.\r\n- Converts `run_info.py` from a standalone CLI into a reusable Python module.\r\n- Simplifies `nightly_benchmark.sh`, leaving it responsible for environment setup, installation, and \u2026",
+            "diff": {
+                "additions": 658,
+                "deletions": 291,
+                "files": 15
+            },
+            "files": [
+                ".github/ai-review-instructions.md",
+                ".github/benchmarks/CLD_o3_v01.yml",
+                ".github/scripts/benchmark_job.py",
+                ".github/scripts/list_benchmarks.py",
+                ".github/scripts/nightly_benchmark.sh",
+                ".github/scripts/regression_report.py",
+                ".github/scripts/run_info.py",
+                ".github/scripts/smoke_benchmarks.py",
+                ".github/workflows/benchmark-detector.yml",
+                "dashboard/ui_chrome.py",
+                "docs/architecture/data-flow.md",
+                "docs/developer-guide/repository-layout.md",
+                "tests/unit/test_benchmark_job.py",
+                "tests/unit/test_list_benchmarks.py",
+                "tests/unit/test_run_info_writer.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/215?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 21,152 in / 9 out / 21,161 total\n- Time cost: 1443.9s\n- AI calls: 1\n\n</details\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 214,
+            "title": "feat(plugin): add a Gaudi auditor that records per-component costs of k4run jobs",
+            "url": "https://github.com/key4hep/k4Bench/pull/214",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-10",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\r\n\r\nThis PR adds a Gaudi auditor to measure the performance of individual algorithms and services in `k4run` jobs, laying the groundwork for extending k4Bench to reconstruction benchmarking.\r\n\r\nThe new `k4BenchAuditor` records wall time, CPU time, and peak memory increases for each component, covering both event processing and lifecycle phases (initialize, start, stop, finalize). Nested calls are accounted for without double counting, allowing performance costs to be attributed to individual algorithms and their enclosing sequencers.\r\n\r\nThe auditor produces two output files:\r\n- `_components.json` with per-component measurements, component metadata, and execution hierarchy.\r\n- `_events.json` using the existing ddsim-compatible event timing format, allowing reuse of the current ana\u2026",
+            "diff": {
+                "additions": 1989,
+                "deletions": 111,
+                "files": 16
+            },
+            "files": [
+                "k4bench/analysis/__init__.py",
+                "k4bench/analysis/components.py",
+                "k4bench/analysis/loader.py",
+                "k4bench/artifacts.py",
+                "k4bench/plugin/runtime.py",
+                "k4bench/plugin/schema.py",
+                "plugin/auditor/CMakeLists.txt",
+                "plugin/auditor/k4BenchAuditor.cpp",
+                "plugin/auditor/k4BenchAuditorOptions.py",
+                "plugin/build.sh",
+                "plugin/k4BenchProcStats.h",
+                "plugin/k4BenchTimingAction.cpp",
+                "tests/integration/test_plugin_build.py",
+                "tests/unit/test_analysis_components.py",
+                "tests/unit/test_plugin_runtime.py",
+                "tests/unit/test_plugin_schema.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": "### :x: 1 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 2190 | 1 | 2189 | 24 |\n<details><summary>View the top 1 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_links.py::test_link_resolves[https://doi.org/\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                }
+            ],
+            "comments_total": 9,
             "reviews": [],
             "reviews_total": 0
         },
