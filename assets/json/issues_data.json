@@ -1272,16 +1272,6 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
-            "num": 527,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/527'>Add a time uncertainty to TrackerHitPlane and TrackerHit3D</a>",
-            "author": "jburzy",
-            "createdAt": "2026-10-02",
-            "updatedAt": "2026-10-03",
-            "labels": "enhancement",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
             "num": 512,
             "title": "<a href='https://github.com/key4hep/EDM4hep/issues/512'>Potentially misleading meaning of `positionError` in `Cluster`</a>",
             "author": "tmadlener",
@@ -2166,7 +2156,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/128'>Material recording can't run in any Key4hep nightly (no ACTS Python bindings)</a>",
             "author": "jbeirer",
             "createdAt": "2026-10-09",
-            "updatedAt": "2026-10-09",
+            "updatedAt": "2026-10-12",
             "labels": "enhancement",
             "assignees": ""
         },
@@ -2468,6 +2458,16 @@
             "createdAt": "2025-06-06",
             "updatedAt": "2025-06-10",
             "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>eede",
+            "num": 130,
+            "title": "<a href='https://github.com/key4hep/eede/issues/130'>Event ordering issues</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-10-12",
+            "updatedAt": "2026-10-12",
+            "labels": "",
             "assignees": ""
         },
         {
@@ -3136,7 +3136,7 @@
             "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/issues/11'>Missing common configuration</a>",
             "author": "tmadlener",
             "createdAt": "2026-10-09",
-            "updatedAt": "2026-10-09",
+            "updatedAt": "2026-10-12",
             "labels": "enhancement",
             "assignees": ""
         },
@@ -4222,6 +4222,16 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-drs",
+            "num": 60,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/60'>Dependency Dashboard</a>",
+            "author": "renovate",
+            "createdAt": "2026-08-20",
+            "updatedAt": "2026-10-12",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
             "num": 119,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/119'>In the request preview boxes on dashboard put campaign to upper left corner</a>",
             "author": "kjvbrt",
@@ -4237,16 +4247,6 @@
             "author": "kjvbrt",
             "createdAt": "2026-10-09",
             "updatedAt": "2026-10-09",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 60,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/60'>Dependency Dashboard</a>",
-            "author": "renovate",
-            "createdAt": "2026-08-20",
-            "updatedAt": "2026-10-06",
             "labels": "",
             "assignees": ""
         },
