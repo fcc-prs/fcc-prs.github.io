@@ -1,0 +1,24 @@
+{
+  "updated_at": "2026-10-12T16:26:12Z",
+  "period_start": "2026-10-05",
+  "period_end": "2026-10-12",
+  "summary": [
+    "- **[key4hep/EDM4hep#528](https://github.com/key4hep/EDM4hep/pull/528)** — Adds a `timeError` member to `TrackerHit3D`, `TrackerHitPlane`, `SenseWireHit` and the `TrackerHit` interface, alongside the existing `eDepError`. This bumps the schema version, and the previous schema is kept as `old_schemas/edm4hep_v6.yaml`. Downstream code can now carry a per-hit time uncertainty, for example for 4D tracking, instead of using per-sensor placeholders.",
+    "- **[key4hep/k4ActsTracking#122](https://github.com/key4hep/k4ActsTracking/pull/122)** — Removes the legacy `ACTSSeededCKFTrackingAlg` together with `ACTSAlgBase`, `GeometryIdMappingTool` and `GeometryIdSelector`. Any remaining configurations must move to `CKFTrackingAlg`; v00-05 is the last tag that contains the old algorithm.",
+    "- **[key4hep/k4ActsTracking#113](https://github.com/key4hep/k4ActsTracking/pull/113)** — GNNTrackFinding now takes native Gaudi list properties instead of comma-separated strings. Old string-based configurations are rejected at configuration time and need updating. The PR also removes unused ONNX helpers and duplicated host-copy code.",
+    "- **[AIDASoft/DD4hep#1678](https://github.com/AIDASoft/DD4hep/pull/1678)** — `Geant4EventAction` now throws when shared actions are used in single-threaded mode, where they previously behaved wrongly without warning (e.g. writing events twice). The DDSim user output plugin example is corrected for multi-threaded running. Steering files using shared user output plugins (IDEA, ALLEGRO) need the matching update.",
+    "- **[key4hep/k4ActsTracking#72](https://github.com/key4hep/k4ActsTracking/pull/72)** — Adds optional 4D (time-aware) tracking to `CKFTrackingAlg`: `UseHitTimeInCKF` adds hit time as a CKF measurement dimension. `HitTimeResolutions` sets per-sensor time resolutions, as a placeholder until per-hit time errors are available from EDM4hep. `SeedFinding_DoubletTimeCutNSigma` enables the ACTS doublet seed time cut.",
+    "- **[key4hep/k4Reco#72](https://github.com/key4hep/k4Reco/pull/72)** — ConformalTracking gains `ECalBarrelFaceSystemID`/`ECalEndcapFaceSystemID` properties, which default to the ILD/CLD values. This lets detectors such as ALLEGRO get track states at the calorimeter face. GaudiDDKalTest now also installs electromagnetic calorimeters identified by their type flags, and the track fit no longer fails when no calorimeter-face state is found.",
+    "- **[HEP-FCC/k4RecCalorimeter#286](https://github.com/HEP-FCC/k4RecCalorimeter/pull/286)** — Rewrites `PairCaloClustersPi0` as a maximum graph matching using Boost.Graph, which runs in N³ time. The previous exhaustive search was exponential and exhausted memory on hadronic events. Results were verified to match the old algorithm on di-electron and hadronic events, apart from output ordering.",
+    "- **[key4hep/k4MarlinWrapper#490](https://github.com/key4hep/k4MarlinWrapper/pull/490)** — Fixes Marlin random seeds not being refreshed per event. New events are often allocated at the same address as the previous `LCEvent`, so the pointer-based new-event check skipped the refresh and processors reused the same seeds. A regression test is added.",
+    "- **[key4hep/k4FWCore#434](https://github.com/key4hep/k4FWCore/pull/434)** — Fixes the OverlayTiming background cursor: `StartBackgroundEventIndex` is now applied once instead of every event, which had caused the same background events to be overlaid repeatedly. `AllowReusingBackgroundFiles` is now enforced. Jobs that relied on silent reuse must set it explicitly.",
+    "- **[key4hep/k4Gen#64](https://github.com/key4hep/k4Gen/pull/64)** — `GaussSmearVertex` and `FlatSmearVertex` now shift the whole event position. Beam particles from the HepMC3 root vertex therefore start at the smeared interaction point instead of (0,0,0).",
+    "- **[AIDASoft/DD4hep#1691](https://github.com/AIDASoft/DD4hep/pull/1691)** — The HepMC3 event reader now applies the length unit to primary vertex x/y/z. Previously, HepMC3 files in centimetres gave wrong vertex positions.",
+    "- **[key4hep/k4RecTracker#109](https://github.com/key4hep/k4RecTracker/pull/109)** — Fixes a `TracksFromGenParticles` bug: with `ExtrapolateToECal=False`, uninitialized ECAL geometry could still be used, randomly producing garbage calorimeter track states. The extrapolation now runs only when requested. Geometry lookup failures return a proper error status, and the cellID is no longer truncated to 32 bits."
+  ],
+  "usage": {
+    "input_tokens": 56228,
+    "output_tokens": 8820
+  },
+  "cost_usd": 0.401312
+}
