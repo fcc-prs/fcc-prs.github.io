@@ -6,7 +6,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/669'>Alfa detector concept</a>",
             "author": "Edler1",
             "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-09",
+            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -117,7 +117,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-13",
             "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -128,7 +128,7 @@
             "author": "andread3vita",
             "createdAt": "2026-10-05",
             "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -139,7 +139,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -150,7 +150,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -161,7 +161,7 @@
             "author": "BrieucF",
             "createdAt": "2026-03-30",
             "updatedAt": "2026-05-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -260,7 +260,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
             "updatedAt": "2026-10-02",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -271,7 +271,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-25",
             "updatedAt": "2026-09-25",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -282,7 +282,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -347,7 +347,7 @@
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/66'>Fix the energy and time of the particles in EDMToHepMCConverter</a>",
             "author": "jbeirer",
             "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-07",
+            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -431,10 +431,10 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 124,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/124'>Fix the orientation of the hit covariance in `prepareTrackerHits`</a>",
-            "author": "jburzy",
-            "createdAt": "2026-10-07",
+            "num": 129,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/129'>Add MaterialRecordingAlg: material scan without Geant4</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-12",
             "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
@@ -442,11 +442,11 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 129,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/129'>Add MaterialRecordingAlg: material scan without Geant4</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-12",
+            "num": 124,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/124'>Fix the orientation of the hit covariance in `prepareTrackerHits`</a>",
+            "author": "jburzy",
+            "createdAt": "2026-10-07",
+            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -618,6 +618,17 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 81,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
+            "author": "JonaDilg",
+            "createdAt": "2026-05-07",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 114,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/114'>Flatten loops for tracker hit to MC particle matching</a>",
             "author": "davidlange6",
@@ -634,17 +645,6 @@
             "author": "andread3vita",
             "createdAt": "2026-10-09",
             "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 81,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
-            "author": "JonaDilg",
-            "createdAt": "2026-05-07",
-            "updatedAt": "2026-10-09",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -948,11 +948,11 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 55,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/55'>Loop the LCCaloHit factory through the Pandora machinery</a>",
+            "num": 59,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/59'>Create k4GaudiPandora namespace to avoid symbol name clashes</a>",
             "author": "tmadlener",
-            "createdAt": "2026-09-21",
-            "updatedAt": "2026-10-09",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -970,23 +970,12 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 59,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/59'>Create k4GaudiPandora namespace to avoid symbol name clashes</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-09-22",
-            "updatedAt": "2026-09-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GaudiPandora",
             "num": 30,
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/30'>Changes for ALLEGRO</a>",
             "author": "Archil-AD",
             "createdAt": "2026-05-06",
             "updatedAt": "2026-09-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1630,17 +1619,6 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 290,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/290'>Fix O(N^2) loops in CreateTruthLinks</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-10-08",
-            "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
             "num": 193,
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/193'>Calculate cluster direction from longitudinal samplings</a>",
             "author": "giovannimarchiori",
@@ -1772,17 +1750,6 @@
             "assignees": ""
         },
         {
-            "repo": "hep-fcc/<br>bib-studies",
-            "num": 21,
-            "title": "<a href='https://github.com/HEP-FCC/bib-studies/pull/21'>Implementing EDM4hep processing for BIB Studies</a>",
-            "author": "neskongarr",
-            "createdAt": "2026-09-28",
-            "updatedAt": "2026-09-28",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>fcc-drs",
             "num": 121,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/121'>Update dependency marked to v18.1.1</a>",
@@ -1899,7 +1866,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1921,7 +1888,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1932,7 +1899,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-09-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1943,7 +1910,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1965,7 +1932,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1973,17 +1940,6 @@
             "repo": "AIDASoft/<br>DD4hep",
             "num": 1695,
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1695'>Fix concurrent DDDigi container combining</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1696,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1696'>Use CTest fixtures for generated test data</a>",
             "author": "jmcarcell",
             "createdAt": "2026-10-12",
             "updatedAt": "2026-10-12",
@@ -2008,7 +1964,7 @@
             "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/33'>Particle flow reconstruction algorithms for IDEA option2 detector</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-07-13",
-            "updatedAt": "2026-10-12",
+            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2052,7 +2008,7 @@
             "title": "<a href='https://github.com/PandoraPFAOrg/PandoraSDK/pull/35'>Macro Updates</a>",
             "author": "CrossR",
             "createdAt": "2026-08-20",
-            "updatedAt": "2026-10-12",
+            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
