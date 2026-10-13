@@ -2,6 +2,17 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 671,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/671'>Add cylindrical surface plugins and use them for ALLEGRO</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-07",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 669,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/669'>Alfa detector concept</a>",
             "author": "Edler1",
@@ -18,17 +29,6 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-03",
             "updatedAt": "2026-10-08",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 671,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/671'>Add cylindrical surface plugins and use them for ALLEGRO</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -112,6 +112,17 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
+            "num": 534,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/534'>Simcalohit add addMCParticleContribution</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
             "num": 521,
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/521'>build: fix hardcoded assumption that ROOT dictionaries are built</a>",
             "author": "wdconinc",
@@ -161,7 +172,7 @@
             "author": "BrieucF",
             "createdAt": "2026-03-30",
             "updatedAt": "2026-05-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -271,7 +282,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-25",
             "updatedAt": "2026-09-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -282,7 +293,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-07-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -842,7 +853,7 @@
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/71'>Upstreaming remaining k4reco algorithms</a>",
             "author": "madbaron",
             "createdAt": "2026-09-28",
-            "updatedAt": "2026-10-09",
+            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -948,10 +959,10 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 59,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/59'>Create k4GaudiPandora namespace to avoid symbol name clashes</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-09-22",
+            "num": 51,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
+            "author": "Jullianwatts",
+            "createdAt": "2026-08-22",
             "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
@@ -959,11 +970,11 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 51,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
-            "author": "Jullianwatts",
-            "createdAt": "2026-08-22",
-            "updatedAt": "2026-10-09",
+            "num": 59,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/59'>Create k4GaudiPandora namespace to avoid symbol name clashes</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -987,6 +998,17 @@
             "createdAt": "2026-08-24",
             "updatedAt": "2026-08-24",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4PFHitML",
+            "num": 5,
+            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/5'>align outputs with pandora</a>",
+            "author": "herrmannlena",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1344,6 +1366,50 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 569,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/569'>[pre-edm4hep1] Primary vertex: fix get_PrimaryTracks and the beam-spot ndf; examples skip the momentum computation in PV fits</a>",
+            "author": "defranchis",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 565,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/565'>[pre-edm4hep1] Vertexing: fix the per-jet track selection of get_V0s_jet and get_SV_jets</a>",
+            "author": "defranchis",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 564,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/564'>[pre-edm4hep1] Vertexing: fix out-of-bounds reads, uninitialised fields, the SV pointing angle and fits with a dropped track</a>",
+            "author": "defranchis",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 563,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/563'>Replaced legacy syntax of Optional and Union and removed unused imports</a>",
+            "author": "amishgog",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 520,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/520'>Implement integrated CMS Combine backend</a>",
             "author": "captainvogon",
@@ -1635,7 +1701,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1663,11 +1729,11 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
-            "num": 403,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/403'>[ALLEGRO] add option to run conformal tracking with Si hits in reco sequence</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-12",
+            "num": 405,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/405'>ALFA ddsim steering file</a>",
+            "author": "Edler1",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1678,8 +1744,8 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/402'>[WIP] [ALLEGRO] Proof of principle on using Si detailed digitiser in ALLEGRO</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-06",
-            "updatedAt": "2026-10-07",
-            "mergeOk": "no",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1723,7 +1789,7 @@
             "author": "Victor-Schwan",
             "createdAt": "2026-08-19",
             "updatedAt": "2026-08-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1747,6 +1813,28 @@
             "updatedAt": "2026-06-02",
             "mergeOk": "no",
             "labels": "wontfix",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>bib-studies",
+            "num": 22,
+            "title": "<a href='https://github.com/HEP-FCC/bib-studies/pull/22'>Revamping occupancy plots and MCParticles Collection handle for large background samples</a>",
+            "author": "neskongarr",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>ALLEGRO",
+            "num": 60,
+            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/60'>Adding pcb test tool kit (matlab scripts) to ALLEGRO software folder</a>",
+            "author": "josum21",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "yes",
+            "labels": "",
             "assignees": ""
         },
         {
@@ -1866,7 +1954,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1888,7 +1976,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1899,7 +1987,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-09-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1910,7 +1998,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1920,7 +2008,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1690'>Preserve state changes on hits when steps are filtered out</a>",
             "author": "trholmes",
             "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-08",
+            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1932,7 +2020,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1943,6 +2031,28 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-12",
             "updatedAt": "2026-10-12",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1698,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1698'>Pass nMax to VolSurface::getLines in Surface::getLines</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1699,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1699'>add symmetry=0 for barrel and endcap cylindrical surfaces</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
