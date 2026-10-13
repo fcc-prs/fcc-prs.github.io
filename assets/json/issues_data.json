@@ -3602,6 +3602,66 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 571,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/571'>Double-free due to static/global list of warnings in FastJet (and its copy in Delphes)</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 570,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/570'>MCParticle::get_pdg returns the PDG values as floats...</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 567,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/567'>Primary vertex: beam-spot widths of the vertexing examples vs the luminous region of the samples</a>",
+            "author": "defranchis",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 566,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/566'>VertexFitter_Tk: a primary vertex with zero or one track is returned at the origin</a>",
+            "author": "defranchis",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 568,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/568'>get_PrimaryTracks: the beam-spot constraint is silently dropped for widths below about 15 nm</a>",
+            "author": "defranchis",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 562,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/562'>Progress bar reports wrong event rates</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 560,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/560'>Modernize Python type annotation syntax</a>",
             "author": "bndikt",
@@ -4162,6 +4222,16 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
+            "num": 404,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/404'>[ALLEGRO] - investigate settings of ConformalTracking</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
             "num": 372,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/372'>change test area to build/Testing/Temporary?</a>",
             "author": "giovannimarchiori",
@@ -4626,7 +4696,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1693'>Incorrect number of events saved to EOS when running with multithreading (IDEA o1 v4)</a>",
             "author": "andread3vita",
             "createdAt": "2026-10-08",
-            "updatedAt": "2026-10-08",
+            "updatedAt": "2026-10-13",
             "labels": "bug",
             "assignees": ""
         },
