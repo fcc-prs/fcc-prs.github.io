@@ -1256,7 +1256,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/issues/526'>Better handling of (track only) vertices</a>",
             "author": "tmadlener",
             "createdAt": "2026-10-01",
-            "updatedAt": "2026-10-06",
+            "updatedAt": "2026-10-13",
             "labels": "enhancement \ndiscussion",
             "assignees": ""
         },
@@ -1456,7 +1456,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/issues/443'>OverlayTiming: merging background into occupied calorimeter cells is untested, and the merged hit energy is not updated</a>",
             "author": "madbaron",
             "createdAt": "2026-10-10",
-            "updatedAt": "2026-10-10",
+            "updatedAt": "2026-10-13",
             "labels": "bug",
             "assignees": ""
         },
@@ -2932,6 +2932,16 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 56,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/56'>Symbol name clashes with `DDMarlinPandora` library</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-09-22",
+            "updatedAt": "2026-10-13",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
             "num": 60,
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/60'>Should track extrapolation to the calorimeter face live in a separate algorithm?</a>",
             "author": "tmadlener",
@@ -2948,16 +2958,6 @@
             "createdAt": "2026-09-22",
             "updatedAt": "2026-09-22",
             "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 56,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/issues/56'>Symbol name clashes with `DDMarlinPandora` library</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-09-22",
-            "updatedAt": "2026-09-22",
-            "labels": "bug",
             "assignees": ""
         },
         {
