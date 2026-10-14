@@ -6,7 +6,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/671'>Add cylindrical surface plugins and use them for ALLEGRO</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-13",
+            "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -116,7 +116,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/534'>Simcalohit add addMCParticleContribution</a>",
             "author": "madbaron",
             "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-13",
+            "updatedAt": "2026-10-14",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -270,8 +270,8 @@
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
-            "updatedAt": "2026-10-02",
-            "mergeOk": "no",
+            "updatedAt": "2026-10-14",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -281,7 +281,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/928'>key4hep-external-stack: depends_on ms-gsl instead of cppgsl</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-25",
-            "updatedAt": "2026-09-25",
+            "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -292,7 +292,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/844'>Make sure k4_local_repo points k4geo env to proper paths</a>",
             "author": "tmadlener",
             "createdAt": "2026-01-22",
-            "updatedAt": "2026-07-11",
+            "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -629,6 +629,28 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 112,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/112'>[TrackFitter] Add reset of the global TGeoManager navigator before fitting each track</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-10-06",
+            "updatedAt": "2026-10-14",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 117,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/117'>[Digitizer] retrieve sensor thickness from sensitive volume in VTXdigitizerDetailed</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-14",
+            "updatedAt": "2026-10-14",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 81,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
             "author": "JonaDilg",
@@ -656,17 +678,6 @@
             "author": "andread3vita",
             "createdAt": "2026-10-09",
             "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 112,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/112'>[TrackFitter] Add reset of the global TGeoManager navigator before fitting each track</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-10-06",
-            "updatedAt": "2026-10-08",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -849,17 +860,6 @@
         },
         {
             "repo": "key4hep/<br>k4Reco",
-            "num": 71,
-            "title": "<a href='https://github.com/key4hep/k4Reco/pull/71'>Upstreaming remaining k4reco algorithms</a>",
-            "author": "madbaron",
-            "createdAt": "2026-09-28",
-            "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Reco",
             "num": 63,
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/63'>Port LCFIPlus and LCFIVertx to EDM4hep</a>",
             "author": "jmcarcell",
@@ -1002,17 +1002,6 @@
             "assignees": ""
         },
         {
-            "repo": "key4hep/<br>k4PFHitML",
-            "num": 5,
-            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/5'>align outputs with pandora</a>",
-            "author": "herrmannlena",
-            "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "key4hep/<br>DDML",
             "num": 37,
             "title": "<a href='https://github.com/key4hep/DDML/pull/37'>add CaloHadronic pion hdf5 file</a>",
@@ -1132,6 +1121,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 229,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/229'>refactor(layout): file runs, reports and benchmark configs by suite and detector concept</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-14",
+            "updatedAt": "2026-10-14",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1689,7 +1689,7 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/291'>More efficient data storage for TopoCaloNoisyCells.</a>",
             "author": "scott-snyder",
             "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-13",
+            "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1740,34 +1740,23 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
+            "num": 402,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/402'>[WIP] [ALLEGRO] Add option for using Si detailed digitiser in ALLEGRO</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-06",
+            "updatedAt": "2026-10-14",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
             "num": 405,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/405'>ALFA ddsim steering file</a>",
             "author": "Edler1",
             "createdAt": "2026-10-13",
             "updatedAt": "2026-10-13",
             "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 402,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/402'>[WIP] [ALLEGRO] Proof of principle on using Si detailed digitiser in ALLEGRO</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-10-06",
-            "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 397,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/397'>[ALLEGRO] remove some hardcoded numbers</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-09-24",
-            "updatedAt": "2026-10-07",
-            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2019,7 +2008,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1690'>Preserve state changes on hits when steps are filtered out</a>",
             "author": "trholmes",
             "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-13",
+            "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2041,18 +2030,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1695'>Fix concurrent DDDigi container combining</a>",
             "author": "jmcarcell",
             "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1698,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1698'>Pass nMax to VolSurface::getLines in Surface::getLines</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-13",
+            "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2063,7 +2041,29 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1699'>add symmetry=0 for barrel and endcap cylindrical surfaces</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-13",
+            "updatedAt": "2026-10-14",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1700,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1700'>Geant4Action: get event action by name without splitting.</a>",
+            "author": "andresailer",
+            "createdAt": "2026-10-14",
+            "updatedAt": "2026-10-14",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1701,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1701'>CI: build and test k4geo against DD4hep</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-14",
+            "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
