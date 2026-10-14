@@ -2,10 +2,10 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 671,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/671'>Add cylindrical surface plugins and use them for ALLEGRO</a>",
+            "num": 672,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/672'>[ALLEGRO] add ECal face tracking surfaces with DD4hep CaloFace plugins</a>",
             "author": "giovannimarchiori",
-            "createdAt": "2026-10-07",
+            "createdAt": "2026-10-14",
             "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
@@ -211,11 +211,11 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 372,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/372'>Add Gaudi Functional C++ Class Generator</a>",
-            "author": "ianna",
-            "createdAt": "2026-01-16",
-            "updatedAt": "2026-10-12",
+            "num": 444,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/444'>New SimTrackerHitCellMerger Functional (Multitransformer: SimTrackerHitCollection -> SimTrackerHitCollection) + PropertyChoices</a>",
+            "author": "s6anloes",
+            "createdAt": "2026-10-14",
+            "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -226,7 +226,18 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
             "createdAt": "2026-07-06",
-            "updatedAt": "2026-10-10",
+            "updatedAt": "2026-10-14",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 372,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/372'>Add Gaudi Functional C++ Class Generator</a>",
+            "author": "ianna",
+            "createdAt": "2026-01-16",
+            "updatedAt": "2026-10-12",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -442,21 +453,32 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 129,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/129'>Add MaterialRecordingAlg: material scan without Geant4</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-13",
+            "num": 124,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/124'>Fix the orientation of the hit covariance in `prepareTrackerHits`</a>",
+            "author": "jburzy",
+            "createdAt": "2026-10-07",
+            "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 124,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/124'>Fix the orientation of the hit covariance in `prepareTrackerHits`</a>",
-            "author": "jburzy",
-            "createdAt": "2026-10-07",
+            "num": 127,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/127'>Fix propagateBackward to Start at Outermost Seed Space Point</a>",
+            "author": "mlarson02",
+            "createdAt": "2026-10-08",
+            "updatedAt": "2026-10-14",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 129,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/129'>Add MaterialRecordingAlg: material scan without Geant4</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-12",
             "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
@@ -469,17 +491,6 @@
             "author": "mlarson02",
             "createdAt": "2026-09-29",
             "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 127,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/127'>Fix propagateBackward to Start at Outermost Seed Space Point</a>",
-            "author": "mlarson02",
-            "createdAt": "2026-10-08",
-            "updatedAt": "2026-10-10",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -535,7 +546,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-01",
             "updatedAt": "2026-10-01",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -546,7 +557,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-20",
             "updatedAt": "2026-10-01",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -557,7 +568,7 @@
             "author": "jmcarcell",
             "createdAt": "2025-03-25",
             "updatedAt": "2026-09-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -568,7 +579,7 @@
             "author": "tmadlener",
             "createdAt": "2023-07-14",
             "updatedAt": "2025-08-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -629,9 +640,31 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 112,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/112'>[TrackFitter] Add reset of the global TGeoManager navigator before fitting each track</a>",
-            "author": "andread3vita",
+            "num": 114,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/114'>Flatten loops for tracker hit to MC particle matching</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-10-08",
+            "updatedAt": "2026-10-14",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 107,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/107'>New SimTrackerHitCellMerger Functional (Multitransformer: SimTrackerHitCollection -> SimTrackerHitCollection)</a>",
+            "author": "s6anloes",
+            "createdAt": "2026-10-01",
+            "updatedAt": "2026-10-14",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 113,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/113'>[TrackMerger] Significance as new matching criterion</a>",
+            "author": "Victor-Schwan",
             "createdAt": "2026-10-06",
             "updatedAt": "2026-10-14",
             "mergeOk": "yes",
@@ -662,44 +695,11 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 114,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/114'>Flatten loops for tracker hit to MC particle matching</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-10-08",
-            "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
             "num": 116,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/116'>[TrackFinder] Make embedding space dimension flexible</a>",
             "author": "andread3vita",
             "createdAt": "2026-10-09",
             "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 113,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/113'>[TrackMerger] Significance as new matching criterion</a>",
-            "author": "Victor-Schwan",
-            "createdAt": "2026-10-06",
-            "updatedAt": "2026-10-07",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 107,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/107'>New SimTrackerHitCellMerger Functional (Multitransformer: SimTrackerHitCollection -> SimTrackerHitCollection)</a>",
-            "author": "s6anloes",
-            "createdAt": "2026-10-01",
-            "updatedAt": "2026-10-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -744,7 +744,7 @@
             "author": "BrieucF",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-08-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1121,17 +1121,6 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 229,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/229'>refactor(layout): file runs, reports and benchmark configs by suite and detector concept</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1741,7 +1730,7 @@
         {
             "repo": "hep-fcc/<br>FCC-config",
             "num": 402,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/402'>[WIP] [ALLEGRO] Add option for using Si detailed digitiser in ALLEGRO</a>",
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/402'>[ALLEGRO] Add option for using Si detailed digitiser in ALLEGRO</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-06",
             "updatedAt": "2026-10-14",
@@ -2004,17 +1993,6 @@
         },
         {
             "repo": "AIDASoft/<br>DD4hep",
-            "num": 1690,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1690'>Preserve state changes on hits when steps are filtered out</a>",
-            "author": "trholmes",
-            "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
             "num": 1692,
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1692'>fix(Geant4InputHandling): start a tracked parent-less particle at its own production point</a>",
             "author": "jbeirer",
@@ -2030,17 +2008,6 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1695'>Fix concurrent DDDigi container combining</a>",
             "author": "jmcarcell",
             "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1699,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1699'>add symmetry=0 for barrel and endcap cylindrical surfaces</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-10-13",
             "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
