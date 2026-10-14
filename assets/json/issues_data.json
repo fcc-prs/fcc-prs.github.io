@@ -2,16 +2,6 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 670,
-            "title": "<a href='https://github.com/key4hep/k4geo/issues/670'>VertexEndcap_detailed and VertexBarrel_detailed do not have geometry extensions with layer info</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-10-06",
-            "updatedAt": "2026-10-06",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 616,
             "title": "<a href='https://github.com/key4hep/k4geo/issues/616'>Colors defined in XML get lost</a>",
             "author": "apausa",
@@ -1862,6 +1852,16 @@
         },
         {
             "repo": "key4hep/<br>k4SimDelphes",
+            "num": 164,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/164'>Bugs in the conversion of parent/daughter relations of MCParticles</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-10-14",
+            "updatedAt": "2026-10-14",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
             "num": 151,
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/151'>Test PythiaConverter_ee_Z_bbbar crashes</a>",
             "author": "jmcarcell",
@@ -2472,13 +2472,23 @@
         },
         {
             "repo": "key4hep/<br>eede",
+            "num": 131,
+            "title": "<a href='https://github.com/key4hep/eede/issues/131'>edm4hep schema version 7 unsupported</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-10-14",
+            "updatedAt": "2026-10-14",
+            "labels": "",
+            "assignees": "apausa"
+        },
+        {
+            "repo": "key4hep/<br>eede",
             "num": 130,
             "title": "<a href='https://github.com/key4hep/eede/issues/130'>Event ordering issues</a>",
             "author": "Zehvogel",
             "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-12",
+            "updatedAt": "2026-10-14",
             "labels": "",
-            "assignees": ""
+            "assignees": "apausa"
         },
         {
             "repo": "key4hep/<br>eede",
@@ -4291,6 +4301,16 @@
             "assignees": ""
         },
         {
+            "repo": "hep-fcc/<br>ALLEGRO",
+            "num": 61,
+            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/issues/61'>Improve test coverage</a>",
+            "author": "BrieucF",
+            "createdAt": "2026-10-14",
+            "updatedAt": "2026-10-14",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "hep-fcc/<br>fcc-sw-web",
             "num": 1,
             "title": "<a href='https://github.com/HEP-FCC/fcc-sw-web/issues/1'>Meta issue for functionality enhancements</a>",
@@ -4628,16 +4648,6 @@
             "createdAt": "2025-09-16",
             "updatedAt": "2026-02-25",
             "labels": "enhancement \nquestion",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1568,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1568'>Sim hits between two sensitive volumes?</a>",
-            "author": "alexandertuna",
-            "createdAt": "2026-02-11",
-            "updatedAt": "2026-02-11",
-            "labels": "question",
             "assignees": ""
         },
         {
