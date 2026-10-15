@@ -2066,7 +2066,7 @@
             "title": "<a href='https://github.com/key4hep/k4Gen/issues/61'>Inconsistent ddsim output for Pythia-generated EDM4hep ROOT and HepMC inputs</a>",
             "author": "andread3vita",
             "createdAt": "2026-09-23",
-            "updatedAt": "2026-10-08",
+            "updatedAt": "2026-10-15",
             "labels": "bug",
             "assignees": ""
         },
@@ -2156,7 +2156,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/130'>New tag</a>",
             "author": "jmcarcell",
             "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-14",
+            "updatedAt": "2026-10-15",
             "labels": "",
             "assignees": ""
         },
@@ -2472,23 +2472,13 @@
         },
         {
             "repo": "key4hep/<br>eede",
-            "num": 131,
-            "title": "<a href='https://github.com/key4hep/eede/issues/131'>edm4hep schema version 7 unsupported</a>",
-            "author": "Zehvogel",
-            "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-14",
+            "num": 134,
+            "title": "<a href='https://github.com/key4hep/eede/issues/134'>Switching too fast between events creates rendering issues</a>",
+            "author": "apausa",
+            "createdAt": "2026-10-15",
+            "updatedAt": "2026-10-15",
             "labels": "",
-            "assignees": "apausa"
-        },
-        {
-            "repo": "key4hep/<br>eede",
-            "num": 130,
-            "title": "<a href='https://github.com/key4hep/eede/issues/130'>Event ordering issues</a>",
-            "author": "Zehvogel",
-            "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-14",
-            "labels": "",
-            "assignees": "apausa"
+            "assignees": ""
         },
         {
             "repo": "key4hep/<br>eede",
@@ -3622,6 +3612,16 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 573,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/573'>Examples linked on doc page are broken</a>",
+            "author": "bistapf",
+            "createdAt": "2026-10-15",
+            "updatedAt": "2026-10-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 571,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/571'>Double-free due to static/global list of warnings in FastJet (and its copy in Delphes)</a>",
             "author": "Zehvogel",
@@ -4297,16 +4297,6 @@
             "author": "kjvbrt",
             "createdAt": "2026-05-21",
             "updatedAt": "2026-05-21",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>ALLEGRO",
-            "num": 61,
-            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/issues/61'>Improve test coverage</a>",
-            "author": "BrieucF",
-            "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-14",
             "labels": "",
             "assignees": ""
         },
