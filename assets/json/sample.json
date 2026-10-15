@@ -116,7 +116,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/534'>Simcalohit add addMCParticleContribution</a>",
             "author": "madbaron",
             "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-14",
+            "updatedAt": "2026-10-15",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -212,10 +212,21 @@
         {
             "repo": "key4hep/<br>k4FWCore",
             "num": 444,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/444'>New SimTrackerHitCellMerger Functional (Multitransformer: SimTrackerHitCollection -> SimTrackerHitCollection) + PropertyChoices</a>",
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/444'>New PropertyChoices Helper Class</a>",
             "author": "s6anloes",
             "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-14",
+            "updatedAt": "2026-10-15",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 445,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/445'>New SimTrackerHitCellMerger Functional</a>",
+            "author": "s6anloes",
+            "createdAt": "2026-10-15",
+            "updatedAt": "2026-10-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -326,7 +337,7 @@
             "author": "tmadlener",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -337,7 +348,7 @@
             "author": "Panzerkampfwagen-del",
             "createdAt": "2026-08-26",
             "updatedAt": "2026-09-02",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -348,7 +359,7 @@
             "author": "dudarboh",
             "createdAt": "2026-01-13",
             "updatedAt": "2026-01-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -360,28 +371,6 @@
             "createdAt": "2021-03-15",
             "updatedAt": "2026-09-20",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Gen",
-            "num": 66,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/66'>Fix the energy and time of the particles in EDMToHepMCConverter</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-15",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Gen",
-            "num": 62,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/62'>make ordering match hepmc</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-09-25",
-            "updatedAt": "2026-10-07",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -403,7 +392,7 @@
             "author": "kjvbrt",
             "createdAt": "2024-04-04",
             "updatedAt": "2025-03-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -442,11 +431,22 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 124,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/124'>Fix the orientation of the hit covariance in `prepareTrackerHits`</a>",
+            "num": 109,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-10-15",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 125,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/125'>Add absolute q/p term to the initial track covariance</a>",
             "author": "jburzy",
             "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-14",
+            "updatedAt": "2026-10-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -469,7 +469,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-12",
             "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -480,18 +480,7 @@
             "author": "mlarson02",
             "createdAt": "2026-09-29",
             "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 125,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/125'>Add absolute q/p term to the initial track covariance</a>",
-            "author": "jburzy",
-            "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -503,17 +492,6 @@
             "createdAt": "2026-10-06",
             "updatedAt": "2026-10-07",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 109,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -640,10 +618,10 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 116,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/116'>[TrackFinder] Make embedding space dimension flexible</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-10-09",
+            "num": 81,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
+            "author": "JonaDilg",
+            "createdAt": "2026-05-07",
             "updatedAt": "2026-10-15",
             "mergeOk": "yes",
             "labels": "",
@@ -656,7 +634,7 @@
             "author": "davidlange6",
             "createdAt": "2026-10-08",
             "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -667,29 +645,7 @@
             "author": "s6anloes",
             "createdAt": "2026-10-01",
             "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 117,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/117'>[Digitizer] retrieve sensor thickness from sensitive volume in VTXdigitizerDetailed</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 81,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
-            "author": "JonaDilg",
-            "createdAt": "2026-05-07",
-            "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -843,6 +799,17 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-16",
             "updatedAt": "2024-07-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Reco",
+            "num": 73,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/73'>Add data folder for external data (calorimeter threshold maps)</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-15",
+            "updatedAt": "2026-10-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1327,7 +1294,7 @@
             "author": "vasilllis",
             "createdAt": "2026-08-27",
             "updatedAt": "2026-08-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1338,7 +1305,7 @@
             "author": "vasilllis",
             "createdAt": "2026-08-18",
             "updatedAt": "2026-08-18",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1733,7 +1700,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/402'>[ALLEGRO] Add option for using Si detailed digitiser in ALLEGRO</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-06",
-            "updatedAt": "2026-10-14",
+            "updatedAt": "2026-10-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1745,7 +1712,7 @@
             "author": "Edler1",
             "createdAt": "2026-10-13",
             "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1768,17 +1735,6 @@
             "createdAt": "2026-07-30",
             "updatedAt": "2026-09-23",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 380,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/380'>[ILD] Update the ILD README</a>",
-            "author": "Victor-Schwan",
-            "createdAt": "2026-08-19",
-            "updatedAt": "2026-08-19",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1821,7 +1777,7 @@
             "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/60'>Adding pcb test tool kit (matlab scripts) to ALLEGRO software folder</a>",
             "author": "josum21",
             "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-13",
+            "updatedAt": "2026-10-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
