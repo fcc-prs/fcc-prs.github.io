@@ -6,7 +6,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/672'>[ALLEGRO] add ECal face tracking surfaces with DD4hep CaloFace plugins</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-14",
+            "updatedAt": "2026-10-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -326,7 +326,7 @@
             "author": "tmadlener",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -337,7 +337,7 @@
             "author": "Panzerkampfwagen-del",
             "createdAt": "2026-08-26",
             "updatedAt": "2026-09-02",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -348,7 +348,7 @@
             "author": "dudarboh",
             "createdAt": "2026-01-13",
             "updatedAt": "2026-01-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -369,7 +369,7 @@
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/66'>Fix the energy and time of the particles in EDMToHepMCConverter</a>",
             "author": "jbeirer",
             "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-13",
+            "updatedAt": "2026-10-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -382,17 +382,6 @@
             "createdAt": "2026-09-25",
             "updatedAt": "2026-10-07",
             "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Gen",
-            "num": 48,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/48'>Adding standard Key4hep workflows</a>",
-            "author": "kjvbrt",
-            "createdAt": "2025-05-15",
-            "updatedAt": "2025-06-17",
-            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -640,6 +629,28 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 113,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/113'>[TrackMerger] Significance as new matching criterion</a>",
+            "author": "Victor-Schwan",
+            "createdAt": "2026-10-06",
+            "updatedAt": "2026-10-15",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 116,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/116'>[TrackFinder] Make embedding space dimension flexible</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-10-09",
+            "updatedAt": "2026-10-15",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 114,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/114'>Flatten loops for tracker hit to MC particle matching</a>",
             "author": "davidlange6",
@@ -655,17 +666,6 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/107'>New SimTrackerHitCellMerger Functional (Multitransformer: SimTrackerHitCollection -> SimTrackerHitCollection)</a>",
             "author": "s6anloes",
             "createdAt": "2026-10-01",
-            "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 113,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/113'>[TrackMerger] Significance as new matching criterion</a>",
-            "author": "Victor-Schwan",
-            "createdAt": "2026-10-06",
             "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
@@ -689,17 +689,6 @@
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
             "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 116,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/116'>[TrackFinder] Make embedding space dimension flexible</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-10-09",
-            "updatedAt": "2026-10-12",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1338,7 +1327,7 @@
             "author": "vasilllis",
             "createdAt": "2026-08-27",
             "updatedAt": "2026-08-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1349,6 +1338,17 @@
             "author": "vasilllis",
             "createdAt": "2026-08-18",
             "updatedAt": "2026-08-18",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 572,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/572'>Add interface to flavour-aware jet clustering in FastJet</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-10-15",
+            "updatedAt": "2026-10-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
