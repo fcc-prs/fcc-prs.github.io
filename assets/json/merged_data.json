@@ -1,6 +1,126 @@
 {
-    "updated_at": "2026-10-15T10:42:58Z",
+    "updated_at": "2026-10-16T10:29:18Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 928,
+            "title": "key4hep-external-stack: depends_on ms-gsl instead of cppgsl",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/928",
+            "author": "wdconinc",
+            "mergedAt": "2026-10-16",
+            "mergedBy": "madbaron",
+            "labels": [],
+            "body": "https://github.com/spack/spack-packages/pull/6651\r\n\r\nMerge only when updating spack-package reference commit or tag. \r\n\r\nBEGINRELEASENOTES\r\n- fix: `cppgsl` is now called `ms-gsl`\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "packages/key4hep-external-stack/package.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "copilot-pull-request-reviewer",
+                    "state": "COMMENTED",
+                    "body": "<!-- ccr-overview-v2 -->\n\n## Copilot review overview\n\n### \ud83d\udfe2 Approval recommended\n\nThe change is a straightforward dependency rename in a bundle package with no other behavioral impact found in the repo.\n\n**Review effort:** Lite  \n**Findings:** None\n\n<details>\n<summary><strong>What changed in this PR\u2026"
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 125,
+            "title": "Add absolute q/p term to the initial track covariance",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/125",
+            "author": "jburzy",
+            "mergedAt": "2026-10-16",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "`makeInitialCovariance` sets the initial q/p error to `InitialTrackError_RelP / p`, which is purely relative. For high pT seeds this is very small in absolute terms (0.005 e/GeV at 50 GeV with the default of 0.25), while the curvature estimate from three closely spaced hits can be much worse, especially in forward regions. The CKF then cannot correct the momentum, and good hits further out fail the chi2 cut. Raising `InitialTrackError_RelP` frees the high pT seeds but also lets soft seeds drift, so fake tracks migrate to high pT.\r\n\r\nThis adds `InitialTrackError_QOverP` to `CKFTrackingAlg` and `GNNTrackFinder`. It is an absolute q/p error added in quadrature to the relative one, similar to the absolute term in `Acts::estimateTrackParamCovariance`. It barely changes the error of soft seeds a\u2026",
+            "diff": {
+                "additions": 26,
+                "deletions": 16,
+                "files": 5
+            },
+            "files": [
+                "GNNTrackFinding/src/GNNTrackFinder.cpp",
+                "GNNTrackFinding/src/GNNTrackFinder.h",
+                "k4ActsTracking/include/k4ActsTracking/CKFTracking.hxx",
+                "k4ActsTracking/include/k4ActsTracking/RunnerCommon.hxx",
+                "k4ActsTracking/src/components/CKFTrackingAlg.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "jburzy",
+                    "body": "> This looks good to me as well. Should we get this in as well, or are there any comments on this?\r\n\r\nYes I would appreciate having this in the tag as well!"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "This looks good to me as well. Should we get this in as well, or are there any comments on this?"
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-actions",
+            "num": 59,
+            "title": "Fix artifact upload paths in key4hep-build",
+            "url": "https://github.com/key4hep/key4hep-actions/pull/59",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-16",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Pere Mato reported that the RNTuple file is missing from the uploaded EDM4hep example artifact, despite its creation and read tests passing. The same path translation issue affects FCC-config uploads and prevents `CTestCostData.txt` from being excluded from the CTest logs artifact. FCC-config also has stale filenames: neither configured `ALLEGRO_sim_digi_reco.root` nor `IDEA_sim_digi_reco.root` is produced.\r\n\r\nThe runner treats the multiline `path` input as one string when translating host paths into container paths. It replaces `/home/runner/work` with `/__w` only at the beginning of that string. For EDM4hep, the first path is translated correctly, while the second retains the host path:\r\n\r\n```text\r\n/__w/EDM4hep/EDM4hep/build/test/edm4hep_example.root\r\n/home/runner/work/EDM4hep/EDM4hep/bu\u2026",
+            "diff": {
+                "additions": 8,
+                "deletions": 6,
+                "files": 1
+            },
+            "files": [
+                "key4hep-build/action.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-actions",
+            "num": 58,
+            "title": "Bump actions/upload-artifact from 7.0.1 to 7.0.2 in /key4hep-build",
+            "url": "https://github.com/key4hep/key4hep-actions/pull/58",
+            "author": "dependabot",
+            "mergedAt": "2026-10-16",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [actions/upload-artifact](https://github.com/actions/upload-artifact) from 7.0.1 to 7.0.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/upload-artifact/releases\">actions/upload-artifact's releases</a>.</em></p>\n<blockquote>\n<h2>v7.0.2</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Improves artifact download retries when the service returns HTTP 429 (rate limiting), including honoring valid Retry-After headers.</li>\n<li>Updates <code>@\u200bactions/artifact</code> to v6.3.1.</li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/tunc-d\"><code>@\u200btunc-d</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/upload-artifact/pull/821\">actions/upload-artifact#821</a></li>\n</ul>\n<p><strong>Full Chan\u2026",
+            "diff": {
+                "additions": 5,
+                "deletions": 5,
+                "files": 1
+            },
+            "files": [
+                "key4hep-build/action.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "key4hep-doc",
@@ -71,6 +191,60 @@
         {
             "org": "key4hep",
             "repo": "k4Gen",
+            "num": 62,
+            "title": "make ordering match hepmc",
+            "url": "https://github.com/key4hep/k4Gen/pull/62",
+            "author": "davidlange6",
+            "mergedAt": "2026-10-15",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- move hepmctoedm convertion towards giving the same results when put through ddsim. Include vertex time and preserve order of particles\r\n\r\nENDRELEASENOTES\r\n\r\npartially addresses #61",
+            "diff": {
+                "additions": 14,
+                "deletions": 8,
+                "files": 2
+            },
+            "files": [
+                "k4Gen/src/components/HepMCToEDMConverter.cpp",
+                "k4Gen/src/components/HepMCToEDMConverter.h"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "I haven't looked at the implementation here at all so far. I would like to point out that there is also a conversion to EDM4hep inside HEPMC3. Introduced here: https://gitlab.cern.ch/hepmc/HepMC3/-/merge_requests/399\r\n\r\nThis is essentially the same as is currently shipped with k4GeneratorsConfig as \u2026"
+                },
+                {
+                    "author": "davidlange6",
+                    "body": "yea.. indeed - at least for the use case of converting to an edm4hep file. I assume thats not the main use case here(?), but it would be best to maintain only one version of a converter."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Ah right, the HepMC thing only goes to file. Maybe we can turn that into some library functionality that could be reused. I don't think that has been the main motivation while writing it in the first place."
+                },
+                {
+                    "author": "davidlange6",
+                    "body": "A benefit of looking again.. The ddsim outputs for hit collections match between a hepmc3 and edm4hep input. So that was the overall goal... However, there is still a difference in the hepmc3 and edm4hep outputs from k4gen: the two incoming beam particles (genStatus=4) have time  = 0 in the HepMC fi\u2026"
+                },
+                {
+                    "author": "davidlange6",
+                    "body": "Second benefit, also noticed an inconsistency in the MCParticle helicity, which was not initialized. it is now set to 0 as in the hepmc chain through ddsim"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> Second benefit, also noticed an inconsistency in the MCParticle helicity, which was not initialized. it is now set to 0 as in the hepmc chain through ddsim\r\n\r\nWe have chosen `-9` as sentinel value to denote \"uninitialized helicity\" in EDM4hep (apparently that has historically been a value that has\u2026"
+                },
+                {
+                    "author": "davidlange6",
+                    "body": "oh - i will revert that change. this seemed like something uninitialized to me.."
+                }
+            ],
+            "comments_total": 7,
+            "reviews": [],
+            "reviews_total": 7
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Gen",
             "num": 66,
             "title": "Fix the energy and time of the particles in EDMToHepMCConverter",
             "url": "https://github.com/key4hep/k4Gen/pull/66",
@@ -97,6 +271,208 @@
             "comments_total": 1,
             "reviews": [],
             "reviews_total": 4
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 124,
+            "title": "Fix the orientation of the hit covariance in `prepareTrackerHits`",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/124",
+            "author": "jburzy",
+            "mergedAt": "2026-10-15",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "The hit position is converted into the local frame of the ACTS surface, but `du`/`dv` were assigned directly to loc0/loc1. They are defined along the hit's own u/v axes, which do not always match the surface's local x/y. In the MAIA IT/OT endcaps the two are swapped, so the precise direction got the large uncertainty and the coarse direction got the small one. Good endcap hits then failed the CKF chi2 cut, which led to holes and truncated or lost forward tracks.\r\n\r\nThe new `hitLocalCovariance` rotates diag(du\u00b2, dv\u00b2) from the hit's u/v axes into the surface frame (`Surface::referenceFrame`). The 4D measurement uses the full rotated 2x2 block. Barrel modules are unchanged, since there u/v already match the local axes.\r\n\r\ncc @madbaron @tmadlener \r\n\r\nBEGINRELEASENOTES\r\n\r\nFix the hit covariance\u2026",
+            "diff": {
+                "additions": 128,
+                "deletions": 6,
+                "files": 3
+            },
+            "files": [
+                "k4ActsTracking/include/k4ActsTracking/RunnerCommon.hxx",
+                "test/unittests/CMakeLists.txt",
+                "test/unittests/HitCovarianceTests.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Would it make sense to lift only the last commit out of this PR to get that merged faster and then rebase #72 on top?"
+                },
+                {
+                    "author": "jburzy",
+                    "body": "> Would it make sense to lift only the last commit out of this PR to get that merged faster and then rebase #72 on top?\r\n\r\nI think #72 is ready to merge, so I can rebase this one once that goes in?"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> > Would it make sense to lift only the last commit out of this PR to get that merged faster and then rebase #72 on top?\r\n> \r\n> I think #72 is ready to merge, so I can rebase this one once that goes in?\r\n\r\n+1"
+                },
+                {
+                    "author": "jburzy",
+                    "body": "@tmadlener this is ready to go in from my side!"
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "This looks good to me. Since we want to have this in the next tag, I would merge this later today, unless there are more comments."
+                }
+            ],
+            "reviews_total": 13
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 117,
+            "title": "[Digitizer] retrieve sensor thickness from sensitive volume in VTXdigitizerDetailed",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/117",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-10-15",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Retrieve sensor thickness from volume rather than from ZPlanarData and ZPetalData extensions.\nENDRELEASENOTES\n\nWith these changes, the digitiser can also be run for compound vertex detectors (e.g. ALLEGRO) that have multiple subdetectors in it (eg inner and outer barrel) writing to the same collection and for which the reconstruction extensions are not filled.",
+            "diff": {
+                "additions": 101,
+                "deletions": 95,
+                "files": 4
+            },
+            "files": [
+                "README.md",
+                "VTXdigiDetailed/include/VTXdigitizerDetailed.h",
+                "VTXdigiDetailed/src/VTXdigitizerDetailed.cpp",
+                "VTXdigiDetailed/test/test_VTXdigitizerDetailed.sh"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Tagging @JonaDilg @armin-ilg @jessy-daniel"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "Hi. Your changes seem reasonable to me, I believe that @JonaDilg does it similarly in his new digitiser? Using the sensitiveElement is really the safest approach as this will always work."
+                },
+                {
+                    "author": "jessy-daniel",
+                    "body": "> Tagging @JonaDilg @armin-ilg @jessy-daniel\r\n\r\nThank you for this PR. It seems OK to me. Did you tried if it still works with CLD ?"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "> Thank you for this PR. It seems OK to me. Did you tried if it still works with CLD ?\r\n\r\nHi Jessy, yes, the CI test that runs reco in CLD runs fine, I have the same output collections with same content, and I checked in the log (with debug on) that the retrieve thickness is the same. To make meanin\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I want to tag this repo for the new release @giovannimarchiori , do we merge this?"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "> I want to tag this repo for the new release @giovannimarchiori , do we merge this?\r\n\r\nFeedback from the experts was positive so I take it as a yet ..."
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "The ubuntu tests timed out.."
+                }
+            ],
+            "comments_total": 7,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 116,
+            "title": "[TrackFinder] Make embedding space dimension flexible",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/116",
+            "author": "andread3vita",
+            "mergedAt": "2026-10-15",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n\r\n- Add EmbeddingCoordinates to the Gaudi properties of GGTFTrackFinder to support models trained with different embedding space dimensions.\r\n- Support extra features in the output of the model. The extra features are dropped and not used by the clustering, but the inference does not crash.\r\n\r\nENDRELEASENOTES\r\n\r\nDear All,\r\nI open this PR to make EmbeddingCoordinates flexible. This is important if we train GGTF assuming different dimensions for the embedding space.\r\n\r\nCheers,\r\nAndrea",
+            "diff": {
+                "additions": 64,
+                "deletions": 26,
+                "files": 5
+            },
+            "files": [
+                "Tracking/README.md",
+                "Tracking/components/GGTFTrackFinder.cpp",
+                "Tracking/include/utils.h",
+                "Tracking/src/utils.cpp",
+                "Tracking/test/testTrackFinder/runTestTrackFinder.py"
+            ],
+            "comments": [
+                {
+                    "author": "andread3vita",
+                    "body": "@jmcarcell I have modified a bit the PR, now the inference is flexible to possible modifications to the onnx model"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 14
+        },
+        {
+            "org": "key4hep",
+            "repo": "eede",
+            "num": 133,
+            "title": "Turn event index strings to numbers and sort them in order",
+            "url": "https://github.com/key4hep/eede/pull/133",
+            "author": "apausa",
+            "mergedAt": "2026-10-15",
+            "mergedBy": "apausa",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Turn event index string to number\r\n- Sort events by number\r\n- Fixes #130 \r\n- Remove test file\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 7,
+                "deletions": 910834,
+                "files": 4
+            },
+            "files": [
+                "index.html",
+                "js/state/globals.js",
+                "package.json",
+                "wzp6_ee_mumuH_ecm240_CLD_SIM.edm4hep.json"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-10-15 13:17 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "eede",
+            "num": 132,
+            "title": "Add a fallback for newer schemas",
+            "url": "https://github.com/key4hep/eede/pull/132",
+            "author": "apausa",
+            "mergedAt": "2026-10-15",
+            "mergedBy": "apausa",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- For recognized schema versions, add fallback (fix https://github.com/key4hep/eede/issues/131).\n- For unrecognized schema versions, approximate to the closest one instead of defaulting to old.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 913372,
+                "deletions": 1399,
+                "files": 4
+            },
+            "files": [
+                "js/loaders/handleSchema.js",
+                "package-lock.json",
+                "package.json",
+                "wzp6_ee_mumuH_ecm240_CLD_SIM.edm4hep.json"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-10-15 11:25 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -164,6 +540,52 @@
                 }
             ],
             "reviews_total": 1
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "ALLEGRO",
+            "num": 62,
+            "title": "add test for calculation of sampling fractions in ecal barrel",
+            "url": "https://github.com/HEP-FCC/ALLEGRO/pull/62",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-10-15",
+            "mergedBy": "BrieucF",
+            "labels": [],
+            "body": "This PR adds a test for the code that calculates the sampling fractions in the ECal barrel:\r\n- run ddsim with the _calibration ecal barrel compact file modified to make all parts of the calorimeter active, to create ecal barrel hits (only the ecal barrel is simulated)\r\n- execute an analysis with k4run to read the files produced by ddsim and produce histograms of energy deposited in the active material and in the full material of each layer\r\n- run a script to extract the sampling factors as the means of the histograms over all simulated events and save them to an output JSON file\r\n-  compare the output to a reference file (produced with the same settings of the test: 100 e- of 20 GeV at 90 degrees (<2 minutes for test to run)\r\n\r\nFixes https://github.com/HEP-FCC/ALLEGRO/issues/61",
+            "diff": {
+                "additions": 164,
+                "deletions": 6,
+                "files": 6
+            },
+            "files": [
+                "geometry/Barrel geometry calculations.ipynb",
+                "geometry/Barrel geometry calculations.py",
+                "sampling_fractions/README.md",
+                "test/CMakeLists.txt",
+                "test/SF_ref_ecalbarrel.json",
+                "test/ctest_ECalBarrel_samplingfractions.sh"
+            ],
+            "comments": [
+                {
+                    "author": "BrieucF",
+                    "body": "The test fail with \"The sampling fractions are NOT equal to the reference ones\", maybe introduce some tolerance when comparing the numbers?"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "locally I had 100% agreement from one run to another. The problem appeared only in CI. The main difference is that locally I use the spack version of the SW stack, while CI uses LCG. I am migrating my local code to LCG and regenerating the SFs to see if this is the problem (the two stacks have e.g. \u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "> The test fail with \"The sampling fractions are NOT equal to the reference ones\", maybe introduce some tolerance when comparing the numbers?\r\n\r\ndone, fixes tests"
+                },
+                {
+                    "author": "BrieucF",
+                    "body": "Thanks Giovanni!"
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -2164,176 +2586,6 @@
                 {
                     "author": "github-actions",
                     "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200221h 0m 0s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 2aff8b31.\n\n[test-results]:data:application/gzip;base64,H4sIANLyyGoC/12Myw7CIBBFf6Vh7QIcgeLPNC0yCbEthsfK+O+OpLbo8pybe54M/ewSu3aiP3UsFZ8PupU4Zh9WYi0V56RozZ8dtPzSkIq1/+ru\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "root2gltf",
-            "num": 18,
-            "title": "Add verbose option",
-            "url": "https://github.com/HEP-FCC/root2gltf/pull/18",
-            "author": "apausa",
-            "mergedAt": "2026-10-08",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "- Add verbose option both in CLI and API\r\n- Print children nodes per parent volume when verbose\r\n- Print color mapped to each volume when verbose\r\n- Move scene config object to constant\r\n- Solve `GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results` log message by changing `material_kind` from `lambert` to `default`. This has no impact on the resulting visualization.",
-            "diff": {
-                "additions": 119,
-                "deletions": 113,
-                "files": 10
-            },
-            "files": [
-                "README.md",
-                "bin/cli.js",
-                "package-lock.json",
-                "package.json",
-                "src/deduplicateOutput.ts",
-                "src/index.ts",
-                "src/lib/constants.ts",
-                "src/lib/types/converter.ts",
-                "src/lib/utils/assignColors.ts",
-                "src/lib/utils/generateConfig.ts"
-            ],
-            "comments": [
-                {
-                    "author": "apausa",
-                    "body": "Solved `GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results` log message by changing `material_kind` from `lambert` to `default` in scene config. This has no impact on the resulting visualization. \r\n\r\n<img width=\"678\" height=\"118\" alt=\"image\" src=\"https://github.com/user-att\u2026"
-                },
-                {
-                    "author": "apausa",
-                    "body": "Running the command with verbose flag \r\n\r\n<img width=\"1150\" height=\"497\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f314ff93-cd0c-4ec1-8035-be769037c6d6\" />"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 4
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 13,
-            "title": "Support HEAD requests on health endpoints",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/13",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-08",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "`/healthz` and `/readyz` returned 405 for HEAD requests, which uptime monitors often use. Both now accept GET and HEAD.",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "backend/app/routers/health_router.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 10,
-            "title": "Add /healthz and /readyz endpoints with Kubernetes probes",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/10",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-08",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Adds `/healthz` (liveness, no dependencies) and `/readyz` (checks the database, returns 503 when it is unavailable). The backend deployment gets startup and liveness probes on `/healthz`. `/readyz` is meant for external monitoring and is not used as a readiness probe, so the single pod keeps serving error responses during database outages. Both paths are excluded from the request logging.",
-            "diff": {
-                "additions": 85,
-                "deletions": 0,
-                "files": 3
-            },
-            "files": [
-                "backend/app/main.py",
-                "backend/app/routers/health_router.py",
-                "k8s/backend-deployment.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 11,
-            "title": "Fix backend mypy error and validate backend on GitHub",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/11",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-08",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "mypy fails in the GitLab `validate-backend` job on `master` after #9, which skips the build and deploy stages. Fixes the error and adds a GitHub Actions workflow running the same ruff and mypy checks on PRs, so such errors show up before merging.",
-            "diff": {
-                "additions": 30,
-                "deletions": 1,
-                "files": 2
-            },
-            "files": [
-                ".github/workflows/validate.yml",
-                "backend/app/main.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 9,
-            "title": "Add CORS headers to 500 errors and hide exception details",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/9",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-08",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Unhandled 500 errors bypassed `CORSMiddleware`, so the frontend showed them as CORS failures. They now carry CORS headers and no longer return the exception message to the client, and the handler logs only a one-line summary.\n\nRefs #8",
-            "diff": {
-                "additions": 23,
-                "deletions": 5,
-                "files": 1
-            },
-            "files": [
-                "backend/app/main.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1691,
-            "title": "fix(HepMC3EventReader): apply the length unit to the primary vertex position",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1691",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-08",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n-  HepMC3EventReader: apply the length unit to the primary vertex position\r\n\r\nENDRELEASENOTES\r\n\r\n## Summary\r\n\r\nApply the HepMC3 event length unit when setting the primary vertex position in `HepMC3EventReader`.\r\n\r\nThe particle production/end positions are already converted using `len_unit`, and the vertex time is converted as well, but the `x`, `y`, and `z` coordinates of the corresponding `Geant4Vertex` were previously used without applying the HepMC3 length unit.\r\n\r\nThis is invisible for HepMC3 files using millimetres, but gives incorrect vertex positions for events using centimetres.",
-            "diff": {
-                "additions": 3,
-                "deletions": 3,
-                "files": 1
-            },
-            "files": [
-                "DDG4/hepmc/HepMC3EventReader.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200218h 11m 41s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 657fb7c4.\n\n[test-results]:data:application/gzip;base64,H4sIAIaQx2oC/12PyQrCMBRFf6Vk7SJpfRn8GckIwbaRDKvivxtDbaPLcy4cuBtyfrYJ3QbCLwNKxeeTTIky+7BWpgCYVFXX/NknBl+6p6L1v3\u2026"
                 }
             ],
             "comments_total": 1,
