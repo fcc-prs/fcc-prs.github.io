@@ -1,5 +1,5 @@
 {
-    "updated_at": "2026-10-16T10:29:18Z",
+    "updated_at": "2026-10-17T10:00:45Z",
     "data": [
         {
             "org": "key4hep",
@@ -115,6 +115,133 @@
             },
             "files": [
                 "key4hep-build/action.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 113,
+            "title": "[TrackMerger] Significance as new matching criterion",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/113",
+            "author": "Victor-Schwan",
+            "mergedAt": "2026-10-16",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Introduce significance as matching criterion for the `TrackMerger`\r\n- Update matching defaults to match defaults from `ClonesAndSplitTracksFinder` in `CLDConfig`\r\n- Change default behavior to use the significance as matching criterion\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 413,
+                "deletions": 126,
+                "files": 8
+            },
+            "files": [
+                "Tracking/CMakeLists.txt",
+                "Tracking/components/TrackMerger.cpp",
+                "Tracking/components/TracksFromGenParticles.cpp",
+                "Tracking/include/utils.h",
+                "Tracking/src/utils.cpp",
+                "Tracking/test/testTrackMerger/field_only.xml",
+                "Tracking/test/testTrackMerger/test_track_merger.py",
+                "Tracking/test/testTrackMerger/test_track_merger_steer.py"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "The tests are failing because the steering file that is run doesn't initialize a geometry, so no field can be retrieved."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Merge @tmadlener (and tag)?"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [
+                {
+                    "author": "jmcarcell",
+                    "state": "COMMENTED",
+                    "body": "This is an AI-generated review (Claude). Some of the comments may not apply or may be wrong, so feel free to dismiss them. I skipped the points @tmadlener already raised (the sigma == 0 fallback and the omega vs pT naming)."
+                }
+            ],
+            "reviews_total": 11
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 230,
+            "title": "chore(deps): bump pre-commit from 4.6.2 to 4.7.0",
+            "url": "https://github.com/key4hep/k4Bench/pull/230",
+            "author": "dependabot",
+            "mergedAt": "2026-10-16",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 4.6.2 to 4.7.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/pre-commit/pre-commit/releases\">pre-commit's releases</a>.</em></p>\n<blockquote>\n<h2>pre-commit v4.7.0</h2>\n<h3>Fixes</h3>\n<ul>\n<li>Fix <code>language: node</code> hooks during commit with <code>-a</code> or inside a submodule.\n<ul>\n<li>Regressed in 4.6.1.</li>\n<li><a href=\"https://redirect.github.com/pre-commit/pre-commit/issues/3773\">#3773</a> issue by <a href=\"https://github.com/cbirkhold\"><code>@\u200bcbirkhold</code></a>.</li>\n<li><a href=\"https://redirect.github.com/pre-commit/pre-commit/issues/3774\">#3774</a> PR by <a href=\"https://github.com/cbirkhold\"><code>@\u200bcbirkhold</code></a>.</li>\n</ul>\n</li>\n</ul>\n</blockquote\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 232,
+            "title": "chore(deps): update pymdown-extensions requirement from >=12.1 to >=12.2",
+            "url": "https://github.com/key4hep/k4Bench/pull/232",
+            "author": "dependabot",
+            "mergedAt": "2026-10-16",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Updates the requirements on [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/pymdown-extensions/releases\">pymdown-extensions's releases</a>.</em></p>\n<blockquote>\n<h2>12.2</h2>\n<ul>\n<li><strong>NEW</strong>: Add official support for Python 3.15.</li>\n<li><strong>NEW</strong>: Tilde, Caret: For backwards compatibility, disable CommonMark punctuation rules by default. If subscript or\nsuperscript is disabled in the respective extension, CommonMark rules will be honored again. A new <code>punctuation</code>\nrule has been added to force CommonMark rules. When done, people will need to be aware of punctuation when subscript\nor superscript i\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "docs/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 231,
+            "title": "chore(deps): update mkdocstrings requirement from >=1.0.6 to >=1.0.7",
+            "url": "https://github.com/key4hep/k4Bench/pull/231",
+            "author": "dependabot",
+            "mergedAt": "2026-10-16",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Updates the requirements on [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/mkdocstrings/mkdocstrings/releases\">mkdocstrings's releases</a>.</em></p>\n<blockquote>\n<h2>1.0.7</h2>\n<h2><a href=\"https://github.com/mkdocstrings/mkdocstrings/releases/tag/1.0.7\">1.0.7</a> - 2026-10-10</h2>\n<p><!-- raw HTML omitted --><a href=\"https://github.com/mkdocstrings/mkdocstrings/compare/1.0.6...1.0.7\">Compare with 1.0.6</a><!-- raw HTML omitted --></p>\n<h3>Build</h3>\n<ul>\n<li>Drop support for Python 3.10 (<a href=\"https://github.com/mkdocstrings/mkdocstrings/commit/2c2cbb19d0fdab8554f93fe2fb1568ffba8c0f5d\">2c2cbb1</a> by Timoth\u00e9e Mazzucotelli).</li>\n</ul>\n<h3>Bug Fixes</h3>\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "docs/requirements.txt"
             ],
             "comments": [],
             "comments_total": 0,
@@ -1980,63 +2107,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 934,
-            "title": "Make it possible to source older lcg nightlies",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/934",
-            "author": "tmadlener",
-            "mergedAt": "2026-10-10",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Make it possible to source previous nightlies also for the LCG based stacks\n\nENDRELEASENOTES\n\nSimply because I just had a use for this. In my testing I haven't encountered any issues (at least not related to the sourcing of the appropriate setup script)",
-            "diff": {
-                "additions": 68,
-                "deletions": 6,
-                "files": 2
-            },
-            "files": [
-                ".github/workflows/test-setup-scripts.yaml",
-                "scripts/cvmfs/setup-nightlies.sh"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "There is a possible downside, if the build failed that day then you are sourcing the last successful one for that day, which may be (in theory) N weeks ago. But looks good, I'll sync now. I've also added some tests to CI"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 935,
-            "title": "Bump int128/docker-manifest-create-action from 2.28.0 to 2.29.0",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/935",
-            "author": "dependabot",
-            "mergedAt": "2026-10-10",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [int128/docker-manifest-create-action](https://github.com/int128/docker-manifest-create-action) from 2.28.0 to 2.29.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/int128/docker-manifest-create-action/releases\">int128/docker-manifest-create-action's releases</a>.</em></p>\n<blockquote>\n<h2>v2.29.0</h2>\n<pre lang=\"yaml\"><code>uses: int128/docker-manifest-create-action@a118e9fe12455375d4810aa318c20e6dba77288e # v2.29.0\n</code></pre>\n<h2>What's Changed</h2>\n<ul>\n<li>Update pnpm to v12 by <a href=\"https://github.com/int128-actions-tanpopo\"><code>@\u200bint128-actions-tanpopo</code></a>[bot] in <a href=\"https://redirect.github.com/int128/docker-manifest-create-action/pull/1240\">int128/docker-manifest-create-action#1240</a></li>\n<li>chore(deps): upda\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/image-template.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4Bench",
             "num": 217,
             "title": "feat(auditor): record per-component heap allocations, page faults, context switches and instruction counts",
@@ -2337,258 +2407,6 @@
                 }
             ],
             "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4MarlinWrapper",
-            "num": 490,
-            "title": "Fix seed refresh per event",
-            "url": "https://github.com/key4hep/k4MarlinWrapper/pull/490",
-            "author": "Victor-Schwan",
-            "mergedAt": "2026-10-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Fix random seed refreshing\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 128,
-                "deletions": 4,
-                "files": 4
-            },
-            "files": [
-                "k4MarlinWrapper/src/components/MarlinProcessorWrapper.cpp",
-                "tests/CMakeLists.txt",
-                "tests/gaudi_opts/random_seeds.py",
-                "tests/src/MarlinRandomSeedChecker.cc"
-            ],
-            "comments": [
-                {
-                    "author": "Victor-Schwan",
-                    "body": "#254 made `MarlinProcessorWrapper` refresh the Marlin random seeds only once per event, detecting a new event by comparing the `LCEvent` pointer with the previous one. A new `LCEvent` is frequently allocated at the address of the previous one. The refresh is then skipped, and all Marlin processors d\u2026"
-                },
-                {
-                    "author": "Victor-Schwan",
-                    "body": "as discussed with @tmadlener"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I can reproduce the test failure (without the fix) locally. Looks like my \"fix\" from #254 did not consider compiler optimizations to be a thing.\r\n\r\nMainly FYI: @andresailer"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "> With the fix, the same 300 events have 298 distinct smearing patterns.\r\n\r\nI would say this is not very good, I'm sure modern random number generators can do 300/300, although you don't define what it means to be in the 298 group."
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "It probably also depends on what Claude defines as *same smearing pattern*. Claude covered quite some ground here to figure out that the underlying problem is that seeds are not refreshed. I think the test is as good as we can get without involving a ton of machinery and it tests the main problem."
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 211,
-            "title": "chore(deps): bump peter-evans/create-pull-request from 7.0.11 to 8.1.1",
-            "url": "https://github.com/key4hep/k4Bench/pull/211",
-            "author": "dependabot",
-            "mergedAt": "2026-10-09",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [peter-evans/create-pull-request](https://github.com/peter-evans/create-pull-request) from 7.0.11 to 8.1.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/peter-evans/create-pull-request/releases\">peter-evans/create-pull-request's releases</a>.</em></p>\n<blockquote>\n<h2>Create Pull Request v8.1.1</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>build(deps-dev): bump the npm group with 2 updates by <a href=\"https://github.com/dependabot\"><code>@\u200bdependabot</code></a>[bot] in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4305\">peter-evans/create-pull-request#4305</a></li>\n<li>build(deps): bump minimatch by <a href=\"https://github.com/dependabot\"><code>@\u200bdependabot</code></a>[bot] in <a href=\"https://redirect.github.com/peter-\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/detector-bump.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 210,
-            "title": "chore(deps): bump streamlit from 1.64.0 to 1.65.0",
-            "url": "https://github.com/key4hep/k4Bench/pull/210",
-            "author": "dependabot",
-            "mergedAt": "2026-10-09",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [streamlit](https://github.com/streamlit/streamlit) from 1.64.0 to 1.65.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/streamlit/streamlit/releases\">streamlit's releases</a>.</em></p>\n<blockquote>\n<h2>1.65.0</h2>\n<!-- raw HTML omitted -->\n<h2>What's Changed</h2>\n<h3>New Features \ud83c\udf89</h3>\n<ul>\n<li>[feature] Add <code>on_change=&quot;ignore&quot;</code> mode to st.multiselect by <a href=\"https://github.com/lukasmasuch\"><code>@\u200blukasmasuch</code></a> in <a href=\"https://redirect.github.com/streamlit/streamlit/pull/16908\">streamlit/streamlit#16908</a></li>\n<li>[feature] Add <code>on_change=&quot;ignore&quot;</code> mode to st.radio by <a href=\"https://github.com/lukasmasuch\"><code>@\u200blukasmasuch</code></a> in <a href=\"https://redirect.github.co\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "dashboard/requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 17,
-            "title": "Enable TLS for database connections when available",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/17",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-09",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "asyncpg never requested TLS, so DBOD instances that require an\nencrypted connection (like the new fcc-dami-test database) rejected\nevery connection attempt, crash-looping the backend on startup.\nDefaults to \"prefer\" so existing non-TLS databases are unaffected.",
-            "diff": {
-                "additions": 10,
-                "deletions": 1,
-                "files": 2
-            },
-            "files": [
-                "backend/app/config.conf",
-                "backend/app/storage/database.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 16,
-            "title": "Fix frontend API URL not taking effect at runtime",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/16",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-09",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "METADATA_BROWSER_BACKEND_URL is only read at Docker build time, so\nsetting it in the runtime Secret never had any effect -- the deployed\nfrontend was always falling back to http://localhost:8000. Documents\nand adds NUXT_PUBLIC_API_BASE_URL, which Nitro does apply at container\nstartup, to the staging env template.",
-            "diff": {
-                "additions": 11,
-                "deletions": 1,
-                "files": 2
-            },
-            "files": [
-                "frontend/nuxt.config.ts",
-                "k8s/test/frontend.env.example"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 14,
-            "title": "Rename to DaMI and add staging environment",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/14",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-09",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Renames the project to Dataset Metadata Interface (DaMI) at the code\nlevel (display strings, docstrings, frontend branding -- repo name\nand registry paths unchanged), and adds a staging deploy pipeline:\npushes to main now also deploy to a new fcc-dami-test OpenShift\nproject backed by its own DBOD instance, while prod continues to\nredeploy only on a git tag.",
-            "diff": {
-                "additions": 242,
-                "deletions": 98,
-                "files": 23
-            },
-            "files": [
-                ".gitlab-ci.yml",
-                "README.md",
-                "backend/app/config.conf",
-                "backend/app/main.py",
-                "backend/app/routers/entities_router.py",
-                "backend/app/routers/navigation_router.py",
-                "backend/app/storage/database_modules/__init__.py",
-                "backend/app/utils/config_utils.py",
-                "backend/app/utils/errors_utils.py",
-                "backend/app/utils/logging_utils.py",
-                "backend/app/utils/uuid_utils.py",
-                "docs/TUTORIAL.md",
-                "frontend/config/app.config.ts",
-                "frontend/package.json",
-                "k8s/test/backend-deployment.yaml",
-                "k8s/test/backend-service.yaml",
-                "k8s/test/backend-storage-pvc.yaml",
-                "k8s/test/backend.env.example",
-                "k8s/test/frontend-deployment.yaml",
-                "k8s/test/frontend-service.yaml",
-                "k8s/test/frontend.env.example",
-                "k8s/test/route-backend.yaml",
-                "k8s/test/route-frontend.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 15,
-            "title": "Add tag-triggered prod deploy",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/15",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-09",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Adds a tag-triggered deploy-prod job and lets build-backend/build-frontend\nrun on tags too, so pushing a release tag deploys prod without requiring\nanother push to master. Needed to make the v0.1.1 release tag actually\ntrigger a pipeline.",
-            "diff": {
-                "additions": 81,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                ".gitlab-ci.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1694,
-            "title": "CMake: require boost 1.70 so we are sure there is a BoostConfg.cmake \u2026",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1694",
-            "author": "andresailer",
-            "mergedAt": "2026-10-09",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "\u2026file provided\n\n\n\nBEGINRELEASENOTES\n- CMake: Require Boost 1.70 and always use CONFIG in DD4hepConfig.cmake for Boost. To silence warning about CMP0167 in downstream projects.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 7,
-                "files": 2
-            },
-            "files": [
-                "CMakeLists.txt",
-                "cmake/DD4hepConfig.cmake.in"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200221h 0m 0s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 2aff8b31.\n\n[test-results]:data:application/gzip;base64,H4sIANLyyGoC/12Myw7CIBBFf6Vh7QIcgeLPNC0yCbEthsfK+O+OpLbo8pybe54M/ewSu3aiP3UsFZ8PupU4Zh9WYi0V56RozZ8dtPzSkIq1/+ru\u2026"
-                }
-            ],
-            "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
         }
