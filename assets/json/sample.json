@@ -468,7 +468,18 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking</a>",
             "author": "mlarson02",
             "createdAt": "2026-09-29",
-            "updatedAt": "2026-10-16",
+            "updatedAt": "2026-10-17",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 127,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/127'>Fix propagateBackward to Start at Outermost Seed Space Point</a>",
+            "author": "mlarson02",
+            "createdAt": "2026-10-08",
+            "updatedAt": "2026-10-17",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -481,17 +492,6 @@
             "createdAt": "2026-09-30",
             "updatedAt": "2026-10-16",
             "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 127,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/127'>Fix propagateBackward to Start at Outermost Seed Space Point</a>",
-            "author": "mlarson02",
-            "createdAt": "2026-10-08",
-            "updatedAt": "2026-10-14",
-            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1088,6 +1088,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 237,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/237'>feat(dashboard): add the Reconstruction Overview and Breakdown</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-17",
+            "updatedAt": "2026-10-17",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
