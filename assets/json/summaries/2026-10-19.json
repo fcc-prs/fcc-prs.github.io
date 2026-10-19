@@ -1,0 +1,24 @@
+{
+  "updated_at": "2026-10-19T14:17:54Z",
+  "period_start": "2026-10-12",
+  "period_end": "2026-10-19",
+  "summary": [
+    "- **[key4hep/k4RecTracker#113](https://github.com/key4hep/k4RecTracker/pull/113)** — `TrackMerger` gains track-parameter significance as a matching criterion, and it is now the default. Matching defaults now follow `ClonesAndSplitTracksFinder` in CLDConfig, so merged-track output changes for existing configurations.",
+    "- **[AIDASoft/DD4hep#1690](https://github.com/AIDASoft/DD4hep/pull/1690)** — Sensitive-detector actions keep volume-exit state changes when a low-energy step is removed by the energy filter. Previously such a hit stayed open into the next sensor, producing hit positions outside the sensor, including a spurious stripe at z=0 between endcaps (k4geo#538).",
+    "- **[key4hep/k4ActsTracking#124](https://github.com/key4hep/k4ActsTracking/pull/124)** — `prepareTrackerHits` now rotates the hit u/v covariance into the ACTS surface frame instead of assigning it directly to loc0/loc1. Where the axes are swapped (e.g. MAIA IT/OT endcaps), good hits had failed the CKF χ² cut, causing truncated or lost forward tracks; barrel modules are unchanged.",
+    "- **[key4hep/k4Gen#66](https://github.com/key4hep/k4Gen/pull/66)** — `EDMToHepMCConverter` set particle energy to the mass and divided vertex time by c instead of multiplying; both are fixed. `FlatSmearVertex` now applies the correct time offset for events shifted along the beam axis.",
+    "- **[HEP-FCC/FCC-config#403](https://github.com/HEP-FCC/FCC-config/pull/403)** — The ALLEGRO digi+reco sequence gets an option to run conformal tracking on silicon hits, enabled in the o1_v03 and o2_v01 tests. Full functionality depends on k4Reco#72 and the cylindrical calorimeter surface plugins (k4geo#671).",
+    "- **[key4hep/k4RecTracker#117](https://github.com/key4hep/k4RecTracker/pull/117)** — `VTXdigitizerDetailed` reads sensor thickness from the sensitive volume instead of the `ZPlanarData`/`ZPetalData` extensions. The digitiser can now run on compound vertex detectors such as ALLEGRO's, and CLD output is unchanged.",
+    "- **[AIDASoft/DD4hep#1699](https://github.com/AIDASoft/DD4hep/pull/1699)** — The calorimeter barrel and endcap face surface plugins now support cylindrical surfaces (`symmetry=0`), not only polyhedra. This is needed to extrapolate tracks correctly to ALLEGRO's ECAL.",
+    "- **[key4hep/k4ActsTracking#125](https://github.com/key4hep/k4ActsTracking/pull/125)** — `CKFTrackingAlg` and `GNNTrackFinder` gain an `InitialTrackError_QOverP` property: an absolute q/p error added in quadrature to the relative initial error. High-pT seeds can then correct their momentum without loosening soft seeds into fakes at high pT.",
+    "- **[key4hep/k4RecTracker#112](https://github.com/key4hep/k4RecTracker/pull/112)** — `GenfitTrackFitter` resets the global TGeoManager navigator to a canonical state before each fit. Previously, material assigned to points on geometry boundaries could depend on the previously fitted track, making fit results depend on processing order.",
+    "- **[key4hep/k4Gen#62](https://github.com/key4hep/k4Gen/pull/62)** — `HepMCToEDMConverter` now keeps vertex time and preserves particle order. Simulated hit collections now match whether ddsim is fed HepMC3 or the converted EDM4hep input.",
+    "- **[key4hep/k4RecTracker#116](https://github.com/key4hep/k4RecTracker/pull/116)** — `GGTFTrackFinder` gains an `EmbeddingCoordinates` property, so models trained with different embedding-space dimensions can be used. Extra model outputs are now tolerated rather than crashing inference.",
+    "- **[key4hep/k4PFHitML#5](https://github.com/key4hep/k4PFHitML/pull/5)** — HitPF outputs are aligned with Pandora conventions. A clusters collection is added and the reference-point definition is updated."
+  ],
+  "usage": {
+    "input_tokens": 61810,
+    "output_tokens": 7636
+  },
+  "cost_usd": 0.39996
+}
