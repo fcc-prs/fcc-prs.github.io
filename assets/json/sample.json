@@ -123,23 +123,23 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
+            "num": 521,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/521'>build: fix hardcoded assumption that ROOT dictionaries are built</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-09-13",
+            "updatedAt": "2026-10-19",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
             "num": 534,
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/534'>Simcalohit add addMCParticleContribution</a>",
             "author": "madbaron",
             "createdAt": "2026-10-13",
             "updatedAt": "2026-10-15",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
-            "num": 521,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/521'>build: fix hardcoded assumption that ROOT dictionaries are built</a>",
-            "author": "wdconinc",
-            "createdAt": "2026-09-13",
-            "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -475,6 +475,17 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 127,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/127'>Fix propagateBackward to Start at Outermost Seed Space Point</a>",
+            "author": "mlarson02",
+            "createdAt": "2026-10-08",
+            "updatedAt": "2026-10-19",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 132,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/132'>Adding Seed Deduplication</a>",
             "author": "mlarson02",
@@ -490,17 +501,6 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking</a>",
             "author": "mlarson02",
             "createdAt": "2026-09-29",
-            "updatedAt": "2026-10-17",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 127,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/127'>Fix propagateBackward to Start at Outermost Seed Space Point</a>",
-            "author": "mlarson02",
-            "createdAt": "2026-10-08",
             "updatedAt": "2026-10-17",
             "mergeOk": "yes",
             "labels": "",
@@ -1110,6 +1110,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 247,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/247'>feat(dashboard): add the reco Memory section: where each component's heap goes and what grows without being released</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-19",
+            "updatedAt": "2026-10-19",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1800,17 +1811,6 @@
             "author": "neskongarr",
             "createdAt": "2026-10-13",
             "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>ALLEGRO",
-            "num": 60,
-            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/60'>Adding pcb test tool kit (matlab scripts) to ALLEGRO software folder</a>",
-            "author": "josum21",
-            "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
