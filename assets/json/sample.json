@@ -524,7 +524,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-01",
             "updatedAt": "2026-10-01",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -535,7 +535,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-20",
             "updatedAt": "2026-10-01",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -546,7 +546,7 @@
             "author": "jmcarcell",
             "createdAt": "2025-03-25",
             "updatedAt": "2026-09-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -557,7 +557,7 @@
             "author": "tmadlener",
             "createdAt": "2023-07-14",
             "updatedAt": "2025-08-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2047,6 +2047,17 @@
             "assignees": ""
         },
         {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1702,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1702'>fix(Geant4ParticleHandler): avoid duplicate track-equivalents map at end of event</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-10-20",
+            "updatedAt": "2026-10-20",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "PandoraPFAOrg/<br>LCContent",
             "num": 25,
             "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/25'>PseudoLayer plugin for ALLEGRO (initial version)</a>",
@@ -2054,17 +2065,6 @@
             "createdAt": "2025-02-14",
             "updatedAt": "2025-06-11",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "PandoraPFAOrg/<br>LCContent",
-            "num": 33,
-            "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/33'>Particle flow reconstruction algorithms for IDEA option2 detector</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-07-13",
-            "updatedAt": "2026-10-16",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
