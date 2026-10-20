@@ -1,6 +1,418 @@
 {
-    "updated_at": "2026-10-19T11:48:01Z",
+    "updated_at": "2026-10-20T10:48:35Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 521,
+            "title": "build: fix hardcoded assumption that ROOT dictionaries are built",
+            "url": "https://github.com/key4hep/EDM4hep/pull/521",
+            "author": "wdconinc",
+            "mergedAt": "2026-10-19",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- When podio is built with ENABLE_ROOT=OFF, ROOT dictionaries are not built. This PR fixes the hardcoded assumptions in EDM4hep. See https://github.com/AIDASoft/podio/pull/1023.\r\n\r\nENDRELEASENOTES\r\n\r\n\r\n\r\nA useful reviewer question is whether the better pattern is to gate on the `edm4hepDict` target (as in `edm4hep/CMakeLists.txt`) or on the `podio::podioRootIO` target (as in tests and tools). The reason for this bifurcation is that the `edm4hepDict` target is defined just before the gate in `edm4hep/CMakeLists.txt`, so it seemed more appropriate there.",
+            "diff": {
+                "additions": 78,
+                "deletions": 76,
+                "files": 6
+            },
+            "files": [
+                "edm4hep/CMakeLists.txt",
+                "test/CMakeLists.txt",
+                "test/tools/CMakeLists.txt",
+                "tools/CMakeLists.txt",
+                "tools/src/edm4hep2json.cxx",
+                "utils/CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Many of the tests depend on ROOT, they should be disabled."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I checked that none of the tests are removed in CI and that all the ROOT tests are removed with https://github.com/AIDASoft/podio/pull/1023, so this looks good to me."
+                },
+                {
+                    "author": "wdconinc",
+                    "body": "I updated against main, and reverted the inadvertently added 0c383fa. That will be better as a separate PR since it changes behavior unrelated to this PR."
+                },
+                {
+                    "author": "wdconinc",
+                    "body": "@jmcarcell Are these test timeouts related? I don't think they are."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "All green now after rerunning. It's weird that all 4 of them failed together, that doesn't happen often although individual failures do."
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [
+                {
+                    "author": "copilot-pull-request-reviewer",
+                    "state": "COMMENTED",
+                    "body": "### \ud83d\udfe2 Approval recommended\n\nThe changes correctly gate dictionary-related aliasing and installs on `TARGET edm4hepDict`, addressing the described failure mode without altering core library behavior.\n\n<details>\n<summary>Pull request overview</summary>\n\nThis PR updates EDM4hep\u2019s CMake build/install lo\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "state": "APPROVED",
+                    "body": "I checked that none of the tests are removed in CI and that all the ROOT tests are removed with https://github.com/AIDASoft/podio/pull/1023, so this looks good to me."
+                }
+            ],
+            "reviews_total": 9
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 937,
+            "title": "Bump endersonmenezes/free-disk-space from 4.0.0 to 4.0.1",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/937",
+            "author": "dependabot",
+            "mergedAt": "2026-10-19",
+            "mergedBy": "tmadlener",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [endersonmenezes/free-disk-space](https://github.com/endersonmenezes/free-disk-space) from 4.0.0 to 4.0.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/endersonmenezes/free-disk-space/releases\">endersonmenezes/free-disk-space's releases</a>.</em></p>\n<blockquote>\n<h2>v4.0.1</h2>\n<p><strong>CI/CD Improvements:</strong></p>\n<ul>\n<li>\ud83e\uddea Promote <code>ubuntu-26.04</code> and <code>ubuntu-26.04-arm</code> from experimental (<code>continue-on-error</code>) entries to the regular test matrix \u2014 Ubuntu 26.04 is GA and <code>ubuntu-latest</code> migrates to it between 2026-10-19 and 2026-11-19 (<a href=\"https://redirect.github.com/actions/runner-images/issues/14748\">runner-images#14748</a>)</li>\n<li>\ud83e\uddea Keep <code>ubuntu-22.04</code> / <code>ubuntu-24\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/docker-build-push-template.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 252,
+            "title": "feat(dashboard): add a Correlations section setting each per-event cost against what the event holds, with a clickable correlation matrix and typed expressions",
+            "url": "https://github.com/key4hep/k4Bench/pull/252",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-19",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add Correlations dashboard tab for sim and reco\n  - clickable Spearman matrix of costs vs quantities\n  - typed per-event expressions, robust trend, outliers\n\n- Record `event_source.json.gz` with generator particles\n  - ddsim first run; k4run input via `--source-input`\n\n- Measure per-event entries, energies, EventHeaders in event size\n\n- Match events by entry; refuse mismatched EventHeaders\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  ddsim[\"ddsim benchmark\"] -- \"first run\" --> es[\"event_source.json.gz\"]\n  k4run[\"k4run benchmark\"] -- \"--source-input\" --> es\n  runners[\"runners\"] -- \"per-event entries/energies\" --> esz[\"*_event_size.json\"]\n  es --> drivers[\"event_drivers: match, rank, tre\u2026",
+            "diff": {
+                "additions": 3947,
+                "deletions": 52,
+                "files": 34
+            },
+            "files": [
+                ".github/scripts/benchmark_job.py",
+                "dashboard/data.py",
+                "dashboard/reco/page.py",
+                "dashboard/section_dispatch.py",
+                "dashboard/sections.py",
+                "dashboard/tabs/correlations.py",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/analysis/event_drivers.py",
+                "k4bench/analysis/event_size.py",
+                "k4bench/analysis/event_source.py",
+                "k4bench/analysis/expression.py",
+                "k4bench/analysis/plots/event_content.py",
+                "k4bench/artifacts.py",
+                "k4bench/benchmark/ddsim.py",
+                "k4bench/benchmark/k4run.py",
+                "k4bench/cli.py",
+                "k4bench/plugin/schema.py",
+                "k4bench/runner/ddsim.py",
+                "k4bench/runner/k4run.py",
+                "tests/unit/test_analysis_event_drivers.py",
+                "tests/unit/test_analysis_event_size.py",
+                "tests/unit/test_analysis_event_source.py",
+                "tests/unit/test_analysis_expression.py",
+                "tests/unit/test_analysis_plots_event_content.py",
+                "tests/unit/test_benchmark.py",
+                "tests/unit/test_benchmark_job.py",
+                "tests/unit/test_benchmark_k4run.py",
+                "tests/unit/test_cli.py",
+                "tests/unit/test_dashboard_correlations.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 04764cc -->\n\nLatest suggestions up to 04764cc\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/04764ccc7f673d063a2af4864ea4d33f5d51979a)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/252?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/252#issuecomment-6278899361)** updated to latest commit https://github.com/key4hep/k4Bench/commit/451be1803841d5e97d7592345ead4078a7001a6e"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/252#issuecomment-6278899361)** updated to latest commit https://github.com/key4hep/k4Bench/commit/04764ccc7f673d063a2af4864ea4d33f5d51979a"
+                }
+            ],
+            "comments_total": 6,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 251,
+            "title": "feat(dashboard): flag reco components whose heap steps up by 100 MB or more in an event and keeps it, and show each component's largest working set",
+            "url": "https://github.com/key4hep/k4Bench/pull/251",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-19",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Detect per-component heap steps kept to last event\n\n- Warn about and mark kept steps on dashboard\n\n- Add working-set max and its event columns\n\n- Cover detection, plotting, dashboard with tests\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  steps[\"ComponentHeap.steps: kept rises of 100 MB or more\"] --> summary[\"summary: stepped, stepped_mb, working_set_max_event\"]\n  summary --> page[\"Memory page: step warning, flags, new columns\"]\n  summary --> plot[\"plot_heap_timeline: triangle step markers\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td><strong>Enhancement</strong></td><td><deta\u2026",
+            "diff": {
+                "additions": 388,
+                "deletions": 32,
+                "files": 7
+            },
+            "files": [
+                "dashboard/reco/memory.py",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/analysis/heap.py",
+                "k4bench/analysis/plots/heap.py",
+                "tests/unit/test_analysis_heap.py",
+                "tests/unit/test_analysis_plots_heap.py",
+                "tests/unit/test_dashboard_reco_apptest.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/24dada5572db5737a86b33ca11f6a4703d86d8a8)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 15,972 in / 9 out / 15,981 total\n- Time cost: 304.7s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/251#issuecomment-6276746549)** updated to latest commit https://github.com/key4hep/k4Bench/commit/24dada5572db5737a86b33ca11f6a4703d86d8a8"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 16,451 in / 9 out / 16,460 total\n- Time cost: 597.0s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/251?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 250,
+            "title": "feat: record each output file's compressed size per event, by collection, and add an Event Size section to both dashboard pages",
+            "url": "https://github.com/key4hep/k4Bench/pull/250",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-19",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Measure output files' per-collection compressed event size\n  - New analysis module reads podio branches via uproot\n  - Runners write `_event_size.json` only after successful runs\n\n- Add Event Size section to both dashboard pages\n  - Current-run tiles, donuts and per-collection table\n  - Historical trends stack collections across nightly tags\n\n- Generalize phase plots and legend sizing for reuse\n\n- Document format, version schema, cover with tests\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  runners[\"ddsim / k4run runners\"] -- \"measure written files via uproot\" --> json[\"_event_size.json\"]\n  json -- \"load_event_size / build_event_size_trend\" --> analysis[\"analysis.event_size\"]\n  analysi\u2026",
+            "diff": {
+                "additions": 1616,
+                "deletions": 48,
+                "files": 26
+            },
+            "files": [
+                ".github/scripts/nightly_benchmark.sh",
+                "dashboard/data.py",
+                "dashboard/reco/breakdown.py",
+                "dashboard/reco/page.py",
+                "dashboard/section_dispatch.py",
+                "dashboard/sections.py",
+                "dashboard/tabs/event_size.py",
+                "dashboard/ui_utils.py",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/analysis/event_size.py",
+                "k4bench/analysis/plots/phases.py",
+                "k4bench/analysis/trend.py",
+                "k4bench/artifacts.py",
+                "k4bench/plugin/schema.py",
+                "k4bench/runner/ddsim.py",
+                "k4bench/runner/k4run.py",
+                "tests/unit/conftest.py",
+                "tests/unit/test_analysis_event_size.py",
+                "tests/unit/test_analysis_plots_phases.py",
+                "tests/unit/test_dashboard_event_size.py",
+                "tests/unit/test_dashboard_reco_apptest.py",
+                "tests/unit/test_dashboard_stack_changes.py",
+                "tests/unit/test_runner_ddsim.py",
+                "tests/unit/test_runner_k4run.py",
+                "tests/unit/test_trend_builders.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/8f8045778cf5bfd565e2643ac9880f6c99eba3af)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 1e2fdbb -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 32,890 in / 9 out / 32,899 total\n- Time cost: 393.6s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/250#issuecomment-6271978776)** updated to latest commit https://github.com/key4hep/k4Bench/commit/3de1151c8fae96afe79e020613f4ab56cfac036b"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 33,154 in / 269 out / 33,423 total\n- Time cost: 622.2s\n- AI calls: 1\n\n</detail\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/250#issuecomment-6271978776)** updated to latest commit https://github.com/key4hep/k4Bench/commit/8f8045778cf5bfd565e2643ac9880f6c99eba3af"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/250?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 7,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 249,
+            "title": "feat(dashboard): bind each view and on-page control to the URL",
+            "url": "https://github.com/key4hep/k4Bench/pull/249",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-19",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Bind dashboard views and controls to URL\n\n- Reset URL-bound widgets to defaults on scope change\n\n- Leave Event Timing's \"Timing of\" picker unbound\n\n- Add tests and document the link-sharing behavior\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  controls[\"Dashboard views and controls\"] -- \"bind=query-params\" --> url[\"URL query params\"]\n  url -- \"copied link reopens view\" --> controls\n  scope[\"reset_widget_on_scope\"] -- \"resets bound widget to default\" --> controls\n  timing[\"Event Timing 'Timing of' picker\"] -- \"deliberately unbound, labels carry run times\" --> url\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</t\u2026",
+            "diff": {
+                "additions": 112,
+                "deletions": 35,
+                "files": 19
+            },
+            "files": [
+                "dashboard/reco/breakdown.py",
+                "dashboard/reco/dataflow.py",
+                "dashboard/reco/efficiency.py",
+                "dashboard/reco/memory.py",
+                "dashboard/tabs/_regression_flags.py",
+                "dashboard/tabs/_reliability.py",
+                "dashboard/tabs/detectors_overview.py",
+                "dashboard/tabs/event_memory.py",
+                "dashboard/tabs/event_timing.py",
+                "dashboard/tabs/impact.py",
+                "dashboard/tabs/machine_info.py",
+                "dashboard/tabs/region_timing/attribution.py",
+                "dashboard/tabs/region_timing/current_run.py",
+                "dashboard/tabs/region_timing/historical.py",
+                "dashboard/tabs/region_timing/step_analysis.py",
+                "dashboard/ui_utils.py",
+                "docs/user-guide/features/dashboard.md",
+                "tests/unit/test_dashboard_reco_apptest.py",
+                "tests/unit/test_dashboard_ui_state.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/277f68e05fb254d8f7435453dc1328ccef01bec9)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 12,735 in / 9 out / 12,744 total\n- Time cost: 440.5s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/249#issuecomment-6268728286)** updated to latest commit https://github.com/key4hep/k4Bench/commit/277f68e05fb254d8f7435453dc1328ccef01bec9"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 12,742 in / 9 out / 12,751 total\n- Time cost: 491.1s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/249?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 248,
+            "title": "feat(dashboard): add the reco Memory history: each component's heap, working set and growth night by night",
+            "url": "https://github.com/key4hep/k4Bench/pull/248",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-19",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add reco Memory Historical Trends view per component\n  - Before-first-event, typical, working set, growth metrics\n  - Working set ranked per panel, p95 included\n\n- Add `build_heap_trend` loader with cached dashboard wrapper\n\n- Generalize `phase_component_series` with `value`, `always`, `apart`\n\n- Nights without a value stay gaps, never zeros\n\n- Extend trends renderer with fixed colors, hover formatting\n\n- Add unit, AppTest coverage and user-guide docs\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  trend[\"build_heap_trend (trend.py)\"] --> cached[\"cached_load_trend_heap (data.py)\"]\n  cached --> hist[\"_render_historical (reco/memory.py)\"]\n  series[\"phase_component_series (plots/phases.py)\"]\u2026",
+            "diff": {
+                "additions": 766,
+                "deletions": 117,
+                "files": 10
+            },
+            "files": [
+                "dashboard/data.py",
+                "dashboard/reco/memory.py",
+                "dashboard/tabs/_historical_trends.py",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/analysis/plots/phases.py",
+                "k4bench/analysis/trend.py",
+                "tests/unit/conftest.py",
+                "tests/unit/test_analysis_plots_phases.py",
+                "tests/unit/test_dashboard_reco_apptest.py",
+                "tests/unit/test_trend_builders.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/f9e8a0d7e9a995d35fb4e0319eb5ab3a94c2d58e)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- a4fa99a -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/248#issuecomment-6267386156)** updated to latest commit https://github.com/key4hep/k4Bench/commit/f9e8a0d7e9a995d35fb4e0319eb5ab3a94c2d58e"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 22,589 in / 9 out / 22,598 total\n- Time cost: 480.4s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/248?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "k4Bench",
@@ -40,9 +452,17 @@
                 {
                     "author": "codecov-commenter",
                     "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/247?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 34,901 in / 9 out / 34,910 total\n- Time cost: 991.1s\n- AI calls: 1\n\n</details>"
                 }
             ],
-            "comments_total": 1,
+            "comments_total": 3,
             "reviews": [],
             "reviews_total": 0
         },
@@ -82,6 +502,36 @@
             "comments_total": 3,
             "reviews": [],
             "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-tutorials",
+            "num": 210,
+            "title": "reworked Windows section to reflect native ssh capabilities",
+            "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/210",
+            "author": "bndikt",
+            "mergedAt": "2026-10-19",
+            "mergedBy": "michmx",
+            "labels": [],
+            "body": "Replaces the PuTTY and Xming walkthrough with PowerShell\u2019s built-in SSH client. Keeps WSLg as an optional route for graphical forwarding.",
+            "diff": {
+                "additions": 9,
+                "deletions": 21,
+                "files": 1
+            },
+            "files": [
+                "1-first-steps/prerequisites.md"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "michmx",
+                    "state": "APPROVED",
+                    "body": "Thanks a lot!"
+                }
+            ],
+            "reviews_total": 1
         },
         {
             "org": "hep-fcc",
@@ -2517,77 +2967,6 @@
             "reviews_total": 1
         },
         {
-            "org": "key4hep",
-            "repo": "k4GaudiPandora",
-            "num": 55,
-            "title": "Loop the LCCaloHit factory through the Pandora machinery",
-            "url": "https://github.com/key4hep/k4GaudiPandora/pull/55",
-            "author": "tmadlener",
-            "mergedAt": "2026-10-13",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Make the conversion to calorimeter hits for Pandora use the newly introduced `LCCaloHit`s that allow for a more flexible customization\r\n\r\nENDRELEASENOTES\r\n\r\n~Draft PR to be able to test an implementation born from the discussion in https://github.com/PandoraPFAOrg/PandoraSDK/pull/37~\r\n\r\n- [x] Needs https://github.com/PandoraPFAOrg/LCContent/pull/45",
-            "diff": {
-                "additions": 21,
-                "deletions": 10,
-                "files": 2
-            },
-            "files": [
-                "k4GaudiPandora/include/DDCaloHitCreator.h",
-                "k4GaudiPandora/src/DDCaloHitCreator.cc"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Validated to be working as expected and transparently: https://github.com/PandoraPFAOrg/LCContent/pull/45#issuecomment-5949668287"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I will merge https://github.com/PandoraPFAOrg/LCContent/pull/45 later today. CI should then start to work for this one, and I will merge it tomorrow after CI has passed at least once, unless there are comments."
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Looks like builds are passing and CI failures are due to some numerical issues(?). Have they been failing before sporadically, or is this something new with this PR?"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "k4RecCalorimeter",
-            "num": 290,
-            "title": "Fix O(N^2) loops in CreateTruthLinks",
-            "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/290",
-            "author": "davidlange6",
-            "mergedAt": "2026-10-13",
-            "mergedBy": "scott-snyder",
-            "labels": [],
-            "body": "Three inner loops each iterated over all MCParticles to find non-zero entries, giving O(N_hits \u00d7 N_particles) and O(N_cluster_hits \u00d7 N_links) complexity.\r\n\r\nprimary changes: 1) Iterate simHitMapEnergy map keys directly instead of scanning all MCParticles for non-zero entries. 2)Build a cellID \u2192 links index (std::unordered_map) once after the calo-hit loop, then use O(1) lookup per cluster hit instead of a full scan of the link collection. 3) Iiterate mcpEnergy map keys directly instead of scanning all MCParticles per cluster.\r\n\r\nBEGINRELEASENOTES\r\n- Speedup O(N2) loops in CreateTruthLinks\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 31,
-                "deletions": 30,
-                "files": 1
-            },
-            "files": [
-                "RecCalorimeter/src/components/CreateTruthLinks.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "scott-snyder",
-                    "body": "Did you check that results are unchanged?  (It looks like this would change the ordering of links?)"
-                },
-                {
-                    "author": "davidlange6",
-                    "body": "I did an element-by-element comparison of CaloHitMCParticleLinks and ClusterMCParticleLinks including their order. The intent is that using ordered maps should preserve results."
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "hep-fcc",
             "repo": "FCC-config",
             "num": 403,
@@ -2657,34 +3036,6 @@
             "reviews_total": 13
         },
         {
-            "org": "hep-fcc",
-            "repo": "bib-studies",
-            "num": 21,
-            "title": "Implementing EDM4hep processing for BIB Studies",
-            "url": "https://github.com/HEP-FCC/bib-studies/pull/21",
-            "author": "neskongarr",
-            "mergedAt": "2026-10-13",
-            "mergedBy": "meleneemil",
-            "labels": [],
-            "body": "Generalized the `submit_pairs.py `script to process the new batch of EDM4hep `.root `background files (IPC and SR for now). \r\n\r\nAdded some helper files under `python/edm4hep_helper.py` to read metadata and count events per file submitted to each condor job.\r\n\r\nUpdated the README accordingly.",
-            "diff": {
-                "additions": 450,
-                "deletions": 8,
-                "files": 5
-            },
-            "files": [
-                "plotting/drawhits.py",
-                "python/edm4hep_helper.py",
-                "simulation/README.md",
-                "simulation/submit_bkg.py",
-                "simulation/submit_pairs.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "AIDASoft",
             "repo": "DD4hep",
             "num": 1697,
@@ -2747,328 +3098,6 @@
             "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 227,
-            "title": "feat(provenance): track loaded stack changes in dashboard and blame",
-            "url": "https://github.com/key4hep/k4Bench/pull/227",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-12",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Capture loaded stack provenance per benchmark run\n  - Plugins record mapped paths and G4 datasets\n  - Runner saves manifests, loaded packages, datasets\n\n- Diff full measured stacks beyond HEAD commits\n  - Pins, datasets, OS; hash-only rebuilds counted\n\n- Dashboard Stack Changes renders scoped loaded-first diff\n\n- Blame stores external changes as non-candidate facts\n  - Ranker and reviewer prompts may name external causes\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  plugins[\"Timing/auditor plugins\"] -- \"mapped paths + G4 datasets\" --> handoff[\".loaded handoff files\"]\n  handoff -- \"capture_stack\" --> runinfo[\"run_info.json + LCG manifests\"]\n  runinfo -- \"fetch_stack_snapshot\" --> dash[\"D\u2026",
-            "diff": {
-                "additions": 2166,
-                "deletions": 94,
-                "files": 40
-            },
-            "files": [
-                ".github/scripts/blame_report.py",
-                ".github/scripts/list_benchmarks.py",
-                ".github/scripts/run_info.py",
-                "dashboard/remote_cache.py",
-                "dashboard/tabs/_regression_flags.py",
-                "dashboard/tabs/stack_changes.py",
-                "docs/reference/file-formats.md",
-                "k4bench/blame/attribute.py",
-                "k4bench/blame/builder.py",
-                "k4bench/blame/comment/build.py",
-                "k4bench/blame/comment/digest.py",
-                "k4bench/blame/comment/selection.py",
-                "k4bench/blame/evidence.py",
-                "k4bench/blame/models.py",
-                "k4bench/blame/prompt.py",
-                "k4bench/blame/rank.py",
-                "k4bench/blame/summary.py",
-                "k4bench/plugin/runtime.py",
-                "k4bench/provenance/diff.py",
-                "k4bench/provenance/stack.py",
-                "k4bench/remote.py",
-                "plugin/auditor/k4BenchAuditor.cpp",
-                "plugin/auditor/k4BenchAuditorOptions.py",
-                "plugin/k4BenchProcStats.h",
-                "plugin/k4BenchTimingAction.cpp",
-                "tests/fixtures/stack/HEAD-2026-10-02.json",
-                "tests/fixtures/stack/HEAD-2026-10-03.json",
-                "tests/fixtures/stack/LCG_contrib.txt.gz",
-                "tests/fixtures/stack/LCG_externals.txt.gz",
-                "tests/fixtures/stack/README.md"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/5da7e9b47f0a06b289af7ae4586e87b71adc60ef)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/227#issuecomment-6127606834)** updated to latest commit https://github.com/key4hep/k4Bench/commit/bbdb93266571113859bbcc3f4a23e96c2f68213c"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/227#issuecomment-6127606834)** updated to latest commit https://github.com/key4hep/k4Bench/commit/aec46e479e1b616d819df301249bc5ba0c4bddda"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/227?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/227#issuecomment-6127606834)** updated to latest commit https://github.com/key4hep/k4Bench/commit/5da7e9b47f0a06b289af7ae4586e87b71adc60ef"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 44,815 in / 9 out / 44,824 total\n- Time cost: 1323.5s\n- AI calls: 1\n\n</details\u2026"
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 226,
-            "title": "fix(regression): move a late confirmation's window back to where the level changed",
-            "url": "https://github.com/key4hep/k4Bench/pull/226",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-12",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Tests\n\n\n___\n\n### **Description**\n- Move late-confirmed change windows back to level change\n\n- Track judged nights since last re-anchor\n\n- Extract shared `_tripped_way` gate-check helper\n\n- Add regression tests and user documentation\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  confirm[\"Change confirmed tonight\"] --> check{\"Base trips same way against confirming snapshot?\"}\n  check -- \"no\" --> keep[\"Keep walk-placed window\"]\n  check -- \"yes\" --> back[\"Move onset back over nights at changed level\"]\n  back --> bound[\"Base: newest prior night off level, else re-anchor seed\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td>\u2026",
-            "diff": {
-                "additions": 120,
-                "deletions": 11,
-                "files": 4
-            },
-            "files": [
-                "docs/user-guide/features/dashboard.md",
-                "k4bench/regression/engine.py",
-                "k4bench/regression/models.py",
-                "tests/unit/test_regression_engine.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 8,231 in / 9 out / 8,240 total\n- Time cost: 480.9s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/226?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 225,
-            "title": "fix(dashboard): end the Overview's release window at its newest reported release and caption its chart by nightly tags",
-            "url": "https://github.com/key4hep/k4Bench/pull/225",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-12",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Tests\n\n\n___\n\n### **Description**\n- Offer Overview only releases judged by a report\n\n- Replace `default_releases` with `reported_releases` filter\n\n- Caption charts by plotted nightly tags\n\n- Count tags hidden as unreliable separately\n\n- Update unit tests and user guide\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"sidebar.pick_trend_window\"] -- \"Overview drops unreported releases\" --> B[\"reported_releases\"]\n  B -- \"slider opens on 10 newest\" --> C[\"Trend window\"]\n  D[\"trends.py\"] -- \"range spans shown tags, counts hidden\" --> E[\"Data range caption\"]\n  F[\"detectors_overview.py\"] -- \"range spans drawn tags\" --> E\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relev\u2026",
-            "diff": {
-                "additions": 133,
-                "deletions": 93,
-                "files": 10
-            },
-            "files": [
-                "dashboard/sections.py",
-                "dashboard/sidebar.py",
-                "dashboard/tabs/detectors_overview.py",
-                "dashboard/tabs/trends.py",
-                "dashboard/trend_window.py",
-                "docs/user-guide/features/dashboard.md",
-                "tests/unit/test_dashboard_overview_apptest.py",
-                "tests/unit/test_dashboard_sidebar.py",
-                "tests/unit/test_dashboard_trends_flags.py",
-                "tests/unit/test_trend_window.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "Failed to generate code suggestions for PR"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": "### :x: 1 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 2323 | 1 | 2322 | 27 |\n<details><summary>View the top 1 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_links.py::test_link_resolves[https://github.c\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 224,
-            "title": "feat(dashboard): range the release slider over the platform on the Overview and over the selected detector's releases elsewhere",
-            "url": "https://github.com/key4hep/k4Bench/pull/224",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-12",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement\n\n\n___\n\n### **Description**\n- Scope release slider per section via `across_detectors`\n\n- Add `current_section` readable before section bar\n\n- Simplify window caption, drop first/last-run annotations\n\n- Update tests and dashboard user guide\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  app[\"app.py main\"] -- \"reads active section early\" --> cur[\"current_section()\"]\n  cur -- \"SECTION_SCOPE detector check\" --> scope[\"across_detectors flag\"]\n  scope -- \"True: platform-wide releases\" --> win[\"pick_trend_window()\"]\n  scope -- \"False: selected detector's releases\" --> win\n  win -- \"TrendWindow\" --> tabs[\"Overview / other tabs\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"le\u2026",
-            "diff": {
-                "additions": 176,
-                "deletions": 124,
-                "files": 8
-            },
-            "files": [
-                "dashboard/app.py",
-                "dashboard/section_dispatch.py",
-                "dashboard/sidebar.py",
-                "dashboard/tabs/detectors_overview.py",
-                "dashboard/trend_window.py",
-                "docs/user-guide/features/dashboard.md",
-                "tests/unit/test_dashboard_section_dispatch.py",
-                "tests/unit/test_dashboard_sidebar.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 11,998 in / 9 out / 12,007 total\n- Time cost: 277.9s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": "### :x: 1 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 2325 | 1 | 2324 | 27 |\n<details><summary>View the top 1 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_links.py::test_link_resolves[https://doi.org/\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 223,
-            "title": "feat(dashboard): replace the trend window presets with a release slider opening on the 10 newest releases",
-            "url": "https://github.com/key4hep/k4Bench/pull/223",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-12",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests, Documentation\n\n\n___\n\n### **Description**\n- Replace trend-window presets with a release range slider\n\n- Slider opens on the 10 newest releases\n\n- Keyless slider reopens when new releases land\n\n- Update unit tests and user-guide documentation\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  tw[\"trend_window.py: default_releases + releases_between\"] -- \"opening range and slicing\" --> sb[\"sidebar.py: keyless select_slider\"]\n  sb -- \"reopens on new releases\" --> win[\"Trend window\"]\n  ov[\"detectors_overview.py\"] -- \"docstring updated\" --> tw\n  tests[\"unit tests\"] -- \"rewritten plus new cases\" --> tw\n  docs[\"dashboard.md\"] -- \"documents slider\" --> sb\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><t\u2026",
-            "diff": {
-                "additions": 125,
-                "deletions": 157,
-                "files": 6
-            },
-            "files": [
-                "dashboard/sidebar.py",
-                "dashboard/tabs/detectors_overview.py",
-                "dashboard/trend_window.py",
-                "docs/user-guide/features/dashboard.md",
-                "tests/unit/test_dashboard_sidebar.py",
-                "tests/unit/test_trend_window.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 913d29b -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/223?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 222,
-            "title": "feat(dashboard): count the trend window in Key4hep releases across te platform and name when a detector first ran",
-            "url": "https://github.com/key4hep/k4Bench/pull/222",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-12",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement\n\n\n___\n\n### **Description**\n- Trend window presets now count Key4hep releases, not days\n\n- Releases unioned across detectors via shared `list_platform_stacks`\n\n- Custom range becomes a release slider; caption names first run\n\n- `TrendWindow.dates` now spans the judging report nights\n\n- Tests and docs updated for release-based windows\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  sidebar[\"sidebar.pick_trend_window\"] -- \"lists platform releases\" --> cache[\"remote_cache.list_platform_stacks\"]\n  sidebar -- \"preset / custom range\" --> tw[\"trend_window.select_releases\"]\n  tw -- \"selected releases\" --> riw[\"trend_window.runs_in_window\"]\n  tw -- \"judging nights\" --> span[\"trend_window.report_span\"]\n  stack_changes[\"tabs/stack_chan\u2026",
-            "diff": {
-                "additions": 433,
-                "deletions": 329,
-                "files": 11
-            },
-            "files": [
-                "dashboard/remote_cache.py",
-                "dashboard/sidebar.py",
-                "dashboard/tabs/_overview_data.py",
-                "dashboard/tabs/detectors_overview.py",
-                "dashboard/tabs/stack_changes.py",
-                "dashboard/trend_window.py",
-                "docs/user-guide/features/dashboard.md",
-                "tests/unit/test_dashboard_remote_cache.py",
-                "tests/unit/test_dashboard_sidebar.py",
-                "tests/unit/test_dashboard_stack_changes.py",
-                "tests/unit/test_trend_window.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- adb32f5 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": "### :x: 1 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 2328 | 1 | 2327 | 27 |\n<details><summary>View the top 1 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_links.py::test_link_resolves[https://github.c\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "k4RecCalorimeter",
-            "num": 287,
-            "title": "Further minor fixes for phi wrapping.",
-            "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/287",
-            "author": "scott-snyder",
-            "mergedAt": "2026-10-12",
-            "mergedBy": "scott-snyder",
-            "labels": [],
-            "body": "- On ARM, a long double is 128 bits and the exponent in the TOINT calculation overflows a 64-bit int.  Resolve by breaking up the exponent into two factors.\r\n - Missing climit include.\r\n - Suppress clang22 warning about use of __COUNTER__ in boost.test.\r\n\r\nBEGINRELEASENOTES\r\n- Fix issue in phiwrap.h with long doubles on ARM.\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 15,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                "RecCaloCommon/include/RecCaloCommon/phihelper.h",
-                "RecCaloCommon/tests/phihelper_test.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 2
         }
     ]
 }
