@@ -127,8 +127,8 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/534'>Simcalohit add addMCParticleContribution</a>",
             "author": "madbaron",
             "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-15",
-            "mergeOk": "no",
+            "updatedAt": "2026-10-20",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -215,7 +215,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/444'>New PropertyChoices Helper Class</a>",
             "author": "s6anloes",
             "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-19",
+            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -226,7 +226,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/446'>Include directly used headers throughout library and tests</a>",
             "author": "jmcarcell",
             "createdAt": "2026-10-18",
-            "updatedAt": "2026-10-18",
+            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -237,7 +237,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/413'>Update OverlayTiming to support BIB random mixing</a>",
             "author": "madbaron",
             "createdAt": "2026-07-06",
-            "updatedAt": "2026-10-16",
+            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -299,22 +299,11 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 936,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/936'>Bump latest commit</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-15",
-            "updatedAt": "2026-10-19",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
             "num": 911,
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
-            "updatedAt": "2026-10-17",
+            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -326,7 +315,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -820,7 +809,7 @@
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/73'>Add data folder for external data (calorimeter threshold maps)</a>",
             "author": "madbaron",
             "createdAt": "2026-10-15",
-            "updatedAt": "2026-10-15",
+            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1029,7 +1018,7 @@
             "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/10'>TrackingValidation: fix truth parameters and matching, align with ACTS</a>",
             "author": "jbeirer",
             "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-19",
+            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1877,6 +1866,28 @@
             "author": "kjvbrt",
             "createdAt": "2026-08-31",
             "updatedAt": "2026-09-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>mc-productions-tutorials",
+            "num": 2,
+            "title": "<a href='https://github.com/HEP-FCC/mc-productions-tutorials/pull/2'>Add DaMI dataset publication tutorial</a>",
+            "author": "pkontaxa",
+            "createdAt": "2026-10-20",
+            "updatedAt": "2026-10-20",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>mc-productions-tutorials",
+            "num": 1,
+            "title": "<a href='https://github.com/HEP-FCC/mc-productions-tutorials/pull/1'>Add MC contact workflow and DRS training material</a>",
+            "author": "pkontaxa",
+            "createdAt": "2026-10-20",
+            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
