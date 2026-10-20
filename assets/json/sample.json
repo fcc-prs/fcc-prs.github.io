@@ -2,6 +2,17 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 669,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/669'>Alfa detector concept</a>",
+            "author": "Edler1",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-10-20",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 674,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/674'>Using same DectDimensions properties for ALLEGRO_o1_v04 as for o1_v03\u2026</a>",
             "author": "armin-ilg",
@@ -18,17 +29,6 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-10-14",
             "updatedAt": "2026-10-15",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 669,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/669'>Alfa detector concept</a>",
-            "author": "Edler1",
-            "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -315,7 +315,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -524,7 +524,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-01",
             "updatedAt": "2026-10-01",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -535,7 +535,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-20",
             "updatedAt": "2026-10-01",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -546,7 +546,7 @@
             "author": "jmcarcell",
             "createdAt": "2025-03-25",
             "updatedAt": "2026-09-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -557,7 +557,7 @@
             "author": "tmadlener",
             "createdAt": "2023-07-14",
             "updatedAt": "2025-08-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1300,6 +1300,17 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 575,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/575'>[pre-edm4hep1] V0 finders: start the two-track fit at the crossing points of the track circles</a>",
+            "author": "defranchis",
+            "createdAt": "2026-10-20",
+            "updatedAt": "2026-10-20",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 513,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/513'>Add a new method to pre-selection and final-selection. Also add some features to do_plots</a>",
             "author": "tomfournier",
@@ -1685,6 +1696,17 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
+            "num": 407,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/407'>[IDEA] Read the GGTF model from --trackingModel, download only if mising</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-20",
+            "updatedAt": "2026-10-20",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "andread3vita"
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
             "num": 402,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/402'>[ALLEGRO] Add option for using Si detailed digitiser in ALLEGRO</a>",
             "author": "giovannimarchiori",
@@ -1766,7 +1788,7 @@
             "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/64'>Add first version of common plotting style</a>",
             "author": "jacofan",
             "createdAt": "2026-10-16",
-            "updatedAt": "2026-10-19",
+            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1778,6 +1800,17 @@
             "author": "jacofan",
             "createdAt": "2026-10-16",
             "updatedAt": "2026-10-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 122,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/122'>Use DRS-<n> keys for referencing requests</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-10-20",
+            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1893,6 +1926,17 @@
             "assignees": ""
         },
         {
+            "repo": "hep-fcc/<br>mc-productions-tutorials",
+            "num": 3,
+            "title": "<a href='https://github.com/HEP-FCC/mc-productions-tutorials/pull/3'>Add iLCDirac production launching tutorial</a>",
+            "author": "pkontaxa",
+            "createdAt": "2026-10-20",
+            "updatedAt": "2026-10-20",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "AIDASoft/<br>DD4hep",
             "num": 1606,
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1606'>feat: AdePT physics list plugin for e+/e-/gamma offload to GPU [WIP]</a>",
@@ -1942,7 +1986,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1672'>Add cvmfs/LCG-based macOS workflow</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-06",
-            "updatedAt": "2026-09-29",
+            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
