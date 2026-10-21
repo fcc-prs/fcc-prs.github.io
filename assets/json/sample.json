@@ -442,6 +442,17 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 109,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-10-21",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 127,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/127'>Fix propagateBackward to Start at Outermost Seed Space Point</a>",
             "author": "mlarson02",
@@ -469,17 +480,6 @@
             "author": "mlarson02",
             "createdAt": "2026-10-17",
             "updatedAt": "2026-10-19",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 109,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -607,11 +607,22 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 118,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>[WIP] Brem recovery</a>",
+            "author": "Debottam",
+            "createdAt": "2026-10-21",
+            "updatedAt": "2026-10-21",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 81,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
-            "updatedAt": "2026-10-19",
+            "updatedAt": "2026-10-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1008,7 +1019,7 @@
             "author": "jbeirer",
             "createdAt": "2026-09-30",
             "updatedAt": "2026-10-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1055,6 +1066,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 263,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/263'>feat(dashboard): pin the exact run in links</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-21",
+            "updatedAt": "2026-10-21",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1135,12 +1157,23 @@
         },
         {
             "repo": "hep-fcc/<br>FCCDIRAC",
+            "num": 22,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/22'>Add snaseem summer2026 ZH training files</a>",
+            "author": "safanaseem",
+            "createdAt": "2026-10-21",
+            "updatedAt": "2026-10-21",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCDIRAC",
             "num": 21,
             "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/21'>Production of ttbar dataset at 365 GeV</a>",
             "author": "kjvbrt",
             "createdAt": "2026-10-02",
             "updatedAt": "2026-10-02",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1157,23 +1190,12 @@
         },
         {
             "repo": "hep-fcc/<br>FCCDIRAC",
-            "num": 19,
-            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/19'>ZH ZZ WW datasets in test campaign summer2026</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-09-04",
-            "updatedAt": "2026-09-24",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCDIRAC",
             "num": 17,
             "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/17'>[WIP] Datasets for the ZH crosssection analysis</a>",
             "author": "kjvbrt",
             "createdAt": "2026-04-15",
             "updatedAt": "2026-04-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1184,7 +1206,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-01-21",
             "updatedAt": "2026-01-22",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1195,7 +1217,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-01-21",
             "updatedAt": "2026-01-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1206,7 +1228,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-05-05",
             "updatedAt": "2025-05-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1217,7 +1239,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-04-28",
             "updatedAt": "2025-04-28",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1228,7 +1250,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-04-10",
             "updatedAt": "2025-04-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1239,7 +1261,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-04-08",
             "updatedAt": "2025-04-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1250,7 +1272,7 @@
             "author": "andresailer",
             "createdAt": "2024-04-18",
             "updatedAt": "2024-04-18",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1272,6 +1294,28 @@
             "author": "vasilllis",
             "createdAt": "2026-08-18",
             "updatedAt": "2026-08-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 557,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
+            "author": "bndikt",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-10-21",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 538,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
+            "author": "bndikt",
+            "createdAt": "2026-08-11",
+            "updatedAt": "2026-10-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1360,28 +1404,6 @@
             "author": "captainvogon",
             "createdAt": "2026-06-25",
             "updatedAt": "2026-09-26",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 538,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
-            "author": "bndikt",
-            "createdAt": "2026-08-11",
-            "updatedAt": "2026-09-25",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 557,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
-            "author": "bndikt",
-            "createdAt": "2026-09-16",
-            "updatedAt": "2026-09-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1674,22 +1696,11 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
-            "num": 407,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/407'>[IDEA] Read the GGTF model from --trackingModel, download only if mising</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-20",
-            "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "andread3vita"
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
             "num": 402,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/402'>[ALLEGRO] Add option for using Si detailed digitiser in ALLEGRO</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-06",
-            "updatedAt": "2026-10-19",
+            "updatedAt": "2026-10-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1784,6 +1795,17 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-drs",
+            "num": 123,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/123'>Rename Production IDs to Transformation IDs</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-10-21",
+            "updatedAt": "2026-10-21",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
             "num": 117,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/117'>Edit request fields individually in the modal and validate only on submit</a>",
             "author": "kjvbrt",
@@ -1800,7 +1822,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-10-08",
             "updatedAt": "2026-10-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1844,39 +1866,6 @@
             "author": "kjvbrt",
             "createdAt": "2026-08-31",
             "updatedAt": "2026-09-01",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>mc-productions-tutorials",
-            "num": 2,
-            "title": "<a href='https://github.com/HEP-FCC/mc-productions-tutorials/pull/2'>Add DaMI dataset publication tutorial</a>",
-            "author": "pkontaxa",
-            "createdAt": "2026-10-20",
-            "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>mc-productions-tutorials",
-            "num": 1,
-            "title": "<a href='https://github.com/HEP-FCC/mc-productions-tutorials/pull/1'>Add MC contact workflow and DRS training material</a>",
-            "author": "pkontaxa",
-            "createdAt": "2026-10-20",
-            "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>mc-productions-tutorials",
-            "num": 3,
-            "title": "<a href='https://github.com/HEP-FCC/mc-productions-tutorials/pull/3'>Add iLCDirac production launching tutorial</a>",
-            "author": "pkontaxa",
-            "createdAt": "2026-10-20",
-            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1953,7 +1942,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1692'>fix(Geant4InputHandling): start a tracked parent-less particle at its own production point</a>",
             "author": "jbeirer",
             "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-08",
+            "updatedAt": "2026-10-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2030,7 +2019,7 @@
             "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/46'>Add some user settable bits to the LCCaloHit</a>",
             "author": "tmadlener",
             "createdAt": "2026-09-24",
-            "updatedAt": "2026-10-09",
+            "updatedAt": "2026-10-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
