@@ -6,7 +6,18 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/669'>Alfa detector concept</a>",
             "author": "Edler1",
             "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-20",
+            "updatedAt": "2026-10-21",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 625,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Set sensitive-detector types in geometry constructors</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-03",
+            "updatedAt": "2026-10-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -29,17 +40,6 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-10-14",
             "updatedAt": "2026-10-15",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 625,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Use generic sensitive-detector types in compact geometries</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-03",
-            "updatedAt": "2026-10-08",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -805,17 +805,6 @@
         },
         {
             "repo": "key4hep/<br>k4Reco",
-            "num": 73,
-            "title": "<a href='https://github.com/key4hep/k4Reco/pull/73'>Add data folder for external data (calorimeter threshold maps)</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-15",
-            "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Reco",
             "num": 63,
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/63'>Port LCFIPlus and LCFIVertx to EDM4hep</a>",
             "author": "jmcarcell",
@@ -1019,18 +1008,7 @@
             "author": "jbeirer",
             "createdAt": "2026-09-30",
             "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4DetectorPerformance",
-            "num": 8,
-            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/8'>update name of DCH digitizer</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-09-23",
-            "updatedAt": "2026-10-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1806,45 +1784,12 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-drs",
-            "num": 122,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/122'>Use DRS-<n> keys for referencing requests</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-10-20",
-            "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 121,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/121'>Update dependency marked to v18.1.1</a>",
-            "author": "renovate",
-            "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 120,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/120'>Update dependency dompurify to v3.4.17</a>",
-            "author": "renovate",
-            "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
             "num": 117,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/117'>Edit request fields individually in the modal and validate only on submit</a>",
             "author": "kjvbrt",
             "createdAt": "2026-10-09",
             "updatedAt": "2026-10-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1855,7 +1800,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-10-08",
             "updatedAt": "2026-10-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
