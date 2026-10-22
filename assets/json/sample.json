@@ -18,7 +18,7 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-10-14",
             "updatedAt": "2026-10-21",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +29,7 @@
             "author": "armin-ilg",
             "createdAt": "2026-10-16",
             "updatedAt": "2026-10-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +40,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-10-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -51,7 +51,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-21",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +62,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-09-04",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +73,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +84,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +95,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -272,6 +272,17 @@
             "createdAt": "2025-05-12",
             "updatedAt": "2026-09-21",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 938,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/938'>Enable ML option for LCContent</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-10-22",
+            "updatedAt": "2026-10-22",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -600,7 +611,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>[WIP] Brem recovery</a>",
             "author": "Debottam",
             "createdAt": "2026-10-21",
-            "updatedAt": "2026-10-21",
+            "updatedAt": "2026-10-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1278,10 +1289,10 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 557,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
+            "num": 538,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
-            "createdAt": "2026-09-16",
+            "createdAt": "2026-08-11",
             "updatedAt": "2026-10-22",
             "mergeOk": "yes",
             "labels": "",
@@ -1289,11 +1300,11 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 538,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
+            "num": 557,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
             "author": "bndikt",
-            "createdAt": "2026-08-11",
-            "updatedAt": "2026-10-21",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-10-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1619,6 +1630,17 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 292,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/292'>Use of shared cache in CreatePositionedCaloCells</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-10-22",
+            "updatedAt": "2026-10-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
             "num": 291,
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/291'>More efficient data storage for TopoCaloNoisyCells.</a>",
             "author": "scott-snyder",
@@ -1679,7 +1701,7 @@
             "author": "Edler1",
             "createdAt": "2026-10-13",
             "updatedAt": "2026-10-13",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1964,6 +1986,28 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1702'>fix(Geant4ParticleHandler): avoid duplicate track-equivalents map at end of event</a>",
             "author": "wdconinc",
             "createdAt": "2026-10-20",
+            "updatedAt": "2026-10-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1703,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1703'>Speed up the placement path search in the SurfaceManager map build</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-22",
+            "updatedAt": "2026-10-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1704,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1704'>SurfaceManager: enter each surface only once into the type and world maps</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-22",
             "updatedAt": "2026-10-22",
             "mergeOk": "yes",
             "labels": "",
