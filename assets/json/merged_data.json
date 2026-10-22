@@ -1,6 +1,227 @@
 {
-    "updated_at": "2026-10-21T11:00:18Z",
+    "updated_at": "2026-10-22T11:00:06Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 669,
+            "title": "Alfa detector concept",
+            "url": "https://github.com/key4hep/k4geo/pull/669",
+            "author": "Edler1",
+            "mergedAt": "2026-10-22",
+            "mergedBy": "s6anloes",
+            "labels": [],
+            "body": "To ease the review process, please consider the following before opening a pull request:\r\n- [x] the code is sufficiently well documented (e.g. inline comments)\r\n- [x] the relevant README(s) were updated. See e.g. https://github.com/key4hep/k4geo/blob/main/detector/calorimeter/README.md or https://github.com/key4hep/k4geo/blob/main/FCCee/IDEA/compact/README.md\r\n- [x] the code is covered by tests. See https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\r\n- [x] the PR source branch has been rebased (`--ff-only`) to `k4geo/main`\r\n- [x] the PR does not contain any additions or modifications that do not belong to it\r\n- [x] The release notes below contain a succinct and comprehensive description of the changes that are sufficiently self-explanatory\r\n\r\nIf you are modifying detector dimen\u2026",
+            "diff": {
+                "additions": 3560,
+                "deletions": 16,
+                "files": 21
+            },
+            "files": [
+                "CMakeLists.txt",
+                "FCCee/ALFA/compact/ALFA_o1_v00/ALFA_o1_v00.xml",
+                "FCCee/ALFA/compact/ALFA_o1_v00/DectDimensions_ALFA_o1_v00.xml",
+                "FCCee/ALFA/compact/ALFA_o1_v00/Grainita_ECAL_Barrel_o1_v02.xml",
+                "FCCee/ALFA/compact/ALFA_o1_v00/MDI_params.xml",
+                "FCCee/ALFA/compact/ALFA_o1_v00/OuterTrackerBarrel_o1_v00.xml",
+                "FCCee/ALFA/compact/ALFA_o1_v00/OuterTracker_module.xml",
+                "FCCee/ALFA/compact/ALFA_o1_v00/display.xml",
+                "FCCee/ALFA/compact/ALFA_o1_v00/elements.xml",
+                "FCCee/ALFA/compact/ALFA_o1_v00/materials.xml",
+                "FCCee/ALFA/compact/README.md",
+                "detector/calorimeter/Grainita_ECAL_Barrel_v02.cpp",
+                "detector/calorimeter/README.md",
+                "detector/tracker/VertexBarrel_detailed_o1_v03_geo.cpp",
+                "detectorSegmentations/include/detectorSegmentations/FCCSWGridRhoPhiTheta_k4geo.h",
+                "detectorSegmentations/src/FCCSWGridRhoPhiTheta_k4geo.cpp",
+                "detectorSegmentations/src/plugins/SegmentationFactories.cpp",
+                "example/SteeringFile_ALFA_o1_v00.py",
+                "plugins/GrainitaCaloSDAction.cpp",
+                "plugins/GrainitaCaloSDAction.h",
+                "test/CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "s6anloes",
+                    "body": "@jbeirer if you approve, I think we can merge this PR"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "armin-ilg",
+                    "state": "COMMENTED",
+                    "body": "Looking at the tracker I think it looks very good already! I just added a couple of comments for improvement and actual questions on the changes to the VertexBarrel_o1_v03.cpp constructor"
+                },
+                {
+                    "author": "s6anloes",
+                    "state": "CHANGES_REQUESTED",
+                    "body": "Hi, \nthanks for this PR and congratulations on this first ALFA version!\nI mostly have minor comments.\nCheers"
+                }
+            ],
+            "reviews_total": 61
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 413,
+            "title": "Update OverlayTiming to support BIB random mixing",
+            "url": "https://github.com/key4hep/k4FWCore/pull/413",
+            "author": "madbaron",
+            "mergedAt": "2026-10-22",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "This PR has been split: it now carries only the random background mixing. \r\nThe TBB-based parallel reading of background frames moves to a follow-up PR, so that the two can be reviewed independently. It is based on #429, which simplifies the background particle index mapping and should go in first.\r\n\r\nBeam-induced background is typically produced as a large number of files, each holding a single pseudo-event. Read as one sequential stream, such a group is walked in a fixed order, so a run overlaying fewer events than there are files\r\nonly ever sees the first few. `RandomMixBackgroundFiles = True` instead treats every file of a group as an independent event source and draws one per overlaid event, from a shuffled permutation that is reshuffled once exhausted. Entries of `BackgroundFileNames\u2026",
+            "diff": {
+                "additions": 831,
+                "deletions": 101,
+                "files": 8
+            },
+            "files": [
+                "doc/OverlayTiming.md",
+                "k4FWCore/components/OverlayTiming.cpp",
+                "k4FWCore/components/OverlayTiming.h",
+                "test/k4FWCoreTest/CMakeLists.txt",
+                "test/k4FWCoreTest/options/TestOverlayTimingRandomMix.py",
+                "test/k4FWCoreTest/scripts/CheckOutputFiles.py",
+                "test/k4FWCoreTest/scripts/CreateOverlayBackgroundFiles.py",
+                "test/k4FWCoreTest/scripts/OverlayRandomMixConfig.py"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "The downstream build failure doesn't seem related to the changes - but I can't retrigger it."
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "Hi! I tried this implementation, and if I simply set `overlay.RandomMixBackgroundFiles = True`, the overlay works using just a single background file instead of 40:\r\n\r\n\r\n```\r\nfrom Gaudi.Configuration import INFO\r\n\r\nfrom k4FWCore import ApplicationMgr\r\nfrom k4FWCore import IOSvc\r\nfrom Configurables i\u2026"
+                },
+                {
+                    "author": "ArinaPon",
+                    "body": "Hello! while testing the implementation, I think I might have an idea why only one background file was being used across the bunch train.\r\n\r\n`fileIndices` is shuffled before the BX loop, but `k` starts again from `0` for every BX. With `NumberBackground = [1]`, every BX therefore selects:\r\n\r\n```cpp\r\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Thanks for the checks @andread3vita and the suggestion for a fix @ArinaPon.\r\nI ended up implementing it ~1:1, with the main difference that on wrap of the fileCursor I reshuffle so that there is no recurring pattern in overlaid background events."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Now that the code is rebased on main, I'd split this off in three PRs to make it a little easier to digest:\r\nPR1) based on main, will address @davidlange6's comments: https://github.com/key4hep/k4FWCore/pull/429\r\nPR2) based on PR1 (*this PR*), introduces the \"RandomMix\" features to the synchronous a\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "This PR currently ships without tests for the new behaviour. \r\nRather than decide unilaterally, since the shared fixtures involved touch a few unrelated tests, it seems worth agreeing on the shape first (@jmcarcell @tmadlener).\r\n\r\n### Three tests\r\n\r\n| Test | Covers |\r\n| --- | --- |\r\n| `OverlayTiming\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Sorry, didn't pay enough attention here apparently.\r\n\r\n> PR2) based on PR1 (this PR), introduces the \"RandomMix\" features to the synchronous algorithm\r\nPR3) based on PR2, will introduce the threading\r\n\r\nI think that would be a sensible split for this, which would also make it a bit easier to pin-poi\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> Re, the tests: I think the main things to check would be\r\n> \r\n> * ensure that the grouping and sampling (of files) is done properly\r\n> * assignment / relating of MCParticles works as expected (this might already be covered in [Simplify the background particle index mapping\u00a0#429](https://github.com\u2026"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "Hi, I have a question about reproducability when files contain more than one event.\r\nAt the moment it is ture for IPC background that typically files contain exactly one event, but based on conversations with one of the MDI experts, this will likely not stay the case, and is already not true for SR \u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> P.S.: I'll be also flagging two unrelated issues that Claude spotted when I was feeding it the code, but I have not verified that these are actual problems\r\n\r\nThanks these are known but pre-existent, so I factored them in a separate fix PR (https://github.com/key4hep/k4FWCore/pull/434).\r\n\r\nI'm loo\u2026"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "> Thanks these are known but pre-existent, so I factored them in a separate fix PR (https://github.com/key4hep/k4FWCore/pull/434).\r\n\r\nSorry, I did not realise they were known!\r\nWhat is the reason for not doing the fix straight-away here? This way we wouldn't merge a version with known issues. \r\n\r\n> \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> What is the reason for not doing the fix straight-away here? This way we wouldn't merge a version with known issues.\r\n\r\nThis PR is being split up into smaller, more manageable ones. The fixes will land first. This one will be the last one to be merged."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> > Thanks these are known but pre-existent, so I factored them in a separate fix PR (#434).\r\n> \r\n> Sorry, I did not realise they were known! What is the reason for not doing the fix straight-away here? This way we wouldn't merge a version with known issues.\r\n\r\nThe bug is on main, not a feature of t\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Rebased on main"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "No one complained. Merging."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I have a few comments (sorry for being late :smiley: but I never finished this in detail). I think maybe I can post the immediate ones. I would like to tag soon so other stuff can happen later."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "LCG / dev3 workflow is broken, presumably because https://github.com/AIDASoft/podio/pull/1031 is not yet present there(?).\r\n\r\nUnless there are more comments, I will merge this today."
+                }
+            ],
+            "comments_total": 17,
+            "reviews": [],
+            "reviews_total": 61
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 402,
+            "title": "[ALLEGRO] Add option for using Si detailed digitiser in ALLEGRO",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/402",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-10-22",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "Add option for using the new [VTXdigitizerDetailed](https://github.com/key4hep/k4RecTracker/blob/main/VTXdigiDetailed/include/VTXdigitizerDetailed.h) digitiser for silicon detectors in ALLEGRO.\r\n\r\nRequires https://github.com/key4hep/k4RecTracker/pull/117 (merged)\r\n\r\nThis makes it possible to technically use the new digitisers instead of DDPlanarDigi. The settings of the digitisers (e.g. threshold and smearing) have to be assessed and set to reasonable values.",
+            "diff": {
+                "additions": 226,
+                "deletions": 51,
+                "files": 1
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_common/run_digi_reco_common.py"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Tagging @armin-ilg and @BrieucF"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "Hi. Thanks for adding the `siDigitizer` option to choose the digitiser, this will be useful in the future when we add further digitisers (like the LUT-based one). \r\n\r\nConcerning the pitches which are also input to the projection-based digitiser: I think we need to decide which of these options we wa\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "I would be happy to have a single source of truth for the pitches (e.g. go for option 1). Parsing the compact files is a bit complicated as I saw in the past, but doable."
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "> I would be happy to have a single source of truth for the pitches (e.g. go for option 1). Parsing the compact files is a bit complicated as I saw in the past, but doable.\r\n\r\nThinking about it a bit more, there definitely should be the option to overwrite at least the resolutions, that's what was u\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "> > I would be happy to have a single source of truth for the pitches (e.g. go for option 1). Parsing the compact files is a bit complicated as I saw in the past, but doable.\r\n> \r\n> Thinking about it a bit more, there definitely should be the option to overwrite at least the resolutions, that's what\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "@armin-ilg now I read the pitches from the compact file. Effective resolutions for DDPlanarDigi can still be modified in FCC-config\r\n\r\nIn the log file with debug enabled I see the parsing being done correctly:\r\n```\r\nNumber of SiWr layers from DectDimensions.xml: 1\r\nInner vertex barrel number of laye\u2026"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "> @armin-ilg now I read the pitches from the compact file. Effective resolutions for DDPlanarDigi can still be modified in FCC-config\r\n> \r\n> In the log file with debug enabled I see the parsing being done correctly:\r\n> \r\n> ```\r\n> Number of SiWr layers from DectDimensions.xml: 1\r\n> Inner vertex barre\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "@armin-ilg I think I have resolved all your comments. Please let me know if you have follow-ups"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "> @armin-ilg I think I have resolved all your comments. Please let me know if you have follow-ups\r\n\r\nThank you, all good from my side!"
+                }
+            ],
+            "comments_total": 9,
+            "reviews": [],
+            "reviews_total": 9
+        },
         {
             "org": "key4hep",
             "repo": "k4Reco",
@@ -110,6 +331,362 @@
             "reviews_total": 0
         },
         {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 264,
+            "title": "perf(dashboard): download only the run files the view on screen reads",
+            "url": "https://github.com/key4hep/k4Bench/pull/264",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-21",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement\n\n\n___\n\n### **Description**\n- Download only run files each view reads\n  - `ensure_run_artifacts` fetches pattern-matched files into a manifest-tracked, locked `subsets/` cache\n\n- Load run and window data lazily per view\n  - `RunData`, `PageContext` and `TrendWindow` fetch artifacts on first access\n\n- Key cached loads by artifact files present\n\n- Cover lazy downloads with AppTest and unit tests\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  view[\"Dashboard view\"] -- \"asks for its artifacts\" --> ctx[\"PageContext / RunData\"]\n  ctx -- \"files() / run_dirs()\" --> rc[\"remote_cache.cached_fetch_run_files\"]\n  rc -- \"artifact patterns\" --> rem[\"k4bench.remote.ensure_run_artifacts\"]\n  rem -- \"download missing files only\" --> eos[\"WebE\u2026",
+            "diff": {
+                "additions": 1437,
+                "deletions": 297,
+                "files": 31
+            },
+            "files": [
+                "dashboard/data.py",
+                "dashboard/reco/_sources.py",
+                "dashboard/reco/breakdown.py",
+                "dashboard/reco/dataflow.py",
+                "dashboard/reco/efficiency.py",
+                "dashboard/reco/memory.py",
+                "dashboard/reco/overview.py",
+                "dashboard/reco/page.py",
+                "dashboard/remote_cache.py",
+                "dashboard/section_dispatch.py",
+                "dashboard/sidebar.py",
+                "dashboard/suite_page.py",
+                "dashboard/tabs/_regression_trend.py",
+                "dashboard/tabs/event_memory.py",
+                "dashboard/tabs/event_timing.py",
+                "dashboard/tabs/logs.py",
+                "dashboard/tabs/machine_info.py",
+                "dashboard/tabs/region_timing/__init__.py",
+                "dashboard/tabs/trends.py",
+                "docs/architecture/data-flow.md",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/artifacts.py",
+                "k4bench/remote.py",
+                "tests/unit/test_dashboard_lazy_downloads.py",
+                "tests/unit/test_dashboard_logs.py",
+                "tests/unit/test_dashboard_reco_apptest.py",
+                "tests/unit/test_dashboard_remote_cache.py",
+                "tests/unit/test_dashboard_run_links_apptest.py",
+                "tests/unit/test_dashboard_section_dispatch.py",
+                "tests/unit/test_dashboard_sidebar.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/c689f3ce3bbfdc89084a260c6a922fa8c8698e66)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 43,153 in / 9 out / 43,162 total\n- Time cost: 911.3s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/264#issuecomment-6327649998)** updated to latest commit https://github.com/key4hep/k4Bench/commit/0999982732dc08162069cfa88fa253e557585a19"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 43,128 in / 9 out / 43,137 total\n- Time cost: 583.8s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/264#issuecomment-6327649998)** updated to latest commit https://github.com/key4hep/k4Bench/commit/c689f3ce3bbfdc89084a260c6a922fa8c8698e66"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 44,669 in / 9 out / 44,678 total\n- Time cost: 465.5s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/264?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 7,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 263,
+            "title": "feat(dashboard): pin the exact run in links",
+            "url": "https://github.com/key4hep/k4Bench/pull/263",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-21",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Pin the exact run in dashboard URLs\n\n- New `url_params` module; Run selector re-reads stale listings\n\n- Offer \"every run\" history mode per release\n\n- Category x-axis keeps same-night runs apart\n\n- Harden stalled or missing EOS listing handling\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  link[\"Copied or mailed link\"] -- \"?run= ?releases= ?history=\" --> params[\"url_params module\"]\n  params --> sidebar[\"Sidebar: Detector to Run selectors\"]\n  sidebar -- \"re-read stale listings\" --> store[\"WebEOS run store\"]\n  sidebar --> pinned[\"Pinned exact run downloaded\"]\n  sidebar -- \"Runs per release: latest or every\" --> hist[\"History charts: one column per run\"]\n```\n\n\n\n<details> <summary><h3> File \u2026",
+            "diff": {
+                "additions": 1703,
+                "deletions": 243,
+                "files": 35
+            },
+            "files": [
+                "dashboard/data.py",
+                "dashboard/reco/breakdown.py",
+                "dashboard/reco/efficiency.py",
+                "dashboard/reco/memory.py",
+                "dashboard/reco/page.py",
+                "dashboard/remote_cache.py",
+                "dashboard/section_dispatch.py",
+                "dashboard/sections.py",
+                "dashboard/sidebar.py",
+                "dashboard/sim_page.py",
+                "dashboard/suite_page.py",
+                "dashboard/tabs/_historical_trends.py",
+                "dashboard/tabs/event_memory.py",
+                "dashboard/tabs/event_size.py",
+                "dashboard/tabs/event_timing.py",
+                "dashboard/tabs/stack_changes.py",
+                "dashboard/ui_chrome.py",
+                "dashboard/url_params.py",
+                "docs/developer-guide/repository-layout.md",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/analysis/plots/phases.py",
+                "k4bench/labels.py",
+                "k4bench/layout.py",
+                "k4bench/remote.py",
+                "tests/unit/test_analysis_plots_phases.py",
+                "tests/unit/test_dashboard_reco_apptest.py",
+                "tests/unit/test_dashboard_remote_cache.py",
+                "tests/unit/test_dashboard_run_links_apptest.py",
+                "tests/unit/test_dashboard_scope_note.py",
+                "tests/unit/test_dashboard_sidebar.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": "### :x: 1 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 2868 | 1 | 2867 | 34 |\n<details><summary>View the top 1 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_links.py::test_link_resolves[https://github.c\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/f9cf1e0120da4540d1b9e7f35cb3162b42f3d3b3)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 41,211 in / 420 out / 41,631 total\n- Time cost: 1379.9s\n- AI calls: 1\n\n</detai\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 42,068 in / 428 out / 42,496 total\n- Time cost: 599.8s\n- AI calls: 1\n\n</detail\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 45,514 in / 9 out / 45,523 total\n- Time cost: 585.9s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 49,941 in / 428 out / 50,369 total\n- Time cost: 717.9s\n- AI calls: 1\n\n</detail\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/263#issuecomment-6320993595)** updated to latest commit https://github.com/key4hep/k4Bench/commit/f9cf1e0120da4540d1b9e7f35cb3162b42f3d3b3"
+                }
+            ],
+            "comments_total": 7,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 262,
+            "title": "fix(dashboard): describe the reco Efficiency counters without IPC verdict",
+            "url": "https://github.com/key4hep/k4Bench/pull/262",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-21",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Documentation\n\n\n___\n\n### **Description**\n- Drop shaded low-IPC \"stall\" band from efficiency chart\n\n- Reword help and docstrings to describe counters, not diagnose\n\n- Clarify instructions/cycles are per-calling-thread, user-space counts\n\n- Explain allocation size metrics as churn, not retained heap\n\n- Add test asserting low IPC renders without verdict shapes\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"plots/efficiency.py\"] -- \"remove STALL_IPC band\" --> B[\"Efficiency chart\"]\n  C[\"dashboard/reco/efficiency.py\"] -- \"help text without verdicts\" --> B\n  D[\"components.py & efficiency.py docstrings\"] -- \"neutral counter semantics\" --> B\n  E[\"dashboard.md\"] -- \"user guide reworded\" --> B\n```\n\n\n\n<details> <summary><h3> File Walk\u2026",
+            "diff": {
+                "additions": 89,
+                "deletions": 65,
+                "files": 6
+            },
+            "files": [
+                "dashboard/reco/efficiency.py",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/analysis/components.py",
+                "k4bench/analysis/efficiency.py",
+                "k4bench/analysis/plots/efficiency.py",
+                "tests/unit/test_analysis_plots_efficiency.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 8,812 in / 9 out / 8,821 total\n- Time cost: 79.6s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/262?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 261,
+            "title": "fix(dashboard): read each reco configuration's component file on its own",
+            "url": "https://github.com/key4hep/k4Bench/pull/261",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-21",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Tests\n\n\n___\n\n### **Description**\n- Read each `_components.json` independently, isolating malformed files\n  - New `load_each_component_timing`/`load_each_component_heap` return per-label unreadable reasons\n\n- Dashboard warns naming each unreadable configuration and why\n  - `RunData.unreadable_components`, filtered to successful configs only\n\n- Trend builders skip only the broken configuration, not the run\n\n- Add unit and app tests; document the behavior\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  loader[\"loader.py: per-file load_each_component_timing/heap with reasons\"] --> data[\"data.py: RunData.unreadable_components\"]\n  loader --> trend[\"trend.py: builders skip only broken config\"]\n  data --> dispatch[\"section_dispatch.py\u2026",
+            "diff": {
+                "additions": 330,
+                "deletions": 88,
+                "files": 12
+            },
+            "files": [
+                "dashboard/data.py",
+                "dashboard/reco/breakdown.py",
+                "dashboard/reco/dataflow.py",
+                "dashboard/reco/efficiency.py",
+                "dashboard/reco/page.py",
+                "dashboard/section_dispatch.py",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/analysis/loader.py",
+                "k4bench/analysis/trend.py",
+                "tests/unit/test_analysis_components.py",
+                "tests/unit/test_dashboard_reco_apptest.py",
+                "tests/unit/test_trend_builders.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 14,697 in / 9 out / 14,706 total\n- Time cost: 365.3s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/261?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 260,
+            "title": "fix(dashboard): time Data Flow per event without the warm-up and label  Efficiency's time as per event run in",
+            "url": "https://github.com/key4hep/k4Bench/pull/260",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-21",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Tests\n\n\n___\n\n### **Description**\n- Exclude warm-up event from Data Flow per-event times\n\n- Add shared `event_loop_time` helper with coverage columns\n\n- Label Efficiency metrics as per event it ran in\n\n- Show skipped-event counts in Efficiency hover text\n\n- Add unit tests for warm-up and skipped events\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  components[\"k4bench/analysis/components.py: event_loop_time, WARM_UP_EVENT\"] --> dataflow[\"dashboard/reco/dataflow.py: seconds per event, warm-up excluded\"]\n  components --> efficiency[\"k4bench/analysis/efficiency.py: seconds_when_run, events columns\"]\n  efficiency --> plots[\"k4bench/analysis/plots/efficiency.py: per-event-it-ran-in labels, coverage hover\"]\n```\n\n\n\n<details> <summary\u2026",
+            "diff": {
+                "additions": 256,
+                "deletions": 62,
+                "files": 11
+            },
+            "files": [
+                "dashboard/reco/dataflow.py",
+                "dashboard/reco/efficiency.py",
+                "dashboard/tabs/event_timing.py",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/analysis/components.py",
+                "k4bench/analysis/efficiency.py",
+                "k4bench/analysis/plots/dataflow.py",
+                "k4bench/analysis/plots/efficiency.py",
+                "tests/unit/test_analysis_components.py",
+                "tests/unit/test_analysis_plots_efficiency.py",
+                "tests/unit/test_dashboard_reco_apptest.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/560404e1e8109635c479f63663fc7d3eff3b41dd)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 13,531 in / 9 out / 13,540 total\n- Time cost: 307.2s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 14,150 in / 9 out / 14,159 total\n- Time cost: 446.0s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/260#issuecomment-6315979057)** updated to latest commit https://github.com/key4hep/k4Bench/commit/560404e1e8109635c479f63663fc7d3eff3b41dd"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/260?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 259,
+            "title": "fix(dashboard): draw the reco Memory typical-event history beside the whole job's median instead of summing component medians into Other",
+            "url": "https://github.com/key4hep/k4Bench/pull/259",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-21",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Tests, Documentation\n\n\n___\n\n### **Description**\n- Draw typical-event medians beside whole-job median\n  - Remove `typical_mb` from additive `_ADDITIVE` metrics\n  - Add `Whole-job median` line from per-event totals\n\n- Stop summing non-additive component medians into Other\n\n- Add rotating-heap regression test for median semantics\n\n- Update dashboard guide explaining medians don't add up\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  rows[\"Per-night heap rows\"] -- \"sum components per event, then median\" --> whole[\"Whole-job median line in ink\"]\n  rows -- \"median per component, as-is\" --> comps[\"Component lines\"]\n  whole --> chart[\"Typical event history chart\"]\n  comps -- \"no Other line, rest left out\" --> chart\n```\n\n\n\n<details> <\u2026",
+            "diff": {
+                "additions": 125,
+                "deletions": 20,
+                "files": 3
+            },
+            "files": [
+                "dashboard/reco/memory.py",
+                "docs/user-guide/features/dashboard.md",
+                "tests/unit/test_dashboard_reco_apptest.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/3d1662d5e566cf8564bbcc82e58ba881e0e053ae)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 8,527 in / 9 out / 8,536 total\n- Time cost: 251.2s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/259#issuecomment-6315503528)** updated to latest commit https://github.com/key4hep/k4Bench/commit/3d1662d5e566cf8564bbcc82e58ba881e0e053ae"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 8,560 in / 9 out / 8,569 total\n- Time cost: 303.4s\n- AI calls: 1\n\n</details>"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/259?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
             "org": "hep-fcc",
             "repo": "FCCDIRAC",
             "num": 19,
@@ -136,6 +713,40 @@
             ],
             "comments": [],
             "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 407,
+            "title": "[IDEA] Read the GGTF model from --trackingModel, download only if missing",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/407",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-21",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Closes #406.\n\n`IDEA_o1_v03/run_digi_reco.py` downloaded the GGTF model with `wget -O` every time the options file was read, so every `k4run` needed network access and fetched ~65 MB again, even when the model was already there. That download also lands inside the time k4Bench measures for the IDEA reconstruction benchmarks.\n\nThis PR:\n\n- adds `--trackingModel` for the path to the model. The default is still `SimpleGatrIDEAv3o1.onnx` in the run directory, so nothing changes for existing workflows.\n- downloads the model only if that file doesn't exist. The download goes to a temporary file that is renamed once it is complete, so a failed download doesn't leave a broken model behind for the next run.\n- takes the model from `fccsw.web.cern.ch`, the same file the README and `ctest_sim_digi_reco.\u2026",
+            "diff": {
+                "additions": 12,
+                "deletions": 5,
+                "files": 2
+            },
+            "files": [
+                "FCCee/FullSim/IDEA/IDEA_o1_v03/README.md",
+                "FCCee/FullSim/IDEA/IDEA_o1_v03/run_digi_reco.py"
+            ],
+            "comments": [
+                {
+                    "author": "andread3vita",
+                    "body": "I do not have anything against this PR, I think it is good to use the same \"convention\" across ALLEGRO and IDEA"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "Ok, taking the liberty to merge this as its a rather trivial change..."
+                }
+            ],
+            "comments_total": 2,
             "reviews": [],
             "reviews_total": 0
         },
@@ -280,6 +891,56 @@
                 "backend/app/storage/database_modules/data_import_module.py",
                 "backend/app/storage/json_data_model.py",
                 "frontend/components/EditModal.vue"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "mc-productions-tutorials",
+            "num": 5,
+            "title": "Link the production DaMI and clarify the validation in the DaMI tutorial",
+            "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/5",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-21",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Adds the production DaMI (https://fcc-dami.web.cern.ch/) to the links, keeps FCC Physics Events as the former website, and says that there is no common validation procedure yet.",
+            "diff": {
+                "additions": 3,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "DaMI/README.md"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "mc-productions-tutorials",
+            "num": 4,
+            "title": "Link existing setup docs and the FCC Production Manager Guide",
+            "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/4",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-21",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Stopgap Setup section with links to the existing documentation (CERN CA, iLCDirac registration and client, FCC VO tutorial, fcc-auth), until the full version is ready. Also links the FCC Production Manager Guide in the iLCDirac tutorial.",
+            "diff": {
+                "additions": 22,
+                "deletions": 11,
+                "files": 3
+            },
+            "files": [
+                "Setup/README.md",
+                "iLCDirac/production-config.md",
+                "iLCDirac/sources.md"
             ],
             "comments": [],
             "comments_total": 0,
@@ -2791,73 +3452,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-doc",
-            "num": 170,
-            "title": "Bump actions/upload-artifact from 7.0.1 to 7.0.2",
-            "url": "https://github.com/key4hep/key4hep-doc/pull/170",
-            "author": "dependabot",
-            "mergedAt": "2026-10-15",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [actions/upload-artifact](https://github.com/actions/upload-artifact) from 7.0.1 to 7.0.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/upload-artifact/releases\">actions/upload-artifact's releases</a>.</em></p>\n<blockquote>\n<h2>v7.0.2</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Improves artifact download retries when the service returns HTTP 429 (rate limiting), including honoring valid Retry-After headers.</li>\n<li>Updates <code>@\u200bactions/artifact</code> to v6.3.1.</li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/tunc-d\"><code>@\u200btunc-d</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/upload-artifact/pull/821\">actions/upload-artifact#821</a></li>\n</ul>\n<p><strong>Full Chan\u2026",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                ".github/workflows/generate_overview.yml",
-                ".github/workflows/pr-build.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-10-15 06:43 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-doc",
-            "num": 169,
-            "title": "Bump actions/download-artifact from 8.0.1 to 8.0.2",
-            "url": "https://github.com/key4hep/key4hep-doc/pull/169",
-            "author": "dependabot",
-            "mergedAt": "2026-10-15",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [actions/download-artifact](https://github.com/actions/download-artifact) from 8.0.1 to 8.0.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/download-artifact/releases\">actions/download-artifact's releases</a>.</em></p>\n<blockquote>\n<h2>v8.0.2</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Update the readme by <a href=\"https://github.com/danwkennedy\"><code>@\u200bdanwkennedy</code></a> in <a href=\"https://redirect.github.com/actions/download-artifact/pull/473\">actions/download-artifact#473</a></li>\n<li>Improves artifact download retries when the service returns HTTP 429 (rate limiting), including honoring valid Retry-After headers.</li>\n<li>Update <code>@\u200bactions/artifact</code> to 6.3.1 by <a href=\"https://github.com/tunc-d\"><code>@\u200btunc-d</cod\u2026",
-            "diff": {
-                "additions": 5,
-                "deletions": 5,
-                "files": 3
-            },
-            "files": [
-                ".github/workflows/build.yml",
-                ".github/workflows/pr-deploy.yml",
-                ".github/workflows/publish.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-10-15 06:42 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4Gen",
             "num": 62,
             "title": "make ordering match hepmc",
@@ -2909,36 +3503,6 @@
             "comments_total": 7,
             "reviews": [],
             "reviews_total": 7
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Gen",
-            "num": 66,
-            "title": "Fix the energy and time of the particles in EDMToHepMCConverter",
-            "url": "https://github.com/key4hep/k4Gen/pull/66",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-15",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- `EDMToHepMCConverter`: fix the particle energy (was set to the mass) and the vertex time (was divided by c instead of multiplied)\r\n- `FlatSmearVertex`: fix the time offset for events shifted along the beam (was dz/c instead of dz)\r\n\r\nENDRELEASENOTES\r\n\r\nTwo small bugs I found while looking at #61. HepMC3 stores the vertex time as c*t in length units (its unit conversion [scales t like x, y, z](https://gitlab.cern.ch/hepmc/HepMC3/-/blob/3.3.1/include/HepMC3/Units.h#L94-107), and DD4hep's reader [divides by c](https://github.com/AIDASoft/DD4hep/blob/ba3ad338feb2c61e318b1f71c71126a34b7982c5/DDG4/hepmc/HepMC3EventReader.cpp#L103)), while EDM4hep's `MCParticle::time` [is in ns](https://github.com/key4hep/EDM4hep/blob/682d691167e2b31f8489a9b1f58fa24a2698c517/edm4hep.yaml#L249\u2026",
-            "diff": {
-                "additions": 7,
-                "deletions": 4,
-                "files": 2
-            },
-            "files": [
-                "k4Gen/src/components/EDMToHepMCConverter.cpp",
-                "k4Gen/src/components/FlatSmearVertex.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "I think I'm merging and then following up later on this and maybe another related issue"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 4
         },
         {
             "org": "key4hep",
@@ -3144,73 +3708,6 @@
         },
         {
             "org": "hep-fcc",
-            "repo": "EventProducer",
-            "num": 312,
-            "title": "missing xsec for ecm125 processes",
-            "url": "https://github.com/HEP-FCC/EventProducer/pull/312",
-            "author": "portalesHEP",
-            "mergedAt": "2026-10-15",
-            "mergedBy": "portalesHEP",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "config/param_FCCee.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCC-config",
-            "num": 380,
-            "title": "[ILD] Update the ILD README",
-            "url": "https://github.com/HEP-FCC/FCC-config/pull/380",
-            "author": "Victor-Schwan",
-            "mergedAt": "2026-10-15",
-            "mergedBy": "BrieucF",
-            "labels": [],
-            "body": "- Adds a contact mail address for questions\r\n- Improves the use of markdown syntax",
-            "diff": {
-                "additions": 9,
-                "deletions": 4,
-                "files": 1
-            },
-            "files": [
-                "FCCee/FullSim/ILD_FCCee/README.md"
-            ],
-            "comments": [
-                {
-                    "author": "Victor-Schwan",
-                    "body": "Requested in a discussion of iLCSoft/ILDConfig#197"
-                },
-                {
-                    "author": "Victor-Schwan",
-                    "body": "fyi @tmadlener"
-                },
-                {
-                    "author": "Victor-Schwan",
-                    "body": "@BrieucF is this PR good to be merged or do you wish for any changes?"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "APPROVED",
-                    "body": "Thanks :)"
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "hep-fcc",
             "repo": "ALLEGRO",
             "num": 62,
             "title": "add test for calculation of sampling fractions in ecal barrel",
@@ -3252,364 +3749,6 @@
                 }
             ],
             "comments_total": 4,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 131,
-            "title": "Fix the orientation in the SET sensor axes for the ILD blueprint",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/131",
-            "author": "tmadlener",
-            "mergedAt": "2026-10-14",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Make sure that the `SET` sensor axes for the ILD blueprints are properly oriented to make them have a proper orthonormal base in the ACTS geometry\n\nENDRELEASENOTES\n\nLifted from #124, details for why: https://github.com/key4hep/k4ActsTracking/pull/124#discussion_r4253448783",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "k4ActsTracking/src/components/DD4hepBlueprintConstruction.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Ubunut24 nightlies failures are unrelated to the changes here."
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 32,
-            "title": "Add LCContent to release commit checks",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/32",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-14",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 6,
-                "deletions": 4,
-                "files": 1
-            },
-            "files": [
-                "scripts/check-commits-after-tag.sh"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 112,
-            "title": "[TrackFitter] Add reset of the global TGeoManager navigator before fitting each track",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/112",
-            "author": "andread3vita",
-            "mergedAt": "2026-10-14",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Reset the global TGeoManager navigator to a canonical state before each fit. The navigator state is process-global and is modified by material lookups during track extrapolation. Without this reset, the material assigned to points located on geometry boundaries may depend on the previously fitted track, potentially from an earlier event, making the fit results dependent on processing order.\r\n- Remove isPositiveSemiDefinite from utils.\r\n\r\nENDRELEASENOTES\r\n\r\nDear All,\r\nI open this PR to introduce a reset of the TGeoManager before each fit. Thank you!\r\n\r\nCheers,\r\nAndrea",
-            "diff": {
-                "additions": 60,
-                "deletions": 41,
-                "files": 5
-            },
-            "files": [
-                "Tracking/components/GenfitTrackFitter.cpp",
-                "Tracking/include/genfit_interfaces/GenfitTrack.h",
-                "Tracking/include/utils.h",
-                "Tracking/src/genfit_interfaces/GenfitTrack.cpp",
-                "Tracking/src/utils.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "This reminds me a lot of https://github.com/AIDASoft/DD4hep/pull/1414/changes. There is `DoBackupState` and `DoRestoreState` to do what you want, otherwise you are modifying it also for anything that runs after"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "> This reminds me a lot of https://github.com/AIDASoft/DD4hep/pull/1414/changes. There is `DoBackupState` and `DoRestoreState` to do what you want, otherwise you are modifying it also for anything that runs after\r\n\r\nThank you! I have modified the code using DoBackupState and DoRestoreState"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "I followed up on the backup/restore suggestion and ended up changing the approach slightly. The reason is that `DoBackupState()`/`DoRestoreState()` alone don't restore the navigator. `TGeoNavigator::DoBackupState()` calls `SetState(fLevel, 0, fNmany, fCurrentOverlapping) `without a point, so only th\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 12
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 229,
-            "title": "refactor(layout): file runs, reports and benchmark configs by suite and detector concept",
-            "url": "https://github.com/key4hep/k4Bench/pull/229",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-14",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement\n\n\n___\n\n### **Description**\n- Reorganize EOS store and configs by suite/concept\n  - runs/, reports/, reproducers/, inputs/ split per suite\n  - configs live at {suite}/{concept}/{detector}.yml\n\n- Thread suite through remote readers and dashboard\n\n- Record suite in run_info; upload via run_dir_of\n\n- Abort report upload when layout paths unresolvable\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  configs[\"configs at {suite}/{concept}/{detector}.yml\"] -- \"list_benchmarks.py\" --> jobs[\"nightly jobs recording suite in run_info.json\"]\n  jobs -- \"run_dir_of\" --> store[\"EOS store: runs/reports/reproducers/inputs per suite\"]\n  store -- \"suite-aware readers\" --> readers[\"dashboard, regression report, blame\"]\n```\n\n\n\n<details> <summary>\u2026",
-            "diff": {
-                "additions": 1548,
-                "deletions": 1424,
-                "files": 75
-            },
-            "files": [
-                ".github/ai-review-instructions.md",
-                ".github/benchmarks/ALLEGRO_o1_v04.yml",
-                ".github/benchmarks/ALLEGRO_o2_v01.yml",
-                ".github/benchmarks/CLD_o2_v09.yml",
-                ".github/benchmarks/CLD_o2_v09_reco.yml",
-                ".github/benchmarks/CLD_o3_v01.yml",
-                ".github/benchmarks/IDEA_o1_v04.yml",
-                ".github/benchmarks/IDEA_o2_v01.yml",
-                ".github/benchmarks/ILD_FCCee_v01.yml",
-                ".github/benchmarks/ILD_FCCee_v02.yml",
-                ".github/benchmarks/SiD.yml",
-                ".github/benchmarks/reco/CLD/CLD_o2_v09.yml",
-                ".github/benchmarks/sim/ALLEGRO/ALLEGRO_o1_v04.yml",
-                ".github/benchmarks/sim/ALLEGRO/ALLEGRO_o2_v01.yml",
-                ".github/benchmarks/sim/CLD/CLD_o2_v09.yml",
-                ".github/benchmarks/sim/CLD/CLD_o3_v01.yml",
-                ".github/benchmarks/sim/IDEA/IDEA_o1_v04.yml",
-                ".github/benchmarks/sim/IDEA/IDEA_o2_v01.yml",
-                ".github/benchmarks/sim/ILD/ILD_FCCee_v01.yml",
-                ".github/benchmarks/sim/ILD/ILD_FCCee_v02.yml",
-                ".github/benchmarks/sim/SiD/SiD.yml",
-                ".github/scripts/blame_comment.py",
-                ".github/scripts/blame_preview.py",
-                ".github/scripts/blame_report.py",
-                ".github/scripts/bump_detectors.py",
-                ".github/scripts/list_benchmarks.py",
-                ".github/scripts/nightly_benchmark.sh",
-                ".github/scripts/regression_report.sh",
-                ".github/scripts/run_info.py",
-                ".github/workflows/benchmark-detector.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 51829da -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/229?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 91,033 in / 9 out / 91,042 total\n- Time cost: 436.0s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/2c3dc53c5c6c5e5b4b59425dc5abc766581f7c46)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/229#issuecomment-6168481388)** updated to latest commit https://github.com/key4hep/k4Bench/commit/79f89e508609d3bfce963b5aac4e4d591b0def18"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 91,186 in / 458 out / 91,644 total\n- Time cost: 805.5s\n- AI calls: 1\n\n</detail\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/229#issuecomment-6168481388)** updated to latest commit https://github.com/key4hep/k4Bench/commit/2c3dc53c5c6c5e5b4b59425dc5abc766581f7c46"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 208,050 in / 525 out / 208,575 total\n- Time cost: 905.1s\n- AI calls: 2\n\n</deta\u2026"
-                }
-            ],
-            "comments_total": 8,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 228,
-            "title": "feat(blame): limit candidates to packages the window's runs loaded",
-            "url": "https://github.com/key4hep/k4Bench/pull/228",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-14",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Limit blame candidates to packages runs loaded\n  - Split builder into night, ranking, runs modules\n  - Record `k4h_unmappable_packages` for ddsim captures\n  - Keep all candidates when loaded provenance missing\n\n- Add unit and integration coverage for filtering\n\n- Document new provenance field and filtering semantics\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  capture[\"capture_stack records unmappable HEAD packages\"] --> snapshot[\"StackSnapshot with loaded and unmappable sets\"]\n  snapshot --> loaded[\"_loaded_packages per rank group\"]\n  diff[\"release package diff\"] --> filter[\"entry_for drops unloaded changes\"]\n  loaded --> filter\n  filter --> rank[\"fewer candidates resolved and ranked\"\u2026",
-            "diff": {
-                "additions": 978,
-                "deletions": 672,
-                "files": 11
-            },
-            "files": [
-                ".github/scripts/blame_comment.py",
-                "docs/reference/file-formats.md",
-                "k4bench/blame/builder/__init__.py",
-                "k4bench/blame/builder/night.py",
-                "k4bench/blame/builder/ranking.py",
-                "k4bench/blame/builder/runs.py",
-                "k4bench/provenance/diff.py",
-                "k4bench/provenance/stack.py",
-                "tests/integration/test_regression_report.py",
-                "tests/unit/test_blame_builder.py",
-                "tests/unit/test_stack_capture.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/d160060e577a6fedb34dad5b081bbd9ecaf60ce8)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 26,352 in / 9 out / 26,361 total\n- Time cost: 466.1s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/228#issuecomment-6165775463)** updated to latest commit https://github.com/key4hep/k4Bench/commit/8e21152c415d7fa8d3d68c0c56fd1bd1abffdc99"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 8e21152 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/228#issuecomment-6165775463)** updated to latest commit https://github.com/key4hep/k4Bench/commit/d160060e577a6fedb34dad5b081bbd9ecaf60ce8"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 29,333 in / 9 out / 29,342 total\n- Time cost: 899.3s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/228?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 7,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1699,
-            "title": "add symmetry=0 for barrel and endcap cylindrical surfaces",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1699",
-            "author": "giovannimarchiori",
-            "mergedAt": "2026-10-14",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- DDRec: Allow using cylindrical surfaces for calo barrel and calo endcap surface plugins\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 95,
-                "deletions": 6,
-                "files": 2
-            },
-            "files": [
-                "DDDetectors/src/CaloFaceBarrel_surfaces.cpp",
-                "DDDetectors/src/CaloFaceEndcap_surfaces.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Tagging @jmcarcell"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200220h 25m 43s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 315af0fd.\n\n[test-results]:data:application/gzip;base64,H4sIABaWz2oC/12MSw7CIBQAr9KwdtHnKwJexlA+yYttMRRWxruLpLbocmaSeTJPk1vZtQN56tiaKR1kc9SJwlJYIB+wqFLTp6PgX7qt2Zh/da\u2026"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 4
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1690,
-            "title": "Preserve state changes on hits when steps are filtered out",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1690",
-            "author": "trholmes",
-            "mergedAt": "2026-10-14",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "This is a proposed long-term fix for the problem described in this ticket (and several tickets):\r\nhttps://github.com/key4hep/k4geo/issues/538\r\n\r\nIn many scenarios where the step-size was the same order as sensor thicknesses, we'd see short steps that end with an exit of the volume but don't deposit enough energy to make it past the 1 keV (or occasionally even the 0 energy) filter. The step would then be removed by the filter and the hit wouldn't close, continuing until it reached another sensor. The resulting hit would take on the average position between the two sensors, creating hit locations outside the sensor (and sometimes appearing in a stripe at z=0 when the two sensors are in either endcap).\r\n\r\nThis PR creates a new function that retains state changes when a step is filtered out. T\u2026",
-            "diff": {
-                "additions": 76,
-                "deletions": 4,
-                "files": 5
-            },
-            "files": [
-                "DDG4/include/DDG4/Geant4SensDetAction.h",
-                "DDG4/include/DDG4/Geant4SensDetAction.inl",
-                "DDG4/plugins/Geant4SensDet.cpp",
-                "DDG4/plugins/Geant4TrackerWeightedSD.cpp",
-                "DDG4/src/Geant4SensDetAction.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200218h 40m 17s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 961f2fc8.\n\n[test-results]:data:application/gzip;base64,H4sIAN+Bz2oC/12MSw7CIBQAr9KwdgEt5eNlzBMeCbEfw2fVeHeR1BZdzkwyG3F+wkiuHVOXjsTs00k2B0h+XQoL2TNZVKnp0wc5fukWszH/6u\u2026"
-                },
-                {
-                    "author": "trholmes",
-                    "body": "In principle, but I don't think this happens -- you start a new step when you enter a new volume, and it continues according to the step length prescribed by the physics model. It's only on exit that you get these odd truncated ones because the step length happens to be slightly shorter than the pat\u2026"
-                },
-                {
-                    "author": "trholmes",
-                    "body": "Are there any outstanding issues here, or can we go ahead with the mere?"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [
-                {
-                    "author": "andresailer",
-                    "state": "CHANGES_REQUESTED",
-                    "body": "Interesting solution. There are still issues if the initial step is filtered, or both individual steps are filtered. You still get wrong deposits or no deposits, right?"
-                },
-                {
-                    "author": "andresailer",
-                    "state": "APPROVED",
-                    "body": "Thanks! Just wanted to sleep on it another day."
-                }
-            ],
-            "reviews_total": 6
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1698,
-            "title": "Pass nMax to VolSurface::getLines in Surface::getLines",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1698",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-14",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- DDRec: `Surface::getLines(nMax)` now passes `nMax` to `VolSurface::getLines`, so that custom surface implementations receive the requested number of lines instead of always the default (100)\r\n\r\nENDRELEASENOTES\r\n\r\nFound in https://github.com/key4hep/k4geo/pull/671/changes",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "DDRec/src/Surface.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200220h 3m 37s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 26fe4a63.\n\n[test-results]:data:application/gzip;base64,H4sIAM9hzmoC/13MSw7CIBSF4a00jB0UuBTqZsyVR0Jsi6EwMu5dSmqLDr//JOdFnJ/sSq4dVZeOrNmnUyZHTD4sxZIxKksqa9p2LsVXtzVr/Z8\u2026"
-                }
-            ],
-            "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
         }
