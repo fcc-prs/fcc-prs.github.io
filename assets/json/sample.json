@@ -18,7 +18,7 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-10-14",
             "updatedAt": "2026-10-21",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +29,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-10-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +40,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-21",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -51,7 +51,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-09-04",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +62,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +73,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +84,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -271,7 +271,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
             "updatedAt": "2026-10-22",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -282,7 +282,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -420,23 +420,12 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 109,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
             "num": 108,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking</a>",
             "author": "mlarson02",
             "createdAt": "2026-09-29",
-            "updatedAt": "2026-10-19",
-            "mergeOk": "no",
+            "updatedAt": "2026-10-23",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -446,8 +435,19 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/132'>Adding Seed Deduplication</a>",
             "author": "mlarson02",
             "createdAt": "2026-10-17",
-            "updatedAt": "2026-10-19",
-            "mergeOk": "no",
+            "updatedAt": "2026-10-23",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 109,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-10-21",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -574,10 +574,10 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 118,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
-            "author": "Debottam",
-            "createdAt": "2026-10-21",
+            "num": 119,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
+            "author": "andread3vita",
+            "createdAt": "2026-10-23",
             "updatedAt": "2026-10-23",
             "mergeOk": "yes",
             "labels": "",
@@ -585,10 +585,10 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 119,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
-            "author": "andread3vita",
-            "createdAt": "2026-10-23",
+            "num": 118,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
+            "author": "Debottam",
+            "createdAt": "2026-10-21",
             "updatedAt": "2026-10-23",
             "mergeOk": "yes",
             "labels": "",
@@ -788,6 +788,17 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-16",
             "updatedAt": "2024-07-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Reco",
+            "num": 74,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/74'>Store the time resolution as the hit time error in DDPlanarDigi</a>",
+            "author": "jburzy",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-10-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1044,17 +1055,6 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 272,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/272'>feat(dashboard): open one event of reco Correlations to what each algorithm cost in it</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1635,7 +1635,7 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1646,17 +1646,6 @@
             "author": "davidlange6",
             "createdAt": "2026-10-22",
             "updatedAt": "2026-10-22",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 291,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/291'>More efficient data storage for TopoCaloNoisyCells.</a>",
-            "author": "scott-snyder",
-            "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1679,7 +1668,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1806,45 +1795,12 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-drs",
-            "num": 124,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/124'>Update module modernc.org/sqlite to v1.61.0</a>",
-            "author": "renovate",
-            "createdAt": "2026-10-21",
-            "updatedAt": "2026-10-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 123,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/123'>Rename Production IDs to Transformation IDs</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-10-21",
-            "updatedAt": "2026-10-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
             "num": 117,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/117'>Edit request fields individually in the modal and validate only on submit</a>",
             "author": "kjvbrt",
             "createdAt": "2026-10-09",
             "updatedAt": "2026-10-09",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 116,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/116'>Add in-app Help page with requester and coordinator guides</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-10-08",
-            "updatedAt": "2026-10-08",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1910,7 +1866,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1932,7 +1888,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1943,7 +1899,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1954,7 +1910,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1965,7 +1921,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1976,7 +1932,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-12",
             "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1987,7 +1943,7 @@
             "author": "andresailer",
             "createdAt": "2026-10-14",
             "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1998,7 +1954,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-14",
             "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2009,7 +1965,7 @@
             "author": "wdconinc",
             "createdAt": "2026-10-20",
             "updatedAt": "2026-10-22",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2019,7 +1975,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1703'>Speed up the placement path search in the SurfaceManager map build</a>",
             "author": "jbeirer",
             "createdAt": "2026-10-22",
-            "updatedAt": "2026-10-22",
+            "updatedAt": "2026-10-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2031,7 +1987,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-22",
             "updatedAt": "2026-10-22",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2040,6 +1996,17 @@
             "num": 1705,
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1705'>Fix RICH tests with ROOT object auto-registration disabled</a>",
             "author": "jmcarcell",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-10-23",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1707,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1707'>Multiple commits: doc, Geant3 geometries, structure creation plugin</a>",
+            "author": "MarkusFrankATcernch",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-10-23",
             "mergeOk": "yes",
