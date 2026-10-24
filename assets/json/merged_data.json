@@ -1,6 +1,33 @@
 {
-    "updated_at": "2026-10-23T10:52:19Z",
+    "updated_at": "2026-10-24T10:07:45Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 941,
+            "title": "Bump actions/setup-python from 7.0.0 to 7.1.0",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/941",
+            "author": "dependabot",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [actions/setup-python](https://github.com/actions/setup-python) from 7.0.0 to 7.1.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/setup-python/releases\">actions/setup-python's releases</a>.</em></p>\n<blockquote>\n<h2>v7.1.0</h2>\n<h2>What's Changed</h2>\n<h3>Enhancements</h3>\n<ul>\n<li>Add <code>mirror</code> and <code>mirror-token</code> inputs for custom Python distribution sources by <a href=\"https://github.com/luhenry\"><code>@\u200bluhenry</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1302\">actions/setup-python#1302</a></li>\n<li>Improve error message clarity by <a href=\"https://github.com/v-lmvysakh\"><code>@\u200bv-lmvysakh</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1351\">acti\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/pre-commit.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "k4geo",
@@ -63,6 +90,122 @@
         },
         {
             "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 940,
+            "title": "Add --latest-tags to the nightlies setup script",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/940",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Add `--latest-tags` to the nightlies setup script to source the LCG `devkey` view, using the same platforms and options as `devkey-head`.\r\n\r\nENDRELEASENOTES\r\n\r\ncc @kjvbrt @pkontaxa",
+            "diff": {
+                "additions": 21,
+                "deletions": 11,
+                "files": 1
+            },
+            "files": [
+                "scripts/cvmfs/setup-nightlies.sh"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 127,
+            "title": "Fix propagateBackward to Start at Outermost Seed Space Point",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/127",
+            "author": "mlarson02",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "madbaron",
+            "labels": [],
+            "body": "Ported these changes from #108.\r\n\r\n\r\nBEGINRELEASENOTES\r\n- Fix `PropagateBackward` (outside-in CKF) so that the CKF starts at the outermost seed space point instead of the innermost one. Previously the outer seed hits were left out of the final track.\r\n  - Seed parameters are now estimated at the start space point. The magnetic field is evaluated at that point. This now applies to the default inside-out seeding as well.\r\n- With `PropagateBackward`:\r\n  - the found tracks are reversed after smoothing, so the output is ordered inside-out as for forward tracks.\r\n  - the CKF stops at the reference surface (IP perigee, or the telescope reference plane).\r\n  - seed track states are labelled `AtLastHit`, since their parameters are at the outermost space point. `makeSeedTrackState` takes the location\u2026",
+            "diff": {
+                "additions": 263,
+                "deletions": 68,
+                "files": 8
+            },
+            "files": [
+                "k4ActsTracking/include/k4ActsTracking/CKFRunner.hxx",
+                "k4ActsTracking/include/k4ActsTracking/RunnerCommon.hxx",
+                "k4ActsTracking/src/components/CKFTrackingAlg.cpp",
+                "k4ActsTracking/src/components/CKFTrackingFromSeedsAlg.cpp",
+                "test/CMakeLists.txt",
+                "test/options/MAIA_CKFTrackingAlg.py",
+                "test/options/_ckf_helpers.py",
+                "test/scripts/outside_in_check_tracks.py"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "Is this ready to review?\r\nI somehow was expecting a few more inputs to come in here, but maybe you're addressing them in the other PR"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "IIUC these are self contained changes that were lifted out of #108 because they are isolated and topical enough to do so."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Topically, I was expecting the fixes to the hit ordering (https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211648324), the seed state label (https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211732075) and target surface (https://github.com/key4hep/k4ActsTracking/pull/10\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Though, to clarify, I am happy with anything. This is just why I have been waiting to review this one"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Topically, I was expecting the fixes to the hit ordering ([#108 (comment)](https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211648324)), the seed state label ([#108 (comment)](https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211732075)) and target surface ([#108 (comm\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Ah OK. Then I missed some bits apparently."
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Topically, I was expecting the fixes to the hit ordering ([#108 (comment)](https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211648324)), the seed state label ([#108 (comment)](https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211732075)) and target surface ([#108 (comm\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Thanks @mlarson02 this looks great and almost ready to go!\r\n\r\nThere's one last general point: no test in this PR sets `PropagateBackward=True`, so the changes to the start surface, track-state reversal, seed label and target surface are not exercised until #108 lands. \r\nCould the `reco_MAIA_Gen3_out\u2026"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Thanks @mlarson02 this looks great and almost ready to go!\r\n> \r\n> There's one last general point: no test in this PR sets `PropagateBackward=True`, so the changes to the start surface, track-state reversal, seed label and target surface are not exercised until #108 lands. Could the `reco_MAIA_Gen3\u2026"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> In one of the original comments @madbaron mentioned to also test this with the telescope (LUXE) geometry. This is not present here, but we can also do that in a follow up IMO. There are a few minor things below.\r\n\r\nI did do a short test for LUXE that I summarized here: https://github.com/key4hep/k\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I think this is ready to merge and I would plan to do so tomorrow"
+                }
+            ],
+            "comments_total": 11,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "This seems good to go from my perspective. Paging @madbaron (for once it goes in this direction ;) ), to see if there are things that are missing."
+                },
+                {
+                    "author": "madbaron",
+                    "state": "APPROVED",
+                    "body": "Thanks! This looks good to me now.\nI'll ping back @tmadlener in case he wants to take another look at the new changes, but otherwise we could try merge this tomorrow if nothing else comes up"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "In one of the original comments @madbaron mentioned to also test this with the telescope (LUXE) geometry. This is not present here, but we can also do that in a follow up IMO. There are a few minor things below."
+                }
+            ],
+            "reviews_total": 9
+        },
+        {
+            "org": "key4hep",
             "repo": "k4PFHitML",
             "num": 6,
             "title": "Remove k4ProjectTemplate remnants + clang format",
@@ -86,6 +229,404 @@
             ],
             "comments": [],
             "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 272,
+            "title": "feat(dashboard): open one event of reco Correlations to what each algorithm cost in it",
+            "url": "https://github.com/key4hep/k4Bench/pull/272",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add one-event per-algorithm cost detail to reco Correlations\n\n- Split reco Events section into Correlations and Event Size\n\n- Mark selected event on scatter; click bar opens Components\n\n- Build event table at once, avoiding DataFrame fragmentation\n\n- \"Other\" bar uses largest, not sum, for peak metrics\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  scatter[\"Correlations scatter\"] -- \"click point / pick number\" --> detail[\"One event detail\"]\n  detail -- \"plot_event_costs bars\" --> bars[\"Per-algorithm cost chart\"]\n  bars -- \"click bar\" --> comp[\"Components section\"]\n  comp -- \"Back\" --> scatter\n  drivers[\"event_drivers.event_table\"] -- \"frame built at once\" --> scatter\n```\n\n\n\n<details> <sum\u2026",
+            "diff": {
+                "additions": 575,
+                "deletions": 60,
+                "files": 10
+            },
+            "files": [
+                "dashboard/reco/page.py",
+                "dashboard/tabs/correlations.py",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/analysis/event_drivers.py",
+                "k4bench/analysis/plots/event_content.py",
+                "tests/unit/test_analysis_event_drivers.py",
+                "tests/unit/test_analysis_plots_event_content.py",
+                "tests/unit/test_dashboard_correlations.py",
+                "tests/unit/test_dashboard_event_size.py",
+                "tests/unit/test_dashboard_reco_apptest.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/e8e4fde97301f070c1749f7581434d188937a62f)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 0d56e14 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/272?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/272#issuecomment-6364858368)** updated to latest commit https://github.com/key4hep/k4Bench/commit/e8e4fde97301f070c1749f7581434d188937a62f"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 267,
+            "title": "fix(dashboard): let reco Correlations analyse the chosen configuration",
+            "url": "https://github.com/key4hep/k4Bench/pull/267",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add configuration dropdown to reconstruction Correlations tab\n\n- Revalidate metric, cost, expression on configuration switch\n\n- Warn when a linked configuration is unavailable\n\n- Cover new behavior with unit tests and docs\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"Reco Correlations tab\"] -- \"multiple succeeded configs\" --> B[\"_select_config dropdown\"]\n  B -- \"requested config missing or failed\" --> C[\"warning, show first offered\"]\n  A -- \"configuration switched\" --> D[\"revalidate metric, cost, expression\"]\n  D -- \"not available in new config\" --> E[\"substitute default and note it\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th alig\u2026",
+            "diff": {
+                "additions": 323,
+                "deletions": 31,
+                "files": 3
+            },
+            "files": [
+                "dashboard/tabs/correlations.py",
+                "docs/user-guide/features/dashboard.md",
+                "tests/unit/test_dashboard_correlations.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/267?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 11,105 in / 9 out / 11,114 total\n- Time cost: 1304.1s\n- AI calls: 1\n\n</details\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 266,
+            "title": "fix(dashboard): rank the reco components table by what each adds to an event",
+            "url": "https://github.com/key4hep/k4Bench/pull/266",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Tests\n\n\n___\n\n### **Description**\n- Rank components by per-event contribution, skipped events counted\n\n- Sort and \"Per event\" column use `seconds_per_event`\n\n- Update help texts and user documentation accordingly\n\n- Add test for rarely-run costly algorithm ranking\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"Component summary\"] -- \"sort by seconds_per_event\" --> B[\"Components table\"]\n  B -- \"skipped events counted\" --> C[\"Rarely-run costly components rank lower\"]\n  D[\"Test: rarely-run algorithm\"] -- \"verifies\" --> B\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td><strong>Bug fix</strong></td><td><table>\n<tr>\n  <td>\n \u2026",
+            "diff": {
+                "additions": 55,
+                "deletions": 13,
+                "files": 3
+            },
+            "files": [
+                "dashboard/reco/component.py",
+                "docs/user-guide/features/dashboard.md",
+                "tests/unit/test_dashboard_reco_component_apptest.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/266?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 6,530 in / 9 out / 6,539 total\n- Time cost: 256.9s\n- AI calls: 1\n\n</details>"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 271,
+            "title": "chore(deps): update mkdocstrings requirement from >=1.0.7 to >=1.0.8",
+            "url": "https://github.com/key4hep/k4Bench/pull/271",
+            "author": "dependabot",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Updates the requirements on [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/mkdocstrings/mkdocstrings/releases\">mkdocstrings's releases</a>.</em></p>\n<blockquote>\n<h2>1.0.8</h2>\n<h2><a href=\"https://github.com/mkdocstrings/mkdocstrings/releases/tag/1.0.8\">1.0.8</a> - 2026-10-19</h2>\n<p><!-- raw HTML omitted --><a href=\"https://github.com/mkdocstrings/mkdocstrings/compare/1.0.7...1.0.8\">Compare with 1.0.7</a><!-- raw HTML omitted --></p>\n<h3>Bug Fixes</h3>\n<ul>\n<li>Prefix code anchor/span IDs to avoid collisions (<a href=\"https://github.com/mkdocstrings/mkdocstrings/commit/f402d2cd5cc99beb562cba616d0be776140f3387\">f402d2c</a> by Timoth\u00e9e Mazzucotelli). <a hre\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "docs/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 270,
+            "title": "chore(deps): update pymdown-extensions requirement from >=12.2 to >=12.3",
+            "url": "https://github.com/key4hep/k4Bench/pull/270",
+            "author": "dependabot",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Updates the requirements on [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/pymdown-extensions/releases\">pymdown-extensions's releases</a>.</em></p>\n<blockquote>\n<h2>12.3</h2>\n<ul>\n<li><strong>NEW</strong>: BetterEm: Expose a way to disable CommonMark punctuation rules in BetterEm if desired via a new\n<code>punctuation</code> option.</li>\n</ul>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/facelessuser/pymdown-extensions/commit/24ae2b301304dac7b8e3dc347dbbcaac36671a90\"><code>24ae2b3</code></a> Fix link</li>\n<li><a href=\"https://github.com/facelessuser/pymdown-extensions/commit/f19f\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "docs/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 268,
+            "title": "chore(deps): bump streamlit from 1.65.0 to 1.66.0",
+            "url": "https://github.com/key4hep/k4Bench/pull/268",
+            "author": "dependabot",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [streamlit](https://github.com/streamlit/streamlit) from 1.65.0 to 1.66.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/streamlit/streamlit/releases\">streamlit's releases</a>.</em></p>\n<blockquote>\n<h2>1.66.0</h2>\n<!-- raw HTML omitted -->\n<h2>What's Changed</h2>\n<h3>New Features \ud83c\udf89</h3>\n<ul>\n<li>[feature] Add <code>on_change=&quot;ignore&quot;</code> mode to st.color_picker by <a href=\"https://github.com/lukasmasuch\"><code>@\u200blukasmasuch</code></a> in <a href=\"https://redirect.github.com/streamlit/streamlit/pull/17209\">streamlit/streamlit#17209</a></li>\n<li>[feature] Add AppTest support for st.form by <a href=\"https://github.com/lukasmasuch\"><code>@\u200blukasmasuch</code></a> in <a href=\"https://redirect.github.com/streamlit/streamlit/pull/172\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "dashboard/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "k4RecCalorimeter",
+            "num": 291,
+            "title": "More efficient data storage for TopoCaloNoisyCells.",
+            "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/291",
+            "author": "scott-snyder",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "Hold noise data as a vector rather than as an unordered_map, using the indexing service.\nThis is both faster and takes less space.\nStore the data in CaloCellConstantsSvc to avoid duplication in configurations where this tool is configured multiple times.\n\nBEGINRELEASENOTES\n- More efficient data storage for TopoCaloNoisyCells.\nENDRELEASENOTES",
+            "diff": {
+                "additions": 110,
+                "deletions": 41,
+                "files": 2
+            },
+            "files": [
+                "RecCalorimeter/src/components/TopoCaloNoisyCells.cpp",
+                "RecCalorimeter/src/components/TopoCaloNoisyCells.h"
+            ],
+            "comments": [
+                {
+                    "author": "scott-snyder",
+                    "body": "Verified that this does not change the ALLEGRO reconstruction results."
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Thanks @scott-snyder \r\nI guess the time for double loop at initialisation (to get the detIDs and to fill the vector) is more than compensated by faster access to a vector rather than a map during execution time - and in any case it's good to use the cell constant service to avoid duplication"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 124,
+            "title": "Update module modernc.org/sqlite to v1.61.0",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/124",
+            "author": "renovate",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [modernc.org/sqlite](https://gitlab.com/cznic/sqlite) | `v1.60.1` \u2192 `v1.61.0` | ![age](https://developer.mend.io/api/mc/badges/age/go/modernc.org%2fsqlite/v1.61.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/go/modernc.org%2fsqlite/v1.60.1/v1.61.0?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>cznic/sqlite (modernc.org/sqlite)</summary>\n\n### [`v1.61.0`](https://gitlab.com/cznic/sqlite/compare/v1.60.1...v1.61.0)\n\n[Compare Source](https://gitlab.com/cznic/sqlite/compare/v1.60.1...v1.61.0)\n\n</details>\n\n---\n\n### Configuration\n\n\ud83d\udcc5 **Schedule**: (UTC)\n\n- Br\u2026",
+            "diff": {
+                "additions": 18,
+                "deletions": 6,
+                "files": 2
+            },
+            "files": [
+                "go.mod",
+                "go.sum"
+            ],
+            "comments": [
+                {
+                    "author": "renovate",
+                    "body": "### \u2139\ufe0f Artifact update notice\n\n##### File name: go.mod\n\nIn order to perform the update(s) described in the table above, Renovate ran the `go get` command, which resulted in the following additional change(s):\n\n\n- 5 additional dependencies were updated\n\n\nDetails:\n\n\n| **Package**                      \u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 125,
+            "title": "State in the help overview that the MC Production contacts hold the coordinator role",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/125",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Adds one sentence below the roles table on the Help overview, so requesters know who reviews their requests.",
+            "diff": {
+                "additions": 2,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "docs/help/overview.md"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 116,
+            "title": "Add in-app Help page with requester and coordinator guides",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/116",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "- New `/help` page with Overview, Requester and Coordinator tabs, linked from the nav\n- Content lives in `docs/help/*.md`, rendered with the existing Markdown renderer\n- Dockerfile copies `docs/` into the image",
+            "diff": {
+                "additions": 265,
+                "deletions": 0,
+                "files": 9
+            },
+            "files": [
+                "Dockerfile",
+                "cmd/fcc-drs/main.go",
+                "docs/help/coordinator.md",
+                "docs/help/overview.md",
+                "docs/help/requester.md",
+                "internal/handlers/handlers.go",
+                "internal/handlers/help.go",
+                "templates/help.html",
+                "templates/layout.html"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 123,
+            "title": "Rename Production IDs to Transformation IDs",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/123",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "The DIRAC IDs tracked on campaign-assigned requests are transformation IDs, not production IDs.\n\n- Rename labels, code, routes and the activity type to \"transformation ID\"\n- Migrate the `production_ids` table/column to `transformation_ids.transformation_id` (SQLite and Postgres); old activity text is kept",
+            "diff": {
+                "additions": 283,
+                "deletions": 269,
+                "files": 13
+            },
+            "files": [
+                "cmd/fcc-drs/main.go",
+                "internal/db/postgres.go",
+                "internal/db/sqlite.go",
+                "internal/handlers/handlers.go",
+                "internal/handlers/pipeline.go",
+                "internal/handlers/production_ids.go",
+                "internal/handlers/transformation_ids.go",
+                "internal/models/production_id.go",
+                "internal/models/transformation_id.go",
+                "internal/models/update.go",
+                "scripts/seed.sql",
+                "templates/partials/request_detail.html",
+                "templates/partials/transformation_ids.html"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1706,
+            "title": "Fix bug in Volume divisions",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1706",
+            "author": "MarkusFrankATcernch",
+            "mergedAt": "2026-10-23",
+            "mergedBy": "MarkusFrankATcernch",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n\r\nVolume divisions were not properly implemented. Volume and placement extensions were not assigned properly.\r\nThis led to null-pointer exceptions when traversing the volume hierarchy.\r\nThis fix supposedly assigns the TGeoExtension objects when a dd4hep volume is divided and when a divide \r\nvolume is placed into a parent.\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 23,
+                "deletions": 7,
+                "files": 1
+            },
+            "files": [
+                "DDCore/src/Volumes.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200716 files\u2004\u2003\u2007\u2008\u200716 suites\u2004\u2003\u200221h 59m 19s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008365 \u2705\u20030 \ud83d\udca4\u200310 \u274c\n2\u2008681 runs\u200a\u20032\u2008665 \u2705\u20036 \ud83d\udca4\u200310 \u274c\n\nFor more details on these failures, see [this check](https://github.com/AIDASoft/DD4hep/runs/120492520412).\n\nResults for commit 2a853b40.\n\n[test-results]:data:application/gzip;base64\u2026"
+                }
+            ],
+            "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
         },
@@ -3361,202 +3902,6 @@
             "comments_total": 3,
             "reviews": [],
             "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 233,
-            "title": "feat(dashboard): split the dashboard into Simulation and Reconstruction pages",
-            "url": "https://github.com/key4hep/k4Bench/pull/233",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-17",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement\n\n\n___\n\n### **Description**\n- Split dashboard into per-suite pages with top navigation\n  - Shared `suite_page.SuitePage` skeleton renders each page\n  - Simulation default at `/`; Reconstruction at `/reconstruction`\n\n- Parameterize sidebar pickers by suite and key prefix\n\n- Persist section and sidebar selections across page switches\n\n- Detect a local run's suite via `loader.run_suite`\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  app[\"app.py router (st.navigation)\"] -- \"default /\" --> sim[\"sim_page: Simulation\"]\n  app -- \"/reconstruction\" --> reco[\"reco/page: Reconstruction\"]\n  sim -- \"SuitePage spec\" --> suite[\"suite_page.render_page\"]\n  reco -- \"SuitePage spec\" --> suite\n  suite -- \"suite + key_prefix\" --> sidebar[\"sideba\u2026",
-            "diff": {
-                "additions": 1083,
-                "deletions": 272,
-                "files": 25
-            },
-            "files": [
-                "dashboard/app.py",
-                "dashboard/reco/__init__.py",
-                "dashboard/reco/page.py",
-                "dashboard/section_dispatch.py",
-                "dashboard/sections.py",
-                "dashboard/sidebar.py",
-                "dashboard/sim_page.py",
-                "dashboard/suite_page.py",
-                "dashboard/ui_chrome.py",
-                "docs/developer-guide/repository-layout.md",
-                "k4bench/analysis/loader.py",
-                "tests/fixtures/reco_run/README.md",
-                "tests/fixtures/reco_run/baseline.log",
-                "tests/fixtures/reco_run/baseline_events.json",
-                "tests/fixtures/reco_run/baseline_results.csv",
-                "tests/fixtures/reco_run/machine_info.json",
-                "tests/fixtures/reco_run/run_info.json",
-                "tests/fixtures/reco_run/variant_truth_tracking.log",
-                "tests/fixtures/reco_run/variant_truth_tracking_events.json",
-                "tests/fixtures/reco_run/variant_truth_tracking_results.csv",
-                "tests/unit/test_analysis_loader.py",
-                "tests/unit/test_dashboard_overview_apptest.py",
-                "tests/unit/test_dashboard_pages.py",
-                "tests/unit/test_dashboard_sidebar.py",
-                "tests/unit/test_dashboard_stack_changes.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/5b903db79af9f6c7687d77a0e8bf5be10bc46633)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 20,451 in / 9 out / 20,460 total\n- Time cost: 229.8s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/233#issuecomment-6232443686)** updated to latest commit https://github.com/key4hep/k4Bench/commit/5b903db79af9f6c7687d77a0e8bf5be10bc46633"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 31,217 in / 9 out / 31,226 total\n- Time cost: 284.0s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/233?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 113,
-            "title": "[TrackMerger] Significance as new matching criterion",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/113",
-            "author": "Victor-Schwan",
-            "mergedAt": "2026-10-16",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Introduce significance as matching criterion for the `TrackMerger`\r\n- Update matching defaults to match defaults from `ClonesAndSplitTracksFinder` in `CLDConfig`\r\n- Change default behavior to use the significance as matching criterion\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 413,
-                "deletions": 126,
-                "files": 8
-            },
-            "files": [
-                "Tracking/CMakeLists.txt",
-                "Tracking/components/TrackMerger.cpp",
-                "Tracking/components/TracksFromGenParticles.cpp",
-                "Tracking/include/utils.h",
-                "Tracking/src/utils.cpp",
-                "Tracking/test/testTrackMerger/field_only.xml",
-                "Tracking/test/testTrackMerger/test_track_merger.py",
-                "Tracking/test/testTrackMerger/test_track_merger_steer.py"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "The tests are failing because the steering file that is run doesn't initialize a geometry, so no field can be retrieved."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Merge @tmadlener (and tag)?"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [
-                {
-                    "author": "jmcarcell",
-                    "state": "COMMENTED",
-                    "body": "This is an AI-generated review (Claude). Some of the comments may not apply or may be wrong, so feel free to dismiss them. I skipped the points @tmadlener already raised (the sigma == 0 fallback and the omega vs pT naming)."
-                }
-            ],
-            "reviews_total": 11
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 230,
-            "title": "chore(deps): bump pre-commit from 4.6.2 to 4.7.0",
-            "url": "https://github.com/key4hep/k4Bench/pull/230",
-            "author": "dependabot",
-            "mergedAt": "2026-10-16",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [pre-commit](https://github.com/pre-commit/pre-commit) from 4.6.2 to 4.7.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/pre-commit/pre-commit/releases\">pre-commit's releases</a>.</em></p>\n<blockquote>\n<h2>pre-commit v4.7.0</h2>\n<h3>Fixes</h3>\n<ul>\n<li>Fix <code>language: node</code> hooks during commit with <code>-a</code> or inside a submodule.\n<ul>\n<li>Regressed in 4.6.1.</li>\n<li><a href=\"https://redirect.github.com/pre-commit/pre-commit/issues/3773\">#3773</a> issue by <a href=\"https://github.com/cbirkhold\"><code>@\u200bcbirkhold</code></a>.</li>\n<li><a href=\"https://redirect.github.com/pre-commit/pre-commit/issues/3774\">#3774</a> PR by <a href=\"https://github.com/cbirkhold\"><code>@\u200bcbirkhold</code></a>.</li>\n</ul>\n</li>\n</ul>\n</blockquote\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 232,
-            "title": "chore(deps): update pymdown-extensions requirement from >=12.1 to >=12.2",
-            "url": "https://github.com/key4hep/k4Bench/pull/232",
-            "author": "dependabot",
-            "mergedAt": "2026-10-16",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Updates the requirements on [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/pymdown-extensions/releases\">pymdown-extensions's releases</a>.</em></p>\n<blockquote>\n<h2>12.2</h2>\n<ul>\n<li><strong>NEW</strong>: Add official support for Python 3.15.</li>\n<li><strong>NEW</strong>: Tilde, Caret: For backwards compatibility, disable CommonMark punctuation rules by default. If subscript or\nsuperscript is disabled in the respective extension, CommonMark rules will be honored again. A new <code>punctuation</code>\nrule has been added to force CommonMark rules. When done, people will need to be aware of punctuation when subscript\nor superscript i\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "docs/requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 231,
-            "title": "chore(deps): update mkdocstrings requirement from >=1.0.6 to >=1.0.7",
-            "url": "https://github.com/key4hep/k4Bench/pull/231",
-            "author": "dependabot",
-            "mergedAt": "2026-10-16",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Updates the requirements on [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/mkdocstrings/mkdocstrings/releases\">mkdocstrings's releases</a>.</em></p>\n<blockquote>\n<h2>1.0.7</h2>\n<h2><a href=\"https://github.com/mkdocstrings/mkdocstrings/releases/tag/1.0.7\">1.0.7</a> - 2026-10-10</h2>\n<p><!-- raw HTML omitted --><a href=\"https://github.com/mkdocstrings/mkdocstrings/compare/1.0.6...1.0.7\">Compare with 1.0.6</a><!-- raw HTML omitted --></p>\n<h3>Build</h3>\n<ul>\n<li>Drop support for Python 3.10 (<a href=\"https://github.com/mkdocstrings/mkdocstrings/commit/2c2cbb19d0fdab8554f93fe2fb1568ffba8c0f5d\">2c2cbb1</a> by Timoth\u00e9e Mazzucotelli).</li>\n</ul>\n<h3>Bug Fixes</h3>\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "docs/requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
         }
     ]
 }
