@@ -1,6 +1,124 @@
 {
-    "updated_at": "2026-10-25T10:32:38Z",
+    "updated_at": "2026-10-26T12:05:20Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "key4hep-doc",
+            "num": 172,
+            "title": "Bump certifi from 2024.7.4 to 2026.10.19",
+            "url": "https://github.com/key4hep/key4hep-doc/pull/172",
+            "author": "dependabot",
+            "mergedAt": "2026-10-26",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [certifi](https://github.com/certifi/python-certifi) from 2024.7.4 to 2026.10.19.\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/certifi/python-certifi/commit/662df63d7906df66f1f07c0751a3dfe9da14d914\"><code>662df63</code></a> Restore unaffected emSign roots (<a href=\"https://redirect.github.com/certifi/python-certifi/issues/439\">#439</a>) (<a href=\"https://redirect.github.com/certifi/python-certifi/issues/440\">#440</a>)</li>\n<li><a href=\"https://github.com/certifi/python-certifi/commit/5cb238caeeb6c30ec1a7309ad3e16a5aa7b10ce8\"><code>5cb238c</code></a> Remove emsign (<a href=\"https://redirect.github.com/certifi/python-certifi/issues/437\">#437</a>)</li>\n<li><a href=\"https://github.com/certifi/python-certifi/commit/69494a764d0a08f90838d53d4b0fefd3e84045d6\"><co\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-10-26 06:46 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-doc",
+            "num": 171,
+            "title": "Bump nbconvert from 7.17.1 to 7.17.2",
+            "url": "https://github.com/key4hep/key4hep-doc/pull/171",
+            "author": "dependabot",
+            "mergedAt": "2026-10-26",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [nbconvert](https://github.com/jupyter/nbconvert) from 7.17.1 to 7.17.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/jupyter/nbconvert/releases\">nbconvert's releases</a>.</em></p>\n<blockquote>\n<h2>v7.17.2</h2>\n<h2>7.17.2</h2>\n<p>(<a href=\"https://github.com/jupyter/nbconvert/compare/v7.17.1...8685e15e2d924fa39be38aeafb6ac859fc254ccc\">Full Changelog</a>)</p>\n<h3>Maintenance and upkeep improvements</h3>\n<ul>\n<li>Fix CI: fetch the classic CSS from PyPI, update dead links <a href=\"https://redirect.github.com/jupyter/nbconvert/pull/2327\">#2327</a> (<a href=\"https://github.com/Yann-P\"><code>@\u200bYann-P</code></a>, <a href=\"https://github.com/Carreau\"><code>@\u200bCarreau</code></a>, <a href=\"https://github.com/claude\"><code>@\u200bclaude</code></a>)</li>\n<\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.1\n:---:\nPreview removed because the pull request was closed.\n2026-10-26 06:46 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-actions",
+            "num": 61,
+            "title": "Bump actions/setup-python from 7.0.0 to 7.1.0 in /workflows",
+            "url": "https://github.com/key4hep/key4hep-actions/pull/61",
+            "author": "dependabot",
+            "mergedAt": "2026-10-26",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [actions/setup-python](https://github.com/actions/setup-python) from 7.0.0 to 7.1.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/setup-python/releases\">actions/setup-python's releases</a>.</em></p>\n<blockquote>\n<h2>v7.1.0</h2>\n<h2>What's Changed</h2>\n<h3>Enhancements</h3>\n<ul>\n<li>Add <code>mirror</code> and <code>mirror-token</code> inputs for custom Python distribution sources by <a href=\"https://github.com/luhenry\"><code>@\u200bluhenry</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1302\">actions/setup-python#1302</a></li>\n<li>Improve error message clarity by <a href=\"https://github.com/v-lmvysakh\"><code>@\u200bv-lmvysakh</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1351\">acti\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "workflows/auto-commit.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-actions",
+            "num": 60,
+            "title": "Bump stefanzweifel/git-auto-commit-action from 7.2.0 to 7.2.1 in /workflows",
+            "url": "https://github.com/key4hep/key4hep-actions/pull/60",
+            "author": "dependabot",
+            "mergedAt": "2026-10-26",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [stefanzweifel/git-auto-commit-action](https://github.com/stefanzweifel/git-auto-commit-action) from 7.2.0 to 7.2.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/stefanzweifel/git-auto-commit-action/releases\">stefanzweifel/git-auto-commit-action's releases</a>.</em></p>\n<blockquote>\n<h2>v7.2.1</h2>\n<h2>Fixed</h2>\n<ul>\n<li>Accept repositories where .git is a file (<a href=\"https://redirect.github.com/stefanzweifel/git-auto-commit-action/pull/417\">#417</a>) <a href=\"https://github.com/@stefanzweifel\"><code>@\u200bstefanzweifel</code></a></li>\n<li>README: Update actions (<a href=\"https://redirect.github.com/stefanzweifel/git-auto-commit-action/pull/413\">#413</a>) <a href=\"https://github.com/@jackbayliss\"><code>@\u200bjackbayliss</code></a></li>\n<li>Re\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "workflows/auto-commit.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "k4geo",
@@ -2670,96 +2788,6 @@
             "reviews_total": 0
         },
         {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 247,
-            "title": "feat(dashboard): add the reco Memory section: where each component's heap goes and what grows without being released",
-            "url": "https://github.com/key4hep/k4Bench/pull/247",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add reco Memory section: per-component heap views and leak warnings\n  - Tiles, suspect warnings, stacked timeline, components table\n\n- Add heap summaries, totals and leak detection to analysis\n\n- Add heap timeline and per-component event plots\n\n- Extract `theil_sen_slope` into shared `robust` module\n\n- Share package source columns across reco sections\n\n- Cover summaries, plots and section with tests\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  heapjson[\"_heap.json files\"] -- \"cached_load_component_heap\" --> loader[\"dashboard/data.py\"]\n  loader --> summary[\"ComponentHeap.summary/totals + leak detection\"]\n  summary --> plots[\"plots/heap.py timeline & event plots\"]\n  plots --> section[\"re\u2026",
-            "diff": {
-                "additions": 1926,
-                "deletions": 89,
-                "files": 17
-            },
-            "files": [
-                "dashboard/data.py",
-                "dashboard/reco/_sources.py",
-                "dashboard/reco/breakdown.py",
-                "dashboard/reco/efficiency.py",
-                "dashboard/reco/memory.py",
-                "dashboard/reco/page.py",
-                "docs/user-guide/features/dashboard.md",
-                "k4bench/analysis/heap.py",
-                "k4bench/analysis/plots/__init__.py",
-                "k4bench/analysis/plots/_theme.py",
-                "k4bench/analysis/plots/heap.py",
-                "k4bench/analysis/robust.py",
-                "k4bench/analysis/trend.py",
-                "tests/unit/test_analysis_heap.py",
-                "tests/unit/test_analysis_plots_heap.py",
-                "tests/unit/test_analysis_trend_noise.py",
-                "tests/unit/test_dashboard_reco_apptest.py"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/247?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 34,901 in / 9 out / 34,910 total\n- Time cost: 991.1s\n- AI calls: 1\n\n</details>"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 246,
-            "title": "fix(reco): set CellIDBits=32 on IDEA_o1_v04's silicon digitisers so they find their surfaces",
-            "url": "https://github.com/key4hep/k4Bench/pull/246",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix\n\n\n___\n\n### **Description**\n- Set `CellIDBits=32` on four IDEA_o1_v04 silicon digitisers\n\n- Fix digitiser surface lookup on o1_v04 readouts\n\n- Document the rationale in config header comment\n\n- Changes measured workload; affected series may step\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"IDEA_o1_v04.yml k4run_args\"] -- \"CellIDBits=32\" --> B[\"VTXB/VTXD/SiWrB/SiWrD digitisers\"]\n  B -- \"drop pixel x/y fields above 32-bit volume ID\" --> C[\"surface lookup finds surfaces\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td><strong>Bug fix</strong></td><td><table>\n<tr>\n  <td>\n    <details>\n      <summary><strong>IDEA_o1_v04.y\u2026",
-            "diff": {
-                "additions": 9,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/benchmarks/reco/IDEA/IDEA_o1_v04.yml"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/246?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>Recommended focus are\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 7,779 in / 559 out / 8,338 total\n- Time cost: 76.8s\n- AI calls: 2\n\n</details>"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "hep-fcc",
             "repo": "fcc-tutorials",
             "num": 210,
@@ -2788,626 +2816,6 @@
                 }
             ],
             "reviews_total": 1
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "ALLEGRO",
-            "num": 60,
-            "title": "Adding pcb test tool kit (matlab scripts) to ALLEGRO software folder",
-            "url": "https://github.com/HEP-FCC/ALLEGRO/pull/60",
-            "author": "josum21",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "giovannimarchiori",
-            "labels": [],
-            "body": "Adding pcb test tool kit (matlab scripts) to ALLEGRO software folder. These scripts are used to measure the x-talk and capacity of PCB electrode, via matlab and using VISA to control the scope and multi-plexer.",
-            "diff": {
-                "additions": 1423,
-                "deletions": 0,
-                "files": 19
-            },
-            "files": [
-                "pcb_test_toolkit/+pcbtest/acquire_capacity.m",
-                "pcb_test_toolkit/+pcbtest/acquire_debug.m",
-                "pcb_test_toolkit/+pcbtest/acquire_xtalk.m",
-                "pcb_test_toolkit/+pcbtest/analyze_capacity.m",
-                "pcb_test_toolkit/+pcbtest/analyze_xtalk.m",
-                "pcb_test_toolkit/+pcbtest/default_config.m",
-                "pcb_test_toolkit/+pcbtest/fit_tau.m",
-                "pcb_test_toolkit/+pcbtest/load_waveform.m",
-                "pcb_test_toolkit/+pcbtest/plot_xtalk_study.m",
-                "pcb_test_toolkit/+pcbtest/read_scope.m",
-                "pcb_test_toolkit/+pcbtest/set_matrix_channel.m",
-                "pcb_test_toolkit/+pcbtest/shape_waveform.m",
-                "pcb_test_toolkit/.gitignore",
-                "pcb_test_toolkit/README.md",
-                "pcb_test_toolkit/run_acquire_capacity.m",
-                "pcb_test_toolkit/run_acquire_debug.m",
-                "pcb_test_toolkit/run_acquire_xtalk.m",
-                "pcb_test_toolkit/run_offline_capacity.m",
-                "pcb_test_toolkit/run_offline_xtalk.m"
-            ],
-            "comments": [
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Hi @josum21 \r\nthanks a lot!\r\nDo you plan to populate the pcb_test_toolkit with more subfolders in the future?\r\nIf not, then you'd better move all the files from pcbtest to pcb_test_toolkit to avoid having too many nested folders.\r\nIf yes: do we need the \"+\" special character in the folder name \"+pcb\u2026"
-                },
-                {
-                    "author": "josum21",
-                    "body": "> Hi @josum21 thanks a lot! Do you plan to populate the pcb_test_toolkit with more subfolders in the future? If not, then you'd better move all the files from pcbtest to pcb_test_toolkit to avoid having too many nested folders. If yes: do we need the \"+\" special character in the folder name \"+pcbtes\u2026"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 29,
-            "title": "Add dataset upload/import feature with single-record form",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/29",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Replaces the UUID-only override endpoint with a unified upload endpoint: entries without a uuid are created, entries with a uuid are updated respecting field locks. Export/import now use a flat {\"datasets\": [...]} shape.\n\nAdds an \"Add Dataset\" tab for single-record creation alongside the existing bulk JSON upload.\n\nAlso fixes two bugs found along the way: delete/save actions only checked login, not the editor role; and navigation dropdown items were keyed `id` instead of `entity_id`.",
-            "diff": {
-                "additions": 639,
-                "deletions": 279,
-                "files": 12
-            },
-            "files": [
-                "backend/app/routers/entities_router.py",
-                "backend/app/storage/database.py",
-                "backend/app/storage/database.sql",
-                "backend/app/storage/database_modules/data_import_module.py",
-                "backend/app/storage/database_modules/navigation_module.py",
-                "backend/app/storage/json_data_model.py",
-                "frontend/components/EditModal.vue",
-                "frontend/components/entities/EntityControls.vue",
-                "frontend/composables/api/useApiClient.ts",
-                "frontend/composables/entities/useEntitySelection.ts",
-                "frontend/composables/navigation/useNavigationConfig.ts",
-                "frontend/composables/navigation/useNavigationState.ts"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 245,
-            "title": "feat(k4run): record the heap each component holds in an untimed memory pass",
-            "url": "https://github.com/key4hep/k4Bench/pull/245",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add untimed memory pass recording per-component heap ownership\n  - Alloc counter charges every heap block to its owner\n  - Auditor snapshots heap per event, writes `_heap.json`\n\n- Add `ComponentHeap` analysis model with schema validation\n\n- Wire `memory_events` through CLI, CI, nightly configs\n\n- Cover with unit, integration tests and documentation\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart TD\n  cli[\"k4bench k4run --memory-events N\"] -- \"after each successful run\" --> pass[\"untimed memory pass\"]\n  pass -- \"K4BENCH_ALLOC_OWNERS=1\" --> counter[\"k4BenchAllocCounter ownership table\"]\n  counter -- \"per-owner held bytes\" --> auditor[\"k4BenchAuditor\"]\n  auditor -- \"writes\" --> heap[\"{label}_heap\u2026",
-            "diff": {
-                "additions": 2603,
-                "deletions": 469,
-                "files": 40
-            },
-            "files": [
-                ".github/benchmarks/reco/ALLEGRO/ALLEGRO_o1_v04.yml",
-                ".github/benchmarks/reco/ALLEGRO/ALLEGRO_o2_v01.yml",
-                ".github/benchmarks/reco/CLD/CLD_o2_v09.yml",
-                ".github/benchmarks/reco/CLD/CLD_o3_v01.yml",
-                ".github/benchmarks/reco/IDEA/IDEA_o1_v04.yml",
-                ".github/benchmarks/reco/IDEA/IDEA_o2_v01.yml",
-                ".github/benchmarks/reco/ILD/ILD_FCCee_v01.yml",
-                ".github/benchmarks/reco/ILD/ILD_FCCee_v02.yml",
-                ".github/scripts/benchmark_job.py",
-                ".github/scripts/list_benchmarks.py",
-                ".github/scripts/nightly_benchmark.sh",
-                ".github/scripts/run_info.py",
-                "docs/reference/configuration-reference.md",
-                "docs/reference/file-formats.md",
-                "docs/user-guide/commands.md",
-                "k4bench/analysis/heap.py",
-                "k4bench/analysis/loader.py",
-                "k4bench/artifacts.py",
-                "k4bench/benchmark/k4run.py",
-                "k4bench/cli.py",
-                "k4bench/plugin/runtime.py",
-                "k4bench/plugin/schema.py",
-                "k4bench/runner/k4run.py",
-                "plugin/auditor/k4BenchAllocCounter.cpp",
-                "plugin/auditor/k4BenchAllocCounter.h",
-                "plugin/auditor/k4BenchAuditor.cpp",
-                "plugin/auditor/k4BenchAuditorOptions.py",
-                "plugin/auditor/k4BenchComponentInfo.h",
-                "plugin/auditor/k4BenchMeasurement.h",
-                "tests/integration/test_k4run_benchmark.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/326213350141860b06167338fc7329d8023d1359)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 55,918 in / 304 out / 56,222 total\n- Time cost: 757.5s\n- AI calls: 1\n\n</detail\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/245?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/245#issuecomment-6255849887)** updated to latest commit https://github.com/key4hep/k4Bench/commit/d53ab208e7cfafcf4a097cfa0b5f03847c3eb73c"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- d53ab20 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/245#issuecomment-6255849887)** updated to latest commit https://github.com/key4hep/k4Bench/commit/326213350141860b06167338fc7329d8023d1359"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 56,432 in / 9 out / 56,441 total\n- Time cost: 504.8s\n- AI calls: 1\n\n</details>"
-                }
-            ],
-            "comments_total": 7,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 244,
-            "title": "feat(dashboard): show algorithms' per-event time in reco Event Timing",
-            "url": "https://github.com/key4hep/k4Bench/pull/244",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement\n\n\n___\n\n### **Description**\n- Add per-algorithm timing to reco Event Timing\n\n- Compare each timing against its own baseline\n\n- Rank slowest algorithms in historical trend view\n\n- Extract shared `_time_stats` and `algorithms()` helpers\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  comp[\"ComponentTiming.algorithms()\"] --> tab[\"Event Timing tab: Timing of selector\"]\n  trend[\"build_algorithm_timing_trend\"] --> cache[\"cached_load_trend_algorithm_timing\"]\n  cache --> hist[\"Historical trends: slowest algorithms, log-y\"]\n  tab --> plot[\"plot_event_timing: per-series references, quantity labels\"]\n  hist --> plot\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant file\u2026",
-            "diff": {
-                "additions": 820,
-                "deletions": 82,
-                "files": 16
-            },
-            "files": [
-                "dashboard/data.py",
-                "dashboard/reco/page.py",
-                "dashboard/tabs/_historical_trends.py",
-                "dashboard/tabs/event_timing.py",
-                "dashboard/ui_utils.py",
-                "docs/user-guide/features/dashboard.md",
-                "k4bench/analysis/components.py",
-                "k4bench/analysis/efficiency.py",
-                "k4bench/analysis/plots/event.py",
-                "k4bench/analysis/trend.py",
-                "tests/unit/test_analysis_components.py",
-                "tests/unit/test_analysis_plots.py",
-                "tests/unit/test_dashboard_event_views_apptest.py",
-                "tests/unit/test_dashboard_pages.py",
-                "tests/unit/test_dashboard_reco_apptest.py",
-                "tests/unit/test_trend_builders.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/cb377fcee96eb7db31078a9fcc9d7f6040444a0b)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- cb377fc -->\n\nLatest suggestions up to cb377fc\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/244#issuecomment-6254633689)** updated to latest commit https://github.com/key4hep/k4Bench/commit/43e5ccf4b860d14e098865032a04d94786bc0c55"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/244#issuecomment-6254633689)** updated to latest commit https://github.com/key4hep/k4Bench/commit/e64b2976d044c5d299263782d6c810d85787bb83"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/244#issuecomment-6254633689)** updated to latest commit https://github.com/key4hep/k4Bench/commit/cb377fcee96eb7db31078a9fcc9d7f6040444a0b"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/244?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 243,
-            "title": "feat(dashboard): add the Reconstruction Efficiency tab: per-algorithm IPC and its history",
-            "url": "https://github.com/key4hep/k4Bench/pull/243",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add Reconstruction Efficiency tab: per-algorithm IPC scatter\n\n- New efficiency analysis and plotting modules\n\n- Add efficiency trend builder for historical view\n\n- Report allocated memory in binary MB (1024\u00b2)\n\n- Distinguish counted-but-empty runs from missing counters\n\n- Add unit/app tests and document the tab\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  comp[\"*_components.json\"] --> eff[\"k4bench/analysis/efficiency.py\"]\n  eff --> plot[\"plots/efficiency.py scatter\"]\n  eff --> trend[\"trend.py build_efficiency_trend\"]\n  plot --> tab[\"dashboard/reco/efficiency.py Current Run\"]\n  trend --> tab2[\"dashboard/reco/efficiency.py Historical Trends\"]\n  tab --> page[\"dashboard/reco/page.py Efficie\u2026",
-            "diff": {
-                "additions": 742,
-                "deletions": 5,
-                "files": 10
-            },
-            "files": [
-                "dashboard/data.py",
-                "dashboard/reco/efficiency.py",
-                "dashboard/reco/page.py",
-                "docs/user-guide/features/dashboard.md",
-                "k4bench/analysis/efficiency.py",
-                "k4bench/analysis/plots/efficiency.py",
-                "k4bench/analysis/trend.py",
-                "tests/unit/test_analysis_plots_efficiency.py",
-                "tests/unit/test_dashboard_reco_apptest.py",
-                "tests/unit/test_trend_builders.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/5570707f052081707655df86b51e594775b9b8ba)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 5570707 -->\n\nLatest suggestions up to 5570707\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/243#issuecomment-6253253953)** updated to latest commit https://github.com/key4hep/k4Bench/commit/75979365167fdfc8468e346dc349658420d48f35"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/243#issuecomment-6253253953)** updated to latest commit https://github.com/key4hep/k4Bench/commit/5570707f052081707655df86b51e594775b9b8ba"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/243?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 242,
-            "title": "fix(k4run): drop the job's ChronoAuditor so audited services don't loop on AuditorSvc",
-            "url": "https://github.com/key4hep/k4Bench/pull/242",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The 2026-10-18 nightly's reco jobs for ALLEGRO_o1_v04, ALLEGRO_o2_v01 and IDEA_o1_v04 failed at initialisation with `Initialization loop detected when creating service \"AuditorSvc\"`.\r\n\r\nTheir FCC-config steering adds a `ChronoAuditor`. With our `AuditServices = True`, that auditor creates `ChronoStatSvc`, and the service's audited initialise asks for the `AuditorSvc` that is still initialising.\r\n\r\nThe k4bench options file now removes `ChronoAuditor`. Nothing k4Bench measures is lost, since nothing reads its output, and service initialisation is still audited.\r\n\r\n\r\n<!-- pr-agent-generated -->\r\n### **PR Type**\r\nBug fix\r\n\r\n\r\n___\r\n\r\n### **Description**\r\n- Filter `ChronoAuditor` out of `AuditorSvc().Auditors`\r\n\r\n- Prevents Gaudi abort from AuditorSvc init loop\r\n\r\n- Add `_auditor_type` helper fo\u2026",
-            "diff": {
-                "additions": 18,
-                "deletions": 3,
-                "files": 1
-            },
-            "files": [
-                "plugin/auditor/k4BenchAuditorOptions.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 4,902 in / 9 out / 4,911 total\n- Time cost: 61.7s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/242?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 28,
-            "title": "Document admin CERN role in backend env template",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/28",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Documents METADATA_BROWSER_ADMIN_CERN_ROLE=dami-admin, the role\ncreated and verified end-to-end on staging.",
-            "diff": {
-                "additions": 6,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "k8s/test/backend.env.example"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 27,
-            "title": "Fix crash when METADATA_BROWSER_ADMIN_CERN_ROLE is unset",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/27",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "config.get(\"auth.admin_cern_role\") raised when the key was absent\n(whenever METADATA_BROWSER_ADMIN_CERN_ROLE isn't set), crashing any\nreal authenticated session. Also documents SSO setup in the test env\ntemplate.",
-            "diff": {
-                "additions": 10,
-                "deletions": 3,
-                "files": 2
-            },
-            "files": [
-                "backend/app/utils/auth_utils.py",
-                "k8s/test/backend.env.example"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 26,
-            "title": "Make role badge the account dropdown trigger (sign in/out, user area)",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/26",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Replaces the separate AuthSection button with a dropdown on the role\nbadge itself (sign in/out + a new bare-bones User Area page at\n/account). Always shown, even when auth is disabled.",
-            "diff": {
-                "additions": 75,
-                "deletions": 164,
-                "files": 4
-            },
-            "files": [
-                "frontend/app.vue",
-                "frontend/components/UserRoleBadge.vue",
-                "frontend/components/auth/AuthSection.vue",
-                "frontend/pages/account.vue"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 25,
-            "title": "Remove Kaniko caching from backend builds",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/25",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Kaniko's cache was silently reusing a stale final image manifest\n(visible as \"Returning cached image manifest\" in build traces even\nwhen source files changed), so staging kept running old backend\ncode under new tags. Confirmed by grepping the live pod's source.",
-            "diff": {
-                "additions": 0,
-                "deletions": 5,
-                "files": 1
-            },
-            "files": [
-                ".gitlab-ci.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 24,
-            "title": "Show a role badge in the header",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/24",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Shows whether the current user is recognized and, if so, their\nresolved role (viewer/editor/admin) -- a small pill in the header,\nalways rightmost.",
-            "diff": {
-                "additions": 46,
-                "deletions": 1,
-                "files": 2
-            },
-            "files": [
-                "frontend/app.vue",
-                "frontend/components/UserRoleBadge.vue"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 23,
-            "title": "Add viewer/editor/admin role-based access control",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/23",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Replaces the all-or-nothing authenticated/not-authenticated gate with\nthree real tiers: viewer (default, read-only), editor (grantable\nin-app by an admin), and admin (CERN role/e-group only, never stored\nin the app's own DB). Adds admin-only user management endpoints and\na matching UI modal.",
-            "diff": {
-                "additions": 514,
-                "deletions": 129,
-                "files": 16
-            },
-            "files": [
-                "backend/app/config.conf",
-                "backend/app/main.py",
-                "backend/app/routers/auth_router.py",
-                "backend/app/routers/entities_router.py",
-                "backend/app/routers/users_router.py",
-                "backend/app/storage/database.py",
-                "backend/app/storage/database.sql",
-                "backend/app/storage/database_modules/user_roles_module.py",
-                "backend/app/utils/auth_utils.py",
-                "frontend/app.vue",
-                "frontend/components/EditModal.vue",
-                "frontend/components/UserManagementModal.vue",
-                "frontend/components/entities/EntityMetadata.vue",
-                "frontend/composables/api/useApiClient.ts",
-                "frontend/composables/auth/useAuth.ts",
-                "local-dev/README.md"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 22,
-            "title": "Add local dev setup (Podman Postgres, native backend/frontend)",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/22",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Adds local-dev/ with a README and backend env template for running\nPostgres in a Podman container while backend/frontend run natively\nfor hot-reload. Tested end-to-end.",
-            "diff": {
-                "additions": 102,
-                "deletions": 0,
-                "files": 3
-            },
-            "files": [
-                ".gitignore",
-                "local-dev/README.md",
-                "local-dev/backend.env.example"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 21,
-            "title": "Frontend UI polish: scroll listener, page titles, About modal",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/21",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Defers the scroll-to-top listener (Firefox warning fix), prefixes\npage titles with \"DaMI | \", renames Contact modal to About (version\n+ copyright moved there, footer removed), hides Edit button from\nunauthenticated users, and fixes copyright text color.",
-            "diff": {
-                "additions": 38,
-                "deletions": 35,
-                "files": 7
-            },
-            "files": [
-                "frontend/app.vue",
-                "frontend/components/AboutModal.vue",
-                "frontend/components/AppFooter.vue",
-                "frontend/components/entities/EntityMetadata.vue",
-                "frontend/components/search/EntitySearchInterface.vue",
-                "frontend/pages/[...slug].vue",
-                "k8s/test/backend.env.example"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 20,
-            "title": "Fix frontend version detection, rename to DAMI_VERSION",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/20",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "The docker-builder/tools image used by build-frontend has no git\nbinary, so `git describe` was silently producing an empty string and\nthe version always showed as \"dev\". Use GitLab's predefined\nCI_COMMIT_TAG / CI_COMMIT_SHORT_SHA instead, and rename the variable\nto DAMI_VERSION.",
-            "diff": {
-                "additions": 7,
-                "deletions": 9,
-                "files": 3
-            },
-            "files": [
-                ".gitlab-ci.yml",
-                "frontend/Dockerfile",
-                "frontend/nuxt.config.ts"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 19,
-            "title": "Show running version in the Contact modal",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/19",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Bakes `git describe --tags --always` into the frontend image at\nbuild time and shows it in the Contact modal, next to the existing\nmailing-list/forum/repo links -- the exact tag on prod, \"tag-N-gSHA\"\non staging.",
-            "diff": {
-                "additions": 20,
-                "deletions": 0,
-                "files": 4
-            },
-            "files": [
-                ".gitlab-ci.yml",
-                "frontend/Dockerfile",
-                "frontend/components/ContactModal.vue",
-                "frontend/nuxt.config.ts"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 18,
-            "title": "Fix staging database connectivity (TLS mode + main table)",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/18",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Switches the staging DBOD connection to sslmode=require (it rejects\nplaintext, and \"prefer\" was silently falling back to it) and sets\nMETADATA_BROWSER_MAIN_TABLE=datasets to match prod's schema. Confirmed\nworking end-to-end against the live fcc-dami-test instance.",
-            "diff": {
-                "additions": 11,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "k8s/test/backend.env.example"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
         }
     ]
 }
