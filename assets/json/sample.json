@@ -189,22 +189,22 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 446,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/446'>Include directly used headers throughout library and tests</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-18",
-            "updatedAt": "2026-10-22",
+            "num": 444,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/444'>New PropertyChoices Helper Class</a>",
+            "author": "s6anloes",
+            "createdAt": "2026-10-14",
+            "updatedAt": "2026-10-26",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 444,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/444'>New PropertyChoices Helper Class</a>",
-            "author": "s6anloes",
-            "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-20",
+            "num": 446,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/446'>Include directly used headers throughout library and tests</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-18",
+            "updatedAt": "2026-10-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -293,7 +293,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-07",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -304,7 +304,7 @@
             "author": "tmadlener",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -315,7 +315,7 @@
             "author": "Panzerkampfwagen-del",
             "createdAt": "2026-08-26",
             "updatedAt": "2026-09-02",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -326,7 +326,7 @@
             "author": "dudarboh",
             "createdAt": "2026-01-13",
             "updatedAt": "2026-01-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -530,28 +530,6 @@
         },
         {
             "repo": "key4hep/<br>key4hep-actions",
-            "num": 61,
-            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/61'>Bump actions/setup-python from 7.0.0 to 7.1.0 in /workflows</a>",
-            "author": "dependabot",
-            "createdAt": "2026-10-26",
-            "updatedAt": "2026-10-26",
-            "mergeOk": "yes",
-            "labels": "dependencies \ngithub_actions",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-actions",
-            "num": 60,
-            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/60'>Bump stefanzweifel/git-auto-commit-action from 7.2.0 to 7.2.1 in /workflows</a>",
-            "author": "dependabot",
-            "createdAt": "2026-10-26",
-            "updatedAt": "2026-10-26",
-            "mergeOk": "yes",
-            "labels": "dependencies \ngithub_actions",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-actions",
             "num": 56,
             "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/56'>Use the LCG nightlies for the downstream builds</a>",
             "author": "jmcarcell",
@@ -568,7 +546,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-03-18",
             "updatedAt": "2026-07-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -590,6 +568,17 @@
             "author": "jmcarcell",
             "createdAt": "2025-03-24",
             "updatedAt": "2026-07-06",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 118,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
+            "author": "Debottam",
+            "createdAt": "2026-10-21",
+            "updatedAt": "2026-10-26",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -600,17 +589,6 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
             "author": "andread3vita",
             "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 118,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
-            "author": "Debottam",
-            "createdAt": "2026-10-21",
             "updatedAt": "2026-10-23",
             "mergeOk": "yes",
             "labels": "",
@@ -937,22 +915,22 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 51,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
-            "author": "Jullianwatts",
-            "createdAt": "2026-08-22",
-            "updatedAt": "2026-10-24",
+            "num": 52,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/52'>Pandora interface for the IDEA detector</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-08-24",
+            "updatedAt": "2026-10-26",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 52,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/52'>[WIP] Pandora interface for the IDEA detector</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-08-24",
-            "updatedAt": "2026-10-23",
+            "num": 51,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
+            "author": "Jullianwatts",
+            "createdAt": "2026-08-22",
+            "updatedAt": "2026-10-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1640,17 +1618,6 @@
             "assignees": ""
         },
         {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 112,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/112'>Adding of a function to obtain MC indices array and a parents tuples \u2026</a>",
-            "author": "Tristan63170",
-            "createdAt": "2021-10-29",
-            "updatedAt": "2022-05-03",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
             "num": 293,
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/293'>Optionally recentre SW position window, optionally correct per-layer barycentres for S-curve</a>",
@@ -2052,7 +2019,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1707'>Multiple commits: doc, Geant3 geometries, structure creation plugin</a>",
             "author": "MarkusFrankATcernch",
             "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-23",
+            "updatedAt": "2026-10-26",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
