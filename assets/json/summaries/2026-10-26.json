@@ -1,0 +1,24 @@
+{
+  "updated_at": "2026-10-26T13:49:41Z",
+  "period_start": "2026-10-19",
+  "period_end": "2026-10-26",
+  "summary": [
+    "- **[key4hep/k4FWCore#413](https://github.com/key4hep/k4FWCore/pull/413)** — `OverlayTiming` gains a `RandomMixBackgroundFiles` option. Each file in a background group becomes an independent event source, drawn from a shuffled permutation that is reshuffled once exhausted. This fixes the bias where beam-induced background split into many single-event files only ever sampled the first few files; tests and documentation are included.",
+    "- **[key4hep/k4ActsTracking#127](https://github.com/key4hep/k4ActsTracking/pull/127)** — Outside-in CKF (`PropagateBackward`) now starts from the outermost seed space point, so outer seed hits are no longer dropped from final tracks. Seed parameters and the magnetic field are evaluated at the start point, which changes the default inside-out seeding too. Backward tracks are reversed to inside-out order, stop at the reference surface, and label their seed states `AtLastHit`.",
+    "- **[PandoraPFAOrg/LCContent#33](https://github.com/PandoraPFAOrg/LCContent/pull/33)** — Adds Pandora particle-flow algorithms for the IDEA option 2 detector. These include ECAL-seeded HCAL clustering, dual-readout correction, PFO creation, and two optional ONNX-based algorithms (photon ID and satellite cluster merging) built only with `LCContent_BUILD_ML=ON`. The package now requires PandoraSDK ≥ 04.00.01.",
+    "- **[AIDASoft/DD4hep#1706](https://github.com/AIDASoft/DD4hep/pull/1706)** — Fixes volume divisions, which did not assign volume and placement extensions. The missing extensions caused null-pointer exceptions when traversing the volume hierarchy.",
+    "- **[key4hep/k4geo#669](https://github.com/key4hep/k4geo/pull/669)** — Adds the first version of the ALFA FCC-ee detector concept (`ALFA_o1_v00`). It includes a Grainita ECAL barrel driver and sensitive-detector action, an outer tracker, a new rho-phi-theta segmentation, a steering file and tests.",
+    "- **[key4hep/k4geo#674](https://github.com/key4hep/k4geo/pull/674)** — `ALLEGRO_o1_v04` now includes its dimensions, materials and other common files from `ALLEGRO_o1_v03` and keeps only its distinct HCAL files. This aligns properties such as the silicon wrapper between the two versions and prevents silent divergence like that reported in k4geo#673.",
+    "- **[HEP-FCC/FCC-config#402](https://github.com/HEP-FCC/FCC-config/pull/402)** — ALLEGRO digi/reco steering gains a `siDigitizer` option to use the new `VTXdigitizerDetailed` for silicon detectors instead of `DDPlanarDigi`. Pixel pitches are now read from the compact files. Digitiser thresholds and smearing still need to be tuned.",
+    "- **[HEP-FCC/FCC-config#407](https://github.com/HEP-FCC/FCC-config/pull/407)** — IDEA `run_digi_reco.py` adds a `--trackingModel` option and downloads the ~65 MB GGTF ONNX model only when it is missing, writing to a temporary file to avoid leaving corrupted downloads. `k4run` no longer needs network access on every run, and benchmark timings are no longer inflated by the download.",
+    "- **[HEP-FCC/k4RecCalorimeter#291](https://github.com/HEP-FCC/k4RecCalorimeter/pull/291)** — `TopoCaloNoisyCells` stores noise data as an indexed vector held in `CaloCellConstantsSvc` instead of a per-tool map. This makes lookups faster and avoids duplicating memory when the tool is configured multiple times. ALLEGRO reconstruction results are unchanged.",
+    "- **[HEP-FCC/fcc-physics-events#30](https://github.com/HEP-FCC/fcc-physics-events/pull/30)** — Datasets created through the single-record form must now carry a validated DRS request reference (`DRS-<n>`). Creating new navigation values such as accelerators or campaigns is restricted to admins, enforced server-side.",
+    "- **[HEP-FCC/fcc-drs#123](https://github.com/HEP-FCC/fcc-drs/pull/123)** — DIRAC IDs tracked on campaign requests are renamed from \"production IDs\" to \"transformation IDs\" across labels, routes and activity types. The database table migrates to `transformation_ids` for both SQLite and Postgres.",
+    "- **[key4hep/k4Bench#252](https://github.com/key4hep/k4Bench/pull/252)** — Adds a Correlations dashboard section for sim and reco that relates per-event costs to event content. It offers a clickable Spearman matrix and typed expressions. Benchmarks now record generator-level `event_source.json.gz` and per-collection entries and energies."
+  ],
+  "usage": {
+    "input_tokens": 56842,
+    "output_tokens": 7441
+  },
+  "cost_usd": 0.376188
+}
