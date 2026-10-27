@@ -1,226 +1,336 @@
 {
-  "updated_at": "2026-10-26T13:49:41Z",
-  "period_start": "2026-10-19",
-  "period_end": "2026-10-26",
+  "updated_at": "2026-10-27T12:57:02Z",
+  "period_start": "2026-10-20",
+  "period_end": "2026-10-27",
   "summary": [
-    "- **[key4hep/k4FWCore#413](https://github.com/key4hep/k4FWCore/pull/413)** — `OverlayTiming` gains a `RandomMixBackgroundFiles` option. Each file in a background group becomes an independent event source, drawn from a shuffled permutation that is reshuffled once exhausted. This fixes the bias where beam-induced background split into many single-event files only ever sampled the first few files; tests and documentation are included.",
-    "- **[key4hep/k4ActsTracking#127](https://github.com/key4hep/k4ActsTracking/pull/127)** — Outside-in CKF (`PropagateBackward`) now starts from the outermost seed space point, so outer seed hits are no longer dropped from final tracks. Seed parameters and the magnetic field are evaluated at the start point, which changes the default inside-out seeding too. Backward tracks are reversed to inside-out order, stop at the reference surface, and label their seed states `AtLastHit`.",
-    "- **[PandoraPFAOrg/LCContent#33](https://github.com/PandoraPFAOrg/LCContent/pull/33)** — Adds Pandora particle-flow algorithms for the IDEA option 2 detector. These include ECAL-seeded HCAL clustering, dual-readout correction, PFO creation, and two optional ONNX-based algorithms (photon ID and satellite cluster merging) built only with `LCContent_BUILD_ML=ON`. The package now requires PandoraSDK ≥ 04.00.01.",
-    "- **[AIDASoft/DD4hep#1706](https://github.com/AIDASoft/DD4hep/pull/1706)** — Fixes volume divisions, which did not assign volume and placement extensions. The missing extensions caused null-pointer exceptions when traversing the volume hierarchy.",
-    "- **[key4hep/k4geo#669](https://github.com/key4hep/k4geo/pull/669)** — Adds the first version of the ALFA FCC-ee detector concept (`ALFA_o1_v00`). It includes a Grainita ECAL barrel driver and sensitive-detector action, an outer tracker, a new rho-phi-theta segmentation, a steering file and tests.",
-    "- **[key4hep/k4geo#674](https://github.com/key4hep/k4geo/pull/674)** — `ALLEGRO_o1_v04` now includes its dimensions, materials and other common files from `ALLEGRO_o1_v03` and keeps only its distinct HCAL files. This aligns properties such as the silicon wrapper between the two versions and prevents silent divergence like that reported in k4geo#673.",
-    "- **[HEP-FCC/FCC-config#402](https://github.com/HEP-FCC/FCC-config/pull/402)** — ALLEGRO digi/reco steering gains a `siDigitizer` option to use the new `VTXdigitizerDetailed` for silicon detectors instead of `DDPlanarDigi`. Pixel pitches are now read from the compact files. Digitiser thresholds and smearing still need to be tuned.",
-    "- **[HEP-FCC/FCC-config#407](https://github.com/HEP-FCC/FCC-config/pull/407)** — IDEA `run_digi_reco.py` adds a `--trackingModel` option and downloads the ~65 MB GGTF ONNX model only when it is missing, writing to a temporary file to avoid leaving corrupted downloads. `k4run` no longer needs network access on every run, and benchmark timings are no longer inflated by the download.",
-    "- **[HEP-FCC/k4RecCalorimeter#291](https://github.com/HEP-FCC/k4RecCalorimeter/pull/291)** — `TopoCaloNoisyCells` stores noise data as an indexed vector held in `CaloCellConstantsSvc` instead of a per-tool map. This makes lookups faster and avoids duplicating memory when the tool is configured multiple times. ALLEGRO reconstruction results are unchanged.",
-    "- **[HEP-FCC/fcc-physics-events#30](https://github.com/HEP-FCC/fcc-physics-events/pull/30)** — Datasets created through the single-record form must now carry a validated DRS request reference (`DRS-<n>`). Creating new navigation values such as accelerators or campaigns is restricted to admins, enforced server-side.",
-    "- **[HEP-FCC/fcc-drs#123](https://github.com/HEP-FCC/fcc-drs/pull/123)** — DIRAC IDs tracked on campaign requests are renamed from \"production IDs\" to \"transformation IDs\" across labels, routes and activity types. The database table migrates to `transformation_ids` for both SQLite and Postgres.",
-    "- **[key4hep/k4Bench#252](https://github.com/key4hep/k4Bench/pull/252)** — Adds a Correlations dashboard section for sim and reco that relates per-event costs to event content. It offers a clickable Spearman matrix and typed expressions. Benchmarks now record generator-level `event_source.json.gz` and per-collection entries and energies."
+    "- **[key4hep/k4FWCore#413](https://github.com/key4hep/k4FWCore/pull/413)** — `OverlayTiming` gains a `RandomMixBackgroundFiles` option for beam-induced background, which is often produced as many single-event files. When enabled, each file in a group becomes an independent event source and is drawn from a shuffled permutation that is reshuffled once exhausted, so short runs no longer see only the first few files. A bug where only one background file was used across a bunch train was found and fixed during review, and documentation and tests were added.",
+    "- **[PandoraPFAOrg/LCContent#33](https://github.com/PandoraPFAOrg/LCContent/pull/33)** — Adds Pandora particle-flow algorithms for the IDEA option 2 detector, including ECAL-seeded HCAL clustering, IDEA PFO creation, forward photon ID and a dual-readout correction plugin. Two ONNX-based ML algorithms (neutral cluster PID and satellite cluster merging) build only with `LCContent_BUILD_ML=ON`. Requires PandoraSDK ≥ 04.00.01, and the new algorithms are not registered by default, so clients must register them.",
+    "- **[key4hep/k4ActsTracking#127](https://github.com/key4hep/k4ActsTracking/pull/127)** — Fixes outside-in CKF (`PropagateBackward`), which started at the innermost seed space point and dropped the outer seed hits from final tracks. It now starts at the outermost point, outputs tracks in inside-out order, stops at the reference surface and labels seed states `AtLastHit`. Seed parameters and the magnetic field are now evaluated at the start space point, which also affects the default inside-out seeding.",
+    "- **[AIDASoft/DD4hep#1706](https://github.com/AIDASoft/DD4hep/pull/1706)** — Fixes volume divisions, which did not assign volume and placement extensions. The missing extensions caused null-pointer exceptions when traversing the volume hierarchy of divided volumes.",
+    "- **[key4hep/k4geo#669](https://github.com/key4hep/k4geo/pull/669)** — Adds the first version of the ALFA detector concept for FCC-ee (`ALFA_o1_v00`). It includes a Grainita ECAL barrel driver with a dedicated sensitive-detector action, an outer tracker barrel, an extended vertex barrel constructor, `FCCSWGridRhoPhiTheta` segmentation, a steering file and tests.",
+    "- **[key4hep/k4geo#674](https://github.com/key4hep/k4geo/pull/674)** — `ALLEGRO_o1_v04` now includes `DectDimensions` and other common files directly from `ALLEGRO_o1_v03`, keeping only its own HCAL files. This guarantees identical properties, such as the silicon wrapper, between the two versions and avoids divergent copies like the one behind k4geo#673.",
+    "- **[hep-fcc/FCC-config#402](https://github.com/HEP-FCC/FCC-config/pull/402)** — Adds a `siDigitizer` option to the ALLEGRO digi/reco steering to use the new `VTXdigitizerDetailed` instead of `DDPlanarDigi` for silicon detectors. Pixel pitches are now parsed from the compact files as the single source of truth, while `DDPlanarDigi` resolutions can still be overridden. Digitiser thresholds and smearing settings still need tuning.",
+    "- **[hep-fcc/k4RecCalorimeter#291](https://github.com/HEP-FCC/k4RecCalorimeter/pull/291)** — `TopoCaloNoisyCells` now stores noise data as an indexed vector instead of a hash map, which is faster and smaller. The data is shared through `CaloCellConstantsSvc` to avoid duplication when the tool is configured multiple times, and ALLEGRO reconstruction output is verified unchanged.",
+    "- **[hep-fcc/FCC-config#407](https://github.com/HEP-FCC/FCC-config/pull/407)** — The IDEA `run_digi_reco.py` previously re-downloaded the ~65 MB GGTF model on every `k4run`. It now takes the model path from a new `--trackingModel` option (default unchanged) and downloads atomically from `fccsw.web.cern.ch` only if the file is missing. This removes the network dependency for cached runs and keeps the download out of k4Bench timing.",
+    "- **[key4hep/key4hep-spack#940](https://github.com/key4hep/key4hep-spack/pull/940)** — The nightlies setup script gains a `--latest-tags` option that sources the LCG `devkey` view, using the same platforms and options as `devkey-head`.",
+    "- **[key4hep/k4Opt#18](https://github.com/key4hep/k4Opt/pull/18)** — Adds the first end-to-end `k4opt evaluate` command for detector optimisation. It materialises a candidate geometry, runs `ddsim`, measures ECAL hit multiplicity from the EDM4hep output and writes a `summary.json` with the measurement, geometry fingerprint, exact ddsim command and environment provenance.",
+    "- **[hep-fcc/fcc-physics-events#30](https://github.com/HEP-FCC/fcc-physics-events/pull/30)** — Datasets created through the single-record form now require a validated DRS request reference (`DRS-<number>`). Creating new navigation values (accelerator, campaign, etc.) now requires admin rights, enforced server-side."
   ],
   "omitted": [
     {
+      "pr": "hep-fcc/FCCDIRAC#21",
+      "url": "https://github.com/HEP-FCC/FCCDIRAC/pull/21",
+      "reason": "Adds production configuration for the summer2026 ttbar dataset at 365 GeV with IDEA Delphes cards (lower priority)."
+    },
+    {
       "pr": "key4hep/key4hep-doc#172",
       "url": "https://github.com/key4hep/key4hep-doc/pull/172",
-      "reason": "Dependabot bump of certifi to 2026.10.19 in the documentation requirements."
+      "reason": "Dependabot bump of certifi to 2026.10.19."
     },
     {
       "pr": "key4hep/key4hep-doc#171",
       "url": "https://github.com/key4hep/key4hep-doc/pull/171",
-      "reason": "Dependabot bump of nbconvert to 7.17.2 in the documentation requirements."
+      "reason": "Dependabot bump of nbconvert to 7.17.2."
     },
     {
       "pr": "key4hep/key4hep-actions#61",
       "url": "https://github.com/key4hep/key4hep-actions/pull/61",
-      "reason": "Dependabot bump of actions/setup-python to 7.1.0 in the shared workflows."
+      "reason": "Dependabot bump of actions/setup-python to 7.1.0."
     },
     {
       "pr": "key4hep/key4hep-actions#60",
       "url": "https://github.com/key4hep/key4hep-actions/pull/60",
-      "reason": "Dependabot bump of git-auto-commit-action to 7.2.1 in the shared workflows."
+      "reason": "Dependabot bump of git-auto-commit-action to 7.2.1."
+    },
+    {
+      "pr": "key4hep/k4Opt#19",
+      "url": "https://github.com/key4hep/k4Opt/pull/19",
+      "reason": "Review fixes: constraint unit preflight, exact categorical parsing, rejection of non-finite ddsim numbers and listing of external resources in the manifest (lower priority)."
+    },
+    {
+      "pr": "hep-fcc/fcc-drs#128",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/128",
+      "reason": "Renovate bump of marked to 18.1.2."
+    },
+    {
+      "pr": "hep-fcc/fcc-drs#127",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/127",
+      "reason": "Requester guide now asks for explicit generator settings and attached generator cards (lower priority)."
+    },
+    {
+      "pr": "hep-fcc/fcc-drs#126",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/126",
+      "reason": "Renovate bump of katex to 0.19.1."
     },
     {
       "pr": "key4hep/k4geo#675",
       "url": "https://github.com/key4hep/k4geo/pull/675",
-      "reason": "Removes an unused rho-offset member from the `FCCSWGridRhoPhiTheta` segmentation to silence a Clang warning."
+      "reason": "Removes an unused rho offset member from `FCCSWGridRhoPhiTheta_k4geo` to silence a Clang warning."
     },
     {
       "pr": "key4hep/key4hep-spack#941",
       "url": "https://github.com/key4hep/key4hep-spack/pull/941",
-      "reason": "Dependabot bump of actions/setup-python to 7.1.0 in the pre-commit workflow."
+      "reason": "Dependabot bump of actions/setup-python to 7.1.0."
     },
     {
-      "pr": "key4hep/key4hep-spack#940",
-      "url": "https://github.com/key4hep/key4hep-spack/pull/940",
-      "reason": "Adds a `--latest-tags` flag to the nightlies setup script to source the LCG `devkey` view (lower priority)."
+      "pr": "key4hep/k4Opt#17",
+      "url": "https://github.com/key4hep/k4Opt/pull/17",
+      "reason": "Adds an immutable `EvaluationRecord` and an internal candidate-to-record evaluation bridge (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4Opt#16",
+      "url": "https://github.com/key4hep/k4Opt/pull/16",
+      "reason": "Caps geometry include depth and stops on looping directory symlinks."
+    },
+    {
+      "pr": "key4hep/k4Opt#15",
+      "url": "https://github.com/key4hep/k4Opt/pull/15",
+      "reason": "Makes geometry overrides alias-aware and validates symlink aliases before copying."
+    },
+    {
+      "pr": "key4hep/k4Opt#14",
+      "url": "https://github.com/key4hep/k4Opt/pull/14",
+      "reason": "Includes file aliases in the geometry fingerprint and fixes aliased include traversal, manifest duplicates and deep-YAML handling."
+    },
+    {
+      "pr": "key4hep/k4Opt#13",
+      "url": "https://github.com/key4hep/k4Opt/pull/13",
+      "reason": "Fixes symlinked include names, redirected includes and the `EOPNOTSUPP` publish fallback in geometry materialisation."
+    },
+    {
+      "pr": "key4hep/k4Opt#12",
+      "url": "https://github.com/key4hep/k4Opt/pull/12",
+      "reason": "Defines the evaluator protocol and the evaluation request/result models (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4Opt#11",
+      "url": "https://github.com/key4hep/k4Opt/pull/11",
+      "reason": "Resolves geometry targets when loading a problem specification (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4Opt#10",
+      "url": "https://github.com/key4hep/k4Opt/pull/10",
+      "reason": "Rewrites generator quantities in the docs and example as YAML blocks; documentation only."
+    },
+    {
+      "pr": "key4hep/k4Opt#9",
+      "url": "https://github.com/key4hep/k4Opt/pull/9",
+      "reason": "Drafts the `k4opt.problem/v1alpha1` problem specification and its strict loader (lower priority)."
+    },
+    {
+      "pr": "key4hep/k4Opt#8",
+      "url": "https://github.com/key4hep/k4Opt/pull/8",
+      "reason": "Makes the unreadable-resource test independent of the running user."
+    },
+    {
+      "pr": "key4hep/k4Opt#7",
+      "url": "https://github.com/key4hep/k4Opt/pull/7",
+      "reason": "Reports unreadable geometry files and resources as include errors instead of tracebacks."
+    },
+    {
+      "pr": "key4hep/k4Opt#6",
+      "url": "https://github.com/key4hep/k4Opt/pull/6",
+      "reason": "Fingerprints verified resource hashes and drops externals of unreachable files from the manifest."
+    },
+    {
+      "pr": "key4hep/k4Opt#5",
+      "url": "https://github.com/key4hep/k4Opt/pull/5",
+      "reason": "Handles external-to-local resource redirects, duplicate externals and staging errors."
+    },
+    {
+      "pr": "key4hep/k4Opt#4",
+      "url": "https://github.com/key4hep/k4Opt/pull/4",
+      "reason": "Supports editing read-only geometry sources, rejects unrelocatable resources and fixes manifest externals."
+    },
+    {
+      "pr": "key4hep/k4Opt#3",
+      "url": "https://github.com/key4hep/k4Opt/pull/3",
+      "reason": "Completes resource handling, adds atomic output publication and fixes the YAML loader."
+    },
+    {
+      "pr": "key4hep/k4Opt#2",
+      "url": "https://github.com/key4hep/k4Opt/pull/2",
+      "reason": "Fixes geometry fingerprint and materialisation correctness issues found in a repository review."
+    },
+    {
+      "pr": "key4hep/k4Opt#1",
+      "url": "https://github.com/key4hep/k4Opt/pull/1",
+      "reason": "CI fixes: makes the source-root test git-independent and skips hooks in CI."
     },
     {
       "pr": "key4hep/k4PFHitML#6",
       "url": "https://github.com/key4hep/k4PFHitML/pull/6",
-      "reason": "Removes leftover k4ProjectTemplate content and applies clang-format."
+      "reason": "Removes k4ProjectTemplate remnants and applies clang-format."
     },
     {
       "pr": "key4hep/k4Bench#272",
       "url": "https://github.com/key4hep/k4Bench/pull/272",
-      "reason": "Adds a one-event, per-algorithm cost view to the reco Correlations dashboard and splits the Events section into Correlations and Event Size (lower priority)."
+      "reason": "Dashboard Correlations can open one event and show per-algorithm cost (lower priority)."
     },
     {
       "pr": "key4hep/k4Bench#267",
       "url": "https://github.com/key4hep/k4Bench/pull/267",
-      "reason": "Adds a configuration selector to the reco Correlations tab, revalidating chosen metrics when the configuration changes (lower priority)."
+      "reason": "Adds a configuration selector to the dashboard reco Correlations tab (lower priority)."
     },
     {
       "pr": "key4hep/k4Bench#266",
       "url": "https://github.com/key4hep/k4Bench/pull/266",
-      "reason": "Ranks the reco Components table by per-event contribution, with skipped events counted (lower priority)."
+      "reason": "Ranks the reco components table by per-event contribution, counting skipped events (lower priority)."
     },
     {
       "pr": "key4hep/k4Bench#271",
       "url": "https://github.com/key4hep/k4Bench/pull/271",
-      "reason": "Dependabot update of the mkdocstrings requirement to ≥1.0.8."
+      "reason": "Dependabot update of the mkdocstrings requirement."
     },
     {
       "pr": "key4hep/k4Bench#270",
       "url": "https://github.com/key4hep/k4Bench/pull/270",
-      "reason": "Dependabot update of the pymdown-extensions requirement to ≥12.3."
+      "reason": "Dependabot update of the pymdown-extensions requirement."
     },
     {
       "pr": "key4hep/k4Bench#268",
       "url": "https://github.com/key4hep/k4Bench/pull/268",
-      "reason": "Dependabot bump of streamlit to 1.66.0 for the dashboard."
+      "reason": "Dependabot bump of streamlit to 1.66.0."
     },
     {
-      "pr": "HEP-FCC/fcc-drs#124",
+      "pr": "hep-fcc/fcc-drs#124",
       "url": "https://github.com/HEP-FCC/fcc-drs/pull/124",
       "reason": "Renovate bump of modernc.org/sqlite to v1.61.0."
     },
     {
-      "pr": "HEP-FCC/fcc-drs#125",
+      "pr": "hep-fcc/fcc-drs#125",
       "url": "https://github.com/HEP-FCC/fcc-drs/pull/125",
-      "reason": "Adds a sentence to the DRS help overview stating that MC Production contacts hold the coordinator role."
+      "reason": "States in the help overview that MC Production contacts hold the coordinator role."
     },
     {
-      "pr": "HEP-FCC/fcc-drs#116",
+      "pr": "hep-fcc/fcc-drs#116",
       "url": "https://github.com/HEP-FCC/fcc-drs/pull/116",
-      "reason": "Adds an in-app `/help` page to DRS with overview, requester and coordinator guides (lower priority)."
+      "reason": "Adds an in-app Help page with requester and coordinator guides (lower priority)."
+    },
+    {
+      "pr": "hep-fcc/fcc-drs#123",
+      "url": "https://github.com/HEP-FCC/fcc-drs/pull/123",
+      "reason": "Renames DIRAC Production IDs to Transformation IDs in the UI and database, with migration (lower priority)."
     },
     {
       "pr": "key4hep/key4hep-spack#938",
       "url": "https://github.com/key4hep/key4hep-spack/pull/938",
-      "reason": "Adds an `ml` variant to the Spack `lccontent` package that enables `LCContent_BUILD_ML` with an onnxruntime dependency."
+      "reason": "Adds an `ml` variant to the Spack `lccontent` package; packaging change."
     },
     {
       "pr": "key4hep/k4Bench#265",
       "url": "https://github.com/key4hep/k4Bench/pull/265",
-      "reason": "Regroups the reco dashboard page into question-based sections and adds a Components inspector, with aliases preserving old links (lower priority)."
+      "reason": "Regroups the dashboard reco page into Time, Memory and Components sections (lower priority)."
     },
     {
       "pr": "PandoraPFAOrg/LCContent#51",
       "url": "https://github.com/PandoraPFAOrg/LCContent/pull/51",
-      "reason": "Bumps the CMake project version to 05.01.01 to match the new tag."
+      "reason": "Bumps the CMake version to 05.01.01 to match the tag; build-system change."
     },
     {
       "pr": "key4hep/k4Reco#73",
       "url": "https://github.com/key4hep/k4Reco/pull/73",
-      "reason": "Adds an external-data folder so CMake downloads the MAIA calorimeter threshold maps used by CaloHitSelector."
+      "reason": "Adds an external-data folder to download MAIA calorimeter threshold maps; external-data mechanism for a non-FCC detector."
     },
     {
       "pr": "key4hep/k4DetectorPerformance#8",
       "url": "https://github.com/key4hep/k4DetectorPerformance/pull/8",
-      "reason": "Updates the tracking validation test script to use the `WireTrackerDigi_v01` name for the DCH digitiser."
+      "reason": "Uses the updated DCH digitizer name in a tracking validation test script."
     },
     {
       "pr": "key4hep/k4Bench#264",
       "url": "https://github.com/key4hep/k4Bench/pull/264",
-      "reason": "Makes the dashboard download only the run artifacts each view needs, using a lazily loaded, manifest-tracked cache (lower priority)."
+      "reason": "Dashboard downloads only the run files the current view needs (lower priority)."
     },
     {
       "pr": "key4hep/k4Bench#263",
       "url": "https://github.com/key4hep/k4Bench/pull/263",
-      "reason": "Pins the exact benchmark run in dashboard URLs and adds an \"every run\" history mode per release (lower priority)."
+      "reason": "Dashboard links pin the exact run and offer an every-run history mode (lower priority)."
     },
     {
       "pr": "key4hep/k4Bench#262",
       "url": "https://github.com/key4hep/k4Bench/pull/262",
-      "reason": "Rewords the reco Efficiency help text to describe hardware counters neutrally and drops the low-IPC \"stall\" band (lower priority)."
+      "reason": "Rewords reco Efficiency counters neutrally and drops the low-IPC stall band (lower priority)."
     },
     {
       "pr": "key4hep/k4Bench#261",
       "url": "https://github.com/key4hep/k4Bench/pull/261",
-      "reason": "Reads each reco configuration's component file independently, so one malformed file no longer breaks the whole run view (lower priority)."
+      "reason": "Reads each reco configuration's component file independently so one malformed file does not break the view (lower priority)."
     },
     {
       "pr": "key4hep/k4Bench#260",
       "url": "https://github.com/key4hep/k4Bench/pull/260",
-      "reason": "Excludes the warm-up event from Data Flow per-event times and labels Efficiency times as per event the component ran in (lower priority)."
+      "reason": "Excludes the warm-up event from Data Flow timing and relabels Efficiency times (lower priority)."
     },
     {
       "pr": "key4hep/k4Bench#259",
       "url": "https://github.com/key4hep/k4Bench/pull/259",
-      "reason": "Plots the reco Memory typical-event history against the whole-job median instead of summing component medians (lower priority)."
+      "reason": "Reco Memory history shows the whole-job median instead of summing component medians (lower priority)."
     },
     {
-      "pr": "HEP-FCC/FCCDIRAC#19",
+      "pr": "hep-fcc/FCCDIRAC#19",
       "url": "https://github.com/HEP-FCC/FCCDIRAC/pull/19",
-      "reason": "Adds Pythia/Delphes IDEA production configurations for ZH, ZZ and WW at 240 GeV to the summer2026 test campaign."
+      "reason": "Adds configurations for the ZH, ZZ and WW datasets at 240 GeV in the summer2026 test campaign (lower priority)."
     },
     {
-      "pr": "HEP-FCC/fcc-drs#121",
+      "pr": "hep-fcc/fcc-drs#121",
       "url": "https://github.com/HEP-FCC/fcc-drs/pull/121",
-      "reason": "Renovate bump of marked to v18.1.1."
+      "reason": "Renovate bump of marked to 18.1.1."
     },
     {
-      "pr": "HEP-FCC/fcc-drs#120",
+      "pr": "hep-fcc/fcc-drs#120",
       "url": "https://github.com/HEP-FCC/fcc-drs/pull/120",
-      "reason": "Renovate bump of dompurify to v3.4.17."
+      "reason": "Renovate bump of dompurify to 3.4.17."
     },
     {
-      "pr": "HEP-FCC/fcc-drs#122",
+      "pr": "hep-fcc/fcc-drs#122",
       "url": "https://github.com/HEP-FCC/fcc-drs/pull/122",
-      "reason": "Shows `DRS-N` request keys throughout the DRS interface and emails and autolinks DRS references in text (lower priority)."
+      "reason": "Uses `DRS-<n>` keys to reference and autolink requests (lower priority)."
     },
     {
-      "pr": "HEP-FCC/fcc-physics-events#31",
+      "pr": "hep-fcc/fcc-physics-events#31",
       "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/31",
-      "reason": "Adds OpenShift manifests and a CI deploy job for the new fcc-dami production project."
+      "reason": "Scaffolds an OpenShift deployment for the fcc-dami production project; deployment/CI change."
     },
     {
-      "pr": "HEP-FCC/mc-productions-tutorials#5",
+      "pr": "hep-fcc/mc-productions-tutorials#5",
       "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/5",
-      "reason": "Links the production DaMI instance in the tutorial and notes that no common validation procedure exists yet."
+      "reason": "Links the production DaMI and clarifies validation in the DaMI tutorial."
     },
     {
-      "pr": "HEP-FCC/mc-productions-tutorials#4",
+      "pr": "hep-fcc/mc-productions-tutorials#4",
       "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/4",
-      "reason": "Adds a stopgap setup section linking existing documentation and the FCC Production Manager Guide."
+      "reason": "Links existing setup docs and the FCC Production Manager Guide."
     },
     {
-      "pr": "HEP-FCC/mc-productions-tutorials#3",
+      "pr": "hep-fcc/mc-productions-tutorials#3",
       "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/3",
-      "reason": "Adds a tutorial on launching iLCDirac productions, with examples and troubleshooting."
+      "reason": "Adds an iLCDirac production-launching tutorial."
     },
     {
-      "pr": "HEP-FCC/mc-productions-tutorials#2",
+      "pr": "hep-fcc/mc-productions-tutorials#2",
       "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/2",
-      "reason": "Adds a tutorial on publishing datasets in DaMI."
+      "reason": "Adds a DaMI dataset publication tutorial."
     },
     {
-      "pr": "HEP-FCC/mc-productions-tutorials#1",
+      "pr": "hep-fcc/mc-productions-tutorials#1",
       "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/1",
-      "reason": "Adds training material on the MC contact workflow and the DRS, with exercises."
+      "reason": "Adds MC contact workflow and DRS training material."
     },
     {
       "pr": "key4hep/key4hep-spack#936",
       "url": "https://github.com/key4hep/key4hep-spack/pull/936",
-      "reason": "Updates Spack to v1.2.2 and the spack-packages commit, fixes package URLs and hashes, and drops the alma9 externals image."
+      "reason": "Updates Spack to v1.2.2 and the spack-packages commit, and drops the alma9 externals image; build infrastructure."
     },
     {
       "pr": "key4hep/key4hep-dev-utils#33",
       "url": "https://github.com/key4hep/key4hep-dev-utils/pull/33",
-      "reason": "Adds LCFIPlus to the script that checks for commits after release tags."
+      "reason": "Adds LCFIPlus to the release commit checks script."
     },
     {
       "pr": "key4hep/k4Bench#258",
       "url": "https://github.com/key4hep/k4Bench/pull/258",
-      "reason": "Removes padding between dashboard charts and their legends and adds a findings notice above the Memory chart."
+      "reason": "Removes padding between dashboard charts and their legends and names Memory findings above the chart."
     },
     {
       "pr": "key4hep/k4Bench#257",
@@ -230,62 +340,27 @@
     {
       "pr": "key4hep/k4Bench#256",
       "url": "https://github.com/key4hep/k4Bench/pull/256",
-      "reason": "Shows reco Memory leak and step warnings as cards with per-component heap sparklines (lower priority)."
+      "reason": "Shows reco Memory leak and step warnings as cards with heap sparklines (lower priority)."
     },
     {
       "pr": "key4hep/k4Bench#255",
       "url": "https://github.com/key4hep/k4Bench/pull/255",
-      "reason": "Fixes log-axis tick labels, Data Flow node labels and Machine Info overflow in the dashboard."
+      "reason": "Fixes log-axis tick labels, Data Flow graph labels and Machine Info value overflow in the dashboard."
     },
     {
       "pr": "key4hep/k4Bench#253",
       "url": "https://github.com/key4hep/k4Bench/pull/253",
-      "reason": "Adds a log y-axis toggle to the reco heap-by-component chart (lower priority)."
+      "reason": "Adds a log y-axis toggle to the reco Memory heap chart (lower priority)."
     },
     {
       "pr": "key4hep/k4Bench#254",
       "url": "https://github.com/key4hep/k4Bench/pull/254",
-      "reason": "Resizes the reco Breakdown donut charts to fill their column."
-    },
-    {
-      "pr": "key4hep/EDM4hep#521",
-      "url": "https://github.com/key4hep/EDM4hep/pull/521",
-      "reason": "Gates ROOT dictionary targets and ROOT-dependent tests and tools in CMake, so EDM4hep builds against podio built without ROOT."
-    },
-    {
-      "pr": "key4hep/key4hep-spack#937",
-      "url": "https://github.com/key4hep/key4hep-spack/pull/937",
-      "reason": "Dependabot bump of free-disk-space to 4.0.1 in the Docker build workflow."
-    },
-    {
-      "pr": "key4hep/k4Bench#251",
-      "url": "https://github.com/key4hep/k4Bench/pull/251",
-      "reason": "Flags reco components whose heap steps up by 100 MB or more and keeps it, and shows each component's largest working set (lower priority)."
-    },
-    {
-      "pr": "key4hep/k4Bench#250",
-      "url": "https://github.com/key4hep/k4Bench/pull/250",
-      "reason": "Records each output file's compressed size per event and per collection, and adds Event Size sections to the dashboard (lower priority)."
-    },
-    {
-      "pr": "key4hep/k4Bench#249",
-      "url": "https://github.com/key4hep/k4Bench/pull/249",
-      "reason": "Binds dashboard views and controls to URL query parameters so copied links reopen the same view (lower priority)."
-    },
-    {
-      "pr": "key4hep/k4Bench#248",
-      "url": "https://github.com/key4hep/k4Bench/pull/248",
-      "reason": "Adds a nightly history of each reco component's heap, working set and growth to the dashboard (lower priority)."
-    },
-    {
-      "pr": "HEP-FCC/fcc-tutorials#210",
-      "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/210",
-      "reason": "Replaces the PuTTY/Xming Windows instructions with PowerShell's built-in SSH, keeping WSLg as an option for graphics."
+      "reason": "Resizes the reco Breakdown donuts to fill their row third."
     }
   ],
   "usage": {
-    "input_tokens": 56842,
-    "output_tokens": 7441
+    "input_tokens": 57439,
+    "output_tokens": 8443
   },
-  "cost_usd": 0.376188
+  "cost_usd": 0.398616
 }
