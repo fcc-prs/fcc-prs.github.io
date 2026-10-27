@@ -420,6 +420,28 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 135,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/135'>fix MAIA test digitiser configs</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-27",
+            "updatedAt": "2026-10-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 109,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-10-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 134,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/134'>Enable 4D Tracking for Beta < 1 Particles</a>",
             "author": "mlarson02",
@@ -447,17 +469,6 @@
             "author": "mlarson02",
             "createdAt": "2026-10-17",
             "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 109,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -585,6 +596,17 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 81,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
+            "author": "JonaDilg",
+            "createdAt": "2026-05-07",
+            "updatedAt": "2026-10-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 114,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/114'>Flatten loops for tracker hit to MC particle matching</a>",
             "author": "davidlange6",
@@ -612,17 +634,6 @@
             "author": "andread3vita",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 81,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
-            "author": "JonaDilg",
-            "createdAt": "2026-05-07",
-            "updatedAt": "2026-10-21",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -805,6 +816,17 @@
         },
         {
             "repo": "key4hep/<br>k4Reco",
+            "num": 74,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/74'>Store the time resolution as the hit time error in DDPlanarDigi</a>",
+            "author": "jburzy",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-10-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Reco",
             "num": 63,
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/63'>Port LCFIPlus and LCFIVertx to EDM4hep</a>",
             "author": "jmcarcell",
@@ -821,17 +843,6 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-10-25",
             "updatedAt": "2026-10-25",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Reco",
-            "num": 74,
-            "title": "<a href='https://github.com/key4hep/k4Reco/pull/74'>Store the time resolution as the hit time error in DDPlanarDigi</a>",
-            "author": "jburzy",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -921,6 +932,17 @@
             "createdAt": "2025-05-28",
             "updatedAt": "2025-05-30",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 62,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/62'>Make CI reproducible & allow tolerance for compiler-dependent ULP differences</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-10-27",
+            "updatedAt": "2026-10-27",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1162,18 +1184,7 @@
             "author": "safanaseem",
             "createdAt": "2026-10-21",
             "updatedAt": "2026-10-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCDIRAC",
-            "num": 21,
-            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/21'>Production of ttbar dataset at 365 GeV</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-10-02",
-            "updatedAt": "2026-10-02",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1195,7 +1206,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-04-15",
             "updatedAt": "2026-04-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1206,7 +1217,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-01-21",
             "updatedAt": "2026-01-22",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1217,7 +1228,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-01-21",
             "updatedAt": "2026-01-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1228,7 +1239,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-05-05",
             "updatedAt": "2025-05-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1239,7 +1250,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-04-28",
             "updatedAt": "2025-04-28",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1250,7 +1261,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-04-10",
             "updatedAt": "2025-04-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1261,7 +1272,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-04-08",
             "updatedAt": "2025-04-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1272,7 +1283,7 @@
             "author": "andresailer",
             "createdAt": "2024-04-18",
             "updatedAt": "2024-04-18",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1997,7 +2008,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1707'>Multiple commits: doc, Geant3 geometries, structure creation plugin</a>",
             "author": "MarkusFrankATcernch",
             "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-26",
+            "updatedAt": "2026-10-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2075,6 +2086,17 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-12",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "PandoraPFAOrg/<br>PandoraSDK",
+            "num": 41,
+            "title": "<a href='https://github.com/PandoraPFAOrg/PandoraSDK/pull/41'>feature/optical_hits_rebase</a>",
+            "author": "AndyChappell",
+            "createdAt": "2026-10-27",
+            "updatedAt": "2026-10-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
