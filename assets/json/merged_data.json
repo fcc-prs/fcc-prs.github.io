@@ -1,6 +1,34 @@
 {
-    "updated_at": "2026-10-26T12:05:20Z",
+    "updated_at": "2026-10-27T11:25:03Z",
     "data": [
+        {
+            "org": "hep-fcc",
+            "repo": "FCCDIRAC",
+            "num": 21,
+            "title": "Production of ttbar dataset at 365 GeV",
+            "url": "https://github.com/HEP-FCC/FCCDIRAC/pull/21",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-27",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Requested in request:    `DRS#4`\r\nAttempt 1 production ID: 17138",
+            "diff": {
+                "additions": 1085,
+                "deletions": 0,
+                "files": 5
+            },
+            "files": [
+                "productions/summer2026/tt/.gitignore",
+                "productions/summer2026/tt/card_IDEA.tcl",
+                "productions/summer2026/tt/edm4hep_IDEA.tcl",
+                "productions/summer2026/tt/p8_ee_tt_ecm365.cmd",
+                "productions/summer2026/tt/pythia_delphes.conf"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "key4hep-doc",
@@ -121,6 +149,161 @@
         },
         {
             "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 19,
+            "title": "Review fixes: unit preflight, exact categorical parsing, finite ddsim numbers, external resources",
+            "url": "https://github.com/key4hep/k4Opt/pull/19",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-26",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Changes\n\n- **Constraint units:** evaluators declare the unit of each metric; a constraint with a different unit is rejected before the geometry is materialized or ddsim starts.\n- **Categorical parsing:** a numeric categorical CLI value must equal a declared choice exactly (a float choice by its shortest decimal spelling); it is no longer rounded through binary64.\n- **ddsim:** `nan` and infinite numbers in the generator settings are rejected.\n- **Provenance:** absolute, URL and `$` file references on non-include elements are listed as external in the manifest (still outside the fingerprint).\n- **Docs:** problem and geometry docs match the implemented behavior.\n\nRegression tests added for each; unit suite, mypy and pre-commit pass.",
+            "diff": {
+                "additions": 96,
+                "deletions": 9,
+                "files": 10
+            },
+            "files": [
+                "docs/geometry.md",
+                "docs/problem.md",
+                "k4opt/ddsim/command.py",
+                "k4opt/evaluators/calo_hits.py",
+                "k4opt/geometry/includes.py",
+                "k4opt/problem/_run.py",
+                "tests/unit/ddsim/test_command.py",
+                "tests/unit/geometry/test_discovery.py",
+                "tests/unit/geometry/test_materialize.py",
+                "tests/unit/problem/test_run.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 18,
+            "title": "evaluate: simulate one candidate with ddsim and measure ECAL hit multiplicity",
+            "url": "https://github.com/key4hep/k4Opt/pull/18",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-26",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## What\n\nA first end-to-end vertical slice: one problem YAML and one candidate in, one real measurement out.\n\n```bash\nk4opt evaluate examples/problem/cld-ecal-hit-count.yaml \\\n  --param constants.ECal_cell_size=6.0 --output runs/cld-ecal-6mm\n```\n\nThe command validates the candidate, materializes its geometry from the catalog `load_problem()` already discovered, runs `ddsim` on the snapshot, reads the EDM4hep output with podio and returns an `EvaluationRecord`. `<output>/summary.json` records the candidate, status, measurement with uncertainty, geometry fingerprint, the exact ddsim command and exit code, observed event count, artifact paths, and the declared vs. observed environment.\n\n## Structure\n\n- `k4opt.ddsim`: builds the ddsim command from the generator settings, rejects user arguments\u2026",
+            "diff": {
+                "additions": 2573,
+                "deletions": 25,
+                "files": 25
+            },
+            "files": [
+                "README.md",
+                "docs/ddsim.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/problem.md",
+                "examples/problem/cld-ecal-granularity.yaml",
+                "examples/problem/cld-ecal-hit-count.yaml",
+                "k4opt/cli.py",
+                "k4opt/ddsim/__init__.py",
+                "k4opt/ddsim/command.py",
+                "k4opt/ddsim/errors.py",
+                "k4opt/ddsim/run.py",
+                "k4opt/evaluators/__init__.py",
+                "k4opt/evaluators/calo_hits.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/_run.py",
+                "k4opt/problem/cli.py",
+                "k4opt/problem/errors.py",
+                "pyproject.toml",
+                "tests/integration/problem/test_evaluate_ddsim.py",
+                "tests/support/simulation.py",
+                "tests/unit/ddsim/test_command.py",
+                "tests/unit/ddsim/test_run.py",
+                "tests/unit/evaluators/test_calo_hits.py",
+                "tests/unit/problem/test_run.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 128,
+            "title": "Update dependency marked to v18.1.2",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/128",
+            "author": "renovate",
+            "mergedAt": "2026-10-26",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [marked](https://marked.js.org) ([source](https://redirect.github.com/markedjs/marked)) | [`18.1.1` \u2192 `18.1.2`](https://renovatebot.com/diffs/npm/marked/18.1.1/18.1.2) | ![age](https://developer.mend.io/api/mc/badges/age/npm/marked/18.1.2?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/marked/18.1.1/18.1.2?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>markedjs/marked (marked)</summary>\n\n### [`v18.1.2`](https://redirect.github.com/markedjs/marked/releases/tag/v18.1.2)\n\n[Compare Source](https://redirect.github.com/markedjs/marked/compare/v18.1.1...v1\u2026",
+            "diff": {
+                "additions": 5,
+                "deletions": 5,
+                "files": 2
+            },
+            "files": [
+                "package-lock.json",
+                "package.json"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 127,
+            "title": "Ask for explicit generator settings and cards in the requester guide",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/127",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-26",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "- New Generator settings section: ME generator, ISR, parton shower, hadronization and tune\n- Generator cards should ideally be attached to every request, with their source; FCC-config is the recommended source",
+            "diff": {
+                "additions": 22,
+                "deletions": 5,
+                "files": 1
+            },
+            "files": [
+                "docs/help/requester.md"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-drs",
+            "num": 126,
+            "title": "Update dependency katex to v0.19.1",
+            "url": "https://github.com/HEP-FCC/fcc-drs/pull/126",
+            "author": "renovate",
+            "mergedAt": "2026-10-26",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [katex](https://katex.org) ([source](https://redirect.github.com/KaTeX/KaTeX)) | [`0.19.0` \u2192 `0.19.1`](https://renovatebot.com/diffs/npm/katex/0.19.0/0.19.1) | ![age](https://developer.mend.io/api/mc/badges/age/npm/katex/0.19.1?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/katex/0.19.0/0.19.1?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>KaTeX/KaTeX (katex)</summary>\n\n### [`v0.19.1`](https://redirect.github.com/KaTeX/KaTeX/blob/HEAD/CHANGELOG.md#0191-2026-10-23)\n\n[Compare Source](https://redirect.github.com/KaTeX/KaTeX/compare/v0.19.0...v0.19.1)\n\u2026",
+            "diff": {
+                "additions": 5,
+                "deletions": 5,
+                "files": 2
+            },
+            "files": [
+                "package-lock.json",
+                "package.json"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
             "repo": "k4geo",
             "num": 675,
             "title": "Remove unused rho offset member",
@@ -164,6 +347,484 @@
             },
             "files": [
                 ".github/workflows/pre-commit.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 17,
+            "title": "evaluation: add EvaluationRecord and an internal candidate-to-record bridge",
+            "url": "https://github.com/key4hep/k4Opt/pull/17",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\n- Add an immutable `EvaluationRecord` (request, result, evaluator name/version, problem-aware `candidate_key`, wall `elapsed_seconds`) to `k4opt.evaluation`.\n- Add the private `k4opt.problem._evaluate._evaluate_candidate`: validates one complete candidate against the declared domains (`CandidateError`), checks evaluator name/version, builds the `EvaluationRequest`, calls the evaluator once, and checks that a `valid` result reports every objective/constraint metric (and declared constraint units).\n- `invalid`/`failed` results are preserved as returned; evaluator exceptions propagate; constraint values are not judged.\n- No YAML, `load_problem()` or public workflow changes; `k4opt.evaluation` still imports without problem/geometry/lxml.\n- Docs: `docs/evaluation.md` (problem vs eval\u2026",
+            "diff": {
+                "additions": 678,
+                "deletions": 13,
+                "files": 8
+            },
+            "files": [
+                "docs/evaluation.md",
+                "docs/problem.md",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/models.py",
+                "k4opt/problem/__init__.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/errors.py",
+                "tests/unit/problem/test_evaluate.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 16,
+            "title": "geometry: cap include depth, stop on looping directory symlinks",
+            "url": "https://github.com/key4hep/k4Opt/pull/16",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Deep include chains (500 files) leaked RecursionError; they now raise IncludeError beyond 100 nested levels.\n\nA directory symlink looping back (`loop -> .`) made the walker revisit the same physical file under ever longer lexical directories until the OS symlink limit; such re-entry is now skipped like any include cycle.\n\nBoth cases have regression tests.",
+            "diff": {
+                "additions": 47,
+                "deletions": 0,
+                "files": 2
+            },
+            "files": [
+                "k4opt/geometry/includes.py",
+                "tests/unit/geometry/test_discovery.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 15,
+            "title": "geometry: alias-aware overrides and symlink validation",
+            "url": "https://github.com/key4hep/k4Opt/pull/15",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Fixes two alias-related materialization issues, on top of the include-alias fixes already on this branch.\n\n- Changed `ref` attributes are resolved from every name (symlink) of the edited file, so resources and includes needed by each alias directory are copied and recorded in the manifest.\n- Discovered symlink aliases are verified against the source before copying; a retargeted link raises `MaterializationError` and asks for rediscovery.\n\nRegression tests added for all three cases.",
+            "diff": {
+                "additions": 117,
+                "deletions": 33,
+                "files": 2
+            },
+            "files": [
+                "k4opt/geometry/materialize.py",
+                "tests/unit/geometry/test_materialize.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 14,
+            "title": "geometry: fingerprint aliases, aliased include traversal, manifest and YAML robustness",
+            "url": "https://github.com/key4hep/k4Opt/pull/14",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Changes\n\n- **Fingerprint:** include the effective file-alias mapping (catalog plus override-introduced), so geometries differing only in a symlink target no longer collide.\n- **Include traversal:** a symlinked include in another directory is scanned again from its own directory, so its relative includes are discovered, copied and editable.\n- **Manifest:** external references are listed once.\n- **Config:** deeply nested YAML raises `ConfigError` instead of `RecursionError`.\n\nEach fix has a regression test. The aliased-include fix assumes DD4hep resolves relative includes against the path as written, not the symlink target; the DD4hep integration tests were not run here.",
+            "diff": {
+                "additions": 127,
+                "deletions": 20,
+                "files": 6
+            },
+            "files": [
+                "docs/geometry.md",
+                "k4opt/geometry/config.py",
+                "k4opt/geometry/includes.py",
+                "k4opt/geometry/materialize.py",
+                "tests/unit/geometry/test_cli.py",
+                "tests/unit/geometry/test_materialize.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 13,
+            "title": "geometry: keep symlinked include names, follow redirected includes, fall back on EOPNOTSUPP",
+            "url": "https://github.com/key4hep/k4Opt/pull/13",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Fixes three geometry materialization edge cases and clarifies the fingerprint scope.\n\n- A file included under several symlinked names is copied once; the other names become relative links in the snapshot, so edits reach every name and the snapshot stays self-consistent.\n- An override that redirects an include `ref` now brings the new XML file, its transitive includes, resources and outside-root references into the snapshot and the fingerprint. A redirect to a missing file fails early with a clear error.\n- `_publish()` falls back to a plain rename on `EOPNOTSUPP`, as it already does for `ENOSYS` and `EINVAL`.\n- Docs: the fingerprint identifies the locally captured inputs only; an evaluation cache key must also include the software stack and external dependencies.\n\nTests added for each case;\u2026",
+            "diff": {
+                "additions": 242,
+                "deletions": 48,
+                "files": 5
+            },
+            "files": [
+                "docs/geometry.md",
+                "k4opt/geometry/discovery.py",
+                "k4opt/geometry/includes.py",
+                "k4opt/geometry/materialize.py",
+                "tests/unit/geometry/test_materialize.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 12,
+            "title": "evaluation: define the evaluator contract",
+            "url": "https://github.com/key4hep/k4Opt/pull/12",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\n- Adds `k4opt.evaluation`: one `Evaluator` protocol (`name`, `version`, `evaluate`), an immutable `EvaluationRequest`, and `EvaluationResult` / `Measurement` with `valid` / `invalid` / `failed` status.\n- Stage-independent: `stage` is a descriptive string, a result may hold only artifacts, only measurements, or metrics from several stages. No registry, execution, orchestration or `EvaluationRecord`; `load_problem()` is unchanged.\n- Moves `freeze` / `thaw` / `FrozenMap` / `Json` from `k4opt.problem.models` to `k4opt.frozen` (error class is now a parameter) so evaluation does not import problem or geometry internals. `k4opt.problem` keeps its names and behavior.\n- Docs: new `docs/evaluation.md`, README row, clarification in `docs/problem.md`.\n\n## Test plan\n- [x] `uv run --extra dev\u2026",
+            "diff": {
+                "additions": 931,
+                "deletions": 132,
+                "files": 14
+            },
+            "files": [
+                "CONTRIBUTING.md",
+                "README.md",
+                "docs/evaluation.md",
+                "docs/problem.md",
+                "k4opt/__init__.py",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/errors.py",
+                "k4opt/evaluation/models.py",
+                "k4opt/evaluation/protocol.py",
+                "k4opt/frozen.py",
+                "k4opt/problem/config.py",
+                "k4opt/problem/models.py",
+                "tests/unit/evaluation/test_contract.py",
+                "tests/unit/problem/test_models.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 11,
+            "title": "problem: resolve geometry targets when loading a problem",
+            "url": "https://github.com/key4hep/k4Opt/pull/11",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\n- `load_problem(path)` validates the YAML and resolves its geometry: one `GeometrySource`, one `discover()`, one `lookup()` per parameter.\n- Missing, malformed and ambiguous targets raise `ProblemConfigError` naming `parameters[i].geometry`; geometry errors (missing `$K4GEO`, entry, broken include) propagate unchanged.\n- The discovered source, catalog and ordered targets are private, non-comparing fields on `ProblemSpec`; equality, hashing and `to_dict()` are unaffected.\n- `parse_problem()` stays pure and needs no geometry.\n- Docs and README updated. Resolution does not verify that the active geometry matches the pinned Key4hep nightly.\n\n## Test plan\n- [x] `pytest tests` (349 passed, 4 skipped without the Key4hep stack)\n- [x] `pre-commit run --all-files`, including strict mypy",
+            "diff": {
+                "additions": 278,
+                "deletions": 25,
+                "files": 7
+            },
+            "files": [
+                "README.md",
+                "docs/problem.md",
+                "k4opt/problem/__init__.py",
+                "k4opt/problem/config.py",
+                "k4opt/problem/models.py",
+                "tests/unit/problem/test_config.py",
+                "tests/unit/problem/test_resolution.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 10,
+            "title": "docs: write generator quantities as value/unit blocks",
+            "url": "https://github.com/key4hep/k4Opt/pull/10",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Writes the `energy` and `vertex` quantities of the problem example and of `docs/problem.md` as YAML blocks (`value` and `unit` on separate lines) instead of flow mappings. The parsed data is identical; documentation and example only.",
+            "diff": {
+                "additions": 13,
+                "deletions": 5,
+                "files": 2
+            },
+            "files": [
+                "docs/problem.md",
+                "examples/problem/cld-ecal-granularity.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 9,
+            "title": "problem: draft problem specification and strict loader for k4opt.problem/v1alpha1",
+            "url": "https://github.com/key4hep/k4Opt/pull/9",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\n\nIntroduces the problem definition component in two commits:\n\n1. **`problem:` loader and models.** `k4opt.problem` reads a problem YAML document, validates what is knowable without Key4hep, and returns an immutable `ProblemSpec`.\n2. **`docs:` specification.** `docs/problem.md` describes the proposed `k4opt.problem/v1alpha1` format, with an illustrative CLD example in `examples/problem/cld-ecal-granularity.yaml`.\n\nThe evaluator (`calo.single_particle_shower`), the metrics, the bounds, the limit of 100 and the nightly are illustrative. The example is a specification fixture, not an executable study. There is no evaluator, no `ddsim`/`k4run` invocation, no optimizer and no CLI command in this PR.\n\n## Changed files\n\n- `k4opt/problem/`: `models.py` (frozen dataclasses), `config.py` (\u2026",
+            "diff": {
+                "additions": 2315,
+                "deletions": 1,
+                "files": 11
+            },
+            "files": [
+                "README.md",
+                "docs/problem.md",
+                "examples/problem/cld-ecal-granularity.yaml",
+                "k4opt/__init__.py",
+                "k4opt/problem/__init__.py",
+                "k4opt/problem/config.py",
+                "k4opt/problem/errors.py",
+                "k4opt/problem/models.py",
+                "tests/unit/problem/conftest.py",
+                "tests/unit/problem/test_config.py",
+                "tests/unit/problem/test_models.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 8,
+            "title": "tests: make the unreadable-resource test independent of the user",
+            "url": "https://github.com/key4hep/k4Opt/pull/8",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "CI runs as root, which can read a mode-000 file, so the chmod-based test added in #7 never raised there. The test now simulates the permission error instead.",
+            "diff": {
+                "additions": 12,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "tests/unit/geometry/test_discovery.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 7,
+            "title": "Geometry: report unreadable files and resources as include errors",
+            "url": "https://github.com/key4hep/k4Opt/pull/7",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Follow-up from a sixth review pass; the finding was reproduced first.\n\nDiscovery hashed reachable files and resources without error handling, so an unreadable resource (e.g. mode 000) raised a raw `PermissionError` and `k4opt geometry inspect` printed a traceback. The failure is now an `IncludeError` naming the file, reported by the CLI like any other error.\n\nRegression test included.",
+            "diff": {
+                "additions": 16,
+                "deletions": 3,
+                "files": 2
+            },
+            "files": [
+                "k4opt/geometry/discovery.py",
+                "tests/unit/geometry/test_discovery.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 6,
+            "title": "Geometry: fingerprint verified resource hashes, drop externals of unreachable files",
+            "url": "https://github.com/key4hep/k4Opt/pull/6",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Follow-ups from a fifth review pass; each finding was checked against the code first.\n\n- `compute_fingerprint` takes the resource hashes `materialize` already verified instead of rehashing the source, so the fingerprint always describes the bytes that were published (and large CAD files are not hashed twice).\n- The manifest keeps outside-root external references only for files still reachable in the edited snapshot.\n\nNot changed: redirecting a plain symbolic `ref` (e.g. `Si`) to a missing path is still accepted, since plain names are deliberately not treated as filenames.\n\nEach fix has a regression test.",
+            "diff": {
+                "additions": 58,
+                "deletions": 8,
+                "files": 2
+            },
+            "files": [
+                "k4opt/geometry/materialize.py",
+                "tests/unit/geometry/test_materialize.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 5,
+            "title": "Geometry: external-to-local resource redirects, duplicate externals, staging errors",
+            "url": "https://github.com/key4hep/k4Opt/pull/5",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Follow-ups from a fourth review pass; each finding was checked against the code first.\n\n- Reject redirecting an external file-like resource reference (e.g. `${CAD_DIR}/x.stl`) to a local file that does not exist; plain names are still not assumed to be files.\n- Record the structural locator of external references so the manifest drops only the edited reference, not unchanged ones with the same value.\n- Turn failures while preparing the output location, or hashing a new resource, into `MaterializationError` instead of a traceback.\n\nEach fix has a regression test.",
+            "diff": {
+                "additions": 78,
+                "deletions": 14,
+                "files": 3
+            },
+            "files": [
+                "k4opt/geometry/includes.py",
+                "k4opt/geometry/materialize.py",
+                "tests/unit/geometry/test_materialize.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 4,
+            "title": "Geometry: edit read-only sources, reject unrelocatable resources, manifest externals",
+            "url": "https://github.com/key4hep/k4Opt/pull/4",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Follow-ups from a third review pass; each finding was checked against the code first.\n\n- Make staged copies owner-writable so geometries from read-only installations can be edited (previously \"Permission denied\" for any override).\n- Reject redirecting a resource `ref` to a file outside the geometry root, which cannot resolve from a relocated snapshot.\n- Take the manifest's external includes from the edited snapshot instead of the original catalog.\n- Check for an existing output before the plain-rename fallback of the atomic publish (it stays best-effort where `renameat2` is unavailable, e.g. NFS).\n- Report non-UTF-8 configuration files as config errors.\n\nNot addressed: symlink aliases and redirecting an XML include outside the include closure. Both fail loudly with nothing written; a prope\u2026",
+            "diff": {
+                "additions": 106,
+                "deletions": 12,
+                "files": 5
+            },
+            "files": [
+                "k4opt/geometry/config.py",
+                "k4opt/geometry/includes.py",
+                "k4opt/geometry/materialize.py",
+                "tests/unit/geometry/test_cli.py",
+                "tests/unit/geometry/test_materialize.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 3,
+            "title": "Geometry: complete resource handling, atomic publication, YAML loader fixes",
+            "url": "https://github.com/key4hep/k4Opt/pull/3",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Follow-ups from a second review pass; each finding was checked against the code first.\n\n- Reject redirecting a resource `ref` to a file that does not exist (external references and plain names still allowed).\n- List redirected resources in the manifest, matching what the fingerprint covers.\n- Publish with `renameat2(RENAME_NOREPLACE)` (plain rename as fallback) so the output is never visible empty and never replaced; replaces the earlier `mkdir` reservation.\n- Refuse a geometry that already contains the manifest filename.\n- YAML loader: merge keys work again; unhashable keys give a config error instead of a `TypeError`.\n- `setup.sh`: check the stack, the `cvmfs-venv` download and the pytest fallback.\n\nNot addressed: symlink aliases and redirecting an XML include to a file outside the inclu\u2026",
+            "diff": {
+                "additions": 121,
+                "deletions": 35,
+                "files": 6
+            },
+            "files": [
+                "k4opt/geometry/config.py",
+                "k4opt/geometry/includes.py",
+                "k4opt/geometry/materialize.py",
+                "setup.sh",
+                "tests/unit/geometry/test_cli.py",
+                "tests/unit/geometry/test_materialize.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 2,
+            "title": "Geometry: fix fingerprint and materialization correctness issues",
+            "url": "https://github.com/key4hep/k4Opt/pull/2",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Fixes from a full repository review, each verified against the code before implementing (one commit per fix).\n\n- Verify every copied XML file and resource against the discovery hashes, not only files with overrides (stale catalogs could yield a fingerprint that did not match the output).\n- Copy and fingerprint resource files that an override redirects a `ref` to (previously a silently incomplete snapshot).\n- Do not rewrite XML for overrides that restate the current value.\n- Publish the output atomically without ever replacing a directory that appeared during materialization.\n- Reject override values that are not valid XML text instead of raising a raw `ValueError`.\n- Reject duplicate keys in the YAML configuration.\n- `setup.sh`: activate the k4opt venv even if another is active, and stop o\u2026",
+            "diff": {
+                "additions": 195,
+                "deletions": 29,
+                "files": 8
+            },
+            "files": [
+                "k4opt/geometry/config.py",
+                "k4opt/geometry/includes.py",
+                "k4opt/geometry/materialize.py",
+                "k4opt/geometry/overrides.py",
+                "setup.sh",
+                "tests/unit/geometry/test_cli.py",
+                "tests/unit/geometry/test_materialize.py",
+                "tests/unit/geometry/test_overrides.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 1,
+            "title": "Fix CI: make the source-root test independent of git, skip hooks in CI",
+            "url": "https://github.com/key4hep/k4Opt/pull/1",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The first CI run failed in the `test` job with one failing unit test.\n\n- `test_environment_variables_are_expanded` assumed the checkout is recognized as a git repository. In the CI container the workspace is owned by another user, so git refuses it and root detection correctly falls back to the file's directory. The expected compact path is now derived from the detected root.\n- `setup.sh` no longer installs the git hooks when `CI` is set: nobody commits there, and downloading the hook environments is wasted time.\n\nChecked locally: lint, strict mypy and the unit tests pass; in a clean copy with `CI=true` the 127 unit tests pass and the hook step is skipped.",
+            "diff": {
+                "additions": 6,
+                "deletions": 3,
+                "files": 3
+            },
+            "files": [
+                ".github/workflows/ci.yml",
+                "setup.sh",
+                "tests/unit/geometry/test_source.py"
             ],
             "comments": [],
             "comments_total": 0,
@@ -2374,448 +3035,6 @@
                 }
             ],
             "reviews_total": 27
-        },
-        {
-            "org": "key4hep",
-            "repo": "EDM4hep",
-            "num": 521,
-            "title": "build: fix hardcoded assumption that ROOT dictionaries are built",
-            "url": "https://github.com/key4hep/EDM4hep/pull/521",
-            "author": "wdconinc",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- When podio is built with ENABLE_ROOT=OFF, ROOT dictionaries are not built. This PR fixes the hardcoded assumptions in EDM4hep. See https://github.com/AIDASoft/podio/pull/1023.\r\n\r\nENDRELEASENOTES\r\n\r\n\r\n\r\nA useful reviewer question is whether the better pattern is to gate on the `edm4hepDict` target (as in `edm4hep/CMakeLists.txt`) or on the `podio::podioRootIO` target (as in tests and tools). The reason for this bifurcation is that the `edm4hepDict` target is defined just before the gate in `edm4hep/CMakeLists.txt`, so it seemed more appropriate there.",
-            "diff": {
-                "additions": 78,
-                "deletions": 76,
-                "files": 6
-            },
-            "files": [
-                "edm4hep/CMakeLists.txt",
-                "test/CMakeLists.txt",
-                "test/tools/CMakeLists.txt",
-                "tools/CMakeLists.txt",
-                "tools/src/edm4hep2json.cxx",
-                "utils/CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Many of the tests depend on ROOT, they should be disabled."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "I checked that none of the tests are removed in CI and that all the ROOT tests are removed with https://github.com/AIDASoft/podio/pull/1023, so this looks good to me."
-                },
-                {
-                    "author": "wdconinc",
-                    "body": "I updated against main, and reverted the inadvertently added 0c383fa. That will be better as a separate PR since it changes behavior unrelated to this PR."
-                },
-                {
-                    "author": "wdconinc",
-                    "body": "@jmcarcell Are these test timeouts related? I don't think they are."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "All green now after rerunning. It's weird that all 4 of them failed together, that doesn't happen often although individual failures do."
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [
-                {
-                    "author": "copilot-pull-request-reviewer",
-                    "state": "COMMENTED",
-                    "body": "### \ud83d\udfe2 Approval recommended\n\nThe changes correctly gate dictionary-related aliasing and installs on `TARGET edm4hepDict`, addressing the described failure mode without altering core library behavior.\n\n<details>\n<summary>Pull request overview</summary>\n\nThis PR updates EDM4hep\u2019s CMake build/install lo\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "state": "APPROVED",
-                    "body": "I checked that none of the tests are removed in CI and that all the ROOT tests are removed with https://github.com/AIDASoft/podio/pull/1023, so this looks good to me."
-                }
-            ],
-            "reviews_total": 9
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 937,
-            "title": "Bump endersonmenezes/free-disk-space from 4.0.0 to 4.0.1",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/937",
-            "author": "dependabot",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "tmadlener",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [endersonmenezes/free-disk-space](https://github.com/endersonmenezes/free-disk-space) from 4.0.0 to 4.0.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/endersonmenezes/free-disk-space/releases\">endersonmenezes/free-disk-space's releases</a>.</em></p>\n<blockquote>\n<h2>v4.0.1</h2>\n<p><strong>CI/CD Improvements:</strong></p>\n<ul>\n<li>\ud83e\uddea Promote <code>ubuntu-26.04</code> and <code>ubuntu-26.04-arm</code> from experimental (<code>continue-on-error</code>) entries to the regular test matrix \u2014 Ubuntu 26.04 is GA and <code>ubuntu-latest</code> migrates to it between 2026-10-19 and 2026-11-19 (<a href=\"https://redirect.github.com/actions/runner-images/issues/14748\">runner-images#14748</a>)</li>\n<li>\ud83e\uddea Keep <code>ubuntu-22.04</code> / <code>ubuntu-24\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/docker-build-push-template.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 252,
-            "title": "feat(dashboard): add a Correlations section setting each per-event cost against what the event holds, with a clickable correlation matrix and typed expressions",
-            "url": "https://github.com/key4hep/k4Bench/pull/252",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add Correlations dashboard tab for sim and reco\n  - clickable Spearman matrix of costs vs quantities\n  - typed per-event expressions, robust trend, outliers\n\n- Record `event_source.json.gz` with generator particles\n  - ddsim first run; k4run input via `--source-input`\n\n- Measure per-event entries, energies, EventHeaders in event size\n\n- Match events by entry; refuse mismatched EventHeaders\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  ddsim[\"ddsim benchmark\"] -- \"first run\" --> es[\"event_source.json.gz\"]\n  k4run[\"k4run benchmark\"] -- \"--source-input\" --> es\n  runners[\"runners\"] -- \"per-event entries/energies\" --> esz[\"*_event_size.json\"]\n  es --> drivers[\"event_drivers: match, rank, tre\u2026",
-            "diff": {
-                "additions": 3947,
-                "deletions": 52,
-                "files": 34
-            },
-            "files": [
-                ".github/scripts/benchmark_job.py",
-                "dashboard/data.py",
-                "dashboard/reco/page.py",
-                "dashboard/section_dispatch.py",
-                "dashboard/sections.py",
-                "dashboard/tabs/correlations.py",
-                "docs/reference/file-formats.md",
-                "docs/user-guide/features/dashboard.md",
-                "k4bench/analysis/event_drivers.py",
-                "k4bench/analysis/event_size.py",
-                "k4bench/analysis/event_source.py",
-                "k4bench/analysis/expression.py",
-                "k4bench/analysis/plots/event_content.py",
-                "k4bench/artifacts.py",
-                "k4bench/benchmark/ddsim.py",
-                "k4bench/benchmark/k4run.py",
-                "k4bench/cli.py",
-                "k4bench/plugin/schema.py",
-                "k4bench/runner/ddsim.py",
-                "k4bench/runner/k4run.py",
-                "tests/unit/test_analysis_event_drivers.py",
-                "tests/unit/test_analysis_event_size.py",
-                "tests/unit/test_analysis_event_source.py",
-                "tests/unit/test_analysis_expression.py",
-                "tests/unit/test_analysis_plots_event_content.py",
-                "tests/unit/test_benchmark.py",
-                "tests/unit/test_benchmark_job.py",
-                "tests/unit/test_benchmark_k4run.py",
-                "tests/unit/test_cli.py",
-                "tests/unit/test_dashboard_correlations.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 04764cc -->\n\nLatest suggestions up to 04764cc\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/04764ccc7f673d063a2af4864ea4d33f5d51979a)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/252?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/252#issuecomment-6278899361)** updated to latest commit https://github.com/key4hep/k4Bench/commit/451be1803841d5e97d7592345ead4078a7001a6e"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "Failed to generate code suggestions for PR"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/252#issuecomment-6278899361)** updated to latest commit https://github.com/key4hep/k4Bench/commit/04764ccc7f673d063a2af4864ea4d33f5d51979a"
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 251,
-            "title": "feat(dashboard): flag reco components whose heap steps up by 100 MB or more in an event and keeps it, and show each component's largest working set",
-            "url": "https://github.com/key4hep/k4Bench/pull/251",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Detect per-component heap steps kept to last event\n\n- Warn about and mark kept steps on dashboard\n\n- Add working-set max and its event columns\n\n- Cover detection, plotting, dashboard with tests\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  steps[\"ComponentHeap.steps: kept rises of 100 MB or more\"] --> summary[\"summary: stepped, stepped_mb, working_set_max_event\"]\n  summary --> page[\"Memory page: step warning, flags, new columns\"]\n  summary --> plot[\"plot_heap_timeline: triangle step markers\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td><strong>Enhancement</strong></td><td><deta\u2026",
-            "diff": {
-                "additions": 388,
-                "deletions": 32,
-                "files": 7
-            },
-            "files": [
-                "dashboard/reco/memory.py",
-                "docs/user-guide/features/dashboard.md",
-                "k4bench/analysis/heap.py",
-                "k4bench/analysis/plots/heap.py",
-                "tests/unit/test_analysis_heap.py",
-                "tests/unit/test_analysis_plots_heap.py",
-                "tests/unit/test_dashboard_reco_apptest.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/24dada5572db5737a86b33ca11f6a4703d86d8a8)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 15,972 in / 9 out / 15,981 total\n- Time cost: 304.7s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/251#issuecomment-6276746549)** updated to latest commit https://github.com/key4hep/k4Bench/commit/24dada5572db5737a86b33ca11f6a4703d86d8a8"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 16,451 in / 9 out / 16,460 total\n- Time cost: 597.0s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/251?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 250,
-            "title": "feat: record each output file's compressed size per event, by collection, and add an Event Size section to both dashboard pages",
-            "url": "https://github.com/key4hep/k4Bench/pull/250",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Measure output files' per-collection compressed event size\n  - New analysis module reads podio branches via uproot\n  - Runners write `_event_size.json` only after successful runs\n\n- Add Event Size section to both dashboard pages\n  - Current-run tiles, donuts and per-collection table\n  - Historical trends stack collections across nightly tags\n\n- Generalize phase plots and legend sizing for reuse\n\n- Document format, version schema, cover with tests\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  runners[\"ddsim / k4run runners\"] -- \"measure written files via uproot\" --> json[\"_event_size.json\"]\n  json -- \"load_event_size / build_event_size_trend\" --> analysis[\"analysis.event_size\"]\n  analysi\u2026",
-            "diff": {
-                "additions": 1616,
-                "deletions": 48,
-                "files": 26
-            },
-            "files": [
-                ".github/scripts/nightly_benchmark.sh",
-                "dashboard/data.py",
-                "dashboard/reco/breakdown.py",
-                "dashboard/reco/page.py",
-                "dashboard/section_dispatch.py",
-                "dashboard/sections.py",
-                "dashboard/tabs/event_size.py",
-                "dashboard/ui_utils.py",
-                "docs/reference/file-formats.md",
-                "docs/user-guide/features/dashboard.md",
-                "k4bench/analysis/event_size.py",
-                "k4bench/analysis/plots/phases.py",
-                "k4bench/analysis/trend.py",
-                "k4bench/artifacts.py",
-                "k4bench/plugin/schema.py",
-                "k4bench/runner/ddsim.py",
-                "k4bench/runner/k4run.py",
-                "tests/unit/conftest.py",
-                "tests/unit/test_analysis_event_size.py",
-                "tests/unit/test_analysis_plots_phases.py",
-                "tests/unit/test_dashboard_event_size.py",
-                "tests/unit/test_dashboard_reco_apptest.py",
-                "tests/unit/test_dashboard_stack_changes.py",
-                "tests/unit/test_runner_ddsim.py",
-                "tests/unit/test_runner_k4run.py",
-                "tests/unit/test_trend_builders.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/8f8045778cf5bfd565e2643ac9880f6c99eba3af)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 1e2fdbb -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 32,890 in / 9 out / 32,899 total\n- Time cost: 393.6s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/250#issuecomment-6271978776)** updated to latest commit https://github.com/key4hep/k4Bench/commit/3de1151c8fae96afe79e020613f4ab56cfac036b"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 33,154 in / 269 out / 33,423 total\n- Time cost: 622.2s\n- AI calls: 1\n\n</detail\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/250#issuecomment-6271978776)** updated to latest commit https://github.com/key4hep/k4Bench/commit/8f8045778cf5bfd565e2643ac9880f6c99eba3af"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/250?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 7,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 249,
-            "title": "feat(dashboard): bind each view and on-page control to the URL",
-            "url": "https://github.com/key4hep/k4Bench/pull/249",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Bind dashboard views and controls to URL\n\n- Reset URL-bound widgets to defaults on scope change\n\n- Leave Event Timing's \"Timing of\" picker unbound\n\n- Add tests and document the link-sharing behavior\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  controls[\"Dashboard views and controls\"] -- \"bind=query-params\" --> url[\"URL query params\"]\n  url -- \"copied link reopens view\" --> controls\n  scope[\"reset_widget_on_scope\"] -- \"resets bound widget to default\" --> controls\n  timing[\"Event Timing 'Timing of' picker\"] -- \"deliberately unbound, labels carry run times\" --> url\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</t\u2026",
-            "diff": {
-                "additions": 112,
-                "deletions": 35,
-                "files": 19
-            },
-            "files": [
-                "dashboard/reco/breakdown.py",
-                "dashboard/reco/dataflow.py",
-                "dashboard/reco/efficiency.py",
-                "dashboard/reco/memory.py",
-                "dashboard/tabs/_regression_flags.py",
-                "dashboard/tabs/_reliability.py",
-                "dashboard/tabs/detectors_overview.py",
-                "dashboard/tabs/event_memory.py",
-                "dashboard/tabs/event_timing.py",
-                "dashboard/tabs/impact.py",
-                "dashboard/tabs/machine_info.py",
-                "dashboard/tabs/region_timing/attribution.py",
-                "dashboard/tabs/region_timing/current_run.py",
-                "dashboard/tabs/region_timing/historical.py",
-                "dashboard/tabs/region_timing/step_analysis.py",
-                "dashboard/ui_utils.py",
-                "docs/user-guide/features/dashboard.md",
-                "tests/unit/test_dashboard_reco_apptest.py",
-                "tests/unit/test_dashboard_ui_state.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/277f68e05fb254d8f7435453dc1328ccef01bec9)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 12,735 in / 9 out / 12,744 total\n- Time cost: 440.5s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/249#issuecomment-6268728286)** updated to latest commit https://github.com/key4hep/k4Bench/commit/277f68e05fb254d8f7435453dc1328ccef01bec9"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 12,742 in / 9 out / 12,751 total\n- Time cost: 491.1s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/249?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 248,
-            "title": "feat(dashboard): add the reco Memory history: each component's heap, working set and growth night by night",
-            "url": "https://github.com/key4hep/k4Bench/pull/248",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add reco Memory Historical Trends view per component\n  - Before-first-event, typical, working set, growth metrics\n  - Working set ranked per panel, p95 included\n\n- Add `build_heap_trend` loader with cached dashboard wrapper\n\n- Generalize `phase_component_series` with `value`, `always`, `apart`\n\n- Nights without a value stay gaps, never zeros\n\n- Extend trends renderer with fixed colors, hover formatting\n\n- Add unit, AppTest coverage and user-guide docs\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  trend[\"build_heap_trend (trend.py)\"] --> cached[\"cached_load_trend_heap (data.py)\"]\n  cached --> hist[\"_render_historical (reco/memory.py)\"]\n  series[\"phase_component_series (plots/phases.py)\"]\u2026",
-            "diff": {
-                "additions": 766,
-                "deletions": 117,
-                "files": 10
-            },
-            "files": [
-                "dashboard/data.py",
-                "dashboard/reco/memory.py",
-                "dashboard/tabs/_historical_trends.py",
-                "docs/user-guide/features/dashboard.md",
-                "k4bench/analysis/plots/phases.py",
-                "k4bench/analysis/trend.py",
-                "tests/unit/conftest.py",
-                "tests/unit/test_analysis_plots_phases.py",
-                "tests/unit/test_dashboard_reco_apptest.py",
-                "tests/unit/test_trend_builders.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/f9e8a0d7e9a995d35fb4e0319eb5ab3a94c2d58e)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- a4fa99a -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/248#issuecomment-6267386156)** updated to latest commit https://github.com/key4hep/k4Bench/commit/f9e8a0d7e9a995d35fb4e0319eb5ab3a94c2d58e"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 22,589 in / 9 out / 22,598 total\n- Time cost: 480.4s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/248?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-tutorials",
-            "num": 210,
-            "title": "reworked Windows section to reflect native ssh capabilities",
-            "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/210",
-            "author": "bndikt",
-            "mergedAt": "2026-10-19",
-            "mergedBy": "michmx",
-            "labels": [],
-            "body": "Replaces the PuTTY and Xming walkthrough with PowerShell\u2019s built-in SSH client. Keeps WSLg as an optional route for graphical forwarding.",
-            "diff": {
-                "additions": 9,
-                "deletions": 21,
-                "files": 1
-            },
-            "files": [
-                "1-first-steps/prerequisites.md"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "michmx",
-                    "state": "APPROVED",
-                    "body": "Thanks a lot!"
-                }
-            ],
-            "reviews_total": 1
         }
     ]
 }
