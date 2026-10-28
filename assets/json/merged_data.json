@@ -1,6 +1,211 @@
 {
-    "updated_at": "2026-10-27T11:25:03Z",
+    "updated_at": "2026-10-28T11:59:09Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 943,
+            "title": "Warn that Spack nightlies are no longer built",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/943",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-28",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "",
+            "diff": {
+                "additions": 1,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "scripts/cvmfs/setup-nightlies.sh"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GaudiPandora",
+            "num": 51,
+            "title": "Add theta-energy calibration parameters",
+            "url": "https://github.com/key4hep/k4GaudiPandora/pull/51",
+            "author": "Jullianwatts",
+            "mergedAt": "2026-10-28",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- `DDPandoraPFANewAlgorithm`: add theta-energy (2D) energy corrections, configured with the `ElectromagneticThetaEnergyCorrectionFile` and `HadronicThetaEnergyCorrectionFile` properties. Each property takes the path to a JSON table written by the calibration scripts.\r\n  - The tables are registered with Pandora as the `PhotonEMNonLinearity` and `HadronicThetaEnergyBinned` plugins. If no file is given, the plugin is registered as the identity, so existing configurations are unchanged.\r\n  - The job stops at `initialize()` if a table can't be read, its `metadata.energy_basis` doesn't match the branch, or it fails LCContent's `ThetaEnergyTable::IsValid`.\r\n  - Document the JSON format and the Pandora XML settings in `k4GaudiPandora/README.md`, and add tests for loading a table\u2026",
+            "diff": {
+                "additions": 281,
+                "deletions": 0,
+                "files": 7
+            },
+            "files": [
+                "CMakeLists.txt",
+                "k4GaudiPandora/CMakeLists.txt",
+                "k4GaudiPandora/README.md",
+                "k4GaudiPandora/include/DDPandoraPFANewAlgorithm.h",
+                "k4GaudiPandora/src/DDPandoraPFANewAlgorithm.cpp",
+                "test/CMakeLists.txt",
+                "test/inputs/theta_energy_em.json"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Configuring this with what are essentially 10 lists of numbers that have to be consistent will be a fun exercise in the future. Can we make this a bit harder to mis-configure? I suppose the maps drop out of some tool in a different format? Can we come up with some format that either directly reads t\u2026"
+                },
+                {
+                    "author": "Jullianwatts",
+                    "body": "@tmadlener  -- Sorry for the delay. To address your comment, I could put a calibration folder in Mucoll-benchmarks with the scripts used to make these tables so that others can use/see. Would this solve the problem?"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I think having the scripts to (re-)produce these numbers would be necessary in any case, but is in principle a separate issue from what I was referring to. What I want to minimize is the \"human intervention\" that is needed to get the numbers from that script into a Gaudi configuration file. Ideally,\u2026"
+                },
+                {
+                    "author": "Jullianwatts",
+                    "body": "The scripts output JSON files. Here is an example: [ https://github.com/trholmes/pandora-calibration-tools/blob/codex/photon-em-payload/calib/hadronic_theta_energy_calib_Final.json](https://github.com/trholmes/pandora-calibration-tools/blob/codex/photon-em-payload/calib/hadronic_theta_energy_calib_F\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I think you should be able to just pass the JSON file in as a `Gaudi::Propert<std::string>` (the path to the file) and then use nlohmann json internally to parse that json file and extract all the values from there. From there you can then pass them on to Pandora as you do know. That would turn the \u2026"
+                },
+                {
+                    "author": "Jullianwatts",
+                    "body": "That makes sense, I'll get on it!\r\n\r\nOne thing I wanted to check is right now the scripts write two separate tables, one for the EM branch and one for the hadronic branch, since they're fit independently. So the straightforward version is two properties, one path each.\r\n\r\nTo get to a single property\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I think two paths are fine if the corrections are obtained independently."
+                },
+                {
+                    "author": "Jullianwatts",
+                    "body": "Just pushed these changes! There are two properties now, ElectromagneticThetaEnergyCorrectionFile and HadronicThetaEnergyCorrectionFile. Each one is the location of a JSON file that the calibration scripts write. The file gets read with nlohmann and the numbers go to Pandora the same way they did be\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Thanks @Jullianwatts for getting this off the ground! Since PandoraPFAOrg/LCContent#41 is merged, a few things can be tightened so k4GaudiPandora doesn't reimplement logic that now lives in LCContent:\r\n-  **Validation duplicates LCContent.** `isStrictlyIncreasing` and `isConsistentThetaEnergyTable` \u2026"
+                },
+                {
+                    "author": "Jullianwatts",
+                    "body": "Thanks @madbaron! I'll switch to IsValid, add the docs, and add a small JSON fixture with a test that loads it. I have one question: LCContent's version number is still the same as the release before #41 was merged, so I can't require the new one yet. Is the LCContent version going to be updated, or\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> Thanks @madbaron! I'll switch to IsValid, add the docs, and add a small JSON fixture with a test that loads it. I have one question: LCContent's version number is still the same as the release before #41 was merged, so I can't require the new one yet. Is the LCContent version going to be updated, \u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I think it would be good to add a small fixture and tests. \r\nSomething like:\r\n- A tiny fixture `test/inputs/theta_energy_em.json` (2\u00d72 bins, `energy_basis: \"em\"`).\r\n- `run_Pandora_thetaEnergy`: `k4run \u2026/runPandora.py --PandoraPFANewAlgorithm.ElectromagneticThetaEnergyCorrectionFile ${PROJECT_SOURCE_\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> > Thanks @madbaron! I'll switch to IsValid, add the docs, and add a small JSON fixture with a test that loads it. I have one question: LCContent's version number is still the same as the release before #41 was merged, so I can't require the new one yet. Is the LCContent version going to be updated\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> > > Thanks @madbaron! I'll switch to IsValid, add the docs, and add a small JSON fixture with a test that loads it. I have one question: LCContent's version number is still the same as the release before #41 was merged, so I can't require the new one yet. Is the LCContent version going to be updat\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I think this is ready to go, thanks!\r\n\r\nI've updated the PR description to be more concise and use the key4hep format. \r\nThe failing CI on alma9's nightly is unrelated and pre-existent."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Shall we give this a little kick?\r\nI'd aim to merge on Friday if there are no further comments, or if nobody gets to it before me!"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Note that this requires adding nlohmann json as a dependency of k4GaudiPandora"
+                }
+            ],
+            "comments_total": 17,
+            "reviews": [],
+            "reviews_total": 26
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 135,
+            "title": "fix MAIA test digitiser configs",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/135",
+            "author": "madbaron",
+            "mergedAt": "2026-10-27",
+            "mergedBy": "madbaron",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Adapted MAIA digitiser configurations (CorrectTimeWindowForPropagation and CorrectTimesForPropagation) in test options to reflect updated algorithms in k4reco\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 4,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "test/options/MAIA_CKFTrackingAlg.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Reco",
+            "num": 75,
+            "title": "fix for detectors with trackers with ID > 20",
+            "url": "https://github.com/key4hep/k4Reco/pull/75",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-10-27",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- This PR fixes a crash in GaudiTrkUtils for detectors with trackers with detector ID > 20 (assumption that was valid for LCIO for ILC detectors but for instance not for the Si wrapper of ALLEGRO and IDEA)\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 9,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "k4Reco/ConformalTracking/src/GaudiTrkUtils.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Looks good, merging later.\r\nSomething similar is also in the LCFIPlus port, so we should keep that in mind: https://github.com/key4hep/k4Reco/pull/63"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Reco",
+            "num": 74,
+            "title": "Store the time resolution as the hit time error in DDPlanarDigi",
+            "url": "https://github.com/key4hep/k4Reco/pull/74",
+            "author": "jburzy",
+            "mergedAt": "2026-10-27",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "EDM4hep 1.2 adds a per-hit time error to tracker hits (key4hep/EDM4hep#528). This sets timeError to the per-layer time resolution used for the smearing. Without time smearing it stays 0. The call is guarded by `EDM4HEP_BUILD_VERSION`, so k4Reco still builds against older EDM4hep.\n\nBEGINRELEASENOTES\n\nStore the time resolution as the hit time error in DDPlanarDigi\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 6,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "k4Reco/DDPlanarDigi/components/DDPlanarDigi.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Looks good, merging later"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "hep-fcc",
             "repo": "FCCDIRAC",
@@ -23,6 +228,55 @@
                 "productions/summer2026/tt/edm4hep_IDEA.tcl",
                 "productions/summer2026/tt/p8_ee_tt_ecm365.cmd",
                 "productions/summer2026/tt/pythia_delphes.conf"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-physics-events",
+            "num": 33,
+            "title": "Add OidcReturnURI manifests for fcc-dami and fcc-dami-test",
+            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/33",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-27",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Backfills these from what's already applied live in both\nnamespaces -- previously only ever created by hand via oc.",
+            "diff": {
+                "additions": 14,
+                "deletions": 0,
+                "files": 2
+            },
+            "files": [
+                "k8s/prod/oidc-return-uri.yaml",
+                "k8s/test/oidc-return-uri.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-physics-events",
+            "num": 32,
+            "title": "Fix stale canEdit in EntityMetadata's v-memo",
+            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/32",
+            "author": "kjvbrt",
+            "mergedAt": "2026-10-27",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Defensive fix for a reported case of a viewer seeing the Edit\nbutton on prod (backend rejected her save; root cause not\nreproduced) -- the v-memo'd block didn't track canEdit, so a role\nchange could leave stale permission-gated UI on screen.",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "frontend/components/entities/EntityMetadata.vue"
             ],
             "comments": [],
             "comments_total": 0,
@@ -879,9 +1133,13 @@
                 {
                     "author": "armin-ilg",
                     "body": "> @armin-ilg I think you can proceed as you proposed, with the include ../ approach Thanks!\r\n\r\nOk, done. Now only using different HCAL files and everything else is taken from ALLEGRO_o1_v03. If the checks pass it's ready to be merged."
+                },
+                {
+                    "author": "k4bench-bot",
+                    "body": "<!-- k4bench-blame-comment:v1 window=2026-10-17..2026-10-26 -->\n<!-- k4bench-blame-facts:fa00e69ee6e415f3 -->\n<!-- k4bench-blame-cumulative:v2 eNrNmVFP4kAYRf_Khme6AWJYfVyQiFmNRo2brDGTafkCDe1MM21R__3OblYQbeiQrPeS-GD6wD33jNLCfXjofL-4mJzdXCnbV6veUafbeT4equFRJNlJNE-S_jCyReUvF8dKRP2KYyVJftL3V2JdSpYa8b_mo\u2026"
                 }
             ],
-            "comments_total": 6,
+            "comments_total": 7,
             "reviews": [
                 {
                     "author": "giovannimarchiori",
@@ -1796,114 +2054,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4Reco",
-            "num": 73,
-            "title": "Add data folder for external data (calorimeter threshold maps)",
-            "url": "https://github.com/key4hep/k4Reco/pull/73",
-            "author": "madbaron",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Add the data folder and md5 files to download the MAIA calorimeter threshold files for the CaloHitSelector (added in https://github.com/key4hep/k4Reco/pull/71) algorithm\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 48,
-                "deletions": 0,
-                "files": 4
-            },
-            "files": [
-                "CMakeLists.txt",
-                "data/CMakeLists.txt",
-                "data/MAIA_ECAL_Thresholds_10TeV.root.md5",
-                "data/MAIA_HCAL_Thresholds_10TeV.root.md5"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "How is this used? Why this repo?"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> How is this used? Why this repo?\r\n\r\nThese are the threshold files used by the CaloHitSelector algorithm.\r\nI discussed with @tmadlener earlier today and he indicated he would be happy with storing these close to algorithms that use them, like we do with the stuff in k4ActsTracking. I believe he wil\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "At some point we should handle this better with some form of conditions data. However, I think that is in any way close enough to be usable. Hence, I think we can put things into external data as we also already do with other repos."
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Looks good, data is being fetched: https://github.com/key4hep/k4Reco/actions/runs/38762804735/job/116518218762?pr=73#step:6:318"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "If there are no objections, I'd hit the merge button sometime tomorrow."
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> Can we have a reference to the PR that introduced the algorithm that uses these in the release notes?\r\n> \r\n> If the algorithms have example steering files in the repository here, they could be updated to point to the downloaded data files.\r\n\r\nI've added a ref to the PR in the release notes. We don\u2026"
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "I have uploaded the file to the appropriate space on the Key4hep eos space."
-                },
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Can we have a reference to the PR that introduced the algorithm that uses these in the release notes?\n\nIf the algorithms have example steering files in the repository here, they could be updated to point to the downloaded data files."
-                }
-            ],
-            "reviews_total": 3
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4DetectorPerformance",
-            "num": 8,
-            "title": "update name of DCH digitizer",
-            "url": "https://github.com/key4hep/k4DetectorPerformance/pull/8",
-            "author": "giovannimarchiori",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "s6anloes",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Use updated name of DCH digitizer\r\nENDRELEASENOTES\r\n\r\nEven if DCHdigi_v02 is still available as an alias of WireTrackerDigi_v01, this PR makes the code robust agains future evolutions when DCHdigi_v02 will be phased out",
-            "diff": {
-                "additions": 3,
-                "deletions": 3,
-                "files": 1
-            },
-            "files": [
-                "TrackingPerformance/test/runTrackingValidation.py"
-            ],
-            "comments": [
-                {
-                    "author": "s6anloes",
-                    "body": "Just to be clear, there is no intention to phase out `DCHdigi_v02`, rather with the next version of `WireTrackerDigi_v02` there will be no corresponding `DCHdigi_v03` alias.\r\nHowever, there is no downside to updating this, so this can still be merged I think"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Hi @s6anloes \r\nas you wish, I have the impressions that existing code is working even without this, so in that case we can even close the PR. I think  I opened this when the code would otherwise fail... but as you say, it does not hurt to update already now to use WireTracker instead of the DCHdigi \u2026"
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "Acutally I don't have merging rights to this repo. I was just made aware by @ueinhaus in the PS&C Meeting"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Try now @s6anloes, if it doesn't then I bump the @key4hep/key4hep-reco permissions"
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "Gracias, Se\u00f1or Carceller, ahora ya funciona!"
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4Bench",
             "num": 264,
             "title": "perf(dashboard): download only the run files the view on screen reads",
@@ -2260,36 +2410,6 @@
         },
         {
             "org": "hep-fcc",
-            "repo": "FCCDIRAC",
-            "num": 19,
-            "title": "ZH ZZ WW datasets in test campaign summer2026",
-            "url": "https://github.com/HEP-FCC/FCCDIRAC/pull/19",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 1160,
-                "deletions": 0,
-                "files": 7
-            },
-            "files": [
-                "productions/summer2026/ZH_ZZ_WW/.gitignore",
-                "productions/summer2026/ZH_ZZ_WW/card_IDEA.tcl",
-                "productions/summer2026/ZH_ZZ_WW/edm4hep_IDEA.tcl",
-                "productions/summer2026/ZH_ZZ_WW/p8_ee_WW_ecm240.cmd",
-                "productions/summer2026/ZH_ZZ_WW/p8_ee_ZH_ecm240.cmd",
-                "productions/summer2026/ZH_ZZ_WW/p8_ee_ZZ_ecm240.cmd",
-                "productions/summer2026/ZH_ZZ_WW/pythia_delphes.conf"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
             "repo": "FCC-config",
             "num": 407,
             "title": "[IDEA] Read the GGTF model from --trackingModel, download only if missing",
@@ -2321,720 +2441,6 @@
             "comments_total": 2,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 121,
-            "title": "Update dependency marked to v18.1.1",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/121",
-            "author": "renovate",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [marked](https://marked.js.org) ([source](https://redirect.github.com/markedjs/marked)) | [`18.1.0` \u2192 `18.1.1`](https://renovatebot.com/diffs/npm/marked/18.1.0/18.1.1) | ![age](https://developer.mend.io/api/mc/badges/age/npm/marked/18.1.1?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/marked/18.1.0/18.1.1?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>markedjs/marked (marked)</summary>\n\n### [`v18.1.1`](https://redirect.github.com/markedjs/marked/releases/tag/v18.1.1)\n\n[Compare Source](https://redirect.github.com/markedjs/marked/compare/v18.1.0...v1\u2026",
-            "diff": {
-                "additions": 5,
-                "deletions": 5,
-                "files": 2
-            },
-            "files": [
-                "package-lock.json",
-                "package.json"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 120,
-            "title": "Update dependency dompurify to v3.4.17",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/120",
-            "author": "renovate",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [dompurify](https://redirect.github.com/cure53/DOMPurify) | [`3.4.16` \u2192 `3.4.17`](https://renovatebot.com/diffs/npm/dompurify/3.4.16/3.4.17) | ![age](https://developer.mend.io/api/mc/badges/age/npm/dompurify/3.4.17?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/dompurify/3.4.16/3.4.17?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>cure53/DOMPurify (dompurify)</summary>\n\n### [`v3.4.17`](https://redirect.github.com/cure53/DOMPurify/releases/tag/3.4.17): DOMPurify 3.4.17\n\n[Compare Source](https://redirect.github.com/cure53/DOMPurify/compare/3.4.16...3\u2026",
-            "diff": {
-                "additions": 5,
-                "deletions": 5,
-                "files": 2
-            },
-            "files": [
-                "package-lock.json",
-                "package.json"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 122,
-            "title": "Use DRS-<n> keys for referencing requests",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/122",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Closes #118.\n\n- Show `DRS-N` keys in the request header, list, cards, page title, relations, form and emails\n- Detect and autolink `DRS-42` / `DRS42` / `DRS 42` / `DRS#42` (case-insensitive), skipping links, code and math; `#N` is no longer parsed",
-            "diff": {
-                "additions": 148,
-                "deletions": 38,
-                "files": 12
-            },
-            "files": [
-                "internal/handlers/handlers.go",
-                "internal/handlers/relations.go",
-                "internal/models/relation.go",
-                "internal/models/relation_test.go",
-                "internal/notifications/notifier.go",
-                "scripts/seed.sql",
-                "templates/layout.html",
-                "templates/partials/relations.html",
-                "templates/partials/request_card.html",
-                "templates/partials/request_detail.html",
-                "templates/partials/request_form.html",
-                "templates/partials/request_row.html"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 31,
-            "title": "Scaffold fcc-dami prod OpenShift project alongside fcc-physics-events",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/31",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Adds k8s/prod/ manifests and a parallel deploy-prod-fcc-dami CI job for a new fcc-dami project, reusing the existing prod DB. Deploys on tags plus manual push-to-master, without touching the existing deploy-prod job. File watcher starts disabled to avoid double-ingesting from EOS. Remaining setup (OpenShift project/Secrets, Application Portal registration) is manual -- see TODO.md.",
-            "diff": {
-                "additions": 307,
-                "deletions": 12,
-                "files": 12
-            },
-            "files": [
-                ".gitlab-ci.yml",
-                "k8s/prod/backend-deployment.yaml",
-                "k8s/prod/backend-service.yaml",
-                "k8s/prod/backend-storage-pvc.yaml",
-                "k8s/prod/backend.env.example",
-                "k8s/prod/eos-pvc.yaml",
-                "k8s/prod/frontend-deployment.yaml",
-                "k8s/prod/frontend-service.yaml",
-                "k8s/prod/frontend.env.example",
-                "k8s/prod/route-backend.yaml",
-                "k8s/prod/route-frontend.yaml",
-                "k8s/test/backend.env.example"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 30,
-            "title": "Add DRS request reference and admin-only navigation registration",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/30",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Datasets created via the single-record form now require a DRS request reference (DRS-<number>), validated server-side per entity.\n\nCreating a brand-new navigation value (accelerator, campaign, etc.) now requires admin; editors can still reuse any existing value. Enforced server-side, not just hidden in the UI.",
-            "diff": {
-                "additions": 114,
-                "deletions": 19,
-                "files": 4
-            },
-            "files": [
-                "backend/app/services/file_watcher.py",
-                "backend/app/storage/database_modules/data_import_module.py",
-                "backend/app/storage/json_data_model.py",
-                "frontend/components/EditModal.vue"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "mc-productions-tutorials",
-            "num": 5,
-            "title": "Link the production DaMI and clarify the validation in the DaMI tutorial",
-            "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/5",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Adds the production DaMI (https://fcc-dami.web.cern.ch/) to the links, keeps FCC Physics Events as the former website, and says that there is no common validation procedure yet.",
-            "diff": {
-                "additions": 3,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "DaMI/README.md"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "mc-productions-tutorials",
-            "num": 4,
-            "title": "Link existing setup docs and the FCC Production Manager Guide",
-            "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/4",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Stopgap Setup section with links to the existing documentation (CERN CA, iLCDirac registration and client, FCC VO tutorial, fcc-auth), until the full version is ready. Also links the FCC Production Manager Guide in the iLCDirac tutorial.",
-            "diff": {
-                "additions": 22,
-                "deletions": 11,
-                "files": 3
-            },
-            "files": [
-                "Setup/README.md",
-                "iLCDirac/production-config.md",
-                "iLCDirac/sources.md"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "mc-productions-tutorials",
-            "num": 3,
-            "title": "Add iLCDirac production launching tutorial",
-            "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/3",
-            "author": "pkontaxa",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 432,
-                "deletions": 14,
-                "files": 7
-            },
-            "files": [
-                "iLCDirac/README.md",
-                "iLCDirac/examples/README.md",
-                "iLCDirac/examples/pythia-delphes.conf.template",
-                "iLCDirac/exercise.md",
-                "iLCDirac/production-config.md",
-                "iLCDirac/sources.md",
-                "iLCDirac/troubleshooting.md"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "kjvbrt",
-                    "state": "COMMENTED",
-                    "body": "Thanks, this looks great! A few points below, mostly about what needs to be ready for the live part."
-                }
-            ],
-            "reviews_total": 2
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "mc-productions-tutorials",
-            "num": 2,
-            "title": "Add DaMI dataset publication tutorial",
-            "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/2",
-            "author": "pkontaxa",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 140,
-                "deletions": 11,
-                "files": 1
-            },
-            "files": [
-                "DaMI/README.md"
-            ],
-            "comments": [
-                {
-                    "author": "pkontaxa",
-                    "body": "Thanks, Juraj! Updated following your comments.\r\n\r\nThe README now states that editor access will be granted during training and that MC contacts insert datasets themselves, manually or with a script, after validation.\r\n\r\nI included the requester and MC contact in the metadata discussion. We can turn\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [
-                {
-                    "author": "kjvbrt",
-                    "state": "COMMENTED",
-                    "body": "Thanks, looks good! A few points below."
-                }
-            ],
-            "reviews_total": 2
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "mc-productions-tutorials",
-            "num": 1,
-            "title": "Add MC contact workflow and DRS training material",
-            "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/1",
-            "author": "pkontaxa",
-            "mergedAt": "2026-10-21",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 276,
-                "deletions": 15,
-                "files": 4
-            },
-            "files": [
-                "DRS/README.md",
-                "DRS/exercise.md",
-                "DRS/workflow-and-responsibilities.md",
-                "README.md"
-            ],
-            "comments": [
-                {
-                    "author": "pkontaxa",
-                    "body": "Thanks, Juraj! I have pushed an update addressing your comments.\r\n\r\nThe exercise now starts from an existing DRS request and makes the MC contact\u2019s configuration, submission and monitoring responsibilities explicit. I also added the debrief answers and the email-notification check.\r\n\r\nThe README now\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [
-                {
-                    "author": "kjvbrt",
-                    "state": "COMMENTED",
-                    "body": "Thanks, looks good! A few more points below. Could you also add the debrief answers and the notification check you mentioned in the replies?"
-                }
-            ],
-            "reviews_total": 10
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 936,
-            "title": "Bump latest commit",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/936",
-            "author": "madbaron",
-            "mergedAt": "2026-10-20",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Updated spack to v1.2.2\r\n- Updated spack-packages latest commit to most recent develop\r\n- Removed outdated cherry picks\r\n- Updated server url for babayaga (now https)\r\n- Fixed an hash change in guinea-pig 1.2.2\r\n\r\nENDRELEASENOTES\r\n\r\nWith these changes, the key4hep-nightlies stack builds successfully (at least on ubuntu24).",
-            "diff": {
-                "additions": 23,
-                "deletions": 162,
-                "files": 8
-            },
-            "files": [
-                ".cherry-pick",
-                ".github/workflows/build.yaml",
-                ".latest-commit",
-                ".latest-packages-commit",
-                "Docker/alma9/Dockerfile-externals",
-                "packages/babayaga/package.py",
-                "packages/guinea-pig/package.py",
-                "packages/key4hep-external-stack/package.py"
-            ],
-            "comments": [
-                {
-                    "author": "madbaron",
-                    "body": "@tmadlener strategy question: alma9 would need installing the gcc-toolset-14 to compile the externals stack. I'd probably drop the image building for alma9 rather than installing the gcc14 there. What would you prefer to do?"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "In the past we had some issues with using a gcc-toolset built gcc and spack. IIRC it was still gcc8 for centOS7, so it might no longer be an issue now. I think dropping the alma9 image is probably the way to go. How much use do we still get out of the externals images these days in any case?\r\n\r\nDo w\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> In the past we had some issues with using a gcc-toolset built gcc and spack. IIRC it was still gcc8 for centOS7, so it might no longer be an issue now. I think dropping the alma9 image is probably the way to go. How much use do we still get out of the externals images these days in any case?\r\n\r\nI \u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> Do we have a more up-to-date LLVM pulled in externally via packages? One could try to just build a stack using that, but I don't like the idea of having to potentially solve issues with that too much either.\r\n\r\nWe build the LUXE stack with clang (because of ptarmigan), but comes with a few more hi\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I suppose since we are the foreseeable main users of this in any case, we have in a sense a bit more freedom now than we had in the past (unless @jmcarcell disagrees). So maybe it would make sense to go with what is the least amount o (additional) work?"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> I suppose since we are the foreseeable main users of this in any case, we have in a sense a bit more freedom now than we had in the past (unless @jmcarcell disagrees). So maybe it would make sense to go with what is the least amount o (additional) work?\r\n\r\nI've removed alma9 from the matrix of dev\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Starting tomorrow the nightlies built with Spack will follow the branch `2026-10-20` (branched off main), because otherwise everything would be rebuilt every day, and I think there are high chances of something failing. I only build with Spack those nightlies now and only while they work so I won't \u2026"
-                }
-            ],
-            "comments_total": 7,
-            "reviews": [],
-            "reviews_total": 5
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 33,
-            "title": "Add LCFIPlus to release commit checks",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/33",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-20",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "scripts/check-commits-after-tag.sh"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 258,
-            "title": "fix(dashboard): drop the padding between charts and their legends below",
-            "url": "https://github.com/key4hep/k4Bench/pull/258",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Bug fix\n\n\n___\n\n### **Description**\n- Name reco Memory findings in notice above chart\n\n- Refactor findings rendering into notice and cards\n\n- Remove extra padding between charts and legends\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"_findings()\"] -- \"findings list\" --> B[\"_render_findings_notice() above chart\"]\n  A -- \"findings list\" --> C[\"_render_findings() cards below chart\"]\n  D[\"legend_below()\"] -- \"tick_clearance + legend height only\" --> E[\"tighter bottom margin\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td><strong>Enhancement</strong></td><td><table>\n<tr>\n  <td>\n    <details>\n      <summary><strong>\u2026",
-            "diff": {
-                "additions": 43,
-                "deletions": 27,
-                "files": 2
-            },
-            "files": [
-                "dashboard/reco/memory.py",
-                "dashboard/ui_utils.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 6,225 in / 9 out / 6,234 total\n- Time cost: 83.8s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/258?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 257,
-            "title": "feat(dashboard): move the reco Memory findings below the heap chart",
-            "url": "https://github.com/key4hep/k4Bench/pull/257",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement\n\n\n___\n\n### **Description**\n- Move reco Memory findings below the heap timeline chart\n\n- Render findings even when no heap timeline is available\n\n- Update module docstring to match the new layout\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  tiles[\"Heap tiles\"] --> chart[\"Heap timeline chart\"] --> findings[\"Findings (growers / step-ups)\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td><strong>Enhancement</strong></td><td><table>\n<tr>\n  <td>\n    <details>\n      <summary><strong>memory.py</strong><dd><code>Relocate findings section below heap timeline chart</code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </dd></summary\u2026",
-            "diff": {
-                "additions": 13,
-                "deletions": 13,
-                "files": 1
-            },
-            "files": [
-                "dashboard/reco/memory.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 5,146 in / 9 out / 5,155 total\n- Time cost: 30.9s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/257?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 256,
-            "title": "feat(dashboard): show the reco Memory leak and step warnings as cards with each component's heap sparkline",
-            "url": "https://github.com/key4hep/k4Bench/pull/256",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Replace leak/step warning lines with finding cards\n\n- Cards show badge, metric, delta, heap sparkline\n\n- Order step findings before growth findings\n\n- Update AppTest tests for card rendering\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"_render_leaks / _render_steps\"] -- \"split into\" --> B[\"_leak_findings / _step_findings\"]\n  B -- \"build _Finding list\" --> C[\"_render_findings\"]\n  C -- \"badge, button, metric, sparkline\" --> D[\"Memory page cards\"]\n  E[\"ui_chrome.py CSS\"] -- \"ellipsis for long names\" --> D\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td><strong>Enhancement</strong>\u2026",
-            "diff": {
-                "additions": 138,
-                "deletions": 50,
-                "files": 3
-            },
-            "files": [
-                "dashboard/reco/memory.py",
-                "dashboard/ui_chrome.py",
-                "tests/unit/test_dashboard_reco_apptest.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 8,343 in / 9 out / 8,352 total\n- Time cost: 274.7s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/256?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 255,
-            "title": "fix(dashboard): write log-axis ticks in full, give the Data Flow graph readable labels and room, and stop Machine Info values overflowing their card",
-            "url": "https://github.com/key4hep/k4Bench/pull/255",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix\n\n\n___\n\n### **Description**\n- Write log-axis ticks in full (0.5, not 5)\n\n- Rework Data Flow node labels as backed annotations\n\n- Hide CPU frequency delta rounding to 0 MHz\n\n- Wrap Machine Info values, widen hostname column\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"Log-axis plots\"] -- \"tickformat ',~g'\" --> B[\"Full tick labels (0.5, not 5)\"]\n  C[\"Data Flow graph\"] -- \"labels as annotations\" --> D[\"Readable, non-overlapping labels\"]\n  E[\"Machine Info tab\"] -- \"CSS wrap + column ratio\" --> F[\"Values no longer overflow\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td><strong>Bug fix</strong></td><td><table>\n<tr>\n  <td\u2026",
-            "diff": {
-                "additions": 46,
-                "deletions": 13,
-                "files": 6
-            },
-            "files": [
-                "dashboard/tabs/_historical_trends.py",
-                "dashboard/tabs/machine_info.py",
-                "dashboard/ui_chrome.py",
-                "k4bench/analysis/plots/dataflow.py",
-                "k4bench/analysis/plots/heap.py",
-                "tests/unit/test_analysis_plots_dataflow.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 7,086 in / 9 out / 7,095 total\n- Time cost: 163.8s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/255?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 253,
-            "title": "feat(dashboard): add a log y axis toggle to the reco Memory chart of heap by component, event by event",
-            "url": "https://github.com/key4hep/k4Bench/pull/253",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add log y-axis toggle to reco heap chart\n\n- Draw heap stack on log axis with decade range\n\n- Place band labels by decade share and middle\n\n- Cover log axis behavior with unit tests\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  toggle[\"Log y axis toggle in reco memory page\"] -- \"log_y\" --> plot[\"plot_heap_timeline\"]\n  plot -- \"band tops and rss\" --> range[\"_log_range: axis range in decades\"]\n  plot -- \"decade share and middle\" --> labels[\"band labels on log axis\"]\n  range --> axis[\"log y axis with D2 ticks\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td><strong>Enhancement</strong\u2026",
-            "diff": {
-                "additions": 86,
-                "deletions": 5,
-                "files": 3
-            },
-            "files": [
-                "dashboard/reco/memory.py",
-                "k4bench/analysis/plots/heap.py",
-                "tests/unit/test_analysis_plots_heap.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- c435e07 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/253?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 254,
-            "title": "feat(dashboard): size the reco Breakdown donuts to fill their third of the row, as the Event Size donuts do",
-            "url": "https://github.com/key4hep/k4Bench/pull/254",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement\n\n\n___\n\n### **Description**\n- Add `_PIE_HEIGHT` constant sizing reco Breakdown donuts\n\n- Apply fixed height and tight margins to phase pies\n\n- Match Event Size donuts filling their row third\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"_render_current_run\"] -- \"builds figure\" --> B[\"plot_phase_component_pie\"]\n  B -- \"update_layout: height=_PIE_HEIGHT, margins\" --> C[\"st.plotly_chart\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td><strong>Enhancement</strong></td><td><table>\n<tr>\n  <td>\n    <details>\n      <summary><strong>breakdown.py</strong><dd><code>Fix reco Breakdown donut height to fill row third</code>&nbs\u2026",
-            "diff": {
-                "additions": 9,
-                "deletions": 5,
-                "files": 1
-            },
-            "files": [
-                "dashboard/reco/breakdown.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 4,881 in / 9 out / 4,890 total\n- Time cost: 20.8s\n- AI calls: 1\n\n</details>"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>No relevant tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/254?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "PandoraPFAOrg",
-            "repo": "LCContent",
-            "num": 33,
-            "title": "Particle flow reconstruction algorithms for IDEA option2 detector",
-            "url": "https://github.com/PandoraPFAOrg/LCContent/pull/33",
-            "author": "SanghyunKo",
-            "mergedAt": "2026-10-20",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Pandora algorithms for the particle flow reconstruction with the IDEA option 2 detector. This is designed to work on ECAL clusters built by HEP-FCC/k4RecCalorimeter#271 via `edm4hep::Cluster` to `pandora::Cluster` conversion using key4hep/k4GaudiPandora#26. HCAL clusters are built within the pandora, seeded by the input ECAL clusters. There are also 2 algorithms that use ML via ONNX inference (photon ID, satellite cluster merging).\r\n\r\nThe ONNX-dependent algorithms are isolated in the folder `MLInference` and built only when the flag `LCContent_BUILD_ML` is set to `ON`. While the default build flag is `OFF`, I added CI workflows for `LCContent_BUILD_ML=ON` too.\r\n\r\nRequires PandoraSDK version `04.00.01` and beyond (requires PandoraPFAOrg/PandoraSDK#26)\r\n\r\nA presentation related to the physic\u2026",
-            "diff": {
-                "additions": 3504,
-                "deletions": 3,
-                "files": 22
-            },
-            "files": [
-                ".github/workflows/.key4hep-build-env",
-                "CMakeLists.txt",
-                "cmake/LCContentConfig.cmake.in",
-                "include/LCClustering/EcalSeededClusteringAlgorithm.h",
-                "include/LCHelpers/SortingHelper.h",
-                "include/LCHelpers/VectorHelper.h",
-                "include/LCParticleId/ForwardPhotonIdAlgorithm.h",
-                "include/LCPfoConstruction/IdeaPfoCreationAlgorithm.h",
-                "include/LCPlugins/DualReadoutCorrection.h",
-                "include/LCUtility/IsolatedHitPreparationAlgorithm.h",
-                "include/MLInference/ClusterNeutralPidAlgorithm.h",
-                "include/MLInference/OnnxSession.h",
-                "include/MLInference/SatelliteAssignmentOnnxAlgorithm.h",
-                "src/LCClustering/EcalSeededClusteringAlgorithm.cc",
-                "src/LCHelpers/SortingHelper.cc",
-                "src/LCParticleId/ForwardPhotonIdAlgorithm.cc",
-                "src/LCPfoConstruction/IdeaPfoCreationAlgorithm.cc",
-                "src/LCPlugins/DualReadoutCorrection.cc",
-                "src/LCUtility/IsolatedHitPreparationAlgorithm.cc",
-                "src/MLInference/ClusterNeutralPidAlgorithm.cc",
-                "src/MLInference/OnnxSession.cc",
-                "src/MLInference/SatelliteAssignmentOnnxAlgorithm.cc"
-            ],
-            "comments": [
-                {
-                    "author": "SanghyunKo",
-                    "body": "A note on the test - I'm not sure whether we can have any type of test in LCContent. Nevertheless I plan to create a follow-up PR in k4GaudiPandora and prepare a test workflow there."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Did you check if none of the existing algorithms can do what the new ones do? There are a lot of completely new ones. And for the one algorithms that changes the downside is that it has to be validated, for example, on the CLD reconstruction. In addition it adds the onnxruntime dependency. I wonder \u2026"
-                },
-                {
-                    "author": "SanghyunKo",
-                    "body": "I did try to reuse the existing ones as much as possible - this PR obviously includes only the new ones (or modified/extended ones) while I have also other LCContent algorithms that I reuse in the full reconstruction chain. Hence, I personally opt to have everything in LCContent, but we can discuss \u2026"
-                },
-                {
-                    "author": "Zehvogel",
-                    "body": "I cannot estimate yet how much discussion there will be here in total, but you might want to consider splitting the changes to the `IsolatedHitMergingAlgorithm` from this into a separate PR. :)\r\nRegarding ONNX, I guess it is fine if it (and the algorithms relying on it) are toggleable in the build."
-                },
-                {
-                    "author": "SanghyunKo",
-                    "body": "Seems like the build test is using PandoraSDK `v03.04.01`, where this PR requires at least `v04-00-01`."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "> Seems like the build test is using PandoraSDK `v03.04.01`, where this PR requires at least `v04-00-01`.\r\n\r\nPlease update the requirements wherever `find_package(PandoraSDK REQUIRED <VERSION>)` (if version is not there then it should be added). Now, in the Key4hep stack in LCG (alma9, ubuntu26 in C\u2026"
-                },
-                {
-                    "author": "SanghyunKo",
-                    "body": "Since HEP-FCC/k4RecCalorimeter#271 is now merged, I flipped the PR ready to be reviewed. Comments received so far have been addressed and the PR description is updated accordingly."
-                },
-                {
-                    "author": "SanghyunKo",
-                    "body": "A small note: I don't expect this PR to land in the next Key4hep release, though I'd appreciate timely review since I was pinged by several interested groups/users (so that people can access via nightly releases)."
-                },
-                {
-                    "author": "SanghyunKo",
-                    "body": "Hi! I wonder there is any further comment on this PR, otherwise I'd appreciate merging this so that we can move to the last missing piece in the chain key4hep/k4GaudiPandora#52 (and prepare a working CI test there)."
-                },
-                {
-                    "author": "SanghyunKo",
-                    "body": "@jmcarcell Most of your Claude's comments sound reasonable and addressed accordingly. I took liberty of resolving few comments that I refuted. On registering algorithms, I kept as they are because 1) `DualReadoutCorrection` requires to be configured in the client application anyway, and 2) I didn't \u2026"
-                }
-            ],
-            "comments_total": 10,
-            "reviews": [
-                {
-                    "author": "jmcarcell",
-                    "state": "COMMENTED",
-                    "body": "This is an AI-generated review (Claude), done on request. Feel free to dismiss any comment that doesn't apply.\n\nGeneral comment: none of the new algorithms or the `DualReadoutCorrection` plugin are registered in `LCContent::RegisterAlgorithms` (`src/LCContent.cc`), so every client has to register th\u2026"
-                }
-            ],
-            "reviews_total": 27
         }
     ]
 }
