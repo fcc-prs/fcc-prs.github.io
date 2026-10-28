@@ -112,23 +112,12 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
-            "num": 534,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/534'>Simcalohit add addMCParticleContribution</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-28",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
             "num": 536,
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/536'>Add TrackAtVertex and relate it to Vertex</a>",
             "author": "jbeirer",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -161,7 +150,7 @@
             "author": "BrieucF",
             "createdAt": "2026-03-30",
             "updatedAt": "2026-05-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -282,7 +271,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
             "updatedAt": "2026-10-22",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -293,7 +282,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -784,11 +773,22 @@
         {
             "repo": "key4hep/<br>CLDConfig",
             "num": 78,
-            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/78'>[WIP] MLJetTagger</a>",
+            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/78'>MLJetTagger</a>",
             "author": "Zehvogel",
             "createdAt": "2025-05-02",
-            "updatedAt": "2026-10-27",
-            "mergeOk": "no",
+            "updatedAt": "2026-10-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 98,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/98'>Refactor IV</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-10-28",
+            "updatedAt": "2026-10-28",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1077,6 +1077,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 275,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/275'>feat(regression): judge the reco suite per job and per component, and report it nightly</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-28",
+            "updatedAt": "2026-10-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1866,7 +1877,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1888,7 +1899,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1910,7 +1921,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1921,40 +1932,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-21",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1695,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1695'>Fix concurrent DDDigi container combining</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-26",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1700,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1700'>Geant4Action: get event action by name without splitting.</a>",
-            "author": "andresailer",
-            "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1701,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1701'>CI: build and test k4geo against DD4hep</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1965,7 +1943,7 @@
             "author": "wdconinc",
             "createdAt": "2026-10-20",
             "updatedAt": "2026-10-22",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1987,7 +1965,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-22",
             "updatedAt": "2026-10-22",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1998,7 +1976,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2008,7 +1986,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1707'>Multiple commits: doc, Geant3 geometries, structure creation plugin</a>",
             "author": "MarkusFrankATcernch",
             "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-27",
+            "updatedAt": "2026-10-28",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2019,7 +1997,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1709'>fix: avoid printing every constant on failed getRefChild</a>",
             "author": "veprbl",
             "createdAt": "2026-10-26",
-            "updatedAt": "2026-10-27",
+            "updatedAt": "2026-10-28",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
