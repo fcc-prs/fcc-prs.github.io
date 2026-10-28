@@ -821,7 +821,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-02",
             "updatedAt": "2026-10-26",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -915,6 +915,17 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 51,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
+            "author": "Jullianwatts",
+            "createdAt": "2026-08-22",
+            "updatedAt": "2026-10-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
             "num": 52,
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/52'>Pandora interface for the IDEA detector</a>",
             "author": "SanghyunKo",
@@ -931,17 +942,6 @@
             "author": "SanghyunKo",
             "createdAt": "2026-10-27",
             "updatedAt": "2026-10-27",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 51,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/51'>Add theta-energy calibration parameters</a>",
-            "author": "Jullianwatts",
-            "createdAt": "2026-08-22",
-            "updatedAt": "2026-10-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1784,6 +1784,17 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-drs",
+            "num": 129,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/129'>Update Node.js to v26</a>",
+            "author": "renovate",
+            "createdAt": "2026-10-28",
+            "updatedAt": "2026-10-28",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
             "num": 117,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/117'>Edit request fields individually in the modal and validate only on submit</a>",
             "author": "kjvbrt",
@@ -1800,17 +1811,6 @@
             "author": "captainvogon",
             "createdAt": "2026-08-15",
             "updatedAt": "2026-08-15",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-physics-events",
-            "num": 33,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-physics-events/pull/33'>Add OidcReturnURI manifests for fcc-dami and fcc-dami-test</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-10-27",
-            "updatedAt": "2026-10-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
