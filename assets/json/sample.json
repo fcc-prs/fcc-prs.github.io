@@ -2,23 +2,12 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 625,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/625'>Set sensitive-detector types in geometry constructors</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-03",
-            "updatedAt": "2026-10-27",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 672,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/672'>[ALLEGRO] add ECal face tracking surfaces with DD4hep CaloFace plugins</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-14",
             "updatedAt": "2026-10-26",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +18,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-10-07",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +29,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -51,7 +40,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-09-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +51,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +62,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +73,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -117,7 +106,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -128,7 +117,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -178,6 +167,17 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
+            "num": 448,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/448'>[WIP] Gaudi native choice property</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-10-29",
+            "updatedAt": "2026-10-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
             "num": 447,
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/447'>fix: implement updates to SimCalorimeterHit in overlay</a>",
             "author": "madbaron",
@@ -205,7 +205,7 @@
             "author": "s6anloes",
             "createdAt": "2026-10-15",
             "updatedAt": "2026-10-15",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -216,7 +216,7 @@
             "author": "ianna",
             "createdAt": "2026-01-16",
             "updatedAt": "2026-10-12",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -282,7 +282,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -293,7 +293,7 @@
             "author": "tmadlener",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -304,7 +304,7 @@
             "author": "Panzerkampfwagen-del",
             "createdAt": "2026-08-26",
             "updatedAt": "2026-09-02",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -315,7 +315,7 @@
             "author": "dudarboh",
             "createdAt": "2026-01-13",
             "updatedAt": "2026-01-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -414,29 +414,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-12",
             "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 137,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/137'>Use the hit time error for the hit time resolution</a>",
-            "author": "jburzy",
-            "createdAt": "2026-10-27",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 109,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/109'>Add initial ACTS adaptive multi-vertex finder</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -458,7 +436,7 @@
             "author": "mlarson02",
             "createdAt": "2026-10-26",
             "updatedAt": "2026-10-26",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -469,7 +447,7 @@
             "author": "mlarson02",
             "createdAt": "2026-10-17",
             "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -821,7 +799,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-02",
             "updatedAt": "2026-10-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -915,23 +893,12 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 63,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/63'>Fix CLDConfig test setup leaving empty Python blocks</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GaudiPandora",
             "num": 62,
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/62'>Make CI reproducible & allow tolerance for compiler-dependent ULP differences</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-10-27",
             "updatedAt": "2026-10-28",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -942,7 +909,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-10-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -965,6 +932,17 @@
             "createdAt": "2026-05-06",
             "updatedAt": "2026-09-29",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4PFHitML",
+            "num": 9,
+            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/9'>Make the truthmatching not rely on collection IDs</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-10-29",
+            "updatedAt": "2026-10-29",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1047,6 +1025,17 @@
         },
         {
             "repo": "key4hep/<br>k4DetectorPerformance",
+            "num": 10,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/10'>TrackingValidation: fix truth parameters and matching, align with ACTS</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-10-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4DetectorPerformance",
             "num": 7,
             "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/7'>Intial commit of the dQdxAnalyser</a>",
             "author": "ueinhaus",
@@ -1055,17 +1044,6 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": "s6anloes"
-        },
-        {
-            "repo": "key4hep/<br>k4DetectorPerformance",
-            "num": 10,
-            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/10'>TrackingValidation: fix truth parameters and matching, align with ACTS</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4DetectorPerformance",
@@ -1099,17 +1077,6 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 283,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/283'>fix(dashboard): keep each toolbar's controls together on smaller screens and size dropdowns to what they show</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1630,21 +1597,21 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 292,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/292'>Use of shared cache in CreatePositionedCaloCells</a>",
+            "num": 294,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/294'>move duplicated in memory trappist onnx models to shared service</a>",
             "author": "davidlange6",
-            "createdAt": "2026-10-22",
-            "updatedAt": "2026-10-26",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-10-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 294,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/294'>move duplicated in memory trappist onnx models to shared service</a>",
+            "num": 292,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/292'>Use of shared cache in CreatePositionedCaloCells</a>",
             "author": "davidlange6",
-            "createdAt": "2026-10-23",
+            "createdAt": "2026-10-22",
             "updatedAt": "2026-10-26",
             "mergeOk": "yes",
             "labels": "",
@@ -1702,17 +1669,6 @@
             "createdAt": "2022-05-26",
             "updatedAt": "2022-05-26",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 405,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/405'>ALFA ddsim steering file</a>",
-            "author": "Edler1",
-            "createdAt": "2026-10-13",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1888,7 +1844,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1910,7 +1866,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1921,7 +1877,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1932,7 +1888,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1960,34 +1916,12 @@
         },
         {
             "repo": "AIDASoft/<br>DD4hep",
-            "num": 1703,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1703'>Speed up the placement path search in the SurfaceManager map build</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-22",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1704,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1704'>SurfaceManager: enter each surface only once into the type and world maps</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-22",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
             "num": 1709,
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1709'>fix: avoid printing every constant on failed getRefChild</a>",
             "author": "veprbl",
             "createdAt": "2026-10-26",
             "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2008,17 +1942,6 @@
             "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/43'>Add BIB hit flagging in CaloHitPrep, options to exclude from clustering steps, recovery algorithm to re-associate </a>",
             "author": "trholmes",
             "createdAt": "2026-09-03",
-            "updatedAt": "2026-10-14",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "PandoraPFAOrg/<br>LCContent",
-            "num": 46,
-            "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/46'>Add some user settable bits to the LCCaloHit</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-09-24",
             "updatedAt": "2026-10-29",
             "mergeOk": "yes",
             "labels": "",
