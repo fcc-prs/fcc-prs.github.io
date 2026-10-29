@@ -189,23 +189,23 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 444,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/444'>New PropertyChoices Helper Class</a>",
-            "author": "s6anloes",
-            "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-26",
-            "mergeOk": "yes",
+            "num": 447,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/447'>fix: implement updates to SimCalorimeterHit in overlay</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-28",
+            "updatedAt": "2026-10-28",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 446,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/446'>Include directly used headers throughout library and tests</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-18",
-            "updatedAt": "2026-10-22",
-            "mergeOk": "yes",
+            "num": 444,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/444'>New PropertyChoices Helper Class</a>",
+            "author": "s6anloes",
+            "createdAt": "2026-10-14",
+            "updatedAt": "2026-10-26",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -216,7 +216,7 @@
             "author": "s6anloes",
             "createdAt": "2026-10-15",
             "updatedAt": "2026-10-15",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -227,7 +227,7 @@
             "author": "ianna",
             "createdAt": "2026-01-16",
             "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1079,17 +1079,6 @@
             "assignees": "keplerman417"
         },
         {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 275,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/275'>feat(regression): judge the reco suite per job and per component, and report it nightly</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-28",
-            "updatedAt": "2026-10-28",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>FCCSW",
             "num": 491,
             "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/491'>Fix tests.</a>",
@@ -1799,7 +1788,7 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/129'>Update Node.js to v26</a>",
             "author": "renovate",
             "createdAt": "2026-10-28",
-            "updatedAt": "2026-10-28",
+            "updatedAt": "2026-10-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1910,7 +1899,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1954,7 +1943,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-22",
             "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1982,22 +1971,11 @@
         },
         {
             "repo": "AIDASoft/<br>DD4hep",
-            "num": 1707,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1707'>Multiple commits: doc, Geant3 geometries, structure creation plugin</a>",
-            "author": "MarkusFrankATcernch",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-28",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
             "num": 1709,
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1709'>fix: avoid printing every constant on failed getRefChild</a>",
             "author": "veprbl",
             "createdAt": "2026-10-26",
-            "updatedAt": "2026-10-28",
+            "updatedAt": "2026-10-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
