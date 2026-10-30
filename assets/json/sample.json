@@ -7,7 +7,7 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-10-14",
             "updatedAt": "2026-10-26",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -18,7 +18,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-10-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +29,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-21",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +40,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-09-04",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +62,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +73,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -414,7 +414,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-12",
             "updatedAt": "2026-10-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -447,7 +447,7 @@
             "author": "mlarson02",
             "createdAt": "2026-10-17",
             "updatedAt": "2026-10-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -578,6 +578,17 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
             "author": "andread3vita",
             "createdAt": "2026-10-23",
+            "updatedAt": "2026-10-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 120,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/120'>[TrackFitter]: Drop chi2=-1 placeholder tracks on fit failure</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-10-29",
             "updatedAt": "2026-10-29",
             "mergeOk": "yes",
             "labels": "",
@@ -898,7 +909,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-10-27",
             "updatedAt": "2026-10-28",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -909,7 +920,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-10-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1102,6 +1113,17 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 200,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/200'>Grid computing in HEP: basic concepts</a>",
+            "author": "michmx",
+            "createdAt": "2026-09-04",
+            "updatedAt": "2026-10-30",
+            "mergeOk": "yes",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
             "num": 212,
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/212'>CI: fail the event-generation notebook test if it has no code cells</a>",
             "author": "ianna",
@@ -1142,17 +1164,6 @@
             "updatedAt": "2026-10-01",
             "mergeOk": "yes",
             "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-tutorials",
-            "num": 200,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/200'>Grid computing in HEP: basic concepts</a>",
-            "author": "michmx",
-            "createdAt": "2026-09-04",
-            "updatedAt": "2026-09-18",
-            "mergeOk": "yes",
-            "labels": "enhancement",
             "assignees": ""
         },
         {
@@ -1597,6 +1608,17 @@
         },
         {
             "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 295,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/295'>Performance (CPU/memory) improvements for cell noise tools.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2026-10-29",
+            "updatedAt": "2026-10-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
             "num": 294,
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/294'>move duplicated in memory trappist onnx models to shared service</a>",
             "author": "davidlange6",
@@ -1844,7 +1866,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1866,7 +1888,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1877,7 +1899,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-10-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1888,7 +1910,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1921,7 +1943,7 @@
             "author": "veprbl",
             "createdAt": "2026-10-26",
             "updatedAt": "2026-10-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
