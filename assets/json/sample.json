@@ -6,7 +6,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/672'>[ALLEGRO] add ECal face tracking surfaces with DD4hep CaloFace plugins</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-26",
+            "updatedAt": "2026-10-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -18,7 +18,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-10-07",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +29,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +40,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-09-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +62,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +73,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -171,7 +171,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/448'>[WIP] Gaudi native choice property</a>",
             "author": "tmadlener",
             "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-29",
+            "updatedAt": "2026-10-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -182,7 +182,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/447'>fix: implement updates to SimCalorimeterHit in overlay</a>",
             "author": "madbaron",
             "createdAt": "2026-10-28",
-            "updatedAt": "2026-10-29",
+            "updatedAt": "2026-10-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -250,6 +250,17 @@
             "createdAt": "2025-05-12",
             "updatedAt": "2026-09-21",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 944,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/944'>Update k4gaudipandora and related recipes</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-10-30",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -409,22 +420,22 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 129,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/129'>Add MaterialRecordingAlg: material scan without Geant4</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-29",
+            "num": 108,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking</a>",
+            "author": "mlarson02",
+            "createdAt": "2026-09-29",
+            "updatedAt": "2026-10-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 108,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking</a>",
-            "author": "mlarson02",
-            "createdAt": "2026-09-29",
-            "updatedAt": "2026-10-27",
+            "num": 129,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/129'>Add MaterialRecordingAlg: material scan without Geant4</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-12",
+            "updatedAt": "2026-10-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -578,7 +589,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
             "author": "andread3vita",
             "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-29",
+            "updatedAt": "2026-10-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1088,6 +1099,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Opt",
+            "num": 28,
+            "title": "<a href='https://github.com/key4hep/k4Opt/pull/28'>evaluation: declared collections read event by event, and settings with units</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-10-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1612,7 +1634,18 @@
             "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/295'>Performance (CPU/memory) improvements for cell noise tools.</a>",
             "author": "scott-snyder",
             "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-29",
+            "updatedAt": "2026-10-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>k4RecCalorimeter",
+            "num": 296,
+            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/296'>Fix failures seen running genconf.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-10-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
