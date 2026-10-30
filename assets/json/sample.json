@@ -18,7 +18,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-10-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -29,7 +29,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-21",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +40,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-09-04",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +62,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +73,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -84,6 +84,17 @@
             "author": "tmadlener",
             "createdAt": "2025-05-05",
             "updatedAt": "2026-08-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 540,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/540'>Add a Helix class to the utils</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-10-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -162,6 +173,17 @@
             "createdAt": "2022-08-08",
             "updatedAt": "2026-05-23",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 449,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/449'>Enum properties native</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-10-30",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -585,6 +607,17 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 118,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
+            "author": "Debottam",
+            "createdAt": "2026-10-21",
+            "updatedAt": "2026-10-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 119,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
             "author": "andread3vita",
@@ -600,17 +633,6 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/120'>[TrackFitter]: Drop chi2=-1 placeholder tracks on fit failure</a>",
             "author": "andread3vita",
             "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 118,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
-            "author": "Debottam",
-            "createdAt": "2026-10-21",
             "updatedAt": "2026-10-29",
             "mergeOk": "yes",
             "labels": "",
@@ -964,7 +986,7 @@
             "author": "Zehvogel",
             "createdAt": "2026-10-29",
             "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -975,18 +997,7 @@
             "author": "Olmichu22",
             "createdAt": "2026-10-29",
             "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4PFHitML",
-            "num": 7,
-            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/7'>Some cleanup suggestions</a>",
-            "author": "Zehvogel",
-            "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1099,17 +1110,6 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
-        },
-        {
-            "repo": "key4hep/<br>k4Opt",
-            "num": 28,
-            "title": "<a href='https://github.com/key4hep/k4Opt/pull/28'>evaluation: declared collections read event by event, and settings with units</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-30",
-            "updatedAt": "2026-10-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1877,6 +1877,17 @@
             "author": "kjvbrt",
             "createdAt": "2026-08-31",
             "updatedAt": "2026-09-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>mc-productions-tutorials",
+            "num": 7,
+            "title": "<a href='https://github.com/HEP-FCC/mc-productions-tutorials/pull/7'>Make the tutorials self-paced</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-10-30",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
