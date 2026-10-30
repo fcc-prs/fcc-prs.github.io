@@ -1,6 +1,229 @@
 {
-    "updated_at": "2026-10-29T12:06:28Z",
+    "updated_at": "2026-10-30T12:00:18Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 286,
+            "title": "chore(deps): update mkdocs-material requirement from >=9.7.7 to >=9.8.0",
+            "url": "https://github.com/key4hep/k4Bench/pull/286",
+            "author": "dependabot",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Updates the requirements on [mkdocs-material](https://github.com/squidfunk/mkdocs-material) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/squidfunk/mkdocs-material/releases\">mkdocs-material's releases</a>.</em></p>\n<blockquote>\n<h2>mkdocs-material-9.8.0</h2>\n<blockquote>\n<p>[!WARNING]</p>\n<p><strong>Material for MkDocs reaches end of life on May 5, 2027.</strong> Critical fixes and security updates continue until that date.</p>\n<p>We're continuing our work with <a href=\"https://zensical.org/\">Zensical</a>, a maintained successor built by the team behind Material for MkDocs. It carries forward what we've learned from building documentation tools with this community, with Markdown authoring, a familiar design, and ful\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "docs/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 285,
+            "title": "chore(deps): bump docker/login-action from 4.6.0 to 4.7.0",
+            "url": "https://github.com/key4hep/k4Bench/pull/285",
+            "author": "dependabot",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [docker/login-action](https://github.com/docker/login-action) from 4.6.0 to 4.7.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/docker/login-action/releases\">docker/login-action's releases</a>.</em></p>\n<blockquote>\n<h2>v4.7.0</h2>\n<ul>\n<li>Preserve explicit ECR settings in <code>registry-auth</code> by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/login-action/pull/1089\">docker/login-action#1089</a></li>\n<li>Use registry hosts for scoped credentials by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/login-action/pull/1088\">docker/login-action#1088</a></li>\n<li>Raise Docker Hub OIDC max expiry to 6 hours \u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/deploy-dashboard.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 284,
+            "title": "chore(deps): bump streamlit from 1.66.0 to 1.66.1 in /dashboard",
+            "url": "https://github.com/key4hep/k4Bench/pull/284",
+            "author": "dependabot",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [streamlit](https://github.com/streamlit/streamlit) from 1.66.0 to 1.66.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/streamlit/streamlit/releases\">streamlit's releases</a>.</em></p>\n<blockquote>\n<h2>1.66.1</h2>\n<!-- raw HTML omitted -->\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/streamlit/streamlit/compare/1.66.0...1.66.1\">https://github.com/streamlit/streamlit/compare/1.66.0...1.66.1</a></p>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/streamlit/streamlit/commit/ca6718b7d3d788c31c97d1bc9144fd8388168f57\"><code>ca6718b</code></a> [chore] Update map and pydeck snapshots from 1.66.1 CI</li>\n<li><a href=\"https://github.com/streamlit/streamlit/commit/1359d6ed763d3dab\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "dashboard/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 26,
+            "title": "geometry: inspect names the geometry directly; the geometry YAML and apply are gone",
+            "url": "https://github.com/key4hep/k4Opt/pull/26",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The geometry-only YAML (`geometry`, `root`, `overrides`) and `examples/geometry/cld.yaml` predate the problem specification. They were read only by `k4opt geometry inspect` and `k4opt geometry apply`. Now a physicist declares what varies in a problem's `parameters`, and `k4opt evaluate` writes the modified geometry of each candidate into its run directory. The file had become a second way of naming a geometry, with hand-written override strings no workflow needs.\n\n`inspect` is the part a user still needs: it is how you find the target to put in `parameters`. It now takes the geometry directly:\n\n```bash\n# before\nk4opt geometry inspect examples/geometry/cld.yaml --filter ECal_cell_size\n# after\nk4opt geometry inspect FCCee/CLD/compact/CLD_o2_v09/CLD_o2_v09.xml --filter ECal_cell_size\nk4opt ge\u2026",
+            "diff": {
+                "additions": 129,
+                "deletions": 576,
+                "files": 17
+            },
+            "files": [
+                "README.md",
+                "docs/geometry.md",
+                "docs/problem.md",
+                "examples/geometry/cld.yaml",
+                "k4opt/geometry/__init__.py",
+                "k4opt/geometry/cli.py",
+                "k4opt/geometry/config.py",
+                "k4opt/geometry/discovery.py",
+                "k4opt/geometry/overrides.py",
+                "k4opt/geometry/render.py",
+                "k4opt/geometry/source.py",
+                "tests/support/geometry.py",
+                "tests/unit/geometry/test_cli.py",
+                "tests/unit/geometry/test_discovery.py",
+                "tests/unit/geometry/test_overrides.py",
+                "tests/unit/geometry/test_render.py",
+                "tests/unit/test_cli.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 625,
+            "title": "Set sensitive-detector types in geometry constructors",
+            "url": "https://github.com/key4hep/k4geo/pull/625",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Set sensitive-detector types directly in geometry constructors and remove all `<sensitive type=\"...\"/>` settings from the compact XML files. Also remove the obsolete `DRcaloSiPMSD` steering entry.\n\n`SimpleCylinder_o1_v01` and `SimpleCone_o1_v01` use `tracker`; the layered `SimpleCylinder_o1_v02` uses `calorimeter`. Consequently, the FCChh tail catcher switches from calorimeter hits to tracker hits. The archived FCCDetectors drivers referenced by `FCCee_o2_v03` are outside this repository; their XML type readers would need the same update to load these compacts.\n\nValidation: all 51 changed XML files parse; C++ and Python formatting pass; the geometry library and its plugin registries build. ALLEGRO o1_v02, ALLEGRO o1_v03, IDEA o2_v01_CI, and FCChh load successfully, with every sensitive det\u2026",
+            "diff": {
+                "additions": 35,
+                "deletions": 144,
+                "files": 75
+            },
+            "files": [
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/FCCee_ECalBarrel.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/FCCee_EcalEndcaps_coneCryo.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/FCCee_HCalBarrel_TileCal.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/FCCee_HCalEndcaps_ThreeParts_TileCal.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/MuonTagger.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/SimplifiedDriftChamber.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/Vertex.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/DriftChamber.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/ECalBarrel_thetamodulemerged.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/ECalBarrel_thetamodulemerged_calibration.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/ECalBarrel_thetamodulemerged_upstream.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/ECalEndcaps_coneCryo.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/HCalBarrel_TileCal.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/HCalEndcaps_ThreeParts_TileCal.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/MuonTagger.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/Vertex.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalBarrel_thetamodulemerged.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalBarrel_thetamodulemerged_calibration.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalBarrel_thetamodulemerged_upstream.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalEndcaps_Turbine_o1_v03.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalEndcaps_Turbine_o1_v03_calibration.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalEndcaps_Turbine_o1_v03_upstream.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/HCalBarrel_TileCal_v02.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/HCalBarrel_TileCal_v03.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/HCalEndcaps_ThreeParts_TileCal_v02.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/HCalEndcaps_ThreeParts_TileCal_v03.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/MuonTagger.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/MuonTaggerPhiTheta.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/HCalBarrel_TileCal_v04.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/HCalEndcaps_ThreeParts_TileCal_v04.xml"
+            ],
+            "comments": [
+                {
+                    "author": "davidlange6",
+                    "body": "@jmcarcell - iiuc - even \"unknown\" sensitive detector types are eventually \"used\"?\r\n\r\nhttps://github.com/AIDASoft/DD4hep/blob/master/DDG4/python/DDSim/DD4hepSimulation.py#L518"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "> @jmcarcell - iiuc - even \"unknown\" sensitive detector types are eventually \"used\"?\r\n> \r\n> [AIDASoft/DD4hep@`master`/DDG4/python/DDSim/DD4hepSimulation.py#L518](https://github.com/AIDASoft/DD4hep/blob/master/DDG4/python/DDSim/DD4hepSimulation.py?rgh-link-date=2026-08-03T14%3A30%3A11Z#L518)\r\n\r\nSo it\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Is `<sensitive>` ever changed? If not then it can be removed from the XMLs but I don't know for sure."
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "I'm not aware of any cases where it is used. And if `ddsim` automatically assigns 'calorimeter' or 'tracker' if one of these exists as substring, I'm not sure most people are aware of that and would end up using the sensitive type incorrectly.\r\nA quick search in k4geo yielded 56 occurences of `<sens\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "@s6anloes as discussed, now the `calorimeter` or `tracker` is always hardcoded in the C++ code, please have a look."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I'll merge this and tag if no one complains"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "Hi @jmcarcell ,\r\nthere are still some XML files with the `<sensitive>` tag. Should we remove them before merging?"
+                },
+                {
+                    "author": "s6anloes",
+                    "body": "Sorry, false alarm. I just double-checked and didn't find any.\r\nCan we get an okay from the detector contacts nonetheless:\r\n- ALLEGRO: @BrieucF @giovannimarchiori  @scott-snyder \r\n- CLD: @Zehvogel \r\n\r\nI can give the okay for IDEA\r\n\r\nEdit: No ILD files seem to have been touched, sorry for tagging you\u2026"
+                }
+            ],
+            "comments_total": 8,
+            "reviews": [
+                {
+                    "author": "giovannimarchiori",
+                    "state": "APPROVED",
+                    "body": "looks good from ALLEGRO's side"
+                },
+                {
+                    "author": "s6anloes",
+                    "state": "COMMENTED",
+                    "body": "Hi Juan Miguel,\r\nthere are still a lot of inconsistencies on how the sensitve type is actually set in the different drivers. Essentially, I saw three cases (ignoring the drivers from FCCDetectors which are archived now):\r\n- the driver explicitly does `.setType(\"calorimeter\")` (or `\"tracker\"`) and th\u2026"
+                },
+                {
+                    "author": "Zehvogel",
+                    "state": "APPROVED",
+                    "body": "LGTM \ud83d\udc4d"
+                }
+            ],
+            "reviews_total": 11
+        },
         {
             "org": "key4hep",
             "repo": "EDM4hep",
@@ -75,6 +298,192 @@
         },
         {
             "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 137,
+            "title": "Use the hit time error for the hit time resolution",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/137",
+            "author": "jburzy",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "EDM4hep 1.2 stores a time error per tracker hit (key4hep/EDM4hep#528), and DDPlanarDigi now fills it with the digitization time resolution (key4hep/k4Reco#74). CKFTrackingAlg now takes the time resolution of each hit from its time error, for both the 4D CKF measurement and the seeding time cuts. HitTimeResolutions is kept as a fallback for hits without a time error, e.g. files digitized before EDM4hep 1.2. It is no longer required when hit time is used, and the placeholder warning is removed. A hit with neither throws. The time error is read only when building against EDM4hep 1.2 or newer.\r\n\r\ncc @madbaron \r\n\r\n\r\nBEGINRELEASENOTES\r\n\r\nUse the hit time error for the hit time resolution\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 9,
+                "deletions": 14,
+                "files": 2
+            },
+            "files": [
+                "CMakeLists.txt",
+                "k4ActsTracking/src/components/CKFTrackingAlg.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "This looks good to me.\r\n\r\nI wonder if we should have just bumped the min edm4hep requirement to 1.2 and got rid of the fallback entirely, but I guess we can do that in a bit."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I think we always want to have EDM4hep at the latest version so requesting the latest version should always be fine in any package"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I tend to agree with Juan. I think we just require the latest version of EDM4hep. I don't see many use cases that would want to use an older version of EDM4hep (in memory). Having the possibility to time smear hits for files that were written before seems sensible."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> I tend to agree with Juan. I think we just require the latest version of EDM4hep. I don't see many use cases that would want to use an older version of EDM4hep (in memory). Having the possibility to time smear hits for files that were written before seems sensible.\r\n\r\nNote this is not time smearin\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> So the conclusion I'd draw from your comments is that we should get rid of the of the fallback with the IFDEF and either automatically switch to the alt path if the timeError is not in the collection, or get rid of the backwards compatibility?\r\n\r\nIf the package is built with edm4hep@1.2 you will n\u2026"
+                },
+                {
+                    "author": "jburzy",
+                    "body": "This finishes off the last of the remaining open items in #77."
+                }
+            ],
+            "comments_total": 6,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Just for completness, I think we should also be good citizens and document the new EDM4hep requirement here:\n\nhttps://github.com/key4hep/k4ActsTracking/blob/5f390b6fe08920026e199cae47ace2636f7d01d2/CMakeLists.txt#L39"
+                }
+            ],
+            "reviews_total": 4
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 109,
+            "title": "Add initial ACTS adaptive multi-vertex finder",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/109",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Add an initial ACTS Adaptive Multi-Vertex Finder (AMVF) implementation for primary vertex reconstruction from existing edm4hep tracks.\r\n- Add configurable track selection, beam-spot constraints, seeding, annealing and vertex-fit settings.\r\n- Store reconstructed vertex-to-track associations through `ReconstructedParticle`s and weighted `VertexRecoParticleLink`s.\r\n- Add generic vertexing configuration together with a CLD-specific setup tuned for FCC-ee beam conditions.\r\n- Add a CLD integration test validating vertex reconstruction and output relations.\r\n\r\nENDRELEASENOTES\r\n\r\n## Description\r\n\r\nThis adds an initial implementation of ACTS adaptive multi-vertex finding to `k4ActsTracking`.\r\n\r\nThe new `VertexFindingAlg` runs on an existing `edm4hep::TrackCollection` and uses t\u2026",
+            "diff": {
+                "additions": 1028,
+                "deletions": 0,
+                "files": 7
+            },
+            "files": [
+                "k4ActsTracking/CMakeLists.txt",
+                "k4ActsTracking/src/components/VertexFindingAlg.cpp",
+                "test/CMakeLists.txt",
+                "test/options/CLD_Vertexing.py",
+                "test/options/_vertexing_helpers.py",
+                "test/options/vertexing.py",
+                "test/scripts/check_vertexing.py"
+            ],
+            "comments": [
+                {
+                    "author": "BrieucF",
+                    "body": "> Nice. IIUC this works with any track input (at least the tests and some comments suggest that), right?\r\n> \r\n> I have a conceptual question, where I truly lack any experience in usage.\r\n> \r\n> In its current form the Vertexing creates Vertices (as expected), but it also creates ReconstructedParticle\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I have created https://github.com/key4hep/EDM4hep/issues/526 for more discussion about the EDM4hep related parts to not pollute the PR discussion here too much with that. (I assume resolving that might have a longer timeline than this PR)."
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> > Nice. IIUC this works with any track input (at least the tests and some comments suggest that), right?\r\n> > I have a conceptual question, where I truly lack any experience in usage.\r\n> > In its current form the Vertexing creates Vertices (as expected), but it also creates ReconstructedParticles \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> Hello! I have implemented in my local branch of k4RecTracker an extension that does this. I think it is useful to have also the one-to-many relation between vertex and the tracks that produced the vertex. I can open a PR in edm4hep if we decide to include it centrally \r\n\r\nYes please, I think it wo\u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "I validated this against LCFIPlus on three samples. Results below.\r\n\r\n## Setup\r\n\r\n- **Same input.** Both vertexers run on CLD's own tracks (`SiTracks_Refitted`), unchanged, and both use the beam-spot constraint.\r\n- **Same validation.** Everything goes through the same code (`VertexValidation` in k4D\u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "I think it's time to let @paulgessinger take a look :)"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Stupid question about the muon gun, why 240 GeV muons? We will not see such high momentum muons at FCCee, right?\r\n\r\nDifferent question: How was the tuning done? I assume it's a script + some instructions. Is it generic enough to be included here?"
+                },
+                {
+                    "author": "BrieucF",
+                    "body": "Very nice Joshua, thanks! Just out of curiosity, what is `PV selection` doing?"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> Stupid question about the muon gun, why 240 GeV muons? We will not see such high momentum muons at FCCee, right?\r\n> \r\n> Different question: How was the tuning done? I assume it's a script + some instructions. Is it generic enough to be included here?\r\n\r\nThe 240 GeV refers to the collision point, w\u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> Very nice Joshua, thanks! Just out of curiosity, what is `PV selection` doing?\r\n\r\n\r\n**PV efficiency**: how often the true PV is found at all, i.e. matched by a clean reco vertex (\u2265 70 % of its track weight from the true PV):\r\n\r\n```math\r\n\\varepsilon_\\text{PV} = \\frac{N_\\text{events}(\\text{true PV m\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> The scan scripts are tied to my setup for now. If it's useful, I can make a follow-up PR with a general tuning script, that should work for any detector, though I think we should merge this and the new vertex validation plots https://github.com/key4hep/k4DetectorPerformance/pull/9 first.\r\n\r\nSounds\u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "Slides from the reconstruction meeting today are [here](https://indico.cern.ch/event/1733791/contributions/7308391/attachments/3363213/6034087/Reco_Meeting_15.10.2026_Joshua.pdf). I also had realized that CLDConfig still uses [outdated beam-spot numbers from 2022](https://github.com/key4hep/CLDConfi\u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "Unless @paulgessinger has any other comments, I would consider this PR ready to merge. We should follow up on the track wrapper issue once we change the EDM4Hep model"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "Hi all,\r\n\r\nI am linking the latest results shown in the FCC Reconstruction Workshop [here](https://indico.cern.ch/event/1719015/contributions/7325716/attachments/3369512/6047225/Reco_Workshop_26.10.2026_Joshua.pdf). Note:\r\n\r\n- In the original 'untuned' results ACTS annealing was turned off, whereas \u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> we can potentially keep track of the things we didn't do now in an issue and tackle them in the future.\r\n\r\nDone in https://github.com/key4hep/k4ActsTracking/issues/136"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I will merge this later today, unless there are more comments."
+                }
+            ],
+            "comments_total": 16,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Nice. IIUC this works with any track input (at least the tests and some comments suggest that), right?\n\nI have a conceptual question, where I truly lack any experience in usage.\n\nIn its current form the Vertexing creates Vertices (as expected), but it also creates ReconstructedParticles that essenti\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Overall looks good to me and can in principle go in as is at the moment. A few nits about docstrings and (missing) units below. Since we will have to touch this in the not too distant future in any case again, we can potentially keep track of the things we didn't do now in an issue and tackle them i\u2026"
+                }
+            ],
+            "reviews_total": 15
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-dev-utils",
+            "num": 34,
+            "title": "Check Delphes and include prereleases in commit checks",
+            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/34",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Include `delphes/delphes` in the commit checks and consider prereleases when selecting the latest published release for each repository. Skip draft releases and retain the fallback to tags.\n\nENDRELEASENOTES\n\nValidation: `bash -n scripts/check-commits-after-tag.sh` and `git diff --check` passed. A full run against GitHub exited successfully with no stderr and reported 11 Delphes commits after prerelease tag `3.5.2pre02`.",
+            "diff": {
+                "additions": 3,
+                "deletions": 3,
+                "files": 1
+            },
+            "files": [
+                "scripts/check-commits-after-tag.sh"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
             "repo": "k4RecTracker",
             "num": 114,
             "title": "Flatten loops for tracker hit to MC particle matching",
@@ -109,6 +518,203 @@
             "comments_total": 3,
             "reviews": [],
             "reviews_total": 10
+        },
+        {
+            "org": "key4hep",
+            "repo": "CLDConfig",
+            "num": 98,
+            "title": "Refactor IV",
+            "url": "https://github.com/key4hep/CLDConfig/pull/98",
+            "author": "Zehvogel",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Replace the `CONFIG` dictionary in `CLDReconstruction.py` with command line arguments: `--calorimeterIntegrationTimeWindow`, `--overlay`, `--vertexUnconstrained` and `--outputMode`\n- Add `--overlay=Skip` to run without the overlay processor (and without the RecoMCTruthLink that depends on it), and use it for the reference output of the native comparison test instead of a `sed`-generated steering file\n- Update `BEAM_SPOT_SIZES` to luminous region sizes derived from the FCC Feasibility Study Report (2025)\n- Decide which stages run (wrapped vs. native) once at the top of `CLDReconstruction.py`; `--native` with `--outputMode LCIO` now gives an argument error\n- Use the injected `reco_args` in the tracking sequences instead of re-parsing the arguments\n- Pass the detector via \u2026",
+            "diff": {
+                "additions": 114,
+                "deletions": 129,
+                "files": 11
+            },
+            "files": [
+                "CLDConfig/CLDReconstruction.py",
+                "CLDConfig/CaloDigi/CaloDigi.py",
+                "CLDConfig/HighLevelReco/JetAndVertex.py",
+                "CLDConfig/HighLevelReco/JetClusteringOrRenaming.py",
+                "CLDConfig/Overlay/Overlay.py",
+                "CLDConfig/ParticleFlow/Pandora.py",
+                "CLDConfig/Tracking/ConformalTracking.py",
+                "CLDConfig/Tracking/Refit.py",
+                "CLDConfig/Tracking/TrackingDigi.py",
+                "CLDConfig/Tracking/TruthTracking.py",
+                "test/CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Looks good, the beam spot size changes will probably change a few things so it will have to be clear what was produced before or after this change, in particular let me know if it should be in the next release to happen soon."
+                },
+                {
+                    "author": "Zehvogel",
+                    "body": "> Looks good, the beam spot size changes will probably change a few things so it will have to be clear what was produced before or after this change, in particular let me know if it should be in the next release to happen soon.\r\n\r\nYes, I think we want to have it in ASAP.  I think we will have a numb\u2026"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 2
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Reco",
+            "num": 76,
+            "title": "Fix CLDConfig test setup leaving empty Python blocks",
+            "url": "https://github.com/key4hep/k4Reco/pull/76",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Fix CLD reconstruction tests by using `--overlay Skip` instead of deleting Python statements, which left empty `if` blocks and caused an `IndentationError` after https://github.com/key4hep/CLDConfig/pull/98.\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 6,
+                "deletions": 6,
+                "files": 1
+            },
+            "files": [
+                "test/CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GaudiPandora",
+            "num": 63,
+            "title": "Fix CLDConfig test setup leaving empty Python blocks",
+            "url": "https://github.com/key4hep/k4GaudiPandora/pull/63",
+            "author": "jmcarcell",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Fix CLD reconstruction tests by using `--overlay Skip` instead of deleting Python statements, which left empty `if` blocks and caused an `IndentationError` after https://github.com/key4hep/CLDConfig/pull/98\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 3,
+                "deletions": 3,
+                "files": 1
+            },
+            "files": [
+                "test/CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 283,
+            "title": "fix(dashboard): keep each toolbar's controls together on smaller screens and size dropdowns to what they show",
+            "url": "https://github.com/key4hep/k4Bench/pull/283",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **User description**\nThe Overview's toolbar came apart on smaller screens. Between about 1560 and 1820 px, the Runs control dropped below Regressions. The Memory dropdown, fixed at 210 px, also cut \"Mean event anonymous RSS (GB)\" short. Every other control row in the dashboard had its own hand-built layout, with fixed column fractions or fixed dropdown widths.\n\n## One control row\n\n`ui_utils.control_row()` now lays out every toolbar the same way. The controls that choose what is looked at go on the left. Those that change how it is drawn (run scope, overlays, Display options) go on the right.\n\n- Both sides are sized to their content, so a row too narrow for both moves the right side to its own line as a whole. Before, the right side was a stretching container\u2026",
+            "diff": {
+                "additions": 364,
+                "deletions": 190,
+                "files": 12
+            },
+            "files": [
+                "dashboard/tabs/region_timing/attribution.py",
+                "dashboard/tabs/region_timing/historical.py",
+                "dashboard/tabs/region_timing/step_analysis.py",
+                "dashboard/tabs/reports/_night_picker.py",
+                "dashboard/tabs/reports/overview/__init__.py",
+                "dashboard/tabs/reports/overview/status.py",
+                "dashboard/tabs/reports/regressions.py",
+                "dashboard/tabs/reports/stack_changes.py",
+                "dashboard/tabs/trends.py",
+                "dashboard/ui_chrome.py",
+                "dashboard/ui_utils.py",
+                "tests/unit/test_dashboard_ui_state.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/283?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 14,065 in / 458 out / 14,523 total\n- Time cost: 1470.8s\n- AI calls: 1\n\n</detai\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 282,
+            "title": "feat: record the baseline's event size in each suite's nightly report and draw it beside time and memory in the Overview",
+            "url": "https://github.com/key4hep/k4Bench/pull/282",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The Overview's Performance Trends gets a third panel, **Event size**, beside CPU and Memory, on both the Simulation and Reconstruction pages. Until now, event size could only be looked at one detector at a time, in the Event Size section.\n\n## Reports\n\nThe Overview reads only the nightly `report.json` files, so each suite's report now records what one event of the baseline configuration's output takes on disk. The values come from the `_event_size.json` the runners have written since #250, and are never judged (`reported_only`, family `size`):\n\n| Metric | Meaning |\n| --- | --- |\n| `event_size_kb` | the events' bytes on disk after ROOT's compression, per event (the Event Size section's tile) |\n| `uncompressed_event_size_kb` | the same before compression |\n| `file_size_per_event_kb` | the who\u2026",
+            "diff": {
+                "additions": 538,
+                "deletions": 54,
+                "files": 14
+            },
+            "files": [
+                "dashboard/data.py",
+                "dashboard/tabs/reports/_metric_trend.py",
+                "dashboard/tabs/reports/overview/__init__.py",
+                "dashboard/tabs/reports/overview/_data.py",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/analysis/trend.py",
+                "k4bench/metrics.py",
+                "k4bench/regression/catalog.py",
+                "tests/unit/test_dashboard_detectors_overview.py",
+                "tests/unit/test_dashboard_overview_apptest.py",
+                "tests/unit/test_regression_catalog.py",
+                "tests/unit/test_regression_reco.py",
+                "tests/unit/test_trend_builders.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/282?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -210,6 +816,348 @@
             "reviews_total": 0
         },
         {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 25,
+            "title": "evaluate: several evaluators per candidate share each pipeline stage once",
+            "url": "https://github.com/key4hep/k4Opt/pull/25",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "A problem can now be measured by several evaluators. Each pipeline stage runs once per candidate, however many evaluators read it, and the candidate gets one status from theirs. There is no optimizer yet; this prepares one.\n\n```yaml\nevaluation:\n  events: 1000\n  seed: 42\n  generation: { ... }\n  backend: { ... }\n  evaluators:\n    - name: calo.photon\n      version: \"1\"\n      settings:\n        collection: ECalBarrelCollection\n    - name: my.readout_cost   # illustrative: no `requires`, so no simulation is needed for it\n      version: \"1\"\n```\n\n```bash\nk4opt evaluate problem.yaml --evaluator calo_photon.py:CaloPhoton --evaluator my_cost.py:ReadoutCost \\\n  --param constants.ECal_cell_size=10.0 --output runs/a\n```\n\n## Design\n\n- **One shared context.** `events`, `seed`, `generation` and `backend` c\u2026",
+            "diff": {
+                "additions": 2377,
+                "deletions": 752,
+                "files": 27
+            },
+            "files": [
+                "README.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/problem.md",
+                "examples/evaluators/calo_photon.py",
+                "examples/problem/cld-ecal-granularity.yaml",
+                "k4opt/evaluation/models.py",
+                "k4opt/evaluation/protocol.py",
+                "k4opt/frozen.py",
+                "k4opt/problem/__init__.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/_run.py",
+                "k4opt/problem/_stages.py",
+                "k4opt/problem/cli.py",
+                "k4opt/problem/config.py",
+                "k4opt/problem/models.py",
+                "tests/integration/problem/test_evaluate_ddsim.py",
+                "tests/support/evaluators.py",
+                "tests/support/hit_energy.py",
+                "tests/support/parameter_echo.py",
+                "tests/unit/problem/conftest.py",
+                "tests/unit/problem/test_config.py",
+                "tests/unit/problem/test_evaluate.py",
+                "tests/unit/problem/test_evaluators.py",
+                "tests/unit/problem/test_models.py",
+                "tests/unit/problem/test_run.py",
+                "tests/unit/problem/test_stages.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 24,
+            "title": "examples: a cell-size study of the CLD ECAL replaces the hit-count smoke test",
+            "url": "https://github.com/key4hep/k4Opt/pull/24",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Changes\n\n- **Example problem** `examples/problem/cld-ecal-granularity.yaml`: how fine should the CLD ECAL barrel cells be? It varies `ECal_cell_size` in 2.5-20 mm and minimizes two measurements on 10 GeV photons at 80-100 deg: how far the measured photon direction is off, and how many cells the photon fires. It replaces `cld-ecal-hit-count.yaml`, whose only metric was a technical observable.\n- **Example evaluator** `calo.photon` (`examples/evaluators/calo_photon.py`): reads the ECAL hits and `MCParticles`, fails if the generated particle is not a photon (PDG 22), and leaves out photons that converted in the tracker (`isDecayedInTracker()`, about 9 %). A cell fires above 70 keV (half a MIP in 0.5 mm of silicon); the residual is the angle between the generated momentum and the line from t\u2026",
+            "diff": {
+                "additions": 573,
+                "deletions": 341,
+                "files": 18
+            },
+            "files": [
+                "README.md",
+                "docs/evaluators.md",
+                "docs/problem.md",
+                "examples/evaluators/calo_hit_multiplicity.py",
+                "examples/evaluators/calo_photon.py",
+                "examples/problem/cld-ecal-granularity.yaml",
+                "examples/problem/cld-ecal-hit-count.yaml",
+                "k4opt/problem/cli.py",
+                "k4opt/yamlio.py",
+                "pyproject.toml",
+                "tests/integration/problem/test_evaluate_ddsim.py",
+                "tests/support/cell_count.py",
+                "tests/support/evaluators.py",
+                "tests/support/simulation.py",
+                "tests/unit/examples/test_calo_hit_multiplicity.py",
+                "tests/unit/examples/test_calo_photon.py",
+                "tests/unit/problem/test_config.py",
+                "tests/unit/problem/test_run.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 23,
+            "title": "review fixes: numpy numbers in results, clear errors for malformed metrics and huge values, shared YAML loader, current docs",
+            "url": "https://github.com/key4hep/k4Opt/pull/23",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Changes\n\n- **numpy in results:** a measurement value, uncertainty, sample or provenance entry may be any real number (`numpy.int64`, `numpy.float32`, ...) and is stored as the Python `int` or `float` it stands for; per-event values may be any iterable, such as a numpy array. Booleans, NaN and infinity are still rejected.\n- **Metric keys:** a key that is neither a name nor a `(stage, metric)` pair of strings is an `EvaluationContractError` (it was a bare `ValueError`/`TypeError`, and a malformed `metrics` declaration was accepted).\n- **Huge values:** `Measurement.from_samples` reports samples too large to average as a contract error instead of an `OverflowError`; a `--param` integer with more digits than Python converts is a `CandidateError` instead of a traceback.\n- **Problem models:** \u2026",
+            "diff": {
+                "additions": 267,
+                "deletions": 120,
+                "files": 21
+            },
+            "files": [
+                "CONTRIBUTING.md",
+                "README.md",
+                "docs/ddsim.md",
+                "docs/evaluation.md",
+                "docs/problem.md",
+                "k4opt/__init__.py",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/base.py",
+                "k4opt/evaluation/models.py",
+                "k4opt/frozen.py",
+                "k4opt/geometry/config.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/_run.py",
+                "k4opt/problem/cli.py",
+                "k4opt/problem/config.py",
+                "k4opt/problem/models.py",
+                "k4opt/yamlio.py",
+                "tests/unit/evaluation/test_base.py",
+                "tests/unit/evaluation/test_contract.py",
+                "tests/unit/problem/test_models.py",
+                "tests/unit/problem/test_run.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 22,
+            "title": "evaluators: a base class so an evaluator is a declaration and one method",
+            "url": "https://github.com/key4hep/k4Opt/pull/22",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Builds on #21 (the base of this PR is its branch). The example evaluator now needs one import and no helper code:\n\n```python\nfrom k4opt.evaluation import Evaluator\n\nclass CaloHitMultiplicity(Evaluator):\n    name = \"calo.hit_multiplicity\"\n    version = \"1\"\n    requires = \"simulation\"\n    settings = {\"collection\": str}\n    metrics = {\"ecal_barrel.mean_hit_cells\": \"1\"}\n\n    def evaluate(self, request):\n        hits = request.read(\"simulation\", request.settings[\"collection\"], \"edm4hep::SimCalorimeterHit\")\n        cells = [len({hit.getCellID() for hit in event}) for event in hits]\n        if max(cells) == 0:\n            self.invalid(\"no hits in any event\")\n        return {\"ecal_barrel.mean_hit_cells\": cells}\n```\n\n## What changed\n\n- `Evaluator` is an optional base class. The old `typing.Protocol\u2026",
+            "diff": {
+                "additions": 739,
+                "deletions": 139,
+                "files": 17
+            },
+            "files": [
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "examples/evaluators/calo_hit_multiplicity.py",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/base.py",
+                "k4opt/evaluation/edm4hep.py",
+                "k4opt/evaluation/loader.py",
+                "k4opt/evaluation/models.py",
+                "k4opt/evaluation/protocol.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/_run.py",
+                "tests/unit/evaluation/test_base.py",
+                "tests/unit/evaluation/test_contract.py",
+                "tests/unit/evaluation/test_edm4hep.py",
+                "tests/unit/examples/test_calo_hit_multiplicity.py",
+                "tests/unit/problem/test_run.py",
+                "tests/unit/problem/test_stages.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 21,
+            "title": "evaluators: simplify the example; framework reads EDM4hep, counts events, averages samples",
+            "url": "https://github.com/key4hep/k4Opt/pull/21",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The example evaluator `calo.hit_multiplicity` is about 60 lines instead of 180. The code every evaluator would have repeated is now in k4opt.\n\n## Framework\n\n- `read_collection(path, collection, value_type)` and `count_events(path)` in `k4opt.evaluation` read EDM4hep files. `podio` is still imported lazily. Every problem with a file (no podio, unreadable file, missing `events` category or collection, wrong element type, C++ reader exceptions) is an `EvaluationFailed`.\n- An evaluator can raise `EvaluationFailed` or `EvaluationInvalid`. The bridge turns them into the matching result. Other exceptions still propagate.\n- The simulation stage checks its output, whether it ran or was supplied. The file must hold the requested number of events, otherwise the result is `failed` (\"incomplete simulat\u2026",
+            "diff": {
+                "additions": 678,
+                "deletions": 361,
+                "files": 25
+            },
+            "files": [
+                "docs/ddsim.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/problem.md",
+                "examples/evaluators/calo_hit_multiplicity.py",
+                "examples/problem/cld-ecal-hit-count.yaml",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/edm4hep.py",
+                "k4opt/evaluation/errors.py",
+                "k4opt/evaluation/models.py",
+                "k4opt/evaluation/protocol.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/_run.py",
+                "k4opt/problem/_stages.py",
+                "k4opt/problem/cli.py",
+                "tests/integration/problem/test_evaluate_ddsim.py",
+                "tests/support/evaluators.py",
+                "tests/support/simulation.py",
+                "tests/unit/evaluation/test_contract.py",
+                "tests/unit/evaluation/test_edm4hep.py",
+                "tests/unit/examples/test_calo_hit_multiplicity.py",
+                "tests/unit/problem/conftest.py",
+                "tests/unit/problem/test_config.py",
+                "tests/unit/problem/test_run.py",
+                "tests/unit/problem/test_stages.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 20,
+            "title": "stages: evaluators read stage outputs; generation via particle gun or sample; example evaluator",
+            "url": "https://github.com/key4hep/k4Opt/pull/20",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\n\nEvaluators no longer run tools. An evaluator names the last pipeline stage it reads with `requires = \"simulation\"` (optional); the framework runs that stage and the ones it needs once per candidate and passes the file as `request.inputs[stage]`. Several evaluators can share one simulation, and an evaluator can be tested with a fixture file and no Key4hep stack.\n\n- **Stages** (`k4opt/problem/_stages.py`, internal): `generation` then `simulation`. A failed stage becomes a `failed` result with its logs as artifacts and the evaluator is not called. A caller-supplied `inputs[stage]` is authoritative: that stage is not run, and the record identifies the file by path, size and SHA-256.\n- **Generation**: `evaluation.generation` is a particle gun (keys directly under it) or `sample: <pa\u2026",
+            "diff": {
+                "additions": 2399,
+                "deletions": 779,
+                "files": 38
+            },
+            "files": [
+                "README.md",
+                "docs/ddsim.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/problem.md",
+                "examples/evaluators/calo_hit_multiplicity.py",
+                "examples/problem/cld-ecal-granularity.yaml",
+                "examples/problem/cld-ecal-hit-count.yaml",
+                "k4opt/ddsim/__init__.py",
+                "k4opt/ddsim/command.py",
+                "k4opt/ddsim/errors.py",
+                "k4opt/ddsim/run.py",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/errors.py",
+                "k4opt/evaluation/loader.py",
+                "k4opt/evaluation/models.py",
+                "k4opt/evaluators/__init__.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/_run.py",
+                "k4opt/problem/_stages.py",
+                "k4opt/problem/cli.py",
+                "k4opt/problem/config.py",
+                "k4opt/problem/models.py",
+                "tests/integration/problem/test_evaluate_ddsim.py",
+                "tests/support/evaluators.py",
+                "tests/support/simulation.py",
+                "tests/unit/ddsim/test_command.py",
+                "tests/unit/ddsim/test_run.py",
+                "tests/unit/evaluation/test_contract.py",
+                "tests/unit/evaluation/test_loader.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 405,
+            "title": "ALFA ddsim steering file",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/405",
+            "author": "Edler1",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Adding the ALFA ddsim steering file, originally part of the k4geo [PR #669](https://github.com/key4hep/k4geo/pull/669). \nREADME and bash ctest script taken from ALLEGRO/IDEA with modifications.\nctest is currently commented out, since it depends on the k4geo PR.",
+            "diff": {
+                "additions": 827,
+                "deletions": 0,
+                "files": 4
+            },
+            "files": [
+                "CMakeLists.txt",
+                "FCCee/FullSim/ALFA/ALFA_o1_v00/README.md",
+                "FCCee/FullSim/ALFA/ALFA_o1_v00/SteeringFile_ALFA_o1_v00.py",
+                "FCCee/FullSim/ALFA/ALFA_o1_v00/ctest_sim_digi_reco.sh"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "@s6anloes can you review? Or do I tag without this?"
+                },
+                {
+                    "author": "BrieucF",
+                    "body": "Andreas is not available today, this looks good, we can merge and then tag"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 410,
+            "title": "[ALLEGRO] Include the ddsim SteeringFile in the recipe",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/410",
+            "author": "BrieucF",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Without this ddsim steering file, what is kept from the gaseous tracker simulation is inadequate (hits below 1 keV are discarded and there is some hit merging happening while we need to keep everything for the digitization to work properly).",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 2
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o1_v03/README.md",
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_o2_v01/README.md"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Merging this soon to tag"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
             "org": "hep-fcc",
             "repo": "bib-studies",
             "num": 22,
@@ -235,6 +1183,88 @@
             ],
             "comments": [],
             "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1704,
+            "title": "SurfaceManager: enter each surface only once into the type and world maps",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1704",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "MarkusFrankATcernch",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- SurfaceManager: surfaces of nested detectors (e.g. the subdetectors of a `DD4hep_SubdetectorAssembly`) are no longer entered several times into the \"world\" and type maps. \r\n\r\nENDRELEASENOTES\r\n\r\nThis is a follow-up to #1703, from the same look at the k4Bench reconstruction benchmarks for FCC-ee. While checking the surface map of ALLEGRO_o1_v04 we noticed that \"world\" has 363,481 entries, although the detector only has 162,979 surfaces.\r\n\r\nThe reason is the assemblies. In ALLEGRO the silicon wrapper and the vertex detector are `DD4hep_SubdetectorAssembly`s with the actual trackers nested inside. `Detector::detectors()` lists the nested trackers on their own and the assemblies as well, and `SurfaceManager::initialize` puts the surfaces of each of them into \"world\". So a s\u2026",
+            "diff": {
+                "additions": 14,
+                "deletions": 3,
+                "files": 1
+            },
+            "files": [
+                "DDRec/src/SurfaceManager.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200219h 36m 36s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 7cb52ec8.\n\n[test-results]:data:application/gzip;base64,H4sIAHKU42oC/12MSw7CIBQAr9KwdgGlFPAy5vFLiG0xfFbGu4uktuhyZpJ5IucXm9B1IOIyoFR8PsmUCNmHrTLHTM5V1Zo/nXL2pVsqWv+ru3\u2026"
+                },
+                {
+                    "author": "MarkusFrankATcernch",
+                    "body": "@jbeirer There is a conflict in the surface manager file. Could you have a look please ?"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> @jbeirer There is a conflict in the surface manager file. Could you have a look please ?\r\n\r\nDone"
+                },
+                {
+                    "author": "MarkusFrankATcernch",
+                    "body": "Thank you. I will put the MR to auto-merge."
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1703,
+            "title": "Speed up the placement path search in the SurfaceManager map build",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1703",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "MarkusFrankATcernch",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- DetectorTools: add `detail::tools::PlacementPathCache`. While it exists, the placement paths of all children of a DetElement are found in one walk of its volume tree instead of one search from the top per child. The paths are unchanged.\n- SurfaceManager: build the surface maps inside a `PlacementPathCache`. For FCC-ee ALLEGRO_o1_v04 the first `map()` call goes from 350 s to 1.8 s.\n\nENDRELEASENOTES\n\n\nThis came up while looking at the [k4Bench](https://github.com/key4hep/k4Bench) reconstruction benchmarks for FCC-ee. For ALLEGRO_o1_v04, about 270 of the 340 s of `initialize` were booked under the first `DDPlanarDigi` (`VXDBarrelDigitizer`), while the other three digitizers of the same type took almost nothing. It turned out that the first digitizer just triggers the lazy \u2026",
+            "diff": {
+                "additions": 113,
+                "deletions": 8,
+                "files": 5
+            },
+            "files": [
+                "DDCore/include/DD4hep/DetectorTools.h",
+                "DDCore/src/DetectorImp.cpp",
+                "DDCore/src/DetectorTools.cpp",
+                "DDRec/src/SurfaceManager.cpp",
+                "examples/ClientTests/CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200220h 18m 53s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 7e5898fc.\n\n[test-results]:data:application/gzip;base64,H4sIAClk42oC/12MQQ6DIBAAv2I49wBdEehnGrKyCalKg3Ay/XspsUp7nJlkNkZ+ciu7dUJfOrZmn04ac7TJh6WwAgFQVKnp00HJL93XjPivHv\u2026"
+                },
+                {
+                    "author": "MarkusFrankATcernch",
+                    "body": "@jbeirer \r\nJust one comment: caches are sometimes harmful. \r\nIn particular if placement path calls are used during the construction of subdetectors. \r\nI just recently stumbled over this. If we want this, \r\n1) you should provide in DetectorTools a call to clear the cache. \r\n    If possible also the c\u2026"
+                },
+                {
+                    "author": "MarkusFrankATcernch",
+                    "body": "@jbeirer Thanks a lot! This looks good!"
+                }
+            ],
+            "comments_total": 3,
             "reviews": [],
             "reviews_total": 0
         },
@@ -323,6 +1353,39 @@
                 }
             ],
             "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "PandoraPFAOrg",
+            "repo": "LCContent",
+            "num": 46,
+            "title": "Add some user settable bits to the LCCaloHit",
+            "url": "https://github.com/PandoraPFAOrg/LCContent/pull/46",
+            "author": "tmadlener",
+            "mergedAt": "2026-10-29",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "This is the second part of enabling #43. It introduces a bitfield into `LCCaloHit` and also a *BIB* flag as a first example.\r\n\r\n- [x] Needs #45",
+            "diff": {
+                "additions": 219,
+                "deletions": 7,
+                "files": 1
+            },
+            "files": [
+                "include/LCObjects/LCCaloHit.h"
+            ],
+            "comments": [
+                {
+                    "author": "trholmes",
+                    "body": "I was just looking at pushing along the rest of this chain of commits -- is there anything holding this one up from being merged?"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "No, just me not getting to click the necessary buttons, I suppose.\r\n\r\nI will merge this later today, unless someone complains."
+                }
+            ],
+            "comments_total": 2,
             "reviews": [],
             "reviews_total": 0
         },
@@ -2116,70 +3179,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4geo",
-            "num": 674,
-            "title": "[ALLEGRO] Use same DectDimensions for ALLEGRO_o1_v04 as for o1_v03\u2026",
-            "url": "https://github.com/key4hep/k4geo/pull/674",
-            "author": "armin-ilg",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "giovannimarchiori",
-            "labels": [],
-            "body": "\u2026 (same properties of silicon wrapper)\n\nTo ease the review process, please consider the following before opening a pull request:\n- [x] the code is sufficiently well documented (e.g. inline comments)\n- [x] the relevant README(s) were updated. See e.g. https://github.com/key4hep/k4geo/blob/main/detector/calorimeter/README.md or https://github.com/key4hep/k4geo/blob/main/FCCee/IDEA/compact/README.md\n- [x] the code is covered by tests. See https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\n- [x] the PR source branch has been rebased (`--ff-only`) to `k4geo/main`\n- [x] the PR does not contain any additions or modifications that do not belong to it\n- [x] The release notes below contain a succinct and comprehensive description of the changes that are sufficiently self-explanatory\n\nIf \u2026",
-            "diff": {
-                "additions": 4,
-                "deletions": 1902,
-                "files": 6
-            },
-            "files": [
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/ALLEGRO_o1_v04.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/DectDimensions.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/DectEmptyMaster.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/display.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/elements.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/materials.xml"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Maybe you could symlink the file if they are the same?"
-                },
-                {
-                    "author": "armin-ilg",
-                    "body": "> Maybe you could symlink the file if they are the same?\r\n\r\nAs you prefer, so far we didn't symlink any DectDimension files, but in this case it could make sense"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "If nothing is going to be changed in this file it's probably better, it makes it clear that they are the same between different versions, otherwise issues like https://github.com/key4hep/k4geo/issues/673 can happen and it's not easy to find out. Alternatively, a common folder and symlinks pointing t\u2026"
-                },
-                {
-                    "author": "armin-ilg",
-                    "body": "> If nothing is going to be changed in this file it's probably better, it makes it clear that they are the same between different versions, otherwise issues like #673 can happen and it's not easy to find out. Alternatively, a common folder and symlinks pointing to it is also good (then it's clear th\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "@armin-ilg I think you can proceed as you proposed, with the include ../ approach\r\nThanks!"
-                },
-                {
-                    "author": "armin-ilg",
-                    "body": "> @armin-ilg I think you can proceed as you proposed, with the include ../ approach Thanks!\r\n\r\nOk, done. Now only using different HCAL files and everything else is taken from ALLEGRO_o1_v03. If the checks pass it's ready to be merged."
-                },
-                {
-                    "author": "k4bench-bot",
-                    "body": "<!-- k4bench-blame-comment:v1 window=2026-10-17..2026-10-26 -->\n<!-- k4bench-blame-facts:b51cf3a6fdd7ff18 -->\n<!-- k4bench-blame-cumulative:v2 eNrNmV1P4kAYhf_KhmvYFKJEL5fCClmIRo0ma8xkWt5gQ2emmSmo_35nzcpnQ4dkeY-JF6YXnuc8rbT0PD01fozHg6vba2HaYhmdNZqNt4uu6J61KL9szdK03W2ZovSHiwtBJH4niaBUXbb9kUQ6yjNN_ldFU\u2026"
-                }
-            ],
-            "comments_total": 7,
-            "reviews": [
-                {
-                    "author": "giovannimarchiori",
-                    "state": "APPROVED",
-                    "body": "Excellent!"
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
             "repo": "key4hep-spack",
             "num": 940,
             "title": "Add --latest-tags to the nightlies setup script",
@@ -2196,126 +3195,6 @@
             },
             "files": [
                 "scripts/cvmfs/setup-nightlies.sh"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 127,
-            "title": "Fix propagateBackward to Start at Outermost Seed Space Point",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/127",
-            "author": "mlarson02",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "madbaron",
-            "labels": [],
-            "body": "Ported these changes from #108.\r\n\r\n\r\nBEGINRELEASENOTES\r\n- Fix `PropagateBackward` (outside-in CKF) so that the CKF starts at the outermost seed space point instead of the innermost one. Previously the outer seed hits were left out of the final track.\r\n  - Seed parameters are now estimated at the start space point. The magnetic field is evaluated at that point. This now applies to the default inside-out seeding as well.\r\n- With `PropagateBackward`:\r\n  - the found tracks are reversed after smoothing, so the output is ordered inside-out as for forward tracks.\r\n  - the CKF stops at the reference surface (IP perigee, or the telescope reference plane).\r\n  - seed track states are labelled `AtLastHit`, since their parameters are at the outermost space point. `makeSeedTrackState` takes the location\u2026",
-            "diff": {
-                "additions": 263,
-                "deletions": 68,
-                "files": 8
-            },
-            "files": [
-                "k4ActsTracking/include/k4ActsTracking/CKFRunner.hxx",
-                "k4ActsTracking/include/k4ActsTracking/RunnerCommon.hxx",
-                "k4ActsTracking/src/components/CKFTrackingAlg.cpp",
-                "k4ActsTracking/src/components/CKFTrackingFromSeedsAlg.cpp",
-                "test/CMakeLists.txt",
-                "test/options/MAIA_CKFTrackingAlg.py",
-                "test/options/_ckf_helpers.py",
-                "test/scripts/outside_in_check_tracks.py"
-            ],
-            "comments": [
-                {
-                    "author": "madbaron",
-                    "body": "Is this ready to review?\r\nI somehow was expecting a few more inputs to come in here, but maybe you're addressing them in the other PR"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "IIUC these are self contained changes that were lifted out of #108 because they are isolated and topical enough to do so."
-                },
-                {
-                    "author": "madbaron",
-                    "body": "Topically, I was expecting the fixes to the hit ordering (https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211648324), the seed state label (https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211732075) and target surface (https://github.com/key4hep/k4ActsTracking/pull/10\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "Though, to clarify, I am happy with anything. This is just why I have been waiting to review this one"
-                },
-                {
-                    "author": "mlarson02",
-                    "body": "> Topically, I was expecting the fixes to the hit ordering ([#108 (comment)](https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211648324)), the seed state label ([#108 (comment)](https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211732075)) and target surface ([#108 (comm\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Ah OK. Then I missed some bits apparently."
-                },
-                {
-                    "author": "mlarson02",
-                    "body": "> Topically, I was expecting the fixes to the hit ordering ([#108 (comment)](https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211648324)), the seed state label ([#108 (comment)](https://github.com/key4hep/k4ActsTracking/pull/108#discussion_r4211732075)) and target surface ([#108 (comm\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "Thanks @mlarson02 this looks great and almost ready to go!\r\n\r\nThere's one last general point: no test in this PR sets `PropagateBackward=True`, so the changes to the start surface, track-state reversal, seed label and target surface are not exercised until #108 lands. \r\nCould the `reco_MAIA_Gen3_out\u2026"
-                },
-                {
-                    "author": "mlarson02",
-                    "body": "> Thanks @mlarson02 this looks great and almost ready to go!\r\n> \r\n> There's one last general point: no test in this PR sets `PropagateBackward=True`, so the changes to the start surface, track-state reversal, seed label and target surface are not exercised until #108 lands. Could the `reco_MAIA_Gen3\u2026"
-                },
-                {
-                    "author": "mlarson02",
-                    "body": "> In one of the original comments @madbaron mentioned to also test this with the telescope (LUXE) geometry. This is not present here, but we can also do that in a follow up IMO. There are a few minor things below.\r\n\r\nI did do a short test for LUXE that I summarized here: https://github.com/key4hep/k\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "I think this is ready to merge and I would plan to do so tomorrow"
-                }
-            ],
-            "comments_total": 11,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "APPROVED",
-                    "body": "This seems good to go from my perspective. Paging @madbaron (for once it goes in this direction ;) ), to see if there are things that are missing."
-                },
-                {
-                    "author": "madbaron",
-                    "state": "APPROVED",
-                    "body": "Thanks! This looks good to me now.\nI'll ping back @tmadlener in case he wants to take another look at the new changes, but otherwise we could try merge this tomorrow if nothing else comes up"
-                },
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "In one of the original comments @madbaron mentioned to also test this with the telescope (LUXE) geometry. This is not present here, but we can also do that in a follow up IMO. There are a few minor things below."
-                }
-            ],
-            "reviews_total": 9
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4PFHitML",
-            "num": 6,
-            "title": "Remove k4ProjectTemplate remnants + clang format",
-            "url": "https://github.com/key4hep/k4PFHitML/pull/6",
-            "author": "herrmannlena",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "herrmannlena",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n\nRemove k4ProjectTemplate remnants + clang format\nENDRELEASENOTES",
-            "diff": {
-                "additions": 31,
-                "deletions": 34,
-                "files": 5
-            },
-            "files": [
-                "CMakeLists.txt",
-                "k4PF-HitML/CMakeLists.txt",
-                "k4PF-HitML/src/components/PFHitML.cpp",
-                "k4PF-HitML/src/components/PFParticleBuilder.cpp",
-                "k4PF-HitML/src/components/PFParticleBuilder.h"
             ],
             "comments": [],
             "comments_total": 0,
@@ -2373,165 +3252,6 @@
                 }
             ],
             "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 267,
-            "title": "fix(dashboard): let reco Correlations analyse the chosen configuration",
-            "url": "https://github.com/key4hep/k4Bench/pull/267",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add configuration dropdown to reconstruction Correlations tab\n\n- Revalidate metric, cost, expression on configuration switch\n\n- Warn when a linked configuration is unavailable\n\n- Cover new behavior with unit tests and docs\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"Reco Correlations tab\"] -- \"multiple succeeded configs\" --> B[\"_select_config dropdown\"]\n  B -- \"requested config missing or failed\" --> C[\"warning, show first offered\"]\n  A -- \"configuration switched\" --> D[\"revalidate metric, cost, expression\"]\n  D -- \"not available in new config\" --> E[\"substitute default and note it\"]\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th alig\u2026",
-            "diff": {
-                "additions": 323,
-                "deletions": 31,
-                "files": 3
-            },
-            "files": [
-                "dashboard/tabs/correlations.py",
-                "docs/user-guide/features/dashboard.md",
-                "tests/unit/test_dashboard_correlations.py"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/267?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 11,105 in / 9 out / 11,114 total\n- Time cost: 1304.1s\n- AI calls: 1\n\n</details\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 266,
-            "title": "fix(dashboard): rank the reco components table by what each adds to an event",
-            "url": "https://github.com/key4hep/k4Bench/pull/266",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nBug fix, Tests\n\n\n___\n\n### **Description**\n- Rank components by per-event contribution, skipped events counted\n\n- Sort and \"Per event\" column use `seconds_per_event`\n\n- Update help texts and user documentation accordingly\n\n- Add test for rarely-run costly algorithm ranking\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  A[\"Component summary\"] -- \"sort by seconds_per_event\" --> B[\"Components table\"]\n  B -- \"skipped events counted\" --> C[\"Rarely-run costly components rank lower\"]\n  D[\"Test: rarely-run algorithm\"] -- \"verifies\" --> B\n```\n\n\n\n<details> <summary><h3> File Walkthrough</h3></summary>\n\n<table><thead><tr><th></th><th align=\"left\">Relevant files</th></tr></thead><tbody><tr><td><strong>Bug fix</strong></td><td><table>\n<tr>\n  <td>\n \u2026",
-            "diff": {
-                "additions": 55,
-                "deletions": 13,
-                "files": 3
-            },
-            "files": [
-                "dashboard/reco/component.py",
-                "docs/user-guide/features/dashboard.md",
-                "tests/unit/test_dashboard_reco_component_apptest.py"
-            ],
-            "comments": [
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/266?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 6,530 in / 9 out / 6,539 total\n- Time cost: 256.9s\n- AI calls: 1\n\n</details>"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 271,
-            "title": "chore(deps): update mkdocstrings requirement from >=1.0.7 to >=1.0.8",
-            "url": "https://github.com/key4hep/k4Bench/pull/271",
-            "author": "dependabot",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Updates the requirements on [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/mkdocstrings/mkdocstrings/releases\">mkdocstrings's releases</a>.</em></p>\n<blockquote>\n<h2>1.0.8</h2>\n<h2><a href=\"https://github.com/mkdocstrings/mkdocstrings/releases/tag/1.0.8\">1.0.8</a> - 2026-10-19</h2>\n<p><!-- raw HTML omitted --><a href=\"https://github.com/mkdocstrings/mkdocstrings/compare/1.0.7...1.0.8\">Compare with 1.0.7</a><!-- raw HTML omitted --></p>\n<h3>Bug Fixes</h3>\n<ul>\n<li>Prefix code anchor/span IDs to avoid collisions (<a href=\"https://github.com/mkdocstrings/mkdocstrings/commit/f402d2cd5cc99beb562cba616d0be776140f3387\">f402d2c</a> by Timoth\u00e9e Mazzucotelli). <a hre\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "docs/requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 270,
-            "title": "chore(deps): update pymdown-extensions requirement from >=12.2 to >=12.3",
-            "url": "https://github.com/key4hep/k4Bench/pull/270",
-            "author": "dependabot",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Updates the requirements on [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/pymdown-extensions/releases\">pymdown-extensions's releases</a>.</em></p>\n<blockquote>\n<h2>12.3</h2>\n<ul>\n<li><strong>NEW</strong>: BetterEm: Expose a way to disable CommonMark punctuation rules in BetterEm if desired via a new\n<code>punctuation</code> option.</li>\n</ul>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/facelessuser/pymdown-extensions/commit/24ae2b301304dac7b8e3dc347dbbcaac36671a90\"><code>24ae2b3</code></a> Fix link</li>\n<li><a href=\"https://github.com/facelessuser/pymdown-extensions/commit/f19f\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "docs/requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 268,
-            "title": "chore(deps): bump streamlit from 1.65.0 to 1.66.0",
-            "url": "https://github.com/key4hep/k4Bench/pull/268",
-            "author": "dependabot",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [streamlit](https://github.com/streamlit/streamlit) from 1.65.0 to 1.66.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/streamlit/streamlit/releases\">streamlit's releases</a>.</em></p>\n<blockquote>\n<h2>1.66.0</h2>\n<!-- raw HTML omitted -->\n<h2>What's Changed</h2>\n<h3>New Features \ud83c\udf89</h3>\n<ul>\n<li>[feature] Add <code>on_change=&quot;ignore&quot;</code> mode to st.color_picker by <a href=\"https://github.com/lukasmasuch\"><code>@\u200blukasmasuch</code></a> in <a href=\"https://redirect.github.com/streamlit/streamlit/pull/17209\">streamlit/streamlit#17209</a></li>\n<li>[feature] Add AppTest support for st.form by <a href=\"https://github.com/lukasmasuch\"><code>@\u200blukasmasuch</code></a> in <a href=\"https://redirect.github.com/streamlit/streamlit/pull/172\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "dashboard/requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
         },
@@ -2717,146 +3437,6 @@
                 }
             ],
             "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 938,
-            "title": "Enable ML option for LCContent",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/938",
-            "author": "SanghyunKo",
-            "mergedAt": "2026-10-22",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Enable `LCContent_BUILD_ML` option for `LCContent`\n\nENDRELEASENOTES\n\nLCContent now ships an optional ML library, `libLCContentML`, introduced in PandoraPFA/LCContent#33. It is built only with `-DLCContent_BUILD_ML=ON` and is needed by the IDEA particle-flow reconstruction in k4GaudiPandora.\n\nThis PR adds an `ml` variant to `lccontent`, which passes `LCContent_BUILD_ML` and depends on `py-onnxruntime` (already in the stack).",
-            "diff": {
-                "additions": 7,
-                "deletions": 1,
-                "files": 2
-            },
-            "files": [
-                "environments/key4hep-common/packages.yaml",
-                "packages/lccontent/package.py"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Ok. This is not used to build the stacks anymore however"
-                },
-                {
-                    "author": "SanghyunKo",
-                    "body": "Ah okay, do you know where should I push to have this option in the stack?"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "https://gitlab.cern.ch/sft/stacks/lcgcmake/-/merge_requests"
-                },
-                {
-                    "author": "SanghyunKo",
-                    "body": "Thanks! (and I saw that you already pushed)"
-                }
-            ],
-            "comments_total": 4,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 265,
-            "title": "feat(dashboard): group the reco page by question into Time, Memory, Components",
-            "url": "https://github.com/key4hep/k4Bench/pull/265",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-22",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Regroup reco page into question-based sections\n  - Time, Memory, Components, Data Flow, Events with lenses\n  - Old section links redirected through aliases\n\n- Add Components section inspecting any algorithm or service\n  - Table, tiles, ranking, per-event charts, data flow, history\n  - Opened by clicks from Time, Memory and Data Flow\n\n- Replace Efficiency with component summary and history analysis\n  - New `component_detail` module and component summary trend\n  - Missing runs stay named gaps, never zeros\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  old[\"Former reco sections\"] -- \"grouped by question; aliases keep old links\" --> page[\"Reco page: Time, Memory, Components, Data Flow, Event\u2026",
-            "diff": {
-                "additions": 2940,
-                "deletions": 1315,
-                "files": 31
-            },
-            "files": [
-                "dashboard/data.py",
-                "dashboard/reco/_controls.py",
-                "dashboard/reco/_inspect.py",
-                "dashboard/reco/breakdown.py",
-                "dashboard/reco/component.py",
-                "dashboard/reco/dataflow.py",
-                "dashboard/reco/efficiency.py",
-                "dashboard/reco/memory.py",
-                "dashboard/reco/page.py",
-                "dashboard/section_dispatch.py",
-                "dashboard/suite_page.py",
-                "dashboard/url_params.py",
-                "docs/user-guide/features/dashboard.md",
-                "k4bench/analysis/component_detail.py",
-                "k4bench/analysis/efficiency.py",
-                "k4bench/analysis/plots/__init__.py",
-                "k4bench/analysis/plots/component.py",
-                "k4bench/analysis/plots/dataflow.py",
-                "k4bench/analysis/plots/efficiency.py",
-                "k4bench/analysis/plots/phases.py",
-                "k4bench/analysis/trend.py",
-                "tests/unit/test_analysis_component_detail.py",
-                "tests/unit/test_analysis_plots_efficiency.py",
-                "tests/unit/test_dashboard_correlations.py",
-                "tests/unit/test_dashboard_event_size.py",
-                "tests/unit/test_dashboard_lazy_downloads.py",
-                "tests/unit/test_dashboard_pages.py",
-                "tests/unit/test_dashboard_reco_apptest.py",
-                "tests/unit/test_dashboard_reco_component_apptest.py",
-                "tests/unit/test_dashboard_run_links_apptest.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/e4fb0f3bb7bb8ffc80602ae1fb06363157d7f837)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/265?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 75,336 in / 9 out / 75,345 total\n- Time cost: 1319.1s\n- AI calls: 1\n\n</details\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 78,588 in / 9 out / 78,597 total\n- Time cost: 1329.3s\n- AI calls: 1\n\n</details\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/265#issuecomment-6346534903)** updated to latest commit https://github.com/key4hep/k4Bench/commit/e4fb0f3bb7bb8ffc80602ae1fb06363157d7f837"
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "PandoraPFAOrg",
-            "repo": "LCContent",
-            "num": 51,
-            "title": "Bump version to 05.01.01",
-            "url": "https://github.com/PandoraPFAOrg/LCContent/pull/51",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-22",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Bump the CMake version to 05.01.01 so the package version matches the new v05-01-01 tag.\n\nFixes #50.\n\nValidated CMake configuration and generated version checks for both LCContent and LCPandoraContent.\n\nThe Key4hep release/alma9 and nightly/ubuntu24 CI jobs fail because their stacks provide PandoraSDK 03.04.01, below the existing 04.00.01 requirement.",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
         }
