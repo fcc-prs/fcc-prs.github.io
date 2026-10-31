@@ -293,7 +293,7 @@
             "author": "madbaron",
             "createdAt": "2026-10-30",
             "updatedAt": "2026-10-30",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -304,7 +304,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -442,6 +442,17 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 134,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/134'>Enable 4D Tracking for Beta < 1 Particles</a>",
+            "author": "mlarson02",
+            "createdAt": "2026-10-26",
+            "updatedAt": "2026-10-31",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 108,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking</a>",
             "author": "mlarson02",
@@ -459,17 +470,6 @@
             "createdAt": "2026-10-12",
             "updatedAt": "2026-10-29",
             "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 134,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/134'>Enable 4D Tracking for Beta < 1 Particles</a>",
-            "author": "mlarson02",
-            "createdAt": "2026-10-26",
-            "updatedAt": "2026-10-26",
-            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1110,6 +1110,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Opt",
+            "num": 46,
+            "title": "<a href='https://github.com/key4hep/k4Opt/pull/46'>feat: enable combined evaluators across samples</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-31",
+            "updatedAt": "2026-10-31",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -2008,7 +2019,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1702'>fix(Geant4ParticleHandler): avoid duplicate track-equivalents map at end of event</a>",
             "author": "wdconinc",
             "createdAt": "2026-10-20",
-            "updatedAt": "2026-10-22",
+            "updatedAt": "2026-10-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
