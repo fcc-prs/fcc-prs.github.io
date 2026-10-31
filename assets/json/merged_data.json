@@ -1,6 +1,152 @@
 {
-    "updated_at": "2026-10-30T12:00:18Z",
+    "updated_at": "2026-10-31T11:33:17Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 947,
+            "title": "Bump docker/login-action from 4.6.0 to 4.7.0",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/947",
+            "author": "dependabot",
+            "mergedAt": "2026-10-31",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [docker/login-action](https://github.com/docker/login-action) from 4.6.0 to 4.7.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/docker/login-action/releases\">docker/login-action's releases</a>.</em></p>\n<blockquote>\n<h2>v4.7.0</h2>\n<ul>\n<li>Preserve explicit ECR settings in <code>registry-auth</code> by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/login-action/pull/1089\">docker/login-action#1089</a></li>\n<li>Use registry hosts for scoped credentials by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/login-action/pull/1088\">docker/login-action#1088</a></li>\n<li>Raise Docker Hub OIDC max expiry to 6 hours \u2026",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 2
+            },
+            "files": [
+                ".github/workflows/docker-build-push-template.yaml",
+                ".github/workflows/image-template.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 946,
+            "title": "Bump int128/docker-manifest-create-action from 2.29.0 to 2.30.0",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/946",
+            "author": "dependabot",
+            "mergedAt": "2026-10-31",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [int128/docker-manifest-create-action](https://github.com/int128/docker-manifest-create-action) from 2.29.0 to 2.30.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/int128/docker-manifest-create-action/releases\">int128/docker-manifest-create-action's releases</a>.</em></p>\n<blockquote>\n<h2>v2.30.0</h2>\n<pre lang=\"yaml\"><code>uses: int128/docker-manifest-create-action@d6ac360314337bbfb870747d9616b83118acb330 # v2.30.0\n</code></pre>\n<h2>What's Changed</h2>\n<ul>\n<li>chore(deps): update dependency <code>@\u200btypes/node</code> to v24.19.1 by <a href=\"https://github.com/renovate\"><code>@\u200brenovate</code></a>[bot] in <a href=\"https://redirect.github.com/int128/docker-manifest-create-action/pull/1269\">int128/docker-manifest-create-action#1269</a></li>\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/image-template.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 36,
+            "title": "optimization: k4opt study show, trial and export, a read-only view of a study",
+            "url": "https://github.com/key4hep/k4Opt/pull/36",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-31",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\n\nA read-only, optimizer-independent way to inspect and export the results of an existing study,\nwithout rerunning evaluators or needing the original problem file, evaluators, geometry or\nKey4hep stack.\n\n- `k4opt.optimization.load_study(directory, *, storage=None) -> StudyResults`: the problem as\n  `study.json` records it (`ProblemSpec`), every trial of every session (`TrialResult`), the\n  outcome counts, and the Pareto front of the feasible valid trials. Immutable and free of\n  Optuna types; `to_dict()` is the JSON export.\n- `k4opt study show DIR`, `k4opt study trial DIR NUMBER` and\n  `k4opt study export DIR --format {csv,json} [--output FILE]`, each with `--storage URL` for a\n  database study.\n- The Optuna adapter `_optuna.py` (over 1000 lines with the reader) becomes the packa\u2026",
+            "diff": {
+                "additions": 3473,
+                "deletions": 850,
+                "files": 27
+            },
+            "files": [
+                "CONTRIBUTING.md",
+                "README.md",
+                "docs/optimization.md",
+                "k4opt/__init__.py",
+                "k4opt/jsonio.py",
+                "k4opt/optimization/__init__.py",
+                "k4opt/optimization/_export.py",
+                "k4opt/optimization/_optuna.py",
+                "k4opt/optimization/_optuna/__init__.py",
+                "k4opt/optimization/_optuna/optimizer.py",
+                "k4opt/optimization/_optuna/read.py",
+                "k4opt/optimization/_optuna/run.py",
+                "k4opt/optimization/_optuna/space.py",
+                "k4opt/optimization/_optuna/storage.py",
+                "k4opt/optimization/_results.py",
+                "k4opt/optimization/_show.py",
+                "k4opt/optimization/cli.py",
+                "tests/integration/optimization/test_optimize_cld.py",
+                "tests/unit/optimization/conftest.py",
+                "tests/unit/optimization/test_cli.py",
+                "tests/unit/optimization/test_export.py",
+                "tests/unit/optimization/test_optimize.py",
+                "tests/unit/optimization/test_read_storage.py",
+                "tests/unit/optimization/test_render.py",
+                "tests/unit/optimization/test_results.py",
+                "tests/unit/optimization/test_resume.py",
+                "tests/unit/optimization/test_search_space.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4PFHitML",
+            "num": 7,
+            "title": "Some cleanup suggestions",
+            "url": "https://github.com/key4hep/k4PFHitML/pull/7",
+            "author": "Zehvogel",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "herrmannlena",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Obtain the magnetic field from geometry instead of from a parameter\n\nENDRELEASENOTES\n\nThe other changes are internal. Some of them are maybe a bit nitpicky. :)",
+            "diff": {
+                "additions": 171,
+                "deletions": 164,
+                "files": 12
+            },
+            "files": [
+                "CMakeLists.txt",
+                "README.md",
+                "k4PF-HitML/CMakeLists.txt",
+                "k4PF-HitML/options/PerformMLPF.py",
+                "k4PF-HitML/src/components/DataPreprocessing.cpp",
+                "k4PF-HitML/src/components/DataPreprocessing.h",
+                "k4PF-HitML/src/components/Helpers.cpp",
+                "k4PF-HitML/src/components/Helpers.h",
+                "k4PF-HitML/src/components/PFHitML.cpp",
+                "k4PF-HitML/src/components/PFParticleBuilder.cpp",
+                "k4PF-HitML/src/components/Shower.cpp",
+                "k4PF-HitML/test/test_PerformHitPF.sh"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "herrmannlena",
+                    "state": "APPROVED",
+                    "body": "looks good"
+                }
+            ],
+            "reviews_total": 6
+        },
         {
             "org": "key4hep",
             "repo": "k4Bench",
@@ -85,6 +231,408 @@
         {
             "org": "key4hep",
             "repo": "k4Opt",
+            "num": 35,
+            "title": "Identify external geometry files, recheck them around each candidate, time out ddsim",
+            "url": "https://github.com/key4hep/k4Opt/pull/35",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "A review of `main` at af4351e found four gaps in what a run record or a study can vouch for. This PR closes all four.\n\n**1. Files the geometry reads outside its root were not identified.** The geometry fingerprint covers only the files below the geometry root, and the study identity added nothing for the rest. Nearly every k4geo geometry includes `${DD4hepINSTALL}/DDDetectors/compact/detector_types.xml`, and the MDI and IDEA geometries read ~36 MB of `${K4GEO}/.../*.stl`. Point such a variable at other files, or edit them, and a study still resumed, comparing new trials with old ones as if made from the same detector.\n\n- `GeometrySource.external_files(catalog)` gives, for each external reference as written, the file it names now (variables expanded) with its SHA-256. An external include is\u2026",
+            "diff": {
+                "additions": 1170,
+                "deletions": 128,
+                "files": 26
+            },
+            "files": [
+                "docs/ddsim.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/geometry.md",
+                "docs/optimization.md",
+                "docs/problem.md",
+                "k4opt/ddsim/run.py",
+                "k4opt/geometry/includes.py",
+                "k4opt/geometry/source.py",
+                "k4opt/optimization/__init__.py",
+                "k4opt/optimization/_optuna.py",
+                "k4opt/optimization/_study.py",
+                "k4opt/optimization/cli.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/_run.py",
+                "k4opt/problem/_stages.py",
+                "k4opt/problem/cli.py",
+                "tests/support/simulation.py",
+                "tests/unit/ddsim/test_run.py",
+                "tests/unit/geometry/test_reproducibility.py",
+                "tests/unit/optimization/test_cli.py",
+                "tests/unit/optimization/test_optimize.py",
+                "tests/unit/optimization/test_resume.py",
+                "tests/unit/problem/test_evaluators.py",
+                "tests/unit/problem/test_run.py",
+                "tests/unit/problem/test_stages.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 34,
+            "title": "geometry: the DD4hep test looks up the bindings instead of importing them under a time limit",
+            "url": "https://github.com/key4hep/k4Opt/pull/34",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The main run after #32 ([41121761275](https://github.com/key4hep/k4Opt/actions/runs/41121761275)) and the last PR run of #32 failed on one integration test, `test_dd4hep_loads_snapshots_like_the_source`. It errored at setup:\n\n```text\nsubprocess.TimeoutExpired: Command '['/workspace/py-venv/bin/python', '-c', 'import dd4hep']' timed out after 120 seconds\n```\n\nAll other tests passed. Both runs started around 20:15 UTC, while the runner or CVMFS was about ten times slower than usual. On the same Friday nightly, creating the venv in `setup.sh` took ~10 min instead of ~47 s, and the job took 34 min instead of ~7. Runs before (19:47) and after (21:08) were normal, so nothing in the code was wrong.\n\n**Why the test was fragile.** The fixture that skips the test without the Key4hep stack imported `\u2026",
+            "diff": {
+                "additions": 2,
+                "deletions": 4,
+                "files": 1
+            },
+            "files": [
+                "tests/integration/geometry/test_dd4hep_load.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 33,
+            "title": "optimization: colored output and a progress bar with the time left on a terminal",
+            "url": "https://github.com/key4hep/k4Opt/pull/33",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "On a terminal, `k4opt optimize` now shows how far a study has got and how long the rest will take. Trial lines are colored the way `k4opt geometry inspect` colors its output, and a progress bar stays under them while the study runs:\n\n```text\ntrial 13:  valid    feasible    constants.ECal_cell_size=9.79789  simulation/ecal_barrel.angular_residual=0.948  simulation/ecal_barrel.fired_cells=227\n\u2839 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2578\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   46%  14/30 trials  1:07:12 elapsed  ~1:16:48 left  4:48/trial  10 feasible  2 infeasible  2 failed\n```\n\nPiped or written to a file (a batch job, `systemd-run`), the output is still one plain line per trial, as before. `NO_COLOR=1` turns color off, and `TERM=dumb` turns the bar off.\n\n**Progress bar** (`k4opt/optimization/_render.py`).\n- It shows the share of t\u2026",
+            "diff": {
+                "additions": 640,
+                "deletions": 107,
+                "files": 12
+            },
+            "files": [
+                "CONTRIBUTING.md",
+                "docs/optimization.md",
+                "k4opt/geometry/cli.py",
+                "k4opt/geometry/render.py",
+                "k4opt/optimization/__init__.py",
+                "k4opt/optimization/_optuna.py",
+                "k4opt/optimization/_render.py",
+                "k4opt/optimization/cli.py",
+                "k4opt/terminal.py",
+                "tests/unit/optimization/test_cli.py",
+                "tests/unit/optimization/test_render.py",
+                "tests/unit/optimization/test_resume.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 32,
+            "title": "optimization: k4opt optimize, a first study of a problem with Optuna",
+            "url": "https://github.com/key4hep/k4Opt/pull/32",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "A first optimizer for k4opt: `k4opt optimize` runs a study of a problem with Optuna's TPE sampler, on top of the `EvaluationSession` and `Assessment` of #31. The problem file, the evaluators and the run records stay free of Optuna; only `k4opt/optimization/_optuna.py` imports it, and only when a study runs.\n\n```bash\nk4opt optimize examples/problem/cld-ecal-granularity.yaml \\\n  --evaluator examples/evaluators/calo_photon.py:CaloPhoton \\\n  --trials 30 --seed 42 --output runs/cld-ecal-study      # later: --resume --trials 10\n```\n\n**One trial.**\n1. The sampler proposes a candidate (`study.ask` with the problem's distributions).\n2. The candidate is evaluated with the session into `trial-NNNNNN/`, the layout `k4opt evaluate` uses, with `run: {study, trial}` in its summary.\n3. Optuna is told the \u2026",
+            "diff": {
+                "additions": 3652,
+                "deletions": 62,
+                "files": 32
+            },
+            "files": [
+                ".gitignore",
+                ".pre-commit-config.yaml",
+                "CONTRIBUTING.md",
+                "README.md",
+                "docs/evaluation.md",
+                "docs/optimization.md",
+                "docs/problem.md",
+                "examples/problem/cld-ecal-granularity.yaml",
+                "k4opt/__init__.py",
+                "k4opt/cli.py",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/base.py",
+                "k4opt/jsonio.py",
+                "k4opt/optimization/__init__.py",
+                "k4opt/optimization/_optuna.py",
+                "k4opt/optimization/_study.py",
+                "k4opt/optimization/cli.py",
+                "k4opt/optimization/errors.py",
+                "k4opt/problem/_evaluate.py",
+                "pyproject.toml",
+                "requirements.txt",
+                "tests/integration/optimization/test_optimize_cld.py",
+                "tests/support/candidate_check.py",
+                "tests/support/evaluators.py",
+                "tests/support/trade_off.py",
+                "tests/unit/optimization/conftest.py",
+                "tests/unit/optimization/test_cli.py",
+                "tests/unit/optimization/test_lock.py",
+                "tests/unit/optimization/test_optimize.py",
+                "tests/unit/optimization/test_resume.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 31,
+            "title": "problem: an evaluation session for many candidates, and the assessment of each",
+            "url": "https://github.com/key4hep/k4Opt/pull/31",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Candidates of a problem can now be evaluated one after another from Python, and each is judged against the objectives and constraints. This is the optimizer-independent half of the first optimizer integration: an optimizer, a script and `k4opt evaluate` all call the same API and read the same judgment. Optuna is not involved yet.\n\n**`EvaluationSession`** (`k4opt.problem`).\n- `open(problem, evaluators)` loads the problem file once, so later edits don't reach the session. It binds the evaluators, checks what doesn't depend on a candidate, and records the size and SHA-256 of every file the stages read (a stage `file`, a file a ddsim option names, a file supplied with `inputs`).\n- `check(candidate)` and `evaluate(candidate, output, run=...)` handle one candidate at a time. Each call validates \u2026",
+            "diff": {
+                "additions": 2325,
+                "deletions": 232,
+                "files": 24
+            },
+            "files": [
+                "CONTRIBUTING.md",
+                "README.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/problem.md",
+                "k4opt/__init__.py",
+                "k4opt/evaluation/loader.py",
+                "k4opt/geometry/__init__.py",
+                "k4opt/geometry/source.py",
+                "k4opt/problem/__init__.py",
+                "k4opt/problem/_assess.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/_run.py",
+                "k4opt/problem/_stages.py",
+                "k4opt/problem/cli.py",
+                "k4opt/problem/errors.py",
+                "k4opt/revision.py",
+                "tests/integration/problem/test_evaluate_ddsim.py",
+                "tests/support/common.py",
+                "tests/unit/evaluation/test_loader.py",
+                "tests/unit/problem/test_assessment.py",
+                "tests/unit/problem/test_run.py",
+                "tests/unit/problem/test_stages.py",
+                "tests/unit/test_revision.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 30,
+            "title": "Harden run records, provenance and validation across components",
+            "url": "https://github.com/key4hep/k4Opt/pull/30",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "A run's records now say what actually ran, and they never appear half-written.\n\n**Atomic records.** The new top-level `k4opt.jsonio.write_json` writes each record to a hidden file beside its destination and publishes it with an exclusive hard link. A reader polling for `summary.json` or `ddsim.json` never sees a partial file, and an existing file is never replaced. The temporary file sits in the destination's own directory because AFS and EOS refuse hard links between directories (checked on both). An unwritable summary is a `RunError`. An unwritable simulation or evaluator directory, or `ddsim.json`, is a failed outcome that keeps ddsim's real exit code.\n\n**Provenance.**\n- `evaluator_source` identifies a `FILE.py:Class` evaluator by the exact bytes compiled at import. Cached instances kee\u2026",
+            "diff": {
+                "additions": 1057,
+                "deletions": 170,
+                "files": 35
+            },
+            "files": [
+                ".codespellrc",
+                "CONTRIBUTING.md",
+                "docs/ddsim.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/geometry.md",
+                "docs/problem.md",
+                "examples/evaluators/calo_photon.py",
+                "k4opt/ddsim/command.py",
+                "k4opt/ddsim/run.py",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/base.py",
+                "k4opt/evaluation/loader.py",
+                "k4opt/evaluation/units.py",
+                "k4opt/geometry/discovery.py",
+                "k4opt/geometry/includes.py",
+                "k4opt/geometry/materialize.py",
+                "k4opt/geometry/xmlio.py",
+                "k4opt/jsonio.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/_run.py",
+                "k4opt/problem/_stages.py",
+                "k4opt/yamlio.py",
+                "pyproject.toml",
+                "tests/unit/ddsim/test_command.py",
+                "tests/unit/ddsim/test_run.py",
+                "tests/unit/evaluation/test_base.py",
+                "tests/unit/evaluation/test_loader.py",
+                "tests/unit/examples/test_calo_photon.py",
+                "tests/unit/geometry/test_materialize.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 29,
+            "title": "problem: geometry names the compact file directly",
+            "url": "https://github.com/key4hep/k4Opt/pull/29",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "`geometry` held a mapping whose only key was `entry`, so the nesting carried no information. A problem now names the compact file directly, as `k4opt geometry inspect` and k4Bench do:\n\n```yaml\n# before\ngeometry:\n  entry: FCCee/CLD/compact/CLD_o2_v09/CLD_o2_v09.xml\n\n# after\ngeometry: FCCee/CLD/compact/CLD_o2_v09/CLD_o2_v09.xml\n```\n\n`ProblemSpec.geometry` is the string itself and `GeometrySpec` is gone from `k4opt.problem`. The nested form is rejected with `geometry: must be a non-empty string, got dict`. The docs, README and the CLD example use the flat form.",
+            "diff": {
+                "additions": 37,
+                "deletions": 59,
+                "files": 12
+            },
+            "files": [
+                "README.md",
+                "docs/geometry.md",
+                "docs/problem.md",
+                "examples/problem/cld-ecal-granularity.yaml",
+                "k4opt/problem/__init__.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/config.py",
+                "k4opt/problem/models.py",
+                "tests/unit/problem/conftest.py",
+                "tests/unit/problem/test_config.py",
+                "tests/unit/problem/test_resolution.py",
+                "tests/unit/problem/test_run.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 28,
+            "title": "evaluation: declared collections read event by event, and settings with units",
+            "url": "https://github.com/key4hep/k4Opt/pull/28",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "An evaluator now declares which EDM4hep collections it reads and gets them event by event, and a setting can carry a unit. In the example, the calorimeter collection moves from a free-form setting to a declared role, and the 70 keV threshold moves from a constant in the code into the problem:\n\n```yaml\n# before\nevaluators:\n  - name: calo.photon\n    version: \"1\"\n    stage: simulation\n    settings:\n      collection: ECalBarrelCollection\n\n# after\nevaluators:\n  - name: calo.photon\n    version: \"1\"\n    stage: simulation\n    collections:\n      hits: ECalBarrelCollection   # a role the evaluator declares\n    settings:\n      threshold:                   # arrives in the evaluator as 70e-6 (GeV)\n        value: 70\n        unit: keV\n```\n\n```python\nclass CaloPhoton(Evaluator):\n    stage = \"simulation\"\n\u2026",
+            "diff": {
+                "additions": 1443,
+                "deletions": 216,
+                "files": 32
+            },
+            "files": [
+                "README.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/problem.md",
+                "examples/evaluators/calo_photon.py",
+                "examples/problem/cld-ecal-granularity.yaml",
+                "k4opt/ddsim/__init__.py",
+                "k4opt/ddsim/command.py",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/base.py",
+                "k4opt/evaluation/edm4hep.py",
+                "k4opt/evaluation/models.py",
+                "k4opt/evaluation/units.py",
+                "k4opt/geometry/discovery.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/_run.py",
+                "k4opt/problem/_stages.py",
+                "k4opt/problem/cli.py",
+                "k4opt/problem/config.py",
+                "k4opt/problem/models.py",
+                "tests/integration/problem/test_evaluate_ddsim.py",
+                "tests/support/cell_count.py",
+                "tests/support/hit_energy.py",
+                "tests/unit/ddsim/test_command.py",
+                "tests/unit/evaluation/test_base.py",
+                "tests/unit/evaluation/test_contract.py",
+                "tests/unit/evaluation/test_edm4hep.py",
+                "tests/unit/examples/test_calo_photon.py",
+                "tests/unit/geometry/test_discovery.py",
+                "tests/unit/problem/test_config.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 27,
+            "title": "problem: explicit stages with executors, and top-level evaluators that name the stage they read",
+            "url": "https://github.com/key4hep/k4Opt/pull/27",
+            "author": "jbeirer",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "A problem now says how the data its evaluators read is made, and each evaluator says which stage it reads. `evaluation:` mixed the pipeline (events, seed, generation, `backend.ddsim.args`) with the evaluators; it is replaced by two top-level sections:\n\n```yaml\n# before\nevaluation:\n  events: 1000\n  seed: 42\n  generation:\n    particle: gamma\n    # ...\n  backend:\n    ddsim:\n      args: [\"--physics.list\", \"FTFP_BERT\"]\n  evaluators:\n    - name: calo.photon\n      version: \"1\"\n      settings:\n        collection: ECalBarrelCollection\n\n# after\nstages:\n  generation:\n    executor: gun          # fired inside ddsim\n    particle: gamma\n    # ...\n  simulation:\n    executor: ddsim\n    events: 1000\n    seed: 42\n    physics.list: FTFP_BERT  # any ddsim option, named as in `ddsim --help`\n\nevaluators:\n  - na\u2026",
+            "diff": {
+                "additions": 2157,
+                "deletions": 1238,
+                "files": 40
+            },
+            "files": [
+                "README.md",
+                "docs/ddsim.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/problem.md",
+                "examples/evaluators/calo_photon.py",
+                "examples/problem/cld-ecal-granularity.yaml",
+                "k4opt/ddsim/__init__.py",
+                "k4opt/ddsim/command.py",
+                "k4opt/ddsim/run.py",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/base.py",
+                "k4opt/evaluation/models.py",
+                "k4opt/evaluation/protocol.py",
+                "k4opt/frozen.py",
+                "k4opt/problem/__init__.py",
+                "k4opt/problem/_evaluate.py",
+                "k4opt/problem/_run.py",
+                "k4opt/problem/_stages.py",
+                "k4opt/problem/cli.py",
+                "k4opt/problem/config.py",
+                "k4opt/problem/errors.py",
+                "k4opt/problem/models.py",
+                "tests/integration/ddsim/test_options.py",
+                "tests/integration/problem/test_evaluate_ddsim.py",
+                "tests/support/cell_count.py",
+                "tests/support/hit_energy.py",
+                "tests/support/parameter_echo.py",
+                "tests/unit/ddsim/test_command.py",
+                "tests/unit/ddsim/test_run.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
             "num": 26,
             "title": "geometry: inspect names the geometry directly; the geometry YAML and apply are gone",
             "url": "https://github.com/key4hep/k4Opt/pull/26",
@@ -116,6 +664,174 @@
                 "tests/unit/geometry/test_overrides.py",
                 "tests/unit/geometry/test_render.py",
                 "tests/unit/test_cli.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 12,
+            "title": "add allegro TRAPPIST Topo clustering file",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/12",
+            "author": "davidlange6",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "Add the TRAPPIST photon/pi0 ID model for topo clusters, used by ALLEGRO digi/reco when run with `--runTRAPPIST`, as in the `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTests in FCC-config.\n\nCompanion package to `ALLEGRO-o1-v03_TRAPPIST_SWClustering`: the two models have the same architecture and size but different weights, and are selected by filename.\n\nExpected sha256:\n- `TRAPPIST_topoclustering.onnx`: `92a7413073e7ef2f81dccfa6ef21a9e0e38c3ccc35afdf524b97b9fa8aeb69bb`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
+            "diff": {
+                "additions": 5,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "fcc_models/ALLEGRO-o1-v03_TRAPPIST_TopoClustering.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 15,
+            "title": "retry summary push when main has moved",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/15",
+            "author": "davidlange6",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "Each run of \"Process FCC Models\" pushes its summary commit back to `main`. If `main` moves during a run, the push is rejected and the run fails. It then leaves no summary and no artifact, and the submission file stays on `main`. This happened to the runs for #7 and #11, which were merged about 25 seconds apart along with #10.\n\nThe commit step now rebases on `main` and retries the push up to 5 times, with a growing delay. Runs for different packages touch different files, so these rebases should be clean. A real conflict, such as two versions of the same package merged together, still fails the run after the retries.\n\nNot tested in a real race: that needs two quick merges to `main`. Checked locally that the workflow YAML and the step's bash parse.\n\n\ud83e\udd16 Generated with [Claude Code](https://cla\u2026",
+            "diff": {
+                "additions": 12,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/process_models.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 14,
+            "title": "reprocess allegro TRAPPIST SW clustering (run for #7 failed)",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/14",
+            "author": "davidlange6",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "Add the TRAPPIST photon/pi0 ID model for sliding-window clusters, used by ALLEGRO digi/reco when run with `--runTRAPPIST`, as in the `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTests in FCC-config.\n\nCompanion package to `ALLEGRO-o1-v03_TRAPPIST_TopoClustering`: the two models have the same architecture and size but different weights, and are selected by filename.\n\nExpected sha256:\n- `TRAPPIST_SWclustering.onnx`: `509d5c561a9dccc6ae04a5c01cf1d210676a8f043cda9ec45befe8874107e74e`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
+            "diff": {
+                "additions": 1,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "fcc_models/ALLEGRO-o1-v03_TRAPPIST_SWClustering.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 13,
+            "title": "reprocess DCHdigi ClusterCounting (run for #11 failed)",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/13",
+            "author": "davidlange6",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "Add the data file for the DCH cluster counting parametrization. The FCC-config `IDEA_o1_v03`, `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTest scripts download it as a prerequisite, so it is needed for those jobs to run without network access. The file is the `fileDataAlg` default of `DCHdigi_v01`.\n\nExpected sha256:\n- `DataAlgFORGEANT.root`: `cb907f2153d1dc2374b2497b66f21722e02cfdc4184571b304916926d1978f36`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
+            "diff": {
+                "additions": 1,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "fcc_models/DCHdigi-v01_ClusterCounting.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 7,
+            "title": "add allegro TRAPPIST SW clustering file",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/7",
+            "author": "davidlange6",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "Add the TRAPPIST photon/pi0 ID model for sliding-window clusters, used by ALLEGRO digi/reco when run with `--runTRAPPIST`, as in the `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTests in FCC-config.\n\nCompanion package to `ALLEGRO-o1-v03_TRAPPIST_TopoClustering`: the two models have the same architecture and size but different weights, and are selected by filename.\n\nExpected sha256:\n- `TRAPPIST_SWclustering.onnx`: `509d5c561a9dccc6ae04a5c01cf1d210676a8f043cda9ec45befe8874107e74e`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
+            "diff": {
+                "additions": 5,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "fcc_models/ALLEGRO-o1-v03_TRAPPIST_SWClustering.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 10,
+            "title": "add IDEA GGTF tracking model",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/10",
+            "author": "davidlange6",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "Add the GGTF track finding model used by digi/reco in the `IDEA_o1_v03`, `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTests in FCC-config. It was trained for IDEA; ALLEGRO uses it until an ALLEGRO-trained model is available.\n\nExpected sha256:\n- `SimpleGatrIDEAv3o1.onnx`: `1670987ca5effc6962063e5c9d54910175b9ecb948cd348e3acf768c911a0805`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
+            "diff": {
+                "additions": 5,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "fcc_models/IDEA-o1-v03_GGTF.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 11,
+            "title": "add DCHdigi ClusterCounting file",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/11",
+            "author": "davidlange6",
+            "mergedAt": "2026-10-30",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "Add the data file for the DCH cluster counting parametrization. The FCC-config `IDEA_o1_v03`, `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTest scripts download it as a prerequisite, so it is needed for those jobs to run without network access. The file is the `fileDataAlg` default of `DCHdigi_v01`.\n\nExpected sha256:\n- `DataAlgFORGEANT.root`: `cb907f2153d1dc2374b2497b66f21722e02cfdc4184571b304916926d1978f36`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
+            "diff": {
+                "additions": 5,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "fcc_models/DCHdigi-v01_ClusterCounting.yml"
             ],
             "comments": [],
             "comments_total": 0,
@@ -2674,33 +3390,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 941,
-            "title": "Bump actions/setup-python from 7.0.0 to 7.1.0",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/941",
-            "author": "dependabot",
-            "mergedAt": "2026-10-24",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [actions/setup-python](https://github.com/actions/setup-python) from 7.0.0 to 7.1.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/setup-python/releases\">actions/setup-python's releases</a>.</em></p>\n<blockquote>\n<h2>v7.1.0</h2>\n<h2>What's Changed</h2>\n<h3>Enhancements</h3>\n<ul>\n<li>Add <code>mirror</code> and <code>mirror-token</code> inputs for custom Python distribution sources by <a href=\"https://github.com/luhenry\"><code>@\u200bluhenry</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1302\">actions/setup-python#1302</a></li>\n<li>Improve error message clarity by <a href=\"https://github.com/v-lmvysakh\"><code>@\u200bv-lmvysakh</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1351\">acti\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/pre-commit.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4Opt",
             "num": 17,
             "title": "evaluation: add EvaluationRecord and an internal candidate-to-record bridge",
@@ -3174,269 +3863,6 @@
             ],
             "comments": [],
             "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 940,
-            "title": "Add --latest-tags to the nightlies setup script",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/940",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Add `--latest-tags` to the nightlies setup script to source the LCG `devkey` view, using the same platforms and options as `devkey-head`.\r\n\r\nENDRELEASENOTES\r\n\r\ncc @kjvbrt @pkontaxa",
-            "diff": {
-                "additions": 21,
-                "deletions": 11,
-                "files": 1
-            },
-            "files": [
-                "scripts/cvmfs/setup-nightlies.sh"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 272,
-            "title": "feat(dashboard): open one event of reco Correlations to what each algorithm cost in it",
-            "url": "https://github.com/key4hep/k4Bench/pull/272",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **PR Type**\nEnhancement, Tests\n\n\n___\n\n### **Description**\n- Add one-event per-algorithm cost detail to reco Correlations\n\n- Split reco Events section into Correlations and Event Size\n\n- Mark selected event on scatter; click bar opens Components\n\n- Build event table at once, avoiding DataFrame fragmentation\n\n- \"Other\" bar uses largest, not sum, for peak metrics\n\n\n___\n\n### Diagram Walkthrough\n\n\n```mermaid\nflowchart LR\n  scatter[\"Correlations scatter\"] -- \"click point / pick number\" --> detail[\"One event detail\"]\n  detail -- \"plot_event_costs bars\" --> bars[\"Per-algorithm cost chart\"]\n  bars -- \"click bar\" --> comp[\"Components section\"]\n  comp -- \"Back\" --> scatter\n  drivers[\"event_drivers.event_table\"] -- \"frame built at once\" --> scatter\n```\n\n\n\n<details> <sum\u2026",
-            "diff": {
-                "additions": 575,
-                "deletions": 60,
-                "files": 10
-            },
-            "files": [
-                "dashboard/reco/page.py",
-                "dashboard/tabs/correlations.py",
-                "docs/user-guide/features/dashboard.md",
-                "k4bench/analysis/event_drivers.py",
-                "k4bench/analysis/plots/event_content.py",
-                "tests/unit/test_analysis_event_drivers.py",
-                "tests/unit/test_analysis_plots_event_content.py",
-                "tests/unit/test_dashboard_correlations.py",
-                "tests/unit/test_dashboard_event_size.py",
-                "tests/unit/test_dashboard_reco_apptest.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/e8e4fde97301f070c1749f7581434d188937a62f)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 0d56e14 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/272?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/272#issuecomment-6364858368)** updated to latest commit https://github.com/key4hep/k4Bench/commit/e8e4fde97301f070c1749f7581434d188937a62f"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "Failed to generate code suggestions for PR"
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "k4RecCalorimeter",
-            "num": 291,
-            "title": "More efficient data storage for TopoCaloNoisyCells.",
-            "url": "https://github.com/HEP-FCC/k4RecCalorimeter/pull/291",
-            "author": "scott-snyder",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "giovannimarchiori",
-            "labels": [],
-            "body": "Hold noise data as a vector rather than as an unordered_map, using the indexing service.\nThis is both faster and takes less space.\nStore the data in CaloCellConstantsSvc to avoid duplication in configurations where this tool is configured multiple times.\n\nBEGINRELEASENOTES\n- More efficient data storage for TopoCaloNoisyCells.\nENDRELEASENOTES",
-            "diff": {
-                "additions": 110,
-                "deletions": 41,
-                "files": 2
-            },
-            "files": [
-                "RecCalorimeter/src/components/TopoCaloNoisyCells.cpp",
-                "RecCalorimeter/src/components/TopoCaloNoisyCells.h"
-            ],
-            "comments": [
-                {
-                    "author": "scott-snyder",
-                    "body": "Verified that this does not change the ALLEGRO reconstruction results."
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Thanks @scott-snyder \r\nI guess the time for double loop at initialisation (to get the detIDs and to fill the vector) is more than compensated by faster access to a vector rather than a map during execution time - and in any case it's good to use the cell constant service to avoid duplication"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 124,
-            "title": "Update module modernc.org/sqlite to v1.61.0",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/124",
-            "author": "renovate",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [modernc.org/sqlite](https://gitlab.com/cznic/sqlite) | `v1.60.1` \u2192 `v1.61.0` | ![age](https://developer.mend.io/api/mc/badges/age/go/modernc.org%2fsqlite/v1.61.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/go/modernc.org%2fsqlite/v1.60.1/v1.61.0?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>cznic/sqlite (modernc.org/sqlite)</summary>\n\n### [`v1.61.0`](https://gitlab.com/cznic/sqlite/compare/v1.60.1...v1.61.0)\n\n[Compare Source](https://gitlab.com/cznic/sqlite/compare/v1.60.1...v1.61.0)\n\n</details>\n\n---\n\n### Configuration\n\n\ud83d\udcc5 **Schedule**: (UTC)\n\n- Br\u2026",
-            "diff": {
-                "additions": 18,
-                "deletions": 6,
-                "files": 2
-            },
-            "files": [
-                "go.mod",
-                "go.sum"
-            ],
-            "comments": [
-                {
-                    "author": "renovate",
-                    "body": "### \u2139\ufe0f Artifact update notice\n\n##### File name: go.mod\n\nIn order to perform the update(s) described in the table above, Renovate ran the `go get` command, which resulted in the following additional change(s):\n\n\n- 5 additional dependencies were updated\n\n\nDetails:\n\n\n| **Package**                      \u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 125,
-            "title": "State in the help overview that the MC Production contacts hold the coordinator role",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/125",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Adds one sentence below the roles table on the Help overview, so requesters know who reviews their requests.",
-            "diff": {
-                "additions": 2,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "docs/help/overview.md"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 116,
-            "title": "Add in-app Help page with requester and coordinator guides",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/116",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "- New `/help` page with Overview, Requester and Coordinator tabs, linked from the nav\n- Content lives in `docs/help/*.md`, rendered with the existing Markdown renderer\n- Dockerfile copies `docs/` into the image",
-            "diff": {
-                "additions": 265,
-                "deletions": 0,
-                "files": 9
-            },
-            "files": [
-                "Dockerfile",
-                "cmd/fcc-drs/main.go",
-                "docs/help/coordinator.md",
-                "docs/help/overview.md",
-                "docs/help/requester.md",
-                "internal/handlers/handlers.go",
-                "internal/handlers/help.go",
-                "templates/help.html",
-                "templates/layout.html"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 123,
-            "title": "Rename Production IDs to Transformation IDs",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/123",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "The DIRAC IDs tracked on campaign-assigned requests are transformation IDs, not production IDs.\n\n- Rename labels, code, routes and the activity type to \"transformation ID\"\n- Migrate the `production_ids` table/column to `transformation_ids.transformation_id` (SQLite and Postgres); old activity text is kept",
-            "diff": {
-                "additions": 283,
-                "deletions": 269,
-                "files": 13
-            },
-            "files": [
-                "cmd/fcc-drs/main.go",
-                "internal/db/postgres.go",
-                "internal/db/sqlite.go",
-                "internal/handlers/handlers.go",
-                "internal/handlers/pipeline.go",
-                "internal/handlers/production_ids.go",
-                "internal/handlers/transformation_ids.go",
-                "internal/models/production_id.go",
-                "internal/models/transformation_id.go",
-                "internal/models/update.go",
-                "scripts/seed.sql",
-                "templates/partials/request_detail.html",
-                "templates/partials/transformation_ids.html"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1706,
-            "title": "Fix bug in Volume divisions",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1706",
-            "author": "MarkusFrankATcernch",
-            "mergedAt": "2026-10-23",
-            "mergedBy": "MarkusFrankATcernch",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n\r\nVolume divisions were not properly implemented. Volume and placement extensions were not assigned properly.\r\nThis led to null-pointer exceptions when traversing the volume hierarchy.\r\nThis fix supposedly assigns the TGeoExtension objects when a dd4hep volume is divided and when a divide \r\nvolume is placed into a parent.\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 23,
-                "deletions": 7,
-                "files": 1
-            },
-            "files": [
-                "DDCore/src/Volumes.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200716 files\u2004\u2003\u2007\u2008\u200716 suites\u2004\u2003\u200221h 59m 19s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008365 \u2705\u20030 \ud83d\udca4\u200310 \u274c\n2\u2008681 runs\u200a\u20032\u2008665 \u2705\u20036 \ud83d\udca4\u200310 \u274c\n\nFor more details on these failures, see [this check](https://github.com/AIDASoft/DD4hep/runs/120492520412).\n\nResults for commit 2a853b40.\n\n[test-results]:data:application/gzip;base64\u2026"
-                }
-            ],
-            "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
         }
