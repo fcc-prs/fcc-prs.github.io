@@ -277,24 +277,13 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 947,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/947'>Bump docker/login-action from 4.6.0 to 4.7.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-10-31",
+            "num": 911,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-16",
             "updatedAt": "2026-10-31",
             "mergeOk": "yes",
-            "labels": "dependencies \ngithub_actions",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 946,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/946'>Bump int128/docker-manifest-create-action from 2.29.0 to 2.30.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-10-31",
-            "updatedAt": "2026-10-31",
-            "mergeOk": "yes",
-            "labels": "dependencies \ngithub_actions",
+            "labels": "",
             "assignees": ""
         },
         {
@@ -304,18 +293,7 @@
             "author": "madbaron",
             "createdAt": "2026-10-30",
             "updatedAt": "2026-10-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
-            "num": 911,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-16",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -326,7 +304,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -468,7 +446,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking</a>",
             "author": "mlarson02",
             "createdAt": "2026-09-29",
-            "updatedAt": "2026-10-30",
+            "updatedAt": "2026-10-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1003,23 +981,23 @@
         },
         {
             "repo": "key4hep/<br>k4PFHitML",
-            "num": 9,
-            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/9'>Make the truthmatching not rely on collection IDs</a>",
-            "author": "Zehvogel",
+            "num": 8,
+            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/8'>Add --detector option (CLD/ILD) to PerformMLPF.py</a>",
+            "author": "Olmichu22",
             "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-29",
+            "updatedAt": "2026-10-31",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4PFHitML",
-            "num": 8,
-            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/8'>Add --detector option (CLD/ILD) to PerformMLPF.py</a>",
-            "author": "Olmichu22",
+            "num": 9,
+            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/9'>Make the truthmatching not rely on collection IDs</a>",
+            "author": "Zehvogel",
             "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "no",
+            "updatedAt": "2026-10-31",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1839,6 +1817,17 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-drs",
+            "num": 131,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/131'>Update module modernc.org/sqlite to v1.61.1</a>",
+            "author": "renovate",
+            "createdAt": "2026-10-31",
+            "updatedAt": "2026-10-31",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
             "num": 130,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/130'>Update module github.com/jackc/pgx/v5 to v5.12.0</a>",
             "author": "renovate",
@@ -1889,6 +1878,17 @@
             "createdAt": "2026-08-03",
             "updatedAt": "2026-08-12",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-cvmfs",
+            "num": 16,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-cvmfs/pull/16'>Add k4PFHitML (HitPF) ONNX models for CLD</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-10-31",
+            "updatedAt": "2026-10-31",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
