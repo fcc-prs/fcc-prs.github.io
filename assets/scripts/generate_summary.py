@@ -188,8 +188,16 @@ summary_paragraphs, omitted = parse_output(raw_text)
 print(f"Summary: {len(summary_paragraphs)} paragraph(s), Omitted: {len(omitted)} PR(s).", flush=True)
 
 usage = response.usage
-cost = compute_cost(usage)
-print(f"Usage: {usage.input_tokens} in / {usage.output_tokens} out — ${cost:.6f}", flush=True)
+# Log all usage fields — the Portkey proxy may not forward thinking tokens correctly
+usage_fields = {k: v for k, v in vars(usage).items() if not k.startswith('_')}
+print(f"Usage fields: {usage_fields}", flush=True)
+# Sum all token counts that look like output (output_tokens + any thinking/cache fields)
+output_tokens = sum(v for k, v in usage_fields.items() if k != 'input_tokens' and isinstance(v, int))
+cost = round(
+    (usage.input_tokens * PRICE_INPUT_PER_MTOK + output_tokens * PRICE_OUTPUT_PER_MTOK) / 1_000_000,
+    6,
+)
+print(f"Usage: {usage.input_tokens} in / {output_tokens} out — ${cost:.6f}", flush=True)
 
 output = {
     "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -197,10 +205,7 @@ output = {
     "period_end": period_end,
     "summary": summary_paragraphs,
     "omitted": omitted,
-    "usage": {
-        "input_tokens": usage.input_tokens,
-        "output_tokens": usage.output_tokens,
-    },
+    "usage": {**usage_fields},
     "cost_usd": cost,
 }
 

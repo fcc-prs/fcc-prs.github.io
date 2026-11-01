@@ -1,0 +1,29 @@
+name: create weekly email doc
+
+on:
+  workflow_run:
+    workflows: ["generate weekly PR summary"]
+    types: [completed]
+  workflow_dispatch:
+
+jobs:
+  create_doc:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install google-auth google-auth-oauthlib google-api-python-client requests
+
+      - name: Write credentials
+        run: |
+          echo '${{ secrets.GOOGLE_TOKEN_JSON }}' > token.json
+          echo '${{ secrets.GOOGLE_APPS_JSON }}' > google_apps.json
+
+      - name: Create Google Doc
+        run: python3 assets/scripts/draft_email_doc.py --local
