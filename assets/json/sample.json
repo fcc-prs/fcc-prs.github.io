@@ -90,6 +90,17 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
+            "num": 492,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/492'>Clarify expected usage of SimCalorimeterHit and CaloHitContribution</a>",
+            "author": "BrieucF",
+            "createdAt": "2026-03-30",
+            "updatedAt": "2026-11-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
             "num": 540,
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/540'>Add a Helix class to the utils</a>",
             "author": "jmcarcell",
@@ -129,17 +140,6 @@
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
             "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
-            "num": 492,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/492'>Clarify expected usage of SimCalorimeterHit and CaloHitContribution</a>",
-            "author": "BrieucF",
-            "createdAt": "2026-03-30",
-            "updatedAt": "2026-05-23",
-            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -277,22 +277,22 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 911,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-16",
-            "updatedAt": "2026-10-31",
+            "num": 944,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/944'>Update k4gaudipandora and related recipes</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-11-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 944,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/944'>Update k4gaudipandora and related recipes</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-30",
-            "updatedAt": "2026-10-30",
+            "num": 911,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-16",
+            "updatedAt": "2026-10-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -502,7 +502,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-01",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -876,7 +876,7 @@
             "author": "dirkzerwas",
             "createdAt": "2026-06-09",
             "updatedAt": "2026-07-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -985,8 +985,8 @@
             "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/8'>Add --detector option (CLD/ILD) to PerformMLPF.py</a>",
             "author": "Olmichu22",
             "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-31",
-            "mergeOk": "no",
+            "updatedAt": "2026-11-01",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1110,6 +1110,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Opt",
+            "num": 51,
+            "title": "<a href='https://github.com/key4hep/k4Opt/pull/51'>Local process backend: k4opt evaluate --jobs N runs tasks in worker processes</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-01",
+            "updatedAt": "2026-11-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
