@@ -2,12 +2,12 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 673,
-            "title": "<a href='https://github.com/key4hep/k4geo/issues/673'>ALLEGRO_o1_v04 using old silicon wrapper design</a>",
-            "author": "armin-ilg",
-            "createdAt": "2026-10-16",
-            "updatedAt": "2026-10-16",
-            "labels": "",
+            "num": 677,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/677'>Install RPATH points to `<prefix>/lib64` (libraries are in `<prefix>/lib`) after re-running cmake</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
+            "labels": "bug",
             "assignees": ""
         },
         {
@@ -1256,7 +1256,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/issues/539'>Store dx (for dQ/dx) in hit class?</a>",
             "author": "ueinhaus",
             "createdAt": "2026-10-30",
-            "updatedAt": "2026-10-30",
+            "updatedAt": "2026-11-02",
             "labels": "enhancement",
             "assignees": ""
         },
@@ -1638,6 +1638,16 @@
             "createdAt": "2024-09-19",
             "updatedAt": "2024-09-26",
             "labels": "question",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 948,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/issues/948'>Ubuntu 24.04 builds discontinued</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
+            "labels": "",
             "assignees": ""
         },
         {
@@ -3652,6 +3662,26 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 578,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/578'>Validate nested helper includes before grid submission</a>",
+            "author": "bndikt",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 577,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/577'>Forward CLI verbosity settings to grid and HTCondor workers</a>",
+            "author": "bndikt",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 574,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/574'>Support campaign discovery for grid submission inputs</a>",
             "author": "bndikt",
@@ -4767,6 +4797,16 @@
             "author": "kkauder",
             "createdAt": "2026-10-30",
             "updatedAt": "2026-10-30",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1711,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1711'>`DetElement::nominal()` and `VolumeManager::getVolumeManager()` are not thread-safe on first access (ddsim crashes / wrong positions in MT mode)</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
             "labels": "bug",
             "assignees": ""
         },
