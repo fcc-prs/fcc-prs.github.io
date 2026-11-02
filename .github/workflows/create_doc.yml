@@ -1,14 +1,13 @@
 name: create weekly email doc
 
 on:
-  workflow_run:
-    workflows: ["generate weekly PR summary"]
-    types: [completed]
+  schedule:
+    # Runs every Monday at 07:30 UTC, 30 minutes after generate_summary
+    - cron: '30 7 * * 1'
   workflow_dispatch:
 
 jobs:
   create_doc:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
