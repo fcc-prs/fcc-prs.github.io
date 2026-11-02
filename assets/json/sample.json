@@ -2,6 +2,28 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 678,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/678'>Fix install RPATH after reconfiguring</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 676,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/676'>[ALLEGRO] - reduce the memory usage and initialisation time of the turbine ECAL endcap</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 672,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/672'>[ALLEGRO] add ECal face tracking surfaces with DD4hep CaloFace plugins</a>",
             "author": "giovannimarchiori",
@@ -90,22 +112,11 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
-            "num": 492,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/492'>Clarify expected usage of SimCalorimeterHit and CaloHitContribution</a>",
-            "author": "BrieucF",
-            "createdAt": "2026-03-30",
-            "updatedAt": "2026-11-01",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
             "num": 540,
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/540'>Add a Helix class to the utils</a>",
             "author": "jmcarcell",
             "createdAt": "2026-10-30",
-            "updatedAt": "2026-10-30",
+            "updatedAt": "2026-11-02",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -182,7 +193,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/449'>Enum properties native</a>",
             "author": "tmadlener",
             "createdAt": "2026-10-30",
-            "updatedAt": "2026-10-30",
+            "updatedAt": "2026-11-02",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -513,7 +524,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-29",
             "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -524,7 +535,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-01",
             "updatedAt": "2026-10-01",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -535,7 +546,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-20",
             "updatedAt": "2026-10-01",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -546,7 +557,7 @@
             "author": "jmcarcell",
             "createdAt": "2025-03-25",
             "updatedAt": "2026-09-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -557,7 +568,7 @@
             "author": "tmadlener",
             "createdAt": "2023-07-14",
             "updatedAt": "2025-08-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -604,6 +615,17 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 84,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/84'>Add MuRWELLDigitizer: cluster-based digitizer for IDEA muon system</a>",
+            "author": "mahmoudali2",
+            "createdAt": "2026-06-04",
+            "updatedAt": "2026-11-02",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "ueinhaus"
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -670,17 +692,6 @@
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 84,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/84'>Add MUONdigitizer: cluster-based digitizer for IDEA muon system</a>",
-            "author": "mahmoudali2",
-            "createdAt": "2026-06-04",
-            "updatedAt": "2026-09-27",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": "ueinhaus"
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -980,28 +991,6 @@
             "assignees": ""
         },
         {
-            "repo": "key4hep/<br>k4PFHitML",
-            "num": 8,
-            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/8'>Add --detector option (CLD/ILD) to PerformMLPF.py</a>",
-            "author": "Olmichu22",
-            "createdAt": "2026-10-29",
-            "updatedAt": "2026-11-01",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4PFHitML",
-            "num": 9,
-            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/9'>Make the truthmatching not rely on collection IDs</a>",
-            "author": "Zehvogel",
-            "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-31",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "key4hep/<br>DDML",
             "num": 37,
             "title": "<a href='https://github.com/key4hep/DDML/pull/37'>add CaloHadronic pion hdf5 file</a>",
@@ -1110,6 +1099,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Opt",
+            "num": 57,
+            "title": "<a href='https://github.com/key4hep/k4Opt/pull/57'>Parameters set typed destinations: geometry, stage options and evaluator settings</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1316,6 +1316,17 @@
             "author": "vasilllis",
             "createdAt": "2026-08-18",
             "updatedAt": "2026-08-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 576,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/576'>Fix event counting for RNTuple inputs</a>",
+            "author": "bndikt",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1795,11 +1806,11 @@
         },
         {
             "repo": "hep-fcc/<br>ALLEGRO",
-            "num": 64,
-            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/64'>Add first version of common plotting style</a>",
-            "author": "jacofan",
-            "createdAt": "2026-10-16",
-            "updatedAt": "2026-10-20",
+            "num": 65,
+            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/65'>add script to generate displaced photons. Allow execution of ddsim MT</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1810,7 +1821,18 @@
             "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/63'>Import TRAPPIST docs</a>",
             "author": "jacofan",
             "createdAt": "2026-10-16",
-            "updatedAt": "2026-10-16",
+            "updatedAt": "2026-11-02",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>ALLEGRO",
+            "num": 64,
+            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/64'>Add first version of common plotting style</a>",
+            "author": "jacofan",
+            "createdAt": "2026-10-16",
+            "updatedAt": "2026-10-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2025,6 +2047,17 @@
             "assignees": ""
         },
         {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1712,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1712'>Thread safety fixes</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "PandoraPFAOrg/<br>LCContent",
             "num": 25,
             "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/25'>PseudoLayer plugin for ALLEGRO (initial version)</a>",
@@ -2053,18 +2086,7 @@
             "author": "CrossR",
             "createdAt": "2026-08-20",
             "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "PandoraPFAOrg/<br>PandoraSDK",
-            "num": 41,
-            "title": "<a href='https://github.com/PandoraPFAOrg/PandoraSDK/pull/41'>feature/optical_hits_rebase</a>",
-            "author": "AndyChappell",
-            "createdAt": "2026-10-27",
-            "updatedAt": "2026-10-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
