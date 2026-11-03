@@ -2,17 +2,6 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 678,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/678'>Fix install RPATH after reconfiguring</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-02",
-            "updatedAt": "2026-11-02",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 676,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/676'>[ALLEGRO] - reduce the memory usage and initialisation time of the turbine ECAL endcap</a>",
             "author": "giovannimarchiori",
@@ -28,7 +17,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/672'>[ALLEGRO] add ECal face tracking surfaces with DD4hep CaloFace plugins</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-30",
+            "updatedAt": "2026-11-02",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -40,7 +29,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-10-07",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -51,7 +40,7 @@
             "author": "neskongarr",
             "createdAt": "2026-08-25",
             "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +73,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +84,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-09-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -524,7 +513,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-29",
             "updatedAt": "2026-10-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -535,7 +524,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-01",
             "updatedAt": "2026-10-01",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -546,7 +535,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-20",
             "updatedAt": "2026-10-01",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -557,7 +546,7 @@
             "author": "jmcarcell",
             "createdAt": "2025-03-25",
             "updatedAt": "2026-09-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -568,7 +557,7 @@
             "author": "tmadlener",
             "createdAt": "2023-07-14",
             "updatedAt": "2025-08-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1099,17 +1088,6 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
-        },
-        {
-            "repo": "key4hep/<br>k4Opt",
-            "num": 57,
-            "title": "<a href='https://github.com/key4hep/k4Opt/pull/57'>Parameters set typed destinations: geometry, stage options and evaluator settings</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-02",
-            "updatedAt": "2026-11-02",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1839,6 +1817,17 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-drs",
+            "num": 132,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/132'>Update dependency marked to v18.1.3</a>",
+            "author": "renovate",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-02",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
             "num": 131,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/131'>Update module modernc.org/sqlite to v1.61.1</a>",
             "author": "renovate",
@@ -2086,7 +2075,7 @@
             "author": "CrossR",
             "createdAt": "2026-08-20",
             "updatedAt": "2026-10-13",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
