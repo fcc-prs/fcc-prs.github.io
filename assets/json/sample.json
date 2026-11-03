@@ -6,7 +6,18 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/676'>[ALLEGRO] - reduce the memory usage and initialisation time of the turbine ECAL endcap</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-11-02",
-            "updatedAt": "2026-11-02",
+            "updatedAt": "2026-11-03",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 679,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/679'>Add extension (LayeredCalorimeterData) for Grainita ECAL barrel</a>",
+            "author": "qwert2333",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-03",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -95,7 +106,7 @@
             "author": "tmadlener",
             "createdAt": "2025-05-05",
             "updatedAt": "2026-08-05",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -139,7 +150,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -173,6 +184,17 @@
             "createdAt": "2022-08-08",
             "updatedAt": "2026-05-23",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 450,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/450'>Make install-directory ordering explicit (no behavior change)</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-03",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -277,22 +299,22 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 944,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/944'>Update k4gaudipandora and related recipes</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-30",
-            "updatedAt": "2026-11-01",
+            "num": 911,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-16",
+            "updatedAt": "2026-11-03",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 911,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-16",
-            "updatedAt": "2026-10-31",
+            "num": 944,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/944'>Update k4gaudipandora and related recipes</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-11-01",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -376,6 +398,17 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
+            "num": 68,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/68'>Make install-directory ordering explicit (no behavior change)</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-03",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
             "num": 67,
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/67'>Review and fix units</a>",
             "author": "jmcarcell",
@@ -403,6 +436,94 @@
             "author": "kjvbrt",
             "createdAt": "2024-04-04",
             "updatedAt": "2025-03-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 295,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/295'>Performance (CPU/memory) improvements for cell noise tools.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2026-10-29",
+            "updatedAt": "2026-10-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 296,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/296'>Fix failures seen running genconf.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-10-30",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 294,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/294'>move duplicated in memory trappist onnx models to shared service</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-10-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 292,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/292'>Use of shared cache in CreatePositionedCaloCells</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-10-22",
+            "updatedAt": "2026-10-26",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 293,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/293'>Optionally recentre SW position window, optionally correct per-layer barycentres for S-curve</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-10-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 193,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/193'>Calculate cluster direction from longitudinal samplings</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2025-11-05",
+            "updatedAt": "2026-04-28",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 170,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/170'>feat: Dual crys calo digi</a>",
+            "author": "ianna",
+            "createdAt": "2025-08-07",
+            "updatedAt": "2026-04-09",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimGeant4",
+            "num": 99,
+            "title": "<a href='https://github.com/key4hep/k4SimGeant4/pull/99'>Make install-directory ordering explicit (no behavior change)</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-03",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -436,6 +557,17 @@
             "author": "andresailer",
             "createdAt": "2026-08-13",
             "updatedAt": "2026-08-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 138,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/138'>Make install-directory ordering explicit (no behavior change)</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-03",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -607,11 +739,33 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 122,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/122'>Make install-directory ordering explicit (no behavior change)</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-03",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 121,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/121'>TracksFromGenParticles: support truth tracks without SimTrackerHit input</a>",
+            "author": "qwert2333",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-03",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 84,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/84'>Add MuRWELLDigitizer: cluster-based digitizer for IDEA muon system</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-06-04",
-            "updatedAt": "2026-11-02",
+            "updatedAt": "2026-11-03",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "ueinhaus"
@@ -838,6 +992,17 @@
         },
         {
             "repo": "key4hep/<br>k4Reco",
+            "num": 77,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/77'>Make install-directory ordering explicit (no behavior change)</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-03",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Reco",
             "num": 63,
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/63'>Port LCFIPlus and LCFIVertx to EDM4hep</a>",
             "author": "jmcarcell",
@@ -937,6 +1102,17 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 64,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/64'>Make install-directory ordering explicit (no behavior change)</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-03",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
             "num": 62,
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/62'>Make CI reproducible & allow tolerance for compiler-dependent ULP differences</a>",
             "author": "SanghyunKo",
@@ -976,6 +1152,17 @@
             "createdAt": "2026-05-06",
             "updatedAt": "2026-09-29",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4MLJetTagger",
+            "num": 16,
+            "title": "<a href='https://github.com/key4hep/k4MLJetTagger/pull/16'>Make install-directory ordering explicit (no behavior change)</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-03",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1311,10 +1498,10 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 579,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/579'>Use GNUInstallDirs for libraries and executables</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-03",
+            "num": 538,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
+            "author": "bndikt",
+            "createdAt": "2026-08-11",
             "updatedAt": "2026-11-03",
             "mergeOk": "yes",
             "labels": "",
@@ -1327,7 +1514,7 @@
             "author": "bndikt",
             "createdAt": "2026-11-02",
             "updatedAt": "2026-11-02",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1338,7 +1525,7 @@
             "author": "kjvbrt",
             "createdAt": "2023-06-29",
             "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1360,17 +1547,6 @@
             "author": "bndikt",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 538,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
-            "author": "bndikt",
-            "createdAt": "2026-08-11",
-            "updatedAt": "2026-10-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1404,7 +1580,7 @@
             "author": "Zehvogel",
             "createdAt": "2026-10-15",
             "updatedAt": "2026-10-15",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1448,7 +1624,7 @@
             "author": "amishgog",
             "createdAt": "2026-10-13",
             "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1459,7 +1635,7 @@
             "author": "captainvogon",
             "createdAt": "2026-06-25",
             "updatedAt": "2026-09-26",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1470,7 +1646,7 @@
             "author": "goblirsc",
             "createdAt": "2026-02-16",
             "updatedAt": "2026-09-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1481,7 +1657,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1492,7 +1668,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1503,7 +1679,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1514,7 +1690,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1525,7 +1701,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1536,7 +1712,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1547,7 +1723,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-16",
             "updatedAt": "2026-07-30",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1558,7 +1734,7 @@
             "author": "forthommel",
             "createdAt": "2026-05-10",
             "updatedAt": "2026-05-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1580,7 +1756,7 @@
             "author": "thisismeamir",
             "createdAt": "2025-12-10",
             "updatedAt": "2026-02-17",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1636,83 +1812,6 @@
             "createdAt": "2022-03-10",
             "updatedAt": "2022-10-03",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 295,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/295'>Performance (CPU/memory) improvements for cell noise tools.</a>",
-            "author": "scott-snyder",
-            "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 296,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/296'>Fix failures seen running genconf.</a>",
-            "author": "scott-snyder",
-            "createdAt": "2026-10-30",
-            "updatedAt": "2026-10-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 294,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/294'>move duplicated in memory trappist onnx models to shared service</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 292,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/292'>Use of shared cache in CreatePositionedCaloCells</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-10-22",
-            "updatedAt": "2026-10-26",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 293,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/293'>Optionally recentre SW position window, optionally correct per-layer barycentres for S-curve</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-24",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 193,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/193'>Calculate cluster direction from longitudinal samplings</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2025-11-05",
-            "updatedAt": "2026-04-28",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 170,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/pull/170'>feat: Dual crys calo digi</a>",
-            "author": "ianna",
-            "createdAt": "2025-08-07",
-            "updatedAt": "2026-04-09",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
