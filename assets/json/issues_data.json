@@ -2191,6 +2191,86 @@
             "assignees": ""
         },
         {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 280,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/issues/280'>Desired location for digitizers migrated from other repositories</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-08-18",
+            "updatedAt": "2026-08-18",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 268,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/issues/268'>Cells with zero noise RMS in ALLEGRO ECAL endcap</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-07-01",
+            "updatedAt": "2026-07-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 221,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/issues/221'>Migrate to Gaudi functional and IOSvc for SiPM emulation algorithms</a>",
+            "author": "SanghyunKo",
+            "createdAt": "2026-03-11",
+            "updatedAt": "2026-06-22",
+            "labels": "",
+            "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 248,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/issues/248'>Adding \"calibrateCell\" function to ICalibrateCaloHitsTool</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-04-15",
+            "updatedAt": "2026-04-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 201,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/issues/201'>Validate new code for ecal barrel<->endcap links</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-02-05",
+            "updatedAt": "2026-02-05",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 200,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/issues/200'>Cleanup CellPositionsECalEndcapTurbineSegTool</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-02-04",
+            "updatedAt": "2026-02-04",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 27,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/issues/27'>Performance issue related to BitFieldCoder::get</a>",
+            "author": "vvolkl",
+            "createdAt": "2022-07-01",
+            "updatedAt": "2025-09-25",
+            "labels": "good first issue \nhelp wanted",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 99,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/issues/99'>CreateCaloCells vs CreateCaloCellsNoise</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2024-07-22",
+            "updatedAt": "2025-06-29",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "key4hep/<br>k4ActsTracking",
             "num": 133,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/133'>Ensure to use TrackState::Location usage where possible</a>",
@@ -4231,86 +4311,6 @@
             "assignees": ""
         },
         {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 280,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/280'>Desired location for digitizers migrated from other repositories</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-08-18",
-            "updatedAt": "2026-08-18",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 268,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/268'>Cells with zero noise RMS in ALLEGRO ECAL endcap</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-07-01",
-            "updatedAt": "2026-07-13",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 221,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/221'>Migrate to Gaudi functional and IOSvc for SiPM emulation algorithms</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-03-11",
-            "updatedAt": "2026-06-22",
-            "labels": "",
-            "assignees": "SanghyunKo"
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 248,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/248'>Adding \"calibrateCell\" function to ICalibrateCaloHitsTool</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-04-15",
-            "updatedAt": "2026-04-15",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 201,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/201'>Validate new code for ecal barrel<->endcap links</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-02-05",
-            "updatedAt": "2026-02-05",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 200,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/200'>Cleanup CellPositionsECalEndcapTurbineSegTool</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-02-04",
-            "updatedAt": "2026-02-04",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 27,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/27'>Performance issue related to BitFieldCoder::get</a>",
-            "author": "vvolkl",
-            "createdAt": "2022-07-01",
-            "updatedAt": "2025-09-25",
-            "labels": "good first issue \nhelp wanted",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>k4RecCalorimeter",
-            "num": 99,
-            "title": "<a href='https://github.com/HEP-FCC/k4RecCalorimeter/issues/99'>CreateCaloCells vs CreateCaloCellsNoise</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2024-07-22",
-            "updatedAt": "2025-06-29",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>FCC-config",
             "num": 408,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/408'>Autumn2026: software needed in the campaign release</a>",
@@ -4387,6 +4387,16 @@
             "author": "davidlange6",
             "createdAt": "2026-03-17",
             "updatedAt": "2026-05-06",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 133,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/133'>Add a description field to campaigns</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-03",
             "labels": "",
             "assignees": ""
         },
