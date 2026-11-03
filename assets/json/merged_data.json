@@ -1,6 +1,418 @@
 {
-    "updated_at": "2026-11-02T14:28:00Z",
+    "updated_at": "2026-11-03T13:28:01Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4MarlinWrapper",
+            "num": 491,
+            "title": "Initialize install directories before setting RPATH",
+            "url": "https://github.com/key4hep/k4MarlinWrapper/pull/491",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Reproduced on AlmaLinux 9; verified RPATH matches the install directory on both CMake runs. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nBEGINRELEASENOTES\n - Initialize install directories before setting the install RPATH.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 541,
+            "title": "Initialize install directories before setting RPATH",
+            "url": "https://github.com/key4hep/EDM4hep/pull/541",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Reproduced on AlmaLinux 9; verified RPATH matches the install directory on both CMake runs. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nBEGINRELEASENOTES\n - Initialize install directories before setting the install RPATH.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4SimDelphes",
+            "num": 166,
+            "title": "Initialize install directories before setting RPATH",
+            "url": "https://github.com/key4hep/k4SimDelphes/pull/166",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Reproduced on AlmaLinux 9; verified RPATH matches the install directory on both CMake runs. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nBEGINRELEASENOTES\n - Initialize install directories before setting the install RPATH.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Clue",
+            "num": 86,
+            "title": "Initialize install directories before setting RPATH",
+            "url": "https://github.com/key4hep/k4Clue/pull/86",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Reproduced on AlmaLinux 9; verified RPATH matches the install directory on both CMake runs. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nBEGINRELEASENOTES\n - Initialize install directories before setting the install RPATH.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4EDM4hep2LcioConv",
+            "num": 136,
+            "title": "Initialize install directories before setting RPATH",
+            "url": "https://github.com/key4hep/k4EDM4hep2LcioConv/pull/136",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Reproduced on AlmaLinux 9; verified RPATH matches the install directory on both CMake runs. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nBEGINRELEASENOTES\n - Initialize install directories before setting the install RPATH.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 70,
+            "title": "README links the live dashboard",
+            "url": "https://github.com/key4hep/k4Opt/pull/70",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Links the live dashboard (https://k4opt-dashboard.app.cern.ch/) at the top of the README, as k4Bench's does, and in the components table, which said it was not deployed yet.",
+            "diff": {
+                "additions": 3,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "README.md"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 69,
+            "title": "Dashboard reads the publication at k4opt-data.web.cern.ch",
+            "url": "https://github.com/key4hep/k4Opt/pull/69",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The deployed dashboard reads its studies from `https://k4opt-data.web.cern.ch`, the WebEOS site that serves the publication from EOS.\n\n- `openshift/deployment.yaml`: `K4OPT_DASHBOARD_DATA` set to that URL; `tests/unit/test_deployment.py` expects it.\n- `docs/dashboard.md`: the provisioning steps describe what is in place: the runner registered for key4hep/k4Opt on k4Bench's FCC machines, fork pull requests of all outside contributors waiting for approval, and the data site, which needs anonymous access (a site behind CERN SSO answers with a login page, which the dashboard refuses).\n\nMerging rolls out the deployment with the new value. Publishing a study into the EOS directory afterwards needs no deployment.",
+            "diff": {
+                "additions": 19,
+                "deletions": 12,
+                "files": 3
+            },
+            "files": [
+                "docs/dashboard.md",
+                "openshift/deployment.yaml",
+                "tests/unit/test_deployment.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 68,
+            "title": "Dependabot: dashboard requirements updated once, watchdog held below 7",
+            "url": "https://github.com/key4hep/k4Opt/pull/68",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Two fixes to `.github/dependabot.yml`, from #62 and #63:\n\n- **No duplicate bumps.** The root `pip` entry (`directory: \"/\"`) also scanned `dashboard/requirements.txt`, so every dashboard bump was proposed twice: #62 by the `/dashboard` entry and #63 by the root one, the same change. The root entry now excludes `dashboard/**`, which the `/dashboard` entry keeps.\n- **watchdog held below 7.** Streamlit 1.66.1, the latest release, requires `watchdog<7,>=2.1.5`, so `watchdog==7.0.0` makes the dashboard's install unresolvable (the `dashboard` job of #62 and #63). The `/dashboard` entry ignores watchdog `>=7` until a Streamlit release allows it.\n\n#62 and #63 are closed in favor of this.",
+            "diff": {
+                "additions": 7,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                ".github/dependabot.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 66,
+            "title": "build(deps): bump nodeenv from 1.11.0 to 1.11.1",
+            "url": "https://github.com/key4hep/k4Opt/pull/66",
+            "author": "dependabot",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [nodeenv](https://github.com/ekalinin/nodeenv) from 1.11.0 to 1.11.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/ekalinin/nodeenv/releases\">nodeenv's releases</a>.</em></p>\n<blockquote>\n<h2>1.11.1</h2>\n<h2>What's Changed</h2>\n<h3>Fixed bugs \ud83d\udc1b</h3>\n<ul>\n<li>fix(nodeenv): skip node.js pre-releases for latest and ranges by <a href=\"https://github.com/ekalinin\"><code>@\u200bekalinin</code></a> in <a href=\"https://redirect.github.com/ekalinin/nodeenv/pull/454\">ekalinin/nodeenv#454</a></li>\n</ul>\n<p>1.11.1 is 1.11.0 plus this fix only. nodejs.org now lists <code>27.0.0-alpha.0.0.0</code> first, and nodeenv stopped with a traceback when it used the default <code>latest</code> or a semver range (<a href=\"https://redirect.github.com/ekalinin/nodeenv/\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 64,
+            "title": "build(deps): bump filelock from 4.2.4 to 4.2.5",
+            "url": "https://github.com/key4hep/k4Opt/pull/64",
+            "author": "dependabot",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [filelock](https://github.com/tox-dev/filelock) from 4.2.4 to 4.2.5.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/tox-dev/filelock/releases\">filelock's releases</a>.</em></p>\n<blockquote>\n<h2>4.2.5</h2>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<h3>Bug fixes</h3>\n<ul>\n<li><code>acquire</code> and <code>acquire</code> raise <code>TypeError</code> for a <em>blocking</em> that is not a <code>bool</code>, as the constructor and the <code>blocking</code> setter already do. A truthy value such as the string <code>&quot;false&quot;</code> used to count as <code>True</code>, so a call meant as a single attempt waited for the instance's <code>timeout</code>, and without a limit at the default <code>-1</code> (<a href=\"https://redir\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 61,
+            "title": "build(deps): bump https://github.com/pre-commit/mirrors-mypy from v2.4.0 to 2.4.1",
+            "url": "https://github.com/key4hep/k4Opt/pull/61",
+            "author": "dependabot",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "pre_commit"
+            ],
+            "body": "Bumps [https://github.com/pre-commit/mirrors-mypy](https://github.com/pre-commit/mirrors-mypy) from v2.4.0 to 2.4.1.\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/pre-commit/mirrors-mypy/commit/ad26ebfa797fcb9b8f83275937c1c1d6e126719c\"><code>ad26ebf</code></a> Mirror: 2.4.1</li>\n<li>See full diff in <a href=\"https://github.com/pre-commit/mirrors-mypy/compare/v2.4.0...v2.4.1\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=https://github.com/pre-commit/mirrors-mypy&package-manager=pre_commit&previous-version=v2.4.0&new-version=2.4.1)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compat\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".pre-commit-config.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 65,
+            "title": "build(deps): bump platformdirs from 4.13.7 to 4.14.0",
+            "url": "https://github.com/key4hep/k4Opt/pull/65",
+            "author": "dependabot",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [platformdirs](https://github.com/tox-dev/platformdirs) from 4.13.7 to 4.14.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/tox-dev/platformdirs/releases\">platformdirs's releases</a>.</em></p>\n<blockquote>\n<h2>4.14.0</h2>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<h3>Features</h3>\n<ul>\n<li>Accept a keyword-only <code>ensure_exists</code> in the module-level media directory functions, such as <code>user_documents_path</code>, to create a directory set through <code>XDG_*_DIR</code> or <code>user-dirs.dirs</code> (<a href=\"https://redirect.github.com/tox-dev/platformdirs/pull/656\">#656</a>) by <a href=\"https://github.com/darrenhuai\"><code>@\u200bdarrenhuai</code></a> and <a href=\"https://github.com/gaborbernat\"><code>@\u200bgaborberna\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 67,
+            "title": "build(deps): bump virtualenv from 21.15.1 to 21.15.2",
+            "url": "https://github.com/key4hep/k4Opt/pull/67",
+            "author": "dependabot",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [virtualenv](https://github.com/pypa/virtualenv) from 21.15.1 to 21.15.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/pypa/virtualenv/releases\">virtualenv's releases</a>.</em></p>\n<blockquote>\n<h2>21.15.2</h2>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<h3>Bug fixes</h3>\n<ul>\n<li>Build the default application data folder only when no folder was given through <code>--app-data</code>, <code>VIRTUALENV_APP_DATA</code> or the configuration file, so <code>--read-only-app-data</code> with an explicit folder works when the default folder is missing, and writable runs stop creating an unused one. Folders from <code>VIRTUALENV_APP_DATA</code> and the configuration file now get the same checks as <code>--app-data</code> (<a href=\"ht\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 60,
+            "title": "Dashboard foundation: portable study publication, Plotly figure, Streamlit app, OpenShift deployment",
+            "url": "https://github.com/key4hep/k4Opt/pull/60",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The first increment of a dashboard for k4opt studies, after k4Bench's. A study is published as a portable, read-only snapshot, then read from a directory or over HTTP(S) without Optuna. A Plotly figure and a Streamlit app show what it holds. A container, CERN OpenShift manifests and a gated deploy workflow ship the app. Nothing is deployed yet: the CERN resources are listed in `docs/dashboard.md` and need provisioning by hand.\n\n## What changes\n\n- **One location-free JSON form of a study** (`k4opt.optimization`). `StudyResults.to_json()` is now what `k4opt study export --format json` writes and what a publication holds.\n  - `study.json` passes an explicit allowlist (`PORTABLE`). It drops every path, `K4GEO` and the optimizer's storage. The identity digest still holds, since locations were n\u2026",
+            "diff": {
+                "additions": 4899,
+                "deletions": 122,
+                "files": 64
+            },
+            "files": [
+                ".dockerignore",
+                ".github/actionlint.yaml",
+                ".github/dependabot.yml",
+                ".github/workflows/ci.yml",
+                ".github/workflows/deploy-dashboard.yml",
+                "CONTRIBUTING.md",
+                "README.md",
+                "dashboard/Dockerfile",
+                "dashboard/app.py",
+                "dashboard/data.py",
+                "dashboard/overview.py",
+                "dashboard/requirements.txt",
+                "dashboard/study.py",
+                "dashboard/tables.py",
+                "docs/dashboard.md",
+                "docs/optimization.md",
+                "docs/publication.md",
+                "docs/visualization.md",
+                "k4opt/__init__.py",
+                "k4opt/cli.py",
+                "k4opt/jsonio.py",
+                "k4opt/optimization/__init__.py",
+                "k4opt/optimization/_export.py",
+                "k4opt/optimization/_optuna/read.py",
+                "k4opt/optimization/_render.py",
+                "k4opt/optimization/_results.py",
+                "k4opt/optimization/_show.py",
+                "k4opt/optimization/_study.py",
+                "k4opt/problem/candidate.py",
+                "k4opt/publication/__init__.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 678,
+            "title": "Fix install RPATH after reconfiguring",
+            "url": "https://github.com/key4hep/k4geo/pull/678",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-02",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Fixes #677. I can reproduce it on a machine; verified the fix with a build and install.\r\n\r\nBEGINRELEASENOTES\r\n - Fix the install RPATH changing to lib64 after rerunning CMake.\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 3,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "Wondering whether we should pull\n\n```cmake\ninclude(GNUInstallDirs)\nset(CMAKE_INSTALL_LIBDIR lib)\n```\ninto `Key4hepConfig.cmake`?\n\nBut that is outside of the scope of this PR."
+                }
+            ],
+            "reviews_total": 1
+        },
         {
             "org": "key4hep",
             "repo": "key4hep-dev-utils",
@@ -95,6 +507,196 @@
                 }
             ],
             "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 59,
+            "title": "A rejected trial is read back only as rejected by a required evaluation",
+            "url": "https://github.com/key4hep/k4Opt/pull/59",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-02",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "During a run, only a required evaluation's `check()` rejects a candidate (`execution/_preflight.py`); a diagnostic whose `check()` rejects it is only not run, and recorded `invalid`. The study reader (`optimization/_optuna/read.py`, `_rejected`) checked `k4opt.rejected_by` against every evaluation of the problem, so a modified Optuna database holding a trial rejected by a diagnostic was read back as if k4opt had made it.\n\nThe reader now rebuilds the problem's task plan (`plan_tasks`, as execution and the record reader do; a study supplies no stages) and accepts `rejected_by` only if it names a required evaluation. This closes a provenance-validation gap; normal runs never store such a trial.\n\n- `tests/unit/optimization/test_resume.py`: the strict-reading test's problem gains a diagnostic `\u2026",
+            "diff": {
+                "additions": 25,
+                "deletions": 16,
+                "files": 3
+            },
+            "files": [
+                "docs/optimization.md",
+                "k4opt/optimization/_optuna/read.py",
+                "tests/unit/optimization/test_resume.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 58,
+            "title": "Reliability: rejected candidates, task time limits, normalized constraints, class-level evaluators",
+            "url": "https://github.com/key4hep/k4Opt/pull/58",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-02",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Why\n\nLong unattended studies stopped, or hung, for reasons that were not bugs, and the evaluator lifecycle did needless work:\n\n- **Everything before execution stopped the study.** Whatever a candidate's preflight raised, including `self.fail()` in an evaluator's `check()` (the examples did that), became an exception that stopped the study. There was no way to say \"this candidate is physically invalid, go on\".\n- **Evaluator instances were created two or three times per evaluation.** The session created a probe instance per class, then one per evaluation in the coordinator to call `check()`. With workers, that instance was dropped, and the worker created another and called `check()` again. An expensive `__init__` ran in the coordinator for nothing.\n- **Only ddsim had a timeout.** An evalu\u2026",
+            "diff": {
+                "additions": 4031,
+                "deletions": 2362,
+                "files": 87
+            },
+            "files": [
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/execution.md",
+                "docs/optimization.md",
+                "docs/problem.md",
+                "docs/record.md",
+                "examples/evaluators/ecal_channels.py",
+                "examples/evaluators/separation.py",
+                "examples/evaluators/shower_shape.py",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/base.py",
+                "k4opt/evaluation/declaration.py",
+                "k4opt/evaluation/errors.py",
+                "k4opt/evaluation/loader.py",
+                "k4opt/evaluation/protocol.py",
+                "k4opt/evaluation/settings.py",
+                "k4opt/execution/__init__.py",
+                "k4opt/execution/_backends.py",
+                "k4opt/execution/_baseline.py",
+                "k4opt/execution/_binding.py",
+                "k4opt/execution/_command.py",
+                "k4opt/execution/_describe.py",
+                "k4opt/execution/_drive.py",
+                "k4opt/execution/_instances.py",
+                "k4opt/execution/_preflight.py",
+                "k4opt/execution/_process.py",
+                "k4opt/execution/_publish.py",
+                "k4opt/execution/_session.py",
+                "k4opt/execution/_stages.py",
+                "k4opt/execution/_tasks.py"
+            ],
+            "comments": [
+                {
+                    "author": "jbeirer",
+                    "body": "Integration tests (`pytest -m integration tests/integration`, real ddsim on `$K4GEO`, 2026-10-20 nightly stack) at 4fd4098: **28 passed** (11 min). They include the new test where one sample's simulation is killed at its time limit: that sample fails with its logs, the other sample is measured, the \u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 57,
+            "title": "Parameters set typed destinations: geometry, stage options and evaluator settings",
+            "url": "https://github.com/key4hep/k4Opt/pull/57",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-02",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Separates what a parameter is (its domain) from where its value goes (`targets:`), so one\nparameter can set the geometry, a generator or ddsim option, or a declared evaluator setting,\nor several of these at once.\n\n```yaml\nparameters:\n  ecal_cell_size:\n    type: continuous\n    bounds: [2.5, 20.0]\n    unit: mm\n    targets:\n      geometry: ECal_cell_size          # a constant by name, or a canonical reference\n      evaluators:\n        readout: cell_size              # evaluator binding -> setting\n  range_cut:\n    type: continuous\n    bounds: [0.1, 1.0]\n    unit: mm\n    targets:\n      simulation:                       # a stage type; the option alone with one sample\n        option: physics.rangecut\n        samples: [gamma, pion]\n```\n\n## What changes\n\n- **problem**: `targets` maps each kind of \u2026",
+            "diff": {
+                "additions": 3720,
+                "deletions": 854,
+                "files": 81
+            },
+            "files": [
+                ".github/workflows/ci.yml",
+                "CONTRIBUTING.md",
+                "README.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/execution.md",
+                "docs/optimization.md",
+                "docs/problem.md",
+                "docs/record.md",
+                "examples/evaluators/ecal_channels.py",
+                "examples/problem/cld-ecal-bindings.yaml",
+                "examples/problem/cld-ecal-granularity.yaml",
+                "examples/problem/cld-ecal-photon-energies.yaml",
+                "examples/problem/cld-ecal-pi0-rejection.yaml",
+                "k4opt/ddsim/__init__.py",
+                "k4opt/ddsim/command.py",
+                "k4opt/ddsim/run.py",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/base.py",
+                "k4opt/evaluation/models.py",
+                "k4opt/execution/__init__.py",
+                "k4opt/execution/_baseline.py",
+                "k4opt/execution/_binding.py",
+                "k4opt/execution/_drive.py",
+                "k4opt/execution/_publish.py",
+                "k4opt/execution/_session.py",
+                "k4opt/execution/_stages.py",
+                "k4opt/execution/_tasks.py",
+                "k4opt/execution/_work.py",
+                "k4opt/execution/cli.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 56,
+            "title": "Review fixes: transient storage, evaluator helper identity, named parameters, ResolvedProblem",
+            "url": "https://github.com/key4hep/k4Opt/pull/56",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-02",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Follow-up to an external review of f22b3f5. Each point was checked against the code; this PR\nfixes the ones that hold up. One commit per change.\n\n## Changes\n\n- **Refuse a SQLite storage that keeps nothing.** `--storage sqlite://`, `sqlite:///:memory:`,\n  `file::memory:?uri=true` and `mode=memory&uri=true` would lose the trials when k4opt exits,\n  leaving a study that can neither be resumed nor read. `optimize()` now refuses them before\n  anything is made, for a new and a resumed study.\n- **Identify the modules an evaluator imports.** An evaluator's source identity gains\n  `helpers`: the SHA-256 of each local module the file imports, directly or through one\n  another. They are found statically, so an import inside a method counts and the result\n  does not depend on load order. A changed hel\u2026",
+            "diff": {
+                "additions": 2198,
+                "deletions": 580,
+                "files": 62
+            },
+            "files": [
+                "README.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/execution.md",
+                "docs/optimization.md",
+                "docs/problem.md",
+                "examples/evaluators/calo_photon.py",
+                "examples/evaluators/ecal_channels.py",
+                "examples/problem/cld-ecal-granularity.yaml",
+                "examples/problem/cld-ecal-photon-energies.yaml",
+                "examples/problem/cld-ecal-pi0-rejection.yaml",
+                "k4opt/evaluation/_imports.py",
+                "k4opt/evaluation/loader.py",
+                "k4opt/evaluation/models.py",
+                "k4opt/execution/_baseline.py",
+                "k4opt/execution/_binding.py",
+                "k4opt/execution/_publish.py",
+                "k4opt/execution/_session.py",
+                "k4opt/execution/_stages.py",
+                "k4opt/execution/_tasks.py",
+                "k4opt/execution/_work.py",
+                "k4opt/execution/_worker.py",
+                "k4opt/execution/cli.py",
+                "k4opt/optimization/_export.py",
+                "k4opt/optimization/_optuna/read.py",
+                "k4opt/optimization/_optuna/run.py",
+                "k4opt/optimization/_optuna/space.py",
+                "k4opt/optimization/_optuna/storage.py",
+                "k4opt/optimization/_results.py",
+                "k4opt/optimization/_show.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -4034,34 +4636,6 @@
         },
         {
             "org": "hep-fcc",
-            "repo": "FCCDIRAC",
-            "num": 21,
-            "title": "Production of ttbar dataset at 365 GeV",
-            "url": "https://github.com/HEP-FCC/FCCDIRAC/pull/21",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-27",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Requested in request:    `DRS#4`\r\nAttempt 1 production ID: 17138",
-            "diff": {
-                "additions": 1085,
-                "deletions": 0,
-                "files": 5
-            },
-            "files": [
-                "productions/summer2026/tt/.gitignore",
-                "productions/summer2026/tt/card_IDEA.tcl",
-                "productions/summer2026/tt/edm4hep_IDEA.tcl",
-                "productions/summer2026/tt/p8_ee_tt_ecm365.cmd",
-                "productions/summer2026/tt/pythia_delphes.conf"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
             "repo": "fcc-physics-events",
             "num": 33,
             "title": "Add OidcReturnURI manifests for fcc-dami and fcc-dami-test",
@@ -4103,80 +4677,6 @@
             },
             "files": [
                 "frontend/components/entities/EntityMetadata.vue"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 128,
-            "title": "Update dependency marked to v18.1.2",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/128",
-            "author": "renovate",
-            "mergedAt": "2026-10-26",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [marked](https://marked.js.org) ([source](https://redirect.github.com/markedjs/marked)) | [`18.1.1` \u2192 `18.1.2`](https://renovatebot.com/diffs/npm/marked/18.1.1/18.1.2) | ![age](https://developer.mend.io/api/mc/badges/age/npm/marked/18.1.2?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/marked/18.1.1/18.1.2?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>markedjs/marked (marked)</summary>\n\n### [`v18.1.2`](https://redirect.github.com/markedjs/marked/releases/tag/v18.1.2)\n\n[Compare Source](https://redirect.github.com/markedjs/marked/compare/v18.1.1...v1\u2026",
-            "diff": {
-                "additions": 5,
-                "deletions": 5,
-                "files": 2
-            },
-            "files": [
-                "package-lock.json",
-                "package.json"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 127,
-            "title": "Ask for explicit generator settings and cards in the requester guide",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/127",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-26",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "- New Generator settings section: ME generator, ISR, parton shower, hadronization and tune\n- Generator cards should ideally be attached to every request, with their source; FCC-config is the recommended source",
-            "diff": {
-                "additions": 22,
-                "deletions": 5,
-                "files": 1
-            },
-            "files": [
-                "docs/help/requester.md"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-drs",
-            "num": 126,
-            "title": "Update dependency katex to v0.19.1",
-            "url": "https://github.com/HEP-FCC/fcc-drs/pull/126",
-            "author": "renovate",
-            "mergedAt": "2026-10-26",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [katex](https://katex.org) ([source](https://redirect.github.com/KaTeX/KaTeX)) | [`0.19.0` \u2192 `0.19.1`](https://renovatebot.com/diffs/npm/katex/0.19.0/0.19.1) | ![age](https://developer.mend.io/api/mc/badges/age/npm/katex/0.19.1?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/npm/katex/0.19.0/0.19.1?slim=true) |\n\n---\n\n### Release Notes\n\n<details>\n<summary>KaTeX/KaTeX (katex)</summary>\n\n### [`v0.19.1`](https://redirect.github.com/KaTeX/KaTeX/blob/HEAD/CHANGELOG.md#0191-2026-10-23)\n\n[Compare Source](https://redirect.github.com/KaTeX/KaTeX/compare/v0.19.0...v0.19.1)\n\u2026",
-            "diff": {
-                "additions": 5,
-                "deletions": 5,
-                "files": 2
-            },
-            "files": [
-                "package-lock.json",
-                "package.json"
             ],
             "comments": [],
             "comments_total": 0,
