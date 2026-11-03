@@ -26,3 +26,11 @@ jobs:
 
       - name: Create Google Doc
         run: python3 assets/scripts/draft_email_doc.py --local
+
+      - name: Commit last_doc.json to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/json/last_doc.json
+          git diff --cached --quiet || git commit -m "Update last_doc.json with latest draft doc"
+          git push

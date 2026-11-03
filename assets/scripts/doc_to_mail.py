@@ -14,6 +14,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import urllib.request
 
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -28,7 +29,8 @@ SCOPES = [
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CREDENTIALS_FILE = os.path.join(REPO_ROOT, "google_apps.json")
 TOKEN_FILE = os.path.join(REPO_ROOT, "token.json")
-LAST_DOC_FILE = os.path.join(REPO_ROOT, "last_doc.json")
+LAST_DOC_FILE = os.path.join(REPO_ROOT, "assets", "json", "last_doc.json")
+LAST_DOC_URL = "https://raw.githubusercontent.com/fcc-prs/fcc-prs.github.io/main/assets/json/last_doc.json"
 
 
 def get_credentials():
@@ -137,6 +139,9 @@ set htmlContent to read htmlPath as «class utf8»
 tell application "Mail"
     set newMsg to make new outgoing message with properties {{subject:"{subject}", visible:true}}
     set html content of newMsg to htmlContent
+    tell newMsg
+        make new to recipient with properties {{address:"fcc-ped-softwareandcomputing@cern.ch"}}
+    end tell
     activate
 end tell
 '''
@@ -147,17 +152,24 @@ end tell
 if __name__ == "__main__":
     if len(sys.argv) >= 2:
         doc_id = extract_doc_id(sys.argv[1])
-    elif os.path.exists(LAST_DOC_FILE):
-        with open(LAST_DOC_FILE) as f:
-            last = json.load(f)
+    else:
+        if os.path.exists(LAST_DOC_FILE):
+            with open(LAST_DOC_FILE) as f:
+                last = json.load(f)
+            print(f"Using last doc from repo: {last.get('url', last['doc_id'])}")
+        else:
+            print(f"Fetching last doc from repository...")
+            try:
+                with urllib.request.urlopen(LAST_DOC_URL) as resp:
+                    last = json.load(resp)
+                print(f"Using last doc: {last.get('url', last['doc_id'])}")
+            except Exception as e:
+                print(f"Could not fetch last_doc.json from repository: {e}")
+                print("Pass a doc ID/URL as an argument, or ensure assets/json/last_doc.json exists.")
+                sys.exit(1)
         doc_id = last["doc_id"]
-        print(f"Using last doc: {last.get('url', doc_id)}")
         if last.get("subject"):
             print(f"  Subject: {last['subject']}")
-    else:
-        print("Usage: python3 doc_to_mail.py <doc_id_or_url>")
-        print("(No last_doc.json found — run draft_email_doc.py first, or pass a doc ID.)")
-        sys.exit(1)
     print(f"Reading doc {doc_id}...")
 
     creds = get_credentials()

@@ -25,7 +25,7 @@ SCOPES = [
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CREDENTIALS_FILE = os.path.join(REPO_ROOT, "google_apps.json")
 TOKEN_FILE = os.path.join(REPO_ROOT, "token.json")
-LAST_DOC_FILE = os.path.join(REPO_ROOT, "last_doc.json")
+LAST_DOC_FILE = os.path.join(REPO_ROOT, "assets", "json", "last_doc.json")
 SUMMARY_URL = "https://fcc-prs.github.io/assets/json/summary.json"
 
 
