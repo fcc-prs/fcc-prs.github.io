@@ -1,6 +1,237 @@
 {
-    "updated_at": "2026-11-03T13:28:01Z",
+    "updated_at": "2026-11-04T13:38:52Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 450,
+            "title": "Make install-directory ordering explicit (no behavior change)",
+            "url": "https://github.com/key4hep/k4FWCore/pull/450",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-04",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi REQUIRED)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
+            "diff": {
+                "additions": 2,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Gen",
+            "num": 68,
+            "title": "Make install-directory ordering explicit (no behavior change)",
+            "url": "https://github.com/key4hep/k4Gen/pull/68",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-04",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi REQUIRED)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
+            "diff": {
+                "additions": 2,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4SimGeant4",
+            "num": 99,
+            "title": "Make install-directory ordering explicit (no behavior change)",
+            "url": "https://github.com/key4hep/k4SimGeant4/pull/99",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-04",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi REQUIRED)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
+            "diff": {
+                "additions": 2,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 138,
+            "title": "Make install-directory ordering explicit (no behavior change)",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/138",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-04",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(k4FWCore REQUIRED)` loads Gaudi, which already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 120,
+            "title": "[TrackFitter]: Drop chi2=-1 placeholder tracks on fit failure",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/120",
+            "author": "andread3vita",
+            "mergedAt": "2026-11-04",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n\n- When the fit failed for all hypotheses (and the LimitHits retry), an empty placeholder track (chi2=ndf=-1, no hits, no track states) was written to both output collections to keep them index-aligned with the input. Skip the track instead: failed fits no longer appear in FittedTracks or FittedTracksWithFilteredHits.\n\nENDRELEASENOTES\n\nDear all,\n\nThis PR removes the placeholder for fits that fail in both the standard and recovered fitting steps. The change is intended to accommodate the requirements of other algorithms that expect input tracks to contain at least one TrackState.\n\nCheers,\nAndrea",
+            "diff": {
+                "additions": 1,
+                "deletions": 17,
+                "files": 1
+            },
+            "files": [
+                "Tracking/components/GenfitTrackFitter.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "andread3vita",
+                    "body": "> Looks reasonable to me. Any expected consequences from dropping the index-alignment with the inputs (other than the fact that this is now more friendly to algorithms that do expect _proper_ tracks)?\r\n\r\nMaybe it could be useful for debugging, but I'm not sure it's really necessary. Without the PR, \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "OK. If debugging becomes a problem one could start to also produce a collection of indices (via `podio::UserDataCollection` for example) that contains the failed track indices. But I would say we wait with that until it actually becomes a problem?\r\n\r\nIf there are no other comments, I will merge this\u2026"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Looks reasonable to me. Any expected consequences from dropping the index-alignment with the inputs (other than the fact that this is now more friendly to algorithms that do expect *proper* tracks)?"
+                }
+            ],
+            "reviews_total": 2
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 122,
+            "title": "Make install-directory ordering explicit (no behavior change)",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/122",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-04",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi REQUIRED)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
+            "diff": {
+                "additions": 2,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Reco",
+            "num": 77,
+            "title": "Make install-directory ordering explicit (no behavior change)",
+            "url": "https://github.com/key4hep/k4Reco/pull/77",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-04",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi REQUIRED)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GaudiPandora",
+            "num": 64,
+            "title": "Make install-directory ordering explicit (no behavior change)",
+            "url": "https://github.com/key4hep/k4GaudiPandora/pull/64",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-04",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4MLJetTagger",
+            "num": 16,
+            "title": "Make install-directory ordering explicit (no behavior change)",
+            "url": "https://github.com/key4hep/k4MLJetTagger/pull/16",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-04",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "k4MarlinWrapper",
@@ -48,6 +279,39 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4-project-template",
+            "num": 34,
+            "title": "Initialize install directories before setting RPATH",
+            "url": "https://github.com/key4hep/k4-project-template/pull/34",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Make sure to initialize the install directories before setting RPATH\n\nENDRELEASENOTES\n\nSee https://github.com/key4hep/k4geo/issues/677",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "So the existing 5 PRs that have been merged fix an issue in the 5 PRs, however there are several that don't have the issue, because, for example, if `find_package(Gaudi)` is called before the inclusion of `Key4hepConfig.cmake`, then it will hardcode `CMAKE_INSTALL_LIBDIR` to `lib`, removing the poss\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Thanks agent :D I think it's a good idea to have this consistently everywhere, even if it's not needed in principle."
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -115,6 +379,331 @@
             },
             "files": [
                 "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 80,
+            "title": "The dashboard is laid out as k4Bench's: a sidebar that chooses, tabs on top, one sheet per trial",
+            "url": "https://github.com/key4hep/k4Opt/pull/80",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The dashboard was hard to follow: a study was chosen twice (a checkbox in a table, then a picker\nover a large title), a 400 px header of mostly zeros sat on every tab, labels were machine\nidentifiers (`pi0_rejection/analysis/background_rejection (objective)`, `[1]`, `None`,\n`1.683e+07`), and a trial opened three different ways. This lays it out after\n[k4Bench's dashboard](https://k4bench-dashboard.app.cern.ch).\n\n**Sidebar.** As k4Bench's: *Data Source* (Refresh Data, and a card naming the publication, a\nlink where it is served), then **Detector \u2192 Key4hep \u2192 Study**, each narrowing the next and kept\nin the URL, *All studies*, and k4Bench's footer (also at the bottom of each page).\n\n**Studies.** One sortable table of the studies the sidebar keeps (detector, problem, Key4hep\nstack, dates, outc\u2026",
+            "diff": {
+                "additions": 2153,
+                "deletions": 1153,
+                "files": 31
+            },
+            "files": [
+                ".github/workflows/ci.yml",
+                "dashboard/app.py",
+                "dashboard/data.py",
+                "dashboard/labels.py",
+                "dashboard/overview.py",
+                "dashboard/studies.py",
+                "dashboard/study.py",
+                "dashboard/tables.py",
+                "dashboard/trial.py",
+                "dashboard/views/__init__.py",
+                "dashboard/views/analysis.py",
+                "dashboard/views/overview.py",
+                "dashboard/views/results.py",
+                "dashboard/views/trade_offs.py",
+                "dashboard/views/trials.py",
+                "dashboard/widgets.py",
+                "docs/dashboard.md",
+                "docs/publication.md",
+                "docs/visualization.md",
+                "k4opt/publication/catalog.py",
+                "k4opt/visualization/__init__.py",
+                "k4opt/visualization/graph.py",
+                "k4opt/visualization/pipeline.py",
+                "k4opt/visualization/trials.py",
+                "pyproject.toml",
+                "tests/unit/dashboard/conftest.py",
+                "tests/unit/dashboard/test_app.py",
+                "tests/unit/dashboard/test_labels.py",
+                "tests/unit/dashboard/test_tables.py",
+                "tests/unit/publication/test_publish.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 79,
+            "title": "Trade-offs against a reference trial: which trials give up at most so much for at least so much",
+            "url": "https://github.com/key4hep/k4Opt/pull/79",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "**Why.** A multi-objective study has a front, not a best trial. The ECAL study has 62 of its 100 trials on the front. Choosing among them is a question of what one gives up for what, for example \"at most 5 % worse resolution for at least 10 % fewer cells\". This PR lets the dashboard answer such questions over the trials a study already has. It is the classification step of interactive methods such as NIMBUS, done over existing trials. No new optimization runs and no new problem configuration.\n\n**`k4opt.optimization.trade_offs(study, reference, rules, *, within_uncertainty=True)`** (in `_tradeoffs.py`, next to the Pareto front):\n\n- `Rule(label, \"improve\" | \"worsen\" | \"keep\", amount, relative=True)` asks one objective to improve by at least `amount`, worsen by at most `amount`, or not worsen\u2026",
+            "diff": {
+                "additions": 696,
+                "deletions": 17,
+                "files": 12
+            },
+            "files": [
+                "dashboard/study.py",
+                "dashboard/tables.py",
+                "docs/dashboard.md",
+                "docs/optimization.md",
+                "docs/visualization.md",
+                "k4opt/optimization/__init__.py",
+                "k4opt/optimization/_tradeoffs.py",
+                "k4opt/visualization/trials.py",
+                "tests/unit/dashboard/test_app.py",
+                "tests/unit/dashboard/test_tables.py",
+                "tests/unit/optimization/test_tradeoffs.py",
+                "tests/unit/visualization/test_trials.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 78,
+            "title": "The Study page's Analysis tab shows how the parameters act on an objective",
+            "url": "https://github.com/key4hep/k4Opt/pull/78",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Third of the dashboard redesign series (after #76 and #77). It adds the figures of Optuna Dashboard's analytics, built from `StudyResults` alone (no Optuna), and an Analysis tab that shows them.\n\n**`k4opt/visualization/analysis.py`**\n\n- `parallel_figure(results, objective)`: Plotly's `go.Parcoords`, with each feasible trial as one line.\n  - Axes: one per parameter (a categorical one shows its choices as ticks), one per objective, and one per bound of each constraint, showing the margin (zero or below when satisfied).\n  - Color: the chosen objective. The scale is reversed for `minimize`, so the better trials are always the strongest color.\n  - Notes: infeasible trials and trials without a result are counted in the figure's title. Plotly draws no annotations over parallel axes, so the note g\u2026",
+            "diff": {
+                "additions": 670,
+                "deletions": 8,
+                "files": 7
+            },
+            "files": [
+                "dashboard/study.py",
+                "docs/dashboard.md",
+                "docs/visualization.md",
+                "k4opt/visualization/__init__.py",
+                "k4opt/visualization/analysis.py",
+                "tests/unit/dashboard/test_app.py",
+                "tests/unit/visualization/test_analysis.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 77,
+            "title": "The Study page is in tabs, with each trial's record, a history of each objective and trials colored by a value",
+            "url": "https://github.com/key4hep/k4Opt/pull/77",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Second of the dashboard redesign series (after #76).\n\n**Study page.** The outcome counts stay on top. Below them are four tabs, created with\n`st.tabs(key=\"view\", bind=\"query-params\")`, so the open tab is in the URL and only that tab\nruns. In particular, Graphviz runs only when the Pipeline tab is open.\n\n- **Overview**: the trials figure with its two axes and a new *Color* selector (outcome, the\n  default; trial number; any objective or numeric parameter), then the Pareto table (300 px\n  high), then a history plot per objective. Clicking a trial in any figure opens it in a dialog.\n  After each click the chart key is bumped, so the selection clears.\n- **Trials**: an outcome filter (pills with counts) and the table of every trial. Selecting a row,\n  or a link with `?trial=N`, shows the trial'\u2026",
+            "diff": {
+                "additions": 772,
+                "deletions": 128,
+                "files": 12
+            },
+            "files": [
+                "dashboard/app.py",
+                "dashboard/overview.py",
+                "dashboard/study.py",
+                "dashboard/tables.py",
+                "docs/dashboard.md",
+                "docs/visualization.md",
+                "k4opt/visualization/__init__.py",
+                "k4opt/visualization/trials.py",
+                "tests/unit/dashboard/test_app.py",
+                "tests/unit/dashboard/test_tables.py",
+                "tests/unit/visualization/test_history.py",
+                "tests/unit/visualization/test_trials.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 76,
+            "title": "The pipeline graph is drawn by Graphviz, its text zooming with its boxes, across the page",
+            "url": "https://github.com/key4hep/k4Opt/pull/76",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "First of the dashboard redesign series (graph, tabs, analysis plots, fANOVA, timeline).\n\n**Problem.** `pipeline_figure` scaled the layout to at most 880 px, so the ECAL study's graph was\n212 px tall on a 1400 px page. Its text was Plotly annotations in fixed pixels over boxes in data\nunits, so zooming out ran the text over the boxes and edges.\n\n**Change.** Graphviz both lays the graph out and draws it: one `dot` run writes the layout\n(`-Tjson`) and the drawing (`-Tsvg`). The figure shows the SVG as one layout image in data\ncoordinates, so the text is part of the drawing and zooms with its boxes. Plotly still provides\npan, scroll zoom, the modebar, and hover and click on tasks and edges:\n\n- The clickable trace is unchanged (`customdata[0]` = node id or stack key, last trace). Its\n  transpar\u2026",
+            "diff": {
+                "additions": 205,
+                "deletions": 195,
+                "files": 6
+            },
+            "files": [
+                "dashboard/Dockerfile",
+                "docs/dashboard.md",
+                "docs/visualization.md",
+                "k4opt/visualization/_draw.py",
+                "k4opt/visualization/pipeline.py",
+                "tests/unit/visualization/test_pipeline.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 75,
+            "title": "The dashboard's route is reachable from outside CERN",
+            "url": "https://github.com/key4hep/k4Opt/pull/75",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The dashboard at https://k4opt-dashboard.app.cern.ch answered only inside CERN: the CERN OpenShift routers admit only CERN's networks unless a route empties its IP whitelist. k4Bench's route does (`haproxy.router.openshift.io/ip_whitelist: \"\"`, k4Bench #35); ours carried no annotation.\n\n- `openshift/route.yaml`: the empty whitelist.\n- `docs/dashboard.md`: the route is open to the Internet; what the dashboard shows is public, as before.\n- `tests/unit/test_deployment.py`: checks the annotation instead of its absence.\n\nThe deploy workflow applies the route on merge, so no manual `oc` step is needed. Once deployed, check from outside CERN that the page loads.",
+            "diff": {
+                "additions": 13,
+                "deletions": 9,
+                "files": 3
+            },
+            "files": [
+                "docs/dashboard.md",
+                "openshift/route.yaml",
+                "tests/unit/test_deployment.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 74,
+            "title": "The pipeline tests accept the font warnings of a Graphviz without fonts",
+            "url": "https://github.com/key4hep/k4Opt/pull/74",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The `test` job has failed since #71: inside the Key4hep container, `dot` is the stack's Graphviz, built without fonts, which lays the graph out with estimated text widths and says so on stderr:\n\n```\nWarning: Warning: no hard-coded metrics for 'Helvetica,Arial,sans-serif'.  Falling back to 'Times' metrics\nWarning: Warning: no value for width of non-ASCII character 226. Falling back to width of space character\n```\n\n`test_pipeline.py` asserted an empty stderr, so its five `dot` tests failed there (the `dashboard` job, with Ubuntu's Graphviz and its fonts, passed). They now ignore these two warnings and still fail on anything else Graphviz writes, a syntax warning of the DOT in particular.",
+            "diff": {
+                "additions": 11,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "tests/unit/visualization/test_pipeline.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 73,
+            "title": "The pipeline test reads the pi0 example's 50 GeV samples",
+            "url": "https://github.com/key4hep/k4Opt/pull/73",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "#72 renamed the pi0 example's samples to `gamma_50gev`/`pi0_50gev` (500 events at 50 GeV) and made the channel count a second objective in place of a constraint, after #71 added `tests/unit/visualization/test_pipeline.py`, which builds its graphs from that example. The dashboard job on `main` fails since.\n\nThe test now names the 50 GeV samples, and the cases about a constraint node build it themselves (`with_constraint()`: the channel count limited to 5e7, as the example had it); `without_constraint()` drops the channel objective so that the readout is a diagnostic again.",
+            "diff": {
+                "additions": 37,
+                "deletions": 26,
+                "files": 1
+            },
+            "files": [
+                "tests/unit/visualization/test_pipeline.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 72,
+            "title": "Photon/pi0 example: 50 GeV pi0s told from photons by their halo fraction",
+            "url": "https://github.com/key4hep/k4Opt/pull/72",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The photon/pi0 example did not depend on what it varies. Its RMS shower width is dominated by a few low-energy hits far from the shower axis, so the cut at 90 % photon efficiency sat in the tail and rejected 0.17 of the pi0s at every cell size from 2.5 to 20 mm (200-trial study). At 20 GeV the two photons of a pi0 are also at least 29 mm apart, farther than the coarsest cell.\n\n## What changes\n\n- `calo.shower_shape` measures the **halo fraction**: the fraction of an event's energy farther than `radius` (10 mm, about the Moliere radius of tungsten) from the radial shower axis.\n- `calo.separation` cuts on any dimensionless variable, low for the signal, and reports `cut` in place of `width_cut`.\n- The problem simulates **50 GeV** photons and pi0s (photons at least ~12 mm apart at the ECAL), 50\u2026",
+            "diff": {
+                "additions": 146,
+                "deletions": 83,
+                "files": 10
+            },
+            "files": [
+                "README.md",
+                "docs/evaluation.md",
+                "docs/evaluators.md",
+                "docs/problem.md",
+                "examples/evaluators/separation.py",
+                "examples/evaluators/shower_shape.py",
+                "examples/problem/cld-ecal-pi0-rejection.yaml",
+                "tests/integration/execution/test_evaluate_ddsim.py",
+                "tests/unit/evaluation/test_combined_examples.py",
+                "tests/unit/problem/test_config_samples.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 71,
+            "title": "Study page shows how a candidate is evaluated",
+            "url": "https://github.com/key4hep/k4Opt/pull/71",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The Study page showed what a study optimizes only as tables. It now draws how each candidate is evaluated: the task graph of the problem, laid out by Graphviz and drawn with Plotly.\n\n## What it shows\n\n- **Left to right:** the parameters, the geometry, each sample in a box with its stages and evaluations, the combined and candidate-level evaluations, and the objectives and constraints they measure.\n- **A color per kind:** parameters blue, samples and their stages violet, evaluations aqua, objectives and constraints orange, the geometry neutral. A diagnostic that did not succeed in some trials is red, with \"\u26a0 did not succeed in N of M trials\". There is a legend, and every kind is also told apart by its place, box and label.\n- **Edges no other path implies:** the geometry reaches each simulat\u2026",
+            "diff": {
+                "additions": 1752,
+                "deletions": 14,
+                "files": 13
+            },
+            "files": [
+                ".github/workflows/ci.yml",
+                "dashboard/Dockerfile",
+                "dashboard/study.py",
+                "dashboard/tables.py",
+                "docs/dashboard.md",
+                "docs/visualization.md",
+                "k4opt/visualization/__init__.py",
+                "k4opt/visualization/_draw.py",
+                "k4opt/visualization/graph.py",
+                "k4opt/visualization/pipeline.py",
+                "tests/unit/dashboard/test_app.py",
+                "tests/unit/test_deployment.py",
+                "tests/unit/visualization/test_pipeline.py"
             ],
             "comments": [],
             "comments_total": 0,
@@ -380,6 +969,38 @@
             ],
             "comments": [],
             "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCCAnalyses",
+            "num": 579,
+            "title": "Use GNUInstallDirs for libraries and executables",
+            "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/579",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-03",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Use GNUInstallDirs for installation and RPATH. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nCompared with the current behaviour:\n\n- Libraries follow `CMAKE_INSTALL_LIBDIR`: the AlmaLinux 9 default changes from `lib` to `lib64`, matching RPATH. `-DCMAKE_INSTALL_LIBDIR=lib` retains the old layout. Test environment paths use the absolute install library directory.\n- Executables still default to `bin`; installation of `fccanalysis` also honours a custom `CMAKE_INSTALL_BINDIR`. The standard CMake variables replace the old `INSTALL_LIB_DIR`/`INSTALL_BIN_DIR` overrides.\n- `setup.sh` searches local `install/lib64`, then local `install/lib`, before stack libraries. Previously, the ONNX stack directory could shadow both local directories, and local `lib` took precede\u2026",
+            "diff": {
+                "additions": 12,
+                "deletions": 13,
+                "files": 4
+            },
+            "files": [
+                "CMakeLists.txt",
+                "analyzers/dataframe/CMakeLists.txt",
+                "cmake/FCCAnalysesFunctions.cmake",
+                "setup.sh"
+            ],
+            "comments": [
+                {
+                    "author": "kjvbrt",
+                    "body": "Thanks"
+                }
+            ],
+            "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
         },
@@ -2137,152 +2758,6 @@
             "reviews_total": 0
         },
         {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 28,
-            "title": "evaluation: declared collections read event by event, and settings with units",
-            "url": "https://github.com/key4hep/k4Opt/pull/28",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "An evaluator now declares which EDM4hep collections it reads and gets them event by event, and a setting can carry a unit. In the example, the calorimeter collection moves from a free-form setting to a declared role, and the 70 keV threshold moves from a constant in the code into the problem:\n\n```yaml\n# before\nevaluators:\n  - name: calo.photon\n    version: \"1\"\n    stage: simulation\n    settings:\n      collection: ECalBarrelCollection\n\n# after\nevaluators:\n  - name: calo.photon\n    version: \"1\"\n    stage: simulation\n    collections:\n      hits: ECalBarrelCollection   # a role the evaluator declares\n    settings:\n      threshold:                   # arrives in the evaluator as 70e-6 (GeV)\n        value: 70\n        unit: keV\n```\n\n```python\nclass CaloPhoton(Evaluator):\n    stage = \"simulation\"\n\u2026",
-            "diff": {
-                "additions": 1443,
-                "deletions": 216,
-                "files": 32
-            },
-            "files": [
-                "README.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/problem.md",
-                "examples/evaluators/calo_photon.py",
-                "examples/problem/cld-ecal-granularity.yaml",
-                "k4opt/ddsim/__init__.py",
-                "k4opt/ddsim/command.py",
-                "k4opt/evaluation/__init__.py",
-                "k4opt/evaluation/base.py",
-                "k4opt/evaluation/edm4hep.py",
-                "k4opt/evaluation/models.py",
-                "k4opt/evaluation/units.py",
-                "k4opt/geometry/discovery.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/_stages.py",
-                "k4opt/problem/cli.py",
-                "k4opt/problem/config.py",
-                "k4opt/problem/models.py",
-                "tests/integration/problem/test_evaluate_ddsim.py",
-                "tests/support/cell_count.py",
-                "tests/support/hit_energy.py",
-                "tests/unit/ddsim/test_command.py",
-                "tests/unit/evaluation/test_base.py",
-                "tests/unit/evaluation/test_contract.py",
-                "tests/unit/evaluation/test_edm4hep.py",
-                "tests/unit/examples/test_calo_photon.py",
-                "tests/unit/geometry/test_discovery.py",
-                "tests/unit/problem/test_config.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 27,
-            "title": "problem: explicit stages with executors, and top-level evaluators that name the stage they read",
-            "url": "https://github.com/key4hep/k4Opt/pull/27",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "A problem now says how the data its evaluators read is made, and each evaluator says which stage it reads. `evaluation:` mixed the pipeline (events, seed, generation, `backend.ddsim.args`) with the evaluators; it is replaced by two top-level sections:\n\n```yaml\n# before\nevaluation:\n  events: 1000\n  seed: 42\n  generation:\n    particle: gamma\n    # ...\n  backend:\n    ddsim:\n      args: [\"--physics.list\", \"FTFP_BERT\"]\n  evaluators:\n    - name: calo.photon\n      version: \"1\"\n      settings:\n        collection: ECalBarrelCollection\n\n# after\nstages:\n  generation:\n    executor: gun          # fired inside ddsim\n    particle: gamma\n    # ...\n  simulation:\n    executor: ddsim\n    events: 1000\n    seed: 42\n    physics.list: FTFP_BERT  # any ddsim option, named as in `ddsim --help`\n\nevaluators:\n  - na\u2026",
-            "diff": {
-                "additions": 2157,
-                "deletions": 1238,
-                "files": 40
-            },
-            "files": [
-                "README.md",
-                "docs/ddsim.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/problem.md",
-                "examples/evaluators/calo_photon.py",
-                "examples/problem/cld-ecal-granularity.yaml",
-                "k4opt/ddsim/__init__.py",
-                "k4opt/ddsim/command.py",
-                "k4opt/ddsim/run.py",
-                "k4opt/evaluation/__init__.py",
-                "k4opt/evaluation/base.py",
-                "k4opt/evaluation/models.py",
-                "k4opt/evaluation/protocol.py",
-                "k4opt/frozen.py",
-                "k4opt/problem/__init__.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/_stages.py",
-                "k4opt/problem/cli.py",
-                "k4opt/problem/config.py",
-                "k4opt/problem/errors.py",
-                "k4opt/problem/models.py",
-                "tests/integration/ddsim/test_options.py",
-                "tests/integration/problem/test_evaluate_ddsim.py",
-                "tests/support/cell_count.py",
-                "tests/support/hit_energy.py",
-                "tests/support/parameter_echo.py",
-                "tests/unit/ddsim/test_command.py",
-                "tests/unit/ddsim/test_run.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 26,
-            "title": "geometry: inspect names the geometry directly; the geometry YAML and apply are gone",
-            "url": "https://github.com/key4hep/k4Opt/pull/26",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The geometry-only YAML (`geometry`, `root`, `overrides`) and `examples/geometry/cld.yaml` predate the problem specification. They were read only by `k4opt geometry inspect` and `k4opt geometry apply`. Now a physicist declares what varies in a problem's `parameters`, and `k4opt evaluate` writes the modified geometry of each candidate into its run directory. The file had become a second way of naming a geometry, with hand-written override strings no workflow needs.\n\n`inspect` is the part a user still needs: it is how you find the target to put in `parameters`. It now takes the geometry directly:\n\n```bash\n# before\nk4opt geometry inspect examples/geometry/cld.yaml --filter ECal_cell_size\n# after\nk4opt geometry inspect FCCee/CLD/compact/CLD_o2_v09/CLD_o2_v09.xml --filter ECal_cell_size\nk4opt ge\u2026",
-            "diff": {
-                "additions": 129,
-                "deletions": 576,
-                "files": 17
-            },
-            "files": [
-                "README.md",
-                "docs/geometry.md",
-                "docs/problem.md",
-                "examples/geometry/cld.yaml",
-                "k4opt/geometry/__init__.py",
-                "k4opt/geometry/cli.py",
-                "k4opt/geometry/config.py",
-                "k4opt/geometry/discovery.py",
-                "k4opt/geometry/overrides.py",
-                "k4opt/geometry/render.py",
-                "k4opt/geometry/source.py",
-                "tests/support/geometry.py",
-                "tests/unit/geometry/test_cli.py",
-                "tests/unit/geometry/test_discovery.py",
-                "tests/unit/geometry/test_overrides.py",
-                "tests/unit/geometry/test_render.py",
-                "tests/unit/test_cli.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "hep-fcc",
             "repo": "fcc-cvmfs",
             "num": 12,
@@ -3148,282 +3623,6 @@
             "reviews_total": 0
         },
         {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 25,
-            "title": "evaluate: several evaluators per candidate share each pipeline stage once",
-            "url": "https://github.com/key4hep/k4Opt/pull/25",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "A problem can now be measured by several evaluators. Each pipeline stage runs once per candidate, however many evaluators read it, and the candidate gets one status from theirs. There is no optimizer yet; this prepares one.\n\n```yaml\nevaluation:\n  events: 1000\n  seed: 42\n  generation: { ... }\n  backend: { ... }\n  evaluators:\n    - name: calo.photon\n      version: \"1\"\n      settings:\n        collection: ECalBarrelCollection\n    - name: my.readout_cost   # illustrative: no `requires`, so no simulation is needed for it\n      version: \"1\"\n```\n\n```bash\nk4opt evaluate problem.yaml --evaluator calo_photon.py:CaloPhoton --evaluator my_cost.py:ReadoutCost \\\n  --param constants.ECal_cell_size=10.0 --output runs/a\n```\n\n## Design\n\n- **One shared context.** `events`, `seed`, `generation` and `backend` c\u2026",
-            "diff": {
-                "additions": 2377,
-                "deletions": 752,
-                "files": 27
-            },
-            "files": [
-                "README.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/problem.md",
-                "examples/evaluators/calo_photon.py",
-                "examples/problem/cld-ecal-granularity.yaml",
-                "k4opt/evaluation/models.py",
-                "k4opt/evaluation/protocol.py",
-                "k4opt/frozen.py",
-                "k4opt/problem/__init__.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/_stages.py",
-                "k4opt/problem/cli.py",
-                "k4opt/problem/config.py",
-                "k4opt/problem/models.py",
-                "tests/integration/problem/test_evaluate_ddsim.py",
-                "tests/support/evaluators.py",
-                "tests/support/hit_energy.py",
-                "tests/support/parameter_echo.py",
-                "tests/unit/problem/conftest.py",
-                "tests/unit/problem/test_config.py",
-                "tests/unit/problem/test_evaluate.py",
-                "tests/unit/problem/test_evaluators.py",
-                "tests/unit/problem/test_models.py",
-                "tests/unit/problem/test_run.py",
-                "tests/unit/problem/test_stages.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 24,
-            "title": "examples: a cell-size study of the CLD ECAL replaces the hit-count smoke test",
-            "url": "https://github.com/key4hep/k4Opt/pull/24",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "## Changes\n\n- **Example problem** `examples/problem/cld-ecal-granularity.yaml`: how fine should the CLD ECAL barrel cells be? It varies `ECal_cell_size` in 2.5-20 mm and minimizes two measurements on 10 GeV photons at 80-100 deg: how far the measured photon direction is off, and how many cells the photon fires. It replaces `cld-ecal-hit-count.yaml`, whose only metric was a technical observable.\n- **Example evaluator** `calo.photon` (`examples/evaluators/calo_photon.py`): reads the ECAL hits and `MCParticles`, fails if the generated particle is not a photon (PDG 22), and leaves out photons that converted in the tracker (`isDecayedInTracker()`, about 9 %). A cell fires above 70 keV (half a MIP in 0.5 mm of silicon); the residual is the angle between the generated momentum and the line from t\u2026",
-            "diff": {
-                "additions": 573,
-                "deletions": 341,
-                "files": 18
-            },
-            "files": [
-                "README.md",
-                "docs/evaluators.md",
-                "docs/problem.md",
-                "examples/evaluators/calo_hit_multiplicity.py",
-                "examples/evaluators/calo_photon.py",
-                "examples/problem/cld-ecal-granularity.yaml",
-                "examples/problem/cld-ecal-hit-count.yaml",
-                "k4opt/problem/cli.py",
-                "k4opt/yamlio.py",
-                "pyproject.toml",
-                "tests/integration/problem/test_evaluate_ddsim.py",
-                "tests/support/cell_count.py",
-                "tests/support/evaluators.py",
-                "tests/support/simulation.py",
-                "tests/unit/examples/test_calo_hit_multiplicity.py",
-                "tests/unit/examples/test_calo_photon.py",
-                "tests/unit/problem/test_config.py",
-                "tests/unit/problem/test_run.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 23,
-            "title": "review fixes: numpy numbers in results, clear errors for malformed metrics and huge values, shared YAML loader, current docs",
-            "url": "https://github.com/key4hep/k4Opt/pull/23",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "## Changes\n\n- **numpy in results:** a measurement value, uncertainty, sample or provenance entry may be any real number (`numpy.int64`, `numpy.float32`, ...) and is stored as the Python `int` or `float` it stands for; per-event values may be any iterable, such as a numpy array. Booleans, NaN and infinity are still rejected.\n- **Metric keys:** a key that is neither a name nor a `(stage, metric)` pair of strings is an `EvaluationContractError` (it was a bare `ValueError`/`TypeError`, and a malformed `metrics` declaration was accepted).\n- **Huge values:** `Measurement.from_samples` reports samples too large to average as a contract error instead of an `OverflowError`; a `--param` integer with more digits than Python converts is a `CandidateError` instead of a traceback.\n- **Problem models:** \u2026",
-            "diff": {
-                "additions": 267,
-                "deletions": 120,
-                "files": 21
-            },
-            "files": [
-                "CONTRIBUTING.md",
-                "README.md",
-                "docs/ddsim.md",
-                "docs/evaluation.md",
-                "docs/problem.md",
-                "k4opt/__init__.py",
-                "k4opt/evaluation/__init__.py",
-                "k4opt/evaluation/base.py",
-                "k4opt/evaluation/models.py",
-                "k4opt/frozen.py",
-                "k4opt/geometry/config.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/cli.py",
-                "k4opt/problem/config.py",
-                "k4opt/problem/models.py",
-                "k4opt/yamlio.py",
-                "tests/unit/evaluation/test_base.py",
-                "tests/unit/evaluation/test_contract.py",
-                "tests/unit/problem/test_models.py",
-                "tests/unit/problem/test_run.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 22,
-            "title": "evaluators: a base class so an evaluator is a declaration and one method",
-            "url": "https://github.com/key4hep/k4Opt/pull/22",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Builds on #21 (the base of this PR is its branch). The example evaluator now needs one import and no helper code:\n\n```python\nfrom k4opt.evaluation import Evaluator\n\nclass CaloHitMultiplicity(Evaluator):\n    name = \"calo.hit_multiplicity\"\n    version = \"1\"\n    requires = \"simulation\"\n    settings = {\"collection\": str}\n    metrics = {\"ecal_barrel.mean_hit_cells\": \"1\"}\n\n    def evaluate(self, request):\n        hits = request.read(\"simulation\", request.settings[\"collection\"], \"edm4hep::SimCalorimeterHit\")\n        cells = [len({hit.getCellID() for hit in event}) for event in hits]\n        if max(cells) == 0:\n            self.invalid(\"no hits in any event\")\n        return {\"ecal_barrel.mean_hit_cells\": cells}\n```\n\n## What changed\n\n- `Evaluator` is an optional base class. The old `typing.Protocol\u2026",
-            "diff": {
-                "additions": 739,
-                "deletions": 139,
-                "files": 17
-            },
-            "files": [
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "examples/evaluators/calo_hit_multiplicity.py",
-                "k4opt/evaluation/__init__.py",
-                "k4opt/evaluation/base.py",
-                "k4opt/evaluation/edm4hep.py",
-                "k4opt/evaluation/loader.py",
-                "k4opt/evaluation/models.py",
-                "k4opt/evaluation/protocol.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "tests/unit/evaluation/test_base.py",
-                "tests/unit/evaluation/test_contract.py",
-                "tests/unit/evaluation/test_edm4hep.py",
-                "tests/unit/examples/test_calo_hit_multiplicity.py",
-                "tests/unit/problem/test_run.py",
-                "tests/unit/problem/test_stages.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 21,
-            "title": "evaluators: simplify the example; framework reads EDM4hep, counts events, averages samples",
-            "url": "https://github.com/key4hep/k4Opt/pull/21",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The example evaluator `calo.hit_multiplicity` is about 60 lines instead of 180. The code every evaluator would have repeated is now in k4opt.\n\n## Framework\n\n- `read_collection(path, collection, value_type)` and `count_events(path)` in `k4opt.evaluation` read EDM4hep files. `podio` is still imported lazily. Every problem with a file (no podio, unreadable file, missing `events` category or collection, wrong element type, C++ reader exceptions) is an `EvaluationFailed`.\n- An evaluator can raise `EvaluationFailed` or `EvaluationInvalid`. The bridge turns them into the matching result. Other exceptions still propagate.\n- The simulation stage checks its output, whether it ran or was supplied. The file must hold the requested number of events, otherwise the result is `failed` (\"incomplete simulat\u2026",
-            "diff": {
-                "additions": 678,
-                "deletions": 361,
-                "files": 25
-            },
-            "files": [
-                "docs/ddsim.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/problem.md",
-                "examples/evaluators/calo_hit_multiplicity.py",
-                "examples/problem/cld-ecal-hit-count.yaml",
-                "k4opt/evaluation/__init__.py",
-                "k4opt/evaluation/edm4hep.py",
-                "k4opt/evaluation/errors.py",
-                "k4opt/evaluation/models.py",
-                "k4opt/evaluation/protocol.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/_stages.py",
-                "k4opt/problem/cli.py",
-                "tests/integration/problem/test_evaluate_ddsim.py",
-                "tests/support/evaluators.py",
-                "tests/support/simulation.py",
-                "tests/unit/evaluation/test_contract.py",
-                "tests/unit/evaluation/test_edm4hep.py",
-                "tests/unit/examples/test_calo_hit_multiplicity.py",
-                "tests/unit/problem/conftest.py",
-                "tests/unit/problem/test_config.py",
-                "tests/unit/problem/test_run.py",
-                "tests/unit/problem/test_stages.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 20,
-            "title": "stages: evaluators read stage outputs; generation via particle gun or sample; example evaluator",
-            "url": "https://github.com/key4hep/k4Opt/pull/20",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "## Summary\n\nEvaluators no longer run tools. An evaluator names the last pipeline stage it reads with `requires = \"simulation\"` (optional); the framework runs that stage and the ones it needs once per candidate and passes the file as `request.inputs[stage]`. Several evaluators can share one simulation, and an evaluator can be tested with a fixture file and no Key4hep stack.\n\n- **Stages** (`k4opt/problem/_stages.py`, internal): `generation` then `simulation`. A failed stage becomes a `failed` result with its logs as artifacts and the evaluator is not called. A caller-supplied `inputs[stage]` is authoritative: that stage is not run, and the record identifies the file by path, size and SHA-256.\n- **Generation**: `evaluation.generation` is a particle gun (keys directly under it) or `sample: <pa\u2026",
-            "diff": {
-                "additions": 2399,
-                "deletions": 779,
-                "files": 38
-            },
-            "files": [
-                "README.md",
-                "docs/ddsim.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/problem.md",
-                "examples/evaluators/calo_hit_multiplicity.py",
-                "examples/problem/cld-ecal-granularity.yaml",
-                "examples/problem/cld-ecal-hit-count.yaml",
-                "k4opt/ddsim/__init__.py",
-                "k4opt/ddsim/command.py",
-                "k4opt/ddsim/errors.py",
-                "k4opt/ddsim/run.py",
-                "k4opt/evaluation/__init__.py",
-                "k4opt/evaluation/errors.py",
-                "k4opt/evaluation/loader.py",
-                "k4opt/evaluation/models.py",
-                "k4opt/evaluators/__init__.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/_stages.py",
-                "k4opt/problem/cli.py",
-                "k4opt/problem/config.py",
-                "k4opt/problem/models.py",
-                "tests/integration/problem/test_evaluate_ddsim.py",
-                "tests/support/evaluators.py",
-                "tests/support/simulation.py",
-                "tests/unit/ddsim/test_command.py",
-                "tests/unit/ddsim/test_run.py",
-                "tests/unit/evaluation/test_contract.py",
-                "tests/unit/evaluation/test_loader.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "hep-fcc",
             "repo": "FCC-config",
             "num": 405,
@@ -3867,129 +4066,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 943,
-            "title": "Warn that Spack nightlies are no longer built",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/943",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-28",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 1,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "scripts/cvmfs/setup-nightlies.sh"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4GaudiPandora",
-            "num": 51,
-            "title": "Add theta-energy calibration parameters",
-            "url": "https://github.com/key4hep/k4GaudiPandora/pull/51",
-            "author": "Jullianwatts",
-            "mergedAt": "2026-10-28",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- `DDPandoraPFANewAlgorithm`: add theta-energy (2D) energy corrections, configured with the `ElectromagneticThetaEnergyCorrectionFile` and `HadronicThetaEnergyCorrectionFile` properties. Each property takes the path to a JSON table written by the calibration scripts.\r\n  - The tables are registered with Pandora as the `PhotonEMNonLinearity` and `HadronicThetaEnergyBinned` plugins. If no file is given, the plugin is registered as the identity, so existing configurations are unchanged.\r\n  - The job stops at `initialize()` if a table can't be read, its `metadata.energy_basis` doesn't match the branch, or it fails LCContent's `ThetaEnergyTable::IsValid`.\r\n  - Document the JSON format and the Pandora XML settings in `k4GaudiPandora/README.md`, and add tests for loading a table\u2026",
-            "diff": {
-                "additions": 281,
-                "deletions": 0,
-                "files": 7
-            },
-            "files": [
-                "CMakeLists.txt",
-                "k4GaudiPandora/CMakeLists.txt",
-                "k4GaudiPandora/README.md",
-                "k4GaudiPandora/include/DDPandoraPFANewAlgorithm.h",
-                "k4GaudiPandora/src/DDPandoraPFANewAlgorithm.cpp",
-                "test/CMakeLists.txt",
-                "test/inputs/theta_energy_em.json"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Configuring this with what are essentially 10 lists of numbers that have to be consistent will be a fun exercise in the future. Can we make this a bit harder to mis-configure? I suppose the maps drop out of some tool in a different format? Can we come up with some format that either directly reads t\u2026"
-                },
-                {
-                    "author": "Jullianwatts",
-                    "body": "@tmadlener  -- Sorry for the delay. To address your comment, I could put a calibration folder in Mucoll-benchmarks with the scripts used to make these tables so that others can use/see. Would this solve the problem?"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I think having the scripts to (re-)produce these numbers would be necessary in any case, but is in principle a separate issue from what I was referring to. What I want to minimize is the \"human intervention\" that is needed to get the numbers from that script into a Gaudi configuration file. Ideally,\u2026"
-                },
-                {
-                    "author": "Jullianwatts",
-                    "body": "The scripts output JSON files. Here is an example: [ https://github.com/trholmes/pandora-calibration-tools/blob/codex/photon-em-payload/calib/hadronic_theta_energy_calib_Final.json](https://github.com/trholmes/pandora-calibration-tools/blob/codex/photon-em-payload/calib/hadronic_theta_energy_calib_F\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I think you should be able to just pass the JSON file in as a `Gaudi::Propert<std::string>` (the path to the file) and then use nlohmann json internally to parse that json file and extract all the values from there. From there you can then pass them on to Pandora as you do know. That would turn the \u2026"
-                },
-                {
-                    "author": "Jullianwatts",
-                    "body": "That makes sense, I'll get on it!\r\n\r\nOne thing I wanted to check is right now the scripts write two separate tables, one for the EM branch and one for the hadronic branch, since they're fit independently. So the straightforward version is two properties, one path each.\r\n\r\nTo get to a single property\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I think two paths are fine if the corrections are obtained independently."
-                },
-                {
-                    "author": "Jullianwatts",
-                    "body": "Just pushed these changes! There are two properties now, ElectromagneticThetaEnergyCorrectionFile and HadronicThetaEnergyCorrectionFile. Each one is the location of a JSON file that the calibration scripts write. The file gets read with nlohmann and the numbers go to Pandora the same way they did be\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "Thanks @Jullianwatts for getting this off the ground! Since PandoraPFAOrg/LCContent#41 is merged, a few things can be tightened so k4GaudiPandora doesn't reimplement logic that now lives in LCContent:\r\n-  **Validation duplicates LCContent.** `isStrictlyIncreasing` and `isConsistentThetaEnergyTable` \u2026"
-                },
-                {
-                    "author": "Jullianwatts",
-                    "body": "Thanks @madbaron! I'll switch to IsValid, add the docs, and add a small JSON fixture with a test that loads it. I have one question: LCContent's version number is still the same as the release before #41 was merged, so I can't require the new one yet. Is the LCContent version going to be updated, or\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> Thanks @madbaron! I'll switch to IsValid, add the docs, and add a small JSON fixture with a test that loads it. I have one question: LCContent's version number is still the same as the release before #41 was merged, so I can't require the new one yet. Is the LCContent version going to be updated, \u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "I think it would be good to add a small fixture and tests. \r\nSomething like:\r\n- A tiny fixture `test/inputs/theta_energy_em.json` (2\u00d72 bins, `energy_basis: \"em\"`).\r\n- `run_Pandora_thetaEnergy`: `k4run \u2026/runPandora.py --PandoraPFANewAlgorithm.ElectromagneticThetaEnergyCorrectionFile ${PROJECT_SOURCE_\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> > Thanks @madbaron! I'll switch to IsValid, add the docs, and add a small JSON fixture with a test that loads it. I have one question: LCContent's version number is still the same as the release before #41 was merged, so I can't require the new one yet. Is the LCContent version going to be updated\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> > > Thanks @madbaron! I'll switch to IsValid, add the docs, and add a small JSON fixture with a test that loads it. I have one question: LCContent's version number is still the same as the release before #41 was merged, so I can't require the new one yet. Is the LCContent version going to be updat\u2026"
-                },
-                {
-                    "author": "madbaron",
-                    "body": "I think this is ready to go, thanks!\r\n\r\nI've updated the PR description to be more concise and use the key4hep format. \r\nThe failing CI on alma9's nightly is unrelated and pre-existent."
-                },
-                {
-                    "author": "madbaron",
-                    "body": "Shall we give this a little kick?\r\nI'd aim to merge on Friday if there are no further comments, or if nobody gets to it before me!"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Note that this requires adding nlohmann json as a dependency of k4GaudiPandora"
-                }
-            ],
-            "comments_total": 17,
-            "reviews": [],
-            "reviews_total": 26
-        },
-        {
-            "org": "key4hep",
             "repo": "k4Bench",
             "num": 279,
             "title": "feat(dashboard): read the reco suite's nightly reports on the Reconstruction page",
@@ -4397,43 +4473,6 @@
             "reviews_total": 0
         },
         {
-            "org": "hep-fcc",
-            "repo": "mc-productions-tutorials",
-            "num": 6,
-            "title": "Record productions in FCCDIRAC and align the terminology",
-            "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/6",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-28",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Productions are prepared and submitted from `productions/<campaign>/DRS-<n>/attempt<k>/` in FCCDIRAC, with the Transformation IDs in the commit message; the attempt directory is linked from the DRS request and DaMI. The worked example and the exercise follow this layout.\n\nAlso:\n- \"dataset\" instead of \"sample\"\n- \"trial\" instead of \"pilot\", which has a different meaning in DIRAC\n- DRS field renamed to Transformation IDs (fcc-drs#123)",
-            "diff": {
-                "additions": 101,
-                "deletions": 70,
-                "files": 9
-            },
-            "files": [
-                "DRS/README.md",
-                "DRS/exercise.md",
-                "DRS/workflow-and-responsibilities.md",
-                "DaMI/README.md",
-                "iLCDirac/README.md",
-                "iLCDirac/examples/README.md",
-                "iLCDirac/exercise.md",
-                "iLCDirac/production-config.md",
-                "iLCDirac/troubleshooting.md"
-            ],
-            "comments": [
-                {
-                    "author": "pkontaxa",
-                    "body": "Everything looks good from my side :-)"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "AIDASoft",
             "repo": "DD4hep",
             "num": 1695,
@@ -4549,137 +4588,6 @@
                 }
             ],
             "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 135,
-            "title": "fix MAIA test digitiser configs",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/135",
-            "author": "madbaron",
-            "mergedAt": "2026-10-27",
-            "mergedBy": "madbaron",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Adapted MAIA digitiser configurations (CorrectTimeWindowForPropagation and CorrectTimesForPropagation) in test options to reflect updated algorithms in k4reco\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 4,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "test/options/MAIA_CKFTrackingAlg.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Reco",
-            "num": 75,
-            "title": "fix for detectors with trackers with ID > 20",
-            "url": "https://github.com/key4hep/k4Reco/pull/75",
-            "author": "giovannimarchiori",
-            "mergedAt": "2026-10-27",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- This PR fixes a crash in GaudiTrkUtils for detectors with trackers with detector ID > 20 (assumption that was valid for LCIO for ILC detectors but for instance not for the Si wrapper of ALLEGRO and IDEA)\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 9,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "k4Reco/ConformalTracking/src/GaudiTrkUtils.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Looks good, merging later.\r\nSomething similar is also in the LCFIPlus port, so we should keep that in mind: https://github.com/key4hep/k4Reco/pull/63"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Reco",
-            "num": 74,
-            "title": "Store the time resolution as the hit time error in DDPlanarDigi",
-            "url": "https://github.com/key4hep/k4Reco/pull/74",
-            "author": "jburzy",
-            "mergedAt": "2026-10-27",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "EDM4hep 1.2 adds a per-hit time error to tracker hits (key4hep/EDM4hep#528). This sets timeError to the per-layer time resolution used for the smearing. Without time smearing it stays 0. The call is guarded by `EDM4HEP_BUILD_VERSION`, so k4Reco still builds against older EDM4hep.\n\nBEGINRELEASENOTES\n\nStore the time resolution as the hit time error in DDPlanarDigi\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 6,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "k4Reco/DDPlanarDigi/components/DDPlanarDigi.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Looks good, merging later"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 33,
-            "title": "Add OidcReturnURI manifests for fcc-dami and fcc-dami-test",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/33",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-27",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Backfills these from what's already applied live in both\nnamespaces -- previously only ever created by hand via oc.",
-            "diff": {
-                "additions": 14,
-                "deletions": 0,
-                "files": 2
-            },
-            "files": [
-                "k8s/prod/oidc-return-uri.yaml",
-                "k8s/test/oidc-return-uri.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-physics-events",
-            "num": 32,
-            "title": "Fix stale canEdit in EntityMetadata's v-memo",
-            "url": "https://github.com/HEP-FCC/fcc-physics-events/pull/32",
-            "author": "kjvbrt",
-            "mergedAt": "2026-10-27",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Defensive fix for a reported case of a viewer seeing the Edit\nbutton on prod (backend rejected her save; root cause not\nreproduced) -- the v-memo'd block didn't track canEdit, so a role\nchange could leave stale permission-gated UI on screen.",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "frontend/components/entities/EntityMetadata.vue"
-            ],
-            "comments": [],
-            "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
         }
