@@ -6,7 +6,18 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/676'>[ALLEGRO] - reduce the memory usage and initialisation time of the turbine ECAL endcap</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-11-02",
-            "updatedAt": "2026-11-03",
+            "updatedAt": "2026-11-04",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 599,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/599'>FCChh TrackerOnly layout</a>",
+            "author": "tsulaiav",
+            "createdAt": "2026-05-22",
+            "updatedAt": "2026-11-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -29,17 +40,6 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-10-14",
             "updatedAt": "2026-11-02",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 599,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/599'>FCChh TrackerOnly layout</a>",
-            "author": "tsulaiav",
-            "createdAt": "2026-05-22",
-            "updatedAt": "2026-10-07",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -189,23 +189,12 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 450,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/450'>Make install-directory ordering explicit (no behavior change)</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-03",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
             "num": 449,
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/449'>Enum properties native</a>",
             "author": "tmadlener",
             "createdAt": "2026-10-30",
             "updatedAt": "2026-11-02",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -216,7 +205,7 @@
             "author": "tmadlener",
             "createdAt": "2026-10-29",
             "updatedAt": "2026-10-30",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -227,7 +216,7 @@
             "author": "madbaron",
             "createdAt": "2026-10-28",
             "updatedAt": "2026-10-30",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -238,7 +227,7 @@
             "author": "s6anloes",
             "createdAt": "2026-10-14",
             "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -249,7 +238,7 @@
             "author": "s6anloes",
             "createdAt": "2026-10-15",
             "updatedAt": "2026-10-15",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -260,7 +249,7 @@
             "author": "ianna",
             "createdAt": "2026-01-16",
             "updatedAt": "2026-10-12",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -299,22 +288,22 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 911,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-16",
-            "updatedAt": "2026-11-03",
+            "num": 944,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/944'>Update k4gaudipandora and related recipes</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-11-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 944,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/944'>Update k4gaudipandora and related recipes</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-30",
-            "updatedAt": "2026-11-01",
+            "num": 911,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-16",
+            "updatedAt": "2026-11-03",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -398,17 +387,6 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
-            "num": 68,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/68'>Make install-directory ordering explicit (no behavior change)</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-03",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Gen",
             "num": 67,
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/67'>Review and fix units</a>",
             "author": "jmcarcell",
@@ -436,7 +414,7 @@
             "author": "kjvbrt",
             "createdAt": "2024-04-04",
             "updatedAt": "2025-03-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -519,23 +497,12 @@
         },
         {
             "repo": "key4hep/<br>k4SimGeant4",
-            "num": 99,
-            "title": "<a href='https://github.com/key4hep/k4SimGeant4/pull/99'>Make install-directory ordering explicit (no behavior change)</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-03",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4SimGeant4",
             "num": 94,
             "title": "<a href='https://github.com/key4hep/k4SimGeant4/pull/94'>Layer-theta sampling fraction integration for e/gamma </a>",
             "author": "Dr-Stubborn",
             "createdAt": "2026-07-07",
             "updatedAt": "2026-07-07",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -567,18 +534,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking</a>",
             "author": "mlarson02",
             "createdAt": "2026-09-29",
-            "updatedAt": "2026-11-03",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 138,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/138'>Make install-directory ordering explicit (no behavior change)</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-03",
+            "updatedAt": "2026-11-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -590,7 +546,7 @@
             "author": "mlarson02",
             "createdAt": "2026-10-26",
             "updatedAt": "2026-10-31",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -612,7 +568,7 @@
             "author": "mlarson02",
             "createdAt": "2026-10-17",
             "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -739,11 +695,11 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 122,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/122'>Make install-directory ordering explicit (no behavior change)</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-03",
+            "num": 119,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
+            "author": "andread3vita",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-11-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -755,7 +711,7 @@
             "author": "qwert2333",
             "createdAt": "2026-11-03",
             "updatedAt": "2026-11-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -766,7 +722,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-06-04",
             "updatedAt": "2026-11-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": "ueinhaus"
         },
@@ -777,29 +733,7 @@
             "author": "Debottam",
             "createdAt": "2026-10-21",
             "updatedAt": "2026-10-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 119,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
-            "author": "andread3vita",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 120,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/120'>[TrackFitter]: Drop chi2=-1 placeholder tracks on fit failure</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -810,7 +744,7 @@
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
             "updatedAt": "2026-10-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -992,17 +926,6 @@
         },
         {
             "repo": "key4hep/<br>k4Reco",
-            "num": 77,
-            "title": "<a href='https://github.com/key4hep/k4Reco/pull/77'>Make install-directory ordering explicit (no behavior change)</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-03",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Reco",
             "num": 63,
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/63'>Port LCFIPlus and LCFIVertx to EDM4hep</a>",
             "author": "jmcarcell",
@@ -1102,23 +1025,12 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 64,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/64'>Make install-directory ordering explicit (no behavior change)</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-03",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GaudiPandora",
             "num": 62,
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/62'>Make CI reproducible & allow tolerance for compiler-dependent ULP differences</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-10-27",
             "updatedAt": "2026-10-28",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1129,7 +1041,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-10-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1156,23 +1068,12 @@
             "assignees": ""
         },
         {
-            "repo": "key4hep/<br>k4MLJetTagger",
-            "num": 16,
-            "title": "<a href='https://github.com/key4hep/k4MLJetTagger/pull/16'>Make install-directory ordering explicit (no behavior change)</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-03",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "key4hep/<br>k4PFHitML",
             "num": 10,
             "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/10'>Separate linker</a>",
             "author": "dudarboh",
             "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-03",
+            "updatedAt": "2026-11-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1938,6 +1839,17 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-drs",
+            "num": 134,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/134'>Point requesters to the reference detector configurations</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-04",
+            "updatedAt": "2026-11-04",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
             "num": 132,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/132'>Update dependency marked to v18.1.3</a>",
             "author": "renovate",
@@ -2020,7 +1932,7 @@
             "author": "Zehvogel",
             "createdAt": "2026-10-31",
             "updatedAt": "2026-10-31",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2052,7 +1964,7 @@
             "title": "<a href='https://github.com/HEP-FCC/mc-productions-tutorials/pull/7'>Make the tutorials self-paced</a>",
             "author": "kjvbrt",
             "createdAt": "2026-10-30",
-            "updatedAt": "2026-10-30",
+            "updatedAt": "2026-11-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
