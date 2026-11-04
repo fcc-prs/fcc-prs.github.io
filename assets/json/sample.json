@@ -380,7 +380,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/165'>allow compression level of edm4hep root output to be configured (and make it zstd-5 by default)</a>",
             "author": "davidlange6",
             "createdAt": "2026-10-22",
-            "updatedAt": "2026-10-28",
+            "updatedAt": "2026-11-03",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -563,6 +563,17 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 108,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking</a>",
+            "author": "mlarson02",
+            "createdAt": "2026-09-29",
+            "updatedAt": "2026-11-03",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 138,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/138'>Make install-directory ordering explicit (no behavior change)</a>",
             "author": "jmcarcell",
@@ -578,17 +589,6 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/134'>Enable 4D Tracking for Beta < 1 Particles</a>",
             "author": "mlarson02",
             "createdAt": "2026-10-26",
-            "updatedAt": "2026-10-31",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 108,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking</a>",
-            "author": "mlarson02",
-            "createdAt": "2026-09-29",
             "updatedAt": "2026-10-31",
             "mergeOk": "yes",
             "labels": "",
@@ -1514,7 +1514,7 @@
             "author": "bndikt",
             "createdAt": "2026-11-02",
             "updatedAt": "2026-11-02",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1525,7 +1525,7 @@
             "author": "kjvbrt",
             "createdAt": "2023-06-29",
             "updatedAt": "2026-10-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1580,7 +1580,7 @@
             "author": "Zehvogel",
             "createdAt": "2026-10-15",
             "updatedAt": "2026-10-15",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1624,7 +1624,7 @@
             "author": "amishgog",
             "createdAt": "2026-10-13",
             "updatedAt": "2026-10-13",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1635,7 +1635,7 @@
             "author": "captainvogon",
             "createdAt": "2026-06-25",
             "updatedAt": "2026-09-26",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1646,7 +1646,7 @@
             "author": "goblirsc",
             "createdAt": "2026-02-16",
             "updatedAt": "2026-09-21",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1657,7 +1657,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1668,7 +1668,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1679,7 +1679,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1690,7 +1690,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1701,7 +1701,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1712,7 +1712,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1723,7 +1723,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-16",
             "updatedAt": "2026-07-30",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1734,7 +1734,7 @@
             "author": "forthommel",
             "createdAt": "2026-05-10",
             "updatedAt": "2026-05-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1756,7 +1756,7 @@
             "author": "thisismeamir",
             "createdAt": "2025-12-10",
             "updatedAt": "2026-02-17",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
