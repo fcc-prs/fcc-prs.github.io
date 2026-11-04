@@ -112,23 +112,23 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
+            "num": 536,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/536'>Add TrackAtVertex and relate it to Vertex</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-11-04",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
             "num": 540,
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/540'>Add a Helix class to the utils</a>",
             "author": "jmcarcell",
             "createdAt": "2026-10-30",
             "updatedAt": "2026-11-02",
             "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
-            "num": 536,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/536'>Add TrackAtVertex and relate it to Vertex</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-10-23",
-            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -194,7 +194,7 @@
             "author": "tmadlener",
             "createdAt": "2026-10-30",
             "updatedAt": "2026-11-02",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -205,7 +205,7 @@
             "author": "tmadlener",
             "createdAt": "2026-10-29",
             "updatedAt": "2026-10-30",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -216,7 +216,7 @@
             "author": "madbaron",
             "createdAt": "2026-10-28",
             "updatedAt": "2026-10-30",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -227,7 +227,7 @@
             "author": "s6anloes",
             "createdAt": "2026-10-14",
             "updatedAt": "2026-10-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -238,7 +238,7 @@
             "author": "s6anloes",
             "createdAt": "2026-10-15",
             "updatedAt": "2026-10-15",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -249,7 +249,7 @@
             "author": "ianna",
             "createdAt": "2026-01-16",
             "updatedAt": "2026-10-12",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -414,7 +414,7 @@
             "author": "kjvbrt",
             "createdAt": "2024-04-04",
             "updatedAt": "2025-03-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -502,7 +502,7 @@
             "author": "Dr-Stubborn",
             "createdAt": "2026-07-07",
             "updatedAt": "2026-07-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -541,22 +541,33 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 134,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/134'>Enable 4D Tracking for Beta < 1 Particles</a>",
-            "author": "mlarson02",
-            "createdAt": "2026-10-26",
-            "updatedAt": "2026-10-31",
-            "mergeOk": "no",
+            "num": 129,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/129'>Add MaterialRecordingAlg: material scan without Geant4</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-12",
+            "updatedAt": "2026-11-04",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 129,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/129'>Add MaterialRecordingAlg: material scan without Geant4</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-12",
-            "updatedAt": "2026-10-29",
+            "num": 139,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/139'>Allow blueprint construction for MAIA_v1</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-04",
+            "updatedAt": "2026-11-04",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 134,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/134'>Enable 4D Tracking for Beta < 1 Particles</a>",
+            "author": "mlarson02",
+            "createdAt": "2026-10-26",
+            "updatedAt": "2026-10-31",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -568,7 +579,7 @@
             "author": "mlarson02",
             "createdAt": "2026-10-17",
             "updatedAt": "2026-10-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -695,6 +706,28 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 121,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/121'>TracksFromGenParticles: support truth tracks without SimTrackerHit input</a>",
+            "author": "qwert2333",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-04",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 118,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
+            "author": "Debottam",
+            "createdAt": "2026-10-21",
+            "updatedAt": "2026-11-04",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 119,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
             "author": "andread3vita",
@@ -706,36 +739,14 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 121,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/121'>TracksFromGenParticles: support truth tracks without SimTrackerHit input</a>",
-            "author": "qwert2333",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-03",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
             "num": 84,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/84'>Add MuRWELLDigitizer: cluster-based digitizer for IDEA muon system</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-06-04",
             "updatedAt": "2026-11-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": "ueinhaus"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 118,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
-            "author": "Debottam",
-            "createdAt": "2026-10-21",
-            "updatedAt": "2026-10-30",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -744,7 +755,7 @@
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
             "updatedAt": "2026-10-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1029,8 +1040,8 @@
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/62'>Make CI reproducible & allow tolerance for compiler-dependent ULP differences</a>",
             "author": "SanghyunKo",
             "createdAt": "2026-10-27",
-            "updatedAt": "2026-10-28",
-            "mergeOk": "no",
+            "updatedAt": "2026-11-04",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1041,7 +1052,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-10-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1135,6 +1146,17 @@
         },
         {
             "repo": "key4hep/<br>k4DetectorPerformance",
+            "num": 7,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/7'>Intial commit of the dQdxAnalyser</a>",
+            "author": "ueinhaus",
+            "createdAt": "2026-07-15",
+            "updatedAt": "2026-11-04",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "s6anloes"
+        },
+        {
+            "repo": "key4hep/<br>k4DetectorPerformance",
             "num": 10,
             "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/10'>TrackingValidation: fix truth parameters and matching, align with ACTS</a>",
             "author": "jbeirer",
@@ -1143,17 +1165,6 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4DetectorPerformance",
-            "num": 7,
-            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/7'>Intial commit of the dQdxAnalyser</a>",
-            "author": "ueinhaus",
-            "createdAt": "2026-07-15",
-            "updatedAt": "2026-10-22",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "s6anloes"
         },
         {
             "repo": "key4hep/<br>k4DetectorPerformance",
@@ -1399,22 +1410,22 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 538,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
+            "num": 576,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/576'>Fix event counting for RNTuple inputs</a>",
             "author": "bndikt",
-            "createdAt": "2026-08-11",
-            "updatedAt": "2026-11-03",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 576,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/576'>Fix event counting for RNTuple inputs</a>",
+            "num": 538,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
-            "createdAt": "2026-11-02",
-            "updatedAt": "2026-11-02",
+            "createdAt": "2026-08-11",
+            "updatedAt": "2026-11-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1932,7 +1943,7 @@
             "author": "Zehvogel",
             "createdAt": "2026-10-31",
             "updatedAt": "2026-10-31",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2096,7 +2107,7 @@
             "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/43'>Add BIB hit flagging in CaloHitPrep, options to exclude from clustering steps, recovery algorithm to re-associate </a>",
             "author": "trholmes",
             "createdAt": "2026-09-03",
-            "updatedAt": "2026-10-29",
+            "updatedAt": "2026-11-04",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
