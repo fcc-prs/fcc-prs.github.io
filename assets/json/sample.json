@@ -189,22 +189,22 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 449,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/449'>Enum properties native</a>",
+            "num": 448,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/448'>Make it possible to have enums in Gaudi Properties</a>",
             "author": "tmadlener",
-            "createdAt": "2026-10-30",
-            "updatedAt": "2026-11-02",
+            "createdAt": "2026-10-29",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 448,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/448'>[WIP] Gaudi native choice property</a>",
+            "num": 449,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/449'>Enum properties native</a>",
             "author": "tmadlener",
-            "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-30",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-11-02",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -288,23 +288,12 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 944,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/944'>Update k4gaudipandora and related recipes</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-30",
-            "updatedAt": "2026-11-04",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
             "num": 911,
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
             "updatedAt": "2026-11-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -315,7 +304,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -326,7 +315,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-07",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -337,7 +326,7 @@
             "author": "tmadlener",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -348,7 +337,7 @@
             "author": "Panzerkampfwagen-del",
             "createdAt": "2026-08-26",
             "updatedAt": "2026-09-02",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -359,7 +348,7 @@
             "author": "dudarboh",
             "createdAt": "2026-01-13",
             "updatedAt": "2026-01-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -530,11 +519,11 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 139,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/139'>Allow blueprint construction for MAIA_v1</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-11-04",
-            "updatedAt": "2026-11-04",
+            "num": 129,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/129'>Add MaterialRecordingAlg: material scan without Geant4</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-12",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -546,18 +535,7 @@
             "author": "mlarson02",
             "createdAt": "2026-09-29",
             "updatedAt": "2026-11-04",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 129,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/129'>Add MaterialRecordingAlg: material scan without Geant4</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-12",
-            "updatedAt": "2026-11-04",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -568,7 +546,7 @@
             "author": "mlarson02",
             "createdAt": "2026-10-26",
             "updatedAt": "2026-10-31",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -579,7 +557,7 @@
             "author": "mlarson02",
             "createdAt": "2026-10-17",
             "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -710,7 +688,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/121'>TracksFromGenParticles: support truth tracks without SimTrackerHit input</a>",
             "author": "qwert2333",
             "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-04",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
@@ -721,7 +699,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
             "author": "Debottam",
             "createdAt": "2026-10-21",
-            "updatedAt": "2026-11-04",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
@@ -1036,22 +1014,22 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 62,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/62'>Make CI reproducible & allow tolerance for compiler-dependent ULP differences</a>",
+            "num": 52,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/52'>Pandora interface for the IDEA detector</a>",
             "author": "SanghyunKo",
-            "createdAt": "2026-10-27",
-            "updatedAt": "2026-11-04",
+            "createdAt": "2026-08-24",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 52,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/52'>Pandora interface for the IDEA detector</a>",
+            "num": 62,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/62'>Make CI reproducible & allow tolerance for compiler-dependent ULP differences</a>",
             "author": "SanghyunKo",
-            "createdAt": "2026-08-24",
-            "updatedAt": "2026-10-27",
+            "createdAt": "2026-10-27",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1150,7 +1128,7 @@
             "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/7'>Intial commit of the dQdxAnalyser</a>",
             "author": "ueinhaus",
             "createdAt": "2026-07-15",
-            "updatedAt": "2026-11-04",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "s6anloes"
@@ -1202,10 +1180,10 @@
         {
             "repo": "key4hep/<br>k4Opt",
             "num": 83,
-            "title": "<a href='https://github.com/key4hep/k4Opt/pull/83'>Provenance fixes, stage signatures and reuse, and a nested optimization example</a>",
+            "title": "<a href='https://github.com/key4hep/k4Opt/pull/83'>Provenance fixes, stage signatures and reuse</a>",
             "author": "jbeirer",
             "createdAt": "2026-11-04",
-            "updatedAt": "2026-11-04",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
