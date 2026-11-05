@@ -116,8 +116,30 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/536'>Add TrackAtVertex and relate it to Vertex</a>",
             "author": "jbeirer",
             "createdAt": "2026-10-23",
-            "updatedAt": "2026-11-04",
-            "mergeOk": "no",
+            "updatedAt": "2026-11-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 545,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/545'>Add a helper function to get the momentum at a TrackState</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-05",
+            "updatedAt": "2026-11-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 542,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/542'>Make the vector utils available in python</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-05",
+            "updatedAt": "2026-11-05",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -127,7 +149,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/540'>Add a Helix class to the utils</a>",
             "author": "jmcarcell",
             "createdAt": "2026-10-30",
-            "updatedAt": "2026-11-02",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -139,7 +161,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -150,7 +172,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -193,6 +215,17 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/448'>Make it possible to have enums in Gaudi Properties</a>",
             "author": "tmadlener",
             "createdAt": "2026-10-29",
+            "updatedAt": "2026-11-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 451,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/451'>Introduce verifiers for Properties to only allow certain values</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-05",
             "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
@@ -304,7 +337,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -315,7 +348,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -326,7 +359,7 @@
             "author": "tmadlener",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -337,7 +370,7 @@
             "author": "Panzerkampfwagen-del",
             "createdAt": "2026-08-26",
             "updatedAt": "2026-09-02",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -348,7 +381,18 @@
             "author": "dudarboh",
             "createdAt": "2026-01-13",
             "updatedAt": "2026-01-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 167,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/167'>Store generator random seed in output file metadata</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-05",
+            "updatedAt": "2026-11-05",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -371,6 +415,17 @@
             "createdAt": "2021-03-15",
             "updatedAt": "2026-09-20",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 69,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/69'>Record generator random seed in output metadata</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-05",
+            "updatedAt": "2026-11-05",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -530,17 +585,6 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 108,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/108'>Add two-way CKF tracking</a>",
-            "author": "mlarson02",
-            "createdAt": "2026-09-29",
-            "updatedAt": "2026-11-04",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
             "num": 134,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/134'>Enable 4D Tracking for Beta < 1 Particles</a>",
             "author": "mlarson02",
@@ -640,6 +684,17 @@
         },
         {
             "repo": "key4hep/<br>key4hep-actions",
+            "num": 62,
+            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/62'>Upload CLD reconstruction file alongside histograms</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-05",
+            "updatedAt": "2026-11-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-actions",
             "num": 56,
             "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/56'>Use the LCG nightlies for the downstream builds</a>",
             "author": "jmcarcell",
@@ -678,6 +733,28 @@
             "author": "jmcarcell",
             "createdAt": "2025-03-24",
             "updatedAt": "2026-07-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 123,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/123'>Adding CombinatorialTrackFinder(CTF): A detector-agnostic track finder based on combinatorial search or seed and extend stratigies</a>",
+            "author": "mahmoudali2",
+            "createdAt": "2026-11-05",
+            "updatedAt": "2026-11-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 81,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
+            "author": "JonaDilg",
+            "createdAt": "2026-05-07",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -725,17 +802,6 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": "ueinhaus"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 81,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/81'>A modular silicon (vertex) digitizer, acting on pixel-level</a>",
-            "author": "JonaDilg",
-            "createdAt": "2026-05-07",
-            "updatedAt": "2026-10-27",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -1019,18 +1085,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-11-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GaudiPandora",
-            "num": 62,
-            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/62'>Make CI reproducible & allow tolerance for compiler-dependent ULP differences</a>",
-            "author": "SanghyunKo",
-            "createdAt": "2026-10-27",
-            "updatedAt": "2026-11-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1124,6 +1179,17 @@
         },
         {
             "repo": "key4hep/<br>k4DetectorPerformance",
+            "num": 10,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/10'>TrackingValidation: fix truth parameters and matching, align with ACTS</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-09-30",
+            "updatedAt": "2026-11-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4DetectorPerformance",
             "num": 7,
             "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/7'>Intial commit of the dQdxAnalyser</a>",
             "author": "ueinhaus",
@@ -1132,17 +1198,6 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": "s6anloes"
-        },
-        {
-            "repo": "key4hep/<br>k4DetectorPerformance",
-            "num": 10,
-            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/10'>TrackingValidation: fix truth parameters and matching, align with ACTS</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-09-30",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4DetectorPerformance",
@@ -1176,17 +1231,6 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
-        },
-        {
-            "repo": "key4hep/<br>k4Opt",
-            "num": 83,
-            "title": "<a href='https://github.com/key4hep/k4Opt/pull/83'>Provenance fixes, stage signatures and reuse</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-04",
-            "updatedAt": "2026-11-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1399,21 +1443,21 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 576,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/576'>Fix event counting for RNTuple inputs</a>",
+            "num": 538,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
-            "createdAt": "2026-11-02",
-            "updatedAt": "2026-11-04",
+            "createdAt": "2026-08-11",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 538,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
+            "num": 576,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/576'>Fix event counting for RNTuple inputs</a>",
             "author": "bndikt",
-            "createdAt": "2026-08-11",
+            "createdAt": "2026-11-02",
             "updatedAt": "2026-11-04",
             "mergeOk": "yes",
             "labels": "",
@@ -1806,33 +1850,11 @@
         },
         {
             "repo": "hep-fcc/<br>ALLEGRO",
-            "num": 65,
-            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/65'>add script to generate displaced photons. Allow execution of ddsim MT</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-11-02",
-            "updatedAt": "2026-11-02",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>ALLEGRO",
             "num": 63,
             "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/63'>Import TRAPPIST docs</a>",
             "author": "jacofan",
             "createdAt": "2026-10-16",
-            "updatedAt": "2026-11-02",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>ALLEGRO",
-            "num": 64,
-            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/64'>Add first version of common plotting style</a>",
-            "author": "jacofan",
-            "createdAt": "2026-10-16",
-            "updatedAt": "2026-10-20",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1987,7 +2009,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2009,7 +2031,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2020,7 +2042,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2031,7 +2053,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2053,7 +2075,7 @@
             "author": "wdconinc",
             "createdAt": "2026-10-20",
             "updatedAt": "2026-10-31",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2070,11 +2092,11 @@
         },
         {
             "repo": "AIDASoft/<br>DD4hep",
-            "num": 1712,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1712'>Thread safety fixes</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-11-02",
-            "updatedAt": "2026-11-02",
+            "num": 1713,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1713'>Make DetElement path and placementPath cimputation thread-safe</a>",
+            "author": "MarkusFrankATcernch",
+            "createdAt": "2026-11-05",
+            "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
