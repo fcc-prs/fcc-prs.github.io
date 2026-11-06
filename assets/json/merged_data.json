@@ -1,6 +1,379 @@
 {
-    "updated_at": "2026-11-05T13:52:11Z",
+    "updated_at": "2026-11-06T13:36:12Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4RecCalorimeter",
+            "num": 295,
+            "title": "Performance (CPU/memory) improvements for cell noise tools.",
+            "url": "https://github.com/key4hep/k4RecCalorimeter/pull/295",
+            "author": "scott-snyder",
+            "mergedAt": "2026-11-06",
+            "mergedBy": "scott-snyder",
+            "labels": [],
+            "body": "Factor out duplicate code between ReadNoiseFromFileTool and\nNoiseCaloCellsFromFileBaseTool (and derived classes) into a new base class\nReadNoiseFromFileBaseTool.\n\nPrecompute and cache the cell ID -> bin calculation rather then possibly\nhaving to look at cell positions each time.  Avoid unneeded per-cell\nvirtual function calls.\n\nRestructure so that the noise data are CaloCellConstantsSvc.  Use unique_ptr\nto avoid explicit deletions.\n\nAlso fix some build/test issues involving RecCaloCommon.  \nThe Gaudi plugin libraries load the common RecCaloCommon library.\nDepending on the platform, however, when we ran genconf on the plugin\nlibraries, we could find the version from the release rather than the\none we just built.  If there were interface changes, that could result\nin genconf failing.  Adjust\u2026",
+            "diff": {
+                "additions": 563,
+                "deletions": 591,
+                "files": 13
+            },
+            "files": [
+                "RecCaloCommon/CMakeLists.txt",
+                "RecCaloCommon/include/RecCaloCommon/ReadNoiseFromFileBaseTool.h",
+                "RecCaloCommon/src/ReadNoiseFromFileBaseTool.cpp",
+                "RecCalorimeter/src/components/ReadNoiseFromFileTool.cpp",
+                "RecCalorimeter/src/components/ReadNoiseFromFileTool.h",
+                "RecFCCeeCalorimeter/src/components/NoiseCaloCellsFromFileBarrelTool.cpp",
+                "RecFCCeeCalorimeter/src/components/NoiseCaloCellsFromFileBarrelTool.h",
+                "RecFCCeeCalorimeter/src/components/NoiseCaloCellsFromFileBaseTool.cpp",
+                "RecFCCeeCalorimeter/src/components/NoiseCaloCellsFromFileBaseTool.h",
+                "RecFCCeeCalorimeter/src/components/NoiseCaloCellsFromFileTurbineEndcapTool.cpp",
+                "RecFCCeeCalorimeter/src/components/NoiseCaloCellsFromFileTurbineEndcapTool.h",
+                "RecFCCeeCalorimeter/tests/options/test_noise.py",
+                "RecFCChhCalorimeter/tests/options/noiseLevelPerCell.py"
+            ],
+            "comments": [
+                {
+                    "author": "scott-snyder",
+                    "body": "Verified that results are identical for ALLEGRO."
+                },
+                {
+                    "author": "scott-snyder",
+                    "body": "Submitted the cmake fixes separately (#296), to avoid having it squashed with the clustering changes.   That one should be merged first."
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Thanks Scott! I was waiting for you to implement those tiny changes, thanks for having done them and merged the PR ;)"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [
+                {
+                    "author": "giovannimarchiori",
+                    "state": "COMMENTED",
+                    "body": "Hi @scott-snyder ,\nthanks a lot! This further removes overlaps among noise tools, after the consolidation done in the past for the code inside RecFCCeeCalorimeter, which is very good.\nI left some comments for you to have a look."
+                }
+            ],
+            "reviews_total": 16
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecCalorimeter",
+            "num": 296,
+            "title": "Fix failures seen running genconf.",
+            "url": "https://github.com/key4hep/k4RecCalorimeter/pull/296",
+            "author": "scott-snyder",
+            "mergedAt": "2026-11-06",
+            "mergedBy": "scott-snyder",
+            "labels": [],
+            "body": "The Gaudi plugin libraries load the common RecCaloCommon library. Depending on the platform, however, when we ran genconf on the plugin libraries, we could find the version from the release rather than the one we just built.  If there were interface changes, that could result in genconf failing.  Adjust the runtime LD_LIBRARY_PATH so that we search the target directory for ReCCaloCommon first.\n\nSimilarly for the test environment.\n\n\nBEGINRELEASENOTES\n- Fix some build/test issues involving the RecCaloCommon library.\nENDRELEASENOTES",
+            "diff": {
+                "additions": 5,
+                "deletions": 2,
+                "files": 2
+            },
+            "files": [
+                "CMakeLists.txt",
+                "RecCaloCommon/CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 129,
+            "title": "Add MaterialRecordingAlg: material scan without Geant4",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/129",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-06",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Add `MaterialRecordingAlg`, which records the material for the material mapping by walking straight (geantino) rays with the TGeo navigator through the DD4hep geometry. The scan runs as a `k4run` job from the compact file (`test/options/material_recording.py`) and needs no GDML export, Geant4 or ACTS Python bindings. Scans can be split across jobs with `--seed`; `--replayFiles` replays the directions of an existing scan.\r\n- Stop the rays at the ECAL inner face, taken from the calorimeter-face surfaces of `ActsGeoSvc` (`MaterialScanRegion.h`), and clip the input of `MaterialMappingAlg` to the same region, so that material behind the calorimeter face no longer ends up on the outermost receivers. New `MaxR`/`MaxZ` properties override the region.\r\n- Add a record -> map -> \u2026",
+            "diff": {
+                "additions": 1119,
+                "deletions": 698,
+                "files": 15
+            },
+            "files": [
+                "README.md",
+                "doc/material_mapping.md",
+                "k4ActsTracking/CMakeLists.txt",
+                "k4ActsTracking/examples/compare_material_tracks.py",
+                "k4ActsTracking/examples/material_recording_chunk.py",
+                "k4ActsTracking/options/material_mapping.py",
+                "k4ActsTracking/options/material_recording.py",
+                "k4ActsTracking/options/material_validation.py",
+                "k4ActsTracking/python/k4ActsTracking/material_helpers.py",
+                "k4ActsTracking/src/components/MaterialMappingAlg.cpp",
+                "k4ActsTracking/src/components/MaterialRecordingAlg.cpp",
+                "k4ActsTracking/src/components/MaterialScanRegion.h",
+                "k4ActsTracking/src/components/MaterialValidationAlg.cpp",
+                "test/CMakeLists.txt",
+                "test/options/_ckf_helpers.py"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Without having looked at anything at all, just going at one specific point of the text:\r\n\r\n> Rays stop at the ECAL inner face (MaterialScanRegion.h, from the calorimeter-face surfaces of ActsGeoSvc); MaxR/MaxZ override it.\r\n\r\nIs this enough? I seem to remember some double extrapolation in the Barrel\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Pretty cool stuff!!\r\n\r\nYes, it would be good to save the material also a little further in the ECAL for the double extrapolation that @tmadlener is referring to, which is needed by the Pandora cluster matching algorithms.\r\nSomething configurable would be perfect"
+                },
+                {
+                    "author": "paulgessinger",
+                    "body": "I also have a pr almost ready that makes Acts build a reusable plugin for ddsim that produces a geantino file. With that it becomes a pure ddsim steering file which I think is nice"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> I also have a pr almost ready that makes Acts build a reusable plugin for ddsim that produces a geantino file. With that it becomes a pure ddsim steering file which I think is nice\r\n\r\nAs discussed in the key4hep meeting it might make sense to have both solutions as possible cross check. @s6anloes \u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> Pretty cool stuff!!\r\n> \r\n> Yes, it would be good to save the material also a little further in the ECAL for the double extrapolation that @tmadlener is referring to, which is needed by the Pandora cluster matching algorithms. Something configurable would be perfect\r\n\r\nThe recording can already go \u2026"
+                },
+                {
+                    "author": "paulgessinger",
+                    "body": "Here's my attempt https://github.com/acts-project/acts/pull/6304"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> Actually using that material for the second extrapolation needs two more things, though: there are no material surfaces behind the ECAL face yet to put it on, and the extrapolation to the calorimeter ([`extrapolateToCaloFace`](https://github.com/key4hep/k4ActsTracking/blob/26a5df36058677f557b77bde\u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "@tmadlener I fixed the conflicts, so maybe this can be merged as well. After this is in, I can look on how to pull the ACTS Geant4 plugin into the code, such that maybe we can have a test comparing the two material scan approaches."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I would like to give this a quick go locally, but I think by and large this looks good as it is."
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "Thanks for testing @tmadlener! I addressed all points in this PR:\r\n\r\n- `doc/material_mapping.md` is rewritten as a user guide. It starts with the full command sequence, describes each step once and links the ACTS how-to for the concepts. Most of the history is gone.\r\n- The GDML/Geant4 route is repla\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Thanks a lot. Could you cross-check that I didn't mess up the merge conflict resolution with #108?\r\n\r\nI will merge this tomorrow, unless there are still people around with comments (last call)."
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> Thanks a lot. Could you cross-check that I didn't mess up the merge conflict resolution with #108?\r\n> \r\n> I will merge this tomorrow, unless there are still people around with comments (last call).\r\n\r\nlgtm"
+                }
+            ],
+            "comments_total": 12,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "I have finally managed to run this locally and everything works as expected. There are a few things in the docs, partially pre-existing, that I think we should revisit. We can do that either still in this PR while we are at it, or in dedicated follow up.\n\nThe other point is that the documentation cu\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Thanks a lot. I have a few more smaller things"
+                }
+            ],
+            "reviews_total": 12
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 289,
+            "title": "feat(ci): run the nightly on the k4bench VM runners",
+            "url": "https://github.com/key4hep/k4Bench/pull/289",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-06",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\n### **User description**\nMoves every self-hosted job from the `fcc-ironic` hosts to the three OpenStack VMs `k4bench-01/02/03` (c4.2xlarge: 16 vCPUs, 114 GB, AlmaLinux 10, AMD EPYC Genoa). The cloud team does not pin these VMs' CPUs on the hypervisor (RQF3948285).\n\n## Runners (already registered and online)\nEach VM has:\n- **7 `bench` runners**, two vCPUs each (2-3 \u2026 14-15), one benchmark job at a time.\n- **1 `service` runner** on vCPUs 0-1, which it shares with the OS and interrupts. It takes `resolve-release`, the regression reports, the dashboard deploy and the AI PR review.\n\nThat gives 21 benchmark slots instead of 12. The jobs are single-threaded (CPU time is 99% of wall time on every sim and reco run), so 7\u20138 busy threads per VM is about our share of physic\u2026",
+            "diff": {
+                "additions": 591,
+                "deletions": 47,
+                "files": 28
+            },
+            "files": [
+                ".github/actionlint.yaml",
+                ".github/ai-review-instructions.md",
+                ".github/scripts/ai_pr_review.sh",
+                ".github/scripts/list_benchmarks.py",
+                ".github/scripts/machine_info.py",
+                ".github/workflows/ai-pr-review.yml",
+                ".github/workflows/benchmark-detector.yml",
+                ".github/workflows/deploy-dashboard.yml",
+                ".github/workflows/nightly.yml",
+                ".github/workflows/regression-report.yml",
+                "dashboard/tabs/reports/regressions.py",
+                "docs/examples/advanced-workflows.md",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/analysis/trend.py",
+                "k4bench/regression/email.py",
+                "k4bench/regression/engine.py",
+                "k4bench/regression/history.py",
+                "k4bench/regression/models.py",
+                "k4bench/regression/report_builder.py",
+                "k4bench/results/reliability.py",
+                "k4bench/results/reliability_evidence.py",
+                "tests/unit/test_list_benchmarks.py",
+                "tests/unit/test_machine_info_collector.py",
+                "tests/unit/test_regression_engine.py",
+                "tests/unit/test_regression_history.py",
+                "tests/unit/test_regression_report.py",
+                "tests/unit/test_reliability.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\n#### (Review updated until commit https://github.com/key4hep/k4Bench/commit/9fa0ba129ae45228c9040a00f45c14fa3a39b681)\n\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 8da1f48 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/289?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "**[Persistent review](https://github.com/key4hep/k4Bench/pull/289#issuecomment-6683559668)** updated to latest commit https://github.com/key4hep/k4Bench/commit/9fa0ba129ae45228c9040a00f45c14fa3a39b681"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1702,
+            "title": "fix(Geant4ParticleHandler): avoid duplicate track-equivalents map at end of event",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1702",
+            "author": "wdconinc",
+            "mergedAt": "2026-11-06",
+            "mergedBy": "MarkusFrankATcernch",
+            "labels": [],
+            "body": "This PR addresses a memory inefficiency observed in EIC for certain heavy-ion events. While the events are legitimately large (20M secondaries), the impact is amplified by copies that double the memory use. This PR avoids the copies in two places.\n\n`Geant4ParticleHandler` keeps one `TrackEquivalents` entry per Geant4 track of the event. At the end of the event two full-size copies of that map were created in a row:\n- `rebaseSimulatedTracks()` filled a second `TrackEquivalents` map from the first and then move-assigned it back, so both existed at the same time;\n- `Geant4ParticleMap::adopt()` copied the maps (`operator=`) and then cleared the originals.\n\nThis PR applies the following fixes:\n- `rebaseSimulatedTracks()` now updates the map in place. The lookups follow the old mapping, so the n\u2026",
+            "diff": {
+                "additions": 22,
+                "deletions": 9,
+                "files": 2
+            },
+            "files": [
+                "DDG4/src/Geant4Particle.cpp",
+                "DDG4/src/Geant4ParticleHandler.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200223h 57m 54s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit ee281547.\n\n[test-results]:data:application/gzip;base64,H4sIAC6/7WoC/13MSw7CIBSF4a00jB14oRVwM4ZnQmyL4TEy7t0rqS06/L+TnCfxYXaZXAcQp4HkGspRtiZVQlyxxYXyEQnX8tkZn751y9WYf7\u2026"
+                },
+                {
+                    "author": "wdconinc",
+                    "body": "The failing test in https://github.com/AIDASoft/DD4hep/actions/runs/39501508482/job/118899883547?pr=1702#step:4:5423 seems unrelated to this change."
+                },
+                {
+                    "author": "wdconinc",
+                    "body": "Rebased to pick up 888bd54."
+                },
+                {
+                    "author": "MarkusFrankATcernch",
+                    "body": "Is this PR ready for merging ?"
+                },
+                {
+                    "author": "wdconinc",
+                    "body": "> Is this PR ready for merging ?\n\nYes."
+                },
+                {
+                    "author": "wdconinc",
+                    "body": "> > Is this PR ready for merging ?\n> \n> Yes.\n\nWe've been running with this in production since this PR was filed, considering the impact and speedup observed."
+                }
+            ],
+            "comments_total": 6,
+            "reviews": [
+                {
+                    "author": "veprbl",
+                    "state": "APPROVED",
+                    "body": "LGTM. I gave it a spin and it saved me ~23% (or 1.5GB) max-RSS on a test file."
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1713,
+            "title": "Make DetElement path and placementPath cimputation thread-safe",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1713",
+            "author": "MarkusFrankATcernch",
+            "mergedAt": "2026-11-06",
+            "mergedBy": "MarkusFrankATcernch",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\nFollowup of https://github.com/AIDASoft/DD4hep/pull/1712 . Ensure that the computations in DetElement::path()\nand DetElement::placementPath() are thread-safe.\nENDRELEASENOTES",
+            "diff": {
+                "additions": 142,
+                "deletions": 111,
+                "files": 4
+            },
+            "files": [
+                "DDCore/src/DetElement.cpp",
+                "examples/DDG3/include/dd4hep/geant3_geometry.h",
+                "examples/DDG3/src/aleph_geometry.cpp",
+                "examples/DDG3/src/geant3_geometry.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200717 files\u2004\u2003\u2007\u2008\u200717 suites\u2004\u2003\u20021d 1h 38m 30s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008372 \u2705\u20030 \ud83d\udca4\u20033 \u274c\n3\u2008006 runs\u200a\u20033\u2008000 \u2705\u20033 \ud83d\udca4\u20033 \u274c\n\nFor more details on these failures, see [this check](https://github.com/AIDASoft/DD4hep/runs/127456516383).\n\nResults for commit 4da00aa8.\n\n[test-results]:data:application/gzip;base64\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 543,
+            "title": "Add GeneratorRandomSeed and SimulationRandomSeed labels",
+            "url": "https://github.com/key4hep/EDM4hep/pull/543",
+            "author": "kjvbrt",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Adds label constants for the random seeds used by an event generator\n(e.g. Pythia8) and by a simulation tool (e.g. Delphes, ddsim), to be\nstored as EDM4hep file metadata. Used by key4hep/k4SimDelphes#167.\n\nBEGINRELEASENOTES\n - Add GeneratorRandomSeed and SimulationRandomSeed metadata labels.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 5,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "include/edm4hep/Constants.h"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "We might have been a little quick here, because DD4hep actually already stores random seeds, but it does it under `random.seed`, and it puts it into a `podio::Category::Run`, instead of the file level metadata. We either simply document this, or adapt DD4hep or key4hep/k4SimDelphes#167 accordingly."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "I would still merge these today, so that it can be picked up by the nighlies for the k4SimDelphes PR."
+                }
+            ],
+            "reviews_total": 1
+        },
         {
             "org": "key4hep",
             "repo": "key4hep-spack",
@@ -62,6 +435,176 @@
         {
             "org": "key4hep",
             "repo": "k4ActsTracking",
+            "num": 108,
+            "title": "Add two-way CKF tracking",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/108",
+            "author": "mlarson02",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "This PR adds functionality for running two tracking passes in both directions. These changes have been verified with `MAIAConfig` to not alter performance of the nominal tracking configuration, and been verified to work at least with seeding in the barrel. The configurable parameter `twoWayInflateCovarianceFactor`'s default value was taken from `athena`, and should potentially be changed/optimized. \r\n\r\nFurther performance studies with full BIB are yet to come, and slides will be linked when these are finished. \r\n\r\n[Introduction talk to this work + seed/track multiplicity for different seeding/extrapolation configurations](https://indico.desy.de/event/55446/contributions/213041/attachments/106481/149494/Outside-In%20and%20Two-Way%20Tracking%20Studies%20-%20MAIA%20Meeting%20-%2010062026.pdf)\u2026",
+            "diff": {
+                "additions": 408,
+                "deletions": 106,
+                "files": 6
+            },
+            "files": [
+                "k4ActsTracking/include/k4ActsTracking/CKFRunner.hxx",
+                "k4ActsTracking/src/components/CKFTrackingAlg.cpp",
+                "test/CMakeLists.txt",
+                "test/options/MAIA_CKFTrackingAlg.py",
+                "test/scripts/outside_in_check_tracks.py",
+                "test/scripts/two_way_check_tracks.py"
+            ],
+            "comments": [
+                {
+                    "author": "jburzy",
+                    "body": "Very nice @mlarson02 ! When this is ready for review please tag me and I will give it a thorough look."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Hi @mlarson02 - a naive question before having looked in depth at the code: how is `doOutsideInCKF` different from the `propagateBackward` flag we have been using to do the outside-in tracking?"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Hi @mlarson02 - a naive question before having looked in depth at the code: how is `doOutsideInCKF` different from the `propagateBackward` flag we have been using to do the outside-in tracking?\r\n\r\nHi @madbaron, very good question, I realized I should have addressed this in the PR description. At l\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I think your proposal (bugfix + additional functionality) is sensible. I don't feel too strongly about any specific implementation, but we definitely should not have two ways to do the same thing."
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> I think your proposal (bugfix + additional functionality) is sensible. I don't feel too strongly about any specific implementation, but we definitely should not have two ways to do the same thing.\r\n\r\nI removed the `doOutSideInCKF` parameter entirely - everything is now controlled by just `propagat\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Thanks for the quick iteration!\r\n\r\nOne more procedural question: if the user selects the two-way tracking, does the second pass run exclusively on the leftover hits from the first pass?"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Thanks for the quick iteration!\r\n> \r\n> One more procedural question: if the user selects the two-way tracking, does the second pass run exclusively on the leftover hits from the first pass?\r\n\r\nNominally the second pass runs over the same set of hits, but propagates to different layers so _should_ \u2026"
+                },
+                {
+                    "author": "jburzy",
+                    "body": "> > Thanks for the quick iteration!\r\n> > One more procedural question: if the user selects the two-way tracking, does the second pass run exclusively on the leftover hits from the first pass?\r\n> \r\n> Nominally the second pass runs over the same set of hits, but propagates to different layers so _shou\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> Nominally the second pass runs over the same set of hits, but propagates to different layers so _should_ not pick up any of the same hits. \r\n\r\nI am confused by this statement :D what different layers?\r\nIn a perfect world, shouldn't we find the same (prompt) track with either approach? So I'd expec\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Ah two way is not two passes! It's \"seed from the middle\".\r\nDid I get this right?"
+                },
+                {
+                    "author": "jburzy",
+                    "body": "> Ah two way is not two passes! It's \"seed from the middle\". Did I get this right?\r\n\r\nyes it's not two passes :) it's two sets of track states that get stitched together"
+                },
+                {
+                    "author": "jburzy",
+                    "body": "In general we should always be running a 2-way CKF. otherwise if you seed from e.g. Layers 1,2,3, you will never recover measurements on Layer 0. The direction of propagation ideally is configured from the radial location of the first SP on seed, but this is not strictly necessary."
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> In general we should always be running a 2-way CKF. otherwise if you seed from e.g. Layers 1,2,3, you will never recover measurements on Layer 0. The direction of propagation ideally is configured from the radial location of the first SP on seed, but this is not strictly necessary.\r\n\r\nYes thanks f\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Another general note: don't bother making changes to the legacy acts13 algorithm (ACTSSeededCKFTrackingAlg), it's effectively not supported anymore and we'll get rid of it very soon"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Another general note: don't bother making changes to the legacy acts13 algorithm (ACTSSeededCKFTrackingAlg), it's effectively not supported anymore and we'll get rid of it very soon\r\n\r\nAh right, thanks. When I originally implemented this (working off the MuonColliderSoft fork) it was still in use,\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I'd actually prefer if you removed the changes to these files from this PR to keep things tidy"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> I'd actually prefer if you removed the changes to these files from this PR to keep things tidy\r\n\r\nReverted the changes to ACTSSeededCKFTrackingAlg."
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Generally looks good to me, a few things that could probably be improved or at least would be nice to have a second look. Could you also add an example (most likely for MAIA) on how to run this, so that we can put it into a test case? Doesn't have to be well tuned, but it should run (and ideally f\u2026"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "Hi @madbaron and @jburzy, I've verified everything works as expected with 100% BIB and addressed a first round of comments, so I think the PR is ready for a more in depth review when you have the chance. Thanks!"
+                },
+                {
+                    "author": "jburzy",
+                    "body": "Sorry I haven't had the time to go through in detail. In my initial scan through I saw a few differences from how we do this in Athena but did not have time to fully understand if that was a problem or not. From my side I would be satisfied if I saw full-eta validation plots that this is working as \u2026"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Sorry I haven't had the time to go through in detail. In my initial scan through I saw a few differences from how we do this in Athena but did not have time to fully understand if that was a problem or not. From my side I would be satisfied if I saw full-eta validation plots that this is working a\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "I'm afraid I'm going to leave a few comments... I'm writing them up and will likely post later tonight.\r\nOne general point is that it might be worth splitting off the propagateBackward fix to its own PR to minimise the noise."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "`CKFTrackingFromSeedsAlg` still exposes `PropagateBackward` (line 98) and forwards it to `CKFRunner`, but its `estimateSeedParameters` call does not pass the flag. With `PropagateBackward=True` it therefore still starts the backward CKF at the bottom SP, which is exactly the bug fixed here. \r\n\r\nThe \u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Here are a few plots (repeating some that I mentioned in one of the comments + a few more) that I think would be nice to see:\r\n- pT, d0 and z0 residuals and pulls at AtIP: single-pass vs two-way, inflation on vs off, inside-out and outside-in.\r\n- The fraction of tracks where the second pass actually\u2026"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Here are a few plots (repeating some that I mentioned in one of the comments + a few more) that I think would be nice to see:\r\n> \r\n> * pT, d0 and z0 residuals and pulls at AtIP: single-pass vs two-way, inflation on vs off, inside-out and outside-in.\r\n> * The fraction of tracks where the second pas\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> > Here are a few plots (repeating some that I mentioned in one of the comments + a few more) that I think would be nice to see:\r\n> > \r\n> > * pT, d0 and z0 residuals and pulls at AtIP: single-pass vs two-way, inflation on vs off, inside-out and outside-in.\r\n> > * The fraction of tracks where the se\u2026"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Here are a few plots (repeating some that I mentioned in one of the comments + a few more) that I think would be nice to see:\r\n> \r\n> * pT, d0 and z0 residuals and pulls at AtIP: single-pass vs two-way, inflation on vs off, inside-out and outside-in.\r\n> * The fraction of tracks where the second pas\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "Hi @mlarson02 I assumed this was ready to be looked at another time and left a (last?) set of comments.\r\n\r\nWe are close!!!"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Hi @mlarson02 I assumed this was ready to be looked at another time and left a (last?) set of comments.\r\n> \r\n> We are close!!!\r\n\r\nHi @madbaron, thanks for the additional comments! They should all be addressed now."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> > Hi @mlarson02 I assumed this was ready to be looked at another time and left a (last?) set of comments.\r\n> > We are close!!!\r\n> \r\n> Hi @madbaron, thanks for the additional comments! They should all be addressed now.\r\n\r\nThank you @mlarson02!\r\nI committed directly a couple of final minor changes, \u2026"
+                },
+                {
+                    "author": "mlarson02",
+                    "body": "> Only a few minor questions nit picks from my side. The suggestions for retrieving the TrackState at a given location from a track, work since [key4hep/EDM4hep#515](https://github.com/key4hep/EDM4hep/pull/515) (i.e. EDM4hep v01-01-01 and upwards).\r\n\r\nThanks @tmadlener! All should be addressed now."
+                }
+            ],
+            "comments_total": 31,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Generally looks good to me, a few things that could probably be improved or at least would be nice to have a second look. Could you also add an example (most likely for MAIA) on how to run this, so that we can put it into a test case? Doesn't have to be well tuned, but it should run (and ideally fai\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Very nice. Thanks. Some things could still be improved, but that should be details at this point.\n\nCan you hook up the test to our CTest harness as well, please? Essentially\n- copy this code\nhttps://github.com/key4hep/k4ActsTracking/blob/c5822c5450d8edc3ed2ebbfe24156f4878042891/test/CMakeLists.txt#L\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "For me this is looks OK as is. I will let @madbaron and @jburzy have the final say."
+                }
+            ],
+            "reviews_total": 59
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
             "num": 139,
             "title": "Allow blueprint construction for MAIA_v1",
             "url": "https://github.com/key4hep/k4ActsTracking/pull/139",
@@ -85,6 +628,402 @@
                 }
             ],
             "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GaudiPandora",
+            "num": 62,
+            "title": "Make CI reproducible & allow tolerance for compiler-dependent ULP differences",
+            "url": "https://github.com/key4hep/k4GaudiPandora/pull/62",
+            "author": "SanghyunKo",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Fix random seed for the `ddsim` simulation for the CI workflows\n- Add a tolerance for compiler-dependent ULP differences\n\nENDRELEASENOTES\n\nCurrently, `ddsim` random seed is not set in the CI workflows, making the test results non-reproducible. For example,\n- #52, using `nightly-alma9-2026-10-26`: CI failed\n- #61, using `nightly-alma9-2026-10-07`: CI failed\n- #55, using `nightly-alma9-2026-10-12`: CI passed\n\nMore concretely:\n```\n| nightly date | HEAD | CI test results | \n2026-10-14 70578cb  alma9-nightly: ok     ubuntu24: ok     ubuntu26: ok     alma9-release: FAIL\n2026-10-15 70578cb  alma9-nightly: ok     ubuntu24: ok     ubuntu26: ok     alma9-release: FAIL\n2026-10-16 70578cb  alma9-nightly: FAIL   ubuntu24: ok     ubuntu26: ok     alma9-release: FAIL\n2026-10-17 70578c\u2026",
+            "diff": {
+                "additions": 12,
+                "deletions": 5,
+                "files": 2
+            },
+            "files": [
+                "test/CMakeLists.txt",
+                "test/scripts/compare-pfos.py"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Looks good to me. Will merge later today, unless there are more comments"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Maybe the `compare-pfos.py` should really be something that we run under `pytest`. Then we could use [`pytest.approx`](https://docs.pytest.org/en/stable/reference/reference.html#pytest-approx) for float comparisons. This would potentially require some work though."
+                }
+            ],
+            "reviews_total": 3
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 92,
+            "title": "Nested studies in the dashboard: each level's own criteria, its studies, and its loops",
+            "url": "https://github.com/key4hep/k4Opt/pull/92",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Why\n\nA nested study loaded in the dashboard, but nothing showed that it was nested: the model graph drew the inner parameter as an ordinary one, a trial did not say what its tuning found, and an inner study could not be opened. Worse, a study below the top was drawn and tabled by the problem's objectives, which are the top level's, so its figures and tables did not match what it is judged by.\n\n## What changes\n\n**Each study is shown by its own level's criteria.** Every figure (`k4opt.visualization`) and table of the dashboard reads `results.scope.criteria`, which is the problem's objectives and constraints at the top and the level's objective below. Ordinary studies are unchanged.\n\n**Inner studies are reachable.**\n- A trial of a nested study says, in its sheet, what its study of the leve\u2026",
+            "diff": {
+                "additions": 857,
+                "deletions": 77,
+                "files": 18
+            },
+            "files": [
+                "dashboard/study.py",
+                "dashboard/tables.py",
+                "dashboard/trial.py",
+                "dashboard/views/analysis.py",
+                "dashboard/views/overview.py",
+                "dashboard/views/trade_offs.py",
+                "docs/dashboard.md",
+                "docs/visualization.md",
+                "k4opt/visualization/__init__.py",
+                "k4opt/visualization/analysis.py",
+                "k4opt/visualization/graph.py",
+                "k4opt/visualization/pipeline.py",
+                "k4opt/visualization/trials.py",
+                "tests/support/studies.py",
+                "tests/unit/dashboard/test_app.py",
+                "tests/unit/dashboard/test_tables.py",
+                "tests/unit/visualization/test_pipeline.py",
+                "tests/unit/visualization/test_trials.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 91,
+            "title": "An inner study holds back its trials until one made what they share",
+            "url": "https://github.com/key4hep/k4Opt/pull/91",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Why\n\nIn a nested study, every trial of an inner study was asked for at once. In the nested example, all 12 trials for one cell size share that geometry's simulation: one trial ran it and 11 waited for it, each holding a worker. With 32 workers only about 3 geometries were simulated at a time, and all 12 inner trials were proposed before any result was known.\n\n## What changes\n\nA study below the top whose trials share a stage asks for one trial, then holds back until something it started has ended. Meanwhile the workers go to the other open studies and to new trials above. Holding back is a preference, not a limit: the driver asks the tree for a candidate only when a slot would otherwise be idle, so when no other study has work (one top trial, or near the end of a study), a held study get\u2026",
+            "diff": {
+                "additions": 126,
+                "deletions": 7,
+                "files": 3
+            },
+            "files": [
+                "docs/optimization.md",
+                "k4opt/optimization/_optuna/tree.py",
+                "tests/unit/optimization/test_nested.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 90,
+            "title": "The nested example, and what a study will do before it runs",
+            "url": "https://github.com/key4hep/k4Opt/pull/90",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Why\n\nThe last step of nested optimization before the dashboard: an example a physicist can read, and a way to see what a nested problem means before spending CPU on it.\n\n## The example\n\n`examples/nested/cld-pi0-nested.yaml` is YAML only: for each ECAL cell size, a study of 12 trials of Pandora's `ECalMipThreshold` (through #89), the best threshold reconstructed again on new events, and the cell sizes compared on those values and the readout channels.\n\n**This differs from the approved plan**, which tuned a photon fragment merging distance and energy cut in `pfo.pi0`. Measured on 200 real events per cell size, those settings do nothing: Pandora makes at most two photons per event, so there are no fragments to merge, and the best values are the same at every cell size. The threshold does m\u2026",
+            "diff": {
+                "additions": 1011,
+                "deletions": 81,
+                "files": 31
+            },
+            "files": [
+                "README.md",
+                "dashboard/labels.py",
+                "dashboard/tables.py",
+                "docs/evaluators.md",
+                "docs/optimization.md",
+                "docs/problem.md",
+                "examples/evaluators/pfo_pi0.py",
+                "examples/nested/cld-pi0-nested.yaml",
+                "examples/problem/cld-ecal-pi0-reco.yaml",
+                "k4opt/cli.py",
+                "k4opt/optimization/_optuna/run.py",
+                "k4opt/optimization/_scope.py",
+                "k4opt/optimization/cli.py",
+                "k4opt/problem/__init__.py",
+                "k4opt/problem/candidate.py",
+                "k4opt/problem/cli.py",
+                "k4opt/problem/config.py",
+                "k4opt/problem/models.py",
+                "k4opt/problem/names.py",
+                "k4opt/problem/outline.py",
+                "k4opt/problem/plan.py",
+                "k4opt/visualization/__init__.py",
+                "k4opt/visualization/analysis.py",
+                "k4opt/visualization/graph.py",
+                "k4opt/visualization/trials.py",
+                "tests/integration/optimization/test_optimize_cld_nested.py",
+                "tests/unit/optimization/test_cli.py",
+                "tests/unit/optimization/test_render.py",
+                "tests/unit/problem/test_names.py",
+                "tests/unit/problem/test_outline.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 89,
+            "title": "A parameter of a reconstruction can set one key of a map property",
+            "url": "https://github.com/key4hep/k4Opt/pull/89",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Why\n\nTuning the reconstruction for each detector candidate is what nested optimization is for, but most of CLD's reconstruction settings are keys of a Marlin processor's `Parameters` map. An argument of the job can only replace the whole map, so no parameter could reach them.\n\nThis matters for the physics. On the same 200 events of 50 GeV \u03c0\u2070 (`pi0.resolved`, 160 selected events, one run each):\n\n| Pandora `ECalMipThreshold` | 2.5 mm | 4 mm | 5.1 mm | 7 mm |\n| --- | --- | --- | --- | --- |\n| 0.1 | 0.04 | **0.72** | **0.62** | 0.16 |\n| 0.5 (CLD's default) | 0.16 | 0.69 | 0.49 | **0.19** |\n| 2 | **0.79** | 0.52 | 0.31 | 0.10 |\n\nWith the default reconstruction 4 mm looks best; tuned for each cell size, 2.5 mm does. The nested example will tune this setting.\n\n## What changes\n\nAn option `<comp\u2026",
+            "diff": {
+                "additions": 401,
+                "deletions": 18,
+                "files": 13
+            },
+            "files": [
+                "docs/k4run.md",
+                "docs/problem.md",
+                "k4opt/k4run/__init__.py",
+                "k4opt/k4run/command.py",
+                "k4opt/k4run/joboptions.py",
+                "k4opt/k4run/run.py",
+                "tests/integration/k4run/test_k4run.py",
+                "tests/support/fake_stack/bin/k4run",
+                "tests/unit/execution/session/test_reconstruction.py",
+                "tests/unit/k4run/test_command.py",
+                "tests/unit/k4run/test_joboptions.py",
+                "tests/unit/k4run/test_run.py",
+                "tests/unit/problem/test_config_reconstruction.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 88,
+            "title": "Nested studies: each trial of a level stands for a study of the level below",
+            "url": "https://github.com/key4hep/k4Opt/pull/88",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Fifth of the nested-optimization series: `k4opt optimize` runs a problem with inner levels. The YAML (#85), replicates and waiting sources (#84), the study scope (#86) and per-level task sets (#87) are in; this is the driver.\n\n## How it runs\n\n- `k4opt/optimization/_optuna/tree.py`: a `Tree` of studies in one `EvaluationSession` (one worker pool, one reuse index). It is the source of the candidates of every study, and replaces `_requests`: **an ordinary study is a tree of one**, so there is one study lifecycle. It asks open studies below first, a new trial of a level above only when none has a candidate, and gives `WAIT` while what it could do next waits for what runs.\n- For each trial of a level, a study of the level below searches its parameters with the trial's values fixed, in `inner/tr\u2026",
+            "diff": {
+                "additions": 1383,
+                "deletions": 123,
+                "files": 17
+            },
+            "files": [
+                "dashboard/tables.py",
+                "docs/optimization.md",
+                "docs/problem.md",
+                "k4opt/optimization/__init__.py",
+                "k4opt/optimization/_optuna/marks.py",
+                "k4opt/optimization/_optuna/optimizer.py",
+                "k4opt/optimization/_optuna/read.py",
+                "k4opt/optimization/_optuna/run.py",
+                "k4opt/optimization/_optuna/storage.py",
+                "k4opt/optimization/_optuna/tell.py",
+                "k4opt/optimization/_optuna/tree.py",
+                "k4opt/optimization/_results.py",
+                "k4opt/optimization/_scope.py",
+                "k4opt/optimization/_show.py",
+                "k4opt/optimization/_study.py",
+                "tests/unit/optimization/test_nested.py",
+                "tests/unit/optimization/test_optimize.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 87,
+            "title": "A level below the top runs only what its criteria read",
+            "url": "https://github.com/key4hep/k4Opt/pull/87",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Fourth of the nested-optimization series, split out of the nested driver: a level below the top runs only what its criteria read. Raised in the review of #85 and decided for the driver; it stands on its own, so it comes first.\n\n## Why\n\n`required` decided a candidate's status, not what ran: every planned evaluation ran for every candidate. In a nested study each inner study runs many trials, so an expensive analysis only the top level reads (or its reconstruction) would have run in every one of them.\n\n## What\n\n- `plan_tasks(..., diagnostics=False)` keeps the required tasks alone: the evaluations the references name, those marked `required`, and what they read, transitively.\n- `level_plan(spec, level, supplied)` is the one way a level's plan is made: at the top every evaluation (the ones its\u2026",
+            "diff": {
+                "additions": 137,
+                "deletions": 50,
+                "files": 10
+            },
+            "files": [
+                "docs/problem.md",
+                "k4opt/execution/_binding.py",
+                "k4opt/execution/_preflight.py",
+                "k4opt/optimization/_optuna/read.py",
+                "k4opt/problem/plan.py",
+                "k4opt/record/read.py",
+                "tests/unit/execution/session/test_levels.py",
+                "tests/unit/execution/session/test_records.py",
+                "tests/unit/problem/test_plan.py",
+                "tests/unit/record/test_assessment.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 86,
+            "title": "A study's scope: what it searches, what it fixes, how its trials are judged (--fix)",
+            "url": "https://github.com/key4hep/k4Opt/pull/86",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Third of the nested-optimization series: one study lifecycle that a level of a nested optimization will run through, introduced for ordinary studies first. Nothing nested runs yet; behavior of every existing study is unchanged.\n\n## `StudyScope` (`k4opt/optimization/_scope.py`)\n\nWhat one study searches and how its trials are judged, independent of Optuna:\n\n| | |\n|---|---|\n| `level` | 0 for every study today; a level of a nested optimization later |\n| `searched` | the parameters the optimizer proposes (Optuna's params hold only these) |\n| `fixed` | the values the study gives the others for every trial: every parameter of the levels above (a study of a level is started for a candidate of them: required), any of its own level (`--fix`), none of the levels below |\n| `criteria` | `spec.criteria(\u2026",
+            "diff": {
+                "additions": 782,
+                "deletions": 160,
+                "files": 22
+            },
+            "files": [
+                "docs/optimization.md",
+                "k4opt/optimization/__init__.py",
+                "k4opt/optimization/_export.py",
+                "k4opt/optimization/_optuna/optimizer.py",
+                "k4opt/optimization/_optuna/read.py",
+                "k4opt/optimization/_optuna/run.py",
+                "k4opt/optimization/_optuna/space.py",
+                "k4opt/optimization/_optuna/tell.py",
+                "k4opt/optimization/_render.py",
+                "k4opt/optimization/_results.py",
+                "k4opt/optimization/_scope.py",
+                "k4opt/optimization/_show.py",
+                "k4opt/optimization/_study.py",
+                "k4opt/optimization/_tradeoffs.py",
+                "k4opt/optimization/cli.py",
+                "k4opt/problem/candidate.py",
+                "tests/unit/optimization/test_fixed.py",
+                "tests/unit/optimization/test_optimize.py",
+                "tests/unit/optimization/test_results.py",
+                "tests/unit/optimization/test_resume.py",
+                "tests/unit/optimization/test_scope.py",
+                "tests/unit/optimization/test_search_space.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 85,
+            "title": "Nested optimization levels in the problem, each judged by its own criteria",
+            "url": "https://github.com/key4hep/k4Opt/pull/85",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Second of the nested-optimization series: the problem file says what is nested, and each level judges a candidate by its own criteria. Nothing runs nested studies yet; `k4opt optimize` refuses a problem with inner levels until the next PRs.\n\n## The `optimization:` block\n\n```yaml\noptimization:\n  parameters: [ecal_cell_size]          # the top level searches these\n  inner:                                # for each of its candidates, a study of these:\n    parameters: [merge_distance, min_photon_energy]\n    trials: 20                          # trials of each such study\n    objective: pi0.resolved             # what picks its best trial\n```\n\n- Each parameter is declared once under `parameters` and listed in exactly one level; `inner` nests to any depth. Without `inner` (or without the block) t\u2026",
+            "diff": {
+                "additions": 941,
+                "deletions": 122,
+                "files": 24
+            },
+            "files": [
+                "docs/execution.md",
+                "docs/problem.md",
+                "docs/record.md",
+                "k4opt/execution/_binding.py",
+                "k4opt/execution/_command.py",
+                "k4opt/execution/_drive.py",
+                "k4opt/execution/_preflight.py",
+                "k4opt/execution/_publish.py",
+                "k4opt/execution/_session.py",
+                "k4opt/optimization/_optuna/run.py",
+                "k4opt/optimization/_study.py",
+                "k4opt/problem/__init__.py",
+                "k4opt/problem/candidate.py",
+                "k4opt/problem/config.py",
+                "k4opt/problem/contract.py",
+                "k4opt/problem/models.py",
+                "k4opt/record/assess.py",
+                "k4opt/record/read.py",
+                "k4opt/record/write.py",
+                "tests/unit/execution/session/test_levels.py",
+                "tests/unit/execution/session/test_records.py",
+                "tests/unit/optimization/test_optimize.py",
+                "tests/unit/optimization/test_results.py",
+                "tests/unit/problem/test_config_optimization.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 84,
+            "title": "Replicates (a candidate on other events) and sources of candidates that wait",
+            "url": "https://github.com/key4hep/k4Opt/pull/84",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "First of the nested-optimization series: the two execution pieces a nested study needs, each useful on its own.\n\n## Replicates: the same candidate on other events\n\n- `configure(spec, values, replicate=N)`: for `N > 0` each ddsim stage's seed is replaced by one derived from it and `N` (`replicate_seed`: `seed + N\u00b7K` modulo 2\u00b3\u00b9 for an odd `K`, the same on every machine; one-to-one, so no two replicates of a seed share their seed). `N` runs from 0 to 2\u00b3\u00b9 \u2212 1; replicate 0 is the problem's own seeds.\n- Only samples that make their events from their seeds (the particle gun fired by ddsim) have replicates. A sample whose generation or simulation is given as a `file` (HepMC, say) would see the same collisions again, so `check_replicate` refuses it, as it refuses a problem that makes no events from\u2026",
+            "diff": {
+                "additions": 549,
+                "deletions": 46,
+                "files": 16
+            },
+            "files": [
+                "docs/execution.md",
+                "docs/optimization.md",
+                "docs/record.md",
+                "k4opt/execution/__init__.py",
+                "k4opt/execution/_command.py",
+                "k4opt/execution/_drive.py",
+                "k4opt/execution/_publish.py",
+                "k4opt/execution/_session.py",
+                "k4opt/execution/cli.py",
+                "k4opt/optimization/_study.py",
+                "k4opt/problem/candidate.py",
+                "k4opt/record/read.py",
+                "k4opt/record/write.py",
+                "tests/unit/execution/session/test_replicates.py",
+                "tests/unit/execution/test_parallel.py",
+                "tests/unit/optimization/test_results.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
         },
@@ -140,6 +1079,125 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "ALLEGRO",
+            "num": 65,
+            "title": "add script to generate displaced photons. Allow execution of ddsim MT",
+            "url": "https://github.com/HEP-FCC/ALLEGRO/pull/65",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "- add script to generate displaced photons, for study of direction reconstruction\r\n- allow execution of ddsim multi-threaded\r\n- fix path of reco scripts, avoid relying on my private package, use the scripts from FCC-config instead",
+            "diff": {
+                "additions": 457,
+                "deletions": 165,
+                "files": 10
+            },
+            "files": [
+                "geometry/IdPlaceholder.xml",
+                "geometry/material_scan.py",
+                "mva_cluster_calibrations/README.md",
+                "sampling_fractions/FCC_calo_analysis_cpp/plot_samplingFraction.py",
+                "sampling_fractions/write_calibration_xml.py",
+                "upstream/read_upstream_json.py",
+                "utils/checkFile.sh",
+                "utils/generate_displaced_photons.py",
+                "utils/runParallel.py",
+                "utils/run_all_chain.sh"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "ALLEGRO",
+            "num": 64,
+            "title": "Add first version of common plotting style",
+            "url": "https://github.com/HEP-FCC/ALLEGRO/pull/64",
+            "author": "jacofan",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "First version of a Claude-generated tool to have an ALLEGRO plotting style that can be used both for matplotlib and (py)ROOT. Style is configurable via a common JSON file.",
+            "diff": {
+                "additions": 2295,
+                "deletions": 0,
+                "files": 23
+            },
+            "files": [
+                "plot_style/.gitignore",
+                "plot_style/README.md",
+                "plot_style/allegro_style/__init__.py",
+                "plot_style/allegro_style/mpl.py",
+                "plot_style/allegro_style/root.py",
+                "plot_style/allegro_style/root/AllegroStyle.C",
+                "plot_style/allegro_style/root/AllegroStyleConfig.h",
+                "plot_style/allegro_style/style.json",
+                "plot_style/examples/mpl_colz.py",
+                "plot_style/examples/mpl_hist.py",
+                "plot_style/examples/mpl_points.py",
+                "plot_style/examples/mpl_styles.py",
+                "plot_style/examples/root_colz.C",
+                "plot_style/examples/root_hist.C",
+                "plot_style/examples/root_points.C",
+                "plot_style/examples/root_styles.C",
+                "plot_style/tests/compare.py",
+                "plot_style/tests/conftest.py",
+                "plot_style/tests/cvd.py",
+                "plot_style/tests/test_compare.py",
+                "plot_style/tests/test_config.py",
+                "plot_style/tests/test_mpl.py",
+                "plot_style/tests/test_root.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "giovannimarchiori",
+                    "state": "APPROVED",
+                    "body": "let's merge and start exercising this code. We can refine in further PRs"
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1712,
+            "title": "Thread safety fixes",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1712",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-11-05",
+            "mergedBy": "MarkusFrankATcernch",
+            "labels": [],
+            "body": "Make DetElement::nominal(), DetElement::survey() and VolumeManager::getVolumeManager() thread-safe.\n\nI encountered some crash when running ddsim multithreaded with ALLEGRO and traced it down to some segmentation classes  initialisation that calls the VolumeManager to fill some internal tables of geometrical parameters.\n\nThe nominal and survey alignments of a DetElement and the volume manager are created on first access, without protection against concurrent access. In multi-threaded applications (e.g. ddsim with numberOfThreads > 1) the first access often happens concurrently in the Geant4 worker threads:\n- DetElement::nominal() made the alignment valid before computing its transformations, so that other threads could use non-computed matrices;\n- VolumeManager::getVolumeManager() could run\u2026",
+            "diff": {
+                "additions": 45,
+                "deletions": 5,
+                "files": 2
+            },
+            "files": [
+                "DDCore/src/DetElement.cpp",
+                "DDCore/src/VolumeManager.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u20021d 1h 53m 28s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 287afb94.\n\n[test-results]:data:application/gzip;base64,H4sIAJC16GoC/12MSw6DIBQAr2JYdyHyUXqZBp6P5KUqDcLK9O5FY9V2OTPJLMzTgDO7V7y7VWzOlE7qc7SJwlTYiKZeValp7aJVX3rMGeBf\u2026"
+                },
+                {
+                    "author": "MarkusFrankATcernch",
+                    "body": "@giovannimarchiori \r\nWe discussed this PR in the meeting today before merging. The conclusion was finally that these cached computations would be resolved typically after 1-5 events and then the lock would never be entered again.\r\nSo we concluded that the overhead should be fine and relatively small\u2026"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 3
         },
         {
             "org": "key4hep",
@@ -2355,238 +3413,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 40,
-            "title": "Evaluator bindings: one evaluator bound under several names, each objective on one binding's metric",
-            "url": "https://github.com/key4hep/k4Opt/pull/40",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-31",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The fourth step towards several samples per problem: an entry of `evaluators` is a binding of an evaluator, with a name of its own, and every objective and constraint names the binding whose metric it is. One evaluator can now be bound several times with other settings. There is still one pipeline; named samples come next.\n\n**Behavior.**\n- `as:` names a binding; without it the binding is the evaluator's `name`. Two thresholds of `calo.photon` on one simulation are two entries, the second with `as: photon_200kev`. ddsim runs once, each binding gets an instance of its own for every candidate and a directory `evaluators/<binding>`, and the class is given once (`--evaluator`), however often the problem binds it.\n- Objectives and constraints take `evaluator:`, the binding that measures the metr\u2026",
-            "diff": {
-                "additions": 1772,
-                "deletions": 866,
-                "files": 36
-            },
-            "files": [
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/optimization.md",
-                "docs/problem.md",
-                "k4opt/optimization/_export.py",
-                "k4opt/optimization/_optuna/optimizer.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/_optuna/space.py",
-                "k4opt/optimization/_results.py",
-                "k4opt/optimization/_show.py",
-                "k4opt/optimization/_study.py",
-                "k4opt/problem/__init__.py",
-                "k4opt/problem/_assess.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/_tasks.py",
-                "k4opt/problem/cli.py",
-                "k4opt/problem/config.py",
-                "k4opt/problem/models.py",
-                "tests/integration/optimization/test_optimize_cld.py",
-                "tests/integration/problem/test_evaluate_ddsim.py",
-                "tests/unit/optimization/conftest.py",
-                "tests/unit/optimization/test_cli.py",
-                "tests/unit/optimization/test_export.py",
-                "tests/unit/optimization/test_lock.py",
-                "tests/unit/optimization/test_optimize.py",
-                "tests/unit/optimization/test_render.py",
-                "tests/unit/optimization/test_results.py",
-                "tests/unit/optimization/test_resume.py",
-                "tests/unit/optimization/test_search_space.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 39,
-            "title": "A candidate's work as tasks: geometry, stages and evaluators, each after what it reads",
-            "url": "https://github.com/key4hep/k4Opt/pull/39",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-31",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The third step towards several samples per problem: a candidate's work becomes a plan of tasks, each with explicit dependencies, run by an executor and recorded by its results. The schema is unchanged: there is still one pipeline.\n\n**Behavior.** A candidate's tasks are its `geometry`, every stage the evaluators read, and every evaluator. Each task names the tasks it reads, and nothing else orders it. A stage that runs reads the stages before it, plus the geometry if it is made from it. Every evaluator reads the geometry and its stage chain, including an evaluator that reads no stage. Three seams are new in `k4opt/problem/_tasks.py`:\n- `plan_tasks` makes the plan from the problem alone, once per session;\n- `run_tasks` is a sequential executor and the only place that would change for paralle\u2026",
-            "diff": {
-                "additions": 1525,
-                "deletions": 573,
-                "files": 20
-            },
-            "files": [
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/optimization.md",
-                "docs/problem.md",
-                "k4opt/evaluation/base.py",
-                "k4opt/evaluation/models.py",
-                "k4opt/problem/_assess.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/_stages.py",
-                "k4opt/problem/_tasks.py",
-                "k4opt/problem/cli.py",
-                "k4opt/problem/config.py",
-                "tests/integration/problem/test_evaluate_ddsim.py",
-                "tests/unit/problem/test_assessment.py",
-                "tests/unit/problem/test_config.py",
-                "tests/unit/problem/test_evaluators.py",
-                "tests/unit/problem/test_run.py",
-                "tests/unit/problem/test_stages.py",
-                "tests/unit/problem/test_tasks.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 38,
-            "title": "Evaluator classes, not instances: a new instance for every candidate",
-            "url": "https://github.com/key4hep/k4Opt/pull/38",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-31",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Second step toward several samples per problem; the first was #37. Until now a session reused one evaluator instance for every candidate, so anything an evaluator kept on `self` (a cache, a counter, a half-filled histogram) reached the next candidate. k4opt is now given evaluator classes and creates the instances itself.\n\n**Behavior.**\n- `load_evaluator(\"FILE.py:Class\")` returns the class and creates nothing. It refuses anything that is not a class with an `evaluate()` method.\n- `EvaluationSession.open(problem, implementations)`, `optimize(problem, implementations, output)` and `run_candidate(..., implementations=...)` take evaluator classes only. A function that builds an instance, or an instance, is refused: it could set the evaluator up in ways its class's source, which the records iden\u2026",
-            "diff": {
-                "additions": 613,
-                "deletions": 274,
-                "files": 22
-            },
-            "files": [
-                "docs/evaluation.md",
-                "docs/optimization.md",
-                "k4opt/evaluation/__init__.py",
-                "k4opt/evaluation/loader.py",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/cli.py",
-                "k4opt/problem/__init__.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/cli.py",
-                "tests/support/candidate_check.py",
-                "tests/support/evaluators.py",
-                "tests/unit/evaluation/test_loader.py",
-                "tests/unit/examples/test_calo_photon.py",
-                "tests/unit/optimization/test_optimize.py",
-                "tests/unit/optimization/test_resume.py",
-                "tests/unit/problem/test_assessment.py",
-                "tests/unit/problem/test_evaluate.py",
-                "tests/unit/problem/test_evaluators.py",
-                "tests/unit/problem/test_run.py",
-                "tests/unit/problem/test_stages.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 37,
-            "title": "Free the word \"sample\": ddsim's input_file and Measurement.from_values",
-            "url": "https://github.com/key4hep/k4Opt/pull/37",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-31",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "First step toward several samples per problem. In that work, \"sample\" names a set of events a candidate is measured on: a generation source, an event count, a seed and the stage options. Today the word means two other things, so this PR renames those uses and changes no behavior.\n\n**Changes.**\n- `k4opt.ddsim`: `simulate`, `check_arguments` and `ddsim_arguments` take `input_file=` instead of `sample=` for the event file ddsim reads with `--inputFiles`. If neither or both primaries are given, the error now reads \"set exactly one of particle_gun and input_file\".\n- `k4opt.evaluation`: `Measurement.from_samples(stage, metric, samples, unit)` becomes `Measurement.from_values(stage, metric, values, unit)`. Its docstring and `docs/evaluation.md` now say that it is an unweighted mean: every value c\u2026",
-            "diff": {
-                "additions": 263,
-                "deletions": 249,
-                "files": 18
-            },
-            "files": [
-                "docs/ddsim.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "k4opt/ddsim/__init__.py",
-                "k4opt/ddsim/command.py",
-                "k4opt/ddsim/run.py",
-                "k4opt/evaluation/base.py",
-                "k4opt/evaluation/models.py",
-                "k4opt/problem/_stages.py",
-                "tests/integration/geometry/test_k4geo_all.py",
-                "tests/unit/ddsim/test_command.py",
-                "tests/unit/ddsim/test_run.py",
-                "tests/unit/evaluation/test_contract.py",
-                "tests/unit/optimization/test_resume.py",
-                "tests/unit/problem/test_config.py",
-                "tests/unit/problem/test_evaluators.py",
-                "tests/unit/problem/test_run.py",
-                "tests/unit/problem/test_stages.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 36,
-            "title": "optimization: k4opt study show, trial and export, a read-only view of a study",
-            "url": "https://github.com/key4hep/k4Opt/pull/36",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-31",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "## Summary\n\nA read-only, optimizer-independent way to inspect and export the results of an existing study,\nwithout rerunning evaluators or needing the original problem file, evaluators, geometry or\nKey4hep stack.\n\n- `k4opt.optimization.load_study(directory, *, storage=None) -> StudyResults`: the problem as\n  `study.json` records it (`ProblemSpec`), every trial of every session (`TrialResult`), the\n  outcome counts, and the Pareto front of the feasible valid trials. Immutable and free of\n  Optuna types; `to_dict()` is the JSON export.\n- `k4opt study show DIR`, `k4opt study trial DIR NUMBER` and\n  `k4opt study export DIR --format {csv,json} [--output FILE]`, each with `--storage URL` for a\n  database study.\n- The Optuna adapter `_optuna.py` (over 1000 lines with the reader) becomes the packa\u2026",
-            "diff": {
-                "additions": 3473,
-                "deletions": 850,
-                "files": 27
-            },
-            "files": [
-                "CONTRIBUTING.md",
-                "README.md",
-                "docs/optimization.md",
-                "k4opt/__init__.py",
-                "k4opt/jsonio.py",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_export.py",
-                "k4opt/optimization/_optuna.py",
-                "k4opt/optimization/_optuna/__init__.py",
-                "k4opt/optimization/_optuna/optimizer.py",
-                "k4opt/optimization/_optuna/read.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/_optuna/space.py",
-                "k4opt/optimization/_optuna/storage.py",
-                "k4opt/optimization/_results.py",
-                "k4opt/optimization/_show.py",
-                "k4opt/optimization/cli.py",
-                "tests/integration/optimization/test_optimize_cld.py",
-                "tests/unit/optimization/conftest.py",
-                "tests/unit/optimization/test_cli.py",
-                "tests/unit/optimization/test_export.py",
-                "tests/unit/optimization/test_optimize.py",
-                "tests/unit/optimization/test_read_storage.py",
-                "tests/unit/optimization/test_render.py",
-                "tests/unit/optimization/test_results.py",
-                "tests/unit/optimization/test_resume.py",
-                "tests/unit/optimization/test_search_space.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4PFHitML",
             "num": 7,
             "title": "Some cleanup suggestions",
@@ -2625,248 +3451,6 @@
                 }
             ],
             "reviews_total": 6
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 286,
-            "title": "chore(deps): update mkdocs-material requirement from >=9.7.7 to >=9.8.0",
-            "url": "https://github.com/key4hep/k4Bench/pull/286",
-            "author": "dependabot",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Updates the requirements on [mkdocs-material](https://github.com/squidfunk/mkdocs-material) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/squidfunk/mkdocs-material/releases\">mkdocs-material's releases</a>.</em></p>\n<blockquote>\n<h2>mkdocs-material-9.8.0</h2>\n<blockquote>\n<p>[!WARNING]</p>\n<p><strong>Material for MkDocs reaches end of life on May 5, 2027.</strong> Critical fixes and security updates continue until that date.</p>\n<p>We're continuing our work with <a href=\"https://zensical.org/\">Zensical</a>, a maintained successor built by the team behind Material for MkDocs. It carries forward what we've learned from building documentation tools with this community, with Markdown authoring, a familiar design, and ful\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "docs/requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 285,
-            "title": "chore(deps): bump docker/login-action from 4.6.0 to 4.7.0",
-            "url": "https://github.com/key4hep/k4Bench/pull/285",
-            "author": "dependabot",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [docker/login-action](https://github.com/docker/login-action) from 4.6.0 to 4.7.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/docker/login-action/releases\">docker/login-action's releases</a>.</em></p>\n<blockquote>\n<h2>v4.7.0</h2>\n<ul>\n<li>Preserve explicit ECR settings in <code>registry-auth</code> by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/login-action/pull/1089\">docker/login-action#1089</a></li>\n<li>Use registry hosts for scoped credentials by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/login-action/pull/1088\">docker/login-action#1088</a></li>\n<li>Raise Docker Hub OIDC max expiry to 6 hours \u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/deploy-dashboard.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 284,
-            "title": "chore(deps): bump streamlit from 1.66.0 to 1.66.1 in /dashboard",
-            "url": "https://github.com/key4hep/k4Bench/pull/284",
-            "author": "dependabot",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [streamlit](https://github.com/streamlit/streamlit) from 1.66.0 to 1.66.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/streamlit/streamlit/releases\">streamlit's releases</a>.</em></p>\n<blockquote>\n<h2>1.66.1</h2>\n<!-- raw HTML omitted -->\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/streamlit/streamlit/compare/1.66.0...1.66.1\">https://github.com/streamlit/streamlit/compare/1.66.0...1.66.1</a></p>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/streamlit/streamlit/commit/ca6718b7d3d788c31c97d1bc9144fd8388168f57\"><code>ca6718b</code></a> [chore] Update map and pydeck snapshots from 1.66.1 CI</li>\n<li><a href=\"https://github.com/streamlit/streamlit/commit/1359d6ed763d3dab\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "dashboard/requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 35,
-            "title": "Identify external geometry files, recheck them around each candidate, time out ddsim",
-            "url": "https://github.com/key4hep/k4Opt/pull/35",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "A review of `main` at af4351e found four gaps in what a run record or a study can vouch for. This PR closes all four.\n\n**1. Files the geometry reads outside its root were not identified.** The geometry fingerprint covers only the files below the geometry root, and the study identity added nothing for the rest. Nearly every k4geo geometry includes `${DD4hepINSTALL}/DDDetectors/compact/detector_types.xml`, and the MDI and IDEA geometries read ~36 MB of `${K4GEO}/.../*.stl`. Point such a variable at other files, or edit them, and a study still resumed, comparing new trials with old ones as if made from the same detector.\n\n- `GeometrySource.external_files(catalog)` gives, for each external reference as written, the file it names now (variables expanded) with its SHA-256. An external include is\u2026",
-            "diff": {
-                "additions": 1170,
-                "deletions": 128,
-                "files": 26
-            },
-            "files": [
-                "docs/ddsim.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/geometry.md",
-                "docs/optimization.md",
-                "docs/problem.md",
-                "k4opt/ddsim/run.py",
-                "k4opt/geometry/includes.py",
-                "k4opt/geometry/source.py",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_optuna.py",
-                "k4opt/optimization/_study.py",
-                "k4opt/optimization/cli.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/_stages.py",
-                "k4opt/problem/cli.py",
-                "tests/support/simulation.py",
-                "tests/unit/ddsim/test_run.py",
-                "tests/unit/geometry/test_reproducibility.py",
-                "tests/unit/optimization/test_cli.py",
-                "tests/unit/optimization/test_optimize.py",
-                "tests/unit/optimization/test_resume.py",
-                "tests/unit/problem/test_evaluators.py",
-                "tests/unit/problem/test_run.py",
-                "tests/unit/problem/test_stages.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 34,
-            "title": "geometry: the DD4hep test looks up the bindings instead of importing them under a time limit",
-            "url": "https://github.com/key4hep/k4Opt/pull/34",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The main run after #32 ([41121761275](https://github.com/key4hep/k4Opt/actions/runs/41121761275)) and the last PR run of #32 failed on one integration test, `test_dd4hep_loads_snapshots_like_the_source`. It errored at setup:\n\n```text\nsubprocess.TimeoutExpired: Command '['/workspace/py-venv/bin/python', '-c', 'import dd4hep']' timed out after 120 seconds\n```\n\nAll other tests passed. Both runs started around 20:15 UTC, while the runner or CVMFS was about ten times slower than usual. On the same Friday nightly, creating the venv in `setup.sh` took ~10 min instead of ~47 s, and the job took 34 min instead of ~7. Runs before (19:47) and after (21:08) were normal, so nothing in the code was wrong.\n\n**Why the test was fragile.** The fixture that skips the test without the Key4hep stack imported `\u2026",
-            "diff": {
-                "additions": 2,
-                "deletions": 4,
-                "files": 1
-            },
-            "files": [
-                "tests/integration/geometry/test_dd4hep_load.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 33,
-            "title": "optimization: colored output and a progress bar with the time left on a terminal",
-            "url": "https://github.com/key4hep/k4Opt/pull/33",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "On a terminal, `k4opt optimize` now shows how far a study has got and how long the rest will take. Trial lines are colored the way `k4opt geometry inspect` colors its output, and a progress bar stays under them while the study runs:\n\n```text\ntrial 13:  valid    feasible    constants.ECal_cell_size=9.79789  simulation/ecal_barrel.angular_residual=0.948  simulation/ecal_barrel.fired_cells=227\n\u2839 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2578\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500   46%  14/30 trials  1:07:12 elapsed  ~1:16:48 left  4:48/trial  10 feasible  2 infeasible  2 failed\n```\n\nPiped or written to a file (a batch job, `systemd-run`), the output is still one plain line per trial, as before. `NO_COLOR=1` turns color off, and `TERM=dumb` turns the bar off.\n\n**Progress bar** (`k4opt/optimization/_render.py`).\n- It shows the share of t\u2026",
-            "diff": {
-                "additions": 640,
-                "deletions": 107,
-                "files": 12
-            },
-            "files": [
-                "CONTRIBUTING.md",
-                "docs/optimization.md",
-                "k4opt/geometry/cli.py",
-                "k4opt/geometry/render.py",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_optuna.py",
-                "k4opt/optimization/_render.py",
-                "k4opt/optimization/cli.py",
-                "k4opt/terminal.py",
-                "tests/unit/optimization/test_cli.py",
-                "tests/unit/optimization/test_render.py",
-                "tests/unit/optimization/test_resume.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 32,
-            "title": "optimization: k4opt optimize, a first study of a problem with Optuna",
-            "url": "https://github.com/key4hep/k4Opt/pull/32",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "A first optimizer for k4opt: `k4opt optimize` runs a study of a problem with Optuna's TPE sampler, on top of the `EvaluationSession` and `Assessment` of #31. The problem file, the evaluators and the run records stay free of Optuna; only `k4opt/optimization/_optuna.py` imports it, and only when a study runs.\n\n```bash\nk4opt optimize examples/problem/cld-ecal-granularity.yaml \\\n  --evaluator examples/evaluators/calo_photon.py:CaloPhoton \\\n  --trials 30 --seed 42 --output runs/cld-ecal-study      # later: --resume --trials 10\n```\n\n**One trial.**\n1. The sampler proposes a candidate (`study.ask` with the problem's distributions).\n2. The candidate is evaluated with the session into `trial-NNNNNN/`, the layout `k4opt evaluate` uses, with `run: {study, trial}` in its summary.\n3. Optuna is told the \u2026",
-            "diff": {
-                "additions": 3652,
-                "deletions": 62,
-                "files": 32
-            },
-            "files": [
-                ".gitignore",
-                ".pre-commit-config.yaml",
-                "CONTRIBUTING.md",
-                "README.md",
-                "docs/evaluation.md",
-                "docs/optimization.md",
-                "docs/problem.md",
-                "examples/problem/cld-ecal-granularity.yaml",
-                "k4opt/__init__.py",
-                "k4opt/cli.py",
-                "k4opt/evaluation/__init__.py",
-                "k4opt/evaluation/base.py",
-                "k4opt/jsonio.py",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_optuna.py",
-                "k4opt/optimization/_study.py",
-                "k4opt/optimization/cli.py",
-                "k4opt/optimization/errors.py",
-                "k4opt/problem/_evaluate.py",
-                "pyproject.toml",
-                "requirements.txt",
-                "tests/integration/optimization/test_optimize_cld.py",
-                "tests/support/candidate_check.py",
-                "tests/support/evaluators.py",
-                "tests/support/trade_off.py",
-                "tests/unit/optimization/conftest.py",
-                "tests/unit/optimization/test_cli.py",
-                "tests/unit/optimization/test_lock.py",
-                "tests/unit/optimization/test_optimize.py",
-                "tests/unit/optimization/test_resume.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -3033,588 +3617,6 @@
             ],
             "comments": [],
             "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4geo",
-            "num": 625,
-            "title": "Set sensitive-detector types in geometry constructors",
-            "url": "https://github.com/key4hep/k4geo/pull/625",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Set sensitive-detector types directly in geometry constructors and remove all `<sensitive type=\"...\"/>` settings from the compact XML files. Also remove the obsolete `DRcaloSiPMSD` steering entry.\n\n`SimpleCylinder_o1_v01` and `SimpleCone_o1_v01` use `tracker`; the layered `SimpleCylinder_o1_v02` uses `calorimeter`. Consequently, the FCChh tail catcher switches from calorimeter hits to tracker hits. The archived FCCDetectors drivers referenced by `FCCee_o2_v03` are outside this repository; their XML type readers would need the same update to load these compacts.\n\nValidation: all 51 changed XML files parse; C++ and Python formatting pass; the geometry library and its plugin registries build. ALLEGRO o1_v02, ALLEGRO o1_v03, IDEA o2_v01_CI, and FCChh load successfully, with every sensitive det\u2026",
-            "diff": {
-                "additions": 35,
-                "deletions": 144,
-                "files": 75
-            },
-            "files": [
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/FCCee_ECalBarrel.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/FCCee_EcalEndcaps_coneCryo.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/FCCee_HCalBarrel_TileCal.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/FCCee_HCalEndcaps_ThreeParts_TileCal.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/MuonTagger.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/SimplifiedDriftChamber.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v01/Vertex.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/DriftChamber.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/ECalBarrel_thetamodulemerged.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/ECalBarrel_thetamodulemerged_calibration.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/ECalBarrel_thetamodulemerged_upstream.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/ECalEndcaps_coneCryo.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/HCalBarrel_TileCal.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/HCalEndcaps_ThreeParts_TileCal.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/MuonTagger.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v02/Vertex.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalBarrel_thetamodulemerged.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalBarrel_thetamodulemerged_calibration.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalBarrel_thetamodulemerged_upstream.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalEndcaps_Turbine_o1_v03.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalEndcaps_Turbine_o1_v03_calibration.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalEndcaps_Turbine_o1_v03_upstream.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/HCalBarrel_TileCal_v02.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/HCalBarrel_TileCal_v03.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/HCalEndcaps_ThreeParts_TileCal_v02.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/HCalEndcaps_ThreeParts_TileCal_v03.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/MuonTagger.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/MuonTaggerPhiTheta.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/HCalBarrel_TileCal_v04.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/HCalEndcaps_ThreeParts_TileCal_v04.xml"
-            ],
-            "comments": [
-                {
-                    "author": "davidlange6",
-                    "body": "@jmcarcell - iiuc - even \"unknown\" sensitive detector types are eventually \"used\"?\r\n\r\nhttps://github.com/AIDASoft/DD4hep/blob/master/DDG4/python/DDSim/DD4hepSimulation.py#L518"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "> @jmcarcell - iiuc - even \"unknown\" sensitive detector types are eventually \"used\"?\r\n> \r\n> [AIDASoft/DD4hep@`master`/DDG4/python/DDSim/DD4hepSimulation.py#L518](https://github.com/AIDASoft/DD4hep/blob/master/DDG4/python/DDSim/DD4hepSimulation.py?rgh-link-date=2026-08-03T14%3A30%3A11Z#L518)\r\n\r\nSo it\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Is `<sensitive>` ever changed? If not then it can be removed from the XMLs but I don't know for sure."
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "I'm not aware of any cases where it is used. And if `ddsim` automatically assigns 'calorimeter' or 'tracker' if one of these exists as substring, I'm not sure most people are aware of that and would end up using the sensitive type incorrectly.\r\nA quick search in k4geo yielded 56 occurences of `<sens\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "@s6anloes as discussed, now the `calorimeter` or `tracker` is always hardcoded in the C++ code, please have a look."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "I'll merge this and tag if no one complains"
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "Hi @jmcarcell ,\r\nthere are still some XML files with the `<sensitive>` tag. Should we remove them before merging?"
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "Sorry, false alarm. I just double-checked and didn't find any.\r\nCan we get an okay from the detector contacts nonetheless:\r\n- ALLEGRO: @BrieucF @giovannimarchiori  @scott-snyder \r\n- CLD: @Zehvogel \r\n\r\nI can give the okay for IDEA\r\n\r\nEdit: No ILD files seem to have been touched, sorry for tagging you\u2026"
-                }
-            ],
-            "comments_total": 8,
-            "reviews": [
-                {
-                    "author": "giovannimarchiori",
-                    "state": "APPROVED",
-                    "body": "looks good from ALLEGRO's side"
-                },
-                {
-                    "author": "s6anloes",
-                    "state": "COMMENTED",
-                    "body": "Hi Juan Miguel,\r\nthere are still a lot of inconsistencies on how the sensitve type is actually set in the different drivers. Essentially, I saw three cases (ignoring the drivers from FCCDetectors which are archived now):\r\n- the driver explicitly does `.setType(\"calorimeter\")` (or `\"tracker\"`) and th\u2026"
-                },
-                {
-                    "author": "Zehvogel",
-                    "state": "APPROVED",
-                    "body": "LGTM \ud83d\udc4d"
-                }
-            ],
-            "reviews_total": 11
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 137,
-            "title": "Use the hit time error for the hit time resolution",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/137",
-            "author": "jburzy",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "EDM4hep 1.2 stores a time error per tracker hit (key4hep/EDM4hep#528), and DDPlanarDigi now fills it with the digitization time resolution (key4hep/k4Reco#74). CKFTrackingAlg now takes the time resolution of each hit from its time error, for both the 4D CKF measurement and the seeding time cuts. HitTimeResolutions is kept as a fallback for hits without a time error, e.g. files digitized before EDM4hep 1.2. It is no longer required when hit time is used, and the placeholder warning is removed. A hit with neither throws. The time error is read only when building against EDM4hep 1.2 or newer.\r\n\r\ncc @madbaron \r\n\r\n\r\nBEGINRELEASENOTES\r\n\r\nUse the hit time error for the hit time resolution\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 9,
-                "deletions": 14,
-                "files": 2
-            },
-            "files": [
-                "CMakeLists.txt",
-                "k4ActsTracking/src/components/CKFTrackingAlg.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "madbaron",
-                    "body": "This looks good to me.\r\n\r\nI wonder if we should have just bumped the min edm4hep requirement to 1.2 and got rid of the fallback entirely, but I guess we can do that in a bit."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "I think we always want to have EDM4hep at the latest version so requesting the latest version should always be fine in any package"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I tend to agree with Juan. I think we just require the latest version of EDM4hep. I don't see many use cases that would want to use an older version of EDM4hep (in memory). Having the possibility to time smear hits for files that were written before seems sensible."
-                },
-                {
-                    "author": "madbaron",
-                    "body": "> I tend to agree with Juan. I think we just require the latest version of EDM4hep. I don't see many use cases that would want to use an older version of EDM4hep (in memory). Having the possibility to time smear hits for files that were written before seems sensible.\r\n\r\nNote this is not time smearin\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> So the conclusion I'd draw from your comments is that we should get rid of the of the fallback with the IFDEF and either automatically switch to the alt path if the timeError is not in the collection, or get rid of the backwards compatibility?\r\n\r\nIf the package is built with edm4hep@1.2 you will n\u2026"
-                },
-                {
-                    "author": "jburzy",
-                    "body": "This finishes off the last of the remaining open items in #77."
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Just for completness, I think we should also be good citizens and document the new EDM4hep requirement here:\n\nhttps://github.com/key4hep/k4ActsTracking/blob/5f390b6fe08920026e199cae47ace2636f7d01d2/CMakeLists.txt#L39"
-                }
-            ],
-            "reviews_total": 4
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 109,
-            "title": "Add initial ACTS adaptive multi-vertex finder",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/109",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Add an initial ACTS Adaptive Multi-Vertex Finder (AMVF) implementation for primary vertex reconstruction from existing edm4hep tracks.\r\n- Add configurable track selection, beam-spot constraints, seeding, annealing and vertex-fit settings.\r\n- Store reconstructed vertex-to-track associations through `ReconstructedParticle`s and weighted `VertexRecoParticleLink`s.\r\n- Add generic vertexing configuration together with a CLD-specific setup tuned for FCC-ee beam conditions.\r\n- Add a CLD integration test validating vertex reconstruction and output relations.\r\n\r\nENDRELEASENOTES\r\n\r\n## Description\r\n\r\nThis adds an initial implementation of ACTS adaptive multi-vertex finding to `k4ActsTracking`.\r\n\r\nThe new `VertexFindingAlg` runs on an existing `edm4hep::TrackCollection` and uses t\u2026",
-            "diff": {
-                "additions": 1028,
-                "deletions": 0,
-                "files": 7
-            },
-            "files": [
-                "k4ActsTracking/CMakeLists.txt",
-                "k4ActsTracking/src/components/VertexFindingAlg.cpp",
-                "test/CMakeLists.txt",
-                "test/options/CLD_Vertexing.py",
-                "test/options/_vertexing_helpers.py",
-                "test/options/vertexing.py",
-                "test/scripts/check_vertexing.py"
-            ],
-            "comments": [
-                {
-                    "author": "BrieucF",
-                    "body": "> Nice. IIUC this works with any track input (at least the tests and some comments suggest that), right?\r\n> \r\n> I have a conceptual question, where I truly lack any experience in usage.\r\n> \r\n> In its current form the Vertexing creates Vertices (as expected), but it also creates ReconstructedParticle\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I have created https://github.com/key4hep/EDM4hep/issues/526 for more discussion about the EDM4hep related parts to not pollute the PR discussion here too much with that. (I assume resolving that might have a longer timeline than this PR)."
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "> > Nice. IIUC this works with any track input (at least the tests and some comments suggest that), right?\r\n> > I have a conceptual question, where I truly lack any experience in usage.\r\n> > In its current form the Vertexing creates Vertices (as expected), but it also creates ReconstructedParticles \u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> Hello! I have implemented in my local branch of k4RecTracker an extension that does this. I think it is useful to have also the one-to-many relation between vertex and the tracks that produced the vertex. I can open a PR in edm4hep if we decide to include it centrally \r\n\r\nYes please, I think it wo\u2026"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "I validated this against LCFIPlus on three samples. Results below.\r\n\r\n## Setup\r\n\r\n- **Same input.** Both vertexers run on CLD's own tracks (`SiTracks_Refitted`), unchanged, and both use the beam-spot constraint.\r\n- **Same validation.** Everything goes through the same code (`VertexValidation` in k4D\u2026"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "I think it's time to let @paulgessinger take a look :)"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Stupid question about the muon gun, why 240 GeV muons? We will not see such high momentum muons at FCCee, right?\r\n\r\nDifferent question: How was the tuning done? I assume it's a script + some instructions. Is it generic enough to be included here?"
-                },
-                {
-                    "author": "BrieucF",
-                    "body": "Very nice Joshua, thanks! Just out of curiosity, what is `PV selection` doing?"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "> Stupid question about the muon gun, why 240 GeV muons? We will not see such high momentum muons at FCCee, right?\r\n> \r\n> Different question: How was the tuning done? I assume it's a script + some instructions. Is it generic enough to be included here?\r\n\r\nThe 240 GeV refers to the collision point, w\u2026"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "> Very nice Joshua, thanks! Just out of curiosity, what is `PV selection` doing?\r\n\r\n\r\n**PV efficiency**: how often the true PV is found at all, i.e. matched by a clean reco vertex (\u2265 70 % of its track weight from the true PV):\r\n\r\n```math\r\n\\varepsilon_\\text{PV} = \\frac{N_\\text{events}(\\text{true PV m\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> The scan scripts are tied to my setup for now. If it's useful, I can make a follow-up PR with a general tuning script, that should work for any detector, though I think we should merge this and the new vertex validation plots https://github.com/key4hep/k4DetectorPerformance/pull/9 first.\r\n\r\nSounds\u2026"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "Slides from the reconstruction meeting today are [here](https://indico.cern.ch/event/1733791/contributions/7308391/attachments/3363213/6034087/Reco_Meeting_15.10.2026_Joshua.pdf). I also had realized that CLDConfig still uses [outdated beam-spot numbers from 2022](https://github.com/key4hep/CLDConfi\u2026"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "Unless @paulgessinger has any other comments, I would consider this PR ready to merge. We should follow up on the track wrapper issue once we change the EDM4Hep model"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "Hi all,\r\n\r\nI am linking the latest results shown in the FCC Reconstruction Workshop [here](https://indico.cern.ch/event/1719015/contributions/7325716/attachments/3369512/6047225/Reco_Workshop_26.10.2026_Joshua.pdf). Note:\r\n\r\n- In the original 'untuned' results ACTS annealing was turned off, whereas \u2026"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "> we can potentially keep track of the things we didn't do now in an issue and tackle them in the future.\r\n\r\nDone in https://github.com/key4hep/k4ActsTracking/issues/136"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I will merge this later today, unless there are more comments."
-                }
-            ],
-            "comments_total": 16,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Nice. IIUC this works with any track input (at least the tests and some comments suggest that), right?\n\nI have a conceptual question, where I truly lack any experience in usage.\n\nIn its current form the Vertexing creates Vertices (as expected), but it also creates ReconstructedParticles that essenti\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Overall looks good to me and can in principle go in as is at the moment. A few nits about docstrings and (missing) units below. Since we will have to touch this in the not too distant future in any case again, we can potentially keep track of the things we didn't do now in an issue and tackle them i\u2026"
-                }
-            ],
-            "reviews_total": 15
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 34,
-            "title": "Check Delphes and include prereleases in commit checks",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/34",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Include `delphes/delphes` in the commit checks and consider prereleases when selecting the latest published release for each repository. Skip draft releases and retain the fallback to tags.\n\nENDRELEASENOTES\n\nValidation: `bash -n scripts/check-commits-after-tag.sh` and `git diff --check` passed. A full run against GitHub exited successfully with no stderr and reported 11 Delphes commits after prerelease tag `3.5.2pre02`.",
-            "diff": {
-                "additions": 3,
-                "deletions": 3,
-                "files": 1
-            },
-            "files": [
-                "scripts/check-commits-after-tag.sh"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "CLDConfig",
-            "num": 98,
-            "title": "Refactor IV",
-            "url": "https://github.com/key4hep/CLDConfig/pull/98",
-            "author": "Zehvogel",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Replace the `CONFIG` dictionary in `CLDReconstruction.py` with command line arguments: `--calorimeterIntegrationTimeWindow`, `--overlay`, `--vertexUnconstrained` and `--outputMode`\n- Add `--overlay=Skip` to run without the overlay processor (and without the RecoMCTruthLink that depends on it), and use it for the reference output of the native comparison test instead of a `sed`-generated steering file\n- Update `BEAM_SPOT_SIZES` to luminous region sizes derived from the FCC Feasibility Study Report (2025)\n- Decide which stages run (wrapped vs. native) once at the top of `CLDReconstruction.py`; `--native` with `--outputMode LCIO` now gives an argument error\n- Use the injected `reco_args` in the tracking sequences instead of re-parsing the arguments\n- Pass the detector via \u2026",
-            "diff": {
-                "additions": 114,
-                "deletions": 129,
-                "files": 11
-            },
-            "files": [
-                "CLDConfig/CLDReconstruction.py",
-                "CLDConfig/CaloDigi/CaloDigi.py",
-                "CLDConfig/HighLevelReco/JetAndVertex.py",
-                "CLDConfig/HighLevelReco/JetClusteringOrRenaming.py",
-                "CLDConfig/Overlay/Overlay.py",
-                "CLDConfig/ParticleFlow/Pandora.py",
-                "CLDConfig/Tracking/ConformalTracking.py",
-                "CLDConfig/Tracking/Refit.py",
-                "CLDConfig/Tracking/TrackingDigi.py",
-                "CLDConfig/Tracking/TruthTracking.py",
-                "test/CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Looks good, the beam spot size changes will probably change a few things so it will have to be clear what was produced before or after this change, in particular let me know if it should be in the next release to happen soon."
-                },
-                {
-                    "author": "Zehvogel",
-                    "body": "> Looks good, the beam spot size changes will probably change a few things so it will have to be clear what was produced before or after this change, in particular let me know if it should be in the next release to happen soon.\r\n\r\nYes, I think we want to have it in ASAP.  I think we will have a numb\u2026"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 2
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Reco",
-            "num": 76,
-            "title": "Fix CLDConfig test setup leaving empty Python blocks",
-            "url": "https://github.com/key4hep/k4Reco/pull/76",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Fix CLD reconstruction tests by using `--overlay Skip` instead of deleting Python statements, which left empty `if` blocks and caused an `IndentationError` after https://github.com/key4hep/CLDConfig/pull/98.\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 6,
-                "deletions": 6,
-                "files": 1
-            },
-            "files": [
-                "test/CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4GaudiPandora",
-            "num": 63,
-            "title": "Fix CLDConfig test setup leaving empty Python blocks",
-            "url": "https://github.com/key4hep/k4GaudiPandora/pull/63",
-            "author": "jmcarcell",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Fix CLD reconstruction tests by using `--overlay Skip` instead of deleting Python statements, which left empty `if` blocks and caused an `IndentationError` after https://github.com/key4hep/CLDConfig/pull/98\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 3,
-                "deletions": 3,
-                "files": 1
-            },
-            "files": [
-                "test/CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 283,
-            "title": "fix(dashboard): keep each toolbar's controls together on smaller screens and size dropdowns to what they show",
-            "url": "https://github.com/key4hep/k4Bench/pull/283",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **User description**\nThe Overview's toolbar came apart on smaller screens. Between about 1560 and 1820 px, the Runs control dropped below Regressions. The Memory dropdown, fixed at 210 px, also cut \"Mean event anonymous RSS (GB)\" short. Every other control row in the dashboard had its own hand-built layout, with fixed column fractions or fixed dropdown widths.\n\n## One control row\n\n`ui_utils.control_row()` now lays out every toolbar the same way. The controls that choose what is looked at go on the left. Those that change how it is drawn (run scope, overlays, Display options) go on the right.\n\n- Both sides are sized to their content, so a row too narrow for both moves the right side to its own line as a whole. Before, the right side was a stretching container\u2026",
-            "diff": {
-                "additions": 364,
-                "deletions": 190,
-                "files": 12
-            },
-            "files": [
-                "dashboard/tabs/region_timing/attribution.py",
-                "dashboard/tabs/region_timing/historical.py",
-                "dashboard/tabs/region_timing/step_analysis.py",
-                "dashboard/tabs/reports/_night_picker.py",
-                "dashboard/tabs/reports/overview/__init__.py",
-                "dashboard/tabs/reports/overview/status.py",
-                "dashboard/tabs/reports/regressions.py",
-                "dashboard/tabs/reports/stack_changes.py",
-                "dashboard/tabs/trends.py",
-                "dashboard/ui_chrome.py",
-                "dashboard/ui_utils.py",
-                "tests/unit/test_dashboard_ui_state.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\ud83e\uddea&nbsp;<strong>PR contains tests</strong></td></tr>\n<tr><td>\ud83d\udd12&nbsp;<strong>No security concerns identified</strong></td></tr>\n<tr><td>\u26a1&nbsp;<strong>No major issues detec\u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/283?dropdown=cover\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:no-suggestions -->\n\nNo code suggestions found for the PR.\n<hr>\n<details> <summary><strong>\u2699\ufe0f Agent run details</strong></summary>\n\n- Model: openai/Kimi-K3-FLATIRON\n- Tokens: 14,065 in / 458 out / 14,523 total\n- Time cost: 1470.8s\n- AI calls: 1\n\n</detai\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCC-config",
-            "num": 405,
-            "title": "ALFA ddsim steering file",
-            "url": "https://github.com/HEP-FCC/FCC-config/pull/405",
-            "author": "Edler1",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Adding the ALFA ddsim steering file, originally part of the k4geo [PR #669](https://github.com/key4hep/k4geo/pull/669). \nREADME and bash ctest script taken from ALLEGRO/IDEA with modifications.\nctest is currently commented out, since it depends on the k4geo PR.",
-            "diff": {
-                "additions": 827,
-                "deletions": 0,
-                "files": 4
-            },
-            "files": [
-                "CMakeLists.txt",
-                "FCCee/FullSim/ALFA/ALFA_o1_v00/README.md",
-                "FCCee/FullSim/ALFA/ALFA_o1_v00/SteeringFile_ALFA_o1_v00.py",
-                "FCCee/FullSim/ALFA/ALFA_o1_v00/ctest_sim_digi_reco.sh"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "@s6anloes can you review? Or do I tag without this?"
-                },
-                {
-                    "author": "BrieucF",
-                    "body": "Andreas is not available today, this looks good, we can merge and then tag"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1703,
-            "title": "Speed up the placement path search in the SurfaceManager map build",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1703",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "MarkusFrankATcernch",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- DetectorTools: add `detail::tools::PlacementPathCache`. While it exists, the placement paths of all children of a DetElement are found in one walk of its volume tree instead of one search from the top per child. The paths are unchanged.\n- SurfaceManager: build the surface maps inside a `PlacementPathCache`. For FCC-ee ALLEGRO_o1_v04 the first `map()` call goes from 350 s to 1.8 s.\n\nENDRELEASENOTES\n\n\nThis came up while looking at the [k4Bench](https://github.com/key4hep/k4Bench) reconstruction benchmarks for FCC-ee. For ALLEGRO_o1_v04, about 270 of the 340 s of `initialize` were booked under the first `DDPlanarDigi` (`VXDBarrelDigitizer`), while the other three digitizers of the same type took almost nothing. It turned out that the first digitizer just triggers the lazy \u2026",
-            "diff": {
-                "additions": 113,
-                "deletions": 8,
-                "files": 5
-            },
-            "files": [
-                "DDCore/include/DD4hep/DetectorTools.h",
-                "DDCore/src/DetectorImp.cpp",
-                "DDCore/src/DetectorTools.cpp",
-                "DDRec/src/SurfaceManager.cpp",
-                "examples/ClientTests/CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200220h 18m 53s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 7e5898fc.\n\n[test-results]:data:application/gzip;base64,H4sIAClk42oC/12MQQ6DIBAAv2I49wBdEehnGrKyCalKg3Ay/XspsUp7nJlkNkZ+ciu7dUJfOrZmn04ac7TJh6WwAgFQVKnp00HJL93XjPivHv\u2026"
-                },
-                {
-                    "author": "MarkusFrankATcernch",
-                    "body": "@jbeirer \r\nJust one comment: caches are sometimes harmful. \r\nIn particular if placement path calls are used during the construction of subdetectors. \r\nI just recently stumbled over this. If we want this, \r\n1) you should provide in DetectorTools a call to clear the cache. \r\n    If possible also the c\u2026"
-                },
-                {
-                    "author": "MarkusFrankATcernch",
-                    "body": "@jbeirer Thanks a lot! This looks good!"
-                },
-                {
-                    "author": "k4bench-bot",
-                    "body": "<!-- k4bench-blame-comment:v1 suite=reco window=2026-10-29..2026-10-30 -->\n<!-- k4bench-blame-facts:d8ff0477ad7324c3 -->\n<!-- k4bench-blame-cumulative:v2 eNrFlmFP2zAQhv9LPicoDk3UfISGVpOKhhgqCIRObnJ0Vh27unhh49fPFCFNI1sJOM6XqnUTPY9O753v7i44WS7PFpdfQTNo40kQBj-nGWSTCGUebcqSZZHeGXvcCLWRCBgBixe4sidr3qAUCu\u2026"
-                }
-            ],
-            "comments_total": 4,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1704,
-            "title": "SurfaceManager: enter each surface only once into the type and world maps",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1704",
-            "author": "jbeirer",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "MarkusFrankATcernch",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- SurfaceManager: surfaces of nested detectors (e.g. the subdetectors of a `DD4hep_SubdetectorAssembly`) are no longer entered several times into the \"world\" and type maps. \r\n\r\nENDRELEASENOTES\r\n\r\nThis is a follow-up to #1703, from the same look at the k4Bench reconstruction benchmarks for FCC-ee. While checking the surface map of ALLEGRO_o1_v04 we noticed that \"world\" has 363,481 entries, although the detector only has 162,979 surfaces.\r\n\r\nThe reason is the assemblies. In ALLEGRO the silicon wrapper and the vertex detector are `DD4hep_SubdetectorAssembly`s with the actual trackers nested inside. `Detector::detectors()` lists the nested trackers on their own and the assemblies as well, and `SurfaceManager::initialize` puts the surfaces of each of them into \"world\". So a s\u2026",
-            "diff": {
-                "additions": 14,
-                "deletions": 3,
-                "files": 1
-            },
-            "files": [
-                "DDRec/src/SurfaceManager.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200219h 36m 36s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 7cb52ec8.\n\n[test-results]:data:application/gzip;base64,H4sIAHKU42oC/12MSw7CIBQAr9KwdgGlFPAy5vFLiG0xfFbGu4uktuhyZpJ5IucXm9B1IOIyoFR8PsmUCNmHrTLHTM5V1Zo/nXL2pVsqWv+ru3\u2026"
-                },
-                {
-                    "author": "MarkusFrankATcernch",
-                    "body": "@jbeirer There is a conflict in the surface manager file. Could you have a look please ?"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "> @jbeirer There is a conflict in the surface manager file. Could you have a look please ?\r\n\r\nDone"
-                },
-                {
-                    "author": "MarkusFrankATcernch",
-                    "body": "Thank you. I will put the MR to auto-merge."
-                }
-            ],
-            "comments_total": 4,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "PandoraPFAOrg",
-            "repo": "LCContent",
-            "num": 46,
-            "title": "Add some user settable bits to the LCCaloHit",
-            "url": "https://github.com/PandoraPFAOrg/LCContent/pull/46",
-            "author": "tmadlener",
-            "mergedAt": "2026-10-29",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "This is the second part of enabling #43. It introduces a bitfield into `LCCaloHit` and also a *BIB* flag as a first example.\r\n\r\n- [x] Needs #45",
-            "diff": {
-                "additions": 219,
-                "deletions": 7,
-                "files": 1
-            },
-            "files": [
-                "include/LCObjects/LCCaloHit.h"
-            ],
-            "comments": [
-                {
-                    "author": "trholmes",
-                    "body": "I was just looking at pushing along the rest of this chain of commits -- is there anything holding this one up from being merged?"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "No, just me not getting to click the necessary buttons, I suppose.\r\n\r\nI will merge this later today, unless someone complains."
-                }
-            ],
-            "comments_total": 2,
             "reviews": [],
             "reviews_total": 0
         }
