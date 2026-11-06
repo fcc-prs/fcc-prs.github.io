@@ -255,17 +255,6 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 444,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/444'>New PropertyChoices Helper Class</a>",
-            "author": "s6anloes",
-            "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
             "num": 445,
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/445'>New SimTrackerHitCellMerger Functional</a>",
             "author": "s6anloes",
@@ -391,7 +380,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/167'>Store generator random seed in output file metadata</a>",
             "author": "kjvbrt",
             "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-05",
+            "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -402,7 +391,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/165'>allow compression level of edm4hep root output to be configured (and make it zstd-5 by default)</a>",
             "author": "davidlange6",
             "createdAt": "2026-10-22",
-            "updatedAt": "2026-11-03",
+            "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -420,22 +409,22 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
-            "num": 69,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/69'>Record generator random seed in output metadata</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-05",
+            "num": 67,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/67'>Review and fix units</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-15",
+            "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4Gen",
-            "num": 67,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/67'>Review and fix units</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-15",
-            "updatedAt": "2026-10-15",
+            "num": 69,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/69'>Record generator random seed in output metadata</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-05",
+            "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -464,34 +453,12 @@
         },
         {
             "repo": "key4hep/<br>k4RecCalorimeter",
-            "num": 295,
-            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/295'>Performance (CPU/memory) improvements for cell noise tools.</a>",
-            "author": "scott-snyder",
-            "createdAt": "2026-10-29",
-            "updatedAt": "2026-10-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecCalorimeter",
-            "num": 296,
-            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/296'>Fix failures seen running genconf.</a>",
-            "author": "scott-snyder",
-            "createdAt": "2026-10-30",
-            "updatedAt": "2026-10-30",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecCalorimeter",
             "num": 294,
             "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/294'>move duplicated in memory trappist onnx models to shared service</a>",
             "author": "davidlange6",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -502,7 +469,7 @@
             "author": "davidlange6",
             "createdAt": "2026-10-22",
             "updatedAt": "2026-10-26",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -513,7 +480,7 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-10-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -535,7 +502,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1183,7 +1150,7 @@
             "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/10'>TrackingValidation: fix truth parameters and matching, align with ACTS</a>",
             "author": "jbeirer",
             "createdAt": "2026-09-30",
-            "updatedAt": "2026-11-05",
+            "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1231,6 +1198,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 289,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/289'>feat(ci): run the nightly on the k4bench VM runners</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-06",
+            "updatedAt": "2026-11-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -1503,17 +1481,6 @@
             "author": "defranchis",
             "createdAt": "2026-10-20",
             "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 513,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/513'>Add a new method to pre-selection and final-selection. Also add some features to do_plots</a>",
-            "author": "tomfournier",
-            "createdAt": "2026-03-23",
-            "updatedAt": "2026-10-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1854,7 +1821,7 @@
             "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/63'>Import TRAPPIST docs</a>",
             "author": "jacofan",
             "createdAt": "2026-10-16",
-            "updatedAt": "2026-11-05",
+            "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2009,7 +1976,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2031,7 +1998,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2042,7 +2009,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2053,7 +2020,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2064,7 +2031,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2074,7 +2041,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1702'>fix(Geant4ParticleHandler): avoid duplicate track-equivalents map at end of event</a>",
             "author": "wdconinc",
             "createdAt": "2026-10-20",
-            "updatedAt": "2026-10-31",
+            "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2086,18 +2053,7 @@
             "author": "veprbl",
             "createdAt": "2026-10-26",
             "updatedAt": "2026-10-29",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1713,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1713'>Make DetElement path and placementPath cimputation thread-safe</a>",
-            "author": "MarkusFrankATcernch",
-            "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2140,7 +2096,7 @@
             "title": "<a href='https://github.com/PandoraPFAOrg/PandoraSDK/pull/35'>Macro Updates</a>",
             "author": "CrossR",
             "createdAt": "2026-08-20",
-            "updatedAt": "2026-10-13",
+            "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
