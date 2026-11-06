@@ -2,6 +2,17 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 681,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/681'>Add FCCee MDI options, adapt ILD MDI</a>",
+            "author": "ueinhaus",
+            "createdAt": "2026-11-06",
+            "updatedAt": "2026-11-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 676,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/676'>[ALLEGRO] - reduce the memory usage and initialisation time of the turbine ECAL endcap</a>",
             "author": "giovannimarchiori",
@@ -409,10 +420,10 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
-            "num": 67,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/67'>Review and fix units</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-15",
+            "num": 69,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/69'>Record generator random seed in output metadata</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-05",
             "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
@@ -420,10 +431,10 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
-            "num": 69,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/69'>Record generator random seed in output metadata</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-11-05",
+            "num": 67,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/67'>Review and fix units</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-10-15",
             "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
@@ -458,7 +469,7 @@
             "author": "davidlange6",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-10-29",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -469,7 +480,7 @@
             "author": "davidlange6",
             "createdAt": "2026-10-22",
             "updatedAt": "2026-10-26",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -480,7 +491,7 @@
             "author": "giovannimarchiori",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-10-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -502,7 +513,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -541,11 +552,11 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 129,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/129'>Add MaterialRecordingAlg: material scan without Geant4</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-12",
-            "updatedAt": "2026-11-05",
+            "num": 140,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/140'>Remove legacy tracking geos and material maps</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-06",
+            "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -706,14 +717,25 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 118,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
+            "author": "Debottam",
+            "createdAt": "2026-10-21",
+            "updatedAt": "2026-11-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 123,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/123'>Adding CombinatorialTrackFinder(CTF): A detector-agnostic track finder based on combinatorial search or seed and extend stratigies</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-05",
+            "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
-            "assignees": ""
+            "assignees": "SanghyunKo"
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -732,17 +754,6 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/121'>TracksFromGenParticles: support truth tracks without SimTrackerHit input</a>",
             "author": "qwert2333",
             "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "SanghyunKo"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 118,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
-            "author": "Debottam",
-            "createdAt": "2026-10-21",
             "updatedAt": "2026-11-05",
             "mergeOk": "yes",
             "labels": "",
@@ -887,6 +898,17 @@
             "author": "apausa",
             "createdAt": "2026-10-16",
             "updatedAt": "2026-10-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
+            "num": 100,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/100'>update property names, B-fiels now taken from GeoSvc</a>",
+            "author": "herrmannlena",
+            "createdAt": "2026-11-06",
+            "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1200,17 +1222,6 @@
             "assignees": "keplerman417"
         },
         {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 289,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/289'>feat(ci): run the nightly on the k4bench VM runners</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-06",
-            "updatedAt": "2026-11-06",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>FCCSW",
             "num": 491,
             "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/491'>Fix tests.</a>",
@@ -1289,12 +1300,23 @@
         },
         {
             "repo": "hep-fcc/<br>FCCDIRAC",
+            "num": 23,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/23'>DRS-1: ZH/ZZ/WW at 240 GeV, IDEA Delphes, Gaudi fastsim + RNTuple</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-06",
+            "updatedAt": "2026-11-06",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCDIRAC",
             "num": 22,
             "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/22'>Add snaseem summer2026 ZH training files</a>",
             "author": "safanaseem",
             "createdAt": "2026-10-21",
             "updatedAt": "2026-10-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1305,7 +1327,7 @@
             "author": "pkontaxa",
             "createdAt": "2026-10-01",
             "updatedAt": "2026-10-01",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1316,7 +1338,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-04-15",
             "updatedAt": "2026-04-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1327,7 +1349,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-01-21",
             "updatedAt": "2026-01-22",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1338,7 +1360,7 @@
             "author": "kjvbrt",
             "createdAt": "2026-01-21",
             "updatedAt": "2026-01-21",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1349,7 +1371,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-05-05",
             "updatedAt": "2025-05-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1360,7 +1382,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-04-28",
             "updatedAt": "2025-04-28",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1371,7 +1393,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-04-10",
             "updatedAt": "2025-04-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1382,7 +1404,7 @@
             "author": "kjvbrt",
             "createdAt": "2025-04-08",
             "updatedAt": "2025-04-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1393,7 +1415,7 @@
             "author": "andresailer",
             "createdAt": "2024-04-18",
             "updatedAt": "2024-04-18",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2030,17 +2052,6 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1692'>fix(Geant4InputHandling): start a tracked parent-less particle at its own production point</a>",
             "author": "jbeirer",
             "createdAt": "2026-10-07",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1702,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1702'>fix(Geant4ParticleHandler): avoid duplicate track-equivalents map at end of event</a>",
-            "author": "wdconinc",
-            "createdAt": "2026-10-20",
             "updatedAt": "2026-11-06",
             "mergeOk": "yes",
             "labels": "",
@@ -2048,12 +2059,12 @@
         },
         {
             "repo": "AIDASoft/<br>DD4hep",
-            "num": 1709,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1709'>fix: avoid printing every constant on failed getRefChild</a>",
-            "author": "veprbl",
-            "createdAt": "2026-10-26",
-            "updatedAt": "2026-10-29",
-            "mergeOk": "no",
+            "num": 1714,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1714'>perf(build): only look for the Python interpreter in DD4hepConfig</a>",
+            "author": "chrisburr",
+            "createdAt": "2026-11-06",
+            "updatedAt": "2026-11-06",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
