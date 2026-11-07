@@ -1,6 +1,42 @@
 {
-    "updated_at": "2026-11-06T13:36:12Z",
+    "updated_at": "2026-11-07T12:16:33Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 290,
+            "title": "ci: run the nightly benchmarks on fcc-ironic again",
+            "url": "https://github.com/key4hep/k4Bench/pull/290",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-07",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "<!-- pr-agent-generated -->\r\n### **User description**\r\nMoves the nightly's benchmark jobs back to the fcc-ironic bare-metal runners. Release resolution, reports, the dashboard deploy and PR review stay on the k4bench `service` runners.\r\n\r\nThe first two nights on the k4bench VMs (11-06, 11-07) show timing noise far above ironic's:\r\n\r\n| night-to-night, same events (fixed seed) | fcc-ironic | k4bench VMs |\r\n|---|---|---|\r\n| sim wall time, median \\|\u0394\\| | 0.7 % | 6.3 % |\r\n| sim wall time, p90 \\|\u0394\\| | 2 % | 25 % |\r\n| configs moving > 5 % | ~0.2 % | 57 % |\r\n| reco wall time, median \\|\u0394\\| | 0.5 % | 18 % |\r\n| peak_vmem, median \\|\u0394\\| | 0.01 % | 0.02 % |\r\n\r\nThe slowdowns are one-sided, vary within a single config, and are not steal time (\u2264 0.05 %) or our own load. The reco auditor's counters show the\u2026",
+            "diff": {
+                "additions": 18,
+                "deletions": 19,
+                "files": 4
+            },
+            "files": [
+                ".github/actionlint.yaml",
+                ".github/ai-review-instructions.md",
+                ".github/workflows/benchmark-detector.yml",
+                "docs/examples/advanced-workflows.md"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/290?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "k4RecCalorimeter",
@@ -248,6 +284,89 @@
                 }
             ],
             "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCCDIRAC",
+            "num": 24,
+            "title": "training: ZH/ZZ/WW at 240 GeV, IDEA Delphes, standalone Gen",
+            "url": "https://github.com/HEP-FCC/FCCDIRAC/pull/24",
+            "author": "kjvbrt",
+            "mergedAt": "2026-11-06",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "Single-stage standalone `DelphesPythia8_EDM4HEP` Gen production\r\n(`key4hep_260408`, IDEA detector, `prodGroup=training`).\r\n\r\nUsed to test if VOMS extension patch works for pilots.\r\n\r\nTransformation IDs (jsmiesko attempt1):\r\n- ZH: 17152\r\n- ZZ: 17153\r\n- WW: 17154",
+            "diff": {
+                "additions": 1160,
+                "deletions": 0,
+                "files": 7
+            },
+            "files": [
+                "productions/summer2026/training/.gitignore",
+                "productions/summer2026/training/card_IDEA.tcl",
+                "productions/summer2026/training/edm4hep_IDEA.tcl",
+                "productions/summer2026/training/p8_ee_WW_ecm240.cmd",
+                "productions/summer2026/training/p8_ee_ZH_ecm240.cmd",
+                "productions/summer2026/training/p8_ee_ZZ_ecm240.cmd",
+                "productions/summer2026/training/pythia_delphes.conf"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1709,
+            "title": "fix: avoid printing every constant on failed getRefChild",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1709",
+            "author": "veprbl",
+            "mergedAt": "2026-11-06",
+            "mergedBy": "MarkusFrankATcernch",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Exceptions from `getRefChild` will no longer contain full constant listing in `e.what()` unless `DD4HEP_LIST_CHILDREN` is set.\r\n\r\nENDRELEASENOTES\r\n\r\nAt ePIC this results in 2000+ constant names printed in error messages. We'd like to propose omitting this information.",
+            "diff": {
+                "additions": 13,
+                "deletions": 6,
+                "files": 1
+            },
+            "files": [
+                "DDCore/src/DetectorImp.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200221h 37m 46s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 13eb286a.\n\n[test-results]:data:application/gzip;base64,H4sIAH3z7WoC/12MSw7CIBQAr9KwdiHl9+plDFBIXmyLobBqvLtIaosuZyaZjXic3EpuHYVLR9aM6aQxR50wLIWVAimLKjV9OlPiS/c1W/uvHv\u2026"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "How often do you run into this issue, and does the printout not help to figure out the typo in your constant?"
+                },
+                {
+                    "author": "veprbl",
+                    "body": "All the time basically. We need to either setup some custom error message rewriting rules or have it removed. The typo use case I understand, but also typos are usually resolved with grep, or closest possible constant may be suggested but that's usually a luxury. What would you suggest?"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "But you get the error because someone made a mistake in a constant name, or for another reason?"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "I can see myself breaking my keyboard because dd4hep tells me it didn't find a constant, but not which possibilities there are.\r\n\r\nWe can gate this with an env variable maybe? DD4HEP_LIST_CONSTANTS to print them out, and mention this possibility in the error message?"
+                },
+                {
+                    "author": "veprbl",
+                    "body": "> But you get the error because someone made a mistake in a constant name, or for another reason?\r\n\r\nNo, it usually has to do with different detector configurations or versions that don't define a constant.\r\n\r\n> I can see myself breaking my keyboard because dd4hep tells me it didn't find a constant,\u2026"
+                },
+                {
+                    "author": "MarkusFrankATcernch",
+                    "body": "If checks succeed I shall merge this PR."
+                }
+            ],
+            "comments_total": 7,
             "reviews": [],
             "reviews_total": 0
         },
@@ -3013,61 +3132,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 947,
-            "title": "Bump docker/login-action from 4.6.0 to 4.7.0",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/947",
-            "author": "dependabot",
-            "mergedAt": "2026-10-31",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [docker/login-action](https://github.com/docker/login-action) from 4.6.0 to 4.7.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/docker/login-action/releases\">docker/login-action's releases</a>.</em></p>\n<blockquote>\n<h2>v4.7.0</h2>\n<ul>\n<li>Preserve explicit ECR settings in <code>registry-auth</code> by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/login-action/pull/1089\">docker/login-action#1089</a></li>\n<li>Use registry hosts for scoped credentials by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/login-action/pull/1088\">docker/login-action#1088</a></li>\n<li>Raise Docker Hub OIDC max expiry to 6 hours \u2026",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                ".github/workflows/docker-build-push-template.yaml",
-                ".github/workflows/image-template.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 946,
-            "title": "Bump int128/docker-manifest-create-action from 2.29.0 to 2.30.0",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/946",
-            "author": "dependabot",
-            "mergedAt": "2026-10-31",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [int128/docker-manifest-create-action](https://github.com/int128/docker-manifest-create-action) from 2.29.0 to 2.30.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/int128/docker-manifest-create-action/releases\">int128/docker-manifest-create-action's releases</a>.</em></p>\n<blockquote>\n<h2>v2.30.0</h2>\n<pre lang=\"yaml\"><code>uses: int128/docker-manifest-create-action@d6ac360314337bbfb870747d9616b83118acb330 # v2.30.0\n</code></pre>\n<h2>What's Changed</h2>\n<ul>\n<li>chore(deps): update dependency <code>@\u200btypes/node</code> to v24.19.1 by <a href=\"https://github.com/renovate\"><code>@\u200brenovate</code></a>[bot] in <a href=\"https://redirect.github.com/int128/docker-manifest-create-action/pull/1269\">int128/docker-manifest-create-action#1269</a></li>\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/image-template.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4Opt",
             "num": 49,
             "title": "Shared stage configuration: samples write once what they share and say only what differs",
@@ -3405,215 +3469,6 @@
                 "tests/unit/optimization/test_resume.py",
                 "tests/unit/problem/conftest.py",
                 "tests/unit/problem/test_assessment.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4PFHitML",
-            "num": 7,
-            "title": "Some cleanup suggestions",
-            "url": "https://github.com/key4hep/k4PFHitML/pull/7",
-            "author": "Zehvogel",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "herrmannlena",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Obtain the magnetic field from geometry instead of from a parameter\n\nENDRELEASENOTES\n\nThe other changes are internal. Some of them are maybe a bit nitpicky. :)",
-            "diff": {
-                "additions": 171,
-                "deletions": 164,
-                "files": 12
-            },
-            "files": [
-                "CMakeLists.txt",
-                "README.md",
-                "k4PF-HitML/CMakeLists.txt",
-                "k4PF-HitML/options/PerformMLPF.py",
-                "k4PF-HitML/src/components/DataPreprocessing.cpp",
-                "k4PF-HitML/src/components/DataPreprocessing.h",
-                "k4PF-HitML/src/components/Helpers.cpp",
-                "k4PF-HitML/src/components/Helpers.h",
-                "k4PF-HitML/src/components/PFHitML.cpp",
-                "k4PF-HitML/src/components/PFParticleBuilder.cpp",
-                "k4PF-HitML/src/components/Shower.cpp",
-                "k4PF-HitML/test/test_PerformHitPF.sh"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "herrmannlena",
-                    "state": "APPROVED",
-                    "body": "looks good"
-                }
-            ],
-            "reviews_total": 6
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 12,
-            "title": "add allegro TRAPPIST Topo clustering file",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/12",
-            "author": "davidlange6",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "Add the TRAPPIST photon/pi0 ID model for topo clusters, used by ALLEGRO digi/reco when run with `--runTRAPPIST`, as in the `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTests in FCC-config.\n\nCompanion package to `ALLEGRO-o1-v03_TRAPPIST_SWClustering`: the two models have the same architecture and size but different weights, and are selected by filename.\n\nExpected sha256:\n- `TRAPPIST_topoclustering.onnx`: `92a7413073e7ef2f81dccfa6ef21a9e0e38c3ccc35afdf524b97b9fa8aeb69bb`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
-            "diff": {
-                "additions": 5,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "fcc_models/ALLEGRO-o1-v03_TRAPPIST_TopoClustering.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 15,
-            "title": "retry summary push when main has moved",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/15",
-            "author": "davidlange6",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "Each run of \"Process FCC Models\" pushes its summary commit back to `main`. If `main` moves during a run, the push is rejected and the run fails. It then leaves no summary and no artifact, and the submission file stays on `main`. This happened to the runs for #7 and #11, which were merged about 25 seconds apart along with #10.\n\nThe commit step now rebases on `main` and retries the push up to 5 times, with a growing delay. Runs for different packages touch different files, so these rebases should be clean. A real conflict, such as two versions of the same package merged together, still fails the run after the retries.\n\nNot tested in a real race: that needs two quick merges to `main`. Checked locally that the workflow YAML and the step's bash parse.\n\n\ud83e\udd16 Generated with [Claude Code](https://cla\u2026",
-            "diff": {
-                "additions": 12,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/process_models.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 14,
-            "title": "reprocess allegro TRAPPIST SW clustering (run for #7 failed)",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/14",
-            "author": "davidlange6",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "Add the TRAPPIST photon/pi0 ID model for sliding-window clusters, used by ALLEGRO digi/reco when run with `--runTRAPPIST`, as in the `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTests in FCC-config.\n\nCompanion package to `ALLEGRO-o1-v03_TRAPPIST_TopoClustering`: the two models have the same architecture and size but different weights, and are selected by filename.\n\nExpected sha256:\n- `TRAPPIST_SWclustering.onnx`: `509d5c561a9dccc6ae04a5c01cf1d210676a8f043cda9ec45befe8874107e74e`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
-            "diff": {
-                "additions": 1,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "fcc_models/ALLEGRO-o1-v03_TRAPPIST_SWClustering.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 13,
-            "title": "reprocess DCHdigi ClusterCounting (run for #11 failed)",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/13",
-            "author": "davidlange6",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "Add the data file for the DCH cluster counting parametrization. The FCC-config `IDEA_o1_v03`, `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTest scripts download it as a prerequisite, so it is needed for those jobs to run without network access. The file is the `fileDataAlg` default of `DCHdigi_v01`.\n\nExpected sha256:\n- `DataAlgFORGEANT.root`: `cb907f2153d1dc2374b2497b66f21722e02cfdc4184571b304916926d1978f36`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
-            "diff": {
-                "additions": 1,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "fcc_models/DCHdigi-v01_ClusterCounting.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 7,
-            "title": "add allegro TRAPPIST SW clustering file",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/7",
-            "author": "davidlange6",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "Add the TRAPPIST photon/pi0 ID model for sliding-window clusters, used by ALLEGRO digi/reco when run with `--runTRAPPIST`, as in the `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTests in FCC-config.\n\nCompanion package to `ALLEGRO-o1-v03_TRAPPIST_TopoClustering`: the two models have the same architecture and size but different weights, and are selected by filename.\n\nExpected sha256:\n- `TRAPPIST_SWclustering.onnx`: `509d5c561a9dccc6ae04a5c01cf1d210676a8f043cda9ec45befe8874107e74e`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
-            "diff": {
-                "additions": 5,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "fcc_models/ALLEGRO-o1-v03_TRAPPIST_SWClustering.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 10,
-            "title": "add IDEA GGTF tracking model",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/10",
-            "author": "davidlange6",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "Add the GGTF track finding model used by digi/reco in the `IDEA_o1_v03`, `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTests in FCC-config. It was trained for IDEA; ALLEGRO uses it until an ALLEGRO-trained model is available.\n\nExpected sha256:\n- `SimpleGatrIDEAv3o1.onnx`: `1670987ca5effc6962063e5c9d54910175b9ecb948cd348e3acf768c911a0805`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
-            "diff": {
-                "additions": 5,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "fcc_models/IDEA-o1-v03_GGTF.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 11,
-            "title": "add DCHdigi ClusterCounting file",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/11",
-            "author": "davidlange6",
-            "mergedAt": "2026-10-30",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "Add the data file for the DCH cluster counting parametrization. The FCC-config `IDEA_o1_v03`, `ALLEGRO_o1_v03` and `ALLEGRO_o2_v01` CTest scripts download it as a prerequisite, so it is needed for those jobs to run without network access. The file is the `fileDataAlg` default of `DCHdigi_v01`.\n\nExpected sha256:\n- `DataAlgFORGEANT.root`: `cb907f2153d1dc2374b2497b66f21722e02cfdc4184571b304916926d1978f36`\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
-            "diff": {
-                "additions": 5,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "fcc_models/DCHdigi-v01_ClusterCounting.yml"
             ],
             "comments": [],
             "comments_total": 0,
