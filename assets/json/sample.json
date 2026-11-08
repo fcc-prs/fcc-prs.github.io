@@ -6,7 +6,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/681'>Add FCCee MDI options, adapt ILD MDI</a>",
             "author": "ueinhaus",
             "createdAt": "2026-11-06",
-            "updatedAt": "2026-11-07",
+            "updatedAt": "2026-11-08",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -321,10 +321,10 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 911,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-08-16",
+            "num": 949,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/949'>Replace the library on MARLIN_DLL in k4_local_repo also with LCG views</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-07",
             "updatedAt": "2026-11-08",
             "mergeOk": "yes",
             "labels": "",
@@ -332,11 +332,11 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 949,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/949'>Replace the library on MARLIN_DLL in k4_local_repo also with LCG views</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-07",
-            "updatedAt": "2026-11-07",
+            "num": 911,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-08-16",
+            "updatedAt": "2026-11-08",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -402,7 +402,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/167'>Store generator random seed in output file metadata</a>",
             "author": "kjvbrt",
             "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-06",
+            "updatedAt": "2026-11-08",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -728,6 +728,17 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 119,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
+            "author": "andread3vita",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-11-08",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 124,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/124'>Update to the TrackMerger to use best matches and cover full angle</a>",
             "author": "ueinhaus",
@@ -780,17 +791,6 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 119,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
-            "author": "andread3vita",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-11-04",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -1245,11 +1245,11 @@
         },
         {
             "repo": "key4hep/<br>k4Opt",
-            "num": 128,
-            "title": "<a href='https://github.com/key4hep/k4Opt/pull/128'>Keep privately what a rerun needs, and say whether a study can be rerun</a>",
+            "num": 129,
+            "title": "<a href='https://github.com/key4hep/k4Opt/pull/129'>Publish what the author approves, and show what a rerun needs</a>",
             "author": "jbeirer",
-            "createdAt": "2026-11-07",
-            "updatedAt": "2026-11-07",
+            "createdAt": "2026-11-08",
+            "updatedAt": "2026-11-08",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
