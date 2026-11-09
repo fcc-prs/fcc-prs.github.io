@@ -1,0 +1,30 @@
+{
+  "updated_at": "2026-11-09T17:05:51Z",
+  "period_start": "2026-11-02",
+  "period_end": "2026-11-09",
+  "summary": [
+    "- **[key4hep/k4SimDelphes#165](https://github.com/key4hep/k4SimDelphes/pull/165)** — The compression of EDM4hep ROOT output from k4SimDelphes is now configurable, and the default is zstd level 5. On 50k Z→visible events this cut file size by 13% and made full read-back 50% faster with the podio ROOTReader (10% with uproot), for negligible extra production time. **This requires podio > 1.9.**",
+    "- **[key4hep/k4Gen#67](https://github.com/key4hep/k4Gen/pull/67)** — Fixes several unit errors in event generation: GaussSmearVertex time smearing was about 300 times too small and is now converted correctly from ns. HepEVTReader and MDIReader now convert production times to ns. HepMCFileReader and HepMC2FileReader now convert events to GeV and mm, including the root vertex position. Samples generated with vertex time smearing or from non-GeV/mm HepMC files will differ from earlier output.",
+    "- **[key4hep/EDM4hep#543](https://github.com/key4hep/EDM4hep/pull/543)** — Adds GeneratorRandomSeed and SimulationRandomSeed labels for recording random seeds in file metadata. k4Gen now uses the first label to store the Pythia8 seed, which **requires EDM4hep > 1.2** (see also **[key4hep/k4Gen#69](https://github.com/key4hep/k4Gen/pull/69)**). Reviewers noted that DD4hep already stores its seed differently: under \"random.seed\" in run-level metadata rather than file-level metadata. This inconsistency is still to be resolved.",
+    "- **[AIDASoft/DD4hep#1712](https://github.com/AIDASoft/DD4hep/pull/1712)** — Fixes crashes in multi-threaded ddsim (numberOfThreads > 1), first seen with ALLEGRO. The cause was that DetElement nominal and survey alignments and the VolumeManager were created lazily without protection against concurrent first access from Geant4 worker threads. DetElement path computation got the same treatment (see also **[AIDASoft/DD4hep#1713](https://github.com/AIDASoft/DD4hep/pull/1713)**).",
+    "- **[AIDASoft/DD4hep#1702](https://github.com/AIDASoft/DD4hep/pull/1702)** — Geant4ParticleHandler no longer makes two full copies of the per-track equivalence map at end of event. For very large events this reduced peak memory by about 23% (1.5 GB) in EIC tests.",
+    "- **[AIDASoft/DD4hep#1709](https://github.com/AIDASoft/DD4hep/pull/1709)** — A failed constant lookup (getRefChild) no longer prints the full list of defined constants in the exception message. Set the DD4HEP_LIST_CHILDREN environment variable to restore the listing when debugging typos.",
+    "- **[key4hep/k4RecCalorimeter#295](https://github.com/key4hep/k4RecCalorimeter/pull/295)** — Refactors the noise tools that read from file into a common ReadNoiseFromFileBaseTool. The tools now precompute the cell-ID-to-bin mapping, which lowers CPU and memory use. ALLEGRO results are verified identical; out-of-tree code deriving from the old classes may need adapting.",
+    "- **[key4hep/k4RecTracker#120](https://github.com/key4hep/k4RecTracker/pull/120)** — When every fit attempt fails, GenfitTrackFitter now drops the track instead of writing an empty placeholder (chi2 = ndf = -1). The output track collections are therefore no longer index-aligned with the input. Downstream algorithms that relied on that alignment must adapt.",
+    "- **[key4hep/k4Opt#82](https://github.com/key4hep/k4Opt/pull/82)** — Adds a reconstruction stage, run through k4run, to the k4Opt detector-optimization pipeline. Objectives can now be measured on reconstructed objects such as particle-flow objects and tracks, for example with the CLD reconstruction, not only on simulated hits.",
+    "- **[key4hep/k4Opt#88](https://github.com/key4hep/k4Opt/pull/88)** — k4opt optimize can now run nested studies: each candidate at one level, such as an ECAL cell size, gets its own inner study, for example tuning Pandora thresholds. Detector layouts can thus be compared at their best reconstruction settings rather than at defaults."
+  ],
+  "usage": {
+    "cache_creation": "CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0)",
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "us",
+    "input_tokens": 58056,
+    "output_tokens": 3,
+    "output_tokens_details": null,
+    "server_tool_use": null,
+    "service_tier": "standard",
+    "speed": "standard"
+  },
+  "cost_usd": 0.232284
+}
