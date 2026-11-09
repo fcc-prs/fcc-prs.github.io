@@ -11,22 +11,60 @@ import json
 import os
 import re
 import urllib.request
+from datetime import date, timedelta
 
+import httplib2
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
+from google_auth_httplib2 import AuthorizedHttp
 from googleapiclient.discovery import build
 
 SCOPES = [
     "https://www.googleapis.com/auth/documents",
-    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/drive.file",
 ]
+
+INDICO_CATEG_URL = "https://indico.cern.ch/export/categ/5666.json"
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CREDENTIALS_FILE = os.path.join(REPO_ROOT, "google_apps.json")
 TOKEN_FILE = os.path.join(REPO_ROOT, "token.json")
 LAST_DOC_FILE = os.path.join(REPO_ROOT, "assets", "json", "last_doc.json")
 SUMMARY_URL = "https://fcc-prs.github.io/assets/json/summary.json"
+
+
+def compute_meeting_window():
+    """Return (start, end) as date objects: next Tuesday through the following Tuesday."""
+    today = date.today()
+    days_until_tuesday = (1 - today.weekday()) % 7 or 7  # 1 = Tuesday
+    start = today + timedelta(days=days_until_tuesday)
+    end = start + timedelta(days=7)
+    return start, end
+
+
+def fetch_indico_meetings(start, end):
+    """Fetch PS&C events from Indico between start and end (date objects).
+    Returns list of {title, url, day} dicts sorted by date. Returns [] on any error."""
+    url = f"{INDICO_CATEG_URL}?from={start}&to={end}&detail=events"
+    try:
+        with urllib.request.urlopen(url, timeout=10) as resp:
+            data = json.load(resp)
+        meetings = []
+        for ev in data.get("results", []):
+            start_info = ev.get("startDate", {})
+            dt = date.fromisoformat(start_info.get("date", ""))
+            meetings.append({
+                "title": ev["title"],
+                "url": ev["url"],
+                "day": dt.strftime("%A"),
+                "date": dt,
+            })
+        meetings.sort(key=lambda m: m["date"])
+        return meetings
+    except Exception as e:
+        print(f"Warning: could not fetch Indico meetings: {e}")
+        return []
 
 
 def get_credentials():
@@ -71,7 +109,7 @@ def parse_markdown_segments(text):
     return segments
 
 
-def build_doc_parts(data):
+def build_doc_parts(data, meetings=None):
     """
     Returns (subject, full_text, styles) where
     styles = [(char_start, char_end, url_or_None, bold), ...].
@@ -102,6 +140,17 @@ def build_doc_parts(data):
     # Build a flat list of (text, url, bold) parts
     parts = []
     parts.append((subject_line, None, True))
+    if meetings:
+        parts.append(("PS&C meetings this week include ", None, False))
+        for i, m in enumerate(meetings):
+            if i > 0:
+                sep = " and " if i == len(meetings) - 1 else ", "
+                parts.append((sep, None, False))
+            parts.append((m["title"], None, False))
+            parts.append((" (", None, False))
+            parts.append((m["url"], m["url"], False))
+            parts.append((f") on {m['day']}", None, False))
+        parts.append((".\n\n", None, False))
     parts.append((intro, None, False))
     for i, bullet in enumerate(bullets):
         if i > 0:
@@ -124,9 +173,10 @@ def build_doc_parts(data):
     return subject, full_text, styles
 
 
-def create_doc(subject, full_text, styles):
+def create_doc(subject, full_text, styles, timeout=120):
     creds = get_credentials()
-    service = build("docs", "v1", credentials=creds)
+    authorized_http = AuthorizedHttp(creds, http=httplib2.Http(timeout=timeout))
+    service = build("docs", "v1", http=authorized_http)
 
     doc = service.documents().create(body={"title": f"DRAFT — {subject}"}).execute()
     doc_id = doc["documentId"]
@@ -165,7 +215,7 @@ def create_doc(subject, full_text, styles):
         ).execute()
 
     # Set permissions via Drive API
-    drive = build("drive", "v3", credentials=creds)
+    drive = build("drive", "v3", http=authorized_http)
     # Anyone with the link can comment
     drive.permissions().create(
         fileId=doc_id,
@@ -203,7 +253,11 @@ if __name__ == "__main__":
         with urllib.request.urlopen(SUMMARY_URL) as resp:
             data = json.load(resp)
 
-    subject, full_text, styles = build_doc_parts(data)
+    start, end = compute_meeting_window()
+    print(f"Fetching Indico meetings {start} – {end}...")
+    meetings = fetch_indico_meetings(start, end)
+    print(f"Found {len(meetings)} meeting(s)")
+    subject, full_text, styles = build_doc_parts(data, meetings=meetings)
     print(f"Subject: {subject}")
     print(f"Doc length: {len(full_text)} chars, {len(styles)} styled spans")
     print("Creating Google Doc...")
