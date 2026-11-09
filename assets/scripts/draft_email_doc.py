@@ -122,8 +122,8 @@ def build_doc_parts(data, meetings=None):
     subject = f"[FCC PS&C] Summary ({period_start} – {period_end})"
     subject_line = f"Subject: {subject}\n\n"
 
-    intro = (
-        f"Dear all,\n\n"
+    greeting = "Dear all,\n\n"
+    pr_intro = (
         f"Here is a summary of the most notable pull requests merged in the FCC/Key4hep "
         f"software ecosystem during the previous week (ending {period_end}).\n\n"
     )
@@ -140,7 +140,7 @@ def build_doc_parts(data, meetings=None):
     # Build a flat list of (text, url, bold) parts
     parts = []
     parts.append((subject_line, None, True))
-    parts.append((intro, None, False))
+    parts.append((greeting, None, False))
     if meetings:
         parts.append(("PS&C meetings this week include ", None, False))
         for i, m in enumerate(meetings):
@@ -152,6 +152,7 @@ def build_doc_parts(data, meetings=None):
             parts.append((m["url"], m["url"], False))
             parts.append((f") on {m['day']}", None, False))
         parts.append((".\n\n", None, False))
+    parts.append((pr_intro, None, False))
     for i, bullet in enumerate(bullets):
         if i > 0:
             parts.append(("\n\n", None, False))
