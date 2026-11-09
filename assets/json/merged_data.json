@@ -1,6 +1,323 @@
 {
-    "updated_at": "2026-11-08T12:36:39Z",
+    "updated_at": "2026-11-09T14:54:23Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4SimDelphes",
+            "num": 165,
+            "title": "allow compression level of edm4hep root output to be configured (and make it zstd-5 by default)",
+            "url": "https://github.com/key4hep/k4SimDelphes/pull/165",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- allow compression level of edm4hep root output to be configured (and make it zstd-5). **This will require podio > 1.9**\r\n\r\nENDRELEASENOTES\r\n\r\nRequires aida-soft/podio#1050\r\n\r\nBenefit in storage 13%\r\nBenefit at read time w/ ROOTReader: 50% faster read back of all branches\r\nBenefit at read time w/ uproot: 10% faster read back of all branches\r\nCost at production time:  1s out of 850s\r\n\r\nMeasured on 50k Z->visible events\r\n\r\n- [x] Needs https://github.com/AIDASoft/podio/pull/1050",
+            "diff": {
+                "additions": 27,
+                "deletions": 4,
+                "files": 3
+            },
+            "files": [
+                "converter/include/k4SimDelphes/DelphesEDM4HepOutputConfiguration.h",
+                "doc/output_config.md",
+                "standalone/src/DelphesMain.h"
+            ],
+            "comments": [
+                {
+                    "author": "davidlange6",
+                    "body": "switching to rntuple saves another O(15%) [eg, 25% total reduction in output size]."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "CI workflows that are expected to pass, pass. I will merge this later today."
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Gen",
+            "num": 69,
+            "title": "Record generator random seed in output metadata",
+            "url": "https://github.com/key4hep/k4Gen/pull/69",
+            "author": "kjvbrt",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Record the Pythia8 generator random seed as GeneratorRandomSeed in the output file metadata. **This will require EDM4hep > 1.2**.\r\n\r\nENDRELEASENOTES\r\n\r\nWrites the Pythia8 Random:seed used by this job into the output file's\r\nmetadata via k4FWCore::putParameter, using the edm4hep::labels\r\nconstant (key4hep/EDM4hep#543). Distinct from Delphes' own RandomSeed,\r\nrecorded separately in key4hep/k4SimDelphes#167.",
+            "diff": {
+                "additions": 4,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "k4Gen/src/components/PythiaInterface.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Gen",
+            "num": 67,
+            "title": "Review and fix units",
+            "url": "https://github.com/key4hep/k4Gen/pull/67",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Fix the time smearing in `GaussSmearVertex`: `tVertexSigma` and `tVertexMean` are times (default unit ns) and are now multiplied by `c_light`, since HepMC3 stores c*t as a length. Before, the smearing was ~300 times too small.\n - Convert the production time `VHEP4` (mm/c) to ns in `HepEVTReader` and `MDIReader`.\n - Convert events read by `HepMCFileReader` and `HepMC2FileReader` to GeV and mm, since `read_event` keeps the units of the file. Includes a workaround for the event position (root vertex), which `GenEvent::set_units` does not convert.\n - Use `Gaudi::Units::c_light` in `HepMCToEDMConverter`.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 27,
+                "deletions": 9,
+                "files": 7
+            },
+            "files": [
+                "k4Gen/src/components/GaussSmearVertex.cpp",
+                "k4Gen/src/components/GaussSmearVertex.h",
+                "k4Gen/src/components/HepEVTReader.cpp",
+                "k4Gen/src/components/HepMC2FileReader.cpp",
+                "k4Gen/src/components/HepMCFileReader.cpp",
+                "k4Gen/src/components/HepMCToEDMConverter.cpp",
+                "k4Gen/src/components/MDIReader.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "This looks OK to me. I would merge this unless there are still comments."
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "This looks OK to me. I would merge this unless there are still comments."
+                }
+            ],
+            "reviews_total": 2
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-actions",
+            "num": 62,
+            "title": "Upload CLD reconstruction file alongside histograms",
+            "url": "https://github.com/key4hep/key4hep-actions/pull/62",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Upload the CLD reconstruction file (`rec_test_edm4hep_REC.edm4hep.root`) alongside the AIDA histogram in the `CLD ROOT files` artifact.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 3,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "key4hep-build/action.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 131,
+            "title": "Watch what stages looked for in vain within a session",
+            "url": "https://github.com/key4hep/k4Opt/pull/131",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Fixes the two footprint-consistency findings of the repository review of `1a0a9ca`.\n\n## Problem\n\nA stage's footprint records the paths it failed to open (missing, or refused), but those were checked only on a resume, and only the missing ones:\n\n- **Within a session** nothing checked them. Trial 0 takes the defaults without an optional `override.json`, the file appears, and trial 1 reads it. Both trials were recorded in one study.\n- **Reuse across studies** checked a footprint once per output per session. After that, the reused output's read files were watched, but not what it looked for in vain. The same file appearing let later candidates reuse the output and record a mix.\n- **A resume** ignored refused paths that became readable.\n\n## Change\n\n- A footprint's `denied` now keeps, for each r\u2026",
+            "diff": {
+                "additions": 416,
+                "deletions": 103,
+                "files": 11
+            },
+            "files": [
+                "docs/execution.md",
+                "docs/software.md",
+                "k4opt/execution/_baseline.py",
+                "k4opt/execution/_publish.py",
+                "k4opt/execution/_reuse.py",
+                "k4opt/execution/_session.py",
+                "k4opt/software/observe.py",
+                "tests/support/fake_stack/bin/ddsim",
+                "tests/unit/execution/session/test_observation.py",
+                "tests/unit/execution/session/test_records.py",
+                "tests/unit/software/test_observe.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 130,
+            "title": "Scan the snapshot for secrets, seed reconstructions, and count every run",
+            "url": "https://github.com/key4hep/k4Opt/pull/130",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Fixes the findings of the latest repository-wide review and three open issues, with two more bugs found on the way.\n\n## Publication: scan the snapshot, not only the files beside it\n\nThe secret scan looked only at the code and input files offered beside a snapshot, never at the snapshot itself: the problem definition, trial messages (which carry the last lines of ddsim's or k4run's stderr) and diagnostics went out unscanned. A study read from its JSON form was not scanned at all, yet `k4opt publish` printed `scan  nothing found`.\n\n- New `k4opt/publication/exposure.py`: the secret patterns (moved from `artifacts.py`), `public_snapshot()` and `local_paths()` (moved from `write.py`).\n- Each text is scanned as a reader reads it, not as JSON escapes it: scanning the raw JSON bytes would miss `pa\u2026",
+            "diff": {
+                "additions": 1226,
+                "deletions": 225,
+                "files": 37
+            },
+            "files": [
+                "dashboard/tables.py",
+                "docs/evaluators.md",
+                "docs/execution.md",
+                "docs/k4run.md",
+                "docs/problem.md",
+                "docs/publication.md",
+                "docs/visualization.md",
+                "examples/nested/cld-pi0-nested.yaml",
+                "k4opt/execution/_stages.py",
+                "k4opt/k4run/command.py",
+                "k4opt/k4run/joboptions.py",
+                "k4opt/k4run/run.py",
+                "k4opt/optimization/_results.py",
+                "k4opt/problem/_parameters.py",
+                "k4opt/problem/_samples.py",
+                "k4opt/problem/models.py",
+                "k4opt/problem/outline.py",
+                "k4opt/problem/stages.py",
+                "k4opt/publication/__init__.py",
+                "k4opt/publication/artifacts.py",
+                "k4opt/publication/cli.py",
+                "k4opt/publication/exposure.py",
+                "k4opt/publication/write.py",
+                "k4opt/visualization/graph.py",
+                "tests/integration/k4run/test_k4run.py",
+                "tests/integration/optimization/test_optimize_cld_nested.py",
+                "tests/support/fake_stack/bin/k4run",
+                "tests/unit/execution/session/test_reconstruction.py",
+                "tests/unit/k4run/test_joboptions.py",
+                "tests/unit/k4run/test_run.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 129,
+            "title": "Publish what the author approves, and show what a rerun needs",
+            "url": "https://github.com/key4hep/k4Opt/pull/129",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-08",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Last PR of the software provenance series. A study already keeps privately what a rerun needs (#128). This PR decides what of that leaves the machine, under the author's approval, and shows it on the dashboard.\n\n## What a publication holds\n\nBeside each snapshot, `k4opt publish` always writes a **software sheet** (`studies/<id>/software/<sha16>.json`, `k4opt.software-sheet/1`). It holds the status, and each requirement with its state, who can get it (`public`, `on request`, `none`) and, for a local build, its source and what ran kept apart. The sheet is built field by field, so it holds no path, size, variable name, host, or digest of an unpublished file. The catalog entry names the sheet, and readers check its size, its SHA-256 and that it belongs to the snapshot.\n\nFiles the author approve\u2026",
+            "diff": {
+                "additions": 5751,
+                "deletions": 175,
+                "files": 30
+            },
+            "files": [
+                ".github/workflows/ci.yml",
+                "dashboard/data.py",
+                "dashboard/labels.py",
+                "dashboard/study.py",
+                "dashboard/tables.py",
+                "dashboard/views/software.py",
+                "docs/dashboard.md",
+                "docs/publication.md",
+                "docs/software.md",
+                "k4opt/jsonio.py",
+                "k4opt/publication/__init__.py",
+                "k4opt/publication/artifacts.py",
+                "k4opt/publication/catalog.py",
+                "k4opt/publication/cli.py",
+                "k4opt/publication/read.py",
+                "k4opt/publication/sheet.py",
+                "k4opt/publication/write.py",
+                "k4opt/software/keep.py",
+                "k4opt/software/readiness.py",
+                "k4opt/software/source.py",
+                "tests/integration/software/test_restore.py",
+                "tests/support/published.py",
+                "tests/unit/dashboard/test_app.py",
+                "tests/unit/dashboard/test_cache.py",
+                "tests/unit/dashboard/test_tables.py",
+                "tests/unit/publication/test_artifacts.py",
+                "tests/unit/publication/test_publish.py",
+                "tests/unit/publication/test_read.py",
+                "tests/unit/software/test_readiness.py",
+                "tests/unit/software/test_source.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 128,
+            "title": "Keep privately what a rerun needs, and say whether a study can be rerun",
+            "url": "https://github.com/key4hep/k4Opt/pull/128",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-08",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "PR 4 of the software provenance series (after #124, #126, #127). A study now keeps, in its `software/` directory, what a rerun would need that is not public, and `k4opt study show` says what that is, whether it is there, and what that allows.\n\n## What a study keeps (privately, in `<study>/software/`)\n\n| Kept | When |\n| --- | --- |\n| **The release**: the LCG view's manifests (34 kB gzipped), and for each HEAD package the commit it was built from (`.buildinfo_<pkg>.txt`), which the manifests do not say | session open |\n| **Local builds**, each local entry grouped into an *origin*: a CMake build (`<checkout>/install`), local code (in a checkout or not), an environment of installed distributions. A build is linked to its checkout (`verified`: its CMake cache installs there and the build tree's\u2026",
+            "diff": {
+                "additions": 5459,
+                "deletions": 27,
+                "files": 42
+            },
+            "files": [
+                "docs/execution.md",
+                "docs/software.md",
+                "k4opt/execution/_session.py",
+                "k4opt/execution/_work.py",
+                "k4opt/geometry/materialize.py",
+                "k4opt/jsonio.py",
+                "k4opt/optimization/_keep.py",
+                "k4opt/optimization/_optuna/run.py",
+                "k4opt/optimization/_optuna/tell.py",
+                "k4opt/optimization/_optuna/tree.py",
+                "k4opt/optimization/_show.py",
+                "k4opt/record/read.py",
+                "k4opt/record/write.py",
+                "k4opt/software/cli.py",
+                "k4opt/software/keep.py",
+                "k4opt/software/overlays.py",
+                "k4opt/software/readiness.py",
+                "k4opt/software/source.py",
+                "k4opt/software/stack.py",
+                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/DD4hep/HEAD/x86_64-el9-gcc16-opt/.buildinfo_DD4hep.txt",
+                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/LCG_externals_x86_64-el9-gcc16-opt.txt",
+                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/cldconfig/HEAD/x86_64-el9-gcc16-opt/.buildinfo_cldconfig.txt",
+                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/cldconfig/HEAD/x86_64-el9-gcc16-opt/share/CLDConfig/CLDReconstruction.py",
+                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/cldconfig/HEAD/x86_64-el9-gcc16-opt/share/CLDConfig/ParticleFlow/Pandora.py",
+                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/cldconfig/HEAD/x86_64-el9-gcc16-opt/share/CLDConfig/event_display.py",
+                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/ddmarlinpandora/HEAD/x86_64-el9-gcc16-opt/.buildinfo_ddmarlinpandora.txt",
+                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/ddmarlinpandora/HEAD/x86_64-el9-gcc16-opt/lib/libDDMarlinPandora.so.0.14.0",
+                "tests/integration/software/test_restore.py",
+                "tests/support/checkouts.py",
+                "tests/support/evaluators.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "k4Bench",
@@ -2810,101 +3127,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 36,
-            "title": "Exclude fcc-drs and mc-productions-tutorials from commit checks",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/36",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-02",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "scripts/check-commits-after-tag.sh"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4PFHitML",
-            "num": 8,
-            "title": "Add --detector option (CLD/ILD) to PerformMLPF.py",
-            "url": "https://github.com/key4hep/k4PFHitML/pull/8",
-            "author": "Olmichu22",
-            "mergedAt": "2026-11-02",
-            "mergedBy": "herrmannlena",
-            "labels": [],
-            "body": "Add a detector preset that sets the input collection names and the truth-matching geometry in one switch:\n\n- CLD (default): same values as before / the compiled defaults.\n- ILD (**ILD_FCCee_v01**): EcalBarrel/EcalEndcaps/HcalBarrel/HcalEndcaps CollectionRec, HcalEndcapRingCollectionRec as HcalOtherHits, MUON, MarlinTrkTracks + MarlinTrkTracksMCTruthLink; truth barrel radius 1805 mm, octagonal barrel, endcap z 2412 mm, B = 2 T.\n\n--truth_barrel_radius, --truth_n_barrel_sides, --truth_endcap_z and --bFieldTesla now default to None and fall back to the preset, so they can still be overridden explicitly.",
-            "diff": {
-                "additions": 56,
-                "deletions": 9,
-                "files": 1
-            },
-            "files": [
-                "k4PF-HitML/options/PerformMLPF.py"
-            ],
-            "comments": [
-                {
-                    "author": "Zehvogel",
-                    "body": "#7 changed some of the property names for input collections, so this will not work as is"
-                },
-                {
-                    "author": "Olmichu22",
-                    "body": "> #7 changed some of the property names for input collections, so this will not work as is\n\nRebased on top of #7: updated the input property names, and the presets now also select the compact file, since the B field comes from GeoSvc. Tested on 20 events each: CLD results are unchanged compared to t\u2026"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [
-                {
-                    "author": "herrmannlena",
-                    "state": "APPROVED",
-                    "body": "thanks for checking the generalizability. looks good to me"
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4PFHitML",
-            "num": 9,
-            "title": "Make the truthmatching not rely on collection IDs",
-            "url": "https://github.com/key4hep/k4PFHitML/pull/9",
-            "author": "Zehvogel",
-            "mergedAt": "2026-11-02",
-            "mergedBy": "herrmannlena",
-            "labels": [],
-            "body": "As the collection IDs are not set until the files are actually on disk",
-            "diff": {
-                "additions": 68,
-                "deletions": 89,
-                "files": 3
-            },
-            "files": [
-                "k4PF-HitML/src/components/EvaluationSummary.cpp",
-                "k4PF-HitML/src/components/PFHitML.cpp",
-                "k4PF-HitML/src/components/TruthMatcher.h"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "herrmannlena",
-                    "state": "APPROVED",
-                    "body": "looks okay to me"
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
             "repo": "k4Opt",
             "num": 59,
             "title": "A rejected trial is read back only as rejected by a required evaluation",
@@ -3087,358 +3309,6 @@
                 "k4opt/optimization/_optuna/storage.py",
                 "k4opt/optimization/_results.py",
                 "k4opt/optimization/_show.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 55,
-            "title": "Restructure: problem, record and execution components; workers; overlap fix",
-            "url": "https://github.com/key4hep/k4Opt/pull/55",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-02",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "An external review of `main` at 01c7a8c found one isolation bug and argued that `k4opt.problem`\nowned far more than the definition of a problem. This PR fixes the bug, isolates the evaluators\nof `k4opt optimize` from the process that coordinates the study, and splits `k4opt.problem`\nalong the responsibilities that were already there. Nothing is kept for compatibility: imports,\nthe `--jobs` option and the `execution` field of records change (schemas keep their names).\n\n## Components and dependency direction\n\n```\ngeometry   ddsim   evaluation\n     \\       |       /\n          problem          definition: models, parsing, stage types, task plan, candidates, contract\n             |\n          record           summary.json: task results, statuses, write, read back, assessment\n             |\n     \u2026",
-            "diff": {
-                "additions": 6654,
-                "deletions": 5387,
-                "files": 99
-            },
-            "files": [
-                "CONTRIBUTING.md",
-                "README.md",
-                "docs/ddsim.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/execution.md",
-                "docs/optimization.md",
-                "docs/problem.md",
-                "docs/record.md",
-                "k4opt/__init__.py",
-                "k4opt/cli.py",
-                "k4opt/ddsim/command.py",
-                "k4opt/evaluation/__init__.py",
-                "k4opt/evaluation/declaration.py",
-                "k4opt/execution/__init__.py",
-                "k4opt/execution/_backends.py",
-                "k4opt/execution/_baseline.py",
-                "k4opt/execution/_binding.py",
-                "k4opt/execution/_cpus.py",
-                "k4opt/execution/_drive.py",
-                "k4opt/execution/_files.py",
-                "k4opt/execution/_instances.py",
-                "k4opt/execution/_process.py",
-                "k4opt/execution/_publish.py",
-                "k4opt/execution/_schedule.py",
-                "k4opt/execution/_session.py",
-                "k4opt/execution/_stages.py",
-                "k4opt/execution/_tasks.py",
-                "k4opt/execution/_work.py",
-                "k4opt/execution/_worker.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 54,
-            "title": "Cleanup: --storage and in-flight output fixes; the problem package in cohesive modules",
-            "url": "https://github.com/key4hep/k4Opt/pull/54",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-02",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Two bug fixes, a decomposition of the largest `k4opt/problem` modules into cohesive ones, and two flaky tests made deterministic. Public imports, CLI, `problem.yaml`, `summary.json`, `study.json`, geometry fingerprints, Optuna attributes and resume are unchanged.\n\nBase: `9d59cd3`. 13 commits, best reviewed one by one; the move commits are pure moves (`git show --color-moved=plain --color-moved-ws=allow-indentation-change <sha>`).\n\n## Fixes\n\n**`--storage` was reached before the study directory was checked** (`a6f91ea`). `k4opt optimize --storage URL` opened the database, which creates a SQLite file and Optuna's tables, before refusing an output directory in use. A new study now checks its directory first, then reaches the database, then makes the directory, so neither a directory in use nor\u2026",
-            "diff": {
-                "additions": 6398,
-                "deletions": 5625,
-                "files": 35
-            },
-            "files": [
-                "docs/evaluation.md",
-                "docs/optimization.md",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/_optuna/storage.py",
-                "k4opt/problem/__init__.py",
-                "k4opt/problem/_assess.py",
-                "k4opt/problem/_backends.py",
-                "k4opt/problem/_binding.py",
-                "k4opt/problem/_candidate.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_files.py",
-                "k4opt/problem/_record.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/_stages.py",
-                "k4opt/problem/_summary.py",
-                "k4opt/problem/_tasks.py",
-                "k4opt/problem/_work.py",
-                "k4opt/problem/cli.py",
-                "requirements.txt",
-                "tests/support/worker_probe.py",
-                "tests/unit/optimization/test_read_storage.py",
-                "tests/unit/optimization/test_storage.py",
-                "tests/unit/problem/conftest.py",
-                "tests/unit/problem/session/conftest.py",
-                "tests/unit/problem/session/test_command.py",
-                "tests/unit/problem/session/test_descriptions.py",
-                "tests/unit/problem/session/test_records.py",
-                "tests/unit/problem/session/test_samples.py",
-                "tests/unit/problem/session/test_session.py",
-                "tests/unit/problem/test_evaluators.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "PandoraPFAOrg",
-            "repo": "PandoraSDK",
-            "num": 41,
-            "title": "feature/optical_hits_rebase",
-            "url": "https://github.com/PandoraPFAOrg/PandoraSDK/pull/41",
-            "author": "AndyChappell",
-            "mergedAt": "2026-11-02",
-            "mergedBy": "AndyChappell",
-            "labels": [],
-            "body": "This PR adds optical hits to the calo hit types.",
-            "diff": {
-                "additions": 3,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                "CMakeLists.txt",
-                "include/Pandora/PandoraEnumeratedTypes.h"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Clue",
-            "num": 85,
-            "title": "Bump CMake project version to 1.1.1",
-            "url": "https://github.com/key4hep/k4Clue/pull/85",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-01",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Update the CMake project version to 1.1.1 to match tag v01-01-01.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4GeneratorsConfig",
-            "num": 89,
-            "title": "Bump CMake project version to 1.0.1",
-            "url": "https://github.com/key4hep/k4GeneratorsConfig/pull/89",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-01",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Update the numeric CMake project version to 1.0.1 to match tag v1.0.1-alpha.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 288,
-            "title": "feat(blame): comment on reco regressions in the reconstruction stack's repositories",
-            "url": "https://github.com/key4hep/k4Bench/pull/288",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-01",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\n### **User description**\nTurns on pull-request comments for the reco suite. `.github/blame-comments.yml` now lists 18 repositories under `reco:`, grouped in the file:\n\n- **Algorithms:** key4hep/k4RecTracker, HEP-FCC/k4RecCalorimeter, key4hep/k4Reco\n- **Steering:** key4hep/CLDConfig, HEP-FCC/FCC-config\n- **Geometry and framework:** AIDASoft/DD4hep, key4hep/k4geo, key4hep/k4FWCore\n- **iLCSoft processors:** iLCSoft/ConformalTracking, iLCSoft/MarlinTrkProcessors, iLCSoft/Clupatra, iLCSoft/MarlinReco, iLCSoft/DDMarlinPandora, lcfiplus/LCFIPlus\n- **Shared plumbing:** AIDASoft/podio, key4hep/EDM4hep, key4hep/k4MarlinWrapper, PandoraPFAOrg/lccontent\n\nThe slugs are the ones the reco runs record for these packages. `min_score` (70) and `max_comments` (10 per night) still \u2026",
-            "diff": {
-                "additions": 36,
-                "deletions": 13,
-                "files": 4
-            },
-            "files": [
-                ".github/blame-comments.yml",
-                "docs/user-guide/features/dashboard.md",
-                "docs/user-guide/features/pr-comments.md",
-                "tests/unit/test_blame_comment.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## PR Code Suggestions \u2728\n\n<!-- pr-agent:improve:summary -->\n\n<!-- 896b247 -->\n\nExplore these optional code suggestions:\n\n<table><thead><tr><td><strong>Category</strong></td><td align=left><strong>Suggestion&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## PR Reviewer Guide \ud83d\udd0d\n\n<!-- pr-agent:review:full -->\n\nHere are some key observations to aid the review process:\n\n<table>\n<tr><td>\n\n**\ud83c\udfab Ticket compliance analysis \ud83d\udd36**\n\n\n\n**[1703](https://github.com/AIDASoft/DD4hep/issues/1703) - Partially compliant**\n\nCompliant requirements:\n\n- None (not applicable \u2026"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/288?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 53,
-            "title": "Resources: CPU-aware scheduling, --jobs auto, peak memory, progress and a benchmark",
-            "url": "https://github.com/key4hep/k4Opt/pull/53",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-01",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "PR 4, the last of the local parallel execution series (after #50, #51 and #52): resources,\nprogress and a benchmark. Scheduler, backends and records keep their design; this adds what\nthey need to fit a machine and to be observed.\n\n## CPU-aware scheduling\n\n- A simulation that ddsim runs on several threads (`numberOfThreads: 4` in its stage) holds as\n  many job slots while it runs. The scheduler already took costs. `task_cpus` now derives them\n  from the problem, and `Backend.cost(cpus)` maps them to slots (local: `min(cpus, jobs)`).\n  The task's `TaskSpec.cpus` carries the same number for a later batch backend.\n- **Bounded bypass.** While a heavier task waits at the head for its slots, later tasks that\n  fit may start instead, at most `capacity` of them. After that nothing starts until the \u2026",
-            "diff": {
-                "additions": 1513,
-                "deletions": 152,
-                "files": 37
-            },
-            "files": [
-                "docs/ddsim.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/optimization.md",
-                "k4opt/ddsim/__init__.py",
-                "k4opt/ddsim/command.py",
-                "k4opt/ddsim/run.py",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/_render.py",
-                "k4opt/optimization/cli.py",
-                "k4opt/problem/__init__.py",
-                "k4opt/problem/_backends.py",
-                "k4opt/problem/_cpus.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/_schedule.py",
-                "k4opt/problem/_stages.py",
-                "k4opt/problem/_tasks.py",
-                "k4opt/problem/_work.py",
-                "k4opt/problem/_worker.py",
-                "k4opt/problem/cli.py",
-                "k4opt/terminal.py",
-                "tests/benchmarks/parallel.py",
-                "tests/support/common.py",
-                "tests/support/fake_stack/bin/ddsim",
-                "tests/support/worker_probe.py",
-                "tests/unit/ddsim/test_command.py",
-                "tests/unit/ddsim/test_run.py",
-                "tests/unit/optimization/test_cli.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 52,
-            "title": "Parallel optimization: k4opt optimize --jobs N runs trials at once",
-            "url": "https://github.com/key4hep/k4Opt/pull/52",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-01",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "PR 3 of the local parallel execution series (after #50 and #51): `k4opt optimize --jobs N` runs\nthe trials of a study at once, on the session's worker processes.\n\n## What changes\n\n- **`optimize(..., jobs=N)` / `k4opt optimize --jobs N` (`-j N`).** The study drives\n  `EvaluationSession.evaluate_each`. Optuna is asked for a candidate only when a job would\n  otherwise be idle, and only after every trial that ended was told. Each trial is told as it\n  ends, in completion order, after the same checks of its record (`_report`). With one job the\n  sequence is unchanged: ask, evaluate, tell, ask. `jobs` is a runtime argument like `timeout`:\n  it is not in `study.json`, not in the identity and not compared on resume.\n- **Settlement invariant.** A trial is in `in_flight` from the moment `ask()` retu\u2026",
-            "diff": {
-                "additions": 668,
-                "deletions": 58,
-                "files": 10
-            },
-            "files": [
-                "docs/evaluation.md",
-                "docs/optimization.md",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_optuna/optimizer.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/cli.py",
-                "tests/integration/optimization/test_optimize_cld.py",
-                "tests/unit/optimization/test_cli.py",
-                "tests/unit/optimization/test_optimize.py",
-                "tests/unit/optimization/test_parallel.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 51,
-            "title": "Local process backend: k4opt evaluate --jobs N runs tasks in worker processes",
-            "url": "https://github.com/key4hep/k4Opt/pull/51",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-01",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "PR 2 of the local parallel execution series (after #50, the execution boundary).\n\n## What changes\n\n`EvaluationSession.open(..., jobs=N)`, `run_candidate(jobs=N)` and `k4opt evaluate --jobs/-j N` let up to N tasks run at once, both within one candidate (the simulations of its samples, the evaluations of a simulation) and across several (`evaluate_each`). The default, 1, keeps today's behavior: every task runs in the caller's thread, in plan order, with the preflight's instances.\n\n- **`ProcessBackend`** (`_backends.py`)\n  - Workers persist between tasks and are started lazily, up to N. Each one talks to the session over a socket pair; `python -P -c` puts this k4opt's directory first on its path. One worker is started and checked when the session opens.\n  - Stopping a task sends SIGTERM to it\u2026",
-            "diff": {
-                "additions": 2350,
-                "deletions": 208,
-                "files": 24
-            },
-            "files": [
-                "docs/ddsim.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "k4opt/ddsim/__init__.py",
-                "k4opt/ddsim/_launch.py",
-                "k4opt/ddsim/run.py",
-                "k4opt/problem/_backends.py",
-                "k4opt/problem/_evaluate.py",
-                "k4opt/problem/_instances.py",
-                "k4opt/problem/_run.py",
-                "k4opt/problem/_stages.py",
-                "k4opt/problem/_work.py",
-                "k4opt/problem/_worker.py",
-                "k4opt/problem/cli.py",
-                "tests/integration/problem/test_evaluate_ddsim.py",
-                "tests/support/common.py",
-                "tests/support/evaluators.py",
-                "tests/support/fake_stack/bin/ddsim",
-                "tests/support/fake_stack/python/podio/__init__.py",
-                "tests/support/fake_stack/python/podio/reading.py",
-                "tests/support/stack.py",
-                "tests/support/worker_probe.py",
-                "tests/unit/ddsim/test_run.py",
-                "tests/unit/problem/test_parallel.py"
             ],
             "comments": [],
             "comments_total": 0,
