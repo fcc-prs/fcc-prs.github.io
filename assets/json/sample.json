@@ -6,7 +6,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/681'>Add FCCee MDI options, adapt ILD MDI</a>",
             "author": "ueinhaus",
             "createdAt": "2026-11-06",
-            "updatedAt": "2026-11-08",
+            "updatedAt": "2026-11-09",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -402,18 +402,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/167'>Store generator random seed in output file metadata</a>",
             "author": "kjvbrt",
             "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-08",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4SimDelphes",
-            "num": 165,
-            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/165'>allow compression level of edm4hep root output to be configured (and make it zstd-5 by default)</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-10-22",
-            "updatedAt": "2026-11-06",
+            "updatedAt": "2026-11-09",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -426,28 +415,6 @@
             "createdAt": "2021-03-15",
             "updatedAt": "2026-09-20",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Gen",
-            "num": 69,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/69'>Record generator random seed in output metadata</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-06",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Gen",
-            "num": 67,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/67'>Review and fix units</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-10-15",
-            "updatedAt": "2026-11-06",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -673,17 +640,6 @@
         },
         {
             "repo": "key4hep/<br>key4hep-actions",
-            "num": 62,
-            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/62'>Upload CLD reconstruction file alongside histograms</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-05",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-actions",
             "num": 56,
             "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/56'>Use the LCG nightlies for the downstream builds</a>",
             "author": "jmcarcell",
@@ -728,11 +684,33 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 119,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
+            "author": "andread3vita",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-11-09",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 123,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/123'>Adding CombinatorialTrackFinder(CTF): A detector-agnostic track finder based on combinatorial search or seed and extend stratigies</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-08",
+            "updatedAt": "2026-11-09",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
+            "num": 118,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
+            "author": "Debottam",
+            "createdAt": "2026-10-21",
+            "updatedAt": "2026-11-09",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
@@ -747,28 +725,6 @@
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 119,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/119'>[TrackFinder] Major CPU-time and memory optimization   </a>",
-            "author": "andread3vita",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-11-08",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 118,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/118'>Brem recovery</a>",
-            "author": "Debottam",
-            "createdAt": "2026-10-21",
-            "updatedAt": "2026-11-06",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "SanghyunKo"
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
@@ -997,6 +953,17 @@
             "author": "jmcarcell",
             "createdAt": "2026-08-02",
             "updatedAt": "2026-10-29",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-tutorials",
+            "num": 34,
+            "title": "<a href='https://github.com/key4hep/key4hep-tutorials/pull/34'>Fix higgs recoil analysis instructions</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-09",
+            "updatedAt": "2026-11-09",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1326,7 +1293,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/23'>DRS-1: ZH/ZZ/WW at 240 GeV, IDEA Delphes, Gaudi fastsim + RNTuple</a>",
             "author": "kjvbrt",
             "createdAt": "2026-11-06",
-            "updatedAt": "2026-11-06",
+            "updatedAt": "2026-11-09",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1469,7 +1436,18 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
             "createdAt": "2026-08-11",
-            "updatedAt": "2026-11-05",
+            "updatedAt": "2026-11-09",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 557,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
+            "author": "bndikt",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-11-09",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1480,7 +1458,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/576'>Fix event counting for RNTuple inputs</a>",
             "author": "bndikt",
             "createdAt": "2026-11-02",
-            "updatedAt": "2026-11-04",
+            "updatedAt": "2026-11-09",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1504,17 +1482,6 @@
             "createdAt": "2022-04-22",
             "updatedAt": "2026-10-26",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 557,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
-            "author": "bndikt",
-            "createdAt": "2026-09-16",
-            "updatedAt": "2026-10-23",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1960,11 +1927,11 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-cvmfs",
-            "num": 16,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-cvmfs/pull/16'>Add k4PFHitML (HitPF) ONNX models for CLD</a>",
-            "author": "Zehvogel",
-            "createdAt": "2026-10-31",
-            "updatedAt": "2026-10-31",
+            "num": 21,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-cvmfs/pull/21'>feat: add CLD reconstruction config bundle r2025-11-07</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-11-09",
+            "updatedAt": "2026-11-09",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2086,6 +2053,17 @@
             "author": "chrisburr",
             "createdAt": "2026-11-06",
             "updatedAt": "2026-11-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1715,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1715'>DDCore: use std::call_once for threadsafe MultipoleField initialization</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-11-09",
+            "updatedAt": "2026-11-09",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
