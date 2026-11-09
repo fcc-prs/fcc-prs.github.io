@@ -37,6 +37,11 @@ Prioritise in this order:
 - **All repositories**: exclude CMake flags or code guards added solely to enable
   compilation in non-FCC experiment stacks (e.g. Muon Collider, ILD, SiD), even
   if the change is in an otherwise FCC-relevant package.
+- **Multi-experiment packages** (e.g. k4ActsTracking, k4geo outside FCC paths):
+  only include PRs where the description or changed files clearly indicate FCC
+  relevance. Exclude PRs that are explicitly targeted at non-FCC experiments
+  (Muon Collider, ILD, CLIC, LUXE, SiD) even if they add significant new
+  functionality.
 
 ## Tense and voice
 
@@ -54,12 +59,20 @@ Prioritise in this order:
 - If every PR from a given repository is excluded, that repository must be omitted from
   the Summary entirely — no bullet, no heading, no mention. It will be represented only
   through its individual entries in the Omitted section.
-- One bullet per pull request — do not group multiple PRs into a single bullet.
+- One bullet per pull request. Exception: if a PR is a minor direct follow-up to
+  another PR already included (e.g. a thread-safety fix that completes the previous
+  PR's work), reference it as "(see also **org/repo#N**)" at the end of the parent
+  entry rather than giving it its own bullet.
 - Bullet format:
     **[org/repo#num](pr_url)** — one to two sentences describing the change,
     its motivation, and any downstream impact.
 - Omit implementation-level detail (internal code paths, variable names, data
   structures). State what changed, why it matters, and any downstream impact.
+  Where possible, name the affected FCC experiment or workflow (ALLEGRO, CLD, IDEA,
+  etc.) and describe the observable symptom that was fixed (crashes, wrong output,
+  excessive memory use) rather than the internal mechanism.
+- No backtick or code formatting in descriptions — write class names, function names,
+  and tool names as plain text.
 - Descriptions must be plain prose — no nested or sub-bullets within a PR entry.
-- Aim for at most 12 bullets. If more PRs qualify, apply the Include priority order to
+- Aim for 5–10 bullets. If more PRs qualify, apply the Include priority order to
   select the most significant; move the rest to Omitted with reason "lower priority".
