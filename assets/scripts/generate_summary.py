@@ -205,7 +205,7 @@ output = {
     "period_end": period_end,
     "summary": summary_paragraphs,
     "omitted": omitted,
-    "usage": {**usage_fields},
+    "usage": {k: (v if isinstance(v, (int, float, str, bool, type(None))) else str(v)) for k, v in usage_fields.items()},
     "cost_usd": cost,
 }
 
