@@ -140,6 +140,7 @@ def build_doc_parts(data, meetings=None):
     # Build a flat list of (text, url, bold) parts
     parts = []
     parts.append((subject_line, None, True))
+    parts.append((intro, None, False))
     if meetings:
         parts.append(("PS&C meetings this week include ", None, False))
         for i, m in enumerate(meetings):
@@ -151,7 +152,6 @@ def build_doc_parts(data, meetings=None):
             parts.append((m["url"], m["url"], False))
             parts.append((f") on {m['day']}", None, False))
         parts.append((".\n\n", None, False))
-    parts.append((intro, None, False))
     for i, bullet in enumerate(bullets):
         if i > 0:
             parts.append(("\n\n", None, False))
