@@ -2572,6 +2572,16 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 126,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/issues/126'>Implement a recovery mechanism for unmerged tracks that are left over</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-10",
+            "updatedAt": "2026-11-10",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 90,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/issues/90'>Rename C++ component library to avoid Python module collision with Tracking directory</a>",
             "author": "Victor-Schwan",
@@ -5038,6 +5048,306 @@
             "createdAt": "2026-10-30",
             "updatedAt": "2026-10-30",
             "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 190,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/190'>Support for multiple input sources in parallel</a>",
+            "author": "hegner",
+            "createdAt": "2021-05-03",
+            "updatedAt": "2021-05-04",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 199,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/199'>Discussion on improved doxygen documentation for generated code</a>",
+            "author": "tmadlener",
+            "createdAt": "2021-07-20",
+            "updatedAt": "2024-05-07",
+            "labels": "documentation",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 227,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/227'>Automatically Run Performance Benchmarks</a>",
+            "author": "andresailer",
+            "createdAt": "2021-10-11",
+            "updatedAt": "2021-10-11",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 228,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/228'>Easier interface to set and get collection Metadata</a>",
+            "author": "andresailer",
+            "createdAt": "2021-10-11",
+            "updatedAt": "2023-06-05",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 264,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/264'>Create from object, not just variadic with fields</a>",
+            "author": "wdconinc",
+            "createdAt": "2022-03-15",
+            "updatedAt": "2022-03-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 271,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/271'>Support for emplace_back in Collections</a>",
+            "author": "wdconinc",
+            "createdAt": "2022-03-24",
+            "updatedAt": "2022-03-25",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 302,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/302'>`CollectionBase::getBuffers` should be marked `const`</a>",
+            "author": "tmadlener",
+            "createdAt": "2022-06-14",
+            "updatedAt": "2023-07-14",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 379,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/379'>The Frame API should also provide information on the types of the stored collections</a>",
+            "author": "tmadlener",
+            "createdAt": "2023-02-23",
+            "updatedAt": "2023-05-15",
+            "labels": "enhancement",
+            "assignees": "hegner"
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 386,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/386'>Schema Evolution ToDo-List for v1.1</a>",
+            "author": "hegner",
+            "createdAt": "2023-03-09",
+            "updatedAt": "2023-10-13",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 392,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/392'>Handle writing of datamodel definitions of dependent models properly</a>",
+            "author": "tmadlener",
+            "createdAt": "2023-03-20",
+            "updatedAt": "2023-03-20",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 403,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/403'>PODIO implicit plug-in mechanism is not robust enough</a>",
+            "author": "tmadlener",
+            "createdAt": "2023-04-04",
+            "updatedAt": "2023-04-04",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 443,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/443'>Codify state machines of readers and writers</a>",
+            "author": "hegner",
+            "createdAt": "2023-07-11",
+            "updatedAt": "2023-07-11",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 474,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/474'>Make podio a (pip installable) python package</a>",
+            "author": "tmadlener",
+            "createdAt": "2023-09-01",
+            "updatedAt": "2023-09-01",
+            "labels": "enhancement \nhelp wanted",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 537,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/537'>how to retrieve the cell ID encoding from the metadata in the output ROOT file</a>",
+            "author": "atolosadelgado",
+            "createdAt": "2024-01-11",
+            "updatedAt": "2025-08-20",
+            "labels": "help wanted \ndocumentation",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 565,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/565'>Frame serialization/deserialization</a>",
+            "author": "faustus123",
+            "createdAt": "2024-02-23",
+            "updatedAt": "2026-02-24",
+            "labels": "",
+            "assignees": "hegner"
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 569,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/569'>Automatically ship collection level metadata</a>",
+            "author": "BrieucF",
+            "createdAt": "2024-03-15",
+            "updatedAt": "2024-03-15",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 647,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/647'>Support for reading multiple files with SIO</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-07-24",
+            "updatedAt": "2026-02-17",
+            "labels": "enhancement \ngood first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 655,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/655'>Add possibility to retrospectively promote subset collections to full collections</a>",
+            "author": "Zehvogel",
+            "createdAt": "2024-08-22",
+            "updatedAt": "2024-09-23",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 703,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/703'>Harmonize python tool configuration</a>",
+            "author": "tmadlener",
+            "createdAt": "2024-11-08",
+            "updatedAt": "2024-11-08",
+            "labels": "good first issue",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 805,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/805'>Lack of collection ownership in Python allows reusing collections from an existing frame</a>",
+            "author": "jmcarcell",
+            "createdAt": "2025-07-01",
+            "updatedAt": "2025-07-01",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 848,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/848'>Investigate whether it is possible to catch mismatched EDM versions early</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-09-19",
+            "updatedAt": "2025-09-19",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 850,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/850'>Add type hints to the code generator and to the python bindings</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-09-29",
+            "updatedAt": "2025-09-29",
+            "labels": "enhancement \ndocumentation \npython",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 866,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/866'>Add logging facilities</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-10-20",
+            "updatedAt": "2026-03-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 879,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/879'>Support for renaming relations</a>",
+            "author": "tmadlener",
+            "createdAt": "2025-11-18",
+            "updatedAt": "2025-11-18",
+            "labels": "enhancement \nschema evolution",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 920,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/920'>`podio-dump` output of MCParticle table can be improved</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-01-13",
+            "updatedAt": "2026-02-06",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 997,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/997'>[RFC] Collections guaranteed to preserve ordering?</a>",
+            "author": "veprbl",
+            "createdAt": "2026-07-31",
+            "updatedAt": "2026-08-10",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1026,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/1026'>Split tests/unittests/unittest.cpp into non-ROOT and ROOT-based files</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-09-23",
+            "updatedAt": "2026-09-23",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1038,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/1038'>strace tests fail for dev3 based workflows since root switch to cppjit</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-10-08",
+            "updatedAt": "2026-10-08",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1042,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/1042'>Improve the caching situation of build artifacts to have better hit rates</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-10-13",
+            "updatedAt": "2026-10-13",
+            "labels": "enhancement \nCI",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1073,
+            "title": "<a href='https://github.com/AIDASoft/podio/issues/1073'>Dropping support for building with c++20</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-09",
+            "updatedAt": "2026-11-09",
+            "labels": "",
             "assignees": ""
         },
         {
