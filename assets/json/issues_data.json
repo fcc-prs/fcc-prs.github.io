@@ -1252,22 +1252,22 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
+            "num": 539,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/539'>Store dx (for dQ/dx) in hit class?</a>",
+            "author": "ueinhaus",
+            "createdAt": "2026-10-30",
+            "updatedAt": "2026-11-09",
+            "labels": "enhancement \ndiscussion",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
             "num": 547,
             "title": "<a href='https://github.com/key4hep/EDM4hep/issues/547'>We need documentation for the (intended) usage of the labels</a>",
             "author": "tmadlener",
             "createdAt": "2026-11-06",
             "updatedAt": "2026-11-06",
             "labels": "documentation \nenhancement",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
-            "num": 539,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/issues/539'>Store dx (for dQ/dx) in hit class?</a>",
-            "author": "ueinhaus",
-            "createdAt": "2026-10-30",
-            "updatedAt": "2026-11-02",
-            "labels": "enhancement",
             "assignees": ""
         },
         {
@@ -2292,6 +2292,16 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 141,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/141'>CKF test options: inner tracker seeding layers fall outside the seeding range</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-09",
+            "updatedAt": "2026-11-09",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 133,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/133'>Ensure to use TrackState::Location usage where possible</a>",
             "author": "tmadlener",
@@ -2672,11 +2682,11 @@
         },
         {
             "repo": "key4hep/<br>CLDConfig",
-            "num": 61,
-            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/61'>Transverse impact parameter discrepancy between full and fast simulation</a>",
-            "author": "saracreates",
-            "createdAt": "2025-01-20",
-            "updatedAt": "2026-11-07",
+            "num": 35,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/35'>Known Issues</a>",
+            "author": "Zehvogel",
+            "createdAt": "2024-06-13",
+            "updatedAt": "2026-11-09",
             "labels": "",
             "assignees": ""
         },
@@ -2696,16 +2706,6 @@
             "title": "<a href='https://github.com/key4hep/CLDConfig/issues/96'>Digitised muon system hits have no time</a>",
             "author": "Zehvogel",
             "createdAt": "2026-07-07",
-            "updatedAt": "2026-07-07",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>CLDConfig",
-            "num": 35,
-            "title": "<a href='https://github.com/key4hep/CLDConfig/issues/35'>Known Issues</a>",
-            "author": "Zehvogel",
-            "createdAt": "2024-06-13",
             "updatedAt": "2026-07-07",
             "labels": "",
             "assignees": ""
@@ -3302,16 +3302,6 @@
         },
         {
             "repo": "key4hep/<br>k4Opt",
-            "num": 117,
-            "title": "<a href='https://github.com/key4hep/k4Opt/issues/117'>Confirm whether tuned 2.5 mm cells really beat tuned 4 mm in the \u03c0\u2070 example</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-05",
-            "labels": "documentation",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Opt",
             "num": 116,
             "title": "<a href='https://github.com/key4hep/k4Opt/issues/116'>Keep the trade-off comparison when moving between levels in the dashboard</a>",
             "author": "jbeirer",
@@ -3352,16 +3342,6 @@
         },
         {
             "repo": "key4hep/<br>k4Opt",
-            "num": 112,
-            "title": "<a href='https://github.com/key4hep/k4Opt/issues/112'>Model graph counts only top-level records for each stage</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-05",
-            "labels": "bug",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Opt",
             "num": 111,
             "title": "<a href='https://github.com/key4hep/k4Opt/issues/111'>Profile and tuning-curve figures for nested studies</a>",
             "author": "jbeirer",
@@ -3374,16 +3354,6 @@
             "repo": "key4hep/<br>k4Opt",
             "num": 110,
             "title": "<a href='https://github.com/key4hep/k4Opt/issues/110'>`study show` should offer an independent check of the winner</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-05",
-            "updatedAt": "2026-11-05",
-            "labels": "enhancement",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Opt",
-            "num": 109,
-            "title": "<a href='https://github.com/key4hep/k4Opt/issues/109'>Replicates do not reseed random inputs of the reconstruction</a>",
             "author": "jbeirer",
             "createdAt": "2026-11-05",
             "updatedAt": "2026-11-05",
@@ -3789,6 +3759,26 @@
             "updatedAt": "2017-01-16",
             "labels": "",
             "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 214,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/214'>Tutorial Point 2.2.2 not working</a>",
+            "author": "zerox174",
+            "createdAt": "2026-11-09",
+            "updatedAt": "2026-11-09",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 213,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/213'>Migration of fcc-tutorials from Sphinx to Jupyter Book</a>",
+            "author": "michmx",
+            "createdAt": "2026-11-09",
+            "updatedAt": "2026-11-09",
+            "labels": "",
+            "assignees": "michmx"
         },
         {
             "repo": "hep-fcc/<br>fcc-tutorials",
@@ -4656,7 +4646,7 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/60'>Dependency Dashboard</a>",
             "author": "renovate",
             "createdAt": "2026-08-20",
-            "updatedAt": "2026-11-07",
+            "updatedAt": "2026-11-10",
             "labels": "",
             "assignees": ""
         },
