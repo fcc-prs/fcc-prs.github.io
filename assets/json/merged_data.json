@@ -1,6 +1,493 @@
 {
-    "updated_at": "2026-11-09T14:54:23Z",
+    "updated_at": "2026-11-10T14:07:32Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 676,
+            "title": "[ALLEGRO] - reduce the memory usage and initialisation time of the turbine ECAL endcap",
+            "url": "https://github.com/key4hep/k4geo/pull/676",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Place the turbine ECAL endcap cells of each wheel in a dedicated mother volume to reduce memory and initialisation time\n\nENDRELEASENOTES\n\nECalEndcap_Turbine_o1_v03: place the unit cells of each wheel in a dedicated mother volume.\nThe unit cells (passive + active, ~5000 placements of boolean solids) were  placed directly in the LAr bath, whose Geant4 voxelisation took most of the ddsim initialisation time. Each wheel is now a LAr tube inside the bath, coinciding with the tube used to cut the blades, so that Geant4 voxelises the three wheels separately.\n\nTested on ALLEGRO_o1_v03, full detector with ddsim, single photons and Z->qq\n- time to first event: ~175 s -> ~104 s (1 thread), ~120 s -> ~40 s (8 threads)\n- peak RSS: -1.9 GB\n- on the other hand, event processing increa\u2026",
+            "diff": {
+                "additions": 23,
+                "deletions": 8,
+                "files": 1
+            },
+            "files": [
+                "detector/calorimeter/ECalEndcap_Turbine_o1_v03_geo.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Tagging @varnes"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I also agree an increase in simulation time is not great, in particular in large productions where initialization time may be small compared to the total."
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @varnes and @jmcarcell, I agree that the per-event cost is the relevant figure for large productions. \r\nIt depends, however, how large productions are going to be handles: single jobs with many tens of thousands of events? Or smaller jobs producing say 2k events each and then merged?\r\nAlso, pleas\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Since the per-event cost is the relevant figure for large productions, I repeated the measurement more carefully, on Z->qq events at the Z pole (Pythia8) and single-photons in the endcap\r\n\r\n- comparison repeated N times (N=12 in single-core, 6 in 8-core mode) with N different seeds; 150 events for e\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "To avoid any extrapolation, I also ran real production-like jobs of **1000 events** each, comparing the baseline (`main`) with this PR, for three samples: Z->qq, Z->ee and single photons in the endcap.\r\nAgain, I ran 6 pairs of jobs per sample. In each pair the baseline job and the job with this PR s\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Results with **8 threads** (`ddsim --numberOfThreads 8`), with the same samples and the same procedure as above: 6 pairs of 1000-event jobs per sample; in each pair the baseline job and the job with this PR simulate the same events with the same seed. Each job is pinned to 8 dedicated physical cores\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Can you add a column in the table above with the relative change in the s per event so that we don't have to do the math?"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Is 1k event jobs really representative of what we would run in production jobs if we run multithreaded? I see the single threaded versions running approx. 1.5h  for the physics sample, which, I would assume is still a bit on the shorter side of things? Especially for grid jobs, I think we would in t\u2026"
+                },
+                {
+                    "author": "BrieucF",
+                    "body": "I think this change is good. The weight between central productions and people running ALLEGRO simulation for development or physics studies with small samples is largely in favor of the latter, and will be for quite some time. Also, having to wait a few more seconds/minutes (to be quantified) for a\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "> Can you add a column in the table above with the relative change in the s per event so that we don't have to do the math?\r\n\r\nthe relative change in s/evt (event loop only, without initialisation/finalisation)  is the column time/event, PR vs baseline"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "> For the 8-thread jobs, I think 1k jobs are probably too short? They are essentially only a few minutes and I think we would probably try to have longer running jobs, so maybe 10k events / job to get back to where the original single threaded jobs were.\r\n\r\nI have scheduled 10k-event tests for Z->qq\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> having to wait a few more seconds/minutes (to be quantified) for a GRID job to finish (which is launched and then not looked at for a while) is probably less impactful than having to wait 3 times longer for the initialization in an \"interactive\" usage for development.\r\n\r\nThat's also a good point, \u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "I ran the 8-thread comparison also with **10 000 events per job**, to check the case of long production jobs. \r\n\r\n| sample | baseline | this PR | difference | time/event, PR vs baseline | peak RSS |\r\n|---|---|---|---|---|---|\r\n| Z->qq | 75.5 min | 74.2 min | -80 s (-1.8 %) | +0.0 \u00b1 0.9 % | 9.0 -> 7.\u2026"
+                },
+                {
+                    "author": "BrieucF",
+                    "body": "> I ran the 8-thread comparison also with **10 000 events per job**, to check the case of long production jobs.\r\n> sample \tbaseline \tthis PR \tdifference \ttime/event, PR vs baseline \tpeak RSS\r\n> Z->qq \t75.5 min \t74.2 min \t-80 s (-1.8 %) \t+0.0 \u00b1 0.9 % \t9.0 -> 7.0 GB\r\n> Z->ee \t69.3 min \t69.1 min \t-15 s\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Thanks for the quick turnaround. I agree with Brieuc. Having less memory consumption should be worth the slight increase in per event processing time."
+                },
+                {
+                    "author": "varnes",
+                    "body": "I am seeing something strange at reco level in my tests.  I've run 1k 10-GeV photons, uniformly distributed in phi (0 to 2pi)  and in theta (5-40 degrees).  Clusters are reconstructed using SW.  Below are plots of the cluster energy vs radial position, for both the current and re-factored geometries\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Thanks a lot @varnes for spotting this! It is a real bug in the PR, not a problem in your tests, and it is fixed in the last commit. For my tests I had only looked at the output of ddsim but not to the output of the reconstruction. \r\n\r\nWith this PR the `active`/`passive` unit cells of each wheel are\u2026"
+                },
+                {
+                    "author": "varnes",
+                    "body": "Hi @giovannimarchiori Thanks, I can confirm that your update does fix the issue:\r\n\r\n<img width=\"633\" height=\"448\" alt=\"image\" src=\"https://github.com/user-attachments/assets/76475955-c4c5-4c87-aa85-6c3d1310ae84\" />"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "If @varnes formally approves the PR I think that we can merge"
+                }
+            ],
+            "comments_total": 19,
+            "reviews": [
+                {
+                    "author": "varnes",
+                    "state": "COMMENTED",
+                    "body": "Hi @giovannimarchiori the memory and startup time reductions are impressive!  However I'm not sure how to weigh this against the 3-8% increase in event processing time.  It seems that jobs with a large number of events and/or high-energy clusters will take longer overall.  Is this a significant conc\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "This looks to be good to go, right? Just for completeness let me also drag @scott-snyder to have all ALLEGRO codeowners be aware of this.\n\nI will let others approve of this officially, but the trade-off discussed (and implemented) here is good from my side."
+                }
+            ],
+            "reviews_total": 3
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 548,
+            "title": "Add ReconstructionRandomSeed label",
+            "url": "https://github.com/key4hep/EDM4hep/pull/548",
+            "author": "kjvbrt",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Adds a label constant for the random seed used by the reconstruction, to be\nstored as EDM4hep file metadata, in addition to GeneratorRandomSeed and\nSimulationRandomSeed from #543.\n\nBEGINRELEASENOTES\n - Add ReconstructionRandomSeed metadata label.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 3,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "include/edm4hep/Constants.h"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 542,
+            "title": "Make the vector utils available in python",
+            "url": "https://github.com/key4hep/EDM4hep/pull/542",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Make sure the *vector utils* are available also in python after `import edm4hep`\r\n- Include the supported data type definitions in dataframe.h so RDF utilities work with the vector utilities loaded.\r\n\r\nENDRELEASENOTES\r\n\r\nSurfaced in https://github.com/key4hep/k4ActsTracking/pull/108 that this is not yet the case.",
+            "diff": {
+                "additions": 272,
+                "deletions": 11,
+                "files": 5
+            },
+            "files": [
+                "python/edm4hep/__init__.py",
+                "test/utils/test_vector_utils.py",
+                "utils/include/edm4hep/utils/dataframe.h",
+                "utils/include/edm4hep/utils/vector_utils.h",
+                "utils/src/dataframe.cc"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Some test that at least it can be imported from python would be good to have"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Possible fix for CI: https://github.com/key4hep/EDM4hep/pull/544\r\nI think it is not the first time we have issues when loading these headers"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4SimDelphes",
+            "num": 167,
+            "title": "Store generator random seed in output file metadata",
+            "url": "https://github.com/key4hep/k4SimDelphes/pull/167",
+            "author": "kjvbrt",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n - Record GeneratorRandomSeed/SimulationRandomSeed (edm4hep::labels) in the output file metadata.\r\n\r\nENDRELEASENOTES\r\n\r\nStandalone executables (DelphesMain.h) record both: GeneratorRandomSeed\r\nvia the new DelphesInputReader::seed(), and SimulationRandomSeed from\r\nconfReader's ::RandomSeed.\r\n\r\nk4SimDelphesAlg (Gaudi-wrapped) only records SimulationRandomSeed,\r\nsince it only owns Delphes' own card. The generator seed for that path\r\nis recorded separately in key4hep/k4Gen#69 (PythiaInterface).\r\n\r\nThe metadata Frame is now always written (previously only when more\r\nthan one weight name was present).",
+            "diff": {
+                "additions": 24,
+                "deletions": 3,
+                "files": 6
+            },
+            "files": [
+                "framework/k4SimDelphes/src/k4SimDelphesAlg.cpp",
+                "standalone/src/DelphesInputReader.h",
+                "standalone/src/DelphesMain.h",
+                "standalone/src/DelphesPythia8EvtGenReader.h",
+                "standalone/src/DelphesPythia8EvtGenReader_k4Interface.h",
+                "standalone/src/DelphesPythia8Reader.h"
+            ],
+            "comments": [
+                {
+                    "author": "kjvbrt",
+                    "body": "The plan is to store the random seed primarily in the file/edm4hep metadata, but maybe also in the job parameters/attributes in iLCDirac.\r\n\r\nYes, Delphes random seed should be also recorded, pushed first version too quickly.\r\n\r\nCan I add also other delphes+something executables to this PR?"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I suppose storing this in file metadata is one way, but I am not sure if long term all generators expose their random seeds as easily as Pythia does. As far as I am aware there is also no real standardization on the HepMC3 side for example to store the random seed, so I would say that it will probab\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> Can I add also other delphes+something executables to this PR?\r\n\r\nWhat executables are we talking about here? Resp. is this about storing more information from executables or actual executables (i.e. binaries)?"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "CI workflows that are expected to pass, pass."
+                },
+                {
+                    "author": "kjvbrt",
+                    "body": "> > Can I add also other delphes+something executables to this PR?\r\n> \r\n> What executables are we talking about here? Resp. is this about storing more information from executables or actual executables (i.e. binaries)?\r\n\r\nThe other standalone ones, for example this one: `DelphesPythia8EvtGen_EDM4HEP\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Ah, I see. If the changes are related they can go to this PR, otherwise they should go to another one.\r\n\r\nIn principle, all of the generator interfaces should really go to k4gen, I think. Ideally we call k4SimDelphes through Gaudi and have a consistent set of generator interfaces.\r\n\r\nThere is an anc\u2026"
+                }
+            ],
+            "comments_total": 6,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Do you also store the random seed somewhere else in the production system? I think you might also want to store the Delphes random seed (here and in some production metadata database).\n\nCan you bring back our `{BEGIN,END}RELEASENOTES` tags in the top comment to make this easier to be picked up by th\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "Generally looks good to me. I think storing `0` as the default value for the Delphes part is OK, as that would signal that Delphes chose any random number seed. We need to document the (intended) usage of these labels. I will open an issue in EDM4hep for that."
+                }
+            ],
+            "reviews_total": 10
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 146,
+            "title": "Use C++23 in the ACTS master workflow",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/146",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Use C++23 for ACTS master and k4ActsTracking in the ACTS master workflow, as ACTS now requires it to build.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/acts-master-ci.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 142,
+            "title": "add two way to CKFfromSeeds",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/142",
+            "author": "madbaron",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "madbaron",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Update CKFTrackingFromSeedsAlg to support two-way CKF\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 19,
+                "deletions": 7,
+                "files": 1
+            },
+            "files": [
+                "k4ActsTracking/src/components/CKFTrackingFromSeedsAlg.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 119,
+            "title": "[TrackFinder] Major CPU-time and memory optimization   ",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/119",
+            "author": "andread3vita",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES                                                                                                     \r\n - GGTFTrackFinder: major CPU-time and memory optimization                                                             \r\n   - Removed the LibTorch dependency entirely: the beta-threshold clustering (find_condpoints, get_clustering)         \r\n     previously implemented with torch::Tensor is reimplemented in plain C++ with squared-distance comparisons, and    \r\n     torch is dropped from the build.                                                                                  \r\n   - Enabled ONNX Runtime graph optimizations (ORT_ENABLE_ALL instead of ORT_DISABLE_ALL) and made intra-op threading configurable via the new property InferenceThreads (default: 1).              \u2026",
+            "diff": {
+                "additions": 363,
+                "deletions": 246,
+                "files": 8
+            },
+            "files": [
+                "CMakeLists.txt",
+                "README.md",
+                "Tracking/CMakeLists.txt",
+                "Tracking/README.md",
+                "Tracking/components/GGTFTrackFinder.cpp",
+                "Tracking/include/utils.h",
+                "Tracking/src/utils.cpp",
+                "Tracking/test/testTrackFinder/runTestTrackFinder.py"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Before checking anything and just to be clear, there is nothing that is being carried over from one event to another right? That is not a good idea because if the results (even if it's a little change due to some initial setup) depend on the ordering then they are basically impossible to reproduce i\u2026"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> Before checking anything and just to be clear, there is nothing that is being carried over from one event to another right? That is not a good idea because if the results (even if it's a little change due to some initial setup) depend on the ordering then they are basically impossible to reproduce\u2026"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> > Before checking anything and just to be clear, there is nothing that is being carried over from one event to another right? That is not a good idea because if the results (even if it's a little change due to some initial setup) depend on the ordering then they are basically impossible to reprodu\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I think this is OK as it is. I think more improvements can potentially be done on top of this as follow ups."
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Do we still have a torch dependency for k4RecTracker after this PR? If not, we should probably also not `find_package` it any longer."
+                }
+            ],
+            "reviews_total": 21
+        },
+        {
+            "org": "key4hep",
+            "repo": "CLDConfig",
+            "num": 100,
+            "title": "update property names, B-fiels now taken from GeoSvc",
+            "url": "https://github.com/key4hep/CLDConfig/pull/100",
+            "author": "herrmannlena",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "Zehvogel",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Update `ParticleFlow/MLPF.py` to the renamed `PFHitML` properties (`ClusteringModelPath`, `NeutralModelPath`, `ChargedModelPath`), following key4hep/k4PFHitML#7\n- Remove the `bFieldTesla` option; the magnetic field is now taken from the `GeoSvc`\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 3,
+                "deletions": 4,
+                "files": 1
+            },
+            "files": [
+                "CLDConfig/ParticleFlow/MLPF.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4DetectorPerformance",
+            "num": 12,
+            "title": "Enable only C++ in subprojects",
+            "url": "https://github.com/key4hep/k4DetectorPerformance/pull/12",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Specify LANGUAGES CXX in both subprojects to avoid implicitly enabling C and probing for a C compiler.\n\nBEGINRELEASENOTES\n - Avoid unnecessary C compiler detection when configuring the project.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 2
+            },
+            "files": [
+                "RecoMCTruthLinkers/CMakeLists.txt",
+                "TrackingPerformance/CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4DetectorPerformance",
+            "num": 10,
+            "title": "TrackingValidation: fix truth parameters and matching, align with ACTS",
+            "url": "https://github.com/key4hep/k4DetectorPerformance/pull/10",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n\t\t- TrackingValidation: fix the truth reference parameters and the track-particle matching, and align the matching with the ACTS definitions\r\n\t\t  - Truth z0 is now taken at the closest approach to the beamline (was to the origin, wrong for vertices away from z = 0), and truth d0 is computed in double precision\r\n\t\t  - Truth d0/z0/phi are taken on the helix of the particle's production vertex and momentum at its closest approach to the beamline, so they are also correct for displaced particles. The fitter trees gain `vertexR`/`vertexZ` to select prompt or displaced particles\r\n\t\t  - MC particles are identified by ObjectID, so subset collections such as `MCPhysicsParticles` are handled correctly; reco hits with several contributing particles count for each of them\r\n\t\t  - A t\u2026",
+            "diff": {
+                "additions": 289,
+                "deletions": 223,
+                "files": 7
+            },
+            "files": [
+                "TrackingPerformance/README.md",
+                "TrackingPerformance/include/TrackingValidationHelpers.h",
+                "TrackingPerformance/include/TrackingValidationPlots.h",
+                "TrackingPerformance/src/TrackingValidationHelpers.cpp",
+                "TrackingPerformance/src/TrackingValidationPlots.cpp",
+                "TrackingPerformance/src/components/TrackingValidation.cpp",
+                "TrackingPerformance/test/testTrackingValidation.sh"
+            ],
+            "comments": [
+                {
+                    "author": "andread3vita",
+                    "body": "Hi! Thank you for this PR! Did you check that the the results of the plots are the same as before? I see that you checked the performance, but I wonder if there is any difference wrt before"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "Hi @andread3vita, \r\n\r\nI ran main and this PR with the same options on the CI input and on two more CLD samples (muon gun with the 240 GeV beam spot, Z -> bb at 91 GeV).\r\n\r\nOn the CI input the plots are the same as before. That sample starts every muon exactly at the origin, so it doesn't see the tru\u2026"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "@ArinaPon I tag this PR because it is related to your work"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "How is the review going @andread3vita? Wasn't this supposed to be in the tag?"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> How is the review going @andread3vita? Wasn't this supposed to be in the tag?\r\n\r\nHi! Yes, I am validating it and for the moment it seems to be everything okay Tomorrow I will finish the review so that you can merge it if everything is okay"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [
+                {
+                    "author": "andread3vita",
+                    "state": "APPROVED",
+                    "body": "I don't have any comment on the physics, So I think we can merge it"
+                }
+            ],
+            "reviews_total": 5
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 21,
+            "title": "feat: add CLD reconstruction config bundle r2025-11-07",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/21",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "## Summary\n\n- Introduces `FCCConfig_CLD` production bundle for release `r2025-11-07`, version `1.0`\n- Refactors the production_bundles schema: `category`/`subcategory` replaced by `release` (e.g. `r2025-11-07`) throughout \u2014 submission YAMLs, summary files, and the processing script\n- Summary files are now flat (`production_bundles/summary_<bundle>.yml`); each version entry carries `release` + `version`\n\n## New CVMFS layout (deployed by fcc-cvmfs-publish)\n\n```\n/cvmfs/fcc.cern.ch/production-bundles/<bundle>/<release>/\n  versions/<version>/   \u2190 real files\n  <file>                \u2190 symlink \u2192 versions/<version>/<file>  (latest in release)\n  versions.yaml         \u2190 per-release version index\n```\n\n## Submission\n\n```yaml\nbundle: FCCConfig_CLD\nrelease: r2025-11-07\nversion: \"1.0\"\nsource-location: fcc\u2026",
+            "diff": {
+                "additions": 67,
+                "deletions": 85,
+                "files": 5
+            },
+            "files": [
+                ".github/scripts/process_bundles.py",
+                "production_bundles/README.md",
+                "production_bundles/fccconfigcld-r2025-11-07-submission.yml",
+                "production_bundles/fccconfigcld-r2025-11-07.tgz",
+                "production_bundles/summary_test-bundle.yml"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "<!-- fcc-bundles-validation -->\n### FCC Production Bundles \u2014 validation passed \u2705\n\n\u2705 **`production_bundles/fccconfigcld-r2025-11-07-submission.yml`**\n  - OK: FCCConfig_CLD r2025-11-07 v1.0 (fccconfigcld-r2025-11-07.tgz [local])\n\n_On merge: summaries will be updated and submission files removed._\n\n---\u2026"
+                },
+                {
+                    "author": "kjvbrt",
+                    "body": "Hi, looks good :)\n\nwhat would be the final location of the file?"
+                },
+                {
+                    "author": "davidlange6",
+                    "body": "/cvmfs/fcc.cern.ch/production-bundles/<bundle>/<release>\r\n(then inside that directory are the soft links pointing to versions/<version>). \r\n\r\nI will merge this and create one as a test on cvmfs"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 1
+        },
         {
             "org": "key4hep",
             "repo": "k4SimDelphes",
@@ -100,6 +587,41 @@
                 }
             ],
             "reviews_total": 2
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 140,
+            "title": "Remove legacy tracking geos and material maps",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/140",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "The Gen1 based CKF algorithm has been removed previously in 1c10836 * Remove ACTSSeededCKFTrackingAlg (#122)\n\n\nBEGINRELEASENOTES\n- Remove the legacy (ACTS Gen1 geometry based) material maps and tracking geometries.\n\nENDRELEASENOTES\n\nFYI @madbaron, I think this should now be possible, essentially without conseuqences, right?",
+            "diff": {
+                "additions": 1,
+                "deletions": 18,
+                "files": 12
+            },
+            "files": [
+                "data/CMakeLists.txt",
+                "data/MAIA_v0.json.md5",
+                "data/MAIA_v0.root.md5",
+                "data/MAIA_v0_material.json.md5",
+                "data/MuColl_v1.json.md5",
+                "data/MuColl_v1.root.md5",
+                "data/MuSIC_v1.json.md5",
+                "data/MuSIC_v1.root.md5",
+                "data/MuSIC_v2.json.md5",
+                "data/MuSIC_v2.root.md5",
+                "data/material-maps.json.md5",
+                "doc/material_mapping.md"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
         },
         {
             "org": "key4hep",
@@ -209,6 +731,116 @@
             ],
             "comments": [],
             "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 20,
+            "title": "Add k4PFHitML (HitPF) ONNX models for CLD",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/20",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "Replaces #16 (branch was based on the old `fcc_models` layout before the rename to `fcc_data`).\n\nClustering, neutral regression/PID and charged PID models used by the PFHitML algorithm of https://github.com/key4hep/k4PFHitML.\n\nThree ONNX models for CLD o2-v05:\n- `clustering_paper.onnx` \u2014 condensation/clustering model\n- `energy_correction_paper_neutral.onnx` \u2014 energy regression and PID for neutral showers\n- `energy_correction_paper_charged_pid.onnx` \u2014 PID for charged showers\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
+            "diff": {
+                "additions": 26,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "fcc_data/CLD-o2-v05_HitPF.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 19,
+            "title": "test: production_bundles smoke test v1.1 (local tarball workflow)",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/19",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "## Summary\n\nSecond end-to-end test for the `production_bundles` local-tarball workflow, exercising the fixed history-rewrite step.\n\n- Submits `test-bundle` v1.1 via a local tarball committed into the PR\n- On merge the CI should: validate, create `production_bundles/test/summary_test-bundle.yml`, remove the tarball from the working tree, rewrite history with `git filter-repo`, and force-push\n\n## Expected behaviour on merge\n\n1. `validate_bundles_pr` posts a comment with validation result + tar listing\n2. `process_bundles` bot commit stages the summary update and tarball deletion\n3. History-rewrite step removes `production_bundles/test-bundle-1.1.tar.gz` from all commits\n4. Force-push succeeds (no more \"origin does not appear to be a git repository\" error)\n5. `git log --all -- production_bund\u2026",
+            "diff": {
+                "additions": 8,
+                "deletions": 0,
+                "files": 2
+            },
+            "files": [
+                "production_bundles/test-bundle-1.1.tar.gz",
+                "production_bundles/test-bundle-v2-submission.yml"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "<!-- fcc-bundles-validation -->\n### FCC Production Bundles \u2014 validation passed \u2705\n\n\u2705 **`production_bundles/test-bundle-v2-submission.yml`**\n  - OK: test-bundle v1.1 (test-bundle-1.1.tar.gz [local])\n\n_On merge: summaries will be updated and submission files removed._\n\n---\n\n<details>\n<summary>\ud83d\udce6 test-bu\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 18,
+            "title": "fix: re-add origin remote after git filter-repo removes it",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/18",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "## Summary\n\n- `git filter-repo` intentionally removes the `origin` remote as a safety guard after rewriting history\n- The force-push step then fails with `fatal: 'origin' does not appear to be a git repository`\n- Fix: capture the authenticated remote URL before the rewrite loop, then re-add `origin` after `git filter-repo` finishes and before the push retry loop\n\n## Test plan\n- [ ] Merge this PR\n- [ ] Submit a new PR with a local tarball to verify the full flow: bot commit + history rewrite + force push all complete successfully\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
+            "diff": {
+                "additions": 3,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/process_bundles.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
+            "num": 17,
+            "title": "test: production_bundles smoke test with local tarball",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/17",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "## Summary\n\n- Exercises the new `process_bundles` workflow end-to-end with a local tarball submission\n- `source-location: test-bundle-1.0.tar.gz` \u2014 bare filename, no `://`\n- Tarball contains: `README.md`, `config.json`, `payload.dat` (1 KiB random bytes)\n\n## What to verify on merge\n\n- [ ] Workflow `Process Production Bundles` runs and passes\n- [ ] GitHub Actions artifact `production-bundles-pr-N` is uploaded containing:\n  - `test-bundle-submission.yml` (with `sha256` and `added` filled in)\n  - `test-bundle-submission.json` sidecar\n  - `listing_test-bundle_1.0.txt` with the `tar -tvf` output\n  - `pr.txt`\n- [ ] `production_bundles/test/summary_test-bundle.yml` is created on `main`\n- [ ] `production_bundles/test-bundle-1.0.tar.gz` is **absent** from the working tree on `main`\n- [ ] `git log -\u2026",
+            "diff": {
+                "additions": 153,
+                "deletions": 0,
+                "files": 4
+            },
+            "files": [
+                ".github/scripts/process_bundles.py",
+                ".github/workflows/validate_bundles_pr.yaml",
+                "production_bundles/test-bundle-1.0.tar.gz",
+                "production_bundles/test-bundle-submission.yml"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "<!-- fcc-bundles-validation -->\n### FCC Production Bundles \u2014 validation passed \u2705\n\n\u2705 **`production_bundles/test-bundle-submission.yml`**\n  - OK: test-bundle v1.0 (test-bundle-1.0.tar.gz [local])\n\n_On merge: summaries will be updated and submission files removed._\n\n---\n\n<details>\n<summary>\ud83d\udce6 test-bundl\u2026"
+                }
+            ],
+            "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
         },
@@ -2325,54 +2957,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4MarlinWrapper",
-            "num": 491,
-            "title": "Initialize install directories before setting RPATH",
-            "url": "https://github.com/key4hep/k4MarlinWrapper/pull/491",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Reproduced on AlmaLinux 9; verified RPATH matches the install directory on both CMake runs. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nBEGINRELEASENOTES\n - Initialize install directories before setting the install RPATH.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "EDM4hep",
-            "num": 541,
-            "title": "Initialize install directories before setting RPATH",
-            "url": "https://github.com/key4hep/EDM4hep/pull/541",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Reproduced on AlmaLinux 9; verified RPATH matches the install directory on both CMake runs. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nBEGINRELEASENOTES\n - Initialize install directories before setting the install RPATH.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
             "repo": "k4-project-template",
             "num": 34,
             "title": "Initialize install directories before setting RPATH",
@@ -2401,78 +2985,6 @@
                 }
             ],
             "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4SimDelphes",
-            "num": 166,
-            "title": "Initialize install directories before setting RPATH",
-            "url": "https://github.com/key4hep/k4SimDelphes/pull/166",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Reproduced on AlmaLinux 9; verified RPATH matches the install directory on both CMake runs. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nBEGINRELEASENOTES\n - Initialize install directories before setting the install RPATH.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Clue",
-            "num": 86,
-            "title": "Initialize install directories before setting RPATH",
-            "url": "https://github.com/key4hep/k4Clue/pull/86",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Reproduced on AlmaLinux 9; verified RPATH matches the install directory on both CMake runs. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nBEGINRELEASENOTES\n - Initialize install directories before setting the install RPATH.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4EDM4hep2LcioConv",
-            "num": 136,
-            "title": "Initialize install directories before setting RPATH",
-            "url": "https://github.com/key4hep/k4EDM4hep2LcioConv/pull/136",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Reproduced on AlmaLinux 9; verified RPATH matches the install directory on both CMake runs. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nBEGINRELEASENOTES\n - Initialize install directories before setting the install RPATH.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
         },
@@ -2802,268 +3314,6 @@
             "reviews_total": 0
         },
         {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 70,
-            "title": "README links the live dashboard",
-            "url": "https://github.com/key4hep/k4Opt/pull/70",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Links the live dashboard (https://k4opt-dashboard.app.cern.ch/) at the top of the README, as k4Bench's does, and in the components table, which said it was not deployed yet.",
-            "diff": {
-                "additions": 3,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "README.md"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 69,
-            "title": "Dashboard reads the publication at k4opt-data.web.cern.ch",
-            "url": "https://github.com/key4hep/k4Opt/pull/69",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The deployed dashboard reads its studies from `https://k4opt-data.web.cern.ch`, the WebEOS site that serves the publication from EOS.\n\n- `openshift/deployment.yaml`: `K4OPT_DASHBOARD_DATA` set to that URL; `tests/unit/test_deployment.py` expects it.\n- `docs/dashboard.md`: the provisioning steps describe what is in place: the runner registered for key4hep/k4Opt on k4Bench's FCC machines, fork pull requests of all outside contributors waiting for approval, and the data site, which needs anonymous access (a site behind CERN SSO answers with a login page, which the dashboard refuses).\n\nMerging rolls out the deployment with the new value. Publishing a study into the EOS directory afterwards needs no deployment.",
-            "diff": {
-                "additions": 19,
-                "deletions": 12,
-                "files": 3
-            },
-            "files": [
-                "docs/dashboard.md",
-                "openshift/deployment.yaml",
-                "tests/unit/test_deployment.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 68,
-            "title": "Dependabot: dashboard requirements updated once, watchdog held below 7",
-            "url": "https://github.com/key4hep/k4Opt/pull/68",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Two fixes to `.github/dependabot.yml`, from #62 and #63:\n\n- **No duplicate bumps.** The root `pip` entry (`directory: \"/\"`) also scanned `dashboard/requirements.txt`, so every dashboard bump was proposed twice: #62 by the `/dashboard` entry and #63 by the root one, the same change. The root entry now excludes `dashboard/**`, which the `/dashboard` entry keeps.\n- **watchdog held below 7.** Streamlit 1.66.1, the latest release, requires `watchdog<7,>=2.1.5`, so `watchdog==7.0.0` makes the dashboard's install unresolvable (the `dashboard` job of #62 and #63). The `/dashboard` entry ignores watchdog `>=7` until a Streamlit release allows it.\n\n#62 and #63 are closed in favor of this.",
-            "diff": {
-                "additions": 7,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                ".github/dependabot.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 66,
-            "title": "build(deps): bump nodeenv from 1.11.0 to 1.11.1",
-            "url": "https://github.com/key4hep/k4Opt/pull/66",
-            "author": "dependabot",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [nodeenv](https://github.com/ekalinin/nodeenv) from 1.11.0 to 1.11.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/ekalinin/nodeenv/releases\">nodeenv's releases</a>.</em></p>\n<blockquote>\n<h2>1.11.1</h2>\n<h2>What's Changed</h2>\n<h3>Fixed bugs \ud83d\udc1b</h3>\n<ul>\n<li>fix(nodeenv): skip node.js pre-releases for latest and ranges by <a href=\"https://github.com/ekalinin\"><code>@\u200bekalinin</code></a> in <a href=\"https://redirect.github.com/ekalinin/nodeenv/pull/454\">ekalinin/nodeenv#454</a></li>\n</ul>\n<p>1.11.1 is 1.11.0 plus this fix only. nodejs.org now lists <code>27.0.0-alpha.0.0.0</code> first, and nodeenv stopped with a traceback when it used the default <code>latest</code> or a semver range (<a href=\"https://redirect.github.com/ekalinin/nodeenv/\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 64,
-            "title": "build(deps): bump filelock from 4.2.4 to 4.2.5",
-            "url": "https://github.com/key4hep/k4Opt/pull/64",
-            "author": "dependabot",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [filelock](https://github.com/tox-dev/filelock) from 4.2.4 to 4.2.5.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/tox-dev/filelock/releases\">filelock's releases</a>.</em></p>\n<blockquote>\n<h2>4.2.5</h2>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<h3>Bug fixes</h3>\n<ul>\n<li><code>acquire</code> and <code>acquire</code> raise <code>TypeError</code> for a <em>blocking</em> that is not a <code>bool</code>, as the constructor and the <code>blocking</code> setter already do. A truthy value such as the string <code>&quot;false&quot;</code> used to count as <code>True</code>, so a call meant as a single attempt waited for the instance's <code>timeout</code>, and without a limit at the default <code>-1</code> (<a href=\"https://redir\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 61,
-            "title": "build(deps): bump https://github.com/pre-commit/mirrors-mypy from v2.4.0 to 2.4.1",
-            "url": "https://github.com/key4hep/k4Opt/pull/61",
-            "author": "dependabot",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "pre_commit"
-            ],
-            "body": "Bumps [https://github.com/pre-commit/mirrors-mypy](https://github.com/pre-commit/mirrors-mypy) from v2.4.0 to 2.4.1.\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/pre-commit/mirrors-mypy/commit/ad26ebfa797fcb9b8f83275937c1c1d6e126719c\"><code>ad26ebf</code></a> Mirror: 2.4.1</li>\n<li>See full diff in <a href=\"https://github.com/pre-commit/mirrors-mypy/compare/v2.4.0...v2.4.1\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=https://github.com/pre-commit/mirrors-mypy&package-manager=pre_commit&previous-version=v2.4.0&new-version=2.4.1)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compat\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".pre-commit-config.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 65,
-            "title": "build(deps): bump platformdirs from 4.13.7 to 4.14.0",
-            "url": "https://github.com/key4hep/k4Opt/pull/65",
-            "author": "dependabot",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [platformdirs](https://github.com/tox-dev/platformdirs) from 4.13.7 to 4.14.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/tox-dev/platformdirs/releases\">platformdirs's releases</a>.</em></p>\n<blockquote>\n<h2>4.14.0</h2>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<h3>Features</h3>\n<ul>\n<li>Accept a keyword-only <code>ensure_exists</code> in the module-level media directory functions, such as <code>user_documents_path</code>, to create a directory set through <code>XDG_*_DIR</code> or <code>user-dirs.dirs</code> (<a href=\"https://redirect.github.com/tox-dev/platformdirs/pull/656\">#656</a>) by <a href=\"https://github.com/darrenhuai\"><code>@\u200bdarrenhuai</code></a> and <a href=\"https://github.com/gaborbernat\"><code>@\u200bgaborberna\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 67,
-            "title": "build(deps): bump virtualenv from 21.15.1 to 21.15.2",
-            "url": "https://github.com/key4hep/k4Opt/pull/67",
-            "author": "dependabot",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [virtualenv](https://github.com/pypa/virtualenv) from 21.15.1 to 21.15.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/pypa/virtualenv/releases\">virtualenv's releases</a>.</em></p>\n<blockquote>\n<h2>21.15.2</h2>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<h3>Bug fixes</h3>\n<ul>\n<li>Build the default application data folder only when no folder was given through <code>--app-data</code>, <code>VIRTUALENV_APP_DATA</code> or the configuration file, so <code>--read-only-app-data</code> with an explicit folder works when the default folder is missing, and writable runs stop creating an unused one. Folders from <code>VIRTUALENV_APP_DATA</code> and the configuration file now get the same checks as <code>--app-data</code> (<a href=\"ht\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 60,
-            "title": "Dashboard foundation: portable study publication, Plotly figure, Streamlit app, OpenShift deployment",
-            "url": "https://github.com/key4hep/k4Opt/pull/60",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The first increment of a dashboard for k4opt studies, after k4Bench's. A study is published as a portable, read-only snapshot, then read from a directory or over HTTP(S) without Optuna. A Plotly figure and a Streamlit app show what it holds. A container, CERN OpenShift manifests and a gated deploy workflow ship the app. Nothing is deployed yet: the CERN resources are listed in `docs/dashboard.md` and need provisioning by hand.\n\n## What changes\n\n- **One location-free JSON form of a study** (`k4opt.optimization`). `StudyResults.to_json()` is now what `k4opt study export --format json` writes and what a publication holds.\n  - `study.json` passes an explicit allowlist (`PORTABLE`). It drops every path, `K4GEO` and the optimizer's storage. The identity digest still holds, since locations were n\u2026",
-            "diff": {
-                "additions": 4899,
-                "deletions": 122,
-                "files": 64
-            },
-            "files": [
-                ".dockerignore",
-                ".github/actionlint.yaml",
-                ".github/dependabot.yml",
-                ".github/workflows/ci.yml",
-                ".github/workflows/deploy-dashboard.yml",
-                "CONTRIBUTING.md",
-                "README.md",
-                "dashboard/Dockerfile",
-                "dashboard/app.py",
-                "dashboard/data.py",
-                "dashboard/overview.py",
-                "dashboard/requirements.txt",
-                "dashboard/study.py",
-                "dashboard/tables.py",
-                "docs/dashboard.md",
-                "docs/optimization.md",
-                "docs/publication.md",
-                "docs/visualization.md",
-                "k4opt/__init__.py",
-                "k4opt/cli.py",
-                "k4opt/jsonio.py",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_export.py",
-                "k4opt/optimization/_optuna/read.py",
-                "k4opt/optimization/_render.py",
-                "k4opt/optimization/_results.py",
-                "k4opt/optimization/_show.py",
-                "k4opt/optimization/_study.py",
-                "k4opt/problem/candidate.py",
-                "k4opt/publication/__init__.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "hep-fcc",
             "repo": "FCCAnalyses",
             "num": 579,
@@ -3092,226 +3342,6 @@
                 }
             ],
             "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4geo",
-            "num": 678,
-            "title": "Fix install RPATH after reconfiguring",
-            "url": "https://github.com/key4hep/k4geo/pull/678",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-02",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Fixes #677. I can reproduce it on a machine; verified the fix with a build and install.\r\n\r\nBEGINRELEASENOTES\r\n - Fix the install RPATH changing to lib64 after rerunning CMake.\r\n\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 3,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "APPROVED",
-                    "body": "Wondering whether we should pull\n\n```cmake\ninclude(GNUInstallDirs)\nset(CMAKE_INSTALL_LIBDIR lib)\n```\ninto `Key4hepConfig.cmake`?\n\nBut that is outside of the scope of this PR."
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 59,
-            "title": "A rejected trial is read back only as rejected by a required evaluation",
-            "url": "https://github.com/key4hep/k4Opt/pull/59",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-02",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "During a run, only a required evaluation's `check()` rejects a candidate (`execution/_preflight.py`); a diagnostic whose `check()` rejects it is only not run, and recorded `invalid`. The study reader (`optimization/_optuna/read.py`, `_rejected`) checked `k4opt.rejected_by` against every evaluation of the problem, so a modified Optuna database holding a trial rejected by a diagnostic was read back as if k4opt had made it.\n\nThe reader now rebuilds the problem's task plan (`plan_tasks`, as execution and the record reader do; a study supplies no stages) and accepts `rejected_by` only if it names a required evaluation. This closes a provenance-validation gap; normal runs never store such a trial.\n\n- `tests/unit/optimization/test_resume.py`: the strict-reading test's problem gains a diagnostic `\u2026",
-            "diff": {
-                "additions": 25,
-                "deletions": 16,
-                "files": 3
-            },
-            "files": [
-                "docs/optimization.md",
-                "k4opt/optimization/_optuna/read.py",
-                "tests/unit/optimization/test_resume.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 58,
-            "title": "Reliability: rejected candidates, task time limits, normalized constraints, class-level evaluators",
-            "url": "https://github.com/key4hep/k4Opt/pull/58",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-02",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "## Why\n\nLong unattended studies stopped, or hung, for reasons that were not bugs, and the evaluator lifecycle did needless work:\n\n- **Everything before execution stopped the study.** Whatever a candidate's preflight raised, including `self.fail()` in an evaluator's `check()` (the examples did that), became an exception that stopped the study. There was no way to say \"this candidate is physically invalid, go on\".\n- **Evaluator instances were created two or three times per evaluation.** The session created a probe instance per class, then one per evaluation in the coordinator to call `check()`. With workers, that instance was dropped, and the worker created another and called `check()` again. An expensive `__init__` ran in the coordinator for nothing.\n- **Only ddsim had a timeout.** An evalu\u2026",
-            "diff": {
-                "additions": 4031,
-                "deletions": 2362,
-                "files": 87
-            },
-            "files": [
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/execution.md",
-                "docs/optimization.md",
-                "docs/problem.md",
-                "docs/record.md",
-                "examples/evaluators/ecal_channels.py",
-                "examples/evaluators/separation.py",
-                "examples/evaluators/shower_shape.py",
-                "k4opt/evaluation/__init__.py",
-                "k4opt/evaluation/base.py",
-                "k4opt/evaluation/declaration.py",
-                "k4opt/evaluation/errors.py",
-                "k4opt/evaluation/loader.py",
-                "k4opt/evaluation/protocol.py",
-                "k4opt/evaluation/settings.py",
-                "k4opt/execution/__init__.py",
-                "k4opt/execution/_backends.py",
-                "k4opt/execution/_baseline.py",
-                "k4opt/execution/_binding.py",
-                "k4opt/execution/_command.py",
-                "k4opt/execution/_describe.py",
-                "k4opt/execution/_drive.py",
-                "k4opt/execution/_instances.py",
-                "k4opt/execution/_preflight.py",
-                "k4opt/execution/_process.py",
-                "k4opt/execution/_publish.py",
-                "k4opt/execution/_session.py",
-                "k4opt/execution/_stages.py",
-                "k4opt/execution/_tasks.py"
-            ],
-            "comments": [
-                {
-                    "author": "jbeirer",
-                    "body": "Integration tests (`pytest -m integration tests/integration`, real ddsim on `$K4GEO`, 2026-10-20 nightly stack) at 4fd4098: **28 passed** (11 min). They include the new test where one sample's simulation is killed at its time limit: that sample fails with its logs, the other sample is measured, the \u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 57,
-            "title": "Parameters set typed destinations: geometry, stage options and evaluator settings",
-            "url": "https://github.com/key4hep/k4Opt/pull/57",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-02",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Separates what a parameter is (its domain) from where its value goes (`targets:`), so one\nparameter can set the geometry, a generator or ddsim option, or a declared evaluator setting,\nor several of these at once.\n\n```yaml\nparameters:\n  ecal_cell_size:\n    type: continuous\n    bounds: [2.5, 20.0]\n    unit: mm\n    targets:\n      geometry: ECal_cell_size          # a constant by name, or a canonical reference\n      evaluators:\n        readout: cell_size              # evaluator binding -> setting\n  range_cut:\n    type: continuous\n    bounds: [0.1, 1.0]\n    unit: mm\n    targets:\n      simulation:                       # a stage type; the option alone with one sample\n        option: physics.rangecut\n        samples: [gamma, pion]\n```\n\n## What changes\n\n- **problem**: `targets` maps each kind of \u2026",
-            "diff": {
-                "additions": 3720,
-                "deletions": 854,
-                "files": 81
-            },
-            "files": [
-                ".github/workflows/ci.yml",
-                "CONTRIBUTING.md",
-                "README.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/execution.md",
-                "docs/optimization.md",
-                "docs/problem.md",
-                "docs/record.md",
-                "examples/evaluators/ecal_channels.py",
-                "examples/problem/cld-ecal-bindings.yaml",
-                "examples/problem/cld-ecal-granularity.yaml",
-                "examples/problem/cld-ecal-photon-energies.yaml",
-                "examples/problem/cld-ecal-pi0-rejection.yaml",
-                "k4opt/ddsim/__init__.py",
-                "k4opt/ddsim/command.py",
-                "k4opt/ddsim/run.py",
-                "k4opt/evaluation/__init__.py",
-                "k4opt/evaluation/base.py",
-                "k4opt/evaluation/models.py",
-                "k4opt/execution/__init__.py",
-                "k4opt/execution/_baseline.py",
-                "k4opt/execution/_binding.py",
-                "k4opt/execution/_drive.py",
-                "k4opt/execution/_publish.py",
-                "k4opt/execution/_session.py",
-                "k4opt/execution/_stages.py",
-                "k4opt/execution/_tasks.py",
-                "k4opt/execution/_work.py",
-                "k4opt/execution/cli.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 56,
-            "title": "Review fixes: transient storage, evaluator helper identity, named parameters, ResolvedProblem",
-            "url": "https://github.com/key4hep/k4Opt/pull/56",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-02",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Follow-up to an external review of f22b3f5. Each point was checked against the code; this PR\nfixes the ones that hold up. One commit per change.\n\n## Changes\n\n- **Refuse a SQLite storage that keeps nothing.** `--storage sqlite://`, `sqlite:///:memory:`,\n  `file::memory:?uri=true` and `mode=memory&uri=true` would lose the trials when k4opt exits,\n  leaving a study that can neither be resumed nor read. `optimize()` now refuses them before\n  anything is made, for a new and a resumed study.\n- **Identify the modules an evaluator imports.** An evaluator's source identity gains\n  `helpers`: the SHA-256 of each local module the file imports, directly or through one\n  another. They are found statically, so an import inside a method counts and the result\n  does not depend on load order. A changed hel\u2026",
-            "diff": {
-                "additions": 2198,
-                "deletions": 580,
-                "files": 62
-            },
-            "files": [
-                "README.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/execution.md",
-                "docs/optimization.md",
-                "docs/problem.md",
-                "examples/evaluators/calo_photon.py",
-                "examples/evaluators/ecal_channels.py",
-                "examples/problem/cld-ecal-granularity.yaml",
-                "examples/problem/cld-ecal-photon-energies.yaml",
-                "examples/problem/cld-ecal-pi0-rejection.yaml",
-                "k4opt/evaluation/_imports.py",
-                "k4opt/evaluation/loader.py",
-                "k4opt/evaluation/models.py",
-                "k4opt/execution/_baseline.py",
-                "k4opt/execution/_binding.py",
-                "k4opt/execution/_publish.py",
-                "k4opt/execution/_session.py",
-                "k4opt/execution/_stages.py",
-                "k4opt/execution/_tasks.py",
-                "k4opt/execution/_work.py",
-                "k4opt/execution/_worker.py",
-                "k4opt/execution/cli.py",
-                "k4opt/optimization/_export.py",
-                "k4opt/optimization/_optuna/read.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/_optuna/space.py",
-                "k4opt/optimization/_optuna/storage.py",
-                "k4opt/optimization/_results.py",
-                "k4opt/optimization/_show.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
         }
