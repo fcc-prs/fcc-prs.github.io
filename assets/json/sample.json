@@ -2,6 +2,28 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 685,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/685'>[ALLEGRO][IDEA] Reduce the world volume to the detector extent plus 50 cm</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 683,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/683'>[ALLEGRO and IDEA] Set magnetic field to 0 outside muon system</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-11-10",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 684,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/684'>Require DD4hep 1.39</a>",
             "author": "jmcarcell",
@@ -17,17 +39,6 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/681'>Add FCCee MDI options, adapt ILD MDI</a>",
             "author": "ueinhaus",
             "createdAt": "2026-11-06",
-            "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 683,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/683'>[ALLEGRO and IDEA] Set magnetic field to 0 outside muon system</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-11-10",
             "updatedAt": "2026-11-10",
             "mergeOk": "yes",
             "labels": "",
@@ -123,11 +134,22 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
-            "num": 550,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/550'>Fix utility library install rules</a>",
+            "num": 551,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/551'>Check EOS access before generating documentation</a>",
             "author": "jmcarcell",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-10",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 552,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/552'>Remove unused positional argument from README link updater</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -321,22 +343,22 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 950,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/950'>Detect EL10 and drop GCC 14 for LCG nightlies</a>",
+            "num": 911,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-10",
+            "createdAt": "2026-08-16",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 911,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
+            "num": 950,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/950'>Detect EL10 and drop GCC 14 for LCG nightlies</a>",
             "author": "jmcarcell",
-            "createdAt": "2026-08-16",
-            "updatedAt": "2026-11-08",
+            "createdAt": "2026-11-10",
+            "updatedAt": "2026-11-10",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -425,7 +447,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -552,9 +574,9 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 143,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/143'>Add material designation and a material map for CLD</a>",
-            "author": "Zehvogel",
+            "num": 149,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/149'>Fail ACTS master CI on deprecation warnings after building</a>",
+            "author": "jmcarcell",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-11",
             "mergeOk": "yes",
@@ -563,11 +585,11 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 149,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/149'>Fail ACTS master CI on deprecation warnings after building</a>",
-            "author": "jmcarcell",
+            "num": 143,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/143'>Add material designation and a material map for CLD</a>",
+            "author": "Zehvogel",
             "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-10",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -754,7 +776,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/121'>TracksFromGenParticles: support truth tracks without SimTrackerHit input</a>",
             "author": "qwert2333",
             "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-10",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
@@ -1047,78 +1069,12 @@
         },
         {
             "repo": "key4hep/<br>k4GeneratorsConfig",
-            "num": 95,
-            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/pull/95'>Bump requests from 2.32.5 to 2.33.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
-            "labels": "dependencies \npython",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GeneratorsConfig",
-            "num": 94,
-            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/pull/94'>Bump idna from 3.11 to 3.15</a>",
-            "author": "dependabot",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
-            "labels": "dependencies \npython",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GeneratorsConfig",
-            "num": 93,
-            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/pull/93'>Bump urllib3 from 2.6.3 to 2.8.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
-            "labels": "dependencies \npython",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GeneratorsConfig",
-            "num": 92,
-            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/pull/92'>Remove the old workflows that are not kept in sync</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GeneratorsConfig",
-            "num": 91,
-            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/pull/91'>Bump pygments from 2.19.2 to 2.20.0</a>",
-            "author": "dependabot",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
-            "labels": "dependencies \npython",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GeneratorsConfig",
-            "num": 90,
-            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/pull/90'>Bump certifi from 2026.2.25 to 2026.10.18</a>",
-            "author": "dependabot",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
-            "labels": "dependencies \npython",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GeneratorsConfig",
             "num": 85,
             "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/pull/85'>Herwig</a>",
             "author": "dirkzerwas",
             "createdAt": "2026-06-09",
             "updatedAt": "2026-07-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1321,6 +1277,17 @@
             "assignees": "keplerman417"
         },
         {
+            "repo": "key4hep/<br>k4Opt",
+            "num": 132,
+            "title": "<a href='https://github.com/key4hep/k4Opt/pull/132'>Search a level's parameters in problem order, and compare JSON whatever its key order</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "hep-fcc/<br>FCCSW",
             "num": 491,
             "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/491'>Fix tests.</a>",
@@ -1393,6 +1360,17 @@
             "author": "apausa",
             "createdAt": "2026-09-29",
             "updatedAt": "2026-10-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCDIRAC",
+            "num": 25,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/25'>DRS-202611111200: ZH at 240 GeV, IDEA Delphes, standalone Gen (training trial)</a>",
+            "author": "ylmzIBU",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1542,6 +1520,17 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 576,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/576'>Fix event counting for RNTuple inputs</a>",
+            "author": "bndikt",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 557,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
             "author": "bndikt",
@@ -1557,17 +1546,6 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
             "createdAt": "2026-08-11",
-            "updatedAt": "2026-11-09",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 576,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/576'>Fix event counting for RNTuple inputs</a>",
-            "author": "bndikt",
-            "createdAt": "2026-11-02",
             "updatedAt": "2026-11-09",
             "mergeOk": "yes",
             "labels": "",
@@ -2080,17 +2058,6 @@
             "assignees": ""
         },
         {
-            "repo": "hep-fcc/<br>mc-productions-tutorials",
-            "num": 7,
-            "title": "<a href='https://github.com/HEP-FCC/mc-productions-tutorials/pull/7'>Make the tutorials self-paced</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-10-30",
-            "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "AIDASoft/<br>DD4hep",
             "num": 1606,
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1606'>feat: AdePT physics list plugin for e+/e-/gamma offload to GPU [WIP]</a>",
@@ -2108,7 +2075,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2130,7 +2097,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2141,7 +2108,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2152,7 +2119,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2162,21 +2129,10 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1692'>fix(Geant4InputHandling): start a tracked parent-less particle at its own production point</a>",
             "author": "jbeirer",
             "createdAt": "2026-10-07",
-            "updatedAt": "2026-11-06",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1714,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1714'>perf(build): only look for the Python interpreter in DD4hepConfig</a>",
-            "author": "chrisburr",
-            "createdAt": "2026-11-06",
-            "updatedAt": "2026-11-06",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
+            "assignees": "andresailer"
         },
         {
             "repo": "AIDASoft/<br>DD4hep",
@@ -2184,7 +2140,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1715'>DDCore: use std::call_once for threadsafe MultipoleField initialization</a>",
             "author": "wdconinc",
             "createdAt": "2026-11-09",
-            "updatedAt": "2026-11-10",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2195,7 +2151,18 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1716'>fix(DDG4): create sensitive detectors in reproducible order</a>",
             "author": "wdconinc",
             "createdAt": "2026-11-09",
-            "updatedAt": "2026-11-09",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1717,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1717'>Input sources consolidation</a>",
+            "author": "andresailer",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2217,17 +2184,6 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/579'>Davidl root reader t directory</a>",
             "author": "faustus123",
             "createdAt": "2024-04-10",
-            "updatedAt": "2026-04-02",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>podio",
-            "num": 657,
-            "title": "<a href='https://github.com/AIDASoft/podio/pull/657'>[WIP] doc: Make automatic deployment of versioned documentation possible</a>",
-            "author": "tmadlener",
-            "createdAt": "2024-08-23",
             "updatedAt": "2026-04-02",
             "mergeOk": "no",
             "labels": "",
@@ -2262,7 +2218,7 @@
             "author": "tmadlener",
             "createdAt": "2025-10-08",
             "updatedAt": "2026-04-02",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2426,7 +2382,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/1062'>feat: support emplace_back in collections (#271)</a>",
             "author": "ishaaaan17",
             "createdAt": "2026-11-04",
-            "updatedAt": "2026-11-05",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2440,6 +2396,17 @@
             "updatedAt": "2026-11-09",
             "mergeOk": "yes",
             "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1076,
+            "title": "<a href='https://github.com/AIDASoft/podio/pull/1076'>Add a version selector to the documentation on GitHub Pages</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "enhancement \ndocumentation",
             "assignees": ""
         },
         {
@@ -2494,6 +2461,17 @@
             "createdAt": "2025-03-21",
             "updatedAt": "2025-10-13",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "iLCSoft/<br>DDMarlinPandora",
+            "num": 41,
+            "title": "<a href='https://github.com/iLCSoft/DDMarlinPandora/pull/41'>Fix CMake 4 compatibility</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         }
