@@ -1,6 +1,352 @@
 {
-    "updated_at": "2026-11-10T14:07:32Z",
+    "updated_at": "2026-11-11T13:24:19Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 550,
+            "title": "Fix utility library install rules",
+            "url": "https://github.com/key4hep/EDM4hep/pull/550",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Fix utility library install rules and assign shared libraries to the shlib component.\n\nENDRELEASENOTES\n\nReplace the duplicated RUNTIME group with LIBRARY and remove the trailing component override. Linux install paths are unchanged. From what I understood, only installations on Windows may change, but we don't have any of those.",
+            "diff": {
+                "additions": 1,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "utils/CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Nope"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "Needed for the release?"
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GeneratorsConfig",
+            "num": 93,
+            "title": "Bump urllib3 from 2.6.3 to 2.8.0",
+            "url": "https://github.com/key4hep/k4GeneratorsConfig/pull/93",
+            "author": "dependabot",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "tmadlener",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [urllib3](https://github.com/urllib3/urllib3) from 2.6.3 to 2.8.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/urllib3/urllib3/releases\">urllib3's releases</a>.</em></p>\n<blockquote>\n<h2>2.8.0</h2>\n<h2>\ud83d\ude80 urllib3 is fundraising for HTTP/2 support</h2>\n<p><a href=\"https://sethmlarson.dev/urllib3-is-fundraising-for-http2-support\">urllib3 is raising ~$40,000 USD</a> to release HTTP/2 support and ensure long-term sustainable maintenance of the project. If your company or organization uses Python and would benefit from HTTP/2 support in Requests, pip, cloud SDKs, and thousands of other projects <a href=\"https://opencollective.com/urllib3\">please consider contributing financially</a> to ensure HTTP/2 support is developed sustainably and maintai\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "@dependabot rebase"
+                },
+                {
+                    "author": "dependabot",
+                    "body": "Looks like this PR has been edited by someone other than Dependabot. That means Dependabot can't rebase it - sorry!\n\nIf you're happy for Dependabot to recreate it from scratch, overwriting any edits, you can request `@dependabot recreate`."
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GeneratorsConfig",
+            "num": 94,
+            "title": "Bump idna from 3.11 to 3.15",
+            "url": "https://github.com/key4hep/k4GeneratorsConfig/pull/94",
+            "author": "dependabot",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "tmadlener",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [idna](https://github.com/kjd/idna) from 3.11 to 3.15.\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/kjd/idna/blob/master/HISTORY.md\">idna's changelog</a>.</em></p>\n<blockquote>\n<h2>3.15 (2026-05-12)</h2>\n<ul>\n<li>Enforce DNS-length cap on individual labels early in <code>check_label</code>,\nshort-circuiting contextual-rule processing for oversized input\nwhile staying compatible with UTS 46 usage.</li>\n<li>Tidy core helpers: hoist bidi category sets to module-level\nfrozensets (avoiding per-codepoint list construction), simplify\nlength checks, and reuse the shared <code>_unicode_dots_re</code> from\n<code>idna.core</code> in the codec module.</li>\n<li>Use <code>raise ... from err</code> for proper exception chaining and\nswitch internal string fo\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GeneratorsConfig",
+            "num": 95,
+            "title": "Bump requests from 2.32.5 to 2.33.0",
+            "url": "https://github.com/key4hep/k4GeneratorsConfig/pull/95",
+            "author": "dependabot",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "tmadlener",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [requests](https://github.com/psf/requests) from 2.32.5 to 2.33.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/psf/requests/releases\">requests's releases</a>.</em></p>\n<blockquote>\n<h2>v2.33.0</h2>\n<h2>2.33.0 (2026-03-25)</h2>\n<p><strong>Announcements</strong></p>\n<ul>\n<li>\ud83d\udce3 Requests is adding inline types. If you have a typed code base that uses Requests, please take a look at <a href=\"https://redirect.github.com/psf/requests/issues/7271\">#7271</a>. Give it a try, and report any gaps or feedback you may have in the issue. \ud83d\udce3</li>\n</ul>\n<p><strong>Security</strong></p>\n<ul>\n<li>CVE-2026-25645 <code>requests.utils.extract_zipped_paths</code> now extracts contents to a non-deterministic location to prevent malicious file replacement. This d\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GeneratorsConfig",
+            "num": 91,
+            "title": "Bump pygments from 2.19.2 to 2.20.0",
+            "url": "https://github.com/key4hep/k4GeneratorsConfig/pull/91",
+            "author": "dependabot",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "tmadlener",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [pygments](https://github.com/pygments/pygments) from 2.19.2 to 2.20.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/pygments/pygments/releases\">pygments's releases</a>.</em></p>\n<blockquote>\n<h2>2.20.0</h2>\n<ul>\n<li>\n<p>New lexers:</p>\n<ul>\n<li>Rell (<a href=\"https://redirect.github.com/pygments/pygments/issues/2914\">#2914</a>)</li>\n</ul>\n</li>\n<li>\n<p>Updated lexers:</p>\n<ul>\n<li>archetype: Fix catastrophic backtracking in GUID and ID patterns (<a href=\"https://redirect.github.com/pygments/pygments/issues/3064\">#3064</a>)</li>\n<li>ASN.1: Recognize minus sign and fix range operator (<a href=\"https://redirect.github.com/pygments/pygments/issues/3014\">#3014</a>, <a href=\"https://redirect.github.com/pygments/pygments/issues/3060\">#3060</a>)\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GeneratorsConfig",
+            "num": 90,
+            "title": "Bump certifi from 2026.2.25 to 2026.10.18",
+            "url": "https://github.com/key4hep/k4GeneratorsConfig/pull/90",
+            "author": "dependabot",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "tmadlener",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [certifi](https://github.com/certifi/python-certifi) from 2026.2.25 to 2026.10.18.\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/certifi/python-certifi/commit/5cb238caeeb6c30ec1a7309ad3e16a5aa7b10ce8\"><code>5cb238c</code></a> Remove emsign (<a href=\"https://redirect.github.com/certifi/python-certifi/issues/437\">#437</a>)</li>\n<li><a href=\"https://github.com/certifi/python-certifi/commit/69494a764d0a08f90838d53d4b0fefd3e84045d6\"><code>69494a7</code></a> Bump actions/download-artifact from 8.0.1 to 8.0.2 (<a href=\"https://redirect.github.com/certifi/python-certifi/issues/436\">#436</a>)</li>\n<li><a href=\"https://github.com/certifi/python-certifi/commit/029c7b0913d79e2efb73a216fc5c5e13ef958536\"><code>029c7b0</code></a> Bump actions/upload-artifact from 7.0.1 t\u2026",
+            "diff": {
+                "additions": 9,
+                "deletions": 9,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GeneratorsConfig",
+            "num": 96,
+            "title": "Build the docs in CI but don't publish them",
+            "url": "https://github.com/key4hep/k4GeneratorsConfig/pull/96",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Makes it easier to spot issues introduced earlier than when publishing fails\n\n\nBEGINRELEASENOTES\n- Build the docs (without deploying) them in CI\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 3,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/publish.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4GeneratorsConfig",
+            "num": 92,
+            "title": "Remove the old workflows that are not kept in sync",
+            "url": "https://github.com/key4hep/k4GeneratorsConfig/pull/92",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Remove the old and outdated Key4hep workflows that were still present under a filename that is not covered by the automated synchronisation we do for the rest.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 0,
+                "deletions": 36,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/key4hep_build.yml"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "The failing CI workflows are pre-existing. Merging this to get cleaner overviews for the dependabot PRs"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "mc-productions-tutorials",
+            "num": 7,
+            "title": "Make the tutorials self-paced",
+            "url": "https://github.com/HEP-FCC/mc-productions-tutorials/pull/7",
+            "author": "kjvbrt",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "The tutorials no longer refer to the 21 October training and can be followed by anyone reading through them:\n\n- Readers create their own `[TUTORIAL]` request in the DRS (Documentation and Trainings group) and submit its trial in the `summer2026` test campaign from FCCDIRAC.\n- Roles and cleanup of tutorial objects are requested from the admins (new Access and Cleanup sections in the README).\n- Setup gains a step for GitHub and an FCCDIRAC fork.\n- Configuration files are taken from their reference repositories: FCC-config, CLDConfig, ILDConfig and upstream Delphes.\n- The state used at the training is kept as the tag `training-2026-10-21`.",
+            "diff": {
+                "additions": 152,
+                "deletions": 117,
+                "files": 15
+            },
+            "files": [
+                "CONTRIBUTING.md",
+                "DRS/README.md",
+                "DRS/exercise.md",
+                "DRS/workflow-and-responsibilities.md",
+                "DaMI/README.md",
+                "README.md",
+                "Rucio/README.md",
+                "Setup/README.md",
+                "iLCDirac/README.md",
+                "iLCDirac/examples/README.md",
+                "iLCDirac/examples/pythia-delphes.conf.template",
+                "iLCDirac/exercise.md",
+                "iLCDirac/production-config.md",
+                "iLCDirac/sources.md",
+                "iLCDirac/troubleshooting.md"
+            ],
+            "comments": [
+                {
+                    "author": "pkontaxa",
+                    "body": "Thanks Juraj! The move to a self-paced tutorial looks good, and the added access and cleanup instructions are helpful. I just noticed one point that would be useful to clarify:\r\n\r\n**Checking email notifications:** The exercise asks readers to comment on their own request and check for an email. Howe\u2026"
+                },
+                {
+                    "author": "kjvbrt",
+                    "body": "> Thanks Juraj! The move to a self-paced tutorial looks good, and the added access and cleanup instructions are helpful. I just noticed one point that would be useful to clarify:\n> \n> **Checking email notifications:** The exercise asks readers to comment on their own request and check for an email. \u2026"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 682,
+            "title": "[IDEA] Fix bug that the IDEA o2 HCAL endcap cell ID metadata is encoded with the barrel one",
+            "url": "https://github.com/key4hep/k4geo/pull/682",
+            "author": "SanghyunKo",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "To ease the review process, please consider the following before opening a pull request:\n- [x] the code is sufficiently well documented (e.g. inline comments)\n- [x] the relevant README(s) were updated. See e.g. https://github.com/key4hep/k4geo/blob/main/detector/calorimeter/README.md or https://github.com/key4hep/k4geo/blob/main/FCCee/IDEA/compact/README.md\n- [x] the code is covered by tests. See https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\n- [x] the PR source branch has been rebased (`--ff-only`) to `k4geo/main`\n- [x] the PR does not contain any additions or modifications that do not belong to it\n- [x] The release notes below contain a succinct and comprehensive description of the changes that are sufficiently self-explanatory\n\nBEGINRELEASENOTES\n- Fix bug that the IDEA o\u2026",
+            "diff": {
+                "additions": 19,
+                "deletions": 12,
+                "files": 1
+            },
+            "files": [
+                "plugins/DRTubesSDAction.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 5
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 672,
+            "title": "[ALLEGRO] add ECal face tracking surfaces with DD4hep CaloFace plugins",
+            "url": "https://github.com/key4hep/k4geo/pull/672",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Install a cylindrical surface at the inner face of the ECal barrel and disk-shaped surfaces at the inner faces of the ECal endcaps, using the DD4hep_CaloFace{Barrel,Endcap}SurfacePlugin with symmetry=0. These surfaces are used by the tracking (e.g. ConformalTracking) to extrapolate tracks to the calorimeter. \n\nDepends on https://github.com/AIDASoft/DD4hep/pull/1699\n\nBEGINRELEASENOTES\n- Install helper surfaces at the inner face of the ECal, used by the tracking (e.g. ConformalTracking in k4Reco) to extrapolate the tracks to the calorimeter\nENDRELEASENOTES",
+            "diff": {
+                "additions": 51,
+                "deletions": 0,
+                "files": 3
+            },
+            "files": [
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ALLEGRO_o1_v03.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/ALLEGRO_o1_v04.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o2_v01/ALLEGRO_o2_v01.xml"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "This works because the previous version swallows `symmetry=0` and what happens then? We may have to bump the required version of DD4hep to avoid issues with this since it compiles and the tests don't complain."
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "> This works because the previous version swallows `symmetry=0` and what happens then? We may have to bump the required version of DD4hep to avoid issues with this since it compiles and the tests don't complain.\r\n\r\nfor the barrel, the old code does nothing because the loop is \r\n` for(unsigned i=0 ; \u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @jmcarcell ,\r\njust to understand, do we keep this PR open until we have a new tag of DD4hep and bump up the required version of DD4hep? \r\nThanks!"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I think we can merge this for the nightlies, and there is going to be a new version of DD4hep soon so we can request that when it happens. I'll open a PR with that requirement."
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "k4geo",
@@ -116,6 +462,39 @@
         {
             "org": "key4hep",
             "repo": "EDM4hep",
+            "num": 549,
+            "title": "Avoid assuming 64-bit unsigned long when decoding versions",
+            "url": "https://github.com/key4hep/EDM4hep/pull/549",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Decode version components with explicit 64-bit masks, without assuming unsigned long is 64 bits.\n\nENDRELEASENOTES\n\nUse `UINT64_C(0xFFFF)` masks to extract each 16-bit component, preserving preprocessor usage and existing behavior on LP64 platforms.\n\nCorresponding podio PR: https://github.com/AIDASoft/podio/pull/1072 (merged).",
+            "diff": {
+                "additions": 3,
+                "deletions": 3,
+                "files": 1
+            },
+            "files": [
+                "EDM4hepVersion.h.in"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Do we need this for the release? Or can this land with the next tag (whenever that is)?"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "We don't need this"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
             "num": 548,
             "title": "Add ReconstructionRandomSeed label",
             "url": "https://github.com/key4hep/EDM4hep/pull/548",
@@ -173,6 +552,40 @@
             "comments_total": 2,
             "reviews": [],
             "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 949,
+            "title": "Replace the library on MARLIN_DLL in k4_local_repo also with LCG views",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/949",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- `k4_local_repo`: replace the library on `MARLIN_DLL` also with LCG views, where the path of a library doesn't contain the package name. Until now the library from the stack was loaded instead of the local one.\r\n\r\nENDRELEASENOTES\r\n\r\nWith the LCG views, `k4_local_repo` doesn't change `MARLIN_DLL`, so a locally built Marlin processor library isn't used. `MARLIN_DLL` contains absolute paths, so it doesn't help that the local library comes first in `LD_LIBRARY_PATH`. The job runs normally with the library from the stack, and the only hint is the general warning about LCG views.\r\n\r\n`_replace_marlin_dll` (#569) finds the library by looking for `/<package>/` in its path. This works for the Spack stacks, but in an LCG view all libraries are in the same directory:\r\n\r\n```\r\nSpack:\u2026",
+            "diff": {
+                "additions": 12,
+                "deletions": 6,
+                "files": 2
+            },
+            "files": [
+                "scripts/cvmfs/setup-nightlies.sh",
+                "scripts/cvmfs/setup-releases.sh"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "This should also go to `setup-releases.sh` where eventually we'll have the same situation."
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> This should also go to `setup-releases.sh` where eventually we'll have the same situation.\n\nI added the same change to `setup-releases.sh`, so both scripts now have the same function"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 4
         },
         {
             "org": "key4hep",
@@ -242,6 +655,67 @@
         {
             "org": "key4hep",
             "repo": "k4ActsTracking",
+            "num": 145,
+            "title": "Include IAssignmentFinder.hpp from its new location",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/145",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n\n- Include `Acts/Material/IAssignmentFinder.hpp` instead of the deprecated `Acts/Material/interface/IAssignmentFinder.hpp`.\n\nENDRELEASENOTES\n\nACTS moved `IAssignmentFinder.hpp` out of `Acts/Material/interface/`, and the old path is now only a stub with `#warning \"Deprecated, use Acts/Material/IAssignmentFinder.hpp\"`. The MuColl image job builds with `-Werror` but without `-Wno-error=cpp`, so this warning fails the build of `MaterialValidationAlg.cpp` (via `GeantinoMaterialAssigner.h`). It currently fails this way on main and on every open PR, e.g. #143 and #144. The new header is in the ACTS of LCG devkey-head and of the MuColl image.",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "k4ActsTracking/src/components/GeantinoMaterialAssigner.h"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "When did ACTS put these deprecations resp. their replacements in? I suppose they are in some tag already?\r\n\r\nedit: What about other related deprecation warnings in the material mapping? https://github.com/key4hep/k4ActsTracking/actions/runs/42797193831/job/129765259606?pr=145#step:6:273"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "If this is merged then the LUXE image build won't work untill ACTS releases a new tag of ACTS is available in the image @madbaron"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "But then we should also not merge this before the next tag for the Key4hep release, right? Because also there we are going to use the last tagged version of ACTS."
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> If this is merged then the LUXE image build won't work untill ACTS releases a new tag of ACTS is available in the image [@madbaron](https://github.com/madbaron)\n\nI am happy to make a new one soon (right now we can't build anything from github because the CERN gitlab is down for external connection\u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> When did ACTS put these deprecations resp. their replacements in? I suppose they are in some tag already?\r\n> \r\n> edit: What about other related deprecation warnings in the material mapping? [key4hep/k4ActsTracking/actions/runs/42797193831/job/129765259606?pr=145#step:6:273](https://github.com/key4\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "So these changes are technically in an ACTS tag and we could use them in a new k4ActsTracking tag. We should then also bump the ACTS version requirements in our cmake configuration (even if it is mainly for documentation).\r\n\r\nThat is unless @jmcarcell plans to use a different ACTS tag for the releas\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "> > If this is merged then the LUXE image build won't work untill ACTS releases a new tag of ACTS is available in the image [@madbaron](https://github.com/madbaron)\r\n> \r\n> I am happy to make a new one soon (right now we can't build anything from github because the CERN gitlab is down for external co\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> > > If this is merged then the LUXE image build won't work untill ACTS releases a new tag of ACTS is available in the image [@madbaron](https://github.com/madbaron)\n> > \n> > I am happy to make a new one soon (right now we can't build anything from github because the CERN gitlab is down for externa\u2026"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "> > > > If this is merged then the LUXE image build won't work untill ACTS releases a new tag of ACTS is available in the image [@madbaron](https://github.com/madbaron)\n> > > \n> > > \n> > > I am happy to make a new one soon (right now we can't build anything from github because the CERN gitlab is dow\u2026"
+                }
+            ],
+            "comments_total": 9,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
             "num": 146,
             "title": "Use C++23 in the ACTS master workflow",
             "url": "https://github.com/key4hep/k4ActsTracking/pull/146",
@@ -281,6 +755,64 @@
             },
             "files": [
                 "k4ActsTracking/src/components/CKFTrackingFromSeedsAlg.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-dev-utils",
+            "num": 35,
+            "title": "Ignore ROOT and LCIO data files by default",
+            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/35",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "@Zehvogel",
+            "diff": {
+                "additions": 4,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "defaults/.gitignore"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "Zehvogel",
+                    "state": "APPROVED",
+                    "body": "LGTM \ud83d\udc4d Thanks!"
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 125,
+            "title": "Specify CXX for all CMake project calls",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/125",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Add `LANGUAGES CXX` to all subdirectory `project()` calls.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 5,
+                "deletions": 5,
+                "files": 5
+            },
+            "files": [
+                "ARCdigi/CMakeLists.txt",
+                "Tracking/CMakeLists.txt",
+                "VTXdigi/CMakeLists.txt",
+                "VTXdigiDetailed/CMakeLists.txt",
+                "WireTrackerDigi/CMakeLists.txt"
             ],
             "comments": [],
             "comments_total": 0,
@@ -450,6 +982,36 @@
         {
             "org": "hep-fcc",
             "repo": "fcc-cvmfs",
+            "num": 23,
+            "title": "feat: add CLD reconstruction config bundle for release 2026-04-08",
+            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/23",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "davidlange6",
+            "labels": [],
+            "body": "## Summary\n\n- Adds `FCCConfig_CLD` production bundle for FCC stack release `2026-04-08`, bundle version `r2025-11-07`\n- Tarball committed locally; will be removed from git history after merge\n\n## Submission\n\n```yaml\nbundle: FCCConfig_CLD\nrelease: \"2026-04-08\"\nversion: r2025-11-07\nsource-location: fccconfigcld-r2025-11-07.tgz\n```\n\n## Test plan\n\n- [ ] Validate workflow posts a passing PR comment with tar listing\n- [ ] On merge: `production_bundles/summary_FCCConfig_CLD.yml` gains a new entry with `release: 2026-04-08`, `version: r2025-11-07`, correct `sha256` and `added` fields; tarball is removed from git history\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
+            "diff": {
+                "additions": 10,
+                "deletions": 0,
+                "files": 2
+            },
+            "files": [
+                "production_bundles/fccconfigcld-2026-04-08-submission.yml",
+                "production_bundles/fccconfigcld-r2025-11-07.tgz"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "<!-- fcc-bundles-validation -->\n### FCC Production Bundles \u2014 validation passed \u2705\n\n\u2705 **`production_bundles/fccconfigcld-2026-04-08-submission.yml`**\n  - OK: FCCConfig_CLD 2026-04-08 vr2025-11-07 (fccconfigcld-r2025-11-07.tgz [local])\n\n_On merge: summaries will be updated and submission files removed.\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-cvmfs",
             "num": 21,
             "title": "feat: add CLD reconstruction config bundle r2025-11-07",
             "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/21",
@@ -487,6 +1049,59 @@
             "comments_total": 3,
             "reviews": [],
             "reviews_total": 1
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1074,
+            "title": "Add a deprecation warning for c++20 to cmake",
+            "url": "https://github.com/AIDASoft/podio/pull/1074",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Add a deprecation warning for builds using c++20 to cmake\n\nENDRELEASENOTES\n\nSee also #1073",
+            "diff": {
+                "additions": 8,
+                "deletions": 3,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "I will merge this still before the next tag, so that we have warnings in them already."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1075,
+            "title": "Fix an unused parameter warning when no backend is configured",
+            "url": "https://github.com/AIDASoft/podio/pull/1075",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Fix an unused parameter warning when no backend is configured\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "src/Writer.cc"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -845,6 +1460,234 @@
             "reviews_total": 0
         },
         {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1067,
+            "title": "Fix unaligned reads in MurmurHash3",
+            "url": "https://github.com/AIDASoft/podio/pull/1067",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Fix unaligned reads in all three MurmurHash3 variants. Hash values do not change.\r\n\r\nENDRELEASENOTES\r\n\r\nReplace integer-pointer block reads with `std::memcpy` from byte pointers to fix unaligned reads in all three MurmurHash3 variants (seen with the UB sanitizer in `UT_CollectionIDTable`, maybe Clang 23 is needed):\r\n\r\n```text\r\nruntime error: load of misaligned address ... for type 'const uint32_t'\r\n```",
+            "diff": {
+                "additions": 57,
+                "deletions": 8,
+                "files": 3
+            },
+            "files": [
+                "src/MurmurHash3.cpp",
+                "tests/unittests/CMakeLists.txt",
+                "tests/unittests/murmurhash3.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1070,
+            "title": "Fix race in Frame retrieved collection ID tracking",
+            "url": "https://github.com/AIDASoft/podio/pull/1070",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Fix a data race in Frame relation resolution by synchronizing retrieved collection ID tracking.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 69,
+                "deletions": 2,
+                "files": 2
+            },
+            "files": [
+                "include/podio/Frame.h",
+                "tests/unittests/test_arrow_converter.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 2
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1071,
+            "title": "Report ROOT output write failures during finalization",
+            "url": "https://github.com/AIDASoft/podio/pull/1071",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Report ROOT output write failures during finalization instead of silently succeeding, for both TTree and RNTuple writers.\r\n- Add a test that limits the amount of space a file can have and triggers a failure when writing\r\n\r\nENDRELEASENOTES\r\n\r\nFixes #1064.",
+            "diff": {
+                "additions": 83,
+                "deletions": 1,
+                "files": 5
+            },
+            "files": [
+                ".cppcheck-suppressions.txt",
+                "src/RNTupleWriter.cc",
+                "src/ROOTWriter.cc",
+                "tests/root_io/CMakeLists.txt",
+                "tests/root_io/write_error.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 9
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1069,
+            "title": "Lock map-wide GenericParameters operations",
+            "url": "https://github.com/AIDASoft/podio/pull/1069",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Prevent data races in map-wide GenericParameters operations.\n\nENDRELEASENOTES\n\nLock all four per-type mutexes in `GenericParameters::clear()`, `empty()`, and `print()` to prevent data races with concurrent parameter access.",
+            "diff": {
+                "additions": 43,
+                "deletions": 0,
+                "files": 3
+            },
+            "files": [
+                "include/podio/GenericParameters.h",
+                "src/GenericParameters.cc",
+                "tests/unittests/unittest.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 4
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1065,
+            "title": "Bump minimum required fmt version to 10",
+            "url": "https://github.com/AIDASoft/podio/pull/1065",
+            "author": "t-debajyoti",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Bump the minimum required fmt version in CMakeLists.txt from 9 to 10 since tools/src/podio-dump-tool.cpp uses fmt::println (introduced in fmt 10.0.0).\r\n\r\nBEGINRELEASENOTES\r\n- Bump minimum required fmt version to 10 in CMakeLists.txt\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Mid-term we will switch to require at least c++23 in any case. Hence, we will likely be able to drop `fmt` entirely and switch to `<format>` instead. For now, I would probably rather bump the minimal version of `fmt` that is required."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "The Key4hep stacks are ready for that, maybe other people could be asked, many things could be used from C++23"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Opened #1073 to keep track of things and to solicit feedback"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Please keep the *BEGINRELEASENOTES* and *ENDRELEASENOTES* tags in the first message of this PR with a short description of the changes [as per our contribution guidelines](https://github.com/AIDASoft/podio?tab=contributing-ov-file)."
+                },
+                {
+                    "author": "t-debajyoti",
+                    "body": "@tmadlener I have updated the description with the release notes tags."
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1066,
+            "title": "chore: Streamline and simplify CI workflow configuration",
+            "url": "https://github.com/AIDASoft/podio/pull/1066",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Simplify CMake prests.\r\n- Introduce one common action that is used by most workflows\r\n\r\nENDRELEASENOTES\r\n\r\nThis is largely me bing annoyed having to maintain the same thing 5 times, so I made Claude lift everything into one re-usable action and rewrite the workflows in terms of it. Also get's rid of some of the implicit configuration of certain options based on view path name, and rather makes things explicit via action arguments / matrix values.\r\n\r\nAdditionally, bundles required checks into one specific job, which makes it easier to keep them up to date without having to go to github settings whenever a workflow only changes slightly (plus makes these changes tracked via git)\r\n\r\nThis will need some further review, but opening the PR makes it a bit easier to test the w\u2026",
+            "diff": {
+                "additions": 410,
+                "deletions": 377,
+                "files": 15
+            },
+            "files": [
+                ".github/actions/podio-build/action.yml",
+                ".github/dependabot.yml",
+                ".github/workflows/downstream.yml",
+                ".github/workflows/edm4eic.yml",
+                ".github/workflows/edm4hep.yaml",
+                ".github/workflows/key4hep.yml",
+                ".github/workflows/lcg.yml",
+                ".github/workflows/pre-commit.yml",
+                ".github/workflows/publish-docs.yml",
+                ".github/workflows/sanitizers.yaml",
+                ".github/workflows/test.yml",
+                ".github/workflows/ubuntu.yml",
+                "CMakePresets.json",
+                "README.md",
+                "tests/tsan_suppressions.txt"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Merging this because it makes it easier for me to play with a few things centrally to see if we can get merge queues into a workable state."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1072,
+            "title": "Avoid assuming 64-bit unsigned long when decoding versions",
+            "url": "https://github.com/AIDASoft/podio/pull/1072",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-09",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Avoid assuming 64-bit unsigned long when decoding versions.\r\n\r\nENDRELEASENOTES\r\n\r\nVersion decoding does not need to assume that `unsigned long` is 64 bits. Use `UINT64_C(0xFFFF)` masks to extract each 16-bit component and accept `uint64_t` in `decode_version`, matching the encoded version type.\r\n\r\nThis preserves preprocessor usage and existing behavior on LP64 platforms, without truncating encoded versions where `unsigned long` is 32 bits.\r\n\r\nApplies also to EDM4hep.",
+            "diff": {
+                "additions": 4,
+                "deletions": 4,
+                "files": 1
+            },
+            "files": [
+                "podioVersion.in.h"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Yes"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "Will you open the same thing for EDM4hep as well?"
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
             "org": "key4hep",
             "repo": "k4Opt",
             "num": 129,
@@ -949,6 +1792,82 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1023,
+            "title": "feat: allow for no ROOT dependency builds",
+            "url": "https://github.com/AIDASoft/podio/pull/1023",
+            "author": "wdconinc",
+            "mergedAt": "2026-11-08",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Now that we have the possibility for backends like Arrow, there is no absolute requirement for ROOT in podio (was technically already the case with SIO). Default remains to require ROOT.\r\n\r\nThe python interfaces in podio use cppyy and ROOT dictionaries for introspection, so all python interfaces (even for SIO and Arrow) require ROOT. This would need something like pybind11 or nanobind to avoid the ROOT dependency.\r\n\r\nAdd one test matrix entry with ROOT off.\r\n\r\nNeeds:\r\n- [x] https://github.com/key4hep/EDM4hep/pull/521\r\n- [x] https://github.com/eic/EDM4eic/pull/181\r\n\r\nBEGINRELEASENOTES\r\n- feat: allow for no ROOT dependency builds (controlled by `ENABLE_ROOT` cmake option and transported downstream via `PODIO_ENABLE_ROOT` cmake variable as well as pre-processor directive). **Disabling ROOT wi\u2026",
+            "diff": {
+                "additions": 702,
+                "deletions": 299,
+                "files": 25
+            },
+            "files": [
+                ".github/workflows/test.yml",
+                "CMakeLists.txt",
+                "CMakePresets.json",
+                "README.md",
+                "cmake/podioBuild.cmake",
+                "cmake/podioConfig.cmake.in",
+                "cmake/podioMacros.cmake",
+                "cmake/podioTest.cmake",
+                "python/CMakeLists.txt",
+                "python/podio/__init__.py",
+                "python/podio/reading.py",
+                "src/CMakeLists.txt",
+                "src/Reader.cc",
+                "src/Writer.cc",
+                "tests/CMakeLists.txt",
+                "tests/arrow_io/CMakeLists.txt",
+                "tests/dumpmodel/CMakeLists.txt",
+                "tests/schema_evolution/code_gen/check_base.h",
+                "tests/schema_evolution/code_gen/test_utilities.cmake",
+                "tests/sio_io/CMakeLists.txt",
+                "tests/unittests/CMakeLists.txt",
+                "tests/unittests/unittest.cpp",
+                "tests/unittests/writer_for.cpp",
+                "tools/CMakeLists.txt",
+                "tools/podio-merge-files"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "It looks like one of the root dictionaries is still trying to be installed:\r\n\r\nhttps://github.com/AIDASoft/podio/actions/runs/35885912750/job/107265873642?pr=1023#step:5:271\r\n``` \r\ninstall TARGETS given target \"podioArrowDict\" which does not exist.\r\n```\r\n\r\nsimilar guards as for the rest should do th\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Fixed the merge conflicts with the main branch given all the rest that has been merged in between. Adapted tests that came into play since then to work w/o ROOT.\r\n\r\nThe main thing that was missing and that made downstream workflows fail partially was the propagation of `PODIO_ENABLE_ROOT` to downstr\u2026"
+                },
+                {
+                    "author": "wdconinc",
+                    "body": "> @wdconinc sorry, got distracted multiple times before getting back to this. As far as I am concerned, this is good to go. Unless you (or anyone else) still wants to change something, I will merge this in the next days and then make a new tag.\r\n\r\nNo problem. This is still fine with me. Just in time\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Some workflows got new names with this PR, so the *requried* clauses don't match any longer."
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [
+                {
+                    "author": "copilot-pull-request-reviewer",
+                    "state": "COMMENTED",
+                    "body": "### \ud83d\udfe1 Changes recommended\n\nThe ROOT=OFF CI configuration currently contains concrete configuration/install issues (workflow RNTUPLE enabling, dumpmodel empty `set_tests_properties`, Python install filter bug) that will break builds/tests.\n\n*Get a fresh assessment by requesting another Copilot review\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "DISMISSED",
+                    "body": "@wdconinc sorry, got distracted multiple times before getting back to this. As far as I am concerned, this is good to go. Unless you (or anyone else) still wants to change something, I will merge this in the next days and then make a new tag."
+                }
+            ],
+            "reviews_total": 17
         },
         {
             "org": "key4hep",
@@ -1759,6 +2678,45 @@
             "reviews_total": 0
         },
         {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1063,
+            "title": "Allow all schema evolution read checks to run",
+            "url": "https://github.com/AIDASoft/podio/pull/1063",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-06",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Remove the successful `return 0` from READ_WITH so READ_AS_FROM_VERSION no longer makes main return before completing all the checks. After https://github.com/AIDASoft/podio/pull/1055.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 0,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "tests/schema_evolution/code_gen/check_base.h"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "I think this should be the global fix, simply don't return and let it continue, if it fails something will return 1, otherwise there should be a return 0 at the end."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Yes, this looks like the proper minimal fix. The `return 0` is implicit in this case, but a failure should still exit early with a non-zero exit code."
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Is this only present for these tests, or is it a general \"feature\" I implemented for all of them?"
+                }
+            ],
+            "reviews_total": 2
+        },
+        {
             "org": "key4hep",
             "repo": "EDM4hep",
             "num": 543,
@@ -1781,9 +2739,17 @@
                 {
                     "author": "tmadlener",
                     "body": "We might have been a little quick here, because DD4hep actually already stores random seeds, but it does it under `random.seed`, and it puts it into a `podio::Category::Run`, instead of the file level metadata. We either simply document this, or adapt DD4hep or key4hep/k4SimDelphes#167 accordingly."
+                },
+                {
+                    "author": "kjvbrt",
+                    "body": "I think the whole metadata storage needs some rethinking. For example, what does it mean \"run\" needs to be better defined. Also, as far as I can tell the frame recording the ddsim config is not propagated by Gaudi to the final file."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Yeah, there are probably quite a few subtleties to figure out, resp. some conventions to come up with to cover FCC specifics."
                 }
             ],
-            "comments_total": 1,
+            "comments_total": 3,
             "reviews": [
                 {
                     "author": "tmadlener",
@@ -2619,235 +3585,92 @@
             "reviews_total": 3
         },
         {
-            "org": "key4hep",
-            "repo": "k4FWCore",
-            "num": 450,
-            "title": "Make install-directory ordering explicit (no behavior change)",
-            "url": "https://github.com/key4hep/k4FWCore/pull/450",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-04",
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1050,
+            "title": "Make it possible to set compression settings for ROOT writers",
+            "url": "https://github.com/AIDASoft/podio/pull/1050",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-05",
             "mergedBy": "tmadlener",
             "labels": [],
-            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi REQUIRED)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
+            "body": "BEGINRELEASENOTES\r\n- The `ROOTWriter` and the `RNTupleWriter` can consume compression settings\r\n- Introduced a new `WriterFor` builder for a more customizable configuration of the high level `Writer` interface wrapper. This also makes it possible to pass compression (and potentially) other settings to the lower level writers through this interface.\r\n\r\nENDRELEASENOTES",
             "diff": {
-                "additions": 2,
-                "deletions": 1,
-                "files": 1
+                "additions": 642,
+                "deletions": 50,
+                "files": 11
             },
             "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Gen",
-            "num": 68,
-            "title": "Make install-directory ordering explicit (no behavior change)",
-            "url": "https://github.com/key4hep/k4Gen/pull/68",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-04",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi REQUIRED)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
-            "diff": {
-                "additions": 2,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4SimGeant4",
-            "num": 99,
-            "title": "Make install-directory ordering explicit (no behavior change)",
-            "url": "https://github.com/key4hep/k4SimGeant4/pull/99",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-04",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi REQUIRED)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
-            "diff": {
-                "additions": 2,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 138,
-            "title": "Make install-directory ordering explicit (no behavior change)",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/138",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-04",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(k4FWCore REQUIRED)` loads Gaudi, which already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 120,
-            "title": "[TrackFitter]: Drop chi2=-1 placeholder tracks on fit failure",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/120",
-            "author": "andread3vita",
-            "mergedAt": "2026-11-04",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n\n- When the fit failed for all hypotheses (and the LimitHits retry), an empty placeholder track (chi2=ndf=-1, no hits, no track states) was written to both output collections to keep them index-aligned with the input. Skip the track instead: failed fits no longer appear in FittedTracks or FittedTracksWithFilteredHits.\n\nENDRELEASENOTES\n\nDear all,\n\nThis PR removes the placeholder for fits that fail in both the standard and recovered fitting steps. The change is intended to accommodate the requirements of other algorithms that expect input tracks to contain at least one TrackState.\n\nCheers,\nAndrea",
-            "diff": {
-                "additions": 1,
-                "deletions": 17,
-                "files": 1
-            },
-            "files": [
-                "Tracking/components/GenfitTrackFitter.cpp"
+                "doc/reading_writing.md",
+                "include/podio/RNTupleWriter.h",
+                "include/podio/ROOTWriteOptions.h",
+                "include/podio/ROOTWriter.h",
+                "include/podio/Writer.h",
+                "src/CMakeLists.txt",
+                "src/RNTupleWriter.cc",
+                "src/ROOTWriter.cc",
+                "src/Writer.cc",
+                "tests/unittests/CMakeLists.txt",
+                "tests/unittests/writer_for.cpp"
             ],
             "comments": [
                 {
-                    "author": "andread3vita",
-                    "body": "> Looks reasonable to me. Any expected consequences from dropping the index-alignment with the inputs (other than the fact that this is now more friendly to algorithms that do expect _proper_ tracks)?\r\n\r\nMaybe it could be useful for debugging, but I'm not sure it's really necessary. Without the PR, \u2026"
+                    "author": "jmcarcell",
+                    "body": "I've thought about this a few times. We should also have it in the general writer https://github.com/AIDASoft/podio/blob/master/include/podio/Writer.h#L28, since that is an interface that is used in many places. In addition there is the `RNTupleWriter` that should also take it. Then one has to check\u2026"
+                },
+                {
+                    "author": "davidlange6",
+                    "body": "i can see about how to include the general Writer as well (hopefully without breaking what is done for Arrow)"
+                },
+                {
+                    "author": "davidlange6",
+                    "body": "> I've thought about this a few times. We should also have it in the general writer https://github.com/AIDASoft/podio/blob/master/include/podio/Writer.h#L28, since that is an interface that is used in many places. In addition there is the `RNTupleWriter` that should also take it. Then one has to che\u2026"
+                },
+                {
+                    "author": "davidlange6",
+                    "body": "@tmadlener - i've tried your suggestion to use variant. Seems an improvement to me.  Thanks"
                 },
                 {
                     "author": "tmadlener",
-                    "body": "OK. If debugging becomes a problem one could start to also produce a collection of indices (via `podio::UserDataCollection` for example) that contains the failed track indices. But I would say we wait with that until it actually becomes a problem?\r\n\r\nIf there are no other comments, I will merge this\u2026"
+                    "body": "I have done some more cleanup and had another look through my additions. I am fairly happy with this and would merge this later this week unless there are comments / complaints."
                 }
             ],
-            "comments_total": 2,
+            "comments_total": 5,
             "reviews": [
                 {
                     "author": "tmadlener",
                     "state": "COMMENTED",
-                    "body": "Looks reasonable to me. Any expected consequences from dropping the index-alignment with the inputs (other than the fact that this is now more friendly to algorithms that do expect *proper* tracks)?"
+                    "body": "I have played a bit with this because I didn't like the fact that the `makeWriter` that took options ignored the environment variable that can be used to switch to RNTuple by default. I couldn't come up with a good solution in the original design so I made Claude build me one using the *builder patt\u2026"
                 }
             ],
-            "reviews_total": 2
+            "reviews_total": 8
         },
         {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 122,
-            "title": "Make install-directory ordering explicit (no behavior change)",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/122",
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1059,
+            "title": "Reload ROOTReader branches whenever the TChain loads a new tree",
+            "url": "https://github.com/AIDASoft/podio/pull/1059",
             "author": "jmcarcell",
-            "mergedAt": "2026-11-04",
+            "mergedAt": "2026-11-05",
             "mergedBy": "tmadlener",
             "labels": [],
-            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi REQUIRED)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
+            "body": "Since #1048 the `ROOTReader` decides whether to reload branches by comparing tree numbers, which segfaults in `TBranch::GetEntry` when reading from a chain of files in some cases (second and third bullet point were found by AI and seem unlikely; the first seems possible to find):\r\n- After a failed `readEntry` beyond the last entry, reading from the first file again (the tree is reloaded, but the tree number is the same)\r\n- After `readEntry` with a non-existent collection for an entry in another file\r\n- (also before #1048) After reading only some collections for the first entry of a file, reading the other collections\r\n\r\nInstead, let ROOT notify the reader whenever the chain loads a new tree ([`TTree::SetNotify`](https://root.cern/doc/master/classTTree.html#a3a351f983a9cf88f85efeb61662c03d1\u2026",
             "diff": {
-                "additions": 2,
-                "deletions": 1,
-                "files": 1
+                "additions": 233,
+                "deletions": 58,
+                "files": 4
             },
             "files": [
-                "CMakeLists.txt"
+                "include/podio/ROOTReader.h",
+                "src/ROOTReader.cc",
+                "src/rootUtils.h",
+                "tests/root_io/read_frame_root_multiple.cpp"
             ],
             "comments": [],
             "comments_total": 0,
             "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Reco",
-            "num": 77,
-            "title": "Make install-directory ordering explicit (no behavior change)",
-            "url": "https://github.com/key4hep/k4Reco/pull/77",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-04",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi REQUIRED)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4GaudiPandora",
-            "num": 64,
-            "title": "Make install-directory ordering explicit (no behavior change)",
-            "url": "https://github.com/key4hep/k4GaudiPandora/pull/64",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-04",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4MLJetTagger",
-            "num": 16,
-            "title": "Make install-directory ordering explicit (no behavior change)",
-            "url": "https://github.com/key4hep/k4MLJetTagger/pull/16",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-04",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Initialize GNU install directories before configuring RPATH (no behavior change).\n\nENDRELEASENOTES\n\nThis repository is not affected by [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677): `find_package(Gaudi)` already initializes `CMAKE_INSTALL_LIBDIR` before the RPATH helper runs. Move the explicit `GNUInstallDirs` include before the helper to remove that implicit dependency. Existing installation paths and RPATH are unchanged.",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
+            "reviews_total": 5
         },
         {
             "org": "key4hep",
@@ -2952,396 +3775,6 @@
             ],
             "comments": [],
             "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4-project-template",
-            "num": 34,
-            "title": "Initialize install directories before setting RPATH",
-            "url": "https://github.com/key4hep/k4-project-template/pull/34",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Make sure to initialize the install directories before setting RPATH\n\nENDRELEASENOTES\n\nSee https://github.com/key4hep/k4geo/issues/677",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "So the existing 5 PRs that have been merged fix an issue in the 5 PRs, however there are several that don't have the issue, because, for example, if `find_package(Gaudi)` is called before the inclusion of `Key4hepConfig.cmake`, then it will hardcode `CMAKE_INSTALL_LIBDIR` to `lib`, removing the poss\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Thanks agent :D I think it's a good idea to have this consistently everywhere, even if it's not needed in principle."
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 80,
-            "title": "The dashboard is laid out as k4Bench's: a sidebar that chooses, tabs on top, one sheet per trial",
-            "url": "https://github.com/key4hep/k4Opt/pull/80",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The dashboard was hard to follow: a study was chosen twice (a checkbox in a table, then a picker\nover a large title), a 400 px header of mostly zeros sat on every tab, labels were machine\nidentifiers (`pi0_rejection/analysis/background_rejection (objective)`, `[1]`, `None`,\n`1.683e+07`), and a trial opened three different ways. This lays it out after\n[k4Bench's dashboard](https://k4bench-dashboard.app.cern.ch).\n\n**Sidebar.** As k4Bench's: *Data Source* (Refresh Data, and a card naming the publication, a\nlink where it is served), then **Detector \u2192 Key4hep \u2192 Study**, each narrowing the next and kept\nin the URL, *All studies*, and k4Bench's footer (also at the bottom of each page).\n\n**Studies.** One sortable table of the studies the sidebar keeps (detector, problem, Key4hep\nstack, dates, outc\u2026",
-            "diff": {
-                "additions": 2153,
-                "deletions": 1153,
-                "files": 31
-            },
-            "files": [
-                ".github/workflows/ci.yml",
-                "dashboard/app.py",
-                "dashboard/data.py",
-                "dashboard/labels.py",
-                "dashboard/overview.py",
-                "dashboard/studies.py",
-                "dashboard/study.py",
-                "dashboard/tables.py",
-                "dashboard/trial.py",
-                "dashboard/views/__init__.py",
-                "dashboard/views/analysis.py",
-                "dashboard/views/overview.py",
-                "dashboard/views/results.py",
-                "dashboard/views/trade_offs.py",
-                "dashboard/views/trials.py",
-                "dashboard/widgets.py",
-                "docs/dashboard.md",
-                "docs/publication.md",
-                "docs/visualization.md",
-                "k4opt/publication/catalog.py",
-                "k4opt/visualization/__init__.py",
-                "k4opt/visualization/graph.py",
-                "k4opt/visualization/pipeline.py",
-                "k4opt/visualization/trials.py",
-                "pyproject.toml",
-                "tests/unit/dashboard/conftest.py",
-                "tests/unit/dashboard/test_app.py",
-                "tests/unit/dashboard/test_labels.py",
-                "tests/unit/dashboard/test_tables.py",
-                "tests/unit/publication/test_publish.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 79,
-            "title": "Trade-offs against a reference trial: which trials give up at most so much for at least so much",
-            "url": "https://github.com/key4hep/k4Opt/pull/79",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "**Why.** A multi-objective study has a front, not a best trial. The ECAL study has 62 of its 100 trials on the front. Choosing among them is a question of what one gives up for what, for example \"at most 5 % worse resolution for at least 10 % fewer cells\". This PR lets the dashboard answer such questions over the trials a study already has. It is the classification step of interactive methods such as NIMBUS, done over existing trials. No new optimization runs and no new problem configuration.\n\n**`k4opt.optimization.trade_offs(study, reference, rules, *, within_uncertainty=True)`** (in `_tradeoffs.py`, next to the Pareto front):\n\n- `Rule(label, \"improve\" | \"worsen\" | \"keep\", amount, relative=True)` asks one objective to improve by at least `amount`, worsen by at most `amount`, or not worsen\u2026",
-            "diff": {
-                "additions": 696,
-                "deletions": 17,
-                "files": 12
-            },
-            "files": [
-                "dashboard/study.py",
-                "dashboard/tables.py",
-                "docs/dashboard.md",
-                "docs/optimization.md",
-                "docs/visualization.md",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_tradeoffs.py",
-                "k4opt/visualization/trials.py",
-                "tests/unit/dashboard/test_app.py",
-                "tests/unit/dashboard/test_tables.py",
-                "tests/unit/optimization/test_tradeoffs.py",
-                "tests/unit/visualization/test_trials.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 78,
-            "title": "The Study page's Analysis tab shows how the parameters act on an objective",
-            "url": "https://github.com/key4hep/k4Opt/pull/78",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Third of the dashboard redesign series (after #76 and #77). It adds the figures of Optuna Dashboard's analytics, built from `StudyResults` alone (no Optuna), and an Analysis tab that shows them.\n\n**`k4opt/visualization/analysis.py`**\n\n- `parallel_figure(results, objective)`: Plotly's `go.Parcoords`, with each feasible trial as one line.\n  - Axes: one per parameter (a categorical one shows its choices as ticks), one per objective, and one per bound of each constraint, showing the margin (zero or below when satisfied).\n  - Color: the chosen objective. The scale is reversed for `minimize`, so the better trials are always the strongest color.\n  - Notes: infeasible trials and trials without a result are counted in the figure's title. Plotly draws no annotations over parallel axes, so the note g\u2026",
-            "diff": {
-                "additions": 670,
-                "deletions": 8,
-                "files": 7
-            },
-            "files": [
-                "dashboard/study.py",
-                "docs/dashboard.md",
-                "docs/visualization.md",
-                "k4opt/visualization/__init__.py",
-                "k4opt/visualization/analysis.py",
-                "tests/unit/dashboard/test_app.py",
-                "tests/unit/visualization/test_analysis.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 77,
-            "title": "The Study page is in tabs, with each trial's record, a history of each objective and trials colored by a value",
-            "url": "https://github.com/key4hep/k4Opt/pull/77",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Second of the dashboard redesign series (after #76).\n\n**Study page.** The outcome counts stay on top. Below them are four tabs, created with\n`st.tabs(key=\"view\", bind=\"query-params\")`, so the open tab is in the URL and only that tab\nruns. In particular, Graphviz runs only when the Pipeline tab is open.\n\n- **Overview**: the trials figure with its two axes and a new *Color* selector (outcome, the\n  default; trial number; any objective or numeric parameter), then the Pareto table (300 px\n  high), then a history plot per objective. Clicking a trial in any figure opens it in a dialog.\n  After each click the chart key is bumped, so the selection clears.\n- **Trials**: an outcome filter (pills with counts) and the table of every trial. Selecting a row,\n  or a link with `?trial=N`, shows the trial'\u2026",
-            "diff": {
-                "additions": 772,
-                "deletions": 128,
-                "files": 12
-            },
-            "files": [
-                "dashboard/app.py",
-                "dashboard/overview.py",
-                "dashboard/study.py",
-                "dashboard/tables.py",
-                "docs/dashboard.md",
-                "docs/visualization.md",
-                "k4opt/visualization/__init__.py",
-                "k4opt/visualization/trials.py",
-                "tests/unit/dashboard/test_app.py",
-                "tests/unit/dashboard/test_tables.py",
-                "tests/unit/visualization/test_history.py",
-                "tests/unit/visualization/test_trials.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 76,
-            "title": "The pipeline graph is drawn by Graphviz, its text zooming with its boxes, across the page",
-            "url": "https://github.com/key4hep/k4Opt/pull/76",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "First of the dashboard redesign series (graph, tabs, analysis plots, fANOVA, timeline).\n\n**Problem.** `pipeline_figure` scaled the layout to at most 880 px, so the ECAL study's graph was\n212 px tall on a 1400 px page. Its text was Plotly annotations in fixed pixels over boxes in data\nunits, so zooming out ran the text over the boxes and edges.\n\n**Change.** Graphviz both lays the graph out and draws it: one `dot` run writes the layout\n(`-Tjson`) and the drawing (`-Tsvg`). The figure shows the SVG as one layout image in data\ncoordinates, so the text is part of the drawing and zooms with its boxes. Plotly still provides\npan, scroll zoom, the modebar, and hover and click on tasks and edges:\n\n- The clickable trace is unchanged (`customdata[0]` = node id or stack key, last trace). Its\n  transpar\u2026",
-            "diff": {
-                "additions": 205,
-                "deletions": 195,
-                "files": 6
-            },
-            "files": [
-                "dashboard/Dockerfile",
-                "docs/dashboard.md",
-                "docs/visualization.md",
-                "k4opt/visualization/_draw.py",
-                "k4opt/visualization/pipeline.py",
-                "tests/unit/visualization/test_pipeline.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 75,
-            "title": "The dashboard's route is reachable from outside CERN",
-            "url": "https://github.com/key4hep/k4Opt/pull/75",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The dashboard at https://k4opt-dashboard.app.cern.ch answered only inside CERN: the CERN OpenShift routers admit only CERN's networks unless a route empties its IP whitelist. k4Bench's route does (`haproxy.router.openshift.io/ip_whitelist: \"\"`, k4Bench #35); ours carried no annotation.\n\n- `openshift/route.yaml`: the empty whitelist.\n- `docs/dashboard.md`: the route is open to the Internet; what the dashboard shows is public, as before.\n- `tests/unit/test_deployment.py`: checks the annotation instead of its absence.\n\nThe deploy workflow applies the route on merge, so no manual `oc` step is needed. Once deployed, check from outside CERN that the page loads.",
-            "diff": {
-                "additions": 13,
-                "deletions": 9,
-                "files": 3
-            },
-            "files": [
-                "docs/dashboard.md",
-                "openshift/route.yaml",
-                "tests/unit/test_deployment.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 74,
-            "title": "The pipeline tests accept the font warnings of a Graphviz without fonts",
-            "url": "https://github.com/key4hep/k4Opt/pull/74",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The `test` job has failed since #71: inside the Key4hep container, `dot` is the stack's Graphviz, built without fonts, which lays the graph out with estimated text widths and says so on stderr:\n\n```\nWarning: Warning: no hard-coded metrics for 'Helvetica,Arial,sans-serif'.  Falling back to 'Times' metrics\nWarning: Warning: no value for width of non-ASCII character 226. Falling back to width of space character\n```\n\n`test_pipeline.py` asserted an empty stderr, so its five `dot` tests failed there (the `dashboard` job, with Ubuntu's Graphviz and its fonts, passed). They now ignore these two warnings and still fail on anything else Graphviz writes, a syntax warning of the DOT in particular.",
-            "diff": {
-                "additions": 11,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "tests/unit/visualization/test_pipeline.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 73,
-            "title": "The pipeline test reads the pi0 example's 50 GeV samples",
-            "url": "https://github.com/key4hep/k4Opt/pull/73",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "#72 renamed the pi0 example's samples to `gamma_50gev`/`pi0_50gev` (500 events at 50 GeV) and made the channel count a second objective in place of a constraint, after #71 added `tests/unit/visualization/test_pipeline.py`, which builds its graphs from that example. The dashboard job on `main` fails since.\n\nThe test now names the 50 GeV samples, and the cases about a constraint node build it themselves (`with_constraint()`: the channel count limited to 5e7, as the example had it); `without_constraint()` drops the channel objective so that the readout is a diagnostic again.",
-            "diff": {
-                "additions": 37,
-                "deletions": 26,
-                "files": 1
-            },
-            "files": [
-                "tests/unit/visualization/test_pipeline.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 72,
-            "title": "Photon/pi0 example: 50 GeV pi0s told from photons by their halo fraction",
-            "url": "https://github.com/key4hep/k4Opt/pull/72",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The photon/pi0 example did not depend on what it varies. Its RMS shower width is dominated by a few low-energy hits far from the shower axis, so the cut at 90 % photon efficiency sat in the tail and rejected 0.17 of the pi0s at every cell size from 2.5 to 20 mm (200-trial study). At 20 GeV the two photons of a pi0 are also at least 29 mm apart, farther than the coarsest cell.\n\n## What changes\n\n- `calo.shower_shape` measures the **halo fraction**: the fraction of an event's energy farther than `radius` (10 mm, about the Moliere radius of tungsten) from the radial shower axis.\n- `calo.separation` cuts on any dimensionless variable, low for the signal, and reports `cut` in place of `width_cut`.\n- The problem simulates **50 GeV** photons and pi0s (photons at least ~12 mm apart at the ECAL), 50\u2026",
-            "diff": {
-                "additions": 146,
-                "deletions": 83,
-                "files": 10
-            },
-            "files": [
-                "README.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/problem.md",
-                "examples/evaluators/separation.py",
-                "examples/evaluators/shower_shape.py",
-                "examples/problem/cld-ecal-pi0-rejection.yaml",
-                "tests/integration/execution/test_evaluate_ddsim.py",
-                "tests/unit/evaluation/test_combined_examples.py",
-                "tests/unit/problem/test_config_samples.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 71,
-            "title": "Study page shows how a candidate is evaluated",
-            "url": "https://github.com/key4hep/k4Opt/pull/71",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The Study page showed what a study optimizes only as tables. It now draws how each candidate is evaluated: the task graph of the problem, laid out by Graphviz and drawn with Plotly.\n\n## What it shows\n\n- **Left to right:** the parameters, the geometry, each sample in a box with its stages and evaluations, the combined and candidate-level evaluations, and the objectives and constraints they measure.\n- **A color per kind:** parameters blue, samples and their stages violet, evaluations aqua, objectives and constraints orange, the geometry neutral. A diagnostic that did not succeed in some trials is red, with \"\u26a0 did not succeed in N of M trials\". There is a legend, and every kind is also told apart by its place, box and label.\n- **Edges no other path implies:** the geometry reaches each simulat\u2026",
-            "diff": {
-                "additions": 1752,
-                "deletions": 14,
-                "files": 13
-            },
-            "files": [
-                ".github/workflows/ci.yml",
-                "dashboard/Dockerfile",
-                "dashboard/study.py",
-                "dashboard/tables.py",
-                "docs/dashboard.md",
-                "docs/visualization.md",
-                "k4opt/visualization/__init__.py",
-                "k4opt/visualization/_draw.py",
-                "k4opt/visualization/graph.py",
-                "k4opt/visualization/pipeline.py",
-                "tests/unit/dashboard/test_app.py",
-                "tests/unit/test_deployment.py",
-                "tests/unit/visualization/test_pipeline.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCCAnalyses",
-            "num": 579,
-            "title": "Use GNUInstallDirs for libraries and executables",
-            "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/579",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-03",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Use GNUInstallDirs for installation and RPATH. Related to [key4hep/k4geo#677](https://github.com/key4hep/k4geo/issues/677).\n\nCompared with the current behaviour:\n\n- Libraries follow `CMAKE_INSTALL_LIBDIR`: the AlmaLinux 9 default changes from `lib` to `lib64`, matching RPATH. `-DCMAKE_INSTALL_LIBDIR=lib` retains the old layout. Test environment paths use the absolute install library directory.\n- Executables still default to `bin`; installation of `fccanalysis` also honours a custom `CMAKE_INSTALL_BINDIR`. The standard CMake variables replace the old `INSTALL_LIB_DIR`/`INSTALL_BIN_DIR` overrides.\n- `setup.sh` searches local `install/lib64`, then local `install/lib`, before stack libraries. Previously, the ONNX stack directory could shadow both local directories, and local `lib` took precede\u2026",
-            "diff": {
-                "additions": 12,
-                "deletions": 13,
-                "files": 4
-            },
-            "files": [
-                "CMakeLists.txt",
-                "analyzers/dataframe/CMakeLists.txt",
-                "cmake/FCCAnalysesFunctions.cmake",
-                "setup.sh"
-            ],
-            "comments": [
-                {
-                    "author": "kjvbrt",
-                    "body": "Thanks"
-                }
-            ],
-            "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
         }
