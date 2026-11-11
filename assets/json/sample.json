@@ -2,10 +2,10 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 685,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/685'>[ALLEGRO][IDEA] Reduce the world volume to the detector extent plus 50 cm</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-11",
+            "num": 683,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/683'>[ALLEGRO and IDEA] Set magnetic field to 0 outside muon system</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-11-10",
             "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
@@ -13,10 +13,10 @@
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 683,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/683'>[ALLEGRO and IDEA] Set magnetic field to 0 outside muon system</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-11-10",
+            "num": 685,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/685'>[ALLEGRO][IDEA] Reduce the world volume to the detector extent plus 50 cm</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-11",
             "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
@@ -134,12 +134,12 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
-            "num": 551,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/551'>Check EOS access before generating documentation</a>",
-            "author": "jmcarcell",
+            "num": 553,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/553'>Build deployed documentation without internals</a>",
+            "author": "tmadlener",
             "createdAt": "2026-11-11",
             "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -150,7 +150,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-11-11",
             "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -161,7 +161,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-30",
             "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -172,7 +172,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-05",
             "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -194,7 +194,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -205,7 +205,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -239,6 +239,17 @@
             "createdAt": "2022-08-08",
             "updatedAt": "2026-05-23",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 452,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/452'>Writer: delete the store wrapper of collections from the old DataHandle</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -442,12 +453,23 @@
         },
         {
             "repo": "key4hep/<br>k4SimDelphes",
+            "num": 171,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/171'>Fix empty RecoMCLink collection in k4SimDelphesAlg</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
             "num": 168,
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/168'>Ensure to find a recent enough podio version</a>",
             "author": "tmadlener",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-10",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1074,7 +1096,7 @@
             "author": "dirkzerwas",
             "createdAt": "2026-06-09",
             "updatedAt": "2026-07-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1277,17 +1299,6 @@
             "assignees": "keplerman417"
         },
         {
-            "repo": "key4hep/<br>k4Opt",
-            "num": 132,
-            "title": "<a href='https://github.com/key4hep/k4Opt/pull/132'>Search a level's parameters in problem order, and compare JSON whatever its key order</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-11",
-            "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>FCCSW",
             "num": 491,
             "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/491'>Fix tests.</a>",
@@ -1360,6 +1371,17 @@
             "author": "apausa",
             "createdAt": "2026-09-29",
             "updatedAt": "2026-10-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCDIRAC",
+            "num": 26,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/26'>DRS-7: ZH production, attempt1, ProdID: 17203</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1938,6 +1960,28 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-drs",
+            "num": 129,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/129'>Update Node.js to v26</a>",
+            "author": "renovate",
+            "createdAt": "2026-10-28",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 130,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/130'>Update module github.com/jackc/pgx/v5 to v5.13.0</a>",
+            "author": "renovate",
+            "createdAt": "2026-10-31",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
             "num": 132,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/132'>Update dependency marked to v18.2.0</a>",
             "author": "renovate",
@@ -1976,28 +2020,6 @@
             "author": "kjvbrt",
             "createdAt": "2026-11-04",
             "updatedAt": "2026-11-04",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 130,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/130'>Update module github.com/jackc/pgx/v5 to v5.12.0</a>",
-            "author": "renovate",
-            "createdAt": "2026-10-31",
-            "updatedAt": "2026-10-31",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 129,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/129'>Update Node.js to v26</a>",
-            "author": "renovate",
-            "createdAt": "2026-10-28",
-            "updatedAt": "2026-10-29",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2075,7 +2097,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2097,7 +2119,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2108,7 +2130,7 @@
             "author": "wdconinc",
             "createdAt": "2026-09-06",
             "updatedAt": "2026-10-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2119,7 +2141,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2173,7 +2195,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/424'>wip: change std::vector to std::pmr::vector</a>",
             "author": "stch-zhangyzh",
             "createdAt": "2023-06-04",
-            "updatedAt": "2026-04-02",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2184,7 +2206,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/579'>Davidl root reader t directory</a>",
             "author": "faustus123",
             "createdAt": "2024-04-10",
-            "updatedAt": "2026-04-02",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2195,7 +2217,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/713'>Add a simple test that only reads partial frames to check proper cleanup</a>",
             "author": "tmadlener",
             "createdAt": "2024-11-28",
-            "updatedAt": "2026-04-02",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2206,7 +2228,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/782'>Make it possible to get the collection for an object</a>",
             "author": "tmadlener",
             "createdAt": "2025-05-20",
-            "updatedAt": "2026-04-02",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2217,8 +2239,8 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/856'>[wip] Add the possibility to extract collections from a Frame</a>",
             "author": "tmadlener",
             "createdAt": "2025-10-08",
-            "updatedAt": "2026-04-02",
-            "mergeOk": "no",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2228,7 +2250,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/869'>[wip] Add tests for checking and documenting behavior on files containing only subset collections</a>",
             "author": "tmadlener",
             "createdAt": "2025-10-21",
-            "updatedAt": "2026-04-02",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2239,7 +2261,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/907'>Support installation of C++20 modules (with non-ROOT functionality)</a>",
             "author": "wdconinc",
             "createdAt": "2025-12-20",
-            "updatedAt": "2026-09-18",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2250,7 +2272,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/931'>Make it possible to use objects and collections with fmtlib</a>",
             "author": "tmadlener",
             "createdAt": "2026-02-12",
-            "updatedAt": "2026-08-26",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2261,7 +2283,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/932'>[WIP] Add support for formatting collections and handles</a>",
             "author": "tmadlener",
             "createdAt": "2026-02-13",
-            "updatedAt": "2026-08-26",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2272,7 +2294,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/933'>[WIP] Add support for customizable formatting</a>",
             "author": "tmadlener",
             "createdAt": "2026-02-13",
-            "updatedAt": "2026-08-26",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2283,7 +2305,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/935'>[WIP] Detect EDM schema versions during reading and ensure consistency</a>",
             "author": "tmadlener",
             "createdAt": "2026-02-17",
-            "updatedAt": "2026-04-02",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2294,7 +2316,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/939'>[WIP] Add a `podio-filter-frames` tool </a>",
             "author": "tmadlener",
             "createdAt": "2026-02-24",
-            "updatedAt": "2026-08-10",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2305,7 +2327,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/949'>Make using DataSource faster by using lazy reading</a>",
             "author": "jmcarcell",
             "createdAt": "2026-03-26",
-            "updatedAt": "2026-07-24",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2316,7 +2338,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/953'>Draft: Lazy Frame reading for ROOT based I/O</a>",
             "author": "tmadlener",
             "createdAt": "2026-04-13",
-            "updatedAt": "2026-04-14",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2327,7 +2349,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/970'>PoC for consistent collection filtering</a>",
             "author": "paulgessinger",
             "createdAt": "2026-06-10",
-            "updatedAt": "2026-08-10",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2338,7 +2360,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/996'>Expose event weight names through DataSource</a>",
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-30",
-            "updatedAt": "2026-08-24",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2349,7 +2371,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/1018'>Switch python tooling to ruff</a>",
             "author": "mohitt31",
             "createdAt": "2026-09-03",
-            "updatedAt": "2026-10-18",
+            "updatedAt": "2026-11-11",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -2360,7 +2382,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/1019'>fix: take the upstream EDM into account when reading old schemas</a>",
             "author": "veprbl",
             "createdAt": "2026-09-04",
-            "updatedAt": "2026-09-07",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2371,7 +2393,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/1040'>Prevent reusing collections already owned by a Frame</a>",
             "author": "mneha05",
             "createdAt": "2026-10-08",
-            "updatedAt": "2026-10-13",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2393,7 +2415,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/1068'>Fix RNTupleReader buffer cleanup after binding failures</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-09",
-            "updatedAt": "2026-11-09",
+            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2407,6 +2429,39 @@
             "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "enhancement \ndocumentation",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1077,
+            "title": "<a href='https://github.com/AIDASoft/podio/pull/1077'>Fix some minor documentation issues</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1078,
+            "title": "<a href='https://github.com/AIDASoft/podio/pull/1078'>Remove the gitlab CI setup used for deploying documentation</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1080,
+            "title": "<a href='https://github.com/AIDASoft/podio/pull/1080'>Hide the podio internals by default from docs</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-11",
+            "mergeOk": "yes",
+            "labels": "",
             "assignees": ""
         },
         {
@@ -2461,17 +2516,6 @@
             "createdAt": "2025-03-21",
             "updatedAt": "2025-10-13",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "iLCSoft/<br>DDMarlinPandora",
-            "num": 41,
-            "title": "<a href='https://github.com/iLCSoft/DDMarlinPandora/pull/41'>Fix CMake 4 compatibility</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-11",
-            "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         }
