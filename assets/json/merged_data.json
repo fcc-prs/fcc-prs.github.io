@@ -1,6 +1,150 @@
 {
-    "updated_at": "2026-11-11T13:24:19Z",
+    "updated_at": "2026-11-12T14:28:30Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 452,
+            "title": "Writer: delete the store wrapper of collections from the old DataHandle",
+            "url": "https://github.com/key4hep/k4FWCore/pull/452",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-12",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Collections put into the store through k4FWCore::DataHandle or by registering a DataWrapper<T> directly as e.g. k4SimDelphesAlg does, are moved into the output Frame by the Writer, which unregisters them from the store and takes ownership. For the AnyDataWrapper used by functional algorithms the wrapper is then deleted (#250), but in the DataWrapperBase branch it was never deleted, leaking one wrapper per collection per event.\n\nDetach the collection from the wrapper (the Frame owns it now) and delete the wrapper, as is already done for AnyDataWrapper.\n\nFound with heaptrack in a k4run Pythia8 + k4SimDelphesAlg (IDEA card) job writing 23 collections per event (22 from k4SimDelphesAlg, 1 from HepMCToEDMConverter): ~1.8 kB/event leaked in the DataWrapper / DataObject allocations, i.e. ~1.7 GB \u2026",
+            "diff": {
+                "additions": 5,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "k4FWCore/components/Writer.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Writers that are not the last don't work at the moment with or without this change, that would need some changes. I can confirm with the sanitizer that this leak is gone after the change."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Ah, I guess this is a partial answer to my question in https://github.com/key4hep/k4SimDelphes/pull/171#discussion_r4541946028\n\nWhat would happen now if the Writer is not the last algorithm to execute? Would we have a bunch of dangling things in the event store? \n\nThere is some discussion about havi\u2026"
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1076,
+            "title": "Add a version selector to the documentation on GitHub Pages",
+            "url": "https://github.com/AIDASoft/podio/pull/1076",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-12",
+            "mergedBy": "tmadlener",
+            "labels": [
+                "enhancement",
+                "documentation"
+            ],
+            "body": "BEGINRELEASENOTES\n- Add a version selector to the documentation on GitHub Pages and a script to auto-update the selector when necessary\n\nENDRELEASENOTES\n\nAdd a dropdown to the sidebar of the documentation that lists all published versions (master and all tags) and switches to the same page in the selected version, falling back to its start page if the page does not exist there.\n\nThe list of versions is kept in `switcher.json` at the root of the `gh-pages` branch, using the format of the `pydata-sphinx-theme` version switcher. It is regenerated together with the root `index.html` (which redirects to the latest tag and lists all versions) on every publish, so new tags show up in all published versions without rebuilding them.\n\nThe publish job now retries the push on top of the updated gh-pag\u2026",
+            "diff": {
+                "additions": 321,
+                "deletions": 19,
+                "files": 4
+            },
+            "files": [
+                ".github/scripts/docs_versions.py",
+                ".github/workflows/publish-docs.yml",
+                "doc/_static/version_switcher.js",
+                "doc/conf.py"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Does this grow forever? What limits does gh-pages have? Do you manually (or an agent) put `switcher.json` in each old published version?"
+                },
+                {
+                    "author": "m-fila",
+                    "body": "> Does this grow forever? What limits does gh-pages have?\r\n\r\n1 GB? https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Essentially it is growing forever (but it also has been doing that for the past years. I started populating the `gh-pages` branch (without deploying it) with v00-99. The published site at the moment has around 300 MB (plus some git overhead, not sure if that counts). The sizes of the version has inc\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> Do you manually (or an agent) put `switcher.json` in each old published version?\n\nThis one is generated as part of the publish step. It's done by the `docs_versions.py` script (that's essentially it's entire purpose). For the existing versions I have a one-off script that backfills the necessary `\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I would merge this and do the one-time back fill of existing versions on the `gh-pages` branch and then point podio documentation to the github pages hosted one, unless there are major reservations against this."
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1081,
+            "title": "Require an explicit type for empty Python parameters",
+            "url": "https://github.com/AIDASoft/podio/pull/1081",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-12",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Previously, `frame.put_parameter(\"x\", [])` (or an empty tuple) tried to infer the parameter type from `value[0]`, raising `IndexError` rather than explaining that the element type cannot be inferred from an empty sequence. Passing `as_type=\"\"` also fell back to indexing the empty sequence.\n\nEmpty lists and tuples without `as_type` now raise `ValueError: Empty parameter sequences require an explicit as_type`. Invalid type specifiers also raise `ValueError`. Explicitly typed empty parameters, such as `frame.put_parameter(\"x\", [], as_type=\"int\")`, already worked and remain supported. Tests cover empty lists and tuples with omitted, invalid, and supported type specifiers (`int`, `float`, `double`, and `str`).\n\nBEGINRELEASENOTES\n - Raise a descriptive ValueError when an empty Python parameter s\u2026",
+            "diff": {
+                "additions": 25,
+                "deletions": 7,
+                "files": 2
+            },
+            "files": [
+                "python/podio/frame.py",
+                "python/podio/test_Frame.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 551,
+            "title": "Check EOS access before generating documentation",
+            "url": "https://github.com/key4hep/EDM4hep/pull/551",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Check EOS_PATH access and writing in a preliminary GitLab CI job so documentation builds fail early if deployment is unavailable.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 32,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                ".gitlab-ci.yml"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Thanks. I suppose I simply haven't been getting the deploy failures for EDM4hep (I only got them for podio)."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "That was independent, me deleting a member inside that I don't know what it was for, I retried ~30 min ago and it worked. There is still another `k4webwriter` that I thought was the one responsible for this but now I don't know why it is there for."
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "EDM4hep",
@@ -32,6 +176,61 @@
                     "author": "tmadlener",
                     "state": "APPROVED",
                     "body": "Needed for the release?"
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4SimDelphes",
+            "num": 170,
+            "title": "Create the Event branch in the Pythia8+EvtGen readers",
+            "url": "https://github.com/key4hep/k4SimDelphes/pull/170",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "DelphesPythia8EvtGenReader and DelphesPythia8EvtGenReader_k4Interface declare m_branchEvent but never create it, so ConvertInput() calls NewEntry() on a null branch and DelphesPythia8EvtGen_EDM4HEP(_k4Interface) segfault on the first event. Create it after SetTreeWriter(), as the other readers do.\n\nReproducer (key4hep nightly, any Pythia8 card, e.g. FCC-config FCCee/Generator/Pythia8/p8_ee_Zbb_ecm91_EVTGEN.cmd, with the EvtGen files from <view>/share/EvtGen):\n```\n  DelphesPythia8EvtGen_EDM4HEP card_IDEA.tcl edm4hep_IDEA.tcl \\\n      p8_ee_Zbb_ecm91.cmd out.root DECAY.DEC evt.pdl user.dec\n\n  *** Break *** segmentation violation\n  #5  ExRootTreeBranch::NewEntry() from libDelphes.so\n  #6  DelphesPythia8EvtGenReader::readEvent(Delphes*, TObjArray*, TObjArray*, TObjArray*)\n  #7  main ()\n```\nWith\u2026",
+            "diff": {
+                "additions": 2,
+                "deletions": 0,
+                "files": 2
+            },
+            "files": [
+                "standalone/src/DelphesPythia8EvtGenReader.h",
+                "standalone/src/DelphesPythia8EvtGenReader_k4Interface.h"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4SimDelphes",
+            "num": 169,
+            "title": "Pass the --rntuple selection on to podio::WriterFor",
+            "url": "https://github.com/key4hep/k4SimDelphes/pull/169",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "The --rntuple flag is parsed into writerType, but the writer was created without .withType(writerType), so the flag had no effect and output was TTree unless PODIO_DEFAULT_WRITE_RNTUPLE was set. \"default\" (no flag) keeps the filename/environment based choice.\n\n\nBEGINRELEASENOTES\n- Fix --rntuple flag for Delphes edm4hep writer\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 1,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "standalone/src/DelphesMain.h"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "Sorry, missed this in #165."
                 }
             ],
             "reviews_total": 1
@@ -234,6 +433,38 @@
             "reviews_total": 0
         },
         {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 132,
+            "title": "Search a level's parameters in problem order, and compare JSON whatever its key order",
+            "url": "https://github.com/key4hep/k4Opt/pull/132",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "## Summary\n\nTwo bugs found while checking an external review of `main` (bc4fa22):\n\n- **A nested level whose parameters are listed in another order than the problem's could not be read.** `StudyScope.searched` gave the level's own order, while `search_space` and the recorded distributions use problem order: the study ran, then reading it failed with `records the distributions of ['r', 'x'], but the study searches ['x', 'r']`. `searched` now follows problem order, as its docstring said.\n- **Equal JSON with its keys in another order was refused.** Several checks compared objects as JSON text without sorted keys, or compared key lists: a study's JSON form (`StudyResults.from_dict`) or its `study.json` rewritten by a JSON tool was refused for its `selected.values`, `scope`, distributions, candi\u2026",
+            "diff": {
+                "additions": 115,
+                "deletions": 29,
+                "files": 9
+            },
+            "files": [
+                "k4opt/frozen.py",
+                "k4opt/optimization/_identity.py",
+                "k4opt/optimization/_optuna/optimizer.py",
+                "k4opt/optimization/_optuna/tree.py",
+                "k4opt/optimization/_results.py",
+                "k4opt/optimization/_scope.py",
+                "k4opt/optimization/_study.py",
+                "tests/unit/optimization/test_nested.py",
+                "tests/unit/test_frozen.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
             "org": "hep-fcc",
             "repo": "mc-productions-tutorials",
             "num": 7,
@@ -277,6 +508,70 @@
                 }
             ],
             "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1714,
+            "title": "perf(build): only look for the Python interpreter in DD4hepConfig",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1714",
+            "author": "chrisburr",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "andresailer",
+            "labels": [],
+            "body": "I've been looking at speeding up the cmake configuration time in LHCb and I found that `FIND_PACKAGE(Python)` was being called many times. This ends up being slow due to `python-config` being called several time and the build we use of Python has a high startup overhead.\r\n\r\nUnless DD4hep was built with Geant4 there is no need to look for the `Development` components.\r\n\r\nThis ends up saving ~1.5 seconds on the builds I was benchmarking with:\r\n\r\n|       | Baseline      | Patched       |\r\n|-------|---------------|---------------|\r\n| Rec   | 18.8 / 16.4 s | 15.1 / 15.2 s |\r\n| Moore | 17.0 / 16.1 s | 14.2 / 14.7 s |\r\n\r\n\r\nBEGINRELEASENOTES\r\n\r\n- DD4hepConfig: look only for the Python interpreter when DD4hep was built without Geant4 (and not the development component)\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 31,
+                "deletions": 6,
+                "files": 2
+            },
+            "files": [
+                "cmake/DD4hepBuild.cmake",
+                "cmake/DD4hepConfig.cmake.in"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u20021d 0h 28m 44s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit b43ed8fc.\n\n[test-results]:data:application/gzip;base64,H4sIAKSH9GoC/12MSw7CIBQAr9KwdlF8UB5expRfQmyLobBqvLtIaosuZyaZjTg/2ZXcOoqXjqzZp5NMjmPyYSmMSK+sqFLTp4PgX7qvWet/\u2026"
+                },
+                {
+                    "author": "MarkusFrankATcernch",
+                    "body": "@andresailer I added you as reviewer: you are our cmake expert..."
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [
+                {
+                    "author": "andresailer",
+                    "state": "CHANGES_REQUESTED",
+                    "body": "Looks fine, just a small change in the docstring for the macro"
+                }
+            ],
+            "reviews_total": 3
+        },
+        {
+            "org": "iLCSoft",
+            "repo": "DDMarlinPandora",
+            "num": 41,
+            "title": "Fix CMake 4 compatibility",
+            "url": "https://github.com/iLCSoft/DDMarlinPandora/pull/41",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-11",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Require CMake 3.10 to fix `Compatibility with CMake < 3.5 has been removed from CMake.`\n\nENDRELEASENOTES\n\nValidation: configured, built and installed with CMake 4.4.3 and GCC 16 on AlmaLinux 9. No tests are registered.",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
         },
@@ -2761,64 +3056,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 944,
-            "title": "Update k4gaudipandora and related recipes",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/944",
-            "author": "madbaron",
-            "mergedAt": "2026-11-05",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Add k4GaudiPandora v0.4.0 and v0.5.0, and LCContent 5.0.0, 5.1.0 and 5.1.1 (cherry-picked from #911)\r\n- k4GaudiPandora: add a dependency on `nlohmann-json` for versions after 0.5.0 (i.e. `main`), needed since key4hep/k4GaudiPandora#51\r\n- k4GaudiPandora: fix dependencies\r\n  - Add `gsl` (required since v0.2.0)\r\n  - Require `edm4hep@1:` since v0.5.0\r\n  - Require `lccontent@5.1.1:` since v0.5.0, which starts using `LCObjects/LCCaloHit.h` and `LCCaloHitFactory` (PandoraPFAOrg/LCContent#41, PandoraPFAOrg/LCContent#47)\r\n- LCContent: require `pandorasdk@4.0.1:` since 5.1\r\n- LCContent: conflict with `pandorapfa@5:` for versions up to 3.2.0\r\n\r\nENDRELEASENOTES\r\n\r\nThe first five commits are cherry-picked from #911, so hopefully the two PRs can be merged in either order.\r\n\r\nBumping\u2026",
-            "diff": {
-                "additions": 27,
-                "deletions": 0,
-                "files": 2
-            },
-            "files": [
-                "packages/k4gaudipandora/package.py",
-                "packages/lccontent/package.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 2
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-doc",
-            "num": 174,
-            "title": "Bump rossjrw/pr-preview-action from 1.8.1 to 1.8.2",
-            "url": "https://github.com/key4hep/key4hep-doc/pull/174",
-            "author": "dependabot",
-            "mergedAt": "2026-11-05",
-            "mergedBy": "tmadlener",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [rossjrw/pr-preview-action](https://github.com/rossjrw/pr-preview-action) from 1.8.1 to 1.8.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/rossjrw/pr-preview-action/releases\">rossjrw/pr-preview-action's releases</a>.</em></p>\n<blockquote>\n<h2>v1.8.2</h2>\n<h2>Bugfixes</h2>\n<ul>\n<li>GHE: Fix remaining hardcoded github.com URLs in wait script by <a href=\"https://github.com/dagassmann\"><code>@\u200bdagassmann</code></a> in <a href=\"https://redirect.github.com/rossjrw/pr-preview-action/pull/141\">rossjrw/pr-preview-action#141</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/rossjrw/pr-preview-action/compare/v1.8.1...v1.8.2\">https://github.com/rossjrw/pr-preview-action/compare/v1.8.1...v1.8.2</a></p>\n</blockquote>\n</det\u2026",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                ".github/workflows/pr-deploy.yml",
-                ".github/workflows/pr-remove-preview.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.2\n:---:\nPreview removed because the pull request was closed.\n2026-11-05 07:41 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4ActsTracking",
             "num": 108,
             "title": "Add two-way CKF tracking",
@@ -2986,35 +3223,6 @@
                 }
             ],
             "reviews_total": 59
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 139,
-            "title": "Allow blueprint construction for MAIA_v1",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/139",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-05",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Allow blueprint construction for MAIA_v1 which only differs in magnetic fields from MAIA_v0\n\nENDRELEASENOTES\n\nSmall drive-by fix. Anything speaking against this @madbaron?",
-            "diff": {
-                "additions": 1,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "k4ActsTracking/src/components/ActsGeoSvc.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "madbaron",
-                    "body": "Nope!"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -3413,59 +3621,6 @@
             "reviews_total": 0
         },
         {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 83,
-            "title": "Provenance fixes, stage signatures and reuse",
-            "url": "https://github.com/key4hep/k4Opt/pull/83",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-05",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Provenance fixes, then stage signatures and reuse, then the fixes from review. One commit per step; each commit passes its own tests. The nested optimization example (`optimize(fixed=, parent=)`, `examples/nested/`) moved out of this PR and will follow in its own.\n\n## Fixes\n\n- **A study interrupted at any write to the optimizer's storage stays readable and resumable.** Two windows used to leave a study that neither `load_study` nor `--resume` would read again: a rejected trial interrupted while it was told (SIGTERM between its marks; SIGKILL before `tell`, after which the resume itself wrote to the storage and then refused), and Ctrl-C/SIGTERM between asking for a trial and marking it. The marks are now named once (`_optuna/marks.py`); a rejection's status is written last; a rejected trial\u2026",
-            "diff": {
-                "additions": 3115,
-                "deletions": 271,
-                "files": 70
-            },
-            "files": [
-                "docs/ddsim.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/execution.md",
-                "docs/optimization.md",
-                "docs/problem.md",
-                "docs/publication.md",
-                "k4opt/ddsim/command.py",
-                "k4opt/ddsim/run.py",
-                "k4opt/execution/_baseline.py",
-                "k4opt/execution/_binding.py",
-                "k4opt/execution/_command.py",
-                "k4opt/execution/_cpus.py",
-                "k4opt/execution/_describe.py",
-                "k4opt/execution/_drive.py",
-                "k4opt/execution/_files.py",
-                "k4opt/execution/_reuse.py",
-                "k4opt/execution/_session.py",
-                "k4opt/execution/_stages.py",
-                "k4opt/execution/_work.py",
-                "k4opt/execution/cli.py",
-                "k4opt/k4run/run.py",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_identity.py",
-                "k4opt/optimization/_optuna/marks.py",
-                "k4opt/optimization/_optuna/optimizer.py",
-                "k4opt/optimization/_optuna/read.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/_optuna/tell.py",
-                "k4opt/optimization/_results.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "hep-fcc",
             "repo": "ALLEGRO",
             "num": 65,
@@ -3644,139 +3799,6 @@
                 }
             ],
             "reviews_total": 8
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1059,
-            "title": "Reload ROOTReader branches whenever the TChain loads a new tree",
-            "url": "https://github.com/AIDASoft/podio/pull/1059",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-05",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Since #1048 the `ROOTReader` decides whether to reload branches by comparing tree numbers, which segfaults in `TBranch::GetEntry` when reading from a chain of files in some cases (second and third bullet point were found by AI and seem unlikely; the first seems possible to find):\r\n- After a failed `readEntry` beyond the last entry, reading from the first file again (the tree is reloaded, but the tree number is the same)\r\n- After `readEntry` with a non-existent collection for an entry in another file\r\n- (also before #1048) After reading only some collections for the first entry of a file, reading the other collections\r\n\r\nInstead, let ROOT notify the reader whenever the chain loads a new tree ([`TTree::SetNotify`](https://root.cern/doc/master/classTTree.html#a3a351f983a9cf88f85efeb61662c03d1\u2026",
-            "diff": {
-                "additions": 233,
-                "deletions": 58,
-                "files": 4
-            },
-            "files": [
-                "include/podio/ROOTReader.h",
-                "src/ROOTReader.cc",
-                "src/rootUtils.h",
-                "tests/root_io/read_frame_root_multiple.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 5
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 82,
-            "title": "A reconstruction stage: k4run runs a Gaudi job on the candidate's geometry and every simulated event",
-            "url": "https://github.com/key4hep/k4Opt/pull/82",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-04",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The pipeline stopped at the simulation. This adds a `reconstruction` stage, run by a new `k4run` executor, so that objectives can be measured on reconstructed objects (particle flow, tracks), not only on simulated hits. The design follows how k4Bench runs the CLD, ALLEGRO, IDEA and ILD reconstructions, and was checked against `k4run`, CLDConfig and k4MarlinWrapper on the 2026-10-20 nightly.\n\n## The stage\n\n```yaml\nreconstruction:\n  executor: k4run\n  directory: $CLDCONFIG/share/CLDConfig   # optional: the job runs from a copy of it\n  options: CLDReconstruction.py           # one file or a list, relative to directory\n  geometry: compactFile                   # optional: the job's own argument for the compact file\n  input: inputFiles                       # optional: the job's own argument for\u2026",
-            "diff": {
-                "additions": 3786,
-                "deletions": 371,
-                "files": 64
-            },
-            "files": [
-                "README.md",
-                "docs/ddsim.md",
-                "docs/evaluation.md",
-                "docs/evaluators.md",
-                "docs/execution.md",
-                "docs/k4run.md",
-                "docs/optimization.md",
-                "docs/problem.md",
-                "examples/evaluators/pfo_pi0.py",
-                "examples/problem/cld-ecal-pi0-reco.yaml",
-                "k4opt/_launch.py",
-                "k4opt/ddsim/__init__.py",
-                "k4opt/ddsim/command.py",
-                "k4opt/ddsim/errors.py",
-                "k4opt/ddsim/run.py",
-                "k4opt/evaluation/base.py",
-                "k4opt/evaluation/declaration.py",
-                "k4opt/execution/_baseline.py",
-                "k4opt/execution/_binding.py",
-                "k4opt/execution/_preflight.py",
-                "k4opt/execution/_session.py",
-                "k4opt/execution/_stages.py",
-                "k4opt/execution/cli.py",
-                "k4opt/k4run/__init__.py",
-                "k4opt/k4run/command.py",
-                "k4opt/k4run/errors.py",
-                "k4opt/k4run/joboptions.py",
-                "k4opt/k4run/run.py",
-                "k4opt/optimization/_optuna/read.py",
-                "k4opt/optimization/_optuna/tell.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 81,
-            "title": "Parameters, samples, objectives and constraints may have a title, which figures and the dashboard show",
-            "url": "https://github.com/key4hep/k4Opt/pull/81",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-04",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The dashboard showed problem identifiers as they are written (`ecal_cell_size`, `ecal_barrel.angular_residual`, `gamma_10gev`), and the pipeline graph repeated each parameter edge as text (`ECal_cell_size \u2190 ecal_cell_size`).\n\n## Titles\n\nAn optional one-line `title` on a parameter, a sample, an objective or a constraint:\n\n```yaml\nparameters:\n  ecal_cell_size:\n    title: ECAL cell size\nsamples:\n  gamma_10gev:\n    title: 10 GeV \u03b3\nobjectives:\n  - sample: gamma_10gev\n    metric: ecal_barrel.angular_residual\n    title: Angular residual\n    direction: minimize\n```\n\n- Plain text, Unicode allowed; no LaTeX, which only some of the places a title is shown can render (Graphviz, table headings, hover text, the terminal do not). The unit is added where a value is shown (`ECAL cell size [mm]`).\n- An obje\u2026",
-            "diff": {
-                "additions": 886,
-                "deletions": 228,
-                "files": 35
-            },
-            "files": [
-                "dashboard/labels.py",
-                "dashboard/tables.py",
-                "dashboard/trial.py",
-                "dashboard/views/overview.py",
-                "dashboard/views/trade_offs.py",
-                "docs/problem.md",
-                "docs/visualization.md",
-                "examples/problem/cld-ecal-bindings.yaml",
-                "examples/problem/cld-ecal-granularity.yaml",
-                "examples/problem/cld-ecal-photon-energies.yaml",
-                "examples/problem/cld-ecal-pi0-rejection.yaml",
-                "k4opt/optimization/_identity.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/problem/_fields.py",
-                "k4opt/problem/_parameters.py",
-                "k4opt/problem/_samples.py",
-                "k4opt/problem/config.py",
-                "k4opt/problem/models.py",
-                "k4opt/record/read.py",
-                "k4opt/visualization/__init__.py",
-                "k4opt/visualization/analysis.py",
-                "k4opt/visualization/graph.py",
-                "k4opt/visualization/names.py",
-                "k4opt/visualization/pipeline.py",
-                "k4opt/visualization/trials.py",
-                "pyproject.toml",
-                "tests/unit/dashboard/test_labels.py",
-                "tests/unit/dashboard/test_tables.py",
-                "tests/unit/optimization/test_resume.py",
-                "tests/unit/problem/test_config.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
         }
     ]
 }
