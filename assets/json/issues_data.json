@@ -2,6 +2,16 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 687,
+            "title": "<a href='https://github.com/key4hep/k4geo/issues/687'>Removing parallelworld_volume makes the fit better at low energies</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-13",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 686,
             "title": "<a href='https://github.com/key4hep/k4geo/issues/686'>Sensitive surfaces of VertexOuterBarrel, VertexDisks, SiWrB and SiWrD carry no passive material (and the disk surfaces not even the silicon)</a>",
             "author": "giovannimarchiori",
@@ -1932,21 +1942,21 @@
         },
         {
             "repo": "key4hep/<br>k4SimDelphes",
-            "num": 176,
-            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/176'>Switch to (unit) constants from EDM4hep once they become available</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-11-12",
-            "updatedAt": "2026-11-12",
+            "num": 164,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/164'>Bugs in the conversion of parent/daughter relations of MCParticles</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-10-14",
+            "updatedAt": "2026-11-13",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4SimDelphes",
-            "num": 164,
-            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/164'>Bugs in the conversion of parent/daughter relations of MCParticles</a>",
-            "author": "Zehvogel",
-            "createdAt": "2026-10-14",
-            "updatedAt": "2026-10-14",
+            "num": 176,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/176'>Switch to (unit) constants from EDM4hep once they become available</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-12",
+            "updatedAt": "2026-11-12",
             "labels": "",
             "assignees": ""
         },
@@ -2236,7 +2246,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/issues/297'>Validation of CreateTruthLinks vs RecoMCTruthLinker</a>",
             "author": "dudarboh",
             "createdAt": "2026-11-12",
-            "updatedAt": "2026-11-12",
+            "updatedAt": "2026-11-13",
             "labels": "",
             "assignees": ""
         },
@@ -2317,6 +2327,16 @@
             "author": "giovannimarchiori",
             "createdAt": "2024-07-22",
             "updatedAt": "2025-06-29",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 158,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/158'>Merge order of the open CLD tracking PRs and when to regenerate the material maps</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-13",
             "labels": "",
             "assignees": ""
         },
@@ -3802,6 +3822,16 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-tutorials",
+            "num": 220,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/220'>Page Previews in Pull Requests</a>",
+            "author": "michmx",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-13",
+            "labels": "enhancement",
+            "assignees": "michmx"
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-tutorials",
             "num": 183,
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/issues/183'>Fix links on \"Accessing computing facility capable of running Key4hep applications\"</a>",
             "author": "michmx",
@@ -4602,6 +4632,16 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
+            "num": 408,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/408'>Autumn2026: software needed in the campaign release</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-11-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
             "num": 412,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/412'>Autumn2026: Software needs remaining for Delphes productions</a>",
             "author": "davidlange6",
@@ -4617,16 +4657,6 @@
             "author": "davidlange6",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-12",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 408,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/408'>Autumn2026: software needed in the campaign release</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-11-11",
             "labels": "",
             "assignees": ""
         },
@@ -4697,6 +4727,36 @@
             "author": "davidlange6",
             "createdAt": "2026-03-17",
             "updatedAt": "2026-05-06",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 138,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/138'>Automatically scan FCCDIRAC for Transforamation IDs related to the DRS request</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 137,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/137'>Make the information from the DRS exportable in JSON</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-13",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 136,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/136'>Allow for upload of any web rederable file to description.</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-13",
             "labels": "",
             "assignees": ""
         },
@@ -5118,16 +5178,6 @@
             "createdAt": "2021-05-03",
             "updatedAt": "2021-05-04",
             "labels": "enhancement",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>podio",
-            "num": 199,
-            "title": "<a href='https://github.com/AIDASoft/podio/issues/199'>Discussion on improved doxygen documentation for generated code</a>",
-            "author": "tmadlener",
-            "createdAt": "2021-07-20",
-            "updatedAt": "2024-05-07",
-            "labels": "documentation",
             "assignees": ""
         },
         {
