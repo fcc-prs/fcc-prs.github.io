@@ -347,7 +347,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
-            "updatedAt": "2026-11-11",
+            "updatedAt": "2026-11-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -420,12 +420,23 @@
         },
         {
             "repo": "key4hep/<br>k4SimDelphes",
+            "num": 177,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/177'>Make the MCParticle parent / daughter relations consistent</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-11-14",
+            "updatedAt": "2026-11-14",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
             "num": 173,
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/173'>Set mother/daughter indices on the Delphes input in convertToDelphesArrays</a>",
             "author": "davidlange6",
             "createdAt": "2026-11-12",
-            "updatedAt": "2026-11-13",
-            "mergeOk": "no",
+            "updatedAt": "2026-11-14",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1007,7 +1018,7 @@
             "title": "<a href='https://github.com/key4hep/CLDConfig/pull/102'>Remove non-existing pdg and harmonize MCParticlesSkimmed with ILDConfig</a>",
             "author": "dudarboh",
             "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-13",
+            "updatedAt": "2026-11-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
