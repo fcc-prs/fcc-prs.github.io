@@ -436,7 +436,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-10",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1003,6 +1003,17 @@
         },
         {
             "repo": "key4hep/<br>CLDConfig",
+            "num": 102,
+            "title": "<a href='https://github.com/key4hep/CLDConfig/pull/102'>Remove non-existing pdg and harmonize MCParticlesSkimmed with ILDConfig</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>CLDConfig",
             "num": 101,
             "title": "<a href='https://github.com/key4hep/CLDConfig/pull/101'>MLPF integration</a>",
             "author": "Zehvogel",
@@ -1239,7 +1250,7 @@
             "author": "peter-mckeown",
             "createdAt": "2026-10-05",
             "updatedAt": "2026-10-05",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1954,7 +1965,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-10-27",
             "updatedAt": "2026-10-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1965,7 +1976,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-10-26",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2174,7 +2185,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2196,7 +2207,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2206,7 +2217,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1672'>Add cvmfs/LCG-based macOS workflow</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-06",
-            "updatedAt": "2026-11-13",
+            "updatedAt": "2026-11-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2218,7 +2229,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2229,7 +2240,7 @@
             "author": "wdconinc",
             "createdAt": "2026-11-09",
             "updatedAt": "2026-11-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2240,7 +2251,7 @@
             "author": "wdconinc",
             "createdAt": "2026-11-09",
             "updatedAt": "2026-11-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2262,6 +2273,28 @@
             "author": "andresailer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1723,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1723'>fix(build): set correct lib dirs in fill_dd4hep_library_path</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-13",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1724,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1724'>fix(env): set LD_LIBRARY_PATH also on macOS</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2438,7 +2471,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-11-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
