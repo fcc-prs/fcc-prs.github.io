@@ -1,6 +1,58 @@
 {
-    "updated_at": "2026-11-13T13:47:26Z",
+    "updated_at": "2026-11-14T12:51:32Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 951,
+            "title": "Bump docker/login-action from 4.7.0 to 4.8.0",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/951",
+            "author": "dependabot",
+            "mergedAt": "2026-11-14",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [docker/login-action](https://github.com/docker/login-action) from 4.7.0 to 4.8.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/docker/login-action/releases\">docker/login-action's releases</a>.</em></p>\n<blockquote>\n<h2>v4.8.0</h2>\n<ul>\n<li>Set Docker Hub OIDC token lifetime default to 1 hour by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/login-action/pull/1070\">docker/login-action#1070</a></li>\n<li>Bump <code>@\u200baws-sdk/client-ecr</code> and <code>@\u200baws-sdk/client-ecr-public</code> to 3.1161.0 in <a href=\"https://redirect.github.com/docker/login-action/pull/1103\">docker/login-action#1103</a></li>\n<li>Bump <code>@\u200bdocker/actions-toolkit</code> from 0.107.0 to 0.109.0 in\u2026",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 2
+            },
+            "files": [
+                ".github/workflows/docker-build-push-template.yaml",
+                ".github/workflows/image-template.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "ALLEGRO",
+            "num": 66,
+            "title": "noise_map.py: configure cell indexer service needed by noise tools",
+            "url": "https://github.com/HEP-FCC/ALLEGRO/pull/66",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-11-14",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "Since https://github.com/key4hep/k4RecCalorimeter/pull/295 the tools that read the noise from file (NoiseCaloCellsFromFile*Tool) get the cell indices from k4::recCalo::CaloCellIndexerSvc. Without it, the noise map fails with \"Cannot find indexer for detID 4\". Configure the service with the geometry tools of the selected calorimeters, as in the ALLEGRO reconstruction of FCC-config.\n\nThe noise maps are identical to those produced before.",
+            "diff": {
+                "additions": 28,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "noise_maps/noise_map.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "EDM4hep",
@@ -314,6 +366,77 @@
         },
         {
             "org": "key4hep",
+            "repo": "DDML",
+            "num": 22,
+            "title": "Make it possible to run inference on models that cannot be exported ",
+            "url": "https://github.com/key4hep/DDML/pull/22",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-13",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Add a `EmbeddedPyInference` inference interface that allows to run model inference directly through an embedded python interpreter for ML models that cannot be exported to be loaded via ONNXruntime or Torch\n\nENDRELEASENOTES\n\n- [x] Includes #17 \n- [x] Includes #18 \n- [x] Includes #19 \n- [x] Includes #20 \n- [x] Documentation\n- [ ] Validation of results with CC3",
+            "diff": {
+                "additions": 765,
+                "deletions": 55,
+                "files": 13
+            },
+            "files": [
+                "CMakeLists.txt",
+                "README.md",
+                "doc/add_new_model.md",
+                "doc/embedded_python_inference.md",
+                "include/DDML/EmbeddedPyInference.h",
+                "python/ddml/configs.py",
+                "python/ddml/setup_physics.py",
+                "python/examples/cc3_sf_2a_wrapper.py",
+                "src/CMakeLists.txt",
+                "src/EmbeddedPyInference.cc",
+                "src/MLModelActions.cc",
+                "tests/CMakeLists.txt",
+                "tests/check_test_outputs.py"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Rebased onto current state of #19 to see if & where things are currently failing."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Merging this after CI has run through again to have an easier to deal with diff in #38"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "DDML",
+            "num": 39,
+            "title": "Add HCAL layers to Endcap geometry",
+            "url": "https://github.com/key4hep/DDML/pull/39",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-13",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Make it possible to also generate showers in the HCAL Endcaps by adding the corresponding layers\n\nENDRELEASENOTES\n\nLifted from #38",
+            "diff": {
+                "additions": 26,
+                "deletions": 1,
+                "files": 3
+            },
+            "files": [
+                "include/DDML/EndcapGeometry.h",
+                "src/EndcapGeometry.cc",
+                "src/MLModelActions.cc"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
             "repo": "k4Bench",
             "num": 293,
             "title": "chore(deps): update pymdown-extensions requirement from >=12.3 to >=13.0",
@@ -477,6 +600,31 @@
         {
             "org": "hep-fcc",
             "repo": "FCC-config",
+            "num": 417,
+            "title": "Set RandomSeed to 0 in the IDEA and CLD Delphes cards",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/417",
+            "author": "kjvbrt",
+            "mergedAt": "2026-11-13",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "With the fixed `RandomSeed 123` from the upstream cards every job uses the same random sequence for the detector smearing. With `0` ROOT picks a new random seed for every run. The changes against upstream are now listed in the card headers.",
+            "diff": {
+                "additions": 8,
+                "deletions": 4,
+                "files": 2
+            },
+            "files": [
+                "FCCee/Delphes/card_CLD.tcl",
+                "FCCee/Delphes/card_IDEA.tcl"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
             "num": 416,
             "title": "Remove delphes_card_IDEAtrkCov.tcl",
             "url": "https://github.com/HEP-FCC/FCC-config/pull/416",
@@ -551,6 +699,77 @@
         {
             "org": "AIDASoft",
             "repo": "DD4hep",
+            "num": 1721,
+            "title": "ci(k4geo): keep the IDEA tests from exhausting the runner's memory",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1721",
+            "author": "vvolkl",
+            "mergedAt": "2026-11-13",
+            "mergedBy": "andresailer",
+            "labels": [],
+            "body": "Attempt to fix a probable OOM issue in gh actions ci (see https://github.com/AIDASoft/DD4hep/actions/runs/43408200343/job/131827695944?pr=1720)\n\n\n\nBEGINRELEASENOTES\n- Attempt to fix an OOM issue in github actions ci\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 18,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/k4geo-ci.yml"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "This is a problem in k4geo and using sed to change a temporary cmake file seems fragile; I would not fix it here."
+                },
+                {
+                    "author": "vvolkl",
+                    "body": "Sure, if it can be fixed properly even better. But the fix could also just revert this change then, and the CI will be green until then \u2705"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200221h 42m 31s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 902965c4.\n\n[test-results]:data:application/gzip;base64,H4sIAJkm92oC/12MyQ7CIBQAf6Xh7IHtCfVnDGtC7GJYTo3/LpLaoseZSWZDPkwuodtA5GVAqYR8ki1R5bAulYUkQKqqNX86E/CleyrG/KtHeF\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1720,
+            "title": "fix(macOS): delete the geometry before exit in checkGeometry",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1720",
+            "author": "vvolkl",
+            "mergedAt": "2026-11-13",
+            "mergedBy": "andresailer",
+            "labels": [],
+            "body": "I've come across this issue while debugging the github actions workflow using cvmfs on MacOS, see https://github.com/AIDASoft/DD4hep/pull/1672 . I'll also report this issue to ROOT, but this workaround is likely good to have for older ROOT versions.\r\n\r\n---- \r\n\ud83e\udd16 \ud83d\udcac \r\n\r\n\r\nOn macOS the check_geometry and check_overlaps tests abort at exit with\r\n\r\n```\r\n  libc++abi: terminating due to uncaught exception of type\r\n  std::__1::system_error: mutex lock failed: Invalid argument\r\n ```\r\n\r\nThe geometry is left to ROOT, which deletes it in\r\n`TROOT::EndOfProcessCleanups()`. By then the static TGeoManager::fgMutex in libGeom has already been destroyed, and `~TGeoManager()` locks it whenever the checker used threads (fMaxThreads != 0, as with the parallel overlap checker in recent ROOT). glibc tolerates loc\u2026",
+            "diff": {
+                "additions": 10,
+                "deletions": 0,
+                "files": 2
+            },
+            "files": [
+                "DDCore/python/bin/checkGeometry.py",
+                "DDCore/python/bin/checkOverlaps.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200219h 54m 18s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit fd7f9544.\n\n[test-results]:data:application/gzip;base64,H4sIABIC92oC/12MSw7CIBQAr9KwdsETXilexvApCbEthsLKeHcpqS26nJlkXsT5aVzJrYPh0pE1+3SSzVElH5bCAnrcVKlp60zgl+5rNuZfPf\u2026"
+                },
+                {
+                    "author": "wdconinc",
+                    "body": "Agreed with my \ud83e\udd16 observations too."
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
             "num": 1719,
             "title": "fix(macOS): avoid /proc and use Mach kernel task_info",
             "url": "https://github.com/AIDASoft/DD4hep/pull/1719",
@@ -574,6 +793,69 @@
                 }
             ],
             "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1080,
+            "title": "Hide the podio internals by default from docs",
+            "url": "https://github.com/AIDASoft/podio/pull/1080",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-13",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "The doxygen documentation generated from the generated files are mostly internal podio classes which clutters the documentation unnecessarily with information that is not strictly useful for users. This makes it possible to hide this information and hand the choice of what to show to the downstream developers.\n\n\n\nBEGINRELEASENOTES\n- Generate doxygen directives that hide the podio internal classes from generated EDM documentation by default. This uses a conditional `PODIO_INTERNAL` section and it also introduces a `<datamodel>_podio_internals` group for easier separation if that is enabled. **If you generate doxygen documentation from podio generated EDMs the podio internals will be hidden unless you opt-in from now on.**\n\nENDRELEASENOTES\n\nTo keep the section in the output documentation put\u2026",
+            "diff": {
+                "additions": 104,
+                "deletions": 1,
+                "files": 16
+            },
+            "files": [
+                "doc/templates.md",
+                "python/templates/Collection.h.jinja2",
+                "python/templates/CollectionData.cc.jinja2",
+                "python/templates/CollectionData.h.jinja2",
+                "python/templates/Component.h.jinja2",
+                "python/templates/Data.h.jinja2",
+                "python/templates/DatamodelDefinition.h.jinja2",
+                "python/templates/Interface.h.jinja2",
+                "python/templates/LinkCollection.h.jinja2",
+                "python/templates/MutableObject.h.jinja2",
+                "python/templates/Obj.cc.jinja2",
+                "python/templates/Obj.h.jinja2",
+                "python/templates/Object.h.jinja2",
+                "python/templates/SIOBlock.cc.jinja2",
+                "python/templates/SIOBlock.h.jinja2",
+                "python/templates/macros/utils.jinja2"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1078,
+            "title": "Remove the gitlab CI setup used for deploying documentation",
+            "url": "https://github.com/AIDASoft/podio/pull/1078",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-13",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Remove deploying of documentation via gitlab as it is no longer necessary after switching to github pages\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 0,
+                "deletions": 83,
+                "files": 1
+            },
+            "files": [
+                ".gitlab-ci.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
         },
@@ -2052,31 +2334,6 @@
         {
             "org": "key4hep",
             "repo": "k4DetectorPerformance",
-            "num": 12,
-            "title": "Enable only C++ in subprojects",
-            "url": "https://github.com/key4hep/k4DetectorPerformance/pull/12",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Specify LANGUAGES CXX in both subprojects to avoid implicitly enabling C and probing for a C compiler.\n\nBEGINRELEASENOTES\n - Avoid unnecessary C compiler detection when configuring the project.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                "RecoMCTruthLinkers/CMakeLists.txt",
-                "TrackingPerformance/CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4DetectorPerformance",
             "num": 10,
             "title": "TrackingValidation: fix truth parameters and matching, align with ACTS",
             "url": "https://github.com/key4hep/k4DetectorPerformance/pull/10",
@@ -2130,6 +2387,31 @@
                 }
             ],
             "reviews_total": 5
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4DetectorPerformance",
+            "num": 12,
+            "title": "Enable only C++ in subprojects",
+            "url": "https://github.com/key4hep/k4DetectorPerformance/pull/12",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Specify LANGUAGES CXX in both subprojects to avoid implicitly enabling C and probing for a C compiler.\n\nBEGINRELEASENOTES\n - Avoid unnecessary C compiler detection when configuring the project.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 2
+            },
+            "files": [
+                "RecoMCTruthLinkers/CMakeLists.txt",
+                "TrackingPerformance/CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -3023,42 +3305,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 290,
-            "title": "ci: run the nightly benchmarks on fcc-ironic again",
-            "url": "https://github.com/key4hep/k4Bench/pull/290",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-07",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "<!-- pr-agent-generated -->\r\n### **User description**\r\nMoves the nightly's benchmark jobs back to the fcc-ironic bare-metal runners. Release resolution, reports, the dashboard deploy and PR review stay on the k4bench `service` runners.\r\n\r\nThe first two nights on the k4bench VMs (11-06, 11-07) show timing noise far above ironic's:\r\n\r\n| night-to-night, same events (fixed seed) | fcc-ironic | k4bench VMs |\r\n|---|---|---|\r\n| sim wall time, median \\|\u0394\\| | 0.7 % | 6.3 % |\r\n| sim wall time, p90 \\|\u0394\\| | 2 % | 25 % |\r\n| configs moving > 5 % | ~0.2 % | 57 % |\r\n| reco wall time, median \\|\u0394\\| | 0.5 % | 18 % |\r\n| peak_vmem, median \\|\u0394\\| | 0.01 % | 0.02 % |\r\n\r\nThe slowdowns are one-sided, vary within a single config, and are not steal time (\u2264 0.05 %) or our own load. The reco auditor's counters show the\u2026",
-            "diff": {
-                "additions": 18,
-                "deletions": 19,
-                "files": 4
-            },
-            "files": [
-                ".github/actionlint.yaml",
-                ".github/ai-review-instructions.md",
-                ".github/workflows/benchmark-detector.yml",
-                "docs/examples/advanced-workflows.md"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "Failed to generate code suggestions for PR"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/290?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4Opt",
             "num": 127,
             "title": "Observe what each stage used, and reuse across studies only what still holds",
@@ -3370,124 +3616,6 @@
             ],
             "comments": [],
             "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 118,
-            "title": "A stage waiting for its twin holds no worker; a resume reuses every level",
-            "url": "https://github.com/key4hep/k4Opt/pull/118",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-07",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "A stage that waits for an identical one no longer holds a worker, and a resume reuses what every level of a nested study made. The number of trials proposed at once is unchanged, and now an explicit rule.\n\n## Problems found\n\n1. **A waiting stage held its slots.** When a stage with the same signature was already running, the duplicate waited for it, but the scheduler had already counted its slots. So it held one worker, or `numberOfThreads` of them, while doing nothing. With two samples, a shared `gamma` simulation and each candidate's own `pion`, 4 workers ran 1.7 simulations on average; the rest were held by waiting duplicates. Who waited was kept in `Reuse`, outside the scheduler, so `drop` and `forget` had to keep two task-state stores consistent by hand.\n2. **Wrong order on an error pa\u2026",
-            "diff": {
-                "additions": 1066,
-                "deletions": 207,
-                "files": 12
-            },
-            "files": [
-                "docs/execution.md",
-                "docs/optimization.md",
-                "k4opt/execution/_drive.py",
-                "k4opt/execution/_reuse.py",
-                "k4opt/execution/_schedule.py",
-                "k4opt/execution/_session.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/_optuna/tree.py",
-                "tests/unit/execution/session/test_reuse.py",
-                "tests/unit/execution/test_parallel.py",
-                "tests/unit/execution/test_schedule.py",
-                "tests/unit/optimization/test_nested.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCCDIRAC",
-            "num": 24,
-            "title": "training: ZH/ZZ/WW at 240 GeV, IDEA Delphes, standalone Gen",
-            "url": "https://github.com/HEP-FCC/FCCDIRAC/pull/24",
-            "author": "kjvbrt",
-            "mergedAt": "2026-11-06",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Single-stage standalone `DelphesPythia8_EDM4HEP` Gen production\r\n(`key4hep_260408`, IDEA detector, `prodGroup=training`).\r\n\r\nUsed to test if VOMS extension patch works for pilots.\r\n\r\nTransformation IDs (jsmiesko attempt1):\r\n- ZH: 17152\r\n- ZZ: 17153\r\n- WW: 17154",
-            "diff": {
-                "additions": 1160,
-                "deletions": 0,
-                "files": 7
-            },
-            "files": [
-                "productions/summer2026/training/.gitignore",
-                "productions/summer2026/training/card_IDEA.tcl",
-                "productions/summer2026/training/edm4hep_IDEA.tcl",
-                "productions/summer2026/training/p8_ee_WW_ecm240.cmd",
-                "productions/summer2026/training/p8_ee_ZH_ecm240.cmd",
-                "productions/summer2026/training/p8_ee_ZZ_ecm240.cmd",
-                "productions/summer2026/training/pythia_delphes.conf"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1709,
-            "title": "fix: avoid printing every constant on failed getRefChild",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1709",
-            "author": "veprbl",
-            "mergedAt": "2026-11-06",
-            "mergedBy": "MarkusFrankATcernch",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Exceptions from `getRefChild` will no longer contain full constant listing in `e.what()` unless `DD4HEP_LIST_CHILDREN` is set.\r\n\r\nENDRELEASENOTES\r\n\r\nAt ePIC this results in 2000+ constant names printed in error messages. We'd like to propose omitting this information.",
-            "diff": {
-                "additions": 13,
-                "deletions": 6,
-                "files": 1
-            },
-            "files": [
-                "DDCore/src/DetectorImp.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200221h 37m 46s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 13eb286a.\n\n[test-results]:data:application/gzip;base64,H4sIAH3z7WoC/12MSw7CIBQAr9KwdiHl9+plDFBIXmyLobBqvLtIaosuZyaZjXic3EpuHYVLR9aM6aQxR50wLIWVAimLKjV9OlPiS/c1W/uvHv\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "How often do you run into this issue, and does the printout not help to figure out the typo in your constant?"
-                },
-                {
-                    "author": "veprbl",
-                    "body": "All the time basically. We need to either setup some custom error message rewriting rules or have it removed. The typo use case I understand, but also typos are usually resolved with grep, or closest possible constant may be suggested but that's usually a luxury. What would you suggest?"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "But you get the error because someone made a mistake in a constant name, or for another reason?"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "I can see myself breaking my keyboard because dd4hep tells me it didn't find a constant, but not which possibilities there are.\r\n\r\nWe can gate this with an env variable maybe? DD4HEP_LIST_CONSTANTS to print them out, and mention this possibility in the error message?"
-                },
-                {
-                    "author": "veprbl",
-                    "body": "> But you get the error because someone made a mistake in a constant name, or for another reason?\r\n\r\nNo, it usually has to do with different detector configurations or versions that don't define a constant.\r\n\r\n> I can see myself breaking my keyboard because dd4hep tells me it didn't find a constant,\u2026"
-                },
-                {
-                    "author": "MarkusFrankATcernch",
-                    "body": "If checks succeed I shall merge this PR."
-                }
-            ],
-            "comments_total": 7,
             "reviews": [],
             "reviews_total": 0
         }
