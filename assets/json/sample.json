@@ -1338,7 +1338,7 @@
             "author": "dependabot",
             "createdAt": "2026-11-14",
             "updatedAt": "2026-11-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "dependencies \ndocker",
             "assignees": ""
         },
@@ -2064,6 +2064,17 @@
             "author": "jacofan",
             "createdAt": "2026-10-16",
             "updatedAt": "2026-11-06",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 139,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/139'>Update dependency dompurify to v3.4.18</a>",
+            "author": "renovate",
+            "createdAt": "2026-11-14",
+            "updatedAt": "2026-11-14",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
