@@ -222,17 +222,6 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
-            "num": 177,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/177'>Add some more RDF utility functionality and clean up implementation</a>",
-            "author": "tmadlener",
-            "createdAt": "2022-08-25",
-            "updatedAt": "2026-05-23",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
             "num": 170,
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/170'>[wip] add `MeasurementND` classes</a>",
             "author": "tmadlener",
@@ -2554,11 +2543,11 @@
         },
         {
             "repo": "AIDASoft/<br>podio",
-            "num": 1068,
-            "title": "<a href='https://github.com/AIDASoft/podio/pull/1068'>Fix RNTupleReader buffer cleanup after binding failures</a>",
+            "num": 1082,
+            "title": "<a href='https://github.com/AIDASoft/podio/pull/1082'>Read only the requested collections in the RNTupleReader</a>",
             "author": "jmcarcell",
-            "createdAt": "2026-11-09",
-            "updatedAt": "2026-11-11",
+            "createdAt": "2026-11-15",
+            "updatedAt": "2026-11-15",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
