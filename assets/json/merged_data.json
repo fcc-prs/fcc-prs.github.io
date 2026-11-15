@@ -1,5 +1,5 @@
 {
-    "updated_at": "2026-11-14T12:51:32Z",
+    "updated_at": "2026-11-15T13:18:39Z",
     "data": [
         {
             "org": "key4hep",
@@ -23,6 +23,195 @@
             "files": [
                 ".github/workflows/docker-build-push-template.yaml",
                 ".github/workflows/image-template.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 139,
+            "title": "build(deps): bump pandas from 3.1.0 to 3.1.1 in /dashboard",
+            "url": "https://github.com/key4hep/k4Opt/pull/139",
+            "author": "dependabot",
+            "mergedAt": "2026-11-14",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [pandas](https://github.com/pandas-dev/pandas) from 3.1.0 to 3.1.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/pandas-dev/pandas/releases\">pandas's releases</a>.</em></p>\n<blockquote>\n<h2>pandas 3.1.1</h2>\n<p>We are pleased to announce the release of pandas 3.1.1.\nThis is a patch release in the 3.1.x series and includes some regression fixes and bug fixes. We recommend that all users of the 3.1.x series upgrade to this version.</p>\n<p>See the <a href=\"https://pandas.pydata.org/docs/whatsnew/v3.1.1.html\">full whatsnew</a> for a list of all the changes.</p>\n<p>The release can be installed from PyPI:</p>\n<pre><code>python -m pip install --upgrade pandas==3.1.*\n</code></pre>\n<p>Or from conda-forge</p>\n<pre><code>conda install -c conda-forge\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "dashboard/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 138,
+            "title": "build(deps): bump filelock from 4.2.8 to 4.2.10",
+            "url": "https://github.com/key4hep/k4Opt/pull/138",
+            "author": "dependabot",
+            "mergedAt": "2026-11-14",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [filelock](https://github.com/tox-dev/filelock) from 4.2.8 to 4.2.10.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/tox-dev/filelock/releases\">filelock's releases</a>.</em></p>\n<blockquote>\n<h2>4.2.10</h2>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<h3>Bug fixes</h3>\n<ul>\n<li>Contended <code>FileLock</code> and <code>SoftFileLock</code> acquisitions now raise <code>Timeout</code> when elapsed time reaches the requested timeout. A clock that landed exactly on the deadline previously left a waiter retrying with zero-length sleeps indefinitely (<a href=\"https://redirect.github.com/tox-dev/filelock/pull/922\">#922</a>) by <a href=\"https://github.com/gaborbernat\"><code>@\u200bgaborbernat</code></a>.</li>\n</ul>\n<p><!-- raw HTML omitted \u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 140,
+            "title": "build(deps): bump streamlit from 1.66.1 to 1.67.0 in /dashboard",
+            "url": "https://github.com/key4hep/k4Opt/pull/140",
+            "author": "dependabot",
+            "mergedAt": "2026-11-14",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [streamlit](https://github.com/streamlit/streamlit) from 1.66.1 to 1.67.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/streamlit/streamlit/releases\">streamlit's releases</a>.</em></p>\n<blockquote>\n<h2>1.67.0</h2>\n<!-- raw HTML omitted -->\n<h2>What's Changed</h2>\n<h3>New Features \ud83c\udf89</h3>\n<ul>\n<li>[feature] Update default light and dark named theme colors by <a href=\"https://github.com/mayagbarnes\"><code>@\u200bmayagbarnes</code></a> in <a href=\"https://redirect.github.com/streamlit/streamlit/pull/17450\">streamlit/streamlit#17450</a></li>\n<li>[feature] Add <code>required</code> parameter to <code>st.date_input</code> by <a href=\"https://github.com/lukasmasuch\"><code>@\u200blukasmasuch</code></a> in <a href=\"https://redirect.github.com/streamlit/strea\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "dashboard/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 136,
+            "title": "build(deps): bump virtualenv from 21.15.5 to 21.15.6",
+            "url": "https://github.com/key4hep/k4Opt/pull/136",
+            "author": "dependabot",
+            "mergedAt": "2026-11-14",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [virtualenv](https://github.com/pypa/virtualenv) from 21.15.5 to 21.15.6.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/pypa/virtualenv/releases\">virtualenv's releases</a>.</em></p>\n<blockquote>\n<h2>21.15.6</h2>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<h3>Bug fixes</h3>\n<ul>\n<li>Clear inherited <code>PYTHONHOME</code> during PowerShell, Nushell, and programmatic activation so child interpreters use the environment's standard library. Preserve empty values when Bash and fish deactivate (<a href=\"https://redirect.github.com/pypa/virtualenv/pull/3517\">#3517</a>) by <a href=\"https://github.com/gaborbernat\"><code>@\u200bgaborbernat</code></a>.</li>\n<li>Remove empty <code>PATH</code> entries during programmatic activation, including\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 141,
+            "title": "build(deps): bump https://github.com/astral-sh/ruff-pre-commit from v0.17.3 to 0.17.4",
+            "url": "https://github.com/key4hep/k4Opt/pull/141",
+            "author": "dependabot",
+            "mergedAt": "2026-11-14",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "pre_commit"
+            ],
+            "body": "Bumps [https://github.com/astral-sh/ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit) from v0.17.3 to 0.17.4.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/astral-sh/ruff-pre-commit/releases\">https://github.com/astral-sh/ruff-pre-commit's releases</a>.</em></p>\n<blockquote>\n<h2>v0.17.4</h2>\n<p>See: <a href=\"https://github.com/astral-sh/ruff/releases/tag/0.17.4\">https://github.com/astral-sh/ruff/releases/tag/0.17.4</a></p>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/astral-sh/ruff-pre-commit/commit/c0f278f1254ccc8fb09676bcdb8d847e7db493e5\"><code>c0f278f</code></a> Mirror: 0.17.4</li>\n<li><a href=\"https://github.com/astral-sh/ruff-pre-commit/commit/0c0cb547646c340482c7a02afe574d2f\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".pre-commit-config.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 135,
+            "title": "build(deps): bump docker/login-action from 4.7.0 to 4.8.0",
+            "url": "https://github.com/key4hep/k4Opt/pull/135",
+            "author": "dependabot",
+            "mergedAt": "2026-11-14",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [docker/login-action](https://github.com/docker/login-action) from 4.7.0 to 4.8.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/docker/login-action/releases\">docker/login-action's releases</a>.</em></p>\n<blockquote>\n<h2>v4.8.0</h2>\n<ul>\n<li>Set Docker Hub OIDC token lifetime default to 1 hour by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/login-action/pull/1070\">docker/login-action#1070</a></li>\n<li>Bump <code>@\u200baws-sdk/client-ecr</code> and <code>@\u200baws-sdk/client-ecr-public</code> to 3.1161.0 in <a href=\"https://redirect.github.com/docker/login-action/pull/1103\">docker/login-action#1103</a></li>\n<li>Bump <code>@\u200bdocker/actions-toolkit</code> from 0.107.0 to 0.109.0 in\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/deploy-dashboard.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 137,
+            "title": "build(deps): bump click from 8.5.0 to 8.5.1 in /dashboard",
+            "url": "https://github.com/key4hep/k4Opt/pull/137",
+            "author": "dependabot",
+            "mergedAt": "2026-11-14",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Bumps [click](https://github.com/pallets/click) from 8.5.0 to 8.5.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/pallets/click/releases\">click's releases</a>.</em></p>\n<blockquote>\n<h2>8.5.1</h2>\n<p>This is the Click 8.5.1 fix release, which fixes bugs but does not otherwise change behavior and should not result in breaking changes compared to the latest feature release.</p>\n<p>PyPI: <a href=\"https://pypi.org/project/click/8.5.1/\">https://pypi.org/project/click/8.5.1/</a>\nChanges: <a href=\"https://click.palletsprojects.com/page/changes/#version-8-5-1\">https://click.palletsprojects.com/page/changes/#version-8-5-1</a>\nMilestone: <a href=\"https://github.com/pallets/click/milestone/66\">https://github.com/pallets/click/milestone/66</a></p>\n<ul>\n<li\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "dashboard/requirements.txt"
             ],
             "comments": [],
             "comments_total": 0,
@@ -3302,322 +3491,6 @@
                 }
             ],
             "reviews_total": 17
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 127,
-            "title": "Observe what each stage used, and reuse across studies only what still holds",
-            "url": "https://github.com/key4hep/k4Opt/pull/127",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-07",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Third step of the software provenance work, after #124 and #126. Until now a study knew what its stages *could* reach (the build, the variables, local builds). This records what each stage *did* reach, and uses that to decide when an output from another study may stand in for a stage.\n\n## What changes for a user\n\n- **`--observe files|libraries|none`** on `k4opt evaluate` and `k4opt optimize`. The default, `files`, runs each program under `strace`, limited to opens, program starts and connections. Where `strace` is missing or may not trace, the session falls back to the next level and warns once.\n- **Each stage's record gets `observed`:** the packages it used, the local builds it read from, the inputs nothing else identifies (a `~/.rootrc`, a calibration read through a variable) and any net\u2026",
-            "diff": {
-                "additions": 3369,
-                "deletions": 114,
-                "files": 46
-            },
-            "files": [
-                ".github/workflows/ci.yml",
-                "README.md",
-                "docs/execution.md",
-                "docs/optimization.md",
-                "docs/software.md",
-                "k4opt/ddsim/run.py",
-                "k4opt/execution/_baseline.py",
-                "k4opt/execution/_command.py",
-                "k4opt/execution/_drive.py",
-                "k4opt/execution/_publish.py",
-                "k4opt/execution/_reuse.py",
-                "k4opt/execution/_session.py",
-                "k4opt/execution/_stages.py",
-                "k4opt/execution/_tasks.py",
-                "k4opt/execution/_work.py",
-                "k4opt/execution/cli.py",
-                "k4opt/k4run/run.py",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/_show.py",
-                "k4opt/optimization/cli.py",
-                "k4opt/program.py",
-                "k4opt/record/__init__.py",
-                "k4opt/record/write.py",
-                "k4opt/software/__init__.py",
-                "k4opt/software/identity.py",
-                "k4opt/software/observe.py",
-                "tests/integration/execution/test_evaluate_ddsim.py",
-                "tests/integration/execution/test_evaluate_reco.py",
-                "tests/support/fake_stack/bin/ddsim"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 126,
-            "title": "Identify local builds by their content, and stage files by theirs",
-            "url": "https://github.com/key4hep/k4Opt/pull/126",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-07",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Second of the five PRs on what a study ran on (after #124). It fixes two problems the plan calls P2 and P7: a local build was identified by where it is installed, not by what it holds.\n\n## Why\n\n- **A rebuild in place was invisible (P2).** `k4_local_repo`, a helper directory on `PYTHONPATH`, a virtual environment or `pip install --user` put code in front of the stack through variables whose *text* was compared. Rebuilding `libDDMarlinPandora.so` at the same path kept the text, so a study resumed, and stages were reused, across two different builds.\n- **The same build elsewhere was other software (P7).** The same bytes at another prefix changed the text, and so the software id and every signature; a reconstruction's `directory:` text was signed too, although the job runs from a copy and neve\u2026",
-            "diff": {
-                "additions": 1384,
-                "deletions": 189,
-                "files": 27
-            },
-            "files": [
-                "CONTRIBUTING.md",
-                "docs/evaluation.md",
-                "docs/software.md",
-                "k4opt/execution/_baseline.py",
-                "k4opt/execution/_drive.py",
-                "k4opt/execution/_files.py",
-                "k4opt/execution/_reuse.py",
-                "k4opt/execution/_session.py",
-                "k4opt/execution/_stages.py",
-                "k4opt/execution/_tasks.py",
-                "k4opt/execution/_work.py",
-                "k4opt/execution/_worker.py",
-                "k4opt/hashing.py",
-                "k4opt/record/signature.py",
-                "k4opt/software/__init__.py",
-                "k4opt/software/identity.py",
-                "k4opt/software/overlays.py",
-                "tests/support/common.py",
-                "tests/unit/execution/session/test_reconstruction.py",
-                "tests/unit/execution/session/test_records.py",
-                "tests/unit/execution/session/test_reuse.py",
-                "tests/unit/execution/session/test_samples.py",
-                "tests/unit/execution/test_stages.py",
-                "tests/unit/optimization/test_resume.py",
-                "tests/unit/record/test_signature.py",
-                "tests/unit/software/test_overlays.py",
-                "tests/unit/test_hashing.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 125,
-            "title": "Merge dependabot's updates by themselves once CI passes",
-            "url": "https://github.com/key4hep/k4Opt/pull/125",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-07",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Dependabot's pull requests now merge by themselves once CI passes, as in key4hep/k4Bench.\n\n- `.github/workflows/dependabot-auto-merge.yml` (the same as k4Bench's): on each pull request opened by dependabot, it enables auto-merge with squash.\n- Repository settings, already changed: **Allow auto-merge** is on, and a ruleset **Require CI on main** requires the checks `lint`, `test` and `dashboard` before anything merges into `main` (bypass: the repository's maintainer, as in k4Bench). Without required checks, auto-merge would merge at once instead of waiting for CI.\n- README: says that dependency updates merge once CI passes.\n\nAll three required jobs run on every pull request to `main`, so none of them can block a merge by being skipped.",
-            "diff": {
-                "additions": 22,
-                "deletions": 1,
-                "files": 2
-            },
-            "files": [
-                ".github/workflows/dependabot-auto-merge.yml",
-                "README.md"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 122,
-            "title": "build(deps): bump platformdirs from 4.14.0 to 4.14.5",
-            "url": "https://github.com/key4hep/k4Opt/pull/122",
-            "author": "dependabot",
-            "mergedAt": "2026-11-07",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [platformdirs](https://github.com/tox-dev/platformdirs) from 4.14.0 to 4.14.5.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/tox-dev/platformdirs/releases\">platformdirs's releases</a>.</em></p>\n<blockquote>\n<h2>4.14.5</h2>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<h3>Bug fixes</h3>\n<ul>\n<li>Resolve the temporary <code>user_runtime_dir</code> fallback to <code>/runtime-&lt;uid&gt;</code> instead of <code>//runtime-&lt;uid&gt;</code> when the temporary directory is <code>/</code> (<a href=\"https://redirect.github.com/tox-dev/platformdirs/pull/687\">#687</a>) by <a href=\"https://github.com/darrenhuai\"><code>@\u200bdarrenhuai</code></a> and <a href=\"https://github.com/gaborbernat\"><code>@\u200bgaborbernat</code></a>.</li>\n</ul>\n<p><a hre\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 120,
-            "title": "build(deps): bump nodeenv from 1.11.1 to 1.12.0",
-            "url": "https://github.com/key4hep/k4Opt/pull/120",
-            "author": "dependabot",
-            "mergedAt": "2026-11-07",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [nodeenv](https://github.com/ekalinin/nodeenv) from 1.11.1 to 1.12.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/ekalinin/nodeenv/releases\">nodeenv's releases</a>.</em></p>\n<blockquote>\n<h2>1.12.0</h2>\n<h2>What's Changed</h2>\n<h3>New Features \ud83c\udf89</h3>\n<ul>\n<li>feat(nodeenv): print shell completion scripts with shtab by <a href=\"https://github.com/ekalinin\"><code>@\u200bekalinin</code></a> in <a href=\"https://redirect.github.com/ekalinin/nodeenv/pull/460\">ekalinin/nodeenv#460</a></li>\n</ul>\n<h3>Fixed bugs \ud83d\udc1b</h3>\n<ul>\n<li>fix(nodeenv): point npm_config_prefix at the env in activate.bat and Activate.ps1 by <a href=\"https://github.com/ekalinin\"><code>@\u200bekalinin</code></a> in <a href=\"https://redirect.github.com/ekalinin/nodeenv/pull/420\">ekalinin/\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 124,
-            "title": "Identify the software a study runs on by its build, not by KEY4HEP_STACK",
-            "url": "https://github.com/key4hep/k4Opt/pull/124",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-07",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "First of five PRs on recording what a study ran on and what a rerun would need. This one fixes what identifies the software.\n\n## Why\n\n`KEY4HEP_STACK` names a place, not a build. The default nightly is an LCG view in a weekday slot that a later build overwrites, so today a study can resume, and stages can be reused, across two different builds at the same path. The catalog and dashboard showed the problem's unchecked `environment.key4hep` pin: a live study is labelled \"nightly 2026-10-20\" although it ran on the Nov 7 LCG build. Changed search variables only warned on resume, and `MARLIN_DLL`, `GAUDI_PLUGIN_PATH`, `LD_PRELOAD`, `G4*DATA` were not signed at all.\n\n## What changes\n\n- **New component `k4opt.software`** (after `k4run` in the dependency order; `docs/software.md`, `k4opt software s\u2026",
-            "diff": {
-                "additions": 1483,
-                "deletions": 451,
-                "files": 79
-            },
-            "files": [
-                ".pre-commit-config.yaml",
-                "CONTRIBUTING.md",
-                "README.md",
-                "dashboard/tables.py",
-                "docs/evaluation.md",
-                "docs/execution.md",
-                "docs/k4run.md",
-                "docs/optimization.md",
-                "docs/problem.md",
-                "docs/publication.md",
-                "docs/software.md",
-                "examples/nested/cld-pi0-nested.yaml",
-                "examples/problem/cld-ecal-bindings.yaml",
-                "examples/problem/cld-ecal-granularity.yaml",
-                "examples/problem/cld-ecal-photon-energies.yaml",
-                "examples/problem/cld-ecal-pi0-reco.yaml",
-                "examples/problem/cld-ecal-pi0-rejection.yaml",
-                "k4opt/cli.py",
-                "k4opt/execution/_baseline.py",
-                "k4opt/execution/_process.py",
-                "k4opt/execution/_session.py",
-                "k4opt/execution/_worker.py",
-                "k4opt/optimization/_identity.py",
-                "k4opt/optimization/_optuna/optimizer.py",
-                "k4opt/optimization/_results.py",
-                "k4opt/optimization/_study.py",
-                "k4opt/problem/__init__.py",
-                "k4opt/problem/config.py",
-                "k4opt/problem/models.py",
-                "k4opt/program.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 123,
-            "title": "build(deps): bump sqlalchemy from 2.1.6 to 2.1.8",
-            "url": "https://github.com/key4hep/k4Opt/pull/123",
-            "author": "dependabot",
-            "mergedAt": "2026-11-07",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [sqlalchemy](https://github.com/sqlalchemy/sqlalchemy) from 2.1.6 to 2.1.8.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/sqlalchemy/sqlalchemy/releases\">sqlalchemy's releases</a>.</em></p>\n<blockquote>\n<h1>2.1.8</h1>\n<p>Released: November 3, 2026</p>\n<h2>general</h2>\n<ul>\n<li>\n<p><strong>[general] [change]</strong> All files published to PyPI for a release, including the source\ndistribution as well as all wheels, are now uploaded using PyPI's trusted\npublishing mechanism from SQLAlchemy's GitHub Actions workflow, and include\na <a href=\"https://peps.python.org/pep-0740\">PEP 740</a> attestation, so that every file in a release carries\nprovenance information.  Previously, the source distribution and some\nwheels were uploaded without an attes\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 121,
-            "title": "build(deps): bump filelock from 4.2.5 to 4.2.8",
-            "url": "https://github.com/key4hep/k4Opt/pull/121",
-            "author": "dependabot",
-            "mergedAt": "2026-11-07",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [filelock](https://github.com/tox-dev/filelock) from 4.2.5 to 4.2.8.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/tox-dev/filelock/releases\">filelock's releases</a>.</em></p>\n<blockquote>\n<h2>4.2.8</h2>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<h3>Documentation</h3>\n<ul>\n<li>Clarify the platform-specific locking primitive and range used by descriptor locks, and correct the guidance on interoperating with byte-range lock protocols such as conda's repodata lock (<a href=\"https://redirect.github.com/tox-dev/filelock/pull/905\">#905</a>) by <a href=\"https://github.com/boyfeiyu\"><code>@\u200bboyfeiyu</code></a>.</li>\n</ul>\n<h3>New Contributors</h3>\n<ul>\n<li><a href=\"https://github.com/boyfeiyu\"><code>@\u200bboyfeiyu</code></a> made their\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 119,
-            "title": "build(deps): bump virtualenv from 21.15.2 to 21.15.5",
-            "url": "https://github.com/key4hep/k4Opt/pull/119",
-            "author": "dependabot",
-            "mergedAt": "2026-11-07",
-            "mergedBy": "jbeirer",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Bumps [virtualenv](https://github.com/pypa/virtualenv) from 21.15.2 to 21.15.5.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/pypa/virtualenv/releases\">virtualenv's releases</a>.</em></p>\n<blockquote>\n<h2>21.15.5</h2>\n<p><a href=\"https://pypi.org/project/virtualenv/21.15.5/\">\ud83d\udc0d PyPI release</a></p>\n<p><a href=\"https://github.com/pypa/virtualenv/compare/21.15.4...21.15.5\">\ud83d\udcdc Full Changelog</a></p>\n<h2>21.15.4</h2>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n<h3>Bug fixes</h3>\n<ul>\n<li>Upgrade embedded wheels: pip to <code>26.3</code> from <code>26.2.2</code> (<a href=\"https://redirect.github.com/pypa/virtualenv/pull/3508\">#3508</a>) by <a href=\"https://github.com/gaborbernat\"><code>@\u200bgaborbernat</code></a>.</li>\n</ul>\n<p><a href=\"http\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
         }
     ]
 }
