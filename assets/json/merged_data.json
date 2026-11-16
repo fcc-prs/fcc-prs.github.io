@@ -1,6 +1,31 @@
 {
-    "updated_at": "2026-11-15T13:18:39Z",
+    "updated_at": "2026-11-16T14:30:44Z",
     "data": [
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 419,
+            "title": "Comment out Particle in the IDEA and CLD EDM4hep output cards",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/419",
+            "author": "kjvbrt",
+            "mergedAt": "2026-11-16",
+            "mergedBy": "kjvbrt",
+            "labels": [],
+            "body": "In the Gaudi path (`k4SimDelphesAlg`) `Particle` duplicates the input `GenParticles`, without parents, daughters or links (cf. key4hep/k4SimDelphes#174). The line is kept commented out, as the standalone executables need it.",
+            "diff": {
+                "additions": 4,
+                "deletions": 2,
+                "files": 2
+            },
+            "files": [
+                "FCCee/Delphes/edm4hep_CLD.tcl",
+                "FCCee/Delphes/edm4hep_IDEA.tcl"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "key4hep-spack",
@@ -1906,73 +1931,6 @@
         {
             "org": "key4hep",
             "repo": "k4geo",
-            "num": 682,
-            "title": "[IDEA] Fix bug that the IDEA o2 HCAL endcap cell ID metadata is encoded with the barrel one",
-            "url": "https://github.com/key4hep/k4geo/pull/682",
-            "author": "SanghyunKo",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "To ease the review process, please consider the following before opening a pull request:\n- [x] the code is sufficiently well documented (e.g. inline comments)\n- [x] the relevant README(s) were updated. See e.g. https://github.com/key4hep/k4geo/blob/main/detector/calorimeter/README.md or https://github.com/key4hep/k4geo/blob/main/FCCee/IDEA/compact/README.md\n- [x] the code is covered by tests. See https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\n- [x] the PR source branch has been rebased (`--ff-only`) to `k4geo/main`\n- [x] the PR does not contain any additions or modifications that do not belong to it\n- [x] The release notes below contain a succinct and comprehensive description of the changes that are sufficiently self-explanatory\n\nBEGINRELEASENOTES\n- Fix bug that the IDEA o\u2026",
-            "diff": {
-                "additions": 19,
-                "deletions": 12,
-                "files": 1
-            },
-            "files": [
-                "plugins/DRTubesSDAction.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 5
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4geo",
-            "num": 672,
-            "title": "[ALLEGRO] add ECal face tracking surfaces with DD4hep CaloFace plugins",
-            "url": "https://github.com/key4hep/k4geo/pull/672",
-            "author": "giovannimarchiori",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Install a cylindrical surface at the inner face of the ECal barrel and disk-shaped surfaces at the inner faces of the ECal endcaps, using the DD4hep_CaloFace{Barrel,Endcap}SurfacePlugin with symmetry=0. These surfaces are used by the tracking (e.g. ConformalTracking) to extrapolate tracks to the calorimeter. \n\nDepends on https://github.com/AIDASoft/DD4hep/pull/1699\n\nBEGINRELEASENOTES\n- Install helper surfaces at the inner face of the ECal, used by the tracking (e.g. ConformalTracking in k4Reco) to extrapolate the tracks to the calorimeter\nENDRELEASENOTES",
-            "diff": {
-                "additions": 51,
-                "deletions": 0,
-                "files": 3
-            },
-            "files": [
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ALLEGRO_o1_v03.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/ALLEGRO_o1_v04.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o2_v01/ALLEGRO_o2_v01.xml"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "This works because the previous version swallows `symmetry=0` and what happens then? We may have to bump the required version of DD4hep to avoid issues with this since it compiles and the tests don't complain."
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "> This works because the previous version swallows `symmetry=0` and what happens then? We may have to bump the required version of DD4hep to avoid issues with this since it compiles and the tests don't complain.\r\n\r\nfor the barrel, the old code does nothing because the loop is \r\n` for(unsigned i=0 ; \u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Hi @jmcarcell ,\r\njust to understand, do we keep this PR open until we have a new tag of DD4hep and bump up the required version of DD4hep? \r\nThanks!"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "I think we can merge this for the nightlies, and there is going to be a new version of DD4hep soon so we can request that when it happens. I'll open a PR with that requirement."
-                }
-            ],
-            "comments_total": 4,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4geo",
             "num": 676,
             "title": "[ALLEGRO] - reduce the memory usage and initialisation time of the turbine ECAL endcap",
             "url": "https://github.com/key4hep/k4geo/pull/676",
@@ -2084,6 +2042,97 @@
         },
         {
             "org": "key4hep",
+            "repo": "k4geo",
+            "num": 672,
+            "title": "[ALLEGRO] add ECal face tracking surfaces with DD4hep CaloFace plugins",
+            "url": "https://github.com/key4hep/k4geo/pull/672",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Install a cylindrical surface at the inner face of the ECal barrel and disk-shaped surfaces at the inner faces of the ECal endcaps, using the DD4hep_CaloFace{Barrel,Endcap}SurfacePlugin with symmetry=0. These surfaces are used by the tracking (e.g. ConformalTracking) to extrapolate tracks to the calorimeter. \n\nDepends on https://github.com/AIDASoft/DD4hep/pull/1699\n\nBEGINRELEASENOTES\n- Install helper surfaces at the inner face of the ECal, used by the tracking (e.g. ConformalTracking in k4Reco) to extrapolate the tracks to the calorimeter\nENDRELEASENOTES",
+            "diff": {
+                "additions": 51,
+                "deletions": 0,
+                "files": 3
+            },
+            "files": [
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ALLEGRO_o1_v03.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/ALLEGRO_o1_v04.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o2_v01/ALLEGRO_o2_v01.xml"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "This works because the previous version swallows `symmetry=0` and what happens then? We may have to bump the required version of DD4hep to avoid issues with this since it compiles and the tests don't complain."
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "> This works because the previous version swallows `symmetry=0` and what happens then? We may have to bump the required version of DD4hep to avoid issues with this since it compiles and the tests don't complain.\r\n\r\nfor the barrel, the old code does nothing because the loop is \r\n` for(unsigned i=0 ; \u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @jmcarcell ,\r\njust to understand, do we keep this PR open until we have a new tag of DD4hep and bump up the required version of DD4hep? \r\nThanks!"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I think we can merge this for the nightlies, and there is going to be a new version of DD4hep soon so we can request that when it happens. I'll open a PR with that requirement."
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 682,
+            "title": "[IDEA] Fix bug that the IDEA o2 HCAL endcap cell ID metadata is encoded with the barrel one",
+            "url": "https://github.com/key4hep/k4geo/pull/682",
+            "author": "SanghyunKo",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "To ease the review process, please consider the following before opening a pull request:\n- [x] the code is sufficiently well documented (e.g. inline comments)\n- [x] the relevant README(s) were updated. See e.g. https://github.com/key4hep/k4geo/blob/main/detector/calorimeter/README.md or https://github.com/key4hep/k4geo/blob/main/FCCee/IDEA/compact/README.md\n- [x] the code is covered by tests. See https://github.com/key4hep/k4geo/blob/main/test/CMakeLists.txt\n- [x] the PR source branch has been rebased (`--ff-only`) to `k4geo/main`\n- [x] the PR does not contain any additions or modifications that do not belong to it\n- [x] The release notes below contain a succinct and comprehensive description of the changes that are sufficiently self-explanatory\n\nBEGINRELEASENOTES\n- Fix bug that the IDEA o\u2026",
+            "diff": {
+                "additions": 19,
+                "deletions": 12,
+                "files": 1
+            },
+            "files": [
+                "plugins/DRTubesSDAction.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 5
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 548,
+            "title": "Add ReconstructionRandomSeed label",
+            "url": "https://github.com/key4hep/EDM4hep/pull/548",
+            "author": "kjvbrt",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Adds a label constant for the random seed used by the reconstruction, to be\nstored as EDM4hep file metadata, in addition to GeneratorRandomSeed and\nSimulationRandomSeed from #543.\n\nBEGINRELEASENOTES\n - Add ReconstructionRandomSeed metadata label.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 3,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "include/edm4hep/Constants.h"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
             "repo": "EDM4hep",
             "num": 549,
             "title": "Avoid assuming 64-bit unsigned long when decoding versions",
@@ -2112,30 +2161,6 @@
                 }
             ],
             "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "EDM4hep",
-            "num": 548,
-            "title": "Add ReconstructionRandomSeed label",
-            "url": "https://github.com/key4hep/EDM4hep/pull/548",
-            "author": "kjvbrt",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Adds a label constant for the random seed used by the reconstruction, to be\nstored as EDM4hep file metadata, in addition to GeneratorRandomSeed and\nSimulationRandomSeed from #543.\n\nBEGINRELEASENOTES\n - Add ReconstructionRandomSeed metadata label.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 3,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "include/edm4hep/Constants.h"
-            ],
-            "comments": [],
-            "comments_total": 0,
             "reviews": [],
             "reviews_total": 1
         },
@@ -2417,34 +2442,6 @@
         {
             "org": "key4hep",
             "repo": "k4RecTracker",
-            "num": 125,
-            "title": "Specify CXX for all CMake project calls",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/125",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Add `LANGUAGES CXX` to all subdirectory `project()` calls.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 5,
-                "deletions": 5,
-                "files": 5
-            },
-            "files": [
-                "ARCdigi/CMakeLists.txt",
-                "Tracking/CMakeLists.txt",
-                "VTXdigi/CMakeLists.txt",
-                "VTXdigiDetailed/CMakeLists.txt",
-                "WireTrackerDigi/CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
             "num": 119,
             "title": "[TrackFinder] Major CPU-time and memory optimization   ",
             "url": "https://github.com/key4hep/k4RecTracker/pull/119",
@@ -2484,9 +2481,13 @@
                 {
                     "author": "tmadlener",
                     "body": "I think this is OK as it is. I think more improvements can potentially be done on top of this as follow ups."
+                },
+                {
+                    "author": "k4bench-bot",
+                    "body": "<!-- k4bench-blame-comment:v1 suite=reco window=2026-11-10..2026-11-12 -->\n<!-- k4bench-blame-facts:beba2fa0633655fe -->\n<!-- k4bench-blame-cumulative:v2 eNoViksKgzAQhu8y60zJhBrMstAuvEJFBhN-itRUsSV6_Mbl9-h76u6Pmy5OixUydLRe_ZUxB36lJJ6X9Vf12iqgzxgVKYdzjOMX8_TBGTG-tWRkzbEimdBcrKENZcKOrSpnnWcRloaG4Q_nyy\u2026"
                 }
             ],
-            "comments_total": 4,
+            "comments_total": 5,
             "reviews": [
                 {
                     "author": "tmadlener",
@@ -2495,6 +2496,34 @@
                 }
             ],
             "reviews_total": 21
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 125,
+            "title": "Specify CXX for all CMake project calls",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/125",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-10",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Add `LANGUAGES CXX` to all subdirectory `project()` calls.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 5,
+                "deletions": 5,
+                "files": 5
+            },
+            "files": [
+                "ARCdigi/CMakeLists.txt",
+                "Tracking/CMakeLists.txt",
+                "VTXdigi/CMakeLists.txt",
+                "VTXdigiDetailed/CMakeLists.txt",
+                "WireTrackerDigi/CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -2728,106 +2757,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4SimDelphes",
-            "num": 165,
-            "title": "allow compression level of edm4hep root output to be configured (and make it zstd-5 by default)",
-            "url": "https://github.com/key4hep/k4SimDelphes/pull/165",
-            "author": "davidlange6",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- allow compression level of edm4hep root output to be configured (and make it zstd-5). **This will require podio > 1.9**\r\n\r\nENDRELEASENOTES\r\n\r\nRequires aida-soft/podio#1050\r\n\r\nBenefit in storage 13%\r\nBenefit at read time w/ ROOTReader: 50% faster read back of all branches\r\nBenefit at read time w/ uproot: 10% faster read back of all branches\r\nCost at production time:  1s out of 850s\r\n\r\nMeasured on 50k Z->visible events\r\n\r\n- [x] Needs https://github.com/AIDASoft/podio/pull/1050",
-            "diff": {
-                "additions": 27,
-                "deletions": 4,
-                "files": 3
-            },
-            "files": [
-                "converter/include/k4SimDelphes/DelphesEDM4HepOutputConfiguration.h",
-                "doc/output_config.md",
-                "standalone/src/DelphesMain.h"
-            ],
-            "comments": [
-                {
-                    "author": "davidlange6",
-                    "body": "switching to rntuple saves another O(15%) [eg, 25% total reduction in output size]."
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "CI workflows that are expected to pass, pass. I will merge this later today."
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Gen",
-            "num": 69,
-            "title": "Record generator random seed in output metadata",
-            "url": "https://github.com/key4hep/k4Gen/pull/69",
-            "author": "kjvbrt",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Record the Pythia8 generator random seed as GeneratorRandomSeed in the output file metadata. **This will require EDM4hep > 1.2**.\r\n\r\nENDRELEASENOTES\r\n\r\nWrites the Pythia8 Random:seed used by this job into the output file's\r\nmetadata via k4FWCore::putParameter, using the edm4hep::labels\r\nconstant (key4hep/EDM4hep#543). Distinct from Delphes' own RandomSeed,\r\nrecorded separately in key4hep/k4SimDelphes#167.",
-            "diff": {
-                "additions": 4,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "k4Gen/src/components/PythiaInterface.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Gen",
-            "num": 67,
-            "title": "Review and fix units",
-            "url": "https://github.com/key4hep/k4Gen/pull/67",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Fix the time smearing in `GaussSmearVertex`: `tVertexSigma` and `tVertexMean` are times (default unit ns) and are now multiplied by `c_light`, since HepMC3 stores c*t as a length. Before, the smearing was ~300 times too small.\n - Convert the production time `VHEP4` (mm/c) to ns in `HepEVTReader` and `MDIReader`.\n - Convert events read by `HepMCFileReader` and `HepMC2FileReader` to GeV and mm, since `read_event` keeps the units of the file. Includes a workaround for the event position (root vertex), which `GenEvent::set_units` does not convert.\n - Use `Gaudi::Units::c_light` in `HepMCToEDMConverter`.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 27,
-                "deletions": 9,
-                "files": 7
-            },
-            "files": [
-                "k4Gen/src/components/GaussSmearVertex.cpp",
-                "k4Gen/src/components/GaussSmearVertex.h",
-                "k4Gen/src/components/HepEVTReader.cpp",
-                "k4Gen/src/components/HepMC2FileReader.cpp",
-                "k4Gen/src/components/HepMCFileReader.cpp",
-                "k4Gen/src/components/HepMCToEDMConverter.cpp",
-                "k4Gen/src/components/MDIReader.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "This looks OK to me. I would merge this unless there are still comments."
-                },
-                {
-                    "author": "tmadlener",
-                    "state": "APPROVED",
-                    "body": "This looks OK to me. I would merge this unless there are still comments."
-                }
-            ],
-            "reviews_total": 2
-        },
-        {
-            "org": "key4hep",
             "repo": "k4ActsTracking",
             "num": 140,
             "title": "Remove legacy tracking geos and material maps",
@@ -2860,117 +2789,6 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-actions",
-            "num": 62,
-            "title": "Upload CLD reconstruction file alongside histograms",
-            "url": "https://github.com/key4hep/key4hep-actions/pull/62",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Upload the CLD reconstruction file (`rec_test_edm4hep_REC.edm4hep.root`) alongside the AIDA histogram in the `CLD ROOT files` artifact.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 3,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "key4hep-build/action.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 131,
-            "title": "Watch what stages looked for in vain within a session",
-            "url": "https://github.com/key4hep/k4Opt/pull/131",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Fixes the two footprint-consistency findings of the repository review of `1a0a9ca`.\n\n## Problem\n\nA stage's footprint records the paths it failed to open (missing, or refused), but those were checked only on a resume, and only the missing ones:\n\n- **Within a session** nothing checked them. Trial 0 takes the defaults without an optional `override.json`, the file appears, and trial 1 reads it. Both trials were recorded in one study.\n- **Reuse across studies** checked a footprint once per output per session. After that, the reused output's read files were watched, but not what it looked for in vain. The same file appearing let later candidates reuse the output and record a mix.\n- **A resume** ignored refused paths that became readable.\n\n## Change\n\n- A footprint's `denied` now keeps, for each r\u2026",
-            "diff": {
-                "additions": 416,
-                "deletions": 103,
-                "files": 11
-            },
-            "files": [
-                "docs/execution.md",
-                "docs/software.md",
-                "k4opt/execution/_baseline.py",
-                "k4opt/execution/_publish.py",
-                "k4opt/execution/_reuse.py",
-                "k4opt/execution/_session.py",
-                "k4opt/software/observe.py",
-                "tests/support/fake_stack/bin/ddsim",
-                "tests/unit/execution/session/test_observation.py",
-                "tests/unit/execution/session/test_records.py",
-                "tests/unit/software/test_observe.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 130,
-            "title": "Scan the snapshot for secrets, seed reconstructions, and count every run",
-            "url": "https://github.com/key4hep/k4Opt/pull/130",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Fixes the findings of the latest repository-wide review and three open issues, with two more bugs found on the way.\n\n## Publication: scan the snapshot, not only the files beside it\n\nThe secret scan looked only at the code and input files offered beside a snapshot, never at the snapshot itself: the problem definition, trial messages (which carry the last lines of ddsim's or k4run's stderr) and diagnostics went out unscanned. A study read from its JSON form was not scanned at all, yet `k4opt publish` printed `scan  nothing found`.\n\n- New `k4opt/publication/exposure.py`: the secret patterns (moved from `artifacts.py`), `public_snapshot()` and `local_paths()` (moved from `write.py`).\n- Each text is scanned as a reader reads it, not as JSON escapes it: scanning the raw JSON bytes would miss `pa\u2026",
-            "diff": {
-                "additions": 1226,
-                "deletions": 225,
-                "files": 37
-            },
-            "files": [
-                "dashboard/tables.py",
-                "docs/evaluators.md",
-                "docs/execution.md",
-                "docs/k4run.md",
-                "docs/problem.md",
-                "docs/publication.md",
-                "docs/visualization.md",
-                "examples/nested/cld-pi0-nested.yaml",
-                "k4opt/execution/_stages.py",
-                "k4opt/k4run/command.py",
-                "k4opt/k4run/joboptions.py",
-                "k4opt/k4run/run.py",
-                "k4opt/optimization/_results.py",
-                "k4opt/problem/_parameters.py",
-                "k4opt/problem/_samples.py",
-                "k4opt/problem/models.py",
-                "k4opt/problem/outline.py",
-                "k4opt/problem/stages.py",
-                "k4opt/publication/__init__.py",
-                "k4opt/publication/artifacts.py",
-                "k4opt/publication/cli.py",
-                "k4opt/publication/exposure.py",
-                "k4opt/publication/write.py",
-                "k4opt/visualization/graph.py",
-                "tests/integration/k4run/test_k4run.py",
-                "tests/integration/optimization/test_optimize_cld_nested.py",
-                "tests/support/fake_stack/bin/k4run",
-                "tests/unit/execution/session/test_reconstruction.py",
-                "tests/unit/k4run/test_joboptions.py",
-                "tests/unit/k4run/test_run.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
         },
         {
             "org": "hep-fcc",
@@ -3274,223 +3092,6 @@
             "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1072,
-            "title": "Avoid assuming 64-bit unsigned long when decoding versions",
-            "url": "https://github.com/AIDASoft/podio/pull/1072",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Avoid assuming 64-bit unsigned long when decoding versions.\r\n\r\nENDRELEASENOTES\r\n\r\nVersion decoding does not need to assume that `unsigned long` is 64 bits. Use `UINT64_C(0xFFFF)` masks to extract each 16-bit component and accept `uint64_t` in `decode_version`, matching the encoded version type.\r\n\r\nThis preserves preprocessor usage and existing behavior on LP64 platforms, without truncating encoded versions where `unsigned long` is 32 bits.\r\n\r\nApplies also to EDM4hep.",
-            "diff": {
-                "additions": 4,
-                "deletions": 4,
-                "files": 1
-            },
-            "files": [
-                "podioVersion.in.h"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Yes"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "APPROVED",
-                    "body": "Will you open the same thing for EDM4hep as well?"
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 129,
-            "title": "Publish what the author approves, and show what a rerun needs",
-            "url": "https://github.com/key4hep/k4Opt/pull/129",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-08",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "Last PR of the software provenance series. A study already keeps privately what a rerun needs (#128). This PR decides what of that leaves the machine, under the author's approval, and shows it on the dashboard.\n\n## What a publication holds\n\nBeside each snapshot, `k4opt publish` always writes a **software sheet** (`studies/<id>/software/<sha16>.json`, `k4opt.software-sheet/1`). It holds the status, and each requirement with its state, who can get it (`public`, `on request`, `none`) and, for a local build, its source and what ran kept apart. The sheet is built field by field, so it holds no path, size, variable name, host, or digest of an unpublished file. The catalog entry names the sheet, and readers check its size, its SHA-256 and that it belongs to the snapshot.\n\nFiles the author approve\u2026",
-            "diff": {
-                "additions": 5751,
-                "deletions": 175,
-                "files": 30
-            },
-            "files": [
-                ".github/workflows/ci.yml",
-                "dashboard/data.py",
-                "dashboard/labels.py",
-                "dashboard/study.py",
-                "dashboard/tables.py",
-                "dashboard/views/software.py",
-                "docs/dashboard.md",
-                "docs/publication.md",
-                "docs/software.md",
-                "k4opt/jsonio.py",
-                "k4opt/publication/__init__.py",
-                "k4opt/publication/artifacts.py",
-                "k4opt/publication/catalog.py",
-                "k4opt/publication/cli.py",
-                "k4opt/publication/read.py",
-                "k4opt/publication/sheet.py",
-                "k4opt/publication/write.py",
-                "k4opt/software/keep.py",
-                "k4opt/software/readiness.py",
-                "k4opt/software/source.py",
-                "tests/integration/software/test_restore.py",
-                "tests/support/published.py",
-                "tests/unit/dashboard/test_app.py",
-                "tests/unit/dashboard/test_cache.py",
-                "tests/unit/dashboard/test_tables.py",
-                "tests/unit/publication/test_artifacts.py",
-                "tests/unit/publication/test_publish.py",
-                "tests/unit/publication/test_read.py",
-                "tests/unit/software/test_readiness.py",
-                "tests/unit/software/test_source.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 128,
-            "title": "Keep privately what a rerun needs, and say whether a study can be rerun",
-            "url": "https://github.com/key4hep/k4Opt/pull/128",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-08",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "PR 4 of the software provenance series (after #124, #126, #127). A study now keeps, in its `software/` directory, what a rerun would need that is not public, and `k4opt study show` says what that is, whether it is there, and what that allows.\n\n## What a study keeps (privately, in `<study>/software/`)\n\n| Kept | When |\n| --- | --- |\n| **The release**: the LCG view's manifests (34 kB gzipped), and for each HEAD package the commit it was built from (`.buildinfo_<pkg>.txt`), which the manifests do not say | session open |\n| **Local builds**, each local entry grouped into an *origin*: a CMake build (`<checkout>/install`), local code (in a checkout or not), an environment of installed distributions. A build is linked to its checkout (`verified`: its CMake cache installs there and the build tree's\u2026",
-            "diff": {
-                "additions": 5459,
-                "deletions": 27,
-                "files": 42
-            },
-            "files": [
-                "docs/execution.md",
-                "docs/software.md",
-                "k4opt/execution/_session.py",
-                "k4opt/execution/_work.py",
-                "k4opt/geometry/materialize.py",
-                "k4opt/jsonio.py",
-                "k4opt/optimization/_keep.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/_optuna/tell.py",
-                "k4opt/optimization/_optuna/tree.py",
-                "k4opt/optimization/_show.py",
-                "k4opt/record/read.py",
-                "k4opt/record/write.py",
-                "k4opt/software/cli.py",
-                "k4opt/software/keep.py",
-                "k4opt/software/overlays.py",
-                "k4opt/software/readiness.py",
-                "k4opt/software/source.py",
-                "k4opt/software/stack.py",
-                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/DD4hep/HEAD/x86_64-el9-gcc16-opt/.buildinfo_DD4hep.txt",
-                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/LCG_externals_x86_64-el9-gcc16-opt.txt",
-                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/cldconfig/HEAD/x86_64-el9-gcc16-opt/.buildinfo_cldconfig.txt",
-                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/cldconfig/HEAD/x86_64-el9-gcc16-opt/share/CLDConfig/CLDReconstruction.py",
-                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/cldconfig/HEAD/x86_64-el9-gcc16-opt/share/CLDConfig/ParticleFlow/Pandora.py",
-                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/cldconfig/HEAD/x86_64-el9-gcc16-opt/share/CLDConfig/event_display.py",
-                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/ddmarlinpandora/HEAD/x86_64-el9-gcc16-opt/.buildinfo_ddmarlinpandora.txt",
-                "tests/fixtures/software/lcg/nightlies/devkey-head/Sat/ddmarlinpandora/HEAD/x86_64-el9-gcc16-opt/lib/libDDMarlinPandora.so.0.14.0",
-                "tests/integration/software/test_restore.py",
-                "tests/support/checkouts.py",
-                "tests/support/evaluators.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1023,
-            "title": "feat: allow for no ROOT dependency builds",
-            "url": "https://github.com/AIDASoft/podio/pull/1023",
-            "author": "wdconinc",
-            "mergedAt": "2026-11-08",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Now that we have the possibility for backends like Arrow, there is no absolute requirement for ROOT in podio (was technically already the case with SIO). Default remains to require ROOT.\r\n\r\nThe python interfaces in podio use cppyy and ROOT dictionaries for introspection, so all python interfaces (even for SIO and Arrow) require ROOT. This would need something like pybind11 or nanobind to avoid the ROOT dependency.\r\n\r\nAdd one test matrix entry with ROOT off.\r\n\r\nNeeds:\r\n- [x] https://github.com/key4hep/EDM4hep/pull/521\r\n- [x] https://github.com/eic/EDM4eic/pull/181\r\n\r\nBEGINRELEASENOTES\r\n- feat: allow for no ROOT dependency builds (controlled by `ENABLE_ROOT` cmake option and transported downstream via `PODIO_ENABLE_ROOT` cmake variable as well as pre-processor directive). **Disabling ROOT wi\u2026",
-            "diff": {
-                "additions": 702,
-                "deletions": 299,
-                "files": 25
-            },
-            "files": [
-                ".github/workflows/test.yml",
-                "CMakeLists.txt",
-                "CMakePresets.json",
-                "README.md",
-                "cmake/podioBuild.cmake",
-                "cmake/podioConfig.cmake.in",
-                "cmake/podioMacros.cmake",
-                "cmake/podioTest.cmake",
-                "python/CMakeLists.txt",
-                "python/podio/__init__.py",
-                "python/podio/reading.py",
-                "src/CMakeLists.txt",
-                "src/Reader.cc",
-                "src/Writer.cc",
-                "tests/CMakeLists.txt",
-                "tests/arrow_io/CMakeLists.txt",
-                "tests/dumpmodel/CMakeLists.txt",
-                "tests/schema_evolution/code_gen/check_base.h",
-                "tests/schema_evolution/code_gen/test_utilities.cmake",
-                "tests/sio_io/CMakeLists.txt",
-                "tests/unittests/CMakeLists.txt",
-                "tests/unittests/unittest.cpp",
-                "tests/unittests/writer_for.cpp",
-                "tools/CMakeLists.txt",
-                "tools/podio-merge-files"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "It looks like one of the root dictionaries is still trying to be installed:\r\n\r\nhttps://github.com/AIDASoft/podio/actions/runs/35885912750/job/107265873642?pr=1023#step:5:271\r\n``` \r\ninstall TARGETS given target \"podioArrowDict\" which does not exist.\r\n```\r\n\r\nsimilar guards as for the rest should do th\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Fixed the merge conflicts with the main branch given all the rest that has been merged in between. Adapted tests that came into play since then to work w/o ROOT.\r\n\r\nThe main thing that was missing and that made downstream workflows fail partially was the propagation of `PODIO_ENABLE_ROOT` to downstr\u2026"
-                },
-                {
-                    "author": "wdconinc",
-                    "body": "> @wdconinc sorry, got distracted multiple times before getting back to this. As far as I am concerned, this is good to go. Unless you (or anyone else) still wants to change something, I will merge this in the next days and then make a new tag.\r\n\r\nNo problem. This is still fine with me. Just in time\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Some workflows got new names with this PR, so the *requried* clauses don't match any longer."
-                }
-            ],
-            "comments_total": 4,
-            "reviews": [
-                {
-                    "author": "copilot-pull-request-reviewer",
-                    "state": "COMMENTED",
-                    "body": "### \ud83d\udfe1 Changes recommended\n\nThe ROOT=OFF CI configuration currently contains concrete configuration/install issues (workflow RNTUPLE enabling, dumpmodel empty `set_tests_properties`, Python install filter bug) that will break builds/tests.\n\n*Get a fresh assessment by requesting another Copilot review\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "state": "DISMISSED",
-                    "body": "@wdconinc sorry, got distracted multiple times before getting back to this. As far as I am concerned, this is good to go. Unless you (or anyone else) still wants to change something, I will merge this in the next days and then make a new tag."
-                }
-            ],
-            "reviews_total": 17
         }
     ]
 }
