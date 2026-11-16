@@ -2,10 +2,10 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 688,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/688'>[IDEA] return field in the muon-system iron (barrel Bz, endcap Br), simplified from the IDEA FEM field map</a>",
-            "author": "mahmoudali2",
-            "createdAt": "2026-11-16",
+            "num": 683,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/683'>[ALLEGRO, CLD, IDEA] Set magnetic field to 0 outside muon system</a>",
+            "author": "andread3vita",
+            "createdAt": "2026-11-10",
             "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
@@ -13,11 +13,11 @@
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 683,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/683'>[ALLEGRO, CLD, IDEA] Set magnetic field to 0 outside muon system</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-13",
+            "num": 688,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/688'>[IDEA] return field in the muon-system iron (barrel Bz, endcap Br), simplified from the IDEA FEM field map</a>",
+            "author": "mahmoudali2",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -139,6 +139,17 @@
             "author": "tmadlener",
             "createdAt": "2025-05-05",
             "updatedAt": "2026-08-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 558,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/558'>Allow Python imports without optional RDF utilities</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -347,7 +358,7 @@
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/911'>Add the latest tags for a new release</a>",
             "author": "jmcarcell",
             "createdAt": "2026-08-16",
-            "updatedAt": "2026-11-15",
+            "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -424,7 +435,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/177'>Make the MCParticle parent / daughter relations consistent</a>",
             "author": "davidlange6",
             "createdAt": "2026-11-14",
-            "updatedAt": "2026-11-14",
+            "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -491,6 +502,61 @@
             "author": "kjvbrt",
             "createdAt": "2024-04-04",
             "updatedAt": "2025-03-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 302,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/302'>Create truth links backscatter in same cluster</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 301,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/301'>Create truth links several sim hits per calo hit</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 300,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/300'>Create truth links sim hit in several calo hits</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 299,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/299'>Create truth links originator of tracker born particles</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 298,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/298'>Add CreateTruthLinks test for 27 synthetic cases</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -612,7 +678,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -623,7 +689,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -656,7 +722,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -667,7 +733,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -689,7 +755,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -700,7 +766,7 @@
             "author": "armin-ilg",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-10",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -733,6 +799,17 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-01",
             "updatedAt": "2026-11-15",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-dev-utils",
+            "num": 38,
+            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/38'>Add guidelines for AI coding agents</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -827,6 +904,17 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
+            "num": 121,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/121'>TracksFromGenParticles: support truth tracks without SimTrackerHit input</a>",
+            "author": "qwert2333",
+            "createdAt": "2026-11-03",
+            "updatedAt": "2026-11-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": "SanghyunKo"
+        },
+        {
+            "repo": "key4hep/<br>k4RecTracker",
             "num": 80,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/80'>[TrackFit] Generalization for any Bz field direction</a>",
             "author": "BrieucF",
@@ -843,17 +931,6 @@
             "author": "mahmoudali2",
             "createdAt": "2026-11-05",
             "updatedAt": "2026-11-12",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "SanghyunKo"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
-            "num": 121,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/121'>TracksFromGenParticles: support truth tracks without SimTrackerHit input</a>",
-            "author": "qwert2333",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-11",
             "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
@@ -1250,7 +1327,7 @@
             "author": "HenryDayHall",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1261,7 +1338,7 @@
             "author": "peter-mckeown",
             "createdAt": "2026-10-05",
             "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1641,6 +1718,17 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 580,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/580'>Multi-plotter toolbox</a>",
+            "author": "forthommel",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 557,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
             "author": "bndikt",
@@ -1975,7 +2063,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/411'>Fix CI-tests for IDEA and ALLEGRO</a>",
             "author": "andread3vita",
             "createdAt": "2026-11-12",
-            "updatedAt": "2026-11-15",
+            "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2250,7 +2338,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1672'>Add cvmfs/LCG-based macOS workflow</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-06",
-            "updatedAt": "2026-11-15",
+            "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2305,7 +2393,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1722'>Revert \"ci(k4geo): keep the IDEA tests from exhausting the runner's memory\"</a>",
             "author": "andresailer",
             "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-13",
+            "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2404,7 +2492,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/907'>Support installation of C++20 modules (with non-ROOT functionality)</a>",
             "author": "wdconinc",
             "createdAt": "2025-12-20",
-            "updatedAt": "2026-11-15",
+            "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2554,11 +2642,11 @@
         },
         {
             "repo": "AIDASoft/<br>podio",
-            "num": 1082,
-            "title": "<a href='https://github.com/AIDASoft/podio/pull/1082'>Read only the requested collections in the RNTupleReader</a>",
+            "num": 1083,
+            "title": "<a href='https://github.com/AIDASoft/podio/pull/1083'>Use unnamed namespaces for file-local helpers</a>",
             "author": "jmcarcell",
-            "createdAt": "2026-11-15",
-            "updatedAt": "2026-11-15",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
