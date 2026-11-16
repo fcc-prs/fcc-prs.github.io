@@ -1,0 +1,23 @@
+{
+  "updated_at": "2026-11-16T16:42:20Z",
+  "period_start": "2026-11-09",
+  "period_end": "2026-11-16",
+  "summary": [
+    "- **[key4hep/k4FWCore#447](https://github.com/key4hep/k4FWCore/pull/447)** — OverlayTiming adds background SimCalorimeterHit contribution energies to merged hits and keeps entire hits whenever any contribution falls inside the time window, which changes calorimeter overlay output.",
+    "- **[key4hep/k4SimDelphes#172](https://github.com/key4hep/k4SimDelphes/pull/172)** — Converts MCParticle production times from ns to mm/c before passing them to Delphes in k4SimDelphesAlg, which corrects particle, track and calorimeter times in Gaudi-based Delphes simulations.",
+    "- **[key4hep/k4SimDelphes#171](https://github.com/key4hep/k4SimDelphes/pull/171)** — Fills the previously empty RecoMCLink collection in k4SimDelphesAlg by creating reco–MC links before internal maps are cleared"
+  ],
+  "usage": {
+    "cache_creation": "CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0)",
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "us",
+    "input_tokens": 51975,
+    "output_tokens": 6,
+    "output_tokens_details": null,
+    "server_tool_use": null,
+    "service_tier": "standard",
+    "speed": "standard"
+  },
+  "cost_usd": 0.20802
+}
