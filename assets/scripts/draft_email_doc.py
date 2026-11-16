@@ -20,7 +20,7 @@ from googleapiclient.discovery import build
 
 SCOPES = [
     "https://www.googleapis.com/auth/documents",
-    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive",
 ]
 
 INDICO_CATEG_URL = "https://indico.cern.ch/export/categ/5666.json"
