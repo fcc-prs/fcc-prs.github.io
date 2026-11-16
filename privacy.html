@@ -1,0 +1,87 @@
+<title>Privacy Policy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #555;
+    --border: #e0e0e0;
+    --accent: #2563eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111;
+      --fg: #e8e8e8;
+      --muted: #999;
+      --border: #2a2a2a;
+      --accent: #60a5fa;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111;
+    --fg: #e8e8e8;
+    --muted: #999;
+    --border: #2a2a2a;
+    --accent: #60a5fa;
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 680px;
+    margin: 0 auto;
+    padding-block: 3rem;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    text-wrap: balance;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.875rem;
+    margin-bottom: 2.5rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-wrap: balance;
+  }
+  p { margin: 0 0 1rem; }
+  a { color: var(--accent); }
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2.5rem 0;
+  }
+</style>
+
+<h1>Privacy Policy</h1>
+<p class="meta">FCC PR Summary &mdash; fcc-prs.github.io</p>
+
+<p>This site publishes a weekly summary of pull requests merged in the FCC and Key4hep software ecosystems. This policy describes how the site's automated tooling handles data.</p>
+
+<h2>Data collected</h2>
+<p>The site does not collect personal data from visitors. No cookies, analytics, or tracking scripts are used.</p>
+<p>The automated workflow that creates weekly Google Docs drafts uses an OAuth token to authenticate with Google on behalf of the site owner. That token is stored as a private secret and is not shared with third parties.</p>
+
+<h2>Google API usage</h2>
+<p>The site uses the Google Docs and Google Drive APIs solely to create weekly draft documents shared with a small group of editors. No data from Google accounts other than the authorized account is accessed or stored.</p>
+
+<h2>Third-party services</h2>
+<p>Pull request data is fetched from the GitHub API. Meeting information is fetched from Indico (CERN). Neither service receives personal data from visitors to this site.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy can be sent to <a href="mailto:david.lange@princeton.edu">david.lange@princeton.edu</a>.</p>
+
+<hr>
+<p style="color: var(--muted); font-size: 0.8rem;">Last updated November 2026</p>
