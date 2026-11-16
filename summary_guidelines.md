@@ -64,13 +64,12 @@ Prioritise in this order:
   PR's work), reference it as "(see also **org/repo#N**)" at the end of the parent
   entry rather than giving it its own bullet.
 - Bullet format:
-    **[org/repo#num](pr_url)** — one to two sentences describing the change,
-    its motivation, and any downstream impact.
+    **[org/repo#num](pr_url)** — one sentence of 20–30 words describing the change
+    and its impact.
+- Keep each description to 20–30 words. Do not exceed 30 words. One sentence only.
 - Omit implementation-level detail (internal code paths, variable names, data
-  structures). State what changed, why it matters, and any downstream impact.
-  Where possible, name the affected FCC experiment or workflow (ALLEGRO, CLD, IDEA,
-  etc.) and describe the observable symptom that was fixed (crashes, wrong output,
-  excessive memory use) rather than the internal mechanism.
+  structures). State what changed and why it matters. Where relevant, name the
+  affected FCC experiment or workflow (ALLEGRO, CLD, IDEA, etc.).
 - No backtick or code formatting in descriptions — write class names, function names,
   and tool names as plain text.
 - Descriptions must be plain prose — no nested or sub-bullets within a PR entry.
