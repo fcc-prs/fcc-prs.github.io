@@ -3,7 +3,7 @@ name: create weekly email doc
 on:
   schedule:
     # Runs every Monday at 07:30 UTC, 30 minutes after generate_summary
-    - cron: '30 7 * * 1'
+    - cron: '0 3 * * 1'
   workflow_dispatch:
 
 jobs:
