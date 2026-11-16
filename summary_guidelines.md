@@ -69,6 +69,8 @@ Prioritise in this order:
 - Keep each description to 20–30 words. Do not exceed 30 words. One sentence only.
 - Focus on what was added or changed, not on what was wrong before. Do not describe
   the previous behaviour unless the contrast is essential to understanding the impact.
+- Do not mention what did not change (e.g. validation results, per-event timing,
+  physics output unchanged). Only state what is different.
 - Omit implementation-level detail (internal code paths, variable names, data
   structures). State what changed and why it matters. Where relevant, name the
   affected FCC experiment or workflow (ALLEGRO, CLD, IDEA, etc.).
