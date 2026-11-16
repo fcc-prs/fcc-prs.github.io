@@ -6,7 +6,7 @@
             "title": "<a href='https://github.com/key4hep/k4geo/issues/687'>Removing parallelworld_volume makes the fit better at low energies</a>",
             "author": "andread3vita",
             "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-13",
+            "updatedAt": "2026-11-16",
             "labels": "bug",
             "assignees": ""
         },
@@ -2152,6 +2152,16 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
+            "num": 71,
+            "title": "<a href='https://github.com/key4hep/k4Gen/issues/71'>`ConstPtParticleGun` writes an inconsistent HepMC3 file, and Delphes reads 0 events</a>",
+            "author": "jacofan",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
             "num": 61,
             "title": "<a href='https://github.com/key4hep/k4Gen/issues/61'>Inconsistent ddsim output for Pythia-generated EDM4hep ROOT and HepMC inputs</a>",
             "author": "andread3vita",
@@ -2246,7 +2256,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/issues/297'>Validation of CreateTruthLinks vs RecoMCTruthLinker</a>",
             "author": "dudarboh",
             "createdAt": "2026-11-12",
-            "updatedAt": "2026-11-13",
+            "updatedAt": "2026-11-16",
             "labels": "",
             "assignees": ""
         },
@@ -2336,7 +2346,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/158'>Merge order of the open CLD tracking PRs and when to regenerate the material maps</a>",
             "author": "jbeirer",
             "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-14",
+            "updatedAt": "2026-11-16",
             "labels": "",
             "assignees": ""
         },
@@ -4052,6 +4062,16 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 581,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/581'>Inconsistent luminosity scaling between histogram plotting interfaces</a>",
+            "author": "bndikt",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 578,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/578'>Validate nested helper includes before grid submission</a>",
             "author": "bndikt",
@@ -4632,21 +4652,31 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
-            "num": 408,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/408'>Autumn2026: software needed in the campaign release</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-11-13",
+            "num": 412,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/412'>Autumn2026: Software needs remaining for Delphes productions</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-11-12",
+            "updatedAt": "2026-11-16",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
-            "num": 412,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/412'>Autumn2026: Software needs remaining for Delphes productions</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-11-12",
-            "updatedAt": "2026-11-12",
+            "num": 418,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/418'>Autumn2026: Software needs remaining for analysis</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 408,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/408'>Autumn2026: software needed in the campaign release</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-11-13",
             "labels": "",
             "assignees": ""
         },
@@ -5168,6 +5198,16 @@
             "createdAt": "2026-10-30",
             "updatedAt": "2026-11-11",
             "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1725,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1725'>heap-use-after-free: Geant4Kernel destroys phases regardless of reference count</a>",
+            "author": "wdconinc",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-16",
+            "labels": "bug",
             "assignees": ""
         },
         {
