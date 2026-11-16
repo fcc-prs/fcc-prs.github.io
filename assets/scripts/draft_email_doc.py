@@ -14,19 +14,22 @@ import urllib.request
 from datetime import date, timedelta
 
 import httplib2
-from google.oauth2 import service_account
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
 from google_auth_httplib2 import AuthorizedHttp
 from googleapiclient.discovery import build
 
 SCOPES = [
     "https://www.googleapis.com/auth/documents",
-    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/drive.file",
 ]
 
 INDICO_CATEG_URL = "https://indico.cern.ch/export/categ/5666.json"
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-SERVICE_ACCOUNT_FILE = os.path.join(REPO_ROOT, "google_service_account.json")
+CREDENTIALS_FILE = os.path.join(REPO_ROOT, "google_apps.json")
+TOKEN_FILE = os.path.join(REPO_ROOT, "token.json")
 LAST_DOC_FILE = os.path.join(REPO_ROOT, "assets", "json", "last_doc.json")
 SUMMARY_URL = "https://fcc-prs.github.io/assets/json/summary.json"
 
@@ -65,9 +68,18 @@ def fetch_indico_meetings(start, end):
 
 
 def get_credentials():
-    return service_account.Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE, scopes=SCOPES
-    )
+    creds = None
+    if os.path.exists(TOKEN_FILE):
+        creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
+            creds = flow.run_local_server(port=0)
+        with open(TOKEN_FILE, "w") as f:
+            f.write(creds.to_json())
+    return creds
 
 
 def parse_markdown_segments(text):
@@ -165,10 +177,14 @@ def build_doc_parts(data, meetings=None):
 def create_doc(subject, full_text, styles, timeout=120):
     creds = get_credentials()
     authorized_http = AuthorizedHttp(creds, http=httplib2.Http(timeout=timeout))
+    drive = build("drive", "v3", http=authorized_http)
     service = build("docs", "v1", http=authorized_http)
 
-    doc = service.documents().create(body={"title": f"DRAFT — {subject}"}).execute()
-    doc_id = doc["documentId"]
+    file_meta = drive.files().create(
+        body={"name": f"DRAFT — {subject}", "mimeType": "application/vnd.google-apps.document"},
+        fields="id",
+    ).execute()
+    doc_id = file_meta["id"]
 
     # Insert the full plain text in one shot at index 1
     service.documents().batchUpdate(
@@ -204,7 +220,6 @@ def create_doc(subject, full_text, styles, timeout=120):
         ).execute()
 
     # Set permissions via Drive API
-    drive = build("drive", "v3", http=authorized_http)
     # Anyone with the link can comment
     drive.permissions().create(
         fileId=doc_id,
