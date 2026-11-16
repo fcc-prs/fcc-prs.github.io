@@ -14,9 +14,7 @@ import urllib.request
 from datetime import date, timedelta
 
 import httplib2
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
+from google.oauth2 import service_account
 from google_auth_httplib2 import AuthorizedHttp
 from googleapiclient.discovery import build
 
@@ -28,8 +26,7 @@ SCOPES = [
 INDICO_CATEG_URL = "https://indico.cern.ch/export/categ/5666.json"
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CREDENTIALS_FILE = os.path.join(REPO_ROOT, "google_apps.json")
-TOKEN_FILE = os.path.join(REPO_ROOT, "token.json")
+SERVICE_ACCOUNT_FILE = os.path.join(REPO_ROOT, "google_service_account.json")
 LAST_DOC_FILE = os.path.join(REPO_ROOT, "assets", "json", "last_doc.json")
 SUMMARY_URL = "https://fcc-prs.github.io/assets/json/summary.json"
 
@@ -68,18 +65,9 @@ def fetch_indico_meetings(start, end):
 
 
 def get_credentials():
-    creds = None
-    if os.path.exists(TOKEN_FILE):
-        creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
-            creds = flow.run_local_server(port=0)
-        with open(TOKEN_FILE, "w") as f:
-            f.write(creds.to_json())
-    return creds
+    return service_account.Credentials.from_service_account_file(
+        SERVICE_ACCOUNT_FILE, scopes=SCOPES
+    )
 
 
 def parse_markdown_segments(text):
