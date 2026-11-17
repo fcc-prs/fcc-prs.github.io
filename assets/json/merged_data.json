@@ -1,6 +1,614 @@
 {
-    "updated_at": "2026-11-16T14:30:44Z",
+    "updated_at": "2026-11-17T15:22:52Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 561,
+            "title": "Match the CI C++ standard to ROOT",
+            "url": "https://github.com/key4hep/EDM4hep/pull/561",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-17",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Use `root-config --cxxstandard` for podio, EDM4hep and the downstream CI build instead of hard-coded standards.\n\nENDRELEASENOTES\n\nThe dev4 GCC job uses C++23 with ROOT built for C++20:\n```\nwarning: #warning \"The C++ standard in this build does not match ROOT configuration (202002L); this might cause unexpected issues\"\n```\n\nFound in [this CI job](https://github.com/key4hep/EDM4hep/actions/runs/44072152857/job/134000792212?pr=559) (the many warnings from ROOT).",
+            "diff": {
+                "additions": 5,
+                "deletions": 6,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/lcg_linux_with_podio.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 559,
+            "title": "Do not export the MurmurHash3 helpers and other file-local functions",
+            "url": "https://github.com/key4hep/EDM4hep/pull/559",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-17",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Move `MurmurHash3_x86_32` into `edm4hep::utils::detail` and its helpers (`rotl32`, ...) into an unnamed namespace. They were exported as global symbols from `libedm4hepUtils.so`, which could clash with other libraries bundling MurmurHash3.\n - Put `printHelp` in `edm4hep2json` and the file-local test helpers in unnamed namespaces.\n\nENDRELEASENOTES\n\nChecked with `clang-tidy`.",
+            "diff": {
+                "additions": 39,
+                "deletions": 21,
+                "files": 6
+            },
+            "files": [
+                "test/hepmc/edm4hep_testhepmc.cc",
+                "test/utils/test_pid_handler.cpp",
+                "tools/src/edm4hep2json.cxx",
+                "utils/src/MurmurHash3.cpp",
+                "utils/src/MurmurHash3.h",
+                "utils/src/ParticleIDUtils.cc"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 560,
+            "title": "chore: Fix the CI after latest podio updates",
+            "url": "https://github.com/key4hep/EDM4hep/pull/560",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-17",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Switch to newer LCG stacks to build podio with RNTuple support in CI\n- Use the `base-build` preset of podio in CI\n\nENDRELEASENOTES\n\nhttps://github.com/AIDASoft/podio/pull/1082 lifted the minimal ROOT version to 6.34 for RNTuple support",
+            "diff": {
+                "additions": 22,
+                "deletions": 13,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/lcg_linux_with_podio.yml"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Switched to `base-build` (from `full-build`) and `-DENABLE_SIO=ON` to keep previous behavior as arrow and parquet are not universally available."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 160,
+            "title": "Fix vertex linearizer configuration with Acts master",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/160",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-17",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Fix the build after https://github.com/acts-project/acts/pull/6421:\n\n```text\nerror: no member named 'bField' in 'Acts::HelicalTrackLinearizer::Config'\n```\n\nBEGINRELEASENOTES\n - Fix vertex linearizer configuration with Acts master while retaining compatibility with older Acts versions.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 5,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "k4ActsTracking/src/components/VertexFindingAlg.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-actions",
+            "num": 63,
+            "title": "Update key4hep build platforms",
+            "url": "https://github.com/key4hep/key4hep-actions/pull/63",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-17",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Replace Ubuntu24 nightly testing with Alma10/GCC16",
+            "diff": {
+                "additions": 9,
+                "deletions": 8,
+                "files": 4
+            },
+            "files": [
+                ".github/workflows/ci.yml",
+                "key4hep-build/README.md",
+                "key4hep-build/action.yml",
+                "workflows/key4hep-build.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 411,
+            "title": "[ALLEGRO, IDEA] Set value of EmbeddingCoordinates in GGTFTrackFinder",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/411",
+            "author": "andread3vita",
+            "mergedAt": "2026-11-17",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Dear All,\nThis PR is meant to fix the CI tests for IDEA and ALLEGRO.\n\nCheers,\nAndrea",
+            "diff": {
+                "additions": 6,
+                "deletions": 4,
+                "files": 2
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_common/run_digi_reco_common.py",
+                "FCCee/FullSim/IDEA/IDEA_o1_v03/run_digi_reco.py"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "@andread3vita \r\nThere is an error in the test\r\n```\r\n  GGTFTrackFinder      FATAL Standard std::exception is caught in sysExecute\r\n  GGTFTrackFinder      ERROR deque::_M_range_check: __n (which is 4)>= this->size() (which is 4)\r\n  EventLoopMgr         FATAL .executeEvent(): Standard std::exception th\u2026"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "Yup, I noticed the issue too, but I can't reproduce it with k4RecTracker because the test works there, and `FCC-Config` works fine in my local tests, where I've only sourced the nightly build. If you know how I could replicate the CI environment locally, I can try to debug with that. I'm a bit puzzl\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Can you clarify which failing CI tests you are trying to fix, and how you setup your local environment to run the tests that work there?"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> Can you clarify which failing CI tests you are trying to fix, and how you setup your local environment to run the tests that work there?\r\n\r\nThe CI test is the one you mentioned. I don't know why ggtf fails in fcc-config and it works in k4rectracker. In order to test it locally, I am just cloning f\u2026"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "@giovannimarchiori  @BrieucF  I think I may have identified the issue.\r\n\r\nIn this new version of the code, I am using `podio::ObjectID` to identify the `(collectionID, hitID)` pair. However, I seem to run into a problem when the hit collection is produced within the same application, where both the \u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "How do you reproduce the error locally? I have run a digi+reco job on 5 events of ALLEGRO with the latest version of k4RecTracker and I don't see any crash."
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> How do you reproduce the error locally? I have run a digi+reco job on 5 events of ALLEGRO with the latest version of k4RecTracker and I don't see any crash.\r\n\r\nI just clone fcc-config, source the nightly and run https://github.com/HEP-FCC/FCC-config/blob/main/FCCee/FullSim/IDEA/IDEA_o1_v03/ctest_s\u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @andread3vita \r\nthis is what my AI friend told me:\r\n\r\n\r\nI found the problem and reproduced it. It is not a rare crash: when the hit collections are produced in the same job, GGTF systematically attaches the wrong hits to the tracks. The crash is just the case where, by chance, the wrong index fal\u2026"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> also removes the search loop.\r\n\r\nHi! Yes, you are right. The problem comes from the objectID, but I think it is a bug that can be fixed in podio because we need to fill podio::ObjectID as soon as the collection is created, but here it seems that it is not. In my opinion we should try to fix it in \u2026"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Hi @andread3vita \r\nthis should be followed up with @tmadlener , @jmcarcell and others to see if a fix directly in Podio is possible.\r\nCheers,\r\n  Giovanni"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "by the way, do we need the change for \"EmbeddingCoordinates=3\" that this PR introduce or not? the crash you are pointing out seems to be completely unrelated..."
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> by the way, do we need the change for \"EmbeddingCoordinates=3\" that this PR introduce or not? the crash you are pointing out seems to be completely unrelated...\r\n\r\nyeah, at the beginning this PR was a draft to solve the problem and I was trying some ideas. We don't really need that modification"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "ok se we can close this PR?"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I think this should be merged because the default in k4RecTracker for `EmbeddingCoordinates` is 3 (https://github.com/key4hep/k4RecTracker/blob/main/Tracking/test/testTrackFinder/runTestTrackFinder.py#L162) so they will run the same even if it does not fix it."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Possibly fixed in https://github.com/key4hep/k4RecTracker/pull/128, I'll merge since there is a follow up there with the fix."
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "OK let's merge this PR so that the value of EmbeddingCoordinates is set explicitly to 3 (in case the default in the c++ might change...) \r\nAnd for the real fix to the CI tests let's hope for a quick merge of https://github.com/key4hep/k4RecTracker/pull/128\r\n\r\nI will change the title of this PR since\u2026"
+                }
+            ],
+            "comments_total": 16,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1084,
+            "title": "Use unnamed namespaces for file-local tool and test helpers and enable misc-use-internal-linkage",
+            "url": "https://github.com/AIDASoft/podio/pull/1084",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-17",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Use unnamed namespaces for file-local tool and test helpers found with clang-tidy. Unlike #1083, this only changes executable linkage and does not affect shared-library exports.\n- Enable the `misc-use-internal-linkage` check in `.clang-tidy`.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 325,
+                "deletions": 253,
+                "files": 14
+            },
+            "files": [
+                ".clang-tidy",
+                "tests/root_io/read_and_write_associated.cpp",
+                "tests/root_io/read_frame_root_multiple.cpp",
+                "tests/root_io/read_with_rdatasource_root.cpp",
+                "tests/root_io/relation_range.cpp",
+                "tests/schema_evolution/code_gen/multi_schema_datatypes_new_relation/check.cpp",
+                "tests/unittests/frame.cpp",
+                "tests/unittests/links.cpp",
+                "tests/unittests/std_interoperability.cpp",
+                "tests/unittests/test_arrow_converter.cpp",
+                "tests/unittests/test_json_output.cpp",
+                "tests/unittests/unittest.cpp",
+                "tools/src/podio-dump-tool.cpp",
+                "tools/src/podio-test-hashes.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "We have a `.clang-tidy` config file here into which we could put the corresponding check"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "> We have a `.clang-tidy` config file here into which we could put the corresponding check\n\nNow enabled, it took a while in my PC though \ud83d\ude15"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Yeah clang-tidy takes very long. I think I will look into splitting it off the usual `pre-commit`. In principle one can also enable it in the build directly."
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "DISMISSED",
+                    "body": "Shouldn't matter too much for these, I assume, but still good hygiene."
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "APPROVED",
+                    "body": "~Shouldn't matter too much for these, I assume, but still good hygiene.~ github / cookies."
+                }
+            ],
+            "reviews_total": 2
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1083,
+            "title": "Use unnamed namespaces for file-local helpers",
+            "url": "https://github.com/AIDASoft/podio/pull/1083",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-17",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Put file-local helper functions in unnamed namespaces so they are not exported.\n - Move `MurmurHash3_x86_32` and friends into `podio::detail` and their helpers (`rotl32`, ...) into an unnamed namespace. They were exported as global symbols from `libpodio.so`, which could clash with other libraries bundling MurmurHash3 (e.g. EDM4hep).\n\nENDRELEASENOTES\n\nNo particular reason, I was checking today some linker options and this seems like a good idea for private helpers that should not be used outside of where they are defined.",
+            "diff": {
+                "additions": 243,
+                "deletions": 222,
+                "files": 9
+            },
+            "files": [
+                "src/ArrowConverterRegistry.cc",
+                "src/CollectionIDTable.cc",
+                "src/GenericParameters.cc",
+                "src/Glob.cc",
+                "src/MurmurHash3.cpp",
+                "src/MurmurHash3.h",
+                "src/ROOTReader.cc",
+                "tests/unittests/murmurhash3.cpp",
+                "tools/src/podio-test-hashes.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Looks sensible. pre-commit complains about indentation now in some cases."
+                }
+            ],
+            "reviews_total": 2
+        },
+        {
+            "org": "PandoraPFAOrg",
+            "repo": "PandoraSDK",
+            "num": 35,
+            "title": "Macro Updates",
+            "url": "https://github.com/PandoraPFAOrg/PandoraSDK/pull/35",
+            "author": "CrossR",
+            "mergedAt": "2026-11-17",
+            "mergedBy": "AndyChappell",
+            "labels": [],
+            "body": "Should be generally clean commits...can remake the branch if not.\r\n\r\nGenerally, make the macros shorter, and more specific: 90% of our use cases are dealt with \"throw or return if not success\", so added specific macros for that, and the remaining bits are sorted with XML specific helpers (XML Required/Optional/Optional with default).",
+            "diff": {
+                "additions": 705,
+                "deletions": 595,
+                "files": 36
+            },
+            "files": [
+                "include/Helpers/XmlHelper.h",
+                "include/Pandora/StatusCodes.h",
+                "include/Persistency/BinaryFileWriter.h",
+                "src/Api/PandoraContentApiImpl.cc",
+                "src/Helpers/XmlHelper.cc",
+                "src/Managers/AlgorithmManager.cc",
+                "src/Managers/AlgorithmObjectManager.cc",
+                "src/Managers/CaloHitManager.cc",
+                "src/Managers/ClusterManager.cc",
+                "src/Managers/GeometryManager.cc",
+                "src/Managers/InputObjectManager.cc",
+                "src/Managers/MCManager.cc",
+                "src/Managers/Manager.cc",
+                "src/Managers/Metadata.cc",
+                "src/Managers/ParticleFlowObjectManager.cc",
+                "src/Managers/PluginManager.cc",
+                "src/Managers/TrackManager.cc",
+                "src/Managers/VertexManager.cc",
+                "src/Objects/Cluster.cc",
+                "src/Objects/Helix.cc",
+                "src/Objects/Histograms.cc",
+                "src/Objects/OrderedCaloHitList.cc",
+                "src/Objects/ParticleFlowObject.cc",
+                "src/Pandora/Pandora.cc",
+                "src/Pandora/PandoraImpl.cc",
+                "src/Pandora/PandoraSettings.cc",
+                "src/Persistency/BinaryFileReader.cc",
+                "src/Persistency/BinaryFileWriter.cc",
+                "src/Persistency/EventReadingAlgorithm.cc",
+                "src/Persistency/EventWritingAlgorithm.cc"
+            ],
+            "comments": [
+                {
+                    "author": "CrossR",
+                    "body": "I'm going to double check the build flag warnings etc locally, make sure they aren't being raised to errors, as I can't remember if I tested on both GCC + Clang..."
+                },
+                {
+                    "author": "CrossR",
+                    "body": "Rebased on to master, and have removed the deprecation warnings for now.\r\n\r\nTested on:\r\n\r\n - FNAL SL7 Container - GCC 12.1.0\r\n - FNAL AL9 - GCC 12.2.0\r\n - macOS - Clang 21.0.0\r\n - Ubuntu 26.06 - gcc 15.2.0"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [
+                {
+                    "author": "AndyChappell",
+                    "state": "CHANGES_REQUESTED",
+                    "body": "Unsurprisingly, with all of the upstream activity recently, there are conflicts. Could you address those and then I can properly review this. Thanks @CrossR"
+                },
+                {
+                    "author": "AndyChappell",
+                    "state": "COMMENTED",
+                    "body": "One query regarding an apparently undefined function, but otherwise this looks good."
+                }
+            ],
+            "reviews_total": 4
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 558,
+            "title": "Allow Python imports without optional RDF utilities",
+            "url": "https://github.com/key4hep/EDM4hep/pull/558",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-16",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "I was building with a minimal ROOT installation and EDM4hep doesn't work when RDF is not there.\n\nBEGINRELEASENOTES\n - Allow importing edm4hep without optional RDF utilities and accept already-loaded ROOT libraries.\n\nENDRELEASENOTES\n\nKeep the Python RDF configuration build-local to avoid interference between build directories.\nAlternatively we request ROOT with RDF and not do any of this.",
+            "diff": {
+                "additions": 29,
+                "deletions": 11,
+                "files": 4
+            },
+            "files": [
+                "python/CMakeLists.txt",
+                "python/edm4hep/__init__.py",
+                "python/edm4hep/_build_config.py.in",
+                "test/CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 4
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4FWCore",
+            "num": 455,
+            "title": "Use unnamed namespaces for file-local helpers",
+            "url": "https://github.com/key4hep/k4FWCore/pull/455",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-16",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Put the helper functions in `OverlayTiming.cpp` and `EfficiencyFilter.cpp` in unnamed namespaces, so that generic global names like `time_of_flight` can't clash with other libraries.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 10,
+                "deletions": 6,
+                "files": 2
+            },
+            "files": [
+                "k4FWCore/components/EfficiencyFilter.cpp",
+                "k4FWCore/components/OverlayTiming.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "We should probably start to be a bit more pedantic about these in all our repositories. For algorithms it is probably OK, but anything else should be either be in a dedicated or an unnamed namespace."
+                }
+            ],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 950,
+            "title": "Detect EL10 and drop GCC 14 for LCG nightlies",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/950",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-16",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "for when el10 builds are ready (maybe tomorrow)",
+            "diff": {
+                "additions": 20,
+                "deletions": 16,
+                "files": 1
+            },
+            "files": [
+                "scripts/cvmfs/setup-nightlies.sh"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "GCC 14 is gone and Alma 10 is available, at least with `opt`."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecCalorimeter",
+            "num": 303,
+            "title": "Use an unnamed namespace for a file-local helper",
+            "url": "https://github.com/key4hep/k4RecCalorimeter/pull/303",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-16",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Put `MergeSumAndSort` in `AugmentClustersFCCee.cpp` in an unnamed namespace so that it is not exported.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "RecFCCeeCalorimeter/src/components/AugmentClustersFCCee.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4EDM4hep2LcioConv",
+            "num": 137,
+            "title": "Remove a leftover definition of convEventHeader",
+            "url": "https://github.com/key4hep/k4EDM4hep2LcioConv/pull/137",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-16",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Remove a leftover definition of `convEventHeader`, whose declaration was removed in #91.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 0,
+                "deletions": 4,
+                "files": 1
+            },
+            "files": [
+                "k4EDM4hep2LcioConv/src/k4EDM4hep2LcioConv.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-dev-utils",
+            "num": 25,
+            "title": "Add CI check for synchronized defaults",
+            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/25",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-16",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "- add a daily workflow to validate synchronized default files across the package list\r\n- centralize default-file mappings and per-package exclusions\r\n- make sync-files.sh apply the same exclusion policy",
+            "diff": {
+                "additions": 145,
+                "deletions": 0,
+                "files": 3
+            },
+            "files": [
+                ".github/workflows/check-synced-defaults.yml",
+                "scripts/sync-files.sh",
+                "scripts/synced-defaults.sh"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Hm I don't have a strong opinion, I wouldn't run this manually myself, once files are in sync it running once a day is enough I guess?"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I guess the missing check at the moment tells us that there are indeed some missing / unsynchronised files?"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "Yes, if you click it will show it per-package. Unfortunately groups don't allow for expanded by default so it's either that or no groups at all. Ok I think this is decent enough, although maybe not perfect..."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "The `key4hep-build` workflow is checked now, I think this is ready"
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "I think this is an excellent idea. Implementationwise I am wondering whether the main body of the workflow should just be another script that we call from the workflow? That would make it a bit easier to run locally for debugging for example."
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Looks good. Also looks like there is some fixing to do. Additionally, the `key4hep-build` action is not checked at the moment? We can also add things in a follow up, I think."
+                }
+            ],
+            "reviews_total": 2
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4MLJetTagger",
+            "num": 17,
+            "title": "Use an unnamed namespace for a file-local helper",
+            "url": "https://github.com/key4hep/k4MLJetTagger/pull/17",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-16",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Put `findMCPIDfromHiggsDaughters` in an unnamed namespace so that it is not exported.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 2,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "k4MLJetTagger/src/components/JetMCTagger.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "hep-fcc",
             "repo": "FCC-config",
@@ -25,6 +633,55 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1082,
+            "title": "Read only the requested collections in the RNTupleReader",
+            "url": "https://github.com/AIDASoft/podio/pull/1082",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-16",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- `RNTupleReader` now only reads the fields of the requested collections. Collections whose fields cannot be bound are skipped without reading any of their data, and are not retried for later entries.\n- Cache the RNTuple views of collections and Frame parameters per file. Reading is about 5x faster (20k events, 3 collections, 11 parameters: 565 ms \u2192 100 ms with a Release build).\n- Stop emulating unknown types when opening files, since the full model is not created anymore. The `datatypes_remove_type` schema evolution test now also runs for ROOT < 6.36.\n\nENDRELEASENOTES\n\nPreviously all fields were read with `LoadEntry`, also those of collections that were not requested. Now each collection is read through its own views, which are created once per file and rebound to new bu\u2026",
+            "diff": {
+                "additions": 196,
+                "deletions": 87,
+                "files": 11
+            },
+            "files": [
+                ".cppcheck-suppressions.txt",
+                ".github/workflows/key4hep.yml",
+                "CMakeLists.txt",
+                "README.md",
+                "include/podio/RNTupleReader.h",
+                "src/RNTupleReader.cc",
+                "tests/schema_evolution/code_gen/CMakeLists.txt",
+                "tests/schema_evolution/code_gen/datatypes_new_relation/check.cpp",
+                "tests/schema_evolution/code_gen/datatypes_rename_relation/check.cpp",
+                "tests/schema_evolution/code_gen/datatypes_rename_relation/new.yaml",
+                "tests/schema_evolution/code_gen/datatypes_rename_relation/old.yaml"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "> Looks good. One question and some nitpicking below.\n> \n> I am not sure if I am a huge fan of abusing the schema evolution tests for checking RNTuple functionality. If there is an easy way to move those into the general I/O tests that would be nice, but if not we can also keep them where they are.\n\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I will merge this as is now, so that I can make a tag tomorrow morning. I think it's fine, resp. if there is a better way we can move tests in a follow up PR."
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Looks good. One question and some nitpicking below.\n\nI am not sure if I am a huge fan of abusing the schema evolution tests for checking RNTuple functionality. If there is an easy way to move those into the general I/O tests that would be nice, but if not we can also keep them where they are."
+                }
+            ],
+            "reviews_total": 4
         },
         {
             "org": "key4hep",
@@ -1931,118 +2588,6 @@
         {
             "org": "key4hep",
             "repo": "k4geo",
-            "num": 676,
-            "title": "[ALLEGRO] - reduce the memory usage and initialisation time of the turbine ECAL endcap",
-            "url": "https://github.com/key4hep/k4geo/pull/676",
-            "author": "giovannimarchiori",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "giovannimarchiori",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Place the turbine ECAL endcap cells of each wheel in a dedicated mother volume to reduce memory and initialisation time\n\nENDRELEASENOTES\n\nECalEndcap_Turbine_o1_v03: place the unit cells of each wheel in a dedicated mother volume.\nThe unit cells (passive + active, ~5000 placements of boolean solids) were  placed directly in the LAr bath, whose Geant4 voxelisation took most of the ddsim initialisation time. Each wheel is now a LAr tube inside the bath, coinciding with the tube used to cut the blades, so that Geant4 voxelises the three wheels separately.\n\nTested on ALLEGRO_o1_v03, full detector with ddsim, single photons and Z->qq\n- time to first event: ~175 s -> ~104 s (1 thread), ~120 s -> ~40 s (8 threads)\n- peak RSS: -1.9 GB\n- on the other hand, event processing increa\u2026",
-            "diff": {
-                "additions": 23,
-                "deletions": 8,
-                "files": 1
-            },
-            "files": [
-                "detector/calorimeter/ECalEndcap_Turbine_o1_v03_geo.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Tagging @varnes"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "I also agree an increase in simulation time is not great, in particular in large productions where initialization time may be small compared to the total."
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Hi @varnes and @jmcarcell, I agree that the per-event cost is the relevant figure for large productions. \r\nIt depends, however, how large productions are going to be handles: single jobs with many tens of thousands of events? Or smaller jobs producing say 2k events each and then merged?\r\nAlso, pleas\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Since the per-event cost is the relevant figure for large productions, I repeated the measurement more carefully, on Z->qq events at the Z pole (Pythia8) and single-photons in the endcap\r\n\r\n- comparison repeated N times (N=12 in single-core, 6 in 8-core mode) with N different seeds; 150 events for e\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "To avoid any extrapolation, I also ran real production-like jobs of **1000 events** each, comparing the baseline (`main`) with this PR, for three samples: Z->qq, Z->ee and single photons in the endcap.\r\nAgain, I ran 6 pairs of jobs per sample. In each pair the baseline job and the job with this PR s\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Results with **8 threads** (`ddsim --numberOfThreads 8`), with the same samples and the same procedure as above: 6 pairs of 1000-event jobs per sample; in each pair the baseline job and the job with this PR simulate the same events with the same seed. Each job is pinned to 8 dedicated physical cores\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Can you add a column in the table above with the relative change in the s per event so that we don't have to do the math?"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Is 1k event jobs really representative of what we would run in production jobs if we run multithreaded? I see the single threaded versions running approx. 1.5h  for the physics sample, which, I would assume is still a bit on the shorter side of things? Especially for grid jobs, I think we would in t\u2026"
-                },
-                {
-                    "author": "BrieucF",
-                    "body": "I think this change is good. The weight between central productions and people running ALLEGRO simulation for development or physics studies with small samples is largely in favor of the latter, and will be for quite some time. Also, having to wait a few more seconds/minutes (to be quantified) for a\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "> Can you add a column in the table above with the relative change in the s per event so that we don't have to do the math?\r\n\r\nthe relative change in s/evt (event loop only, without initialisation/finalisation)  is the column time/event, PR vs baseline"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "> For the 8-thread jobs, I think 1k jobs are probably too short? They are essentially only a few minutes and I think we would probably try to have longer running jobs, so maybe 10k events / job to get back to where the original single threaded jobs were.\r\n\r\nI have scheduled 10k-event tests for Z->qq\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> having to wait a few more seconds/minutes (to be quantified) for a GRID job to finish (which is launched and then not looked at for a while) is probably less impactful than having to wait 3 times longer for the initialization in an \"interactive\" usage for development.\r\n\r\nThat's also a good point, \u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "I ran the 8-thread comparison also with **10 000 events per job**, to check the case of long production jobs. \r\n\r\n| sample | baseline | this PR | difference | time/event, PR vs baseline | peak RSS |\r\n|---|---|---|---|---|---|\r\n| Z->qq | 75.5 min | 74.2 min | -80 s (-1.8 %) | +0.0 \u00b1 0.9 % | 9.0 -> 7.\u2026"
-                },
-                {
-                    "author": "BrieucF",
-                    "body": "> I ran the 8-thread comparison also with **10 000 events per job**, to check the case of long production jobs.\r\n> sample \tbaseline \tthis PR \tdifference \ttime/event, PR vs baseline \tpeak RSS\r\n> Z->qq \t75.5 min \t74.2 min \t-80 s (-1.8 %) \t+0.0 \u00b1 0.9 % \t9.0 -> 7.0 GB\r\n> Z->ee \t69.3 min \t69.1 min \t-15 s\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Thanks for the quick turnaround. I agree with Brieuc. Having less memory consumption should be worth the slight increase in per event processing time."
-                },
-                {
-                    "author": "varnes",
-                    "body": "I am seeing something strange at reco level in my tests.  I've run 1k 10-GeV photons, uniformly distributed in phi (0 to 2pi)  and in theta (5-40 degrees).  Clusters are reconstructed using SW.  Below are plots of the cluster energy vs radial position, for both the current and re-factored geometries\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Thanks a lot @varnes for spotting this! It is a real bug in the PR, not a problem in your tests, and it is fixed in the last commit. For my tests I had only looked at the output of ddsim but not to the output of the reconstruction. \r\n\r\nWith this PR the `active`/`passive` unit cells of each wheel are\u2026"
-                },
-                {
-                    "author": "varnes",
-                    "body": "Hi @giovannimarchiori Thanks, I can confirm that your update does fix the issue:\r\n\r\n<img width=\"633\" height=\"448\" alt=\"image\" src=\"https://github.com/user-attachments/assets/76475955-c4c5-4c87-aa85-6c3d1310ae84\" />"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "If @varnes formally approves the PR I think that we can merge"
-                }
-            ],
-            "comments_total": 19,
-            "reviews": [
-                {
-                    "author": "varnes",
-                    "state": "COMMENTED",
-                    "body": "Hi @giovannimarchiori the memory and startup time reductions are impressive!  However I'm not sure how to weigh this against the 3-8% increase in event processing time.  It seems that jobs with a large number of events and/or high-energy clusters will take longer overall.  Is this a significant conc\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "This looks to be good to go, right? Just for completeness let me also drag @scott-snyder to have all ALLEGRO codeowners be aware of this.\n\nI will let others approve of this officially, but the trade-off discussed (and implemented) here is good from my side."
-                }
-            ],
-            "reviews_total": 3
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4geo",
             "num": 672,
             "title": "[ALLEGRO] add ECal face tracking surfaces with DD4hep CaloFace plugins",
             "url": "https://github.com/key4hep/k4geo/pull/672",
@@ -2110,30 +2655,6 @@
         {
             "org": "key4hep",
             "repo": "EDM4hep",
-            "num": 548,
-            "title": "Add ReconstructionRandomSeed label",
-            "url": "https://github.com/key4hep/EDM4hep/pull/548",
-            "author": "kjvbrt",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Adds a label constant for the random seed used by the reconstruction, to be\nstored as EDM4hep file metadata, in addition to GeneratorRandomSeed and\nSimulationRandomSeed from #543.\n\nBEGINRELEASENOTES\n - Add ReconstructionRandomSeed metadata label.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 3,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "include/edm4hep/Constants.h"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "EDM4hep",
             "num": 549,
             "title": "Avoid assuming 64-bit unsigned long when decoding versions",
             "url": "https://github.com/key4hep/EDM4hep/pull/549",
@@ -2163,142 +2684,6 @@
             "comments_total": 2,
             "reviews": [],
             "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "EDM4hep",
-            "num": 542,
-            "title": "Make the vector utils available in python",
-            "url": "https://github.com/key4hep/EDM4hep/pull/542",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Make sure the *vector utils* are available also in python after `import edm4hep`\r\n- Include the supported data type definitions in dataframe.h so RDF utilities work with the vector utilities loaded.\r\n\r\nENDRELEASENOTES\r\n\r\nSurfaced in https://github.com/key4hep/k4ActsTracking/pull/108 that this is not yet the case.",
-            "diff": {
-                "additions": 272,
-                "deletions": 11,
-                "files": 5
-            },
-            "files": [
-                "python/edm4hep/__init__.py",
-                "test/utils/test_vector_utils.py",
-                "utils/include/edm4hep/utils/dataframe.h",
-                "utils/include/edm4hep/utils/vector_utils.h",
-                "utils/src/dataframe.cc"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Some test that at least it can be imported from python would be good to have"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "Possible fix for CI: https://github.com/key4hep/EDM4hep/pull/544\r\nI think it is not the first time we have issues when loading these headers"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 949,
-            "title": "Replace the library on MARLIN_DLL in k4_local_repo also with LCG views",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/949",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- `k4_local_repo`: replace the library on `MARLIN_DLL` also with LCG views, where the path of a library doesn't contain the package name. Until now the library from the stack was loaded instead of the local one.\r\n\r\nENDRELEASENOTES\r\n\r\nWith the LCG views, `k4_local_repo` doesn't change `MARLIN_DLL`, so a locally built Marlin processor library isn't used. `MARLIN_DLL` contains absolute paths, so it doesn't help that the local library comes first in `LD_LIBRARY_PATH`. The job runs normally with the library from the stack, and the only hint is the general warning about LCG views.\r\n\r\n`_replace_marlin_dll` (#569) finds the library by looking for `/<package>/` in its path. This works for the Spack stacks, but in an LCG view all libraries are in the same directory:\r\n\r\n```\r\nSpack:\u2026",
-            "diff": {
-                "additions": 12,
-                "deletions": 6,
-                "files": 2
-            },
-            "files": [
-                "scripts/cvmfs/setup-nightlies.sh",
-                "scripts/cvmfs/setup-releases.sh"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "This should also go to `setup-releases.sh` where eventually we'll have the same situation."
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "> This should also go to `setup-releases.sh` where eventually we'll have the same situation.\n\nI added the same change to `setup-releases.sh`, so both scripts now have the same function"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 4
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4SimDelphes",
-            "num": 167,
-            "title": "Store generator random seed in output file metadata",
-            "url": "https://github.com/key4hep/k4SimDelphes/pull/167",
-            "author": "kjvbrt",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n - Record GeneratorRandomSeed/SimulationRandomSeed (edm4hep::labels) in the output file metadata.\r\n\r\nENDRELEASENOTES\r\n\r\nStandalone executables (DelphesMain.h) record both: GeneratorRandomSeed\r\nvia the new DelphesInputReader::seed(), and SimulationRandomSeed from\r\nconfReader's ::RandomSeed.\r\n\r\nk4SimDelphesAlg (Gaudi-wrapped) only records SimulationRandomSeed,\r\nsince it only owns Delphes' own card. The generator seed for that path\r\nis recorded separately in key4hep/k4Gen#69 (PythiaInterface).\r\n\r\nThe metadata Frame is now always written (previously only when more\r\nthan one weight name was present).",
-            "diff": {
-                "additions": 24,
-                "deletions": 3,
-                "files": 6
-            },
-            "files": [
-                "framework/k4SimDelphes/src/k4SimDelphesAlg.cpp",
-                "standalone/src/DelphesInputReader.h",
-                "standalone/src/DelphesMain.h",
-                "standalone/src/DelphesPythia8EvtGenReader.h",
-                "standalone/src/DelphesPythia8EvtGenReader_k4Interface.h",
-                "standalone/src/DelphesPythia8Reader.h"
-            ],
-            "comments": [
-                {
-                    "author": "kjvbrt",
-                    "body": "The plan is to store the random seed primarily in the file/edm4hep metadata, but maybe also in the job parameters/attributes in iLCDirac.\r\n\r\nYes, Delphes random seed should be also recorded, pushed first version too quickly.\r\n\r\nCan I add also other delphes+something executables to this PR?"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I suppose storing this in file metadata is one way, but I am not sure if long term all generators expose their random seeds as easily as Pythia does. As far as I am aware there is also no real standardization on the HepMC3 side for example to store the random seed, so I would say that it will probab\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> Can I add also other delphes+something executables to this PR?\r\n\r\nWhat executables are we talking about here? Resp. is this about storing more information from executables or actual executables (i.e. binaries)?"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "CI workflows that are expected to pass, pass."
-                },
-                {
-                    "author": "kjvbrt",
-                    "body": "> > Can I add also other delphes+something executables to this PR?\r\n> \r\n> What executables are we talking about here? Resp. is this about storing more information from executables or actual executables (i.e. binaries)?\r\n\r\nThe other standalone ones, for example this one: `DelphesPythia8EvtGen_EDM4HEP\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Ah, I see. If the changes are related they can go to this PR, otherwise they should go to another one.\r\n\r\nIn principle, all of the generator interfaces should really go to k4gen, I think. Ideally we call k4SimDelphes through Gaudi and have a consistent set of generator interfaces.\r\n\r\nThere is an anc\u2026"
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Do you also store the random seed somewhere else in the production system? I think you might also want to store the Delphes random seed (here and in some production metadata database).\n\nCan you bring back our `{BEGIN,END}RELEASENOTES` tags in the top comment to make this easier to be picked up by th\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "state": "APPROVED",
-                    "body": "Generally looks good to me. I think storing `0` as the default value for the Delphes part is OK, as that would signal that Delphes chose any random number seed. We need to document the (intended) usage of these labels. I will open an issue in EDM4hep for that."
-                }
-            ],
-            "reviews_total": 10
         },
         {
             "org": "key4hep",
@@ -2362,276 +2747,6 @@
             "reviews_total": 0
         },
         {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 146,
-            "title": "Use C++23 in the ACTS master workflow",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/146",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Use C++23 for ACTS master and k4ActsTracking in the ACTS master workflow, as ACTS now requires it to build.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/acts-master-ci.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 142,
-            "title": "add two way to CKFfromSeeds",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/142",
-            "author": "madbaron",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "madbaron",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Update CKFTrackingFromSeedsAlg to support two-way CKF\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 19,
-                "deletions": 7,
-                "files": 1
-            },
-            "files": [
-                "k4ActsTracking/src/components/CKFTrackingFromSeedsAlg.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 35,
-            "title": "Ignore ROOT and LCIO data files by default",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/35",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "@Zehvogel",
-            "diff": {
-                "additions": 4,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "defaults/.gitignore"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "Zehvogel",
-                    "state": "APPROVED",
-                    "body": "LGTM \ud83d\udc4d Thanks!"
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 119,
-            "title": "[TrackFinder] Major CPU-time and memory optimization   ",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/119",
-            "author": "andread3vita",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES                                                                                                     \r\n - GGTFTrackFinder: major CPU-time and memory optimization                                                             \r\n   - Removed the LibTorch dependency entirely: the beta-threshold clustering (find_condpoints, get_clustering)         \r\n     previously implemented with torch::Tensor is reimplemented in plain C++ with squared-distance comparisons, and    \r\n     torch is dropped from the build.                                                                                  \r\n   - Enabled ONNX Runtime graph optimizations (ORT_ENABLE_ALL instead of ORT_DISABLE_ALL) and made intra-op threading configurable via the new property InferenceThreads (default: 1).              \u2026",
-            "diff": {
-                "additions": 363,
-                "deletions": 246,
-                "files": 8
-            },
-            "files": [
-                "CMakeLists.txt",
-                "README.md",
-                "Tracking/CMakeLists.txt",
-                "Tracking/README.md",
-                "Tracking/components/GGTFTrackFinder.cpp",
-                "Tracking/include/utils.h",
-                "Tracking/src/utils.cpp",
-                "Tracking/test/testTrackFinder/runTestTrackFinder.py"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Before checking anything and just to be clear, there is nothing that is being carried over from one event to another right? That is not a good idea because if the results (even if it's a little change due to some initial setup) depend on the ordering then they are basically impossible to reproduce i\u2026"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "> Before checking anything and just to be clear, there is nothing that is being carried over from one event to another right? That is not a good idea because if the results (even if it's a little change due to some initial setup) depend on the ordering then they are basically impossible to reproduce\u2026"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "> > Before checking anything and just to be clear, there is nothing that is being carried over from one event to another right? That is not a good idea because if the results (even if it's a little change due to some initial setup) depend on the ordering then they are basically impossible to reprodu\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I think this is OK as it is. I think more improvements can potentially be done on top of this as follow ups."
-                },
-                {
-                    "author": "k4bench-bot",
-                    "body": "<!-- k4bench-blame-comment:v1 suite=reco window=2026-11-10..2026-11-12 -->\n<!-- k4bench-blame-facts:beba2fa0633655fe -->\n<!-- k4bench-blame-cumulative:v2 eNoViksKgzAQhu8y60zJhBrMstAuvEJFBhN-itRUsSV6_Mbl9-h76u6Pmy5OixUydLRe_ZUxB36lJJ6X9Vf12iqgzxgVKYdzjOMX8_TBGTG-tWRkzbEimdBcrKENZcKOrSpnnWcRloaG4Q_nyy\u2026"
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Do we still have a torch dependency for k4RecTracker after this PR? If not, we should probably also not `find_package` it any longer."
-                }
-            ],
-            "reviews_total": 21
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 125,
-            "title": "Specify CXX for all CMake project calls",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/125",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Add `LANGUAGES CXX` to all subdirectory `project()` calls.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 5,
-                "deletions": 5,
-                "files": 5
-            },
-            "files": [
-                "ARCdigi/CMakeLists.txt",
-                "Tracking/CMakeLists.txt",
-                "VTXdigi/CMakeLists.txt",
-                "VTXdigiDetailed/CMakeLists.txt",
-                "WireTrackerDigi/CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "CLDConfig",
-            "num": 100,
-            "title": "update property names, B-fiels now taken from GeoSvc",
-            "url": "https://github.com/key4hep/CLDConfig/pull/100",
-            "author": "herrmannlena",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "Zehvogel",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Update `ParticleFlow/MLPF.py` to the renamed `PFHitML` properties (`ClusteringModelPath`, `NeutralModelPath`, `ChargedModelPath`), following key4hep/k4PFHitML#7\n- Remove the `bFieldTesla` option; the magnetic field is now taken from the `GeoSvc`\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 3,
-                "deletions": 4,
-                "files": 1
-            },
-            "files": [
-                "CLDConfig/ParticleFlow/MLPF.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4DetectorPerformance",
-            "num": 10,
-            "title": "TrackingValidation: fix truth parameters and matching, align with ACTS",
-            "url": "https://github.com/key4hep/k4DetectorPerformance/pull/10",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n\t\t- TrackingValidation: fix the truth reference parameters and the track-particle matching, and align the matching with the ACTS definitions\r\n\t\t  - Truth z0 is now taken at the closest approach to the beamline (was to the origin, wrong for vertices away from z = 0), and truth d0 is computed in double precision\r\n\t\t  - Truth d0/z0/phi are taken on the helix of the particle's production vertex and momentum at its closest approach to the beamline, so they are also correct for displaced particles. The fitter trees gain `vertexR`/`vertexZ` to select prompt or displaced particles\r\n\t\t  - MC particles are identified by ObjectID, so subset collections such as `MCPhysicsParticles` are handled correctly; reco hits with several contributing particles count for each of them\r\n\t\t  - A t\u2026",
-            "diff": {
-                "additions": 289,
-                "deletions": 223,
-                "files": 7
-            },
-            "files": [
-                "TrackingPerformance/README.md",
-                "TrackingPerformance/include/TrackingValidationHelpers.h",
-                "TrackingPerformance/include/TrackingValidationPlots.h",
-                "TrackingPerformance/src/TrackingValidationHelpers.cpp",
-                "TrackingPerformance/src/TrackingValidationPlots.cpp",
-                "TrackingPerformance/src/components/TrackingValidation.cpp",
-                "TrackingPerformance/test/testTrackingValidation.sh"
-            ],
-            "comments": [
-                {
-                    "author": "andread3vita",
-                    "body": "Hi! Thank you for this PR! Did you check that the the results of the plots are the same as before? I see that you checked the performance, but I wonder if there is any difference wrt before"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "Hi @andread3vita, \r\n\r\nI ran main and this PR with the same options on the CI input and on two more CLD samples (muon gun with the 240 GeV beam spot, Z -> bb at 91 GeV).\r\n\r\nOn the CI input the plots are the same as before. That sample starts every muon exactly at the origin, so it doesn't see the tru\u2026"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "@ArinaPon I tag this PR because it is related to your work"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "How is the review going @andread3vita? Wasn't this supposed to be in the tag?"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "> How is the review going @andread3vita? Wasn't this supposed to be in the tag?\r\n\r\nHi! Yes, I am validating it and for the moment it seems to be everything okay Tomorrow I will finish the review so that you can merge it if everything is okay"
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [
-                {
-                    "author": "andread3vita",
-                    "state": "APPROVED",
-                    "body": "I don't have any comment on the physics, So I think we can merge it"
-                }
-            ],
-            "reviews_total": 5
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4DetectorPerformance",
-            "num": 12,
-            "title": "Enable only C++ in subprojects",
-            "url": "https://github.com/key4hep/k4DetectorPerformance/pull/12",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Specify LANGUAGES CXX in both subprojects to avoid implicitly enabling C and probing for a C compiler.\n\nBEGINRELEASENOTES\n - Avoid unnecessary C compiler detection when configuring the project.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                "RecoMCTruthLinkers/CMakeLists.txt",
-                "TrackingPerformance/CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
             "org": "hep-fcc",
             "repo": "fcc-cvmfs",
             "num": 23,
@@ -2655,438 +2770,6 @@
                 {
                     "author": "github-actions",
                     "body": "<!-- fcc-bundles-validation -->\n### FCC Production Bundles \u2014 validation passed \u2705\n\n\u2705 **`production_bundles/fccconfigcld-2026-04-08-submission.yml`**\n  - OK: FCCConfig_CLD 2026-04-08 vr2025-11-07 (fccconfigcld-r2025-11-07.tgz [local])\n\n_On merge: summaries will be updated and submission files removed.\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 21,
-            "title": "feat: add CLD reconstruction config bundle r2025-11-07",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/21",
-            "author": "davidlange6",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "## Summary\n\n- Introduces `FCCConfig_CLD` production bundle for release `r2025-11-07`, version `1.0`\n- Refactors the production_bundles schema: `category`/`subcategory` replaced by `release` (e.g. `r2025-11-07`) throughout \u2014 submission YAMLs, summary files, and the processing script\n- Summary files are now flat (`production_bundles/summary_<bundle>.yml`); each version entry carries `release` + `version`\n\n## New CVMFS layout (deployed by fcc-cvmfs-publish)\n\n```\n/cvmfs/fcc.cern.ch/production-bundles/<bundle>/<release>/\n  versions/<version>/   \u2190 real files\n  <file>                \u2190 symlink \u2192 versions/<version>/<file>  (latest in release)\n  versions.yaml         \u2190 per-release version index\n```\n\n## Submission\n\n```yaml\nbundle: FCCConfig_CLD\nrelease: r2025-11-07\nversion: \"1.0\"\nsource-location: fcc\u2026",
-            "diff": {
-                "additions": 67,
-                "deletions": 85,
-                "files": 5
-            },
-            "files": [
-                ".github/scripts/process_bundles.py",
-                "production_bundles/README.md",
-                "production_bundles/fccconfigcld-r2025-11-07-submission.yml",
-                "production_bundles/fccconfigcld-r2025-11-07.tgz",
-                "production_bundles/summary_test-bundle.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "<!-- fcc-bundles-validation -->\n### FCC Production Bundles \u2014 validation passed \u2705\n\n\u2705 **`production_bundles/fccconfigcld-r2025-11-07-submission.yml`**\n  - OK: FCCConfig_CLD r2025-11-07 v1.0 (fccconfigcld-r2025-11-07.tgz [local])\n\n_On merge: summaries will be updated and submission files removed._\n\n---\u2026"
-                },
-                {
-                    "author": "kjvbrt",
-                    "body": "Hi, looks good :)\n\nwhat would be the final location of the file?"
-                },
-                {
-                    "author": "davidlange6",
-                    "body": "/cvmfs/fcc.cern.ch/production-bundles/<bundle>/<release>\r\n(then inside that directory are the soft links pointing to versions/<version>). \r\n\r\nI will merge this and create one as a test on cvmfs"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1074,
-            "title": "Add a deprecation warning for c++20 to cmake",
-            "url": "https://github.com/AIDASoft/podio/pull/1074",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Add a deprecation warning for builds using c++20 to cmake\n\nENDRELEASENOTES\n\nSee also #1073",
-            "diff": {
-                "additions": 8,
-                "deletions": 3,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "I will merge this still before the next tag, so that we have warnings in them already."
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1075,
-            "title": "Fix an unused parameter warning when no backend is configured",
-            "url": "https://github.com/AIDASoft/podio/pull/1075",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-10",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Fix an unused parameter warning when no backend is configured\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "src/Writer.cc"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 140,
-            "title": "Remove legacy tracking geos and material maps",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/140",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "The Gen1 based CKF algorithm has been removed previously in 1c10836 * Remove ACTSSeededCKFTrackingAlg (#122)\n\n\nBEGINRELEASENOTES\n- Remove the legacy (ACTS Gen1 geometry based) material maps and tracking geometries.\n\nENDRELEASENOTES\n\nFYI @madbaron, I think this should now be possible, essentially without conseuqences, right?",
-            "diff": {
-                "additions": 1,
-                "deletions": 18,
-                "files": 12
-            },
-            "files": [
-                "data/CMakeLists.txt",
-                "data/MAIA_v0.json.md5",
-                "data/MAIA_v0.root.md5",
-                "data/MAIA_v0_material.json.md5",
-                "data/MuColl_v1.json.md5",
-                "data/MuColl_v1.root.md5",
-                "data/MuSIC_v1.json.md5",
-                "data/MuSIC_v1.root.md5",
-                "data/MuSIC_v2.json.md5",
-                "data/MuSIC_v2.root.md5",
-                "data/material-maps.json.md5",
-                "doc/material_mapping.md"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 20,
-            "title": "Add k4PFHitML (HitPF) ONNX models for CLD",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/20",
-            "author": "davidlange6",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "Replaces #16 (branch was based on the old `fcc_models` layout before the rename to `fcc_data`).\n\nClustering, neutral regression/PID and charged PID models used by the PFHitML algorithm of https://github.com/key4hep/k4PFHitML.\n\nThree ONNX models for CLD o2-v05:\n- `clustering_paper.onnx` \u2014 condensation/clustering model\n- `energy_correction_paper_neutral.onnx` \u2014 energy regression and PID for neutral showers\n- `energy_correction_paper_charged_pid.onnx` \u2014 PID for charged showers\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
-            "diff": {
-                "additions": 26,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "fcc_data/CLD-o2-v05_HitPF.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 19,
-            "title": "test: production_bundles smoke test v1.1 (local tarball workflow)",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/19",
-            "author": "davidlange6",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "## Summary\n\nSecond end-to-end test for the `production_bundles` local-tarball workflow, exercising the fixed history-rewrite step.\n\n- Submits `test-bundle` v1.1 via a local tarball committed into the PR\n- On merge the CI should: validate, create `production_bundles/test/summary_test-bundle.yml`, remove the tarball from the working tree, rewrite history with `git filter-repo`, and force-push\n\n## Expected behaviour on merge\n\n1. `validate_bundles_pr` posts a comment with validation result + tar listing\n2. `process_bundles` bot commit stages the summary update and tarball deletion\n3. History-rewrite step removes `production_bundles/test-bundle-1.1.tar.gz` from all commits\n4. Force-push succeeds (no more \"origin does not appear to be a git repository\" error)\n5. `git log --all -- production_bund\u2026",
-            "diff": {
-                "additions": 8,
-                "deletions": 0,
-                "files": 2
-            },
-            "files": [
-                "production_bundles/test-bundle-1.1.tar.gz",
-                "production_bundles/test-bundle-v2-submission.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "<!-- fcc-bundles-validation -->\n### FCC Production Bundles \u2014 validation passed \u2705\n\n\u2705 **`production_bundles/test-bundle-v2-submission.yml`**\n  - OK: test-bundle v1.1 (test-bundle-1.1.tar.gz [local])\n\n_On merge: summaries will be updated and submission files removed._\n\n---\n\n<details>\n<summary>\ud83d\udce6 test-bu\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 18,
-            "title": "fix: re-add origin remote after git filter-repo removes it",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/18",
-            "author": "davidlange6",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "## Summary\n\n- `git filter-repo` intentionally removes the `origin` remote as a safety guard after rewriting history\n- The force-push step then fails with `fatal: 'origin' does not appear to be a git repository`\n- Fix: capture the authenticated remote URL before the rewrite loop, then re-add `origin` after `git filter-repo` finishes and before the push retry loop\n\n## Test plan\n- [ ] Merge this PR\n- [ ] Submit a new PR with a local tarball to verify the full flow: bot commit + history rewrite + force push all complete successfully\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
-            "diff": {
-                "additions": 3,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/process_bundles.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "fcc-cvmfs",
-            "num": 17,
-            "title": "test: production_bundles smoke test with local tarball",
-            "url": "https://github.com/HEP-FCC/fcc-cvmfs/pull/17",
-            "author": "davidlange6",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "davidlange6",
-            "labels": [],
-            "body": "## Summary\n\n- Exercises the new `process_bundles` workflow end-to-end with a local tarball submission\n- `source-location: test-bundle-1.0.tar.gz` \u2014 bare filename, no `://`\n- Tarball contains: `README.md`, `config.json`, `payload.dat` (1 KiB random bytes)\n\n## What to verify on merge\n\n- [ ] Workflow `Process Production Bundles` runs and passes\n- [ ] GitHub Actions artifact `production-bundles-pr-N` is uploaded containing:\n  - `test-bundle-submission.yml` (with `sha256` and `added` filled in)\n  - `test-bundle-submission.json` sidecar\n  - `listing_test-bundle_1.0.txt` with the `tar -tvf` output\n  - `pr.txt`\n- [ ] `production_bundles/test/summary_test-bundle.yml` is created on `main`\n- [ ] `production_bundles/test-bundle-1.0.tar.gz` is **absent** from the working tree on `main`\n- [ ] `git log -\u2026",
-            "diff": {
-                "additions": 153,
-                "deletions": 0,
-                "files": 4
-            },
-            "files": [
-                ".github/scripts/process_bundles.py",
-                ".github/workflows/validate_bundles_pr.yaml",
-                "production_bundles/test-bundle-1.0.tar.gz",
-                "production_bundles/test-bundle-submission.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "<!-- fcc-bundles-validation -->\n### FCC Production Bundles \u2014 validation passed \u2705\n\n\u2705 **`production_bundles/test-bundle-submission.yml`**\n  - OK: test-bundle v1.0 (test-bundle-1.0.tar.gz [local])\n\n_On merge: summaries will be updated and submission files removed._\n\n---\n\n<details>\n<summary>\ud83d\udce6 test-bundl\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1067,
-            "title": "Fix unaligned reads in MurmurHash3",
-            "url": "https://github.com/AIDASoft/podio/pull/1067",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Fix unaligned reads in all three MurmurHash3 variants. Hash values do not change.\r\n\r\nENDRELEASENOTES\r\n\r\nReplace integer-pointer block reads with `std::memcpy` from byte pointers to fix unaligned reads in all three MurmurHash3 variants (seen with the UB sanitizer in `UT_CollectionIDTable`, maybe Clang 23 is needed):\r\n\r\n```text\r\nruntime error: load of misaligned address ... for type 'const uint32_t'\r\n```",
-            "diff": {
-                "additions": 57,
-                "deletions": 8,
-                "files": 3
-            },
-            "files": [
-                "src/MurmurHash3.cpp",
-                "tests/unittests/CMakeLists.txt",
-                "tests/unittests/murmurhash3.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1070,
-            "title": "Fix race in Frame retrieved collection ID tracking",
-            "url": "https://github.com/AIDASoft/podio/pull/1070",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Fix a data race in Frame relation resolution by synchronizing retrieved collection ID tracking.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 69,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                "include/podio/Frame.h",
-                "tests/unittests/test_arrow_converter.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 2
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1071,
-            "title": "Report ROOT output write failures during finalization",
-            "url": "https://github.com/AIDASoft/podio/pull/1071",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Report ROOT output write failures during finalization instead of silently succeeding, for both TTree and RNTuple writers.\r\n- Add a test that limits the amount of space a file can have and triggers a failure when writing\r\n\r\nENDRELEASENOTES\r\n\r\nFixes #1064.",
-            "diff": {
-                "additions": 83,
-                "deletions": 1,
-                "files": 5
-            },
-            "files": [
-                ".cppcheck-suppressions.txt",
-                "src/RNTupleWriter.cc",
-                "src/ROOTWriter.cc",
-                "tests/root_io/CMakeLists.txt",
-                "tests/root_io/write_error.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 9
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1069,
-            "title": "Lock map-wide GenericParameters operations",
-            "url": "https://github.com/AIDASoft/podio/pull/1069",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Prevent data races in map-wide GenericParameters operations.\n\nENDRELEASENOTES\n\nLock all four per-type mutexes in `GenericParameters::clear()`, `empty()`, and `print()` to prevent data races with concurrent parameter access.",
-            "diff": {
-                "additions": 43,
-                "deletions": 0,
-                "files": 3
-            },
-            "files": [
-                "include/podio/GenericParameters.h",
-                "src/GenericParameters.cc",
-                "tests/unittests/unittest.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 4
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1065,
-            "title": "Bump minimum required fmt version to 10",
-            "url": "https://github.com/AIDASoft/podio/pull/1065",
-            "author": "t-debajyoti",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "Bump the minimum required fmt version in CMakeLists.txt from 9 to 10 since tools/src/podio-dump-tool.cpp uses fmt::println (introduced in fmt 10.0.0).\r\n\r\nBEGINRELEASENOTES\r\n- Bump minimum required fmt version to 10 in CMakeLists.txt\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Mid-term we will switch to require at least c++23 in any case. Hence, we will likely be able to drop `fmt` entirely and switch to `<format>` instead. For now, I would probably rather bump the minimal version of `fmt` that is required."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "The Key4hep stacks are ready for that, maybe other people could be asked, many things could be used from C++23"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Opened #1073 to keep track of things and to solicit feedback"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Please keep the *BEGINRELEASENOTES* and *ENDRELEASENOTES* tags in the first message of this PR with a short description of the changes [as per our contribution guidelines](https://github.com/AIDASoft/podio?tab=contributing-ov-file)."
-                },
-                {
-                    "author": "t-debajyoti",
-                    "body": "@tmadlener I have updated the description with the release notes tags."
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1066,
-            "title": "chore: Streamline and simplify CI workflow configuration",
-            "url": "https://github.com/AIDASoft/podio/pull/1066",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-09",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Simplify CMake prests.\r\n- Introduce one common action that is used by most workflows\r\n\r\nENDRELEASENOTES\r\n\r\nThis is largely me bing annoyed having to maintain the same thing 5 times, so I made Claude lift everything into one re-usable action and rewrite the workflows in terms of it. Also get's rid of some of the implicit configuration of certain options based on view path name, and rather makes things explicit via action arguments / matrix values.\r\n\r\nAdditionally, bundles required checks into one specific job, which makes it easier to keep them up to date without having to go to github settings whenever a workflow only changes slightly (plus makes these changes tracked via git)\r\n\r\nThis will need some further review, but opening the PR makes it a bit easier to test the w\u2026",
-            "diff": {
-                "additions": 410,
-                "deletions": 377,
-                "files": 15
-            },
-            "files": [
-                ".github/actions/podio-build/action.yml",
-                ".github/dependabot.yml",
-                ".github/workflows/downstream.yml",
-                ".github/workflows/edm4eic.yml",
-                ".github/workflows/edm4hep.yaml",
-                ".github/workflows/key4hep.yml",
-                ".github/workflows/lcg.yml",
-                ".github/workflows/pre-commit.yml",
-                ".github/workflows/publish-docs.yml",
-                ".github/workflows/sanitizers.yaml",
-                ".github/workflows/test.yml",
-                ".github/workflows/ubuntu.yml",
-                "CMakePresets.json",
-                "README.md",
-                "tests/tsan_suppressions.txt"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Merging this because it makes it easier for me to play with a few things centrally to see if we can get merge queues into a workable state."
                 }
             ],
             "comments_total": 1,
