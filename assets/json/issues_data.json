@@ -1526,7 +1526,7 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/issues/457'>Should provenance from a previous processing step be preserved by a subsequent one</a>",
             "author": "davidlange6",
             "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
             "labels": "",
             "assignees": ""
         },
@@ -2166,7 +2166,7 @@
             "title": "<a href='https://github.com/key4hep/k4Gen/issues/71'>`ConstPtParticleGun` writes an inconsistent HepMC3 file, and Delphes reads 0 events</a>",
             "author": "jacofan",
             "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-16",
+            "updatedAt": "2026-11-18",
             "labels": "bug",
             "assignees": ""
         },
@@ -2266,7 +2266,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/issues/297'>Validation of CreateTruthLinks vs RecoMCTruthLinker</a>",
             "author": "dudarboh",
             "createdAt": "2026-11-12",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
             "labels": "",
             "assignees": ""
         },
@@ -2356,7 +2356,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/158'>Merge order of the open CLD tracking PRs and when to regenerate the material maps</a>",
             "author": "jbeirer",
             "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-16",
+            "updatedAt": "2026-11-18",
             "labels": "",
             "assignees": ""
         },
@@ -4642,6 +4642,16 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
+            "num": 413,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/413'>Autumn2026: Software needs remaining for generators</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-11-12",
+            "updatedAt": "2026-11-18",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
             "num": 412,
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/412'>Autumn2026: Software needs remaining for Delphes productions</a>",
             "author": "davidlange6",
@@ -4667,16 +4677,6 @@
             "author": "kjvbrt",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-11-13",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 413,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/413'>Autumn2026: Software needs remaining for generators</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-11-12",
-            "updatedAt": "2026-11-12",
             "labels": "",
             "assignees": ""
         },
@@ -5188,16 +5188,6 @@
             "createdAt": "2026-10-30",
             "updatedAt": "2026-11-11",
             "labels": "enhancement",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1725,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1725'>heap-use-after-free: Geant4Kernel destroys phases regardless of reference count</a>",
-            "author": "wdconinc",
-            "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-16",
-            "labels": "bug",
             "assignees": ""
         },
         {
