@@ -2,21 +2,21 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 684,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/684'>Require DD4hep 1.39</a>",
+            "num": 689,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/689'>Do not export file-local helpers in detector constructors</a>",
             "author": "jmcarcell",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-17",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 689,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/689'>Do not export file-local helpers in detector constructors</a>",
+            "num": 684,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/684'>Require DD4hep 1.39</a>",
             "author": "jmcarcell",
-            "createdAt": "2026-11-16",
+            "createdAt": "2026-11-10",
             "updatedAt": "2026-11-17",
             "mergeOk": "yes",
             "labels": "",
@@ -160,7 +160,7 @@
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/540'>Add a Helix class to the utils</a>",
             "author": "jmcarcell",
             "createdAt": "2026-10-30",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -250,6 +250,17 @@
             "createdAt": "2022-08-08",
             "updatedAt": "2026-05-23",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 458,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/458'>Add IOSvc.CopyInputCategories to copy forward provenance information</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-11-18",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -424,7 +435,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/178'>Use an unnamed namespace for file-local helpers</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -435,7 +446,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/179'>Fix/mc mother daughter relations</a>",
             "author": "davidlange6",
             "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -541,22 +552,33 @@
         },
         {
             "repo": "key4hep/<br>k4RecCalorimeter",
-            "num": 304,
-            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/304'>Use unnamed namespaces for file-local helpers in the RecCaloCommon tests</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-17",
+            "num": 293,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/293'>Optionally recentre SW position window, optionally correct per-layer barycentres for S-curve</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4RecCalorimeter",
-            "num": 293,
-            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/293'>Optionally recentre SW position window, optionally correct per-layer barycentres for S-curve</a>",
-            "author": "giovannimarchiori",
+            "num": 294,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/294'>move duplicated in memory trappist onnx models to shared service</a>",
+            "author": "davidlange6",
             "createdAt": "2026-10-23",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 304,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/304'>Use unnamed namespaces for file-local helpers in the RecCaloCommon tests</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -612,17 +634,6 @@
             "author": "dudarboh",
             "createdAt": "2026-11-16",
             "updatedAt": "2026-11-16",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecCalorimeter",
-            "num": 294,
-            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/294'>move duplicated in memory trappist onnx models to shared service</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-11-13",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -699,7 +710,73 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/159'>Use unnamed namespaces for file-local helpers</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 153,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/153'>ACTSDuplicateRemoval: never keep two equal tracks</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 151,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/151'>Build sensor surfaces on the silicon, not on the module</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 152,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/152'>Include material in the CKF extrapolation to the IP</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 144,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/144'>Attach endcap layer gaps towards the IP on both sides</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-10",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 154,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/154'>Give CLD's first outer-tracker barrel layer its own material receiver</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-13",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 143,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/143'>Add material designation and a material map for CLD</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-11-10",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -708,17 +785,6 @@
             "repo": "key4hep/<br>k4ActsTracking",
             "num": 156,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/156'>Add GreedyAmbiguityResolutionAlg</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-17",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 155,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/155'>CKF: optional ACTS TrackSelector on the output tracks</a>",
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-17",
@@ -739,74 +805,8 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 154,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/154'>Give CLD's first outer-tracker barrel layer its own material receiver</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 143,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/143'>Add material designation and a material map for CLD</a>",
-            "author": "Zehvogel",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
             "num": 147,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/147'>Use ACTS' versioned JSON material format</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 153,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/153'>ACTSDuplicateRemoval: never keep two equal tracks</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 152,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/152'>Include material in the CKF extrapolation to the IP</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 151,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/151'>Build sensor surfaces on the silicon, not on the module</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 144,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/144'>Attach endcap layer gaps towards the IP on both sides</a>",
             "author": "jbeirer",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-13",
@@ -860,11 +860,11 @@
         },
         {
             "repo": "key4hep/<br>key4hep-dev-utils",
-            "num": 41,
-            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/41'>Restore Latest in the shared clang-format config</a>",
+            "num": 43,
+            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/43'>Require the AlmaLinux 10 nightly build</a>",
             "author": "jmcarcell",
-            "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-17",
+            "createdAt": "2026-11-18",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -904,17 +904,6 @@
         },
         {
             "repo": "key4hep/<br>key4hep-actions",
-            "num": 64,
-            "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/64'>Log minimal git info for downstream packages</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-16",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-actions",
             "num": 33,
             "title": "<a href='https://github.com/key4hep/key4hep-actions/pull/33'>Add workflows and an example for making plots appear after a PR</a>",
             "author": "jmcarcell",
@@ -948,11 +937,11 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 127,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/127'>Use an unnamed namespace for the MeanExcEnergy_get helpers</a>",
+            "num": 129,
+            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/129'>Use the EDM4hep Helix utility</a>",
             "author": "jmcarcell",
-            "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-17",
+            "createdAt": "2026-11-18",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -970,23 +959,12 @@
         },
         {
             "repo": "key4hep/<br>k4RecTracker",
-            "num": 121,
-            "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/121'>TracksFromGenParticles: support truth tracks without SimTrackerHit input</a>",
-            "author": "qwert2333",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-17",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": "SanghyunKo"
-        },
-        {
-            "repo": "key4hep/<br>k4RecTracker",
             "num": 123,
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/123'>Adding CombinatorialTrackFinder(CTF): A detector-agnostic track finder based on combinatorial search and seed-and-extend strategies</a>",
             "author": "mahmoudali2",
             "createdAt": "2026-11-05",
             "updatedAt": "2026-11-17",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": "SanghyunKo"
         },
@@ -1234,11 +1212,11 @@
         },
         {
             "repo": "key4hep/<br>k4Reco",
-            "num": 78,
-            "title": "<a href='https://github.com/key4hep/k4Reco/pull/78'>Use unnamed namespaces for file-local helpers</a>",
+            "num": 79,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/79'>Use the EDM4hep Helix utility</a>",
             "author": "jmcarcell",
-            "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-17",
+            "createdAt": "2026-11-18",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1289,23 +1267,12 @@
         },
         {
             "repo": "key4hep/<br>k4GeneratorsConfig",
-            "num": 97,
-            "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/pull/97'>Use unnamed namespaces for file-local helpers</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-17",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4GeneratorsConfig",
             "num": 85,
             "title": "<a href='https://github.com/key4hep/k4GeneratorsConfig/pull/85'>Herwig</a>",
             "author": "dirkzerwas",
             "createdAt": "2026-06-09",
             "updatedAt": "2026-07-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1366,6 +1333,17 @@
         },
         {
             "repo": "key4hep/<br>k4GaudiPandora",
+            "num": 66,
+            "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/66'>Use the EDM4hep Helix utility</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-18",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4GaudiPandora",
             "num": 65,
             "title": "<a href='https://github.com/key4hep/k4GaudiPandora/pull/65'>Use an unnamed namespace for a file-local helper</a>",
             "author": "jmcarcell",
@@ -1405,6 +1383,17 @@
             "createdAt": "2026-05-06",
             "updatedAt": "2026-09-29",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4PFHitML",
+            "num": 12,
+            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/12'>Skip test model downloads when tests are disabled</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-18",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1493,6 +1482,28 @@
             "createdAt": "2026-03-10",
             "updatedAt": "2026-03-10",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4DetectorPerformance",
+            "num": 14,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/14'>Skip tracking validation test data when tests are disabled</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-18",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4DetectorPerformance",
+            "num": 13,
+            "title": "<a href='https://github.com/key4hep/k4DetectorPerformance/pull/13'>Use the EDM4hep Helix utility</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-18",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1601,7 +1612,7 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/209'>Improve FCCAnalyses introduction and rework Higgs analysis</a>",
             "author": "bndikt",
             "createdAt": "2026-10-05",
-            "updatedAt": "2026-11-13",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1690,6 +1701,17 @@
             "author": "apausa",
             "createdAt": "2026-09-29",
             "updatedAt": "2026-10-01",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCDIRAC",
+            "num": 27,
+            "title": "<a href='https://github.com/HEP-FCC/FCCDIRAC/pull/27'>Add the KKMC LFV submission config for productions 17200 and 17201</a>",
+            "author": "pkontaxa",
+            "createdAt": "2026-11-18",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1850,33 +1872,11 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 582,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/582'>Use unnamed namespaces for file-local globals and helpers</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-17",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 557,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
             "author": "bndikt",
             "createdAt": "2026-09-16",
-            "updatedAt": "2026-11-17",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 576,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/576'>Fix event counting for RNTuple inputs</a>",
-            "author": "bndikt",
-            "createdAt": "2026-11-02",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1887,7 +1887,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/538'>feat: add DIRAC grid submission support</a>",
             "author": "bndikt",
             "createdAt": "2026-08-11",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1898,7 +1898,18 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/580'>Multi-plotter toolbox</a>",
             "author": "forthommel",
             "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-16",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 582,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/582'>Use unnamed namespaces for file-local globals and helpers</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-17",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1976,7 +1987,7 @@
             "author": "amishgog",
             "createdAt": "2026-10-13",
             "updatedAt": "2026-10-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1987,7 +1998,7 @@
             "author": "captainvogon",
             "createdAt": "2026-06-25",
             "updatedAt": "2026-09-26",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2195,7 +2206,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/420'>[ALLEGRO] Set truth tracks minimum momentum</a>",
             "author": "jacofan",
             "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2274,6 +2285,17 @@
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-12",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>ALLEGRO",
+            "num": 67,
+            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/67'>write_calibration_xml.py: add --outdir and --no-update options</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-11-18",
+            "updatedAt": "2026-11-18",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2438,7 +2460,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2460,7 +2482,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2470,7 +2492,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1672'>Add cvmfs/LCG-based macOS workflow</a>",
             "author": "wdconinc",
             "createdAt": "2026-09-06",
-            "updatedAt": "2026-11-16",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2482,18 +2504,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1717,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1717'>Input sources consolidation</a>",
-            "author": "andresailer",
-            "createdAt": "2026-11-11",
-            "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2504,7 +2515,7 @@
             "author": "andresailer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2521,33 +2532,11 @@
         },
         {
             "repo": "AIDASoft/<br>DD4hep",
-            "num": 1724,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1724'>fix(env): set LD_LIBRARY_PATH also on macOS</a>",
-            "author": "wdconinc",
-            "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-14",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
-            "num": 1726,
-            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1726'>fix(DDG4): release phases to prevent dangling references</a>",
-            "author": "wdconinc",
-            "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-16",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>DD4hep",
             "num": 1727,
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1727'>build(deps): bump cvmfs-contrib/github-action-cvmfs from 5.6 to 5.7</a>",
             "author": "dependabot",
             "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "dependencies \ngithub_actions",
             "assignees": ""
@@ -2603,7 +2592,7 @@
             "author": "tmadlener",
             "createdAt": "2025-10-08",
             "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2625,7 +2614,7 @@
             "author": "wdconinc",
             "createdAt": "2025-12-20",
             "updatedAt": "2026-11-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2680,7 +2669,7 @@
             "author": "tmadlener",
             "createdAt": "2026-02-24",
             "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2724,7 +2713,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2746,7 +2735,7 @@
             "author": "veprbl",
             "createdAt": "2026-09-04",
             "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2779,7 +2768,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-17",
             "updatedAt": "2026-11-17",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
