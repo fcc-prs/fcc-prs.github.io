@@ -1,20 +1,57 @@
 {
-  "updated_at": "2026-11-19T08:34:12Z",
-  "period_start": "2026-11-12",
-  "period_end": "2026-11-19",
-  "summary": [],
-  "omitted": [],
+  "updated_at": "2026-11-20T08:17:10Z",
+  "period_start": "2026-11-13",
+  "period_end": "2026-11-20",
+  "summary": [
+    "- **[hep-fcc/FCCAnalyses#565](https://github.com/HEP-FCC/FCCAnalyses/pull/565)** — get_V0s_jet and get_SV_jets build each jet's V0s and secondary vertices from that jet's own tracks, which changes per-jet vertexing outputs for all analyses using them.",
+    "- **[hep-fcc/FCCAnalyses#569](https://github.com/HEP-FCC/FCCAnalyses/pull/569)** — get_PrimaryTracks keeps all tracks compatible with the primary vertex, and beam-spot-constrained VertexFitter_Tk fits use 2N degrees of freedom, which rescales the vertex chi2 values in affected analyses.",
+    "- **[key4hep/k4geo#683](https://github.com/key4hep/k4geo/pull/683)** — Magnetic field set to zero outside the muon systems of ALLEGRO, IDEA, CLD_o2_v09 and CLD_o5_v01, which stops escaping particles from curling back into the simulated detector.",
+    "- **[key4hep/k4RecTracker#128](https://github.com/key4hep/k4RecTracker/pull/128)** — GGTFTrackFinder identifies input hit collections by their position in the input list instead of unassigned CollectionIDs, fixing crashes and wrong hit-to-track assignments in ALLEGRO and IDEA reconstruction.",
+    "- **[key4hep/k4SimDelphes#172](https://github.com/key4hep/k4SimDelphes/pull/172)** — k4SimDelphesAlg converts EDM4hep MCParticle production times from ns to mm/c before passing them to Delphes, correcting particle, track and calorimeter timing in Gaudi-based runs.",
+    "- **[key4hep/k4SimDelphes#171](https://github.com/key4hep/k4SimDelphes/pull/171)** — k4SimDelphesAlg fills the RecoMCLink collection, linking reconstructed particles to the input GenParticles, so reco-MC truth matching works in the Gaudi-based Delphes workflow.",
+    "- **[key4hep/k4FWCore#447](https://github.com/key4hep/k4FWCore/pull/447)** — OverlayTiming adds background contribution energies when merging SimCalorimeterHits and keeps a whole hit if any contribution falls in the time window, which changes overlaid calorimeter energies.",
+    "- **[AIDASoft/podio#1082](https://github.com/AIDASoft/podio/pull/1082)** — RNTupleReader reads only the requested collections and caches per-file views, making RNTuple reading about five times faster and skipping collections whose fields cannot be bound.",
+    "- **[AIDASoft/DD4hep#1717](https://github.com/AIDASoft/DD4hep/pull/1717)** — Geant4InputHandling uses the start vertex of the first accepted primary particle as the event origin, fixing HepMC3 particle-gun inputs and reverting unreleased changes that broke other inputs.",
+    "- **[key4hep/k4ActsTracking#152](https://github.com/key4hep/k4ActsTracking/pull/152)** — CKF extrapolation to the IP includes material effects such as beam-pipe multiple scattering, correcting underestimated d0/z0 uncertainties of low-momentum tracks in CLD reconstruction."
+  ],
+  "omitted": [
+    {
+      "pr": "key4hep/k4geo#692",
+      "url": "https://github.com/key4hep/k4geo/pull/692",
+      "reason": "Moves file-local helpers in several detector constructors into unnamed namespaces and removes unused variables; code cleanup."
+    },
+    {
+      "pr": "key4hep/k4geo#689",
+      "url": "https://github.com/key4hep/k4geo/pull/689",
+      "reason": "Earlier version of the same unnamed-namespace cleanup of detector constructors, reopened as #692."
+    },
+    {
+      "pr": "key4hep/k4geo#691",
+      "url": "https://github.com/key4hep/k4geo/pull/691",
+      "reason": "Dependabot bump of github-action-cvmfs to 5.7."
+    },
+    {
+      "pr": "key4hep/key4hep-doc#178",
+      "url": "https://github.com/key4hep/key4hep-doc/pull/178",
+      "reason": "Dependabot bump of github-action-cvmfs to 5.7."
+    },
+    {
+      "pr": "key4hep/k4SimDelphes#168",
+      "url": "https://github.com/key4hep/k4SimDelphes/pull/168",
+      "reason": "Requires pod"
+    }
+  ],
   "usage": {
     "cache_creation": "CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0)",
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "inference_geo": "us",
-    "input_tokens": 53440,
-    "output_tokens": 10,
+    "input_tokens": 60029,
+    "output_tokens": 5,
     "output_tokens_details": null,
     "server_tool_use": null,
     "service_tier": "standard",
     "speed": "standard"
   },
-  "cost_usd": 0.21396
+  "cost_usd": 0.240216
 }
