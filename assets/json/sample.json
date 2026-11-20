@@ -673,6 +673,17 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 167,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/167'>Optional mini-doublet requirement for seeding on double layers</a>",
+            "author": "jburzy",
+            "createdAt": "2026-11-19",
+            "updatedAt": "2026-11-19",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 163,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/163'>Seeding space point variance fixes</a>",
             "author": "jburzy",
@@ -1861,17 +1872,6 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 583,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/583'>Add installation of systemd runtime library in CI</a>",
-            "author": "bndikt",
-            "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 557,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
             "author": "bndikt",
@@ -2053,7 +2053,7 @@
             "author": "forthommel",
             "createdAt": "2026-05-10",
             "updatedAt": "2026-05-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2075,7 +2075,7 @@
             "author": "thisismeamir",
             "createdAt": "2025-12-10",
             "updatedAt": "2026-02-17",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2257,6 +2257,17 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-drs",
+            "num": 140,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/140'>Update postgres Docker tag to v19</a>",
+            "author": "renovate",
+            "createdAt": "2026-11-20",
+            "updatedAt": "2026-11-20",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
             "num": 132,
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/132'>Update dependency marked to v18.2.1</a>",
             "author": "renovate",
@@ -2416,7 +2427,7 @@
             "author": "wdconinc",
             "createdAt": "2026-04-30",
             "updatedAt": "2026-10-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2438,7 +2449,7 @@
             "author": "wdconinc",
             "createdAt": "2026-08-24",
             "updatedAt": "2026-09-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2460,7 +2471,7 @@
             "author": "andresailer",
             "createdAt": "2026-09-21",
             "updatedAt": "2026-09-23",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2471,7 +2482,7 @@
             "author": "andresailer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2482,7 +2493,7 @@
             "author": "wdconinc",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-13",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2493,7 +2504,7 @@
             "author": "dependabot",
             "createdAt": "2026-11-17",
             "updatedAt": "2026-11-18",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "dependencies \ngithub_actions",
             "assignees": ""
         },
@@ -2726,6 +2737,28 @@
             "updatedAt": "2026-11-17",
             "mergeOk": "yes",
             "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1086,
+            "title": "<a href='https://github.com/AIDASoft/podio/pull/1086'>Bump cvmfs-contrib/github-action-cvmfs from 5.6 to 5.7</a>",
+            "author": "dependabot",
+            "createdAt": "2026-11-20",
+            "updatedAt": "2026-11-20",
+            "mergeOk": "yes",
+            "labels": "dependencies \ngithub_actions",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1087,
+            "title": "<a href='https://github.com/AIDASoft/podio/pull/1087'>Bump cvmfs-contrib/github-action-cvmfs from 5.6 to 5.7 in /.github/actions/podio-build</a>",
+            "author": "dependabot",
+            "createdAt": "2026-11-20",
+            "updatedAt": "2026-11-20",
+            "mergeOk": "yes",
+            "labels": "dependencies \ngithub_actions",
             "assignees": ""
         },
         {
