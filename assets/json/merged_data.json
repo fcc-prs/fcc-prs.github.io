@@ -1,6 +1,60 @@
 {
-    "updated_at": "2026-11-20T14:46:04Z",
+    "updated_at": "2026-11-21T14:01:43Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 553,
+            "title": "Build deployed documentation without internals",
+            "url": "https://github.com/key4hep/EDM4hep/pull/553",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-21",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Turn off the documentation of the podio internals for the version that gets deployed\n\nENDRELEASENOTES\n\nFor actual effect this will need https://github.com/AIDASoft/podio/pull/1080. Nothing will break if things are merged before, but it makes sense to keep this open until details have settled there.",
+            "diff": {
+                "additions": 14,
+                "deletions": 3,
+                "files": 4
+            },
+            "files": [
+                "CMakeLists.txt",
+                "cmake/EDM4HEPDoxygen.cmake",
+                "doc/Doxyfile.in",
+                "doc/DoxygenLayout.xml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 954,
+            "title": "Bump endersonmenezes/free-disk-space from 4.0.1 to 4.0.2",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/954",
+            "author": "dependabot",
+            "mergedAt": "2026-11-21",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [endersonmenezes/free-disk-space](https://github.com/endersonmenezes/free-disk-space) from 4.0.1 to 4.0.2.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/endersonmenezes/free-disk-space/releases\">endersonmenezes/free-disk-space's releases</a>.</em></p>\n<blockquote>\n<h2>v4.0.2</h2>\n<p><strong>Fixed:</strong></p>\n<ul>\n<li>\ud83d\udc1b Prevent <code>remove_folders</code> from deleting the active GitHub Actions Node.js runtime when cached externals resolve under <code>/opt/runner-cache</code>; skip overlapping paths with a warning in <code>rm</code>, <code>rmz</code>, and testing modes</li>\n</ul>\n<p><strong>CI/CD Improvements:</strong></p>\n<ul>\n<li>\ud83e\uddea Add isolated runner-runtime regression coverage for parent, nested, root, and unrelated paths across <code\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/docker-build-push-template.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "k4geo",
@@ -52,9 +106,13 @@
                 {
                     "author": "tmadlener",
                     "body": "Last call for objections ;) I will merge this later today otherwise."
+                },
+                {
+                    "author": "Zehvogel",
+                    "body": "\"I\" tried to use this locally, and it looks like the compensating solenoids are just silently ignored by dd4hep, as we miss the surrounding\r\n```xml\r\n<fields>\r\n...\r\n</fields>\r\n```\r\ntags here. :("
                 }
             ],
-            "comments_total": 7,
+            "comments_total": 8,
             "reviews": [
                 {
                     "author": "tmadlener",
@@ -73,6 +131,30 @@
                 }
             ],
             "reviews_total": 8
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 953,
+            "title": "Recognize Pop!_OS 26.04 in the nightly setup",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/953",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-20",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Similar as for Ubuntu 24",
+            "diff": {
+                "additions": 2,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "scripts/cvmfs/setup-nightlies.sh"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -139,6 +221,38 @@
                 }
             ],
             "reviews_total": 11
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 171,
+            "title": "Adapt to the ACTS single-actor propagator API",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/171",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-20",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Use the single-actor propagator API. k4ActsTracking now requires an ACTS version that includes acts-project/acts#6410.\n\nENDRELEASENOTES\n\nacts-project/acts#6410 caused the `actorList`, `EndOfWorldReached` and `result_type` build errors in [ACTS main CI](https://github.com/key4hep/k4ActsTracking/actions/runs/44748967118/job/136331543404). Use `DefaultActor` for the standard stop conditions and read collector output from the propagator state.\n\nThe separate legacy material JSON deprecation warnings are tracked in #147.",
+            "diff": {
+                "additions": 23,
+                "deletions": 37,
+                "files": 4
+            },
+            "files": [
+                "k4ActsTracking/include/k4ActsTracking/CKFRunner.hxx",
+                "k4ActsTracking/src/components/ActsTestPropagator.cpp",
+                "k4ActsTracking/src/components/GeantinoMaterialAssigner.h",
+                "k4ActsTracking/src/components/Helpers.cxx"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "I'll merge this soon or there will not be nightlies until this is fixed"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -220,6 +334,30 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4PFHitML",
+            "num": 12,
+            "title": "Skip test model downloads when tests are disabled",
+            "url": "https://github.com/key4hep/k4PFHitML/pull/12",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-20",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Skip downloading the `test_PerformHitPF` models when `BUILD_TESTING=OFF`.\n\nENDRELEASENOTES\n\nIt can make builds fail like in [LCG devkey build 67398](https://cdash.cern.ch/builds/67398/files/9047) (with tests disabled) so it should only be downloaded when needed.",
+            "diff": {
+                "additions": 16,
+                "deletions": 16,
+                "files": 1
+            },
+            "files": [
+                "k4PF-HitML/CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -322,6 +460,89 @@
             },
             "files": [
                 "docs/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 134,
+            "title": "build(deps): bump library/python from 3.13-slim to 3.15-slim in /dashboard",
+            "url": "https://github.com/key4hep/k4Opt/pull/134",
+            "author": "dependabot",
+            "mergedAt": "2026-11-20",
+            "mergedBy": "jbeirer",
+            "labels": [
+                "dependencies",
+                "docker"
+            ],
+            "body": "Bumps library/python from 3.13-slim to 3.15-slim.\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=library/python&package-manager=docker&previous-version=3.13-slim&new-version=3.15-slim)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase \u2026",
+            "diff": {
+                "additions": 32,
+                "deletions": 5,
+                "files": 4
+            },
+            "files": [
+                ".github/workflows/ci.yml",
+                "dashboard/Dockerfile",
+                "docs/dashboard.md",
+                "tests/unit/test_deployment.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Opt",
+            "num": 143,
+            "title": "Propose a study's candidates with a strategy of one's own",
+            "url": "https://github.com/key4hep/k4Opt/pull/143",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-20",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Step 2 of the project direction: a physicist can propose a study's candidates with a Python class of their own (a hand-written rule, a SciPy or BO wrapper, an LLM-driven agent they write), while k4Opt keeps validating, executing, recording, resuming and reading back. It also fixes #142's deferred P2: a strategy is now made again from the ledger in the order things happened, not by trial number.\n\n## What a user writes\n\n```python\nclass MyStrategy:\n    def __init__(self, study: StudyContext, *, step: float = 0.25): ...  # settings by name\n    def propose(self, trial): ...            # decide: Proposal | WAITING | EXHAUSTED\n    def proposed(self, trial, proposal): ...  # remember what the ledger kept\n    def tell(self, trial, feedback): ...      # learn how a trial ended\n```\n\n```bash\nk4opt opt\u2026",
+            "diff": {
+                "additions": 3718,
+                "deletions": 978,
+                "files": 48
+            },
+            "files": [
+                "dashboard/tables.py",
+                "docs/evaluation.md",
+                "docs/optimization.md",
+                "docs/software.md",
+                "examples/strategies/compass.py",
+                "examples/strategies/compass.yaml",
+                "k4opt/_imports.py",
+                "k4opt/credentials.py",
+                "k4opt/errors.py",
+                "k4opt/evaluation/__init__.py",
+                "k4opt/evaluation/loader.py",
+                "k4opt/execution/_baseline.py",
+                "k4opt/execution/_binding.py",
+                "k4opt/execution/_worker.py",
+                "k4opt/optimization/__init__.py",
+                "k4opt/optimization/_custom.py",
+                "k4opt/optimization/_grid.py",
+                "k4opt/optimization/_keep.py",
+                "k4opt/optimization/_ledger.py",
+                "k4opt/optimization/_optuna.py",
+                "k4opt/optimization/_proposal.py",
+                "k4opt/optimization/_render.py",
+                "k4opt/optimization/_results.py",
+                "k4opt/optimization/_run.py",
+                "k4opt/optimization/_strategy.py",
+                "k4opt/optimization/_tree.py",
+                "k4opt/optimization/_trials.py",
+                "k4opt/optimization/cli.py",
+                "k4opt/publication/artifacts.py",
+                "k4opt/publication/exposure.py"
             ],
             "comments": [],
             "comments_total": 0,
@@ -3097,34 +3318,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-spack",
-            "num": 951,
-            "title": "Bump docker/login-action from 4.7.0 to 4.8.0",
-            "url": "https://github.com/key4hep/key4hep-spack/pull/951",
-            "author": "dependabot",
-            "mergedAt": "2026-11-14",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [docker/login-action](https://github.com/docker/login-action) from 4.7.0 to 4.8.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/docker/login-action/releases\">docker/login-action's releases</a>.</em></p>\n<blockquote>\n<h2>v4.8.0</h2>\n<ul>\n<li>Set Docker Hub OIDC token lifetime default to 1 hour by <a href=\"https://github.com/crazy-max\"><code>@\u200bcrazy-max</code></a> in <a href=\"https://redirect.github.com/docker/login-action/pull/1070\">docker/login-action#1070</a></li>\n<li>Bump <code>@\u200baws-sdk/client-ecr</code> and <code>@\u200baws-sdk/client-ecr-public</code> to 3.1161.0 in <a href=\"https://redirect.github.com/docker/login-action/pull/1103\">docker/login-action#1103</a></li>\n<li>Bump <code>@\u200bdocker/actions-toolkit</code> from 0.107.0 to 0.109.0 in\u2026",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                ".github/workflows/docker-build-push-template.yaml",
-                ".github/workflows/image-template.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "k4Opt",
             "num": 139,
             "title": "build(deps): bump pandas from 3.1.0 to 3.1.1 in /dashboard",
@@ -3306,260 +3499,6 @@
             },
             "files": [
                 "dashboard/requirements.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "ALLEGRO",
-            "num": 66,
-            "title": "noise_map.py: configure cell indexer service needed by noise tools",
-            "url": "https://github.com/HEP-FCC/ALLEGRO/pull/66",
-            "author": "giovannimarchiori",
-            "mergedAt": "2026-11-14",
-            "mergedBy": "giovannimarchiori",
-            "labels": [],
-            "body": "Since https://github.com/key4hep/k4RecCalorimeter/pull/295 the tools that read the noise from file (NoiseCaloCellsFromFile*Tool) get the cell indices from k4::recCalo::CaloCellIndexerSvc. Without it, the noise map fails with \"Cannot find indexer for detID 4\". Configure the service with the geometry tools of the selected calorimeters, as in the ALLEGRO reconstruction of FCC-config.\n\nThe noise maps are identical to those produced before.",
-            "diff": {
-                "additions": 28,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "noise_maps/noise_map.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "DDML",
-            "num": 22,
-            "title": "Make it possible to run inference on models that cannot be exported ",
-            "url": "https://github.com/key4hep/DDML/pull/22",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-13",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Add a `EmbeddedPyInference` inference interface that allows to run model inference directly through an embedded python interpreter for ML models that cannot be exported to be loaded via ONNXruntime or Torch\n\nENDRELEASENOTES\n\n- [x] Includes #17 \n- [x] Includes #18 \n- [x] Includes #19 \n- [x] Includes #20 \n- [x] Documentation\n- [ ] Validation of results with CC3",
-            "diff": {
-                "additions": 765,
-                "deletions": 55,
-                "files": 13
-            },
-            "files": [
-                "CMakeLists.txt",
-                "README.md",
-                "doc/add_new_model.md",
-                "doc/embedded_python_inference.md",
-                "include/DDML/EmbeddedPyInference.h",
-                "python/ddml/configs.py",
-                "python/ddml/setup_physics.py",
-                "python/examples/cc3_sf_2a_wrapper.py",
-                "src/CMakeLists.txt",
-                "src/EmbeddedPyInference.cc",
-                "src/MLModelActions.cc",
-                "tests/CMakeLists.txt",
-                "tests/check_test_outputs.py"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Rebased onto current state of #19 to see if & where things are currently failing."
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Merging this after CI has run through again to have an easier to deal with diff in #38"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "DDML",
-            "num": 39,
-            "title": "Add HCAL layers to Endcap geometry",
-            "url": "https://github.com/key4hep/DDML/pull/39",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-13",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Make it possible to also generate showers in the HCAL Endcaps by adding the corresponding layers\n\nENDRELEASENOTES\n\nLifted from #38",
-            "diff": {
-                "additions": 26,
-                "deletions": 1,
-                "files": 3
-            },
-            "files": [
-                "include/DDML/EndcapGeometry.h",
-                "src/EndcapGeometry.cc",
-                "src/MLModelActions.cc"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCC-config",
-            "num": 417,
-            "title": "Set RandomSeed to 0 in the IDEA and CLD Delphes cards",
-            "url": "https://github.com/HEP-FCC/FCC-config/pull/417",
-            "author": "kjvbrt",
-            "mergedAt": "2026-11-13",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "With the fixed `RandomSeed 123` from the upstream cards every job uses the same random sequence for the detector smearing. With `0` ROOT picks a new random seed for every run. The changes against upstream are now listed in the card headers.",
-            "diff": {
-                "additions": 8,
-                "deletions": 4,
-                "files": 2
-            },
-            "files": [
-                "FCCee/Delphes/card_CLD.tcl",
-                "FCCee/Delphes/card_IDEA.tcl"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1721,
-            "title": "ci(k4geo): keep the IDEA tests from exhausting the runner's memory",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1721",
-            "author": "vvolkl",
-            "mergedAt": "2026-11-13",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "Attempt to fix a probable OOM issue in gh actions ci (see https://github.com/AIDASoft/DD4hep/actions/runs/43408200343/job/131827695944?pr=1720)\n\n\n\nBEGINRELEASENOTES\n- Attempt to fix an OOM issue in github actions ci\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 18,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/k4geo-ci.yml"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "This is a problem in k4geo and using sed to change a temporary cmake file seems fragile; I would not fix it here."
-                },
-                {
-                    "author": "vvolkl",
-                    "body": "Sure, if it can be fixed properly even better. But the fix could also just revert this change then, and the CI will be green until then \u2705"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200221h 42m 31s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 902965c4.\n\n[test-results]:data:application/gzip;base64,H4sIAJkm92oC/12MyQ7CIBQAf6Xh7IHtCfVnDGtC7GJYTo3/LpLaoseZSWZDPkwuodtA5GVAqYR8ki1R5bAulYUkQKqqNX86E/CleyrG/KtHeF\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1720,
-            "title": "fix(macOS): delete the geometry before exit in checkGeometry",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1720",
-            "author": "vvolkl",
-            "mergedAt": "2026-11-13",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "I've come across this issue while debugging the github actions workflow using cvmfs on MacOS, see https://github.com/AIDASoft/DD4hep/pull/1672 . I'll also report this issue to ROOT, but this workaround is likely good to have for older ROOT versions.\r\n\r\n---- \r\n\ud83e\udd16 \ud83d\udcac \r\n\r\n\r\nOn macOS the check_geometry and check_overlaps tests abort at exit with\r\n\r\n```\r\n  libc++abi: terminating due to uncaught exception of type\r\n  std::__1::system_error: mutex lock failed: Invalid argument\r\n ```\r\n\r\nThe geometry is left to ROOT, which deletes it in\r\n`TROOT::EndOfProcessCleanups()`. By then the static TGeoManager::fgMutex in libGeom has already been destroyed, and `~TGeoManager()` locks it whenever the checker used threads (fMaxThreads != 0, as with the parallel overlap checker in recent ROOT). glibc tolerates loc\u2026",
-            "diff": {
-                "additions": 10,
-                "deletions": 0,
-                "files": 2
-            },
-            "files": [
-                "DDCore/python/bin/checkGeometry.py",
-                "DDCore/python/bin/checkOverlaps.py"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200219h 54m 18s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit fd7f9544.\n\n[test-results]:data:application/gzip;base64,H4sIABIC92oC/12MSw7CIBQAr9KwdsETXilexvApCbEthsLKeHcpqS26nJlkXsT5aVzJrYPh0pE1+3SSzVElH5bCAnrcVKlp60zgl+5rNuZfPf\u2026"
-                },
-                {
-                    "author": "wdconinc",
-                    "body": "Agreed with my \ud83e\udd16 observations too."
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1080,
-            "title": "Hide the podio internals by default from docs",
-            "url": "https://github.com/AIDASoft/podio/pull/1080",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-13",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "The doxygen documentation generated from the generated files are mostly internal podio classes which clutters the documentation unnecessarily with information that is not strictly useful for users. This makes it possible to hide this information and hand the choice of what to show to the downstream developers.\n\n\n\nBEGINRELEASENOTES\n- Generate doxygen directives that hide the podio internal classes from generated EDM documentation by default. This uses a conditional `PODIO_INTERNAL` section and it also introduces a `<datamodel>_podio_internals` group for easier separation if that is enabled. **If you generate doxygen documentation from podio generated EDMs the podio internals will be hidden unless you opt-in from now on.**\n\nENDRELEASENOTES\n\nTo keep the section in the output documentation put\u2026",
-            "diff": {
-                "additions": 104,
-                "deletions": 1,
-                "files": 16
-            },
-            "files": [
-                "doc/templates.md",
-                "python/templates/Collection.h.jinja2",
-                "python/templates/CollectionData.cc.jinja2",
-                "python/templates/CollectionData.h.jinja2",
-                "python/templates/Component.h.jinja2",
-                "python/templates/Data.h.jinja2",
-                "python/templates/DatamodelDefinition.h.jinja2",
-                "python/templates/Interface.h.jinja2",
-                "python/templates/LinkCollection.h.jinja2",
-                "python/templates/MutableObject.h.jinja2",
-                "python/templates/Obj.cc.jinja2",
-                "python/templates/Obj.h.jinja2",
-                "python/templates/Object.h.jinja2",
-                "python/templates/SIOBlock.cc.jinja2",
-                "python/templates/SIOBlock.h.jinja2",
-                "python/templates/macros/utils.jinja2"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1078,
-            "title": "Remove the gitlab CI setup used for deploying documentation",
-            "url": "https://github.com/AIDASoft/podio/pull/1078",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-13",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Remove deploying of documentation via gitlab as it is no longer necessary after switching to github pages\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 0,
-                "deletions": 83,
-                "files": 1
-            },
-            "files": [
-                ".gitlab-ci.yml"
             ],
             "comments": [],
             "comments_total": 0,
