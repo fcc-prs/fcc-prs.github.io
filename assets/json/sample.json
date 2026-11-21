@@ -150,7 +150,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -161,7 +161,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-30",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -172,7 +172,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-12",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -183,7 +183,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-05",
             "updatedAt": "2026-11-10",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -194,7 +194,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -205,7 +205,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -359,7 +359,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-16",
             "updatedAt": "2026-11-17",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -370,7 +370,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1528,6 +1528,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Opt",
+            "num": 152,
+            "title": "<a href='https://github.com/key4hep/k4Opt/pull/152'>build(deps): bump optuna from 5.0.0 to 5.1.0</a>",
+            "author": "dependabot",
+            "createdAt": "2026-11-21",
+            "updatedAt": "2026-11-21",
+            "mergeOk": "yes",
+            "labels": "dependencies \npython",
+            "assignees": ""
         },
         {
             "repo": "key4hep/<br>KKMCee",
