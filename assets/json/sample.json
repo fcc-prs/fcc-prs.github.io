@@ -464,22 +464,11 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
-            "num": 72,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/72'>HepMCFileWriter/Reader: add gzip and ROOT-tree in/output formats</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Gen",
             "num": 73,
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/73'>GenAlg/VertexSmearing: seed vertex smearing per-event via UniqueIDGenSvc</a>",
             "author": "kjvbrt",
             "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -490,7 +479,18 @@
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/70'>PythiaInterface: print statistics once at finalize, not per event</a>",
             "author": "kjvbrt",
             "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-17",
+            "updatedAt": "2026-11-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 72,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/72'>HepMCFileWriter/Reader: add gzip and ROOT-tree in/output formats</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-17",
+            "updatedAt": "2026-11-19",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -644,7 +644,18 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/169'>Match seed hits by handle instead of ObjectID</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-20",
-            "updatedAt": "2026-11-20",
+            "updatedAt": "2026-11-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 162,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/162'>New options for cc-and-walk</a>",
+            "author": "madbaron",
+            "createdAt": "2026-11-19",
+            "updatedAt": "2026-11-22",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -698,17 +709,6 @@
             "num": 164,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/164'>VertexFindingAlg: use the public EDM4hepUtil::readTrackState</a>",
             "author": "jbeirer",
-            "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 162,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/162'>New options for cc-and-walk</a>",
-            "author": "madbaron",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-20",
             "mergeOk": "yes",
@@ -1575,23 +1575,12 @@
         },
         {
             "repo": "hep-fcc/<br>fcc-tutorials",
-            "num": 221,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/221'>Fix links to CERN and FNAL in prerequisites page</a>",
-            "author": "michmx",
-            "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-tutorials",
             "num": 219,
             "title": "<a href='https://github.com/HEP-FCC/fcc-tutorials/pull/219'>Port FCC tutorials to Jupyter Book v2 </a>",
             "author": "michmx",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1613,7 +1602,7 @@
             "author": "ianna",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-12",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1624,7 +1613,7 @@
             "author": "ianna",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-12",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1635,7 +1624,7 @@
             "author": "ianna",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-12",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1646,7 +1635,7 @@
             "author": "ianna",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-12",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1657,7 +1646,7 @@
             "author": "ianna",
             "createdAt": "2026-10-08",
             "updatedAt": "2026-11-12",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1668,7 +1657,7 @@
             "author": "michmx",
             "createdAt": "2026-09-04",
             "updatedAt": "2026-10-30",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "enhancement",
             "assignees": ""
         },
@@ -1679,7 +1668,7 @@
             "author": "ianna",
             "createdAt": "2026-10-08",
             "updatedAt": "2026-10-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1690,7 +1679,7 @@
             "author": "apausa",
             "createdAt": "2026-09-29",
             "updatedAt": "2026-10-01",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
