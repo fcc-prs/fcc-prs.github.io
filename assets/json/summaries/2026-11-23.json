@@ -1,0 +1,30 @@
+{
+  "updated_at": "2026-11-23T08:48:37Z",
+  "period_start": "2026-11-16",
+  "period_end": "2026-11-23",
+  "summary": [
+    "- **[key4hep/k4geo#683](https://github.com/key4hep/k4geo/pull/683)** — Sets the magnetic field to zero outside the muon systems of ALLEGRO, IDEA, CLD_o2_v09 and CLD_o5_v01, so escaping particles no longer curl back and re-enter the detector.",
+    "- **[key4hep/k4geo#681](https://github.com/key4hep/k4geo/pull/681)** — Adds v02 shape- and CAD-based FCC-ee MDI options with the simple CLD antisolenoid, and switches ILD_FCCee to the shape-based MDI, fixing ILD tracking in inhomogeneous fields.",
+    "- **[key4hep/k4RecCalorimeter#293](https://github.com/key4hep/k4RecCalorimeter/pull/293)** — CreateCaloClustersSlidingWindowFCCee gains optional re-centring of the position window, and AugmentClustersFCCee gains an optional per-layer S-curve theta correction, reducing low-energy cluster position bias in ALLEGRO.",
+    "- **[hep-fcc/FCCAnalyses#565](https://github.com/HEP-FCC/FCCAnalyses/pull/565)** — get_V0s_jet and get_SV_jets build each jet's V0s and secondary vertices from that jet's own tracks instead of other jets', changing per-jet outputs in all dependent analyses.",
+    "- **[hep-fcc/FCCAnalyses#569](https://github.com/HEP-FCC/FCCAnalyses/pull/569)** — get_PrimaryTracks no longer drops a compatible track when all tracks fit the primary vertex, and beam-spot-constrained VertexFitter_Tk fits use 2N degrees of freedom for chi2.",
+    "- **[hep-fcc/FCCAnalyses#538](https://github.com/HEP-FCC/FCCAnalyses/pull/538)** — Adds a DIRAC grid backend via fccanalysis submit grid, which resolves EOS/XRootD or LFN inputs and plans deterministic jobs; the deprecated submit --where syntax raises a migration error.",
+    "- **[key4hep/k4RecTracker#128](https://github.com/key4hep/k4RecTracker/pull/128)** — GGTFTrackFinder identifies input hit collections by their position in the input list rather than by unassigned collection IDs, fixing crashes and wrong hit assignment in ALLEGRO and IDEA reconstruction.",
+    "- **[key4hep/k4ActsTracking#152](https://github.com/key4hep/k4ActsTracking/pull/152)** — CKF extrapolation to the IP includes material effects such as beam-pipe multiple scattering, correcting underestimated d0/z0 uncertainties of low-momentum tracks in CLD and other ACTS-based reconstruction.",
+    "- **[key4hep/k4Reco#80](https://github.com/key4hep/k4Reco/pull/80)** — k4Reco track fitting computes the IP track state of inside-out fits from an outside-in refit, avoiding double-counted inner hits and underestimated d0/z0 uncertainties, matching iLCSoft MarlinTrk.",
+    "- **[AIDASoft/podio#1082](https://github.com/AIDASoft/podio/pull/1082)** — RNTupleReader reads only the fields of requested collections and caches per-file views, making RNTuple reading about five times faster; RNTuple support requires ROOT 6.34 or newer."
+  ],
+  "usage": {
+    "cache_creation": "CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0)",
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "us",
+    "input_tokens": 59103,
+    "output_tokens": 13486,
+    "output_tokens_details": "OutputTokensDetails(thinking_tokens=5627)",
+    "server_tool_use": null,
+    "service_tier": "standard",
+    "speed": "standard"
+  },
+  "cost_usd": 0.506132
+}

@@ -1,69 +1,114 @@
 {
-  "updated_at": "2026-11-22T07:55:18Z",
-  "period_start": "2026-11-15",
-  "period_end": "2026-11-22",
+  "updated_at": "2026-11-23T08:48:37Z",
+  "period_start": "2026-11-16",
+  "period_end": "2026-11-23",
   "summary": [
-    "- **[HEP-FCC/FCCAnalyses#565](https://github.com/HEP-FCC/FCCAnalyses/pull/565)** — get_V0s_jet and get_SV_jets build each jet's V0s and secondary vertices from that jet's own tracks, so per-jet vertex outputs change for all analyses using them.",
-    "- **[HEP-FCC/FCCAnalyses#569](https://github.com/HEP-FCC/FCCAnalyses/pull/569)** — get_PrimaryTracks no longer drops a compatible track when all tracks fit the primary vertex, and beam-spot-constrained vertex fits normalise chi2 by 2N degrees of freedom.",
-    "- **[HEP-FCC/FCCAnalyses#538](https://github.com/HEP-FCC/FCCAnalyses/pull/538)** — Adds DIRAC grid submission through \"fccanalysis submit grid\", with EOS/XRootD and LFN inputs, deterministic job planning and balanced chunking, and deprecates the old submit --where syntax.",
-    "- **[key4hep/k4geo#683](https://github.com/key4hep/k4geo/pull/683)** — Sets the magnetic field to zero outside the muon systems of ALLEGRO, IDEA, CLD_o2_v09 and CLD_o5_v01, so escaping particles no longer curl back into the detector.",
-    "- **[key4hep/k4geo#681](https://github.com/key4hep/k4geo/pull/681)** — Adds v02 shape- and CAD-based FCC-ee MDI collections with a simple CLD-style antisolenoid and switches ILD_FCCee to the shape-based MDI to fix its tracking failures.",
-    "- **[key4hep/k4RecCalorimeter#293](https://github.com/key4hep/k4RecCalorimeter/pull/293)** — Sliding-window clustering can optionally re-centre its position window, and AugmentClustersFCCee can optionally apply S-curve corrections to per-layer theta barycentres, reducing low-energy position bias in ALLEGRO.",
-    "- **[key4hep/k4RecTracker#128](https://github.com/key4hep/k4RecTracker/pull/128)** — GGTFTrackFinder identifies hit collections by their input order instead of unassigned collection IDs, which fixes crashes and wrong hit assignments in ALLEGRO and IDEA reconstruction.",
-    "- **[key4hep/k4ActsTracking#152](https://github.com/key4hep/k4ActsTracking/pull/152)** — The CKF extrapolation to the IP includes beam-pipe material effects, which corrects underestimated d0 and z0 uncertainties for low-momentum tracks, as seen on CLD_o2_v08.",
-    "- **[key4hep/k4ActsTracking#171](https://github.com/key4hep/k4ActsTracking/pull/171)** — Adapts to the ACTS single-actor propagator API, so k4ActsTracking requires an ACTS version that includes acts-project/acts#6410 and no longer builds against older releases.",
-    "- **[HEP-FCC/FCC-config#419](https://github.com/HEP-FCC/FCC-config/pull/419)** — Comments out the Particle collection in the IDEA and CLD Delphes EDM4hep cards, removing a link-less duplicate of GenParticles from k4SimDelphes Gaudi outputs."
+    "- **[key4hep/k4geo#683](https://github.com/key4hep/k4geo/pull/683)** — Sets the magnetic field to zero outside the muon systems of ALLEGRO, IDEA, CLD_o2_v09 and CLD_o5_v01, so escaping particles no longer curl back and re-enter the detector.",
+    "- **[key4hep/k4geo#681](https://github.com/key4hep/k4geo/pull/681)** — Adds v02 shape- and CAD-based FCC-ee MDI options with the simple CLD antisolenoid, and switches ILD_FCCee to the shape-based MDI, fixing ILD tracking in inhomogeneous fields.",
+    "- **[key4hep/k4RecCalorimeter#293](https://github.com/key4hep/k4RecCalorimeter/pull/293)** — CreateCaloClustersSlidingWindowFCCee gains optional re-centring of the position window, and AugmentClustersFCCee gains an optional per-layer S-curve theta correction, reducing low-energy cluster position bias in ALLEGRO.",
+    "- **[hep-fcc/FCCAnalyses#565](https://github.com/HEP-FCC/FCCAnalyses/pull/565)** — get_V0s_jet and get_SV_jets build each jet's V0s and secondary vertices from that jet's own tracks instead of other jets', changing per-jet outputs in all dependent analyses.",
+    "- **[hep-fcc/FCCAnalyses#569](https://github.com/HEP-FCC/FCCAnalyses/pull/569)** — get_PrimaryTracks no longer drops a compatible track when all tracks fit the primary vertex, and beam-spot-constrained VertexFitter_Tk fits use 2N degrees of freedom for chi2.",
+    "- **[hep-fcc/FCCAnalyses#538](https://github.com/HEP-FCC/FCCAnalyses/pull/538)** — Adds a DIRAC grid backend via fccanalysis submit grid, which resolves EOS/XRootD or LFN inputs and plans deterministic jobs; the deprecated submit --where syntax raises a migration error.",
+    "- **[key4hep/k4RecTracker#128](https://github.com/key4hep/k4RecTracker/pull/128)** — GGTFTrackFinder identifies input hit collections by their position in the input list rather than by unassigned collection IDs, fixing crashes and wrong hit assignment in ALLEGRO and IDEA reconstruction.",
+    "- **[key4hep/k4ActsTracking#152](https://github.com/key4hep/k4ActsTracking/pull/152)** — CKF extrapolation to the IP includes material effects such as beam-pipe multiple scattering, correcting underestimated d0/z0 uncertainties of low-momentum tracks in CLD and other ACTS-based reconstruction.",
+    "- **[key4hep/k4Reco#80](https://github.com/key4hep/k4Reco/pull/80)** — k4Reco track fitting computes the IP track state of inside-out fits from an outside-in refit, avoiding double-counted inner hits and underestimated d0/z0 uncertainties, matching iLCSoft MarlinTrk.",
+    "- **[AIDASoft/podio#1082](https://github.com/AIDASoft/podio/pull/1082)** — RNTupleReader reads only the fields of requested collections and caches per-file views, making RNTuple reading about five times faster; RNTuple support requires ROOT 6.34 or newer."
   ],
   "omitted": [
     {
       "pr": "key4hep/EDM4hep#553",
       "url": "https://github.com/key4hep/EDM4hep/pull/553",
-      "reason": "Excludes podio internals from the deployed Doxygen documentation; documentation build change."
+      "reason": "Hides podio internals in the deployed EDM4hep Doxygen documentation; documentation build change."
     },
     {
       "pr": "key4hep/key4hep-spack#954",
       "url": "https://github.com/key4hep/key4hep-spack/pull/954",
-      "reason": "Dependabot bump of the free-disk-space GitHub action."
+      "reason": "Dependabot bump of the free-disk-space GitHub action to 4.0.2."
+    },
+    {
+      "pr": "key4hep/k4Opt#147",
+      "url": "https://github.com/key4hep/k4Opt/pull/147",
+      "reason": "Dependabot bump of platformdirs to 4.14.7."
+    },
+    {
+      "pr": "key4hep/k4Opt#148",
+      "url": "https://github.com/key4hep/k4Opt/pull/148",
+      "reason": "Dependabot bump of narwhals to 2.29.0 in the dashboard."
+    },
+    {
+      "pr": "key4hep/k4Opt#149",
+      "url": "https://github.com/key4hep/k4Opt/pull/149",
+      "reason": "Dependabot bump of virtualenv to 21.15.8."
+    },
+    {
+      "pr": "key4hep/k4Opt#144",
+      "url": "https://github.com/key4hep/k4Opt/pull/144",
+      "reason": "Dependabot bump of optuna to 5.1.0 in the pre-commit configuration."
+    },
+    {
+      "pr": "key4hep/k4Opt#150",
+      "url": "https://github.com/key4hep/k4Opt/pull/150",
+      "reason": "Dependabot bump of python-multipart to 0.0.34 in the dashboard."
+    },
+    {
+      "pr": "key4hep/k4Opt#145",
+      "url": "https://github.com/key4hep/k4Opt/pull/145",
+      "reason": "Dependabot bump of the ruff pre-commit hook to 0.17.5."
+    },
+    {
+      "pr": "key4hep/k4Opt#151",
+      "url": "https://github.com/key4hep/k4Opt/pull/151",
+      "reason": "Dependabot bump of filelock to 4.2.12."
+    },
+    {
+      "pr": "key4hep/k4Opt#146",
+      "url": "https://github.com/key4hep/k4Opt/pull/146",
+      "reason": "Dependabot bump of numpy to 2.5.5 in the dashboard."
     },
     {
       "pr": "key4hep/key4hep-spack#953",
       "url": "https://github.com/key4hep/key4hep-spack/pull/953",
-      "reason": "Recognises Pop!_OS 26.04 in the nightly setup script; environment setup change."
+      "reason": "Recognises Pop!_OS 26.04 in the nightly setup script; environment tooling change."
     },
     {
-      "pr": "key4hep/k4Reco#80",
-      "url": "https://github.com/key4hep/k4Reco/pull/80",
-      "reason": "Computes the IP track state for inside-out ConformalTracking fits with an outside-in refit, fixing underestimated d0 and z0 uncertainties; lower priority."
+      "pr": "key4hep/k4ActsTracking#171",
+      "url": "https://github.com/key4hep/k4ActsTracking/pull/171",
+      "reason": "Adapts to the ACTS single-actor propagator API and requires a matching ACTS version; mechanical API migration."
+    },
+    {
+      "pr": "key4hep/key4hep-images#39",
+      "url": "https://github.com/key4hep/key4hep-images/pull/39",
+      "reason": "Installs Automake in the AlmaLinux build images; container/CI infrastructure."
     },
     {
       "pr": "key4hep/k4Reco#81",
       "url": "https://github.com/key4hep/k4Reco/pull/81",
-      "reason": "Dependabot bump of the cvmfs GitHub action."
+      "reason": "Dependabot bump of github-action-cvmfs to 5.7."
     },
     {
       "pr": "key4hep/k4PFHitML#12",
       "url": "https://github.com/key4hep/k4PFHitML/pull/12",
-      "reason": "Skips the test model download when tests are disabled; build-system change."
+      "reason": "Skips test model downloads when BUILD_TESTING is off; build-system change."
     },
     {
       "pr": "key4hep/k4DetectorPerformance#15",
       "url": "https://github.com/key4hep/k4DetectorPerformance/pull/15",
-      "reason": "TrackingValidation keys hits and particles by handles instead of ObjectIDs, fixing particle mix-ups in same-job validation; lower priority."
+      "reason": "TrackingValidation identifies hits and particles by handle instead of ObjectID, fixing mismatched associations within the same job; lower priority."
     },
     {
       "pr": "key4hep/k4Bench#299",
       "url": "https://github.com/key4hep/k4Bench/pull/299",
-      "reason": "Warms up additional CVMFS repositories in the benchmark workflow; CI change."
+      "reason": "Warms up additional CVMFS repositories before running benchmark containers; CI fix."
     },
     {
       "pr": "key4hep/k4Bench#298",
       "url": "https://github.com/key4hep/k4Bench/pull/298",
-      "reason": "Dependabot bump of pymdown-extensions."
+      "reason": "Dependabot update of the pymdown-extensions requirement to 13.1 or newer."
     },
     {
       "pr": "key4hep/k4Opt#134",
       "url": "https://github.com/key4hep/k4Opt/pull/134",
-      "reason": "Dependabot bump of the dashboard Python base image to 3.15-slim."
+      "reason": "Bumps the dashboard Python base image from 3.13-slim to 3.15-slim; dependency update."
     },
     {
       "pr": "key4hep/k4Opt#143",
@@ -73,27 +118,27 @@
     {
       "pr": "key4hep/k4Opt#142",
       "url": "https://github.com/key4hep/k4Opt/pull/142",
-      "reason": "Moves k4Opt trial state into a study-owned ledger, makes Optuna one interchangeable strategy and adds a grid strategy; lower priority."
+      "reason": "Moves k4Opt trial state into a k4opt-owned ledger, with Optuna and a grid as interchangeable strategies; lower priority."
     },
     {
-      "pr": "HEP-FCC/ALLEGRO#67",
+      "pr": "hep-fcc/ALLEGRO#67",
       "url": "https://github.com/HEP-FCC/ALLEGRO/pull/67",
-      "reason": "Adds --outdir and --no-update options to the ALLEGRO calibration XML writer script; tooling convenience."
+      "reason": "Adds --outdir and --no-update options to the calibration XML writing script; tooling convenience, lower priority."
     },
     {
       "pr": "AIDASoft/podio#1086",
       "url": "https://github.com/AIDASoft/podio/pull/1086",
-      "reason": "Dependabot bump of the cvmfs GitHub action."
+      "reason": "Dependabot bump of github-action-cvmfs to 5.7."
     },
     {
       "pr": "AIDASoft/podio#1087",
       "url": "https://github.com/AIDASoft/podio/pull/1087",
-      "reason": "Dependabot bump of the cvmfs GitHub action in the podio-build action."
+      "reason": "Dependabot bump of github-action-cvmfs to 5.7 in the podio-build action."
     },
     {
       "pr": "key4hep/k4geo#692",
       "url": "https://github.com/key4hep/k4geo/pull/692",
-      "reason": "Puts file-local helpers in detector constructors into unnamed namespaces; code cleanup."
+      "reason": "Puts file-local helpers of several detector constructors in unnamed namespaces; code cleanup."
     },
     {
       "pr": "key4hep/k4geo#689",
@@ -103,47 +148,42 @@
     {
       "pr": "key4hep/k4geo#691",
       "url": "https://github.com/key4hep/k4geo/pull/691",
-      "reason": "Dependabot bump of the cvmfs GitHub action."
+      "reason": "Dependabot bump of github-action-cvmfs to 5.7."
     },
     {
       "pr": "key4hep/key4hep-doc#178",
       "url": "https://github.com/key4hep/key4hep-doc/pull/178",
-      "reason": "Dependabot bump of the cvmfs GitHub action."
+      "reason": "Dependabot bump of github-action-cvmfs to 5.7."
     },
     {
       "pr": "key4hep/k4SimDelphes#168",
       "url": "https://github.com/key4hep/k4SimDelphes/pull/168",
-      "reason": "Requires at least podio v01-10 in CMake; build-system change."
+      "reason": "Requires podio v01-10 or newer in CMake; build-system change."
     },
     {
       "pr": "key4hep/k4SimDelphes#180",
       "url": "https://github.com/key4hep/k4SimDelphes/pull/180",
-      "reason": "Adds compatibility with Pythia 8.318 in the standalone reader and tests; lower priority."
+      "reason": "Supports Pythia 8.318 in the standalone reader and tests; compatibility maintenance, lower priority."
     },
     {
       "pr": "key4hep/k4Gen#74",
       "url": "https://github.com/key4hep/k4Gen/pull/74",
-      "reason": "Adds compatibility with Pythia 8.318 in the Pythia interface; lower priority."
+      "reason": "Supports Pythia 8.318 in the Pythia interface while keeping older versions working; compatibility maintenance, lower priority."
     },
     {
       "pr": "key4hep/k4RecCalorimeter#294",
       "url": "https://github.com/key4hep/k4RecCalorimeter/pull/294",
-      "reason": "Shares the TRAPPIST ONNX models through a common service, saving about 300 MB RSS; lower priority."
+      "reason": "Shares TRAPPIST ONNX models through a service, saving about 300 MB RSS; lower priority."
     },
     {
       "pr": "key4hep/k4ActsTracking#153",
       "url": "https://github.com/key4hep/k4ActsTracking/pull/153",
-      "reason": "ACTSDuplicateRemoval no longer keeps two equal tracks, and synthetic-track tests are added; lower priority."
-    },
-    {
-      "pr": "key4hep/key4hep-images#39",
-      "url": "https://github.com/key4hep/key4hep-images/pull/39",
-      "reason": "Installs Automake in the AlmaLinux build images; packaging change."
+      "reason": "ACTSDuplicateRemoval no longer keeps two equal tracks and gains a synthetic-track test; lower priority."
     },
     {
       "pr": "key4hep/key4hep-images#38",
       "url": "https://github.com/key4hep/key4hep-images/pull/38",
-      "reason": "Fixes Autoconf and XRootD dependencies in the build images; packaging change."
+      "reason": "Fixes Autoconf, m4 and XRootD runtime dependencies in the build images; container infrastructure."
     },
     {
       "pr": "key4hep/k4DetectorPerformance#14",
@@ -151,14 +191,14 @@
       "reason": "Skips the tracking validation test data download when tests are disabled; build-system change."
     },
     {
-      "pr": "HEP-FCC/FCCAnalyses#582",
+      "pr": "hep-fcc/FCCAnalyses#582",
       "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/582",
-      "reason": "Gives file-local globals and helpers internal linkage; code cleanup."
+      "reason": "Uses unnamed namespaces for file-local globals and helpers in analyzers; code cleanup."
     },
     {
-      "pr": "HEP-FCC/FCCAnalyses#270",
+      "pr": "hep-fcc/FCCAnalyses#270",
       "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/270",
-      "reason": "Removes the separate Vdt includes and the FindVdt module; build-system change."
+      "reason": "Removes separate Vdt include handling from CMake; build-system change."
     },
     {
       "pr": "AIDASoft/DD4hep#1730",
@@ -168,22 +208,22 @@
     {
       "pr": "AIDASoft/DD4hep#1729",
       "url": "https://github.com/AIDASoft/DD4hep/pull/1729",
-      "reason": "Formats Geant4VolumeManager debug strings only when they are printed, reducing construction time; lower priority."
+      "reason": "Builds Geant4VolumeManager debug strings only when they are printed, speeding up construction; lower priority."
     },
     {
       "pr": "key4hep/k4SimDelphes#178",
       "url": "https://github.com/key4hep/k4SimDelphes/pull/178",
-      "reason": "Puts converter helpers into unnamed namespaces; code cleanup."
+      "reason": "Uses an unnamed namespace for file-local converter helpers; code cleanup."
     },
     {
       "pr": "key4hep/k4RecCalorimeter#304",
       "url": "https://github.com/key4hep/k4RecCalorimeter/pull/304",
-      "reason": "Puts RecCaloCommon test helpers into unnamed namespaces; code cleanup."
+      "reason": "Uses unnamed namespaces for helpers in the RecCaloCommon tests; code cleanup."
     },
     {
       "pr": "key4hep/k4ActsTracking#159",
       "url": "https://github.com/key4hep/k4ActsTracking/pull/159",
-      "reason": "Puts file-local helpers into unnamed namespaces; code cleanup."
+      "reason": "Uses unnamed namespaces for file-local helpers; code cleanup."
     },
     {
       "pr": "key4hep/k4ActsTracking#155",
@@ -198,32 +238,32 @@
     {
       "pr": "key4hep/key4hep-dev-utils#45",
       "url": "https://github.com/key4hep/key4hep-dev-utils/pull/45",
-      "reason": "Requires the Ubuntu 26 nightly build in the default ruleset; CI configuration."
+      "reason": "Requires the Ubuntu 26 nightly build in the default GitHub ruleset; CI configuration."
     },
     {
       "pr": "key4hep/key4hep-dev-utils#43",
       "url": "https://github.com/key4hep/key4hep-dev-utils/pull/43",
-      "reason": "Replaces the required Ubuntu 24 nightly with AlmaLinux 10 in the ruleset; CI configuration."
+      "reason": "Replaces the Ubuntu 24 nightly requirement with AlmaLinux 10 in the ruleset; CI configuration."
     },
     {
       "pr": "key4hep/key4hep-dev-utils#42",
       "url": "https://github.com/key4hep/key4hep-dev-utils/pull/42",
-      "reason": "Removes trailing whitespace from the default .clang-format; code style."
+      "reason": "Removes trailing whitespace from the shared .clang-format; style tooling."
     },
     {
       "pr": "key4hep/key4hep-dev-utils#41",
       "url": "https://github.com/key4hep/key4hep-dev-utils/pull/41",
-      "reason": "Restores Standard: Latest in the shared clang-format config; code style."
+      "reason": "Restores Standard: Latest in the shared clang-format configuration; style tooling."
     },
     {
       "pr": "key4hep/key4hep-actions#64",
       "url": "https://github.com/key4hep/key4hep-actions/pull/64",
-      "reason": "Logs minimal git information in downstream builds; CI change."
+      "reason": "Logs minimal git information for downstream builds; CI change."
     },
     {
       "pr": "key4hep/k4RecTracker#130",
       "url": "https://github.com/key4hep/k4RecTracker/pull/130",
-      "reason": "Skips the TrackFinder model download when tests are disabled; build-system change."
+      "reason": "Skips the TrackFinder test model download when tests are disabled; build-system change."
     },
     {
       "pr": "key4hep/k4RecTracker#121",
@@ -233,27 +273,27 @@
     {
       "pr": "key4hep/k4RecTracker#127",
       "url": "https://github.com/key4hep/k4RecTracker/pull/127",
-      "reason": "Puts the MeanExcEnergy_get helpers into an unnamed namespace; code cleanup."
+      "reason": "Uses an unnamed namespace for the MeanExcEnergy_get helpers; code cleanup."
     },
     {
       "pr": "key4hep/key4hep-images#37",
       "url": "https://github.com/key4hep/key4hep-images/pull/37",
-      "reason": "Adds the JPEG runtime to the AlmaLinux 10 image; packaging change."
+      "reason": "Adds the JPEG runtime to the AlmaLinux 10 image; container infrastructure."
     },
     {
       "pr": "key4hep/key4hep-images#36",
       "url": "https://github.com/key4hep/key4hep-images/pull/36",
-      "reason": "Adds Expat and X11 dependencies to the AlmaLinux 10 image; packaging change."
+      "reason": "Adds Expat and X11 dependencies to the AlmaLinux 10 image; container infrastructure."
     },
     {
       "pr": "key4hep/k4Reco#78",
       "url": "https://github.com/key4hep/k4Reco/pull/78",
-      "reason": "Puts file-local helpers into unnamed namespaces; code cleanup."
+      "reason": "Uses unnamed namespaces for file-local helpers; code cleanup."
     },
     {
       "pr": "key4hep/k4GeneratorsConfig#97",
       "url": "https://github.com/key4hep/k4GeneratorsConfig/pull/97",
-      "reason": "Puts file-local helpers into unnamed namespaces; code cleanup."
+      "reason": "Uses unnamed namespaces for file-local helpers; code cleanup."
     },
     {
       "pr": "key4hep/k4MLJetTagger#18",
@@ -261,14 +301,14 @@
       "reason": "Skips the jet tagging test data download when tests are disabled; build-system change."
     },
     {
-      "pr": "HEP-FCC/FCCAnalyses#576",
+      "pr": "hep-fcc/FCCAnalyses#576",
       "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/576",
-      "reason": "Fixes event counting for RNTuple inputs and makes the output format follow the input by default; lower priority."
+      "reason": "Fixes event counting for RNTuple inputs and matches the output format to the input format by default; lower priority."
     },
     {
       "pr": "AIDASoft/DD4hep#1724",
       "url": "https://github.com/AIDASoft/DD4hep/pull/1724",
-      "reason": "Sets LD_LIBRARY_PATH on macOS in the thisdd4hep scripts; environment setup change."
+      "reason": "Sets LD_LIBRARY_PATH on macOS in the DD4hep environment scripts; environment setup change."
     },
     {
       "pr": "AIDASoft/DD4hep#1728",
@@ -278,37 +318,37 @@
     {
       "pr": "AIDASoft/DD4hep#1717",
       "url": "https://github.com/AIDASoft/DD4hep/pull/1717",
-      "reason": "Reverts earlier input-handling changes and uses the first primary's start vertex as origin, fixing HepMC3 particle-gun input; lower priority."
+      "reason": "Reverts recent input-handling changes and uses the first primary's start vertex as the origin for HepMC3 inputs; lower priority."
     },
     {
       "pr": "AIDASoft/DD4hep#1726",
       "url": "https://github.com/AIDASoft/DD4hep/pull/1726",
-      "reason": "Releases Geant4Kernel phases instead of destroying them, preventing dangling references at termination; lower priority."
+      "reason": "Releases Geant4Kernel phases to prevent dangling references at termination; lower priority."
     },
     {
       "pr": "key4hep/k4MarlinWrapper#492",
       "url": "https://github.com/key4hep/k4MarlinWrapper/pull/492",
-      "reason": "Puts Marlin test processor instances into unnamed namespaces; code cleanup."
+      "reason": "Uses unnamed namespaces for Marlin test processor instances; code cleanup."
     },
     {
       "pr": "key4hep/EDM4hep#561",
       "url": "https://github.com/key4hep/EDM4hep/pull/561",
-      "reason": "Matches the CI C++ standard to ROOT's configuration; CI change."
+      "reason": "Matches the CI C++ standard to ROOT's; CI change."
     },
     {
       "pr": "key4hep/EDM4hep#559",
       "url": "https://github.com/key4hep/EDM4hep/pull/559",
-      "reason": "Moves the MurmurHash3 helpers into a detail namespace and hides file-local functions; code cleanup."
+      "reason": "Moves MurmurHash3 into edm4hep::utils::detail and hides file-local helpers to avoid symbol clashes; code cleanup."
     },
     {
       "pr": "key4hep/EDM4hep#560",
       "url": "https://github.com/key4hep/EDM4hep/pull/560",
-      "reason": "Updates CI LCG stacks and podio presets after the podio ROOT-version bump; CI change."
+      "reason": "Updates CI to newer LCG stacks and podio's base-build preset; CI change."
     },
     {
       "pr": "key4hep/k4FWCore#456",
       "url": "https://github.com/key4hep/k4FWCore/pull/456",
-      "reason": "Enables the misc-use-internal-linkage clang-tidy check; linting."
+      "reason": "Enables misc-use-internal-linkage in clang-tidy and fixes a missed helper; linting."
     },
     {
       "pr": "key4hep/key4hep-spack#911",
@@ -318,12 +358,12 @@
     {
       "pr": "key4hep/k4ActsTracking#160",
       "url": "https://github.com/key4hep/k4ActsTracking/pull/160",
-      "reason": "Fixes the vertex linearizer configuration for ACTS master; mechanical API migration."
+      "reason": "Fixes vertex linearizer configuration with ACTS master while keeping compatibility; mechanical API migration."
     },
     {
       "pr": "key4hep/k4EDM4hep2LcioConv#138",
       "url": "https://github.com/key4hep/k4EDM4hep2LcioConv/pull/138",
-      "reason": "Puts test and standalone-converter helpers into unnamed namespaces and fixes mismatched declarations; code cleanup."
+      "reason": "Uses unnamed namespaces in tests and the standalone converter, fixing mismatched test declarations; code cleanup."
     },
     {
       "pr": "key4hep/key4hep-dev-utils#40",
@@ -333,47 +373,47 @@
     {
       "pr": "key4hep/key4hep-actions#56",
       "url": "https://github.com/key4hep/key4hep-actions/pull/56",
-      "reason": "Uses LCG nightlies instead of Spack for downstream builds; CI change."
+      "reason": "Switches downstream builds to LCG nightlies instead of Spack; CI change."
     },
     {
       "pr": "key4hep/key4hep-actions#63",
       "url": "https://github.com/key4hep/key4hep-actions/pull/63",
-      "reason": "Replaces Ubuntu 24 nightly testing with AlmaLinux 10/GCC 16; CI change."
+      "reason": "Replaces Ubuntu 24 nightly testing with AlmaLinux 10 and GCC 16; CI change."
     },
     {
       "pr": "key4hep/k4Bench#297",
       "url": "https://github.com/key4hep/k4Bench/pull/297",
-      "reason": "Skips half-built LCG views and tolerates undecodable benchmark output; CI change."
+      "reason": "Skips half-built LCG views and tolerates undecodable benchmark output; CI robustness."
     },
     {
-      "pr": "HEP-FCC/FCC-config#411",
+      "pr": "hep-fcc/FCC-config#411",
       "url": "https://github.com/HEP-FCC/FCC-config/pull/411",
-      "reason": "Sets EmbeddingCoordinates explicitly to 3 for GGTFTrackFinder in ALLEGRO and IDEA, matching the existing default; configuration tweak."
+      "reason": "Sets EmbeddingCoordinates explicitly to 3 for GGTFTrackFinder in ALLEGRO and IDEA steering; matches the existing default, lower priority."
     },
     {
       "pr": "AIDASoft/DD4hep#1716",
       "url": "https://github.com/AIDASoft/DD4hep/pull/1716",
-      "reason": "Creates sensitive detectors in a reproducible order, so hit collection IDs are stable between runs; lower priority."
+      "reason": "Creates sensitive detectors in a reproducible order, stabilising hit collection IDs between runs; lower priority."
     },
     {
       "pr": "AIDASoft/DD4hep#1715",
       "url": "https://github.com/AIDASoft/DD4hep/pull/1715",
-      "reason": "Makes MultipoleField initialisation thread-safe with std::call_once; lower priority."
+      "reason": "Uses std::call_once for thread-safe MultipoleField initialisation; lower priority."
     },
     {
       "pr": "AIDASoft/podio#1084",
       "url": "https://github.com/AIDASoft/podio/pull/1084",
-      "reason": "Puts tool and test helpers into unnamed namespaces and enables misc-use-internal-linkage; linting."
+      "reason": "Uses unnamed namespaces in tools and tests and enables misc-use-internal-linkage; linting."
     },
     {
       "pr": "AIDASoft/podio#1083",
       "url": "https://github.com/AIDASoft/podio/pull/1083",
-      "reason": "Moves MurmurHash3 into podio::detail and hides file-local helpers; code cleanup."
+      "reason": "Moves MurmurHash3 into podio::detail and hides file-local helpers from libpodio exports; code cleanup."
     },
     {
       "pr": "PandoraPFAOrg/PandoraSDK#35",
       "url": "https://github.com/PandoraPFAOrg/PandoraSDK/pull/35",
-      "reason": "Replaces Pandora status-code macros with shorter, more specific ones and adds XML helpers; code cleanup."
+      "reason": "Shortens and specialises PandoraSDK status and XML helper macros; internal refactor."
     },
     {
       "pr": "key4hep/EDM4hep#558",
@@ -383,22 +423,22 @@
     {
       "pr": "key4hep/k4FWCore#455",
       "url": "https://github.com/key4hep/k4FWCore/pull/455",
-      "reason": "Puts OverlayTiming and EfficiencyFilter helpers into unnamed namespaces; code cleanup."
+      "reason": "Uses unnamed namespaces for helpers in OverlayTiming and EfficiencyFilter; code cleanup."
     },
     {
       "pr": "key4hep/key4hep-spack#950",
       "url": "https://github.com/key4hep/key4hep-spack/pull/950",
-      "reason": "Detects EL10 and drops GCC 14 in the nightlies setup script; environment setup change."
+      "reason": "Detects EL10 and drops GCC 14 in the LCG nightly setup script; environment tooling."
     },
     {
       "pr": "key4hep/k4RecCalorimeter#303",
       "url": "https://github.com/key4hep/k4RecCalorimeter/pull/303",
-      "reason": "Puts MergeSumAndSort into an unnamed namespace; code cleanup."
+      "reason": "Uses an unnamed namespace for MergeSumAndSort; code cleanup."
     },
     {
       "pr": "key4hep/k4EDM4hep2LcioConv#137",
       "url": "https://github.com/key4hep/k4EDM4hep2LcioConv/pull/137",
-      "reason": "Removes a leftover convEventHeader definition; minor cleanup."
+      "reason": "Removes a leftover definition of convEventHeader; code cleanup."
     },
     {
       "pr": "key4hep/key4hep-dev-utils#25",
@@ -408,47 +448,12 @@
     {
       "pr": "key4hep/k4MLJetTagger#17",
       "url": "https://github.com/key4hep/k4MLJetTagger/pull/17",
-      "reason": "Puts a file-local helper into an unnamed namespace; code cleanup."
+      "reason": "Uses an unnamed namespace for findMCPIDfromHiggsDaughters; code cleanup."
     },
     {
-      "pr": "AIDASoft/podio#1082",
-      "url": "https://github.com/AIDASoft/podio/pull/1082",
-      "reason": "RNTupleReader reads only requested collections and caches views, giving about 5x faster reading and requiring ROOT 6.34; lower priority."
-    },
-    {
-      "pr": "key4hep/k4Opt#139",
-      "url": "https://github.com/key4hep/k4Opt/pull/139",
-      "reason": "Dependabot bump of pandas."
-    },
-    {
-      "pr": "key4hep/k4Opt#138",
-      "url": "https://github.com/key4hep/k4Opt/pull/138",
-      "reason": "Dependabot bump of filelock."
-    },
-    {
-      "pr": "key4hep/k4Opt#140",
-      "url": "https://github.com/key4hep/k4Opt/pull/140",
-      "reason": "Dependabot bump of streamlit."
-    },
-    {
-      "pr": "key4hep/k4Opt#136",
-      "url": "https://github.com/key4hep/k4Opt/pull/136",
-      "reason": "Dependabot bump of virtualenv."
-    },
-    {
-      "pr": "key4hep/k4Opt#141",
-      "url": "https://github.com/key4hep/k4Opt/pull/141",
-      "reason": "Dependabot bump of the ruff pre-commit hook."
-    },
-    {
-      "pr": "key4hep/k4Opt#135",
-      "url": "https://github.com/key4hep/k4Opt/pull/135",
-      "reason": "Dependabot bump of docker/login-action."
-    },
-    {
-      "pr": "key4hep/k4Opt#137",
-      "url": "https://github.com/key4hep/k4Opt/pull/137",
-      "reason": "Dependabot bump of click."
+      "pr": "hep-fcc/FCC-config#419",
+      "url": "https://github.com/HEP-FCC/FCC-config/pull/419",
+      "reason": "Comments out the duplicated Particle collection in the IDEA and CLD Delphes EDM4hep output cards; lower priority."
     }
   ],
   "usage": {
@@ -456,12 +461,12 @@
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "inference_geo": "us",
-    "input_tokens": 58388,
-    "output_tokens": 10950,
-    "output_tokens_details": "OutputTokensDetails(thinking_tokens=3378)",
+    "input_tokens": 59103,
+    "output_tokens": 13486,
+    "output_tokens_details": "OutputTokensDetails(thinking_tokens=5627)",
     "server_tool_use": null,
     "service_tier": "standard",
     "speed": "standard"
   },
-  "cost_usd": 0.452552
+  "cost_usd": 0.506132
 }
