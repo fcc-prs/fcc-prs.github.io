@@ -13,23 +13,12 @@
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 690,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/690'>[IDEA] Set parallelWorld to disconnected in order to avoid material overlap during simulation and reconstruction</a>",
-            "author": "andread3vita",
-            "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 693,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/693'>Remove obsolete example files</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -51,18 +40,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 679,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/679'>Add extension (LayeredCalorimeterData) for Grainita ECAL barrel</a>",
-            "author": "qwert2333",
-            "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +62,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +73,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -106,7 +84,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -117,7 +95,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -128,7 +106,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -139,6 +117,28 @@
             "author": "tmadlener",
             "createdAt": "2025-05-05",
             "updatedAt": "2026-08-05",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 564,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/564'>Require C++23 for EDM4hep</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-23",
+            "updatedAt": "2026-11-23",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
+            "num": 563,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/563'>Remove leftover commented ExtraCode that is no longer relevant</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-23",
+            "updatedAt": "2026-11-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -237,9 +237,20 @@
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/459'>Fix inconsistent overlay ToF correction</a>",
             "author": "madbaron",
             "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-20",
+            "updatedAt": "2026-11-23",
             "mergeOk": "yes",
             "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4FWCore",
+            "num": 460,
+            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/460'>Migrate k4FWCore to C++23</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-23",
+            "updatedAt": "2026-11-23",
+            "mergeOk": "yes",
+            "labels": "",
             "assignees": ""
         },
         {
@@ -464,22 +475,11 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
-            "num": 73,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/73'>GenAlg/VertexSmearing: seed vertex smearing per-event via UniqueIDGenSvc</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-22",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Gen",
             "num": 70,
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/70'>PythiaInterface: print statistics once at finalize, not per event</a>",
             "author": "kjvbrt",
             "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-22",
+            "updatedAt": "2026-11-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -490,7 +490,18 @@
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/72'>HepMCFileWriter/Reader: add gzip and ROOT-tree in/output formats</a>",
             "author": "kjvbrt",
             "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-19",
+            "updatedAt": "2026-11-23",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 73,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/73'>GenAlg/VertexSmearing: seed vertex smearing per-event via UniqueIDGenSvc</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-17",
+            "updatedAt": "2026-11-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -640,11 +651,11 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 169,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/169'>Match seed hits by handle instead of ObjectID</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-20",
-            "updatedAt": "2026-11-22",
+            "num": 172,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/172'>Implement SeededMetricLearning model and additional seed inputs for GNNTrackFinder</a>",
+            "author": "Baucki1",
+            "createdAt": "2026-11-23",
+            "updatedAt": "2026-11-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -655,7 +666,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/162'>New options for cc-and-walk</a>",
             "author": "madbaron",
             "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-22",
+            "updatedAt": "2026-11-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -667,7 +678,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -678,7 +689,7 @@
             "author": "madbaron",
             "createdAt": "2026-11-20",
             "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -689,7 +700,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -700,7 +711,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -711,7 +722,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -722,7 +733,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -744,7 +755,7 @@
             "author": "jburzy",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -755,7 +766,7 @@
             "author": "jburzy",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -766,7 +777,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -777,7 +788,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -788,7 +799,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -843,6 +854,17 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-01",
             "updatedAt": "2026-11-15",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-dev-utils",
+            "num": 46,
+            "title": "<a href='https://github.com/key4hep/key4hep-dev-utils/pull/46'>Require C++23 in the shared CMake defaults</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-23",
+            "updatedAt": "2026-11-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1185,6 +1207,17 @@
             "createdAt": "2024-07-16",
             "updatedAt": "2024-07-16",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Reco",
+            "num": 83,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/83'>Run BIBUtils C++ unit tests with Catch2</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-23",
+            "updatedAt": "2026-11-23",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1542,11 +1575,11 @@
         },
         {
             "repo": "key4hep/<br>KKMCee",
-            "num": 1,
-            "title": "<a href='https://github.com/key4hep/KKMCee/pull/1'>Added AlmaLinux 10 to the workflows actions matrix.</a>",
-            "author": "JacekHoleczek",
-            "createdAt": "2026-11-20",
-            "updatedAt": "2026-11-20",
+            "num": 2,
+            "title": "<a href='https://github.com/key4hep/KKMCee/pull/2'>Use the direct Gaussian mapping for the beam energy spread</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-23",
+            "updatedAt": "2026-11-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1580,7 +1613,7 @@
             "author": "michmx",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-13",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1602,7 +1635,7 @@
             "author": "ianna",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-12",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1613,7 +1646,7 @@
             "author": "ianna",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-12",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1624,7 +1657,7 @@
             "author": "ianna",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-12",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1635,7 +1668,7 @@
             "author": "ianna",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-12",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1646,7 +1679,7 @@
             "author": "ianna",
             "createdAt": "2026-10-08",
             "updatedAt": "2026-11-12",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1657,7 +1690,7 @@
             "author": "michmx",
             "createdAt": "2026-09-04",
             "updatedAt": "2026-10-30",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "enhancement",
             "assignees": ""
         },
@@ -1668,7 +1701,7 @@
             "author": "ianna",
             "createdAt": "2026-10-08",
             "updatedAt": "2026-10-08",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1679,7 +1712,7 @@
             "author": "apausa",
             "createdAt": "2026-09-29",
             "updatedAt": "2026-10-01",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
