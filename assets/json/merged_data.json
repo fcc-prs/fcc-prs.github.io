@@ -1,6 +1,195 @@
 {
-    "updated_at": "2026-11-22T13:55:25Z",
+    "updated_at": "2026-11-23T17:03:31Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 690,
+            "title": "[IDEA] Set parallelWorld to disconnected in order to avoid material overlap during simulation and reconstruction",
+            "url": "https://github.com/key4hep/k4geo/pull/690",
+            "author": "andread3vita",
+            "mergedAt": "2026-11-23",
+            "mergedBy": "BrieucF",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- Updated the `tracking_volume` in the parallel world geometry: changed the material from `Air` to `Vacuum` and set `connected` to `false` instead of `true`. This ensures the tracking volume is defined as a vacuum region and is no longer connected to the surrounding geometry.\r\n- Add `tracking_volume` to IDEA_o2_v01\r\n\r\nENDRELEASENOTES\r\n\r\nDear all,\r\nThis PR addresses the issue described [here](https://github.com/key4hep/k4geo/issues/687), where the parallel world geometry was affecting the reconstruction due to overlapping materials. The proposed changes aim to resolve this issue by correcting the material and connectivity settings of the tracking volume.\r\n\r\nCheers,  \r\nAndrea",
+            "diff": {
+                "additions": 40,
+                "deletions": 6,
+                "files": 4
+            },
+            "files": [
+                "FCCee/IDEA/compact/IDEA_o1_v03/IDEA_o1_v03.xml",
+                "FCCee/IDEA/compact/IDEA_o1_v04/IDEA_o1_v04.xml",
+                "FCCee/IDEA/compact/IDEA_o2_v01/IDEA_o2_v01.xml",
+                "FCCee/IDEA/compact/IDEA_o2_v01_CI/IDEA_o2_v01_CI.xml"
+            ],
+            "comments": [
+                {
+                    "author": "BrieucF",
+                    "body": "Shall we profit from this PR to add a comment about what `parallelworld_volume` does?"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "> Shall we profit from this PR to add a comment about what `parallelworld_volume` does?\r\n\r\n@armin-ilg could you help in this?"
+                },
+                {
+                    "author": "armin-ilg",
+                    "body": "> > Shall we profit from this PR to add a comment about what `parallelworld_volume` does?\r\n> \r\n> @armin-ilg could you help in this?\r\n\r\nIf I may, I would forward this question to @Zehvogel who likely understands better what it does."
+                },
+                {
+                    "author": "Zehvogel",
+                    "body": "> > > Shall we profit from this PR to add a comment about what `parallelworld_volume` does?\r\n> > \r\n> > \r\n> > @armin-ilg could you help in this?\r\n> \r\n> If I may, I would forward this question to @Zehvogel who likely understands better what it does.\r\n\r\nThere is not much to say? It introduces a volume \u2026"
+                },
+                {
+                    "author": "andread3vita",
+                    "body": "@BrieucF I have added a comment on the xml based on @Zehvogel's comment. Do you think we can merge this PR?"
+                }
+            ],
+            "comments_total": 5,
+            "reviews": [],
+            "reviews_total": 2
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 169,
+            "title": "Match seed hits by handle instead of ObjectID",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/169",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-23",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Hits at the same index in different collections can have identical `ObjectID`s before the collections are written. Use EDM4hep handles in `CKFTrackingFromSeedsAlg` and `GNNTrackFinder` so a seed cannot pick up another hit's measurement. This is the same failure mode as key4hep/k4DetectorPerformance#15.\n\nThe regression test checks both seed input types: four assertions fail with the old lookup, and all pass with the handle lookup. All 17 unit tests passed locally (and failed before the changes).\n\nBEGINRELEASENOTES\n - Fix seed hit matching in CKFTrackingFromSeedsAlg and GNNTrackFinder when hits come from multiple collections created in the same job.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 71,
+                "deletions": 27,
+                "files": 5
+            },
+            "files": [
+                "GNNTrackFinding/src/GNNTrackFinder.cpp",
+                "k4ActsTracking/include/k4ActsTracking/RunnerCommon.hxx",
+                "k4ActsTracking/src/components/CKFTrackingFromSeedsAlg.cpp",
+                "test/unittests/CMakeLists.txt",
+                "test/unittests/SeedHitTests.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "madbaron",
+                    "body": "scary stuff!"
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "I'll take the \ud83d\udc4d as a go ahead"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "KKMCee",
+            "num": 1,
+            "title": "Added AlmaLinux 10 to the workflows actions matrix.",
+            "url": "https://github.com/key4hep/KKMCee/pull/1",
+            "author": "JacekHoleczek",
+            "mergedAt": "2026-11-23",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\nAdded AlmaLinux 10 to the workflows actions matrix.\nENDRELEASENOTES",
+            "diff": {
+                "additions": 1,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/build.yml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "fcc-tutorials",
+            "num": 221,
+            "title": "Fix links to CERN and FNAL in prerequisites page",
+            "url": "https://github.com/HEP-FCC/fcc-tutorials/pull/221",
+            "author": "michmx",
+            "mergedAt": "2026-11-23",
+            "mergedBy": "michmx",
+            "labels": [],
+            "body": "Related to #183",
+            "diff": {
+                "additions": 2,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "1-first-steps/prerequisites.md"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "ALLEGRO",
+            "num": 68,
+            "title": "utils: add script to generate particle gun with several particles per event",
+            "url": "https://github.com/HEP-FCC/ALLEGRO/pull/68",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-11-23",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "generate_multiparticle_gun.py: Python reimplementation of the gun of the MLPF studies (D. Garcia, M. Selvaggi et al.). Creates a particle gun with several particles per event written as a HepMC3 ASCII file for ddsim (--inputFiles <file>.hepmc3), e.g. to produce \"particle soups\" for machine-learning reconstruction studies. It is a Python reimplementation of the gun used in the MLPF studies, with the same configuration file format and logic: number of particles uniform in a range, particle types drawn from a list of PDG codes, momentum uniform in log(p), and optionally the particles grouped in a cone around an axis drawn for each event, to mimic a jet. In addition it has a random seed, for reproducible productions, an optional uniform cos(theta) sampling (costheta_range), to cover the endcap\u2026",
+            "diff": {
+                "additions": 285,
+                "deletions": 0,
+                "files": 3
+            },
+            "files": [
+                "test/CMakeLists.txt",
+                "test/ctest_multiparticle_gun.sh",
+                "utils/generate_multiparticle_gun.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "PandoraPFAOrg",
+            "repo": "PandoraSDK",
+            "num": 43,
+            "title": "Address macro argument mismatch",
+            "url": "https://github.com/PandoraPFAOrg/PandoraSDK/pull/43",
+            "author": "AndyChappell",
+            "mergedAt": "2026-11-23",
+            "mergedBy": "AndyChappell",
+            "labels": [],
+            "body": "This PR addresses an issue that swapped parameters in the new Pandora macros.",
+            "diff": {
+                "additions": 37,
+                "deletions": 33,
+                "files": 7
+            },
+            "files": [
+                "include/Pandora/StatusCodes.h",
+                "src/Objects/OrderedCaloHitList.cc",
+                "src/Pandora/PandoraSettings.cc",
+                "src/Persistency/EventReadingAlgorithm.cc",
+                "src/Persistency/EventWritingAlgorithm.cc",
+                "src/Plugins/EnergyCorrectionsPlugin.cc",
+                "src/Plugins/ParticleIdPlugin.cc"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
         {
             "org": "key4hep",
             "repo": "EDM4hep",
@@ -326,9 +515,25 @@
                 {
                     "author": "Zehvogel",
                     "body": "\"I\" tried to use this locally, and it looks like the compensating solenoids are just silently ignored by dd4hep, as we miss the surrounding\r\n```xml\r\n<fields>\r\n...\r\n</fields>\r\n```\r\ntags here. :("
+                },
+                {
+                    "author": "k4bench-bot",
+                    "body": "<!-- k4bench-blame-comment:v1 suite=reco window=2026-11-20..2026-11-21 -->\n<!-- k4bench-blame-facts:b4c95c8bf7232f7c -->\n<!-- k4bench-blame-cumulative:v2 eNrFlEFLxDAQhf9Lzo00YQntUaoWoSKoeHBZhjQ7LsE0KUmprr_eCCqKsCxL096SIeGbNy8v6zU5b5rL-u4WHIMxX5GMvBUCxIqiKelOKSao64dYDtruDAJSYHmNj7HSyoBGW4zLDrdaWhh0hx\u2026"
+                },
+                {
+                    "author": "k4bench-bot",
+                    "body": "<!-- k4bench-blame-comment:v1 window=2026-11-20..2026-11-21 -->\n<!-- k4bench-blame-facts:d1b0a26fc089be27 -->\n<!-- k4bench-blame-cumulative:v2 eNrNm0tr21AUhP-L13axJ8XE26hpZcgirUOgDUHIyiER1gvJdvPzK5PQNi_5Jc3cTQjGMDPnnjjyHb6bm9704kvw1fPMgvVw1Ov3Hk_HwfjzwJLJ4D6KRuNBXizrl4vToH7Lr_k8sCidbN44DytL4szqX1MLs\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "> \"I\" tried to use this locally, and it looks like the compensating solenoids are just silently ignored by dd4hep, as we miss the surrounding\n> ```xml\n> <fields>\n> ...\n> </fields>\n> ```\n> tags here. :(\n\nSo there is no compensating solenoidal fields at the moment, i.e. we only have the main solenoida\u2026"
+                },
+                {
+                    "author": "ueinhaus",
+                    "body": "> \"I\" tried to use this locally, and it looks like the compensating solenoids are just silently ignored by dd4hep, as we miss the surrounding\r\n> \r\n> ```\r\n> <fields>\r\n> ...\r\n> </fields>\r\n> ```\r\n> \r\n> tags here. :(\r\n\r\nThanks for spotting that! That's a bit embarassing, but at least explains why I didn\u2026"
                 }
             ],
-            "comments_total": 8,
+            "comments_total": 12,
             "reviews": [
                 {
                     "author": "tmadlener",
@@ -518,9 +723,13 @@
                 {
                     "author": "tmadlener",
                     "body": "I suppose we need this, to fix some of the CI failures which now report a difference between Marlin and the version of ConformalTracking here?\n\nSee, e.g. https://github.com/key4hep/k4Reco/actions/runs/44703624137/job/136177697938?pr=81"
+                },
+                {
+                    "author": "k4bench-bot",
+                    "body": "<!-- k4bench-blame-comment:v1 suite=reco window=2026-11-20..2026-11-21 -->\n<!-- k4bench-blame-facts:8ac1dcda0bb2594f -->\n<!-- k4bench-blame-cumulative:v2 eNrFlFFLwzAQx79LnhtpjlHaR6lahIqg4oNjHGl3jmCalKRW56c3EwV9GW6s6VOSI-GX_939b7lk53V9Wd3dohU4pguWsPc8w2zBSRd807Yi47YfQtgrs9GExFGkFT2GSCM9aWUobDtaK2lwUB\u2026"
                 }
             ],
-            "comments_total": 1,
+            "comments_total": 2,
             "reviews": [],
             "reviews_total": 1
         },
@@ -2987,37 +3196,6 @@
         {
             "org": "AIDASoft",
             "repo": "DD4hep",
-            "num": 1716,
-            "title": "fix(DDG4): create sensitive detectors in reproducible order",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1716",
-            "author": "wdconinc",
-            "mergedAt": "2026-11-17",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "`Geant4GeometryInfo::sensitives` is a `std::map` keyed on `SensitiveDetector` handles, which are [compared by pointer](https://github.com/AIDASoft/DD4hep/blob/7693cca27dd057bb22414c86b95fedbab49f6ae5/DDCore/include/DD4hep/Handle.h#L118). Iterating it in `Geant4DetectorSensitivesConstruction` made the `G4SDManager` registration order, and hence the hit collection IDs, depend on heap addresses. When several detectors share a readout, their hits are concatenated in this order in the output, so it changed between otherwise identical runs.\n\nThis PR records the sensitive detectors in order of first appearance during geometry conversion (deterministic traversal of `GeoHandler` volumes) in `sensitivesByCreationOrder`, and uses it to create the sensitive detectors and to print them.\n\nThis PR elects\u2026",
-            "diff": {
-                "additions": 14,
-                "deletions": 6,
-                "files": 3
-            },
-            "files": [
-                "DDG4/include/DDG4/Geant4GeometryInfo.h",
-                "DDG4/plugins/Geant4DetectorSensitivesConstruction.cpp",
-                "DDG4/src/Geant4Converter.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u20021d 0h 23m 51s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 47828907.\n\n[test-results]:data:application/gzip;base64,H4sIAM418moC/12Nyw7CIBQFf6Vh7aK85OLPGJ4JsS2Gwqrx36VEW3Q5c5I5G/Jhciu6DRguA1pLyCfZklQOcakMAiiuqq5536ngX7qvxZh/\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 4
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
             "num": 1715,
             "title": "DDCore: use std::call_once for threadsafe MultipoleField initialization",
             "url": "https://github.com/AIDASoft/DD4hep/pull/1715",
@@ -3071,11 +3249,62 @@
                 {
                     "author": "andresailer",
                     "body": "For me this is clearer to have this (flag and intialize) close together, and not have the initialize call in Compact2Objects(?), but if everything else has the initialize in Compact2Objects than it gets also confusing."
+                },
+                {
+                    "author": "k4bench-bot",
+                    "body": "<!-- k4bench-blame-comment:v1 window=2026-11-16..2026-11-20 -->\n<!-- k4bench-blame-facts:dab2a667fc57954a -->\n<!-- k4bench-blame-cumulative:v2 eNrNnV1v2lgURf8Lz2EEm1GUvoZJx5H60BmiSjNVhQi5Sq2YD9kk7c8fOiSACQET8F73pWqjSPvY63BF42zW16-N609_9D92uyH0n1rtxlnj58V5__z3Zsg-NO-Hw_Z5czKdzb88vejPv-Xf29t-GI4-_PrG2\u2026"
+                },
+                {
+                    "author": "wdconinc",
+                    "body": "The attribution looks right. libstdc++'s `std::call_once` has no inline fast path (4 TLS lookups plus a `pthread_once` call, about 7 ns in a microbenchmark), and ILD_FCCee is the only benchmarked detector that includes the 20 FCCee final-focus `MultipoleMagnet` fields (`MDI_o1_ShapeBased_v02_collect\u2026"
+                },
+                {
+                    "author": "MarkusFrankATcernch",
+                    "body": "Whats about the standard resolution of such cases:\r\n```\r\ntest = true;\r\n....\r\nif( test )  {\r\n  lock_guard<mutex> lock(init_mutex);\r\n  if( test )  {\r\n  .....\r\n    test = false;\r\n  }\r\n}\r\n```\r\nThis reduces all overhead to one single if after the first call and is thread safe as well.\r\nThe initialization\u2026"
+                },
+                {
+                    "author": "andresailer",
+                    "body": "Didn't we also have the solution that initialise is called by compact2objects, which would completely eliminate any overhead and just guarantee or at least assume the field is initialised?"
+                },
+                {
+                    "author": "wdconinc",
+                    "body": "> Didn't we also have the solution that initialise is called by compact2objects, which would completely eliminate any overhead and just guarantee or at least assume the field is initialised?\n\nI agree. Doing the full initialization up front is the best approach. I will find some time for that today."
                 }
             ],
-            "comments_total": 9,
+            "comments_total": 14,
             "reviews": [],
             "reviews_total": 1
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "DD4hep",
+            "num": 1716,
+            "title": "fix(DDG4): create sensitive detectors in reproducible order",
+            "url": "https://github.com/AIDASoft/DD4hep/pull/1716",
+            "author": "wdconinc",
+            "mergedAt": "2026-11-17",
+            "mergedBy": "andresailer",
+            "labels": [],
+            "body": "`Geant4GeometryInfo::sensitives` is a `std::map` keyed on `SensitiveDetector` handles, which are [compared by pointer](https://github.com/AIDASoft/DD4hep/blob/7693cca27dd057bb22414c86b95fedbab49f6ae5/DDCore/include/DD4hep/Handle.h#L118). Iterating it in `Geant4DetectorSensitivesConstruction` made the `G4SDManager` registration order, and hence the hit collection IDs, depend on heap addresses. When several detectors share a readout, their hits are concatenated in this order in the output, so it changed between otherwise identical runs.\n\nThis PR records the sensitive detectors in order of first appearance during geometry conversion (deterministic traversal of `GeoHandler` volumes) in `sensitivesByCreationOrder`, and uses it to create the sensitive detectors and to print them.\n\nThis PR elects\u2026",
+            "diff": {
+                "additions": 14,
+                "deletions": 6,
+                "files": 3
+            },
+            "files": [
+                "DDG4/include/DDG4/Geant4GeometryInfo.h",
+                "DDG4/plugins/Geant4DetectorSensitivesConstruction.cpp",
+                "DDG4/src/Geant4Converter.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u20021d 0h 23m 51s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 47828907.\n\n[test-results]:data:application/gzip;base64,H4sIAM418moC/12Nyw7CIBQFf6Vh7aK85OLPGJ4JsS2Gwqrx36VEW3Q5c5I5G/Jhciu6DRguA1pLyCfZklQOcakMAiiuqq5536ngX7qvxZh/\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 4
         },
         {
             "org": "AIDASoft",
@@ -3461,80 +3690,6 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCC-config",
-            "num": 419,
-            "title": "Comment out Particle in the IDEA and CLD EDM4hep output cards",
-            "url": "https://github.com/HEP-FCC/FCC-config/pull/419",
-            "author": "kjvbrt",
-            "mergedAt": "2026-11-16",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "In the Gaudi path (`k4SimDelphesAlg`) `Particle` duplicates the input `GenParticles`, without parents, daughters or links (cf. key4hep/k4SimDelphes#174). The line is kept commented out, as the standalone executables need it.",
-            "diff": {
-                "additions": 4,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                "FCCee/Delphes/edm4hep_CLD.tcl",
-                "FCCee/Delphes/edm4hep_IDEA.tcl"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1082,
-            "title": "Read only the requested collections in the RNTupleReader",
-            "url": "https://github.com/AIDASoft/podio/pull/1082",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-16",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- `RNTupleReader` now only reads the fields of the requested collections. Collections whose fields cannot be bound are skipped without reading any of their data, and are not retried for later entries.\n- Cache the RNTuple views of collections and Frame parameters per file. Reading is about 5x faster (20k events, 3 collections, 11 parameters: 565 ms \u2192 100 ms with a Release build).\n- Stop emulating unknown types when opening files, since the full model is not created anymore. The `datatypes_remove_type` schema evolution test now also runs for ROOT < 6.36.\n\nENDRELEASENOTES\n\nPreviously all fields were read with `LoadEntry`, also those of collections that were not requested. Now each collection is read through its own views, which are created once per file and rebound to new bu\u2026",
-            "diff": {
-                "additions": 196,
-                "deletions": 87,
-                "files": 11
-            },
-            "files": [
-                ".cppcheck-suppressions.txt",
-                ".github/workflows/key4hep.yml",
-                "CMakeLists.txt",
-                "README.md",
-                "include/podio/RNTupleReader.h",
-                "src/RNTupleReader.cc",
-                "tests/schema_evolution/code_gen/CMakeLists.txt",
-                "tests/schema_evolution/code_gen/datatypes_new_relation/check.cpp",
-                "tests/schema_evolution/code_gen/datatypes_rename_relation/check.cpp",
-                "tests/schema_evolution/code_gen/datatypes_rename_relation/new.yaml",
-                "tests/schema_evolution/code_gen/datatypes_rename_relation/old.yaml"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "> Looks good. One question and some nitpicking below.\n> \n> I am not sure if I am a huge fan of abusing the schema evolution tests for checking RNTuple functionality. If there is an easy way to move those into the general I/O tests that would be nice, but if not we can also keep them where they are.\n\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I will merge this as is now, so that I can make a tag tomorrow morning. I think it's fine, resp. if there is a better way we can move tests in a follow up PR."
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Looks good. One question and some nitpicking below.\n\nI am not sure if I am a huge fan of abusing the schema evolution tests for checking RNTuple functionality. If there is an easy way to move those into the general I/O tests that would be nice, but if not we can also keep them where they are."
-                }
-            ],
-            "reviews_total": 4
         }
     ]
 }
