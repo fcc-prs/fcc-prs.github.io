@@ -2,6 +2,17 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 694,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/694'>Bug fix to #681</a>",
+            "author": "ueinhaus",
+            "createdAt": "2026-11-23",
+            "updatedAt": "2026-11-23",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 688,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/688'>[IDEA] return field in the muon-system iron (barrel Bz, endcap Br), simplified from the IDEA FEM field map</a>",
             "author": "mahmoudali2",
@@ -18,7 +29,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -40,7 +51,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -62,7 +73,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-07-13",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -73,7 +84,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +95,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +106,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -106,7 +117,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -475,19 +486,8 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
-            "num": 70,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/70'>PythiaInterface: print statistics once at finalize, not per event</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Gen",
             "num": 72,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/72'>HepMCFileWriter/Reader: add gzip and ROOT-tree in/output formats</a>",
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/72'>HepMCFileWriter/Reader: add ROOT-tree output format</a>",
             "author": "kjvbrt",
             "createdAt": "2026-11-17",
             "updatedAt": "2026-11-23",
@@ -524,7 +524,7 @@
             "author": "kjvbrt",
             "createdAt": "2024-04-04",
             "updatedAt": "2025-03-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -534,7 +534,18 @@
             "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/292'>Use of shared cache in CreatePositionedCaloCells</a>",
             "author": "davidlange6",
             "createdAt": "2026-10-22",
-            "updatedAt": "2026-11-18",
+            "updatedAt": "2026-11-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 305,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/305'>createTopoCluster: Reduce use of maps.  Some clean up.</a>",
+            "author": "scott-snyder",
+            "createdAt": "2026-11-23",
+            "updatedAt": "2026-11-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -651,6 +662,17 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
+            "num": 143,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/143'>Add material designation and a material map for CLD</a>",
+            "author": "Zehvogel",
+            "createdAt": "2026-11-10",
+            "updatedAt": "2026-11-23",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
             "num": 172,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/172'>Implement SeededMetricLearning model and additional seed inputs for GNNTrackFinder</a>",
             "author": "Baucki1",
@@ -678,7 +700,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -689,7 +711,7 @@
             "author": "madbaron",
             "createdAt": "2026-11-20",
             "updatedAt": "2026-11-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -700,7 +722,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -711,7 +733,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -722,7 +744,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -733,7 +755,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-20",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -755,7 +777,7 @@
             "author": "jburzy",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -766,7 +788,7 @@
             "author": "jburzy",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -777,7 +799,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -788,7 +810,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -799,17 +821,6 @@
             "author": "jbeirer",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 143,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/143'>Add material designation and a material map for CLD</a>",
-            "author": "Zehvogel",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-18",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -952,7 +963,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecTracker/pull/124'>Update to the TrackMerger to use best matches and cover full angle</a>",
             "author": "ueinhaus",
             "createdAt": "2026-11-06",
-            "updatedAt": "2026-11-20",
+            "updatedAt": "2026-11-23",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2257,23 +2268,12 @@
         },
         {
             "repo": "hep-fcc/<br>ALLEGRO",
-            "num": 68,
-            "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/68'>utils: add script to generate particle gun with several particles per event</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-11-20",
-            "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>ALLEGRO",
             "num": 63,
             "title": "<a href='https://github.com/HEP-FCC/ALLEGRO/pull/63'>Import TRAPPIST docs</a>",
             "author": "jacofan",
             "createdAt": "2026-10-16",
             "updatedAt": "2026-11-06",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
