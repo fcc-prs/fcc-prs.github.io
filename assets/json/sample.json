@@ -2,11 +2,22 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 694,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/694'>Bug fix to #681</a>",
-            "author": "ueinhaus",
-            "createdAt": "2026-11-23",
-            "updatedAt": "2026-11-23",
+            "num": 684,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/684'>Require DD4hep 1.39</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-10",
+            "updatedAt": "2026-11-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
+            "num": 685,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/685'>[ALLEGRO][IDEA] Reduce the world volume to the detector extent plus 50 cm</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-11-11",
+            "updatedAt": "2026-11-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -28,28 +39,6 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/693'>Remove obsolete example files</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 685,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/685'>[ALLEGRO][IDEA] Reduce the world volume to the detector extent plus 50 cm</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-11",
-            "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 684,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/684'>Require DD4hep 1.39</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-10",
             "updatedAt": "2026-11-19",
             "mergeOk": "yes",
             "labels": "",
@@ -134,6 +123,17 @@
         },
         {
             "repo": "key4hep/<br>EDM4hep",
+            "num": 536,
+            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/536'>Add TrackAtVertex and relate it to Vertex</a>",
+            "author": "jbeirer",
+            "createdAt": "2026-10-23",
+            "updatedAt": "2026-11-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>EDM4hep",
             "num": 564,
             "title": "<a href='https://github.com/key4hep/EDM4hep/pull/564'>Require C++23 for EDM4hep</a>",
             "author": "jmcarcell",
@@ -150,17 +150,6 @@
             "author": "tmadlener",
             "createdAt": "2026-11-23",
             "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>EDM4hep",
-            "num": 536,
-            "title": "<a href='https://github.com/key4hep/EDM4hep/pull/536'>Add TrackAtVertex and relate it to Vertex</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-23",
-            "updatedAt": "2026-11-19",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -244,23 +233,12 @@
         },
         {
             "repo": "key4hep/<br>k4FWCore",
-            "num": 459,
-            "title": "<a href='https://github.com/key4hep/k4FWCore/pull/459'>Fix inconsistent overlay ToF correction</a>",
-            "author": "madbaron",
-            "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
-            "labels": "bug",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4FWCore",
             "num": 460,
             "title": "<a href='https://github.com/key4hep/k4FWCore/pull/460'>Migrate k4FWCore to C++23</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-23",
             "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -381,7 +359,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-16",
             "updatedAt": "2026-11-17",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -392,7 +370,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -453,28 +431,6 @@
         },
         {
             "repo": "key4hep/<br>k4SimDelphes",
-            "num": 177,
-            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/177'>Make the MCParticle parent / daughter relations consistent</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-11-14",
-            "updatedAt": "2026-11-17",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4SimDelphes",
-            "num": 173,
-            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/173'>Set mother/daughter indices on the Delphes input in convertToDelphesArrays</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-11-12",
-            "updatedAt": "2026-11-17",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4SimDelphes",
             "num": 31,
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/31'>Fix energy</a>",
             "author": "clementhelsens",
@@ -486,22 +442,11 @@
         },
         {
             "repo": "key4hep/<br>k4Gen",
-            "num": 72,
-            "title": "<a href='https://github.com/key4hep/k4Gen/pull/72'>HepMCFileWriter/Reader: add ROOT-tree output format</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4Gen",
             "num": 73,
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/73'>GenAlg/VertexSmearing: seed vertex smearing per-event via UniqueIDGenSvc</a>",
             "author": "kjvbrt",
             "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-23",
+            "updatedAt": "2026-11-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -524,17 +469,6 @@
             "author": "kjvbrt",
             "createdAt": "2024-04-04",
             "updatedAt": "2025-03-24",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecCalorimeter",
-            "num": 292,
-            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/292'>Use of shared cache in CreatePositionedCaloCells</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-10-22",
-            "updatedAt": "2026-11-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -545,40 +479,7 @@
             "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/305'>createTopoCluster: Reduce use of maps.  Some clean up.</a>",
             "author": "scott-snyder",
             "createdAt": "2026-11-23",
-            "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecCalorimeter",
-            "num": 302,
-            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/302'>Create truth links backscatter in same cluster</a>",
-            "author": "dudarboh",
-            "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-16",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecCalorimeter",
-            "num": 301,
-            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/301'>Create truth links several sim hits per calo hit</a>",
-            "author": "dudarboh",
-            "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-16",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecCalorimeter",
-            "num": 300,
-            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/300'>Create truth links sim hit in several calo hits</a>",
-            "author": "dudarboh",
-            "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-16",
+            "updatedAt": "2026-11-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -589,18 +490,51 @@
             "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/299'>Create truth links originator of tracker born particles</a>",
             "author": "dudarboh",
             "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-16",
+            "updatedAt": "2026-11-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4RecCalorimeter",
-            "num": 298,
-            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/298'>Add CreateTruthLinks test for 27 synthetic cases</a>",
+            "num": 302,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/302'>Create truth links backscatter in same cluster</a>",
             "author": "dudarboh",
             "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-16",
+            "updatedAt": "2026-11-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 301,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/301'>Create truth links several sim hits per calo hit</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 300,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/300'>Create truth links sim hit in several calo hits</a>",
+            "author": "dudarboh",
+            "createdAt": "2026-11-16",
+            "updatedAt": "2026-11-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4RecCalorimeter",
+            "num": 292,
+            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/292'>Use of shared cache in CreatePositionedCaloCells</a>",
+            "author": "davidlange6",
+            "createdAt": "2026-10-22",
+            "updatedAt": "2026-11-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -623,7 +557,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -662,11 +596,33 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 143,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/143'>Add material designation and a material map for CLD</a>",
-            "author": "Zehvogel",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-23",
+            "num": 176,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/176'>chore: Split the checking for warnings into a separate job for the ACTS master workflow</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-24",
+            "updatedAt": "2026-11-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 173,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/173'>first attempt at full luxe tracking</a>",
+            "author": "madbaron",
+            "createdAt": "2026-11-24",
+            "updatedAt": "2026-11-24",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 170,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/170'>Split telescope tracking out of CKFTrackingAlg into TelescopeCKFTrackingAlg</a>",
+            "author": "madbaron",
+            "createdAt": "2026-11-20",
+            "updatedAt": "2026-11-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -678,18 +634,7 @@
             "author": "Baucki1",
             "createdAt": "2026-11-23",
             "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 162,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/162'>New options for cc-and-walk</a>",
-            "author": "madbaron",
-            "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -700,18 +645,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 170,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/170'>Split telescope tracking out of CKFTrackingAlg into TelescopeCKFTrackingAlg</a>",
-            "author": "madbaron",
-            "createdAt": "2026-11-20",
-            "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -722,7 +656,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -733,29 +667,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 164,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/164'>VertexFindingAlg: use the public EDM4hepUtil::readTrackState</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 154,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/154'>Give CLD's first outer-tracker barrel layer its own material receiver</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -766,7 +678,7 @@
             "author": "jburzy",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -777,7 +689,7 @@
             "author": "jburzy",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -788,7 +700,7 @@
             "author": "jburzy",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -799,7 +711,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -810,18 +722,7 @@
             "author": "jbeirer",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 144,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/144'>Attach endcap layer gaps towards the IP on both sides</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-10",
-            "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1585,17 +1486,6 @@
             "assignees": ""
         },
         {
-            "repo": "key4hep/<br>KKMCee",
-            "num": 2,
-            "title": "<a href='https://github.com/key4hep/KKMCee/pull/2'>Use the direct Gaussian mapping for the beam energy spread</a>",
-            "author": "kjvbrt",
-            "createdAt": "2026-11-23",
-            "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>FCCSW",
             "num": 491,
             "title": "<a href='https://github.com/HEP-FCC/FCCSW/pull/491'>Fix tests.</a>",
@@ -1894,22 +1784,22 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 557,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>[WIP] Consolidate input resolution between the runner and grid submission</a>",
-            "author": "bndikt",
-            "createdAt": "2026-09-16",
-            "updatedAt": "2026-11-20",
+            "num": 575,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/575'>[pre-edm4hep1] V0 finders: start the two-track fit at the crossing points of the track circles</a>",
+            "author": "defranchis",
+            "createdAt": "2026-10-20",
+            "updatedAt": "2026-11-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 564,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/564'>[pre-edm4hep1] Vertexing: fix out-of-bounds reads, uninitialised fields, the SV pointing angle and fits with a dropped track</a>",
-            "author": "defranchis",
-            "createdAt": "2026-10-13",
-            "updatedAt": "2026-11-18",
+            "num": 557,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/557'>Consolidate input resolution between the runner and grid submission</a>",
+            "author": "bndikt",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-11-24",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1933,17 +1823,6 @@
             "createdAt": "2022-04-22",
             "updatedAt": "2026-10-26",
             "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 575,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/575'>[pre-edm4hep1] V0 finders: start the two-track fit at the crossing points of the track circles</a>",
-            "author": "defranchis",
-            "createdAt": "2026-10-20",
-            "updatedAt": "2026-10-20",
-            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2273,7 +2152,18 @@
             "author": "jacofan",
             "createdAt": "2026-10-16",
             "updatedAt": "2026-11-06",
-            "mergeOk": "no",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>fcc-drs",
+            "num": 132,
+            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/132'>Update dependency marked to v18.3.0</a>",
+            "author": "renovate",
+            "createdAt": "2026-11-02",
+            "updatedAt": "2026-11-24",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2306,17 +2196,6 @@
             "author": "renovate",
             "createdAt": "2026-11-20",
             "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>fcc-drs",
-            "num": 132,
-            "title": "<a href='https://github.com/HEP-FCC/fcc-drs/pull/132'>Update dependency marked to v18.2.1</a>",
-            "author": "renovate",
-            "createdAt": "2026-11-02",
-            "updatedAt": "2026-11-17",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
