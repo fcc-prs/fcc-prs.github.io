@@ -1956,7 +1956,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/issues/164'>Bugs in the conversion of parent/daughter relations of MCParticles</a>",
             "author": "Zehvogel",
             "createdAt": "2026-10-14",
-            "updatedAt": "2026-11-14",
+            "updatedAt": "2026-11-24",
             "labels": "",
             "assignees": ""
         },
@@ -2356,8 +2356,18 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/158'>Merge order of the open CLD tracking PRs and when to regenerate the material maps</a>",
             "author": "jbeirer",
             "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-20",
+            "updatedAt": "2026-11-24",
             "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 175,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/175'>Add tests that check whether the downloaded material maps still load</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-24",
+            "updatedAt": "2026-11-24",
+            "labels": "enhancement",
             "assignees": ""
         },
         {
@@ -4072,6 +4082,16 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 555,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/555'>Apply CLI overrides consistently to sample-based run settings</a>",
+            "author": "bndikt",
+            "createdAt": "2026-09-16",
+            "updatedAt": "2026-11-24",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 584,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/584'>Per-jet vertex finders: declare the per-jet track list inside the jet loop</a>",
             "author": "defranchis",
@@ -4217,16 +4237,6 @@
             "author": "bndikt",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 555,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/issues/555'>Apply CLI overrides consistently to sample-based run settings</a>",
-            "author": "bndikt",
-            "createdAt": "2026-09-16",
-            "updatedAt": "2026-09-16",
             "labels": "",
             "assignees": ""
         },
@@ -4676,7 +4686,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/issues/413'>Autumn2026: Software needs remaining for generators</a>",
             "author": "davidlange6",
             "createdAt": "2026-11-12",
-            "updatedAt": "2026-11-23",
+            "updatedAt": "2026-11-24",
             "labels": "",
             "assignees": ""
         },
@@ -4796,7 +4806,7 @@
             "title": "<a href='https://github.com/HEP-FCC/fcc-drs/issues/60'>Dependency Dashboard</a>",
             "author": "renovate",
             "createdAt": "2026-08-20",
-            "updatedAt": "2026-11-22",
+            "updatedAt": "2026-11-24",
             "labels": "",
             "assignees": ""
         },
