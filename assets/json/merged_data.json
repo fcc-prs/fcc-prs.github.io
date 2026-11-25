@@ -1,6 +1,351 @@
 {
-    "updated_at": "2026-11-24T16:52:23Z",
+    "updated_at": "2026-11-25T16:39:46Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 685,
+            "title": "[ALLEGRO][IDEA] Reduce the world volume to the detector extent plus 50 cm",
+            "url": "https://github.com/key4hep/k4geo/pull/685",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n- ALLEGRO_o1_v04, ALLEGRO_o2_v01, IDEA_o1_v04, IDEA_o2_v01: reduce the world volume from a cube of 25 m half-length to the extent of the outermost volumes plus a 50 cm margin.\r\n\r\nENDRELEASENOTES\r\n\r\n## Summary\r\n\r\nThe ALLEGRO and IDEA world volumes are cubes of 25 m half-length (50 m side), while the outermost volumes end at r = 5.0\u20135.6 m (muon system) and |z| = 6.0 m (beam pipe). The world is filled with air, the DD4hep default, and the solenoid return field, which is defined by `outer_radius` only, extends radially to the world edge for |z| < `zmax`. Particles leaving the detector thus cross up to 20 m of air in a \u22121 T (ALLEGRO) or \u22121.7 T (IDEA) field, in which charged particles can curl back into the detector.\r\n\r\nThis PR sets the world half-lengths to the extent of the \u2026",
+            "diff": {
+                "additions": 109,
+                "deletions": 28,
+                "files": 9
+            },
+            "files": [
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ALLEGRO_o1_v03.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v04/ALLEGRO_o1_v04.xml",
+                "FCCee/ALLEGRO/compact/ALLEGRO_o2_v01/ALLEGRO_o2_v01.xml",
+                "FCCee/IDEA/compact/IDEA_o1_v03/IDEA_o1_v03.xml",
+                "FCCee/IDEA/compact/IDEA_o1_v04/IDEA_o1_v04.xml",
+                "FCCee/IDEA/compact/IDEA_o2_v01/IDEA_o2_v01.xml",
+                "FCCee/IDEA/compact/IDEA_o2_v01_CI/IDEA_o2_v01_CI.xml",
+                "test/CMakeLists.txt",
+                "utils/world_extrusion_check.py"
+            ],
+            "comments": [
+                {
+                    "author": "jacofan",
+                    "body": "Hi @jbeirer, thanks, could you include also other ALLEGRO versions (AFAIK at least o1_v03 is still the baseline for most studies)? Also, perhaps we can move the block defining the world size after the `DectDimensions.xml` include and compute it from the largest extent of any volume in each direction\u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "> Hi @jbeirer, thanks, could you include also other ALLEGRO versions (AFAIK at least o1_v03 is still the baseline for most studies)? Also, perhaps we can move the block defining the world size after the `DectDimensions.xml` include and compute it from the largest extent of any volume in each directi\u2026"
+                },
+                {
+                    "author": "BrieucF",
+                    "body": "Thanks Joshua! If no one complains I'll merge tomorrow"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 4
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4geo",
+            "num": 693,
+            "title": "Remove obsolete example files",
+            "url": "https://github.com/key4hep/k4geo/pull/693",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "Closes #664.\n\nBEGINRELEASENOTES\n - Remove legacy simulation and reconstruction examples that are no longer referenced. Keep the steering files and visualization macro used by tests and scripts.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 0,
+                "deletions": 4347,
+                "files": 23
+            },
+            "files": [
+                "CaloTB/CaloTB_EPT_AHCAL/TBModel2015_steering.py",
+                "example/BCPhys.xml",
+                "example/BCSeq.xml",
+                "example/DDG4_sequences.xml",
+                "example/ced2go-template.xml",
+                "example/field.xml",
+                "example/gear_CLIC_o2_v01_dd4hep.xml",
+                "example/gear_ILD_o1_v05_ORG.xml",
+                "example/gear_ILD_o1_v05_dd4hep.xml",
+                "example/gps.mac",
+                "example/guineapig_to_lcio.py",
+                "example/gun.mac",
+                "example/ild_dd4hep_stdreco.xml",
+                "example/lcio_particle_gun.py",
+                "example/mcparticles.slcio",
+                "example/physics.xml",
+                "example/run.mac",
+                "example/run_refit.xml",
+                "example/run_refit_aidaTT.xml",
+                "example/run_sid_reco.xml",
+                "example/run_sitracking.xml",
+                "example/sequences.xml",
+                "example/simple_lcio.slcio"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "This looks reasonable to me. We might want to wait for a bit to see if there are objections."
+                },
+                {
+                    "author": "jmcarcell",
+                    "body": "One week has passed, merging"
+                }
+            ],
+            "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 165,
+            "title": "CLD_Vertexing.py: drop the track-uncertainty calibration",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/165",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "From #136: `CLD_Vertexing.py` enlarged CLD's track uncertainties (`TrackCovarianceScale` 1.08, `ImpactParameterErrorTerm` 1.8 \u00b5m) because the d0/z0 errors were too small at high momentum. The cause was in MarlinTrk and is fixed by iLCSoft/MarlinTrk#31, which is in the nightlies since 19 November. With the fix the calibration overcorrects, so this removes it. The two properties stay in `VertexFindingAlg` for other inputs.\n\nACTS AMVF with the CLD settings, on CLD tracks with MarlinTrk#31, vertexing test samples:\n\n| | without calibration | with calibration |\n|---|---|---|\n| \u00b5 gun (240 GeV): PV pulls x / z | 1.17 / 1.06 | 0.85 / 0.80 |\n| Z \u2192 bb: PV efficiency | 83.2 % | 82.3 % |\n| Z \u2192 bb: PV pulls x / z | 1.12 / 1.19 | 1.08 / 1.10 |\n| Z \u2192 uu/dd: PV pulls x / z | 1.06 / 1.07 | 0.96 / 0.94 |\n\nTh\u2026",
+            "diff": {
+                "additions": 0,
+                "deletions": 6,
+                "files": 1
+            },
+            "files": [
+                "test/options/CLD_Vertexing.py"
+            ],
+            "comments": [
+                {
+                    "author": "jbeirer",
+                    "body": "> I suppose we want to keep the properties as part of the algorighm even if we don't need them any more for CLD?\r\n\r\nYes, I would say so, I think those could come in handy in the future..."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "I suppose we want to keep the properties as part of the algorighm even if we don't need them any more for CLD?"
+                }
+            ],
+            "reviews_total": 2
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 156,
+            "title": "Add GreedyAmbiguityResolutionAlg",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/156",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n\n- New `GreedyAmbiguityResolutionAlg`: ACTS' `GreedyAmbiguityResolution` on an edm4hep track collection. The output is a subset collection.\n\nENDRELEASENOTES\n\nWhen several CKF branches or passes pick up the same hits, `ACTSDuplicateRemoval` compares tracks pairwise by their fraction of shared hits. ACTS' greedy ambiguity resolution looks at all tracks of the event at once: it removes the track with the largest fraction of shared hits (for equal fraction and hit count, the one with the higher \u03c7\u00b2/ndf) and repeats until no track shares more than `MaximumSharedHits` hits. This algorithm runs it on edm4hep tracks; hits are identified by their ObjectID, and \u03c7\u00b2 and ndf are taken from the track.\n\nProperties: `MaximumSharedHits` (default 0), `MaximumIterations`, `NMeasurementsMin` \u2026",
+            "diff": {
+                "additions": 330,
+                "deletions": 118,
+                "files": 6
+            },
+            "files": [
+                "k4ActsTracking/CMakeLists.txt",
+                "k4ActsTracking/src/components/GreedyAmbiguityResolutionAlg.cpp",
+                "test/CMakeLists.txt",
+                "test/options/ambiguity_resolution.py",
+                "test/scripts/ambiguity_resolution_tracks.py",
+                "test/scripts/duplicate_removal_tracks.py"
+            ],
+            "comments": [
+                {
+                    "author": "jbeirer",
+                    "body": "@tmadlener Added one: greedy_ambiguity_resolution runs the algorithm on five events of synthetic tracks (dummy hits, the track id in the type) and checks which tracks survive. The larger fraction of shared hits goes even with the better chi2/ndf, at equal fraction and length the larger chi2/ndf goes\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Sorry to be a such a pain here, but would it make sense to have the same inputs for the ACTSDuplicateRemoval and the greedy resolution here? That would document the potential difference in behavior and would also cut down on some of the currently introduced code duplication. It might be worth introd\u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "@tmadlener I agree that's better, should be done now"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Unless someone stops me, I would merge this soon, and rebase #157 to also get that merged still today, ideally."
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Is there an easy way to add a simple test for this? That would also immediately serve as documentation, I think."
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "This is very nice now, I think. Pretty much at the point where one could start completely over-engineering it and reading the cases from some input file ;). But let's not do that. I have really only two minor things left."
+                }
+            ],
+            "reviews_total": 6
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4PFHitML",
+            "num": 11,
+            "title": "Release unused ONNX Runtime arena memory after each inference call",
+            "url": "https://github.com/key4hep/k4PFHitML/pull/11",
+            "author": "davidlange6",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "herrmannlena",
+            "labels": [],
+            "body": "ONNX Runtime's CPU arena grows in power-of-two chunks to fit the largest activations seen and by default keeps that memory for the whole job. On CLD Z->inclusive events the clustering model alone makes it reserve ~1.9 GiB (512 MiB + 1 GiB + smaller chunks within the first ~150 events), which stays resident.\n\nAdd the OnnxArenaShrink property (default: on) that sets the run option memory.enable_memory_arena_shrinkage for this algorithm's sessions, so fully free chunks are returned after every Run(). Measured on 150 CLD Z->inclusive events (standalone PerformMLPF.py, 1 thread): peak RSS 3.74 -> 2.72 GB, PFHitML CPU time +1%, output bit-identical. \n\nAlso expose the intra-op thread count (OnnxIntraOpThreads, default 1, previously hard-coded) and add --onnx_intra_op_threads / --no_onnx_arena_shr\u2026",
+            "diff": {
+                "additions": 48,
+                "deletions": 11,
+                "files": 5
+            },
+            "files": [
+                "README.md",
+                "k4PF-HitML/options/PerformMLPF.py",
+                "k4PF-HitML/src/components/ONNXHelper.cpp",
+                "k4PF-HitML/src/components/ONNXHelper.h",
+                "k4PF-HitML/src/components/PFHitML.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 305,
+            "title": "chore(ci): remove the PR-Agent pull request review",
+            "url": "https://github.com/key4hep/k4Bench/pull/305",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The PR-Agent review (`review`, `describe` and `improve` on every pull request, on the self-hosted runners against the CERN AI gateway) has not been useful enough to keep, so this removes it.\n\n### What changes\n- Deleted: the `AI PR Review` workflow (`.github/workflows/ai-pr-review.yml`), its driver (`.github/scripts/ai_pr_review.py`, `.github/scripts/ai_pr_review.sh`), its configuration (`.pr_agent.toml`, `.github/ai-review-instructions.md`) and its tests (`tests/unit/test_ai_pr_review.py`).\n- The detector-bump PR checklist (`bump_detectors.py`), the comment in `detector-bump.yml` and the detector-bump section of `docs/reference/file-formats.md` no longer mention PR-Agent. Marking a bump draft ready for review now starts CI alone.\n\nThe regression-attribution model behind the blame PR commen\u2026",
+            "diff": {
+                "additions": 7,
+                "deletions": 575,
+                "files": 9
+            },
+            "files": [
+                ".github/ai-review-instructions.md",
+                ".github/scripts/ai_pr_review.py",
+                ".github/scripts/ai_pr_review.sh",
+                ".github/scripts/bump_detectors.py",
+                ".github/workflows/ai-pr-review.yml",
+                ".github/workflows/detector-bump.yml",
+                ".pr_agent.toml",
+                "docs/reference/file-formats.md",
+                "tests/unit/test_ai_pr_review.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 302,
+            "title": "feat(blame): review every pull request selected in one window in a single call",
+            "url": "https://github.com/key4hep/k4Bench/pull/302",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "When several pull requests are selected in one change window, the cross-configuration review used to run once per pull request: independent model calls over the same evidence, which can contradict each other.\n\nOn 2026-11-21, `k4geo#683` and `AIDASoft/DD4hep#1715` were both selected in the sim window 2026-11-16 \u2192 2026-11-20:\n\n- `k4geo#683`'s review said the ILD slowdowns \"align with \u2026 `AIDASoft/DD4hep#1715`\".\n- `AIDASoft/DD4hep#1715`'s own review, the same night and over the same 484 rows, scored it 4\u20136%, reasoning that `std::call_once` \"runs once per field instance\" (it runs on every field evaluation), and withdrew its comment.\n\nIt was posted correctly a night later. One reading of a window cannot both blame and clear the same change.\n\n### What changes\nNew module `k4bench/blame/joint_revie\u2026",
+            "diff": {
+                "additions": 1935,
+                "deletions": 10,
+                "files": 9
+            },
+            "files": [
+                "docs/user-guide/features/pr-comments.md",
+                "k4bench/blame/attribute.py",
+                "k4bench/blame/comment/build.py",
+                "k4bench/blame/comment/competitors.py",
+                "k4bench/blame/comment/digest.py",
+                "k4bench/blame/comment/render.py",
+                "k4bench/blame/comment/state.py",
+                "k4bench/blame/joint_review.py",
+                "tests/unit/test_blame_comment.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/302?dropdown=cover\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                }
+            ],
+            "comments_total": 9,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "ALLEGRO",
+            "num": 70,
+            "title": "small fix in README",
+            "url": "https://github.com/HEP-FCC/ALLEGRO/pull/70",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "fix recipe for sampling fraction calculation (ALLEGRO package is needed)",
+            "diff": {
+                "additions": 4,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "sampling_fractions/README.md"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
         {
             "org": "key4hep",
             "repo": "k4geo",
@@ -29,6 +374,37 @@
             ],
             "comments_total": 1,
             "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "EDM4hep",
+            "num": 563,
+            "title": "Remove leftover commented ExtraCode that is no longer relevant",
+            "url": "https://github.com/key4hep/EDM4hep/pull/563",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-24",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Remove some leftover commented `ExtraCode` that is no longer relevant\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 6,
+                "deletions": 8,
+                "files": 2
+            },
+            "files": [
+                "README.md",
+                "edm4hep.yaml"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "copilot-pull-request-reviewer",
+                    "state": "COMMENTED",
+                    "body": "<!-- ccr-overview-v2 -->\n\n### \ud83d\udfe1 Changes recommended\n\nThe missing literal-block marker in edm4hep.yaml makes the declaration invalid YAML, blocking CMake\u2019s datamodel generator from parsing the schema.\n\n<details open>\n<summary><strong>1 open issue</strong></summary>\n\n- <picture><source media=\"(prefers\u2026"
+                }
+            ],
             "reviews_total": 1
         },
         {
@@ -225,6 +601,91 @@
             "comments_total": 2,
             "reviews": [],
             "reviews_total": 2
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 163,
+            "title": "Seeding space point variance fixes",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/163",
+            "author": "jburzy",
+            "mergedAt": "2026-11-24",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "This PR adjusts how the space point variances are used in seeding \r\n\r\n- Fix the Jacobian from (x, y, z) to (rho, z). The rho row used 2x/r and 2y/r instead of x/r and y/r, so the rho variance was 4 times too large.\r\n- Add `SeedFinding_SpacePointVarianceScale` (default 1), a factor applied to the rho and z variances of the seeding space points. A value of k\u00b2 lets the triplet r-z slope compatibility cut accept the measurement error at k sigma.\r\n\r\nBEGINRELEASENOTES\r\n- Fix the seeding space point rho variance and add `SeedFinding_SpacePointVarianceScale`\r\n\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 6,
+                "deletions": 3,
+                "files": 1
+            },
+            "files": [
+                "k4ActsTracking/src/components/CKFTrackingAlg.cpp"
+            ],
+            "comments": [
+                {
+                    "author": "jburzy",
+                    "body": "Thanks for the review @tmadlener, moved the last two commits here: https://github.com/key4hep/k4ActsTracking/pull/166. Will follow up on your other comment there."
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "This looks like it could be split into two PRs (moving the last two commits into another one), as that is an essentially unrelated fix.\n\nOn the new measurement selection, see the question below."
+                }
+            ],
+            "reviews_total": 2
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 147,
+            "title": "Use ACTS' versioned JSON material format",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/147",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-24",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n\r\n- `MaterialMappingAlg` writes and `ActsGeoSvc` reads JSON material maps in ACTS' versioned material format (`TrackingGeometryMaterialJsonConverter`) instead of the deprecated legacy format (acts-project/acts#6327). Requires ACTS >= v48.1.0. Old JSON maps have to be converted with `ActsMaterialMapMigrate <input> <output>` or regenerated; ROOT maps are unchanged.\r\n\r\nENDRELEASENOTES\r\n\r\nACTS deprecated the legacy JSON material format in v48.5.0, which gives the remaining deprecation warnings in CI. The versioned format exists since v48.1.0, so every stack CI uses has it (LCG devkey-head, Spack nightly, LUXE and MuColl images, ACTS 48.4.0 in LCG devkey).\r\n\r\nDraft, because existing maps no longer load: `data/MAIA_v0_gen3_material_map.json` and the CLD map in #143. Both need \u2026",
+            "diff": {
+                "additions": 40,
+                "deletions": 40,
+                "files": 10
+            },
+            "files": [
+                "data/CLD_o2_v08_gen3_material_map.json.md5",
+                "data/CLD_o2_v08_gen3_material_map.json.zst.md5",
+                "data/CMakeLists.txt",
+                "data/MAIA_v0_gen3_material_map.json.md5",
+                "data/MAIA_v0_gen3_material_map.json.zst.md5",
+                "doc/material_mapping.md",
+                "k4ActsTracking/src/components/ActsGeoSvc.cpp",
+                "k4ActsTracking/src/components/ActsGeoSvc.h",
+                "k4ActsTracking/src/components/MaterialMappingAlg.cpp",
+                "test/CMakeLists.txt"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Similar question to #145. We could in principle try to have this in the next k4ActsTracking tag, but I am not entirely sure we should, so opinions welcome.\r\n\r\nTagging @madbaron since this also touches MAIA things. I think the MAIA maps would need to be converted / regenerated still in this PR. That \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Now that all of the previous PRs are merged, I guess it's time to re-generate material maps. I would ideally want to make them go in with the changes here as that bundles everything topically related nicely.\n\n@jbeirer, @madbaron can you generate new material maps and get them to me somehow, then, I \u2026"
+                },
+                {
+                    "author": "jbeirer",
+                    "body": "@tmadlener the new CLD map is at `/eos/user/j/jbeirer/k4ActsTracking_pr147_material_maps/CLD_o2_v08_gen3_material_map.json.zst` (md5 `985f6571bdf63decf7e16d93792d5b25`; you have read access)."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Thanks. Both maps are uploaded. CI should pass again."
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [],
+            "reviews_total": 0
         },
         {
             "org": "key4hep",
@@ -558,6 +1019,170 @@
         },
         {
             "org": "key4hep",
+            "repo": "k4RecTracker",
+            "num": 124,
+            "title": "Update to the TrackMerger to use best matches and cover full angle",
+            "url": "https://github.com/key4hep/k4RecTracker/pull/124",
+            "author": "ueinhaus",
+            "mergedAt": "2026-11-24",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\nThe TrackMerger combines Clupatra (TPC + SET) and Conformal (VTX + SIT) tracks.\r\nThis update:\r\n- Adds a fit of the track combinations, so the best combinations are prioritised in merging.\r\n- Uses a logic to include unmatched tracks in the output, so forward tracks without a counterpart in the TPC are not dropped.\r\n- Adds track states to output tracks, so the RefitProcessor can initialise using the track state (AtLastHit). Adding SET hits to the tracks caused the Refitter to break since the hit-based initialisation cannot handle strip hits.\r\n- Modifies the cmake file to include GaudiDDKalTest (k4Reco::GaudiTrkUtils), needed for the track fit.\r\nENDRELEASENOTES",
+            "diff": {
+                "additions": 474,
+                "deletions": 496,
+                "files": 7
+            },
+            "files": [
+                "Tracking/CMakeLists.txt",
+                "Tracking/components/TrackMerger.cpp",
+                "Tracking/test/testTrackMerger/field_only.xml",
+                "Tracking/test/testTrackMerger/test_track_merger.py",
+                "Tracking/test/testTrackMerger/test_track_merger.sh",
+                "Tracking/test/testTrackMerger/test_track_merger_steer.py",
+                "Tracking/test/testTrackMerger/verify_merged_tracks.py"
+            ],
+            "comments": [
+                {
+                    "author": "ueinhaus",
+                    "body": "Adding @tmadlener and @Victor-Schwan ."
+                },
+                {
+                    "author": "Victor-Schwan",
+                    "body": "Can we use this update to also add forward tracks to the TPC Extrapolation option of the ILD@FCC Tracking? So without running the \"core\" merging before?"
+                },
+                {
+                    "author": "ueinhaus",
+                    "body": "> Can we use this update to also add forward tracks to the TPC Extrapolation option of the ILD@FCC Tracking? So without running the \"core\" merging before?\r\n\r\nForward tracks that are found by conformal tracking but not Clupatra are now directly added to the outTracks in the Merger.\r\nWhat do you mean \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "It's mostly getting rid of some unnecessary copies and a suggestion to get rid of the `map`. \r\n\r\nThe largest open question is whether the currently used reduced chi2 is the right thing for sorting or whether that should use the actual chi2 probability.\r\n\r\nAlso tests need to pass before merging."
+                },
+                {
+                    "author": "Victor-Schwan",
+                    "body": "> > Can we use this update to also add forward tracks to the TPC Extrapolation option of the ILD@FCC Tracking? So without running the \"core\" merging before?\r\n> \r\n> Forward tracks that are found by conformal tracking but not Clupatra are now directly added to the outTracks in the Merger. What do you \u2026"
+                },
+                {
+                    "author": "ueinhaus",
+                    "body": "> The other option for ILD@FCC tracking which we discussed all the time. Where we extrapolate the TPC track inwards with the `Clupatra` option and add forward tracks which have never reached the TPC afterwards.\r\n\r\nAh. I don't think anyone has actively worked on that option? My understanding was that\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Just saw that tests are failing because the `field_only.xml` that is used in the tests has no `GlobalTrackerReadoutID`. Is the plan still to re-use that for the newly added functionality, or do we just use the real geometry directly and do some limited tracking with prepared inputs (or a muon gun)?"
+                },
+                {
+                    "author": "ueinhaus",
+                    "body": "> Just saw that tests are failing because the `field_only.xml` that is used in the tests has no `GlobalTrackerReadoutID`. Is the plan still to re-use that for the newly added functionality, or do we just use the real geometry directly and do some limited tracking with prepared inputs (or a muon gun)\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I have reworked the test setup slightly, most importantly, I have split the simulation and reconstruction into separate test cases (with proper dependencies via fixtures). Now, if you want to run only one of the geometries, via `ctest -R TrackMerger_reco_ILD_FCCee_v01` for example this will automati\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "I have updated the script that verifies the merging a bit to do some more checks to see if there are actually merged tracks. Thresholds are still very loose and will only catch things that truly break. At some point we could try to tighten them or to come up with synthetic inputs that cover all the \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "And obviously with the seed we have in the tests the 3 events we use fluctuate towards lower than expected performance. I have increased the number of events to 10. Since most of the time in the tests is spent in geometry loading in any case, this leaves the overall time almost untouched. They pass \u2026"
+                }
+            ],
+            "comments_total": 11,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Something is off with the field loading in the tests:\n\nE.g. [here](https://github.com/key4hep/k4RecTracker/actions/runs/42326994937/job/128264472151?pr=124#step:6:1091)\n\n```\n  OverlayedField   ERROR add: Attempt to add an invalid field.\n  TrackMerger          FATAL Standard std::exception is caught \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "I tend to agree with Clupatra for TPC+SET and VTX+SIT (resp. whatever they are called in the ILD@FCCee model) is the more straight forward way to go for now."
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Some formatting is still necessary, `clang-format` complains about the `TrackMerger` and `ruff format test_track_merger.py` should fix the issues in the python file (provided it's still necessary after my comments)."
+                }
+            ],
+            "reviews_total": 15
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 301,
+            "title": "fix(blame): withdraw comment claims whose step moved before the PR's window",
+            "url": "https://github.com/key4hep/k4Bench/pull/301",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-24",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "A comment could keep attributing a regression to a pull request after the regression engine re-dated the step to before that pull request shipped. `key4hep/k4Reco#80` still claims ALLEGRO_o1_v04 `single_e-_10GeV` reco `median_time_s` (+5.9%) at 92% in the window 2026-11-20 \u2192 2026-11-21. On 2026-11-23 a late confirmation moved that step's window back to 2026-11-10 \u2192 2026-11-20, and `k4geo#672`'s comment now claims the same regression at 85%. The bot only revisits a comment when its pull request is selected again, so the `k4Reco#80` comment was never corrected.\n\n### When a claim is withdrawn\nNew module `k4bench/blame/comment/supersede.py`, deterministic, no model call. A claim that pull request P caused a step in window (base, onset] is withdrawn when both hold:\n\n- tonight's report places th\u2026",
+            "diff": {
+                "additions": 1211,
+                "deletions": 62,
+                "files": 13
+            },
+            "files": [
+                ".github/scripts/blame_comment.py",
+                "docs/user-guide/features/pr-comments.md",
+                "k4bench/blame/comment/__init__.py",
+                "k4bench/blame/comment/digest.py",
+                "k4bench/blame/comment/lineage.py",
+                "k4bench/blame/comment/plan.py",
+                "k4bench/blame/comment/render.py",
+                "k4bench/blame/comment/selection.py",
+                "k4bench/blame/comment/state.py",
+                "k4bench/blame/comment/supersede.py",
+                "k4bench/blame/publish.py",
+                "tests/unit/test_blame_comment.py",
+                "tests/unit/test_blame_publish.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": "### :x: 1 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 3045 | 1 | 3044 | 36 |\n<details><summary>View the top 1 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_links.py::test_link_resolves[https://img.shie\u2026"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                }
+            ],
+            "comments_total": 9,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
             "repo": "k4Bench",
             "num": 300,
             "title": "fix(blame): list only attributed rows in PR comments and compare rivals within one ranking",
@@ -613,9 +1238,13 @@
                 {
                     "author": "github-actions",
                     "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": "### :x: 1 Tests Failed:\n| Tests completed | Failed | Passed | Skipped |\n|---|---|---|---|\n| 3024 | 1 | 3023 | 36 |\n<details><summary>View the top 1 failed test(s) by shortest run time</summary>\n\n> <pre><code class=\"language-python\">tests/integration/test_links.py::test_link_resolves[https://github.c\u2026"
                 }
             ],
-            "comments_total": 6,
+            "comments_total": 7,
             "reviews": [],
             "reviews_total": 0
         },
@@ -2800,68 +3429,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 155,
-            "title": "CKF: optional ACTS TrackSelector on the output tracks",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/155",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n\n- `CKFTrackingAlg`: new property `TrackSelector_MinMeasurements`. Tracks with fewer measurements are dropped after the extrapolation to the reference surface (`Acts::TrackSelector`). Off by default.\n\nENDRELEASENOTES\n\nThe CKF also returns tracks that are hardly more than their seed, for example three hits and a few holes. ACTS has a track selection for this (`Acts::TrackSelector`). This applies it to every found track after the extrapolation to the reference surface, so the selection sees the final track. Only the minimum number of measurements is exposed for now; the other cuts of the selector can be added the same way when they are needed.\n\nIt is off by default (-1), so existing configurations are unchanged. The CLD multi-pass setup in #157 uses 4.\n\nMerge order of this \u2026",
-            "diff": {
-                "additions": 29,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                "k4ActsTracking/include/k4ActsTracking/CKFRunner.hxx",
-                "k4ActsTracking/src/components/CKFTrackingAlg.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Closing and re-opening to re-trigger CI"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Looks like todays nightly is broken enough for not letting CI pass. Retrying tomorrow."
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "alma9 based nightlies from yesterday are broken and not yet replaced, but all others pass. Merging."
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Clue",
-            "num": 87,
-            "title": "Skip Gaudi wrapper test data when tests are disabled",
-            "url": "https://github.com/key4hep/k4Clue/pull/87",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Skip downloading the `gaudiWrapper` test input when `BUILD_TESTING=OFF`.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 18,
-                "deletions": 16,
-                "files": 1
-            },
-            "files": [
-                "src/CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
             "repo": "key4hep-dev-utils",
             "num": 45,
             "title": "Require the Ubuntu 26 nightly build",
@@ -2902,796 +3469,6 @@
             },
             "files": [
                 "defaults/github/default-branch-ruleset.json"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 42,
-            "title": "Remove unnecessary lines from .clang-format",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/42",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Fix trailing whitespace from default `.clang-format`\n\nENDRELEASENOTES\n\nOtherwise some `pre-commit` workflows will fail, see e.g.: https://github.com/key4hep/k4ActsTracking/pull/161",
-            "diff": {
-                "additions": 0,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "defaults/.clang-format"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Can we make the update script open PRs (and maybe also enabling auto-merge directly) instead of pushing to `main` directly?"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "\ud83d\ude15 we don't have a common pre-commit so it doesn't get caught everywhere, that would have helped.\n\n> Can we make the update script open PRs (and maybe also enabling auto-merge directly) instead of pushing to `main` directly?\n\nThere are several bad things about that: lots of notifications for a lot of\u2026"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 41,
-            "title": "Restore Latest in the shared clang-format config",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/41",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "EDM4hep\u2019s pre-commit hook calls the `clang-format` on `PATH` after setting up the Key4hep nightly environment. The formatter rejects `Standard: c++23` with `unknown enumerated scalar` and reports all 34 checked files as needing changes. I reproduced the parser error with clang-format 22.1.0. [EDM4hep pre-commit log](https://github.com/key4hep/EDM4hep/actions/runs/44174923485/job/134363614449)\n\nUse `Standard: Latest` in the shared clang-format configuration for compatibility with older CI formatters.",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "defaults/.clang-format"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-actions",
-            "num": 64,
-            "title": "Log minimal git info for downstream packages",
-            "url": "https://github.com/key4hep/key4hep-actions/pull/64",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Put some minimal information about the (git) state of the repository into the log output of the `downstream-build` action.\n\nENDRELEASENOTES\n\nTriggered by looking at these logs https://github.com/key4hep/EDM4hep/actions/runs/43838998060/job/133202791878?pr=558 and wondering about where `k4GaudiPandora` is built from.",
-            "diff": {
-                "additions": 1,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "downstream-build/action.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 130,
-            "title": "Skip TrackFinder model download when tests are disabled",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/130",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Skip downloading the TrackFinder test model when `BUILD_TESTING=OFF`.\n\nENDRELEASENOTES\n\nIt can make builds fail like in [LCG devkey build 67399](https://cdash.cern.ch/builds/67399/files/9048), so it should only be downloaded when needed.",
-            "diff": {
-                "additions": 57,
-                "deletions": 56,
-                "files": 1
-            },
-            "files": [
-                "Tracking/CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "andread3vita",
-                    "state": "COMMENTED",
-                    "body": "Fine for me"
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 121,
-            "title": "TracksFromGenParticles: support truth tracks without SimTrackerHit input",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/121",
-            "author": "qwert2333",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "When no SimTrackerHit collection is given (InputSimTrackerHits empty, e.g. calorimeter-only geometries), build tracks for all selected charged particles from their properties at production: the TrackStates at first and last hit are copies of the one at IP, and the calorimeter extrapolation starts from the production point.\n\nThe behaviour is unchanged when SimTrackerHit collections are provided: tracks are still only built for particles with at least one hit.\nNo track is created for intermediate particles `(genParticle.getGeneratorStatus() != 1 && !genParticle.isCreatedInSimulation())`\n\n\nBEGINRELEASENOTES\n- support truth tracks without SimTrackerHit input (e.g. in calorimeter-only geometry). \n- Add new property `UseSimTrackerHits` as the flag: enable this function by setting `UseSimTrackerH\u2026",
-            "diff": {
-                "additions": 32,
-                "deletions": 3,
-                "files": 1
-            },
-            "files": [
-                "Tracking/components/TracksFromGenParticles.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Looks good to me. For people (like me) wondering whether we now get tracks from uncharged particles with the new option, no:\r\n\r\nhttps://github.com/key4hep/k4RecTracker/blob/c1cceda0c74f62e1451b2a41282ca9e23fa88bfd/Tracking/components/TracksFromGenParticles.cpp#L220-L222\r\n\r\nIt would be nice to have t\u2026"
-                },
-                {
-                    "author": "dudarboh",
-                    "body": "@tmadlener , @jmcarcell , can we merge this?"
-                },
-                {
-                    "author": "qwert2333",
-                    "body": "@tmadlener @jmcarcell @SanghyunKo A reminder for my last commit: I added one line to skip the intermediate particles which may exist in physics events. They do not produce tracker hits so this action is not needed before."
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "This version will now have identical trackstates *AtFirstHit* and *AtLastHit* because the newly created tracks (for calo only geometries) only have the one hit. I suppose that is as expected and doesn't introduce any issues. Probably not a problem, but I wanted to point this out."
-                }
-            ],
-            "reviews_total": 10
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 127,
-            "title": "Use an unnamed namespace for the MeanExcEnergy_get helpers",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/127",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Put the `MeanExcEnergy_get` helpers in `GenfitMaterialInterface.cpp` in an unnamed namespace so that they are not exported, and remove a declaration of an overload that is never defined.\n\nENDRELEASENOTES\n\nChecked with `clang-tidy`.",
-            "diff": {
-                "additions": 31,
-                "deletions": 28,
-                "files": 1
-            },
-            "files": [
-                "Tracking/src/genfit_interfaces/GenfitMaterialInterface.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Needs another pass with clang-format to fix indentation"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-images",
-            "num": 37,
-            "title": "Add the JPEG runtime to the AlmaLinux 10 image",
-            "url": "https://github.com/key4hep/key4hep-images/pull/37",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Fixes `libjpeg.so.62: cannot open shared object file: No such file or directory` in the [k4Reco Alma10 job](https://github.com/key4hep/k4Reco/actions/runs/44257837817/job/134649652019?pr=78). This is coming from ROOT apparently.",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "Docker/alma10/alma10-build/Dockerfile"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-images",
-            "num": 36,
-            "title": "Add Expat and X11 dependencies to the AlmaLinux 10 image",
-            "url": "https://github.com/key4hep/key4hep-images/pull/36",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Fix `Could NOT find EXPAT (missing: EXPAT_LIBRARY EXPAT_INCLUDE_DIR)` in k4MLJetTagger and missing `libICE.so.6` / `libXmu.so.6` at runtime in CLDConfig.",
-            "diff": {
-                "additions": 1,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "Docker/alma10/alma10-build/Dockerfile"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Reco",
-            "num": 78,
-            "title": "Use unnamed namespaces for file-local helpers",
-            "url": "https://github.com/key4hep/k4Reco/pull/78",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Put file-local helpers (sort comparators, kdtree2 helpers) in unnamed namespaces to give them internal linkage. Make `kdtree2::operator<` `static` instead since it is found by ADL.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 45,
-                "deletions": 23,
-                "files": 3
-            },
-            "files": [
-                "k4Reco/ConformalTracking/components/ConformalTracking.cpp",
-                "k4Reco/ConformalTracking/src/kdtree2.cpp",
-                "k4Reco/Tracking/src/TruthTrackFinder.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4GeneratorsConfig",
-            "num": 97,
-            "title": "Use unnamed namespaces for file-local helpers",
-            "url": "https://github.com/key4hep/k4GeneratorsConfig/pull/97",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Put file-local helpers in `convertHepMC2EDM4HEP` and `key4HEPAnalysis` in unnamed namespaces to give them internal linkage.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 10,
-                "deletions": 0,
-                "files": 2
-            },
-            "files": [
-                "k4GeneratorsConfig/src/convertHepMC2EDM4HEP.cxx",
-                "k4GeneratorsConfig/src/key4HEPAnalysis.cxx"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4MLJetTagger",
-            "num": 18,
-            "title": "Skip jet tagging test data when tests are disabled",
-            "url": "https://github.com/key4hep/k4MLJetTagger/pull/18",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Skip downloading the `createJetTags` test inputs when `BUILD_TESTING=OFF`.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 3,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCCAnalyses",
-            "num": 576,
-            "title": "Fix event counting for RNTuple inputs",
-            "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/576",
-            "author": "bndikt",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Small fix to allow RNTuple inputs alongside traditional TTrees by adapting the input event counting checks.",
-            "diff": {
-                "additions": 175,
-                "deletions": 24,
-                "files": 11
-            },
-            "files": [
-                "man/man1/fccanalysis-run.1",
-                "man/man7/fccanalysis-script.7",
-                "python/job.py",
-                "python/parsers.py",
-                "python/run_analysis.py",
-                "python/run_fccanalysis.py",
-                "python/run_final_analysis.py",
-                "python/sample.py",
-                "tests/integration/CMakeLists.txt",
-                "tests/integration/rntuple_compatibility_analysis.py",
-                "tests/integration/test_rntuple_compatibility.py"
-            ],
-            "comments": [
-                {
-                    "author": "bndikt",
-                    "body": "Added input-format detection so output follows the input format by default (TTree or RNTuple). Explicit `--output-format` or `Analysis.output_format` settings still take precedence."
-                },
-                {
-                    "author": "bndikt",
-                    "body": "Thanks for the review!\n- Added a check for failed input-file opens, explained the explicit TTree setting, and clarified that the first input file determines the default output format.\n- Added an integration test that runs a minimal analysis on TTree and RNTuple inputs and checks the event counts and\u2026"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [
-                {
-                    "author": "kjvbrt",
-                    "state": "COMMENTED",
-                    "body": "Thanks, looks good overall. Could you add a test with an RNTuple input? CI passes, but nothing currently exercises the RNTuple branch of `get_event_entries` or the output-format detection. A small integration test with an RNTuple input file would cover both.\n\nHeads-up: this overlaps with #538 in `me\u2026"
-                }
-            ],
-            "reviews_total": 2
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1724,
-            "title": "fix(env): set LD_LIBRARY_PATH also on macOS",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1724",
-            "author": "wdconinc",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "Although macOS doesn't use `LD_LIBRARY_PATH`, ROOT still uses it, and with precedence over `DYLD_LIBRARY_PATH` (https://github.com/root-project/root/blob/v6-40-02/interpreter/cling/lib/Interpreter/DynamicLibraryManager.cpp#L30-L56). That means that a compilation in an environment with an existing DD4hep (such as LCG in CI), the existing DD4hep will be picked up by cling before the version loaded by `thisdd4hep.sh`. That's a consequence of LCG's views where the `setup.sh` adds the view/lib to `LD_LIBRARY_PATH`.\n\nThis PR just makes sure that we then also add (prepend) this DD4hep before the one in the `LD_LIBRARY_PATH` already.\n\nMaybe the real issue here is that ROOT shouldn't look in `LD_LIBRARY_PATH` at all on macOS but we can't change that.\n\nBEGINRELEASENOTES\n- fix(env): set LD_LIBRARY_PA\u2026",
-            "diff": {
-                "additions": 2,
-                "deletions": 4,
-                "files": 2
-            },
-            "files": [
-                "cmake/thisdd4hep.sh",
-                "cmake/thisdd4hep_only.sh"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200220h 59m 12s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit d8bb2590.\n\n[test-results]:data:application/gzip;base64,H4sIAKml92oC/12MSw7CIBQAr9KwdsH/oZcx5ZcQ22IorBrvLpLaosuZSWZDPkxuRbeBqMuA1hLySbakMYe4VAYhBK2q1vzpDMSX7msx5l89wr\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1728,
-            "title": "CI: fix escaped quotemarks for ubuntu24",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1728",
-            "author": "andresailer",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- CI: fix escaped quotemarks for ubuntu24, seems to come because cmake 4.4\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/scripts/common_cmake_opts.sh"
-            ],
-            "comments": [
-                {
-                    "author": "andresailer",
-                    "body": "On Ubuntu24:\r\n\r\nThis used to fail to find X11\r\n```\r\ncmake $COMMON_CMAKE_OPTS -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 ../dd4hep\r\n```\r\n\r\nJust expanding the variable:\r\n\r\n```\r\ncmake -GNinja -DDD4HEP_USE_GEANT4=ON -DBoost_NO_BOOST_CMAKE=ON -DDD4HEP_USE_LCIO=ON -DDD4HEP_USE_EDM4HEP=OFF -DDD4HEP\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "The quoted variable apparently breaks compiler detection, and libX11 sits in /usr/lib/x86_64-linux-gnu/libX11.so on ubuntu24 and then the library is not found.\r\n\r\n```\r\ngrep -E \"CMAKE_LIBRARY_ARCHITECTURE|CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES\" CMakeFiles/*/CMakeCXXCompiler.cmake\r\n  set(CMAKE_LIBRARY_AR\u2026"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u20021d 3h 40m 43s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 8b70fe95.\n\n[test-results]:data:application/gzip;base64,H4sIAOO9/WoC/12MSw7CIBQAr9KwdgHy9zKG0kdCbIvhs2q8u0hqiy5nJpkNOT9DQreBqMuAUvH5pKlEk31YK2stGK2q1vzpVPIv3VOx9l89\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1717,
-            "title": "Input sources consolidation",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1717",
-            "author": "andresailer",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "Revert #1684 and #1689 since they are breaking other things and are not needed for correct EDM4hep input files. (Not mentioned in release notes since the reverted PRs are not in any release.)\r\n\r\nAlso makes #1692 unnecessary. \r\n\r\nSee also: https://github.com/AIDASoft/DD4hep/pull/1692#issuecomment-6795698517\r\n\r\n\r\n\r\nBEGINRELEASENOTES\r\n\r\n* Geant4InputHandling: Use start vertex of first primary particles as origin instead of \"Vertex\" position. We benefit of the reject / accept used also to identify particles passed to Geant4. Fixes issues for HepMC3 based files representing particle gun events.\r\n \r\n \r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 37,
-                "deletions": 28,
-                "files": 2
-            },
-            "files": [
-                "DDG4/edm4hep/EDM4hepFileReader.cpp",
-                "DDG4/src/Geant4InputHandling.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u20021d 0h 7m 8s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 78ff9d50.\n\n[test-results]:data:application/gzip;base64,H4sIAHkH9moC/12MSwrCMBQAr1KydpFfzYuXkXwh2DaSz0q8u2mpbXQ5MzAv5MPkMroNBC4DyjWUk2xNqoS4NIYr0FW1WtbOxPile67G/KtHeD\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "Hi @jbeirer @davidlange6 \r\n\r\nPlease have a look and comment."
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "> Hi @jbeirer @davidlange6\r\n> \r\n> Please have a look and comment.\r\n\r\nThanks @andresailer, I agree for EDM4hep, with this PR my read-back reproducer from #1692 seems fixed.\r\n\r\nHowever, #1692 is still needed for HepMC3 input though, and this was already broken before #1684. A parentless HepMC3 particl\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "Then that needs a fix in the HepMC3EventReader, not in the inputHandling."
-                },
-                {
-                    "author": "andresailer",
-                    "body": "This is the gun.hepmc file I get\r\n```\r\nHepMC::Version 3.03.01\r\nHepMC::Asciiv3-START_EVENT_LISTING\r\nE 0 1 1 @ 4.0222442150115967e-01 1.9423167705535889e+00 -6.1092084646224976e+00 0.0000000000000000e+00\r\nU GEV MM\r\nP 1 0 13 -4.3374296268220149e+00 1.0896097463028246e+01 9.9309927823498882e+01 1.000000\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "Running your reproducer is using ddsim with the to-be-reverted PRs merged in. Using my own ddsim with this PR, I get _no_ simulation output, and HepMC reader actually says\r\n```\r\nHEPMC3FileReader INFO  Created file reader. Try to open input gun.hepmc\r\nERROR::ReaderAscii: too few vertices were parsed\r\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "With HepMC 3.3.1 I only get this error message\r\n```\r\nERROR::ReaderAscii: not enough implicit vertices\r\n```\r\nBut It does return something."
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "Yes, that's what I get too. The header says 1 vertex but there is none, because `WriterAscii` counts the gun vertex without writing it. 3.3.1 just complains, your version drops the event. So not related to this PR... This file doesn't have the issue:\r\n\r\n```\r\nHepMC::Version 3.02.04\r\nHepMC::Asciiv3-ST\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "Can you provide the $$K_0^S$$ or $$\\tau$$ hepmc file please?"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "Sure, this is a K0S gun (2 GeV, at the origin) that the generator already decayed to pi+ pi- after about 2 mm:\r\n\r\n```\r\nHepMC::Version 3.02.04\r\nHepMC::Asciiv3-START_EVENT_LISTING\r\nE 0 1 3\r\nU GEV MM\r\nW 1.0\r\nP 1 0 310 1.2866383502172651 0.802206200720346 -1.3042342455540807 2.060974698369924 0.497611 2\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "Do you have a file also where the k0s starts somewhere else?"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "> Do you have a file also where the k0s starts somewhere else?\r\n\r\nHere is a K0S gun (2 GeV) at an event position of (1.5, -0.7, 4.0) mm that the generator already decayed to pi+ pi- after 2.4 and 3.4 mm:\r\n\r\n```\r\nHepMC::Version 3.02.04\r\nHepMC::Asciiv3-START_EVENT_LISTING\r\nE 0 1 3 @ 1.5 -0.7 4.0 0.0\r\n\u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "And your proposed changes from https://github.com/AIDASoft/DD4hep/pull/1717#issuecomment-6824739150 are on top of which commit?"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "> And your proposed changes from [(earlier comment)](https://github.com/AIDASoft/DD4hep/pull/1717#issuecomment-6824739150) are on top of which commit?\r\n\r\nOn top of the current head of this PR (d075a43), so with your HepMC3 reader change included."
-                },
-                {
-                    "author": "andresailer",
-                    "body": "a) https://github.com/AIDASoft/DD4hep/commit/d075a4350dc67905e7169243096806e5cb5f97bc Is then not needed, because the vertex position is anyway ignored\r\n\r\nb)\r\n\r\n> +              // (the reader's vertex only if that point is outside the world volume)\r\n\r\nWhy tho?\r\nI would just check each primary posit\u2026"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "> a) [d075a43](https://github.com/AIDASoft/DD4hep/commit/d075a4350dc67905e7169243096806e5cb5f97bc) Is then not needed, because the vertex position is anyway ignored\r\n> \r\n> b)\r\n> \r\n> > * ```\r\n> >            // (the reader's vertex only if that point is outside the world volume)\r\n> >   ```\r\n> \r\n> Why \u2026"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "I think I want to add some tests with all these input files to have easy regression prevention. Next week is gonna be lit!"
-                },
-                {
-                    "author": "andresailer",
-                    "body": "Realistically I won't have time to add these tests in the next days. I will merge this and add them as soon as time permits."
-                }
-            ],
-            "comments_total": 18,
-            "reviews": [],
-            "reviews_total": 8
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1726,
-            "title": "fix(DDG4): release phases to prevent dangling references",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1726",
-            "author": "wdconinc",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "This PR fixes #1725 which blocks #1672 on macOS but is a bug on Linux as well. Full description in issue.\n\nWhen Geant4Kernel::destroyPhases is called (e.g. on termination), there may still be handles that hold references to those phases. All we can do is release ours.\n\nNot renamed destroyPhases to releasePhases since that's a public API breaking change.\n\nBEGINRELEASENOTES\n- fix(DDG4): release phases to prevent dangling references\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 9,
-                "deletions": 6,
-                "files": 2
-            },
-            "files": [
-                "DDG4/include/DDG4/Geant4Kernel.h",
-                "DDG4/src/Geant4Kernel.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200717 files\u2004\u2003\u2007\u2008\u200717 suites\u2004\u2003\u200220h 50m 28s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008372 \u2705\u20030 \ud83d\udca4\u20033 \u274c\n3\u2008006 runs\u200a\u20033\u2008000 \u2705\u20033 \ud83d\udca4\u20033 \u274c\n\nFor more details on these failures, see [this check](https://github.com/AIDASoft/DD4hep/runs/133583597982).\n\nResults for commit 636e2909.\n\n[test-results]:data:application/gzip;base64,H\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4geo",
-            "num": 683,
-            "title": "[ALLEGRO, CLD, IDEA] Set magnetic field to 0 outside muon system",
-            "url": "https://github.com/key4hep/k4geo/pull/683",
-            "author": "andread3vita",
-            "mergedAt": "2026-11-17",
-            "mergedBy": "s6anloes",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n\r\n- Set the magnetic field outside the muon systems to zero for IDEA, ALLEGRO, CLD_o5_v01 and CLD_o2_v09.\r\n\r\nENDRELEASENOTES\r\n\r\nDear all,\r\n\r\nI am opening this PR because I noticed that a particle can escape the muon system and re-enter the detector due to the magnetic field being non-zero outside the detector volume.\r\n\r\nThis PR fixes the issue by setting the magnetic field to zero outside the muon system.\r\n\r\nAs shown in the visualization, the muon exits the detector but re-enters it at a different position because of the magnetic field. For comparison, I have also included the same event in the tracker with the magnetic field manually set to zero outside the solenoid.\r\n\r\nCheers,  \r\nAndrea\r\n\r\n<img width=\"3000\" height=\"900\" alt=\"hits_testKeepAll_10GeV_nightly_event1212_all\u2026",
-            "diff": {
-                "additions": 18,
-                "deletions": 9,
-                "files": 9
-            },
-            "files": [
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalBarrel_thetamodulemerged.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalBarrel_thetamodulemerged_calibration.xml",
-                "FCCee/ALLEGRO/compact/ALLEGRO_o1_v03/ECalBarrel_thetamodulemerged_upstream.xml",
-                "FCCee/CLD/compact/CLD_o2_v09/CLD_o2_v09.xml",
-                "FCCee/CLD/compact/CLD_o5_v01/CLD_o5_v01.xml",
-                "FCCee/IDEA/compact/IDEA_o1_v03/IDEA_o1_v03.xml",
-                "FCCee/IDEA/compact/IDEA_o1_v04/IDEA_o1_v04.xml",
-                "FCCee/IDEA/compact/IDEA_o2_v01/IDEA_o2_v01.xml",
-                "FCCee/IDEA/compact/IDEA_o2_v01_CI/IDEA_o2_v01_CI.xml"
-            ],
-            "comments": [
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Hi @andread3vita \r\ngood catch!\r\nFor ALLEGRO, why did you use Rmax = MuonTaggerEndcap_outer_radius?\r\nNote that we have\r\n```\r\n    <constant name=\"MuonTagger_outer_radius\" value=\"5000*mm\"/>\r\n    <constant name=\"MuonTaggerEndcap_outer_radius\" value=\"4500*mm\"/>\r\n```\r\nso if you set Rmax = MuonTaggerEndcap\u2026"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "> MuonTagger_outer_radius\r\n\r\nYou are right! I fix it"
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "It would be good to understand what impact this change has, due to particles no longer re-entering the detector after they have left. I imagine the muon system will be most affected, but track finding efficiency might also see a change due to fewer particles needing to be found.\r\nThis change might w\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "For ALLEGRO there are no tracking/muon perf studies that are published so far that would thus warrant a version bump IMO... this would be a bug-fix of the current versions and we would ask the ALLEGRO community to move to the latest k4geo code in the nightly for their studies...\r\nHowever, we might w\u2026"
-                },
-                {
-                    "author": "BrieucF",
-                    "body": "Thanks Andrea!\r\n\r\nI think this also affects CLD (@Zehvogel and @andresailer)\r\n\r\nhttps://github.com/key4hep/k4geo/blob/c97fa88ce656f07a02c70a7eba29effdadcc4eef/FCCee/CLD/compact/CLD_o2_v09/CLD_o2_v09.xml#L381-L386\r\n\r\nBut we can deal with this in a separated PR.\r\n\r\n>  However, we might want to record \u2026"
-                },
-                {
-                    "author": "jacofan",
-                    "body": "Just to confirm, I cross-checked and indeed it happens for ALLEGRO as well\r\n<img width=\"2700\" height=\"900\" alt=\"immagine\" src=\"https://github.com/user-attachments/assets/6dfcae6d-cd7d-45cc-8189-83f6ee9556c7\" />"
-                },
-                {
-                    "author": "mahmoudali2",
-                    "body": "Thanks Andrea for the change! \r\nI would propose a full fix for the field then, because it's Zero in the endcap outside the solenoid Z length.\r\nHave a look on the field map in IDEA:\r\n<img width=\"2240\" height=\"960\" alt=\"idea_o2_v01_upstream_bfield\" src=\"https://github.com/user-attachments/assets/4b9f4\u2026"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "> Thanks Andrea for the change! I would propose a full fix for the field then, because it's Zero in the endcap outside the solenoid Z length. Have a look on the field map in IDEA: <img alt=\"idea_o2_v01_upstream_bfield\" width=\"2000\" height=\"857\" src=\"https://private-user-images.githubusercontent.com/\u2026"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "> Thanks Andrea!\r\n> \r\n> I think this also affects CLD (@Zehvogel and @andresailer)\r\n> \r\n> https://github.com/key4hep/k4geo/blob/c97fa88ce656f07a02c70a7eba29effdadcc4eef/FCCee/CLD/compact/CLD_o2_v09/CLD_o2_v09.xml#L381-L386\r\n> \r\n> But we can deal with this in a separated PR.\r\n> \r\n> > However, we migh\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "for ALLEGRO, I would not modify the field in the endcaps - we have field maps we can switch to (see slide below by Matthias Mentink) if we want a more realistic field, including the endcaps, but here I would just fix this bug that leads to the tracks being curled and reentering the detector. By the \u2026"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "> for ALLEGRO, I would not modify the field in the endcaps - we have field maps we can switch to (see slide below by Matthias Mentink) if we want a more realistic field, including the endcaps, but here I would just fix this bug that leads to the tracks being curled and reentering the detector. By th\u2026"
-                },
-                {
-                    "author": "mahmoudali2",
-                    "body": "> Hi! Thank you for the suggestion! In the realistic field map, which is the value of the field in the endcaps? Is it reasonable to set it to -1.7?\r\n\r\nThe endcap usually have a Br component more that Bz, it needs specific values per detector. I've a simplified version for IDEA which I'll put in anot\u2026"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "@BrieucF Do you think we can merge this PR? It would be useful for dataset production"
-                },
-                {
-                    "author": "BrieucF",
-                    "body": "Do we have green light from CLD?"
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "There is also ALFA, which has the same implementation, and ILD that has the world size specifically as outer radius.\r\n@qwert2333 , would like you like us to update ALFA as well?\r\n@tmadlener , for ILD it almost seems intentional to have the magnetic field extend to world. Could you comment on this?"
-                },
-                {
-                    "author": "s6anloes",
-                    "body": "We can still merge these changes here and open a new PR for ALFA and ILD if it's relevant for production"
-                },
-                {
-                    "author": "qwert2333",
-                    "body": "@s6anloes ALFA outer dimension is still under discussion. So please keep moving for this PR and we will keep this issue in mind when adding ALFA HCAL/Muon system in geometry."
-                },
-                {
-                    "author": "k4bench-bot",
-                    "body": "<!-- k4bench-blame-comment:v1 window=2026-11-16..2026-11-20 -->\n<!-- k4bench-blame-facts:a9be8a94880cb96b -->\n<!-- k4bench-blame-cumulative:v2 eNrNnV1v2lgURf8Lz8kINlWmfZzSdBypD50hqjRTVRYhV6kV8yGbpP35QwfCVwiYgPe6L1Wbh-xjr8MVjbNZX782rj5c_pGOWulj803jrPHz7UV68eY85O_O7_r91sX5aDyZfnn8Ng0h_ffmJg39wbvW9Cs3v\u2026"
-                }
-            ],
-            "comments_total": 18,
-            "reviews": [
-                {
-                    "author": "giovannimarchiori",
-                    "state": "APPROVED",
-                    "body": "looks good to me, thanks!\n\nIn the maps sent by Matthias the field at 5m was -0.06T so this looks good for ALLEGRO"
-                }
-            ],
-            "reviews_total": 9
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4MarlinWrapper",
-            "num": 492,
-            "title": "Use unnamed namespaces for the Marlin test processor instances",
-            "url": "https://github.com/key4hep/k4MarlinWrapper/pull/492",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-17",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Use unnamed namespaces for the global instances of the Marlin test processors, which only need to exist to register the processors.\n\nENDRELEASENOTES\n\nChecked with `clang-tidy`.",
-            "diff": {
-                "additions": 8,
-                "deletions": 0,
-                "files": 4
-            },
-            "files": [
-                "tests/src/MarlinMCRecoLinkChecker.cc",
-                "tests/src/MarlinRandomSeedChecker.cc",
-                "tests/src/PseudoRecoProcessor.cc",
-                "tests/src/TrivialMCTruthLinkerProcessor.cc"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4FWCore",
-            "num": 456,
-            "title": "Enable misc-use-internal-linkage in clang-tidy",
-            "url": "https://github.com/key4hep/k4FWCore/pull/456",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-17",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Use an unnamed namespace for the helpers in `check_ParticleIDOutputs.cpp`, missed in #455.\n - Enable the `misc-use-internal-linkage` check in `.clang-tidy`, with `AnalyzeTypes` disabled since Gaudi registers components under their demangled type name.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 9,
-                "deletions": 0,
-                "files": 2
-            },
-            "files": [
-                ".clang-tidy",
-                "test/k4FWCoreTest/src/check_ParticleIDOutputs.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4EDM4hep2LcioConv",
-            "num": 138,
-            "title": "Use unnamed namespaces for file-local helpers in tests and the standalone converter",
-            "url": "https://github.com/key4hep/k4EDM4hep2LcioConv/pull/138",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-17",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Use unnamed namespaces for file-local helpers in the tests and in the `lcio2edm4hep` standalone converter.\n - Fix the declarations of `createTracks` and `createMCCaloLinks` in the test utilities header, which did not match their definitions.\n\nENDRELEASENOTES\n\nThese ones checked by `clang-tidy`.",
-            "diff": {
-                "additions": 34,
-                "deletions": 5,
-                "files": 6
-            },
-            "files": [
-                "standalone/lcio2edm4hep.cpp",
-                "tests/src/CompareEDM4hepEDM4hep.cc",
-                "tests/src/CompareEDM4hepLCIO.cc",
-                "tests/src/EDM4hep2LCIOUtilities.cc",
-                "tests/src/EDM4hep2LCIOUtilities.h",
-                "tests/src/ObjectMapping.cc"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 40,
-            "title": "Ignore .DS_Store files by default",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/40",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-17",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "",
-            "diff": {
-                "additions": 3,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "defaults/.gitignore"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-actions",
-            "num": 56,
-            "title": "Use the LCG nightlies for the downstream builds",
-            "url": "https://github.com/key4hep/key4hep-actions/pull/56",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-17",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "- Use the LCG nightlies for the downstream builds instead of Spack\r\n   - Do not clone Spack and key4hep-spack anymore, the list of packages is obtained by `fetch_and_checkout.py` from the LCG release (key4hep/key4hep-dev-utils#27)\r\n   - Put the installation directories of the packages built in front of the environment instead of removing paths, which is not possible with an LCG view\r\n   - Use C++23 when the compiler is GCC 15 or newer, like in `key4hep-build`\r\n   - Fail if `fetch_and_checkout.py` fails\r\n\r\nRequires key4hep/key4hep-dev-utils#27. The last commit (`TMP: use the dev-utils branch`) has to be dropped after that one is merged and before merging this one.\r\n\r\nTested in https://github.com/jmcarcell/EDM4hep/actions/runs/36829918282",
-            "diff": {
-                "additions": 17,
-                "deletions": 61,
-                "files": 1
-            },
-            "files": [
-                "downstream-build/action.yml"
             ],
             "comments": [],
             "comments_total": 0,
