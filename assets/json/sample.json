@@ -2,12 +2,23 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 696,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/696'>Fixing missing material in detailed vertex detectors when using DDKalTest</a>",
+            "author": "armin-ilg",
+            "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 695,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/695'>Remove the unused ARC_SiPM_QuantumEfficiency matrix</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-24",
             "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -18,7 +29,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-11-10",
             "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -40,18 +51,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-11-16",
             "updatedAt": "2026-11-20",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 693,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/693'>Remove obsolete example files</a>",
-            "author": "jmcarcell",
-            "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -84,7 +84,7 @@
             "author": "tsulaiav",
             "createdAt": "2026-05-22",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -95,7 +95,7 @@
             "author": "fredrikshaw",
             "createdAt": "2025-09-09",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -106,7 +106,7 @@
             "author": "tmadlener",
             "createdAt": "2026-04-20",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -117,7 +117,7 @@
             "author": "Zehvogel",
             "createdAt": "2024-07-18",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -349,6 +349,17 @@
             "createdAt": "2025-05-12",
             "updatedAt": "2026-09-21",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
+            "num": 956,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/956'>Add BHWIDE generator</a>",
+            "author": "ktht",
+            "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -596,12 +607,12 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 170,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/170'>Split telescope tracking out of CKFTrackingAlg into TelescopeCKFTrackingAlg</a>",
-            "author": "madbaron",
-            "createdAt": "2026-11-20",
-            "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "num": 166,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/166'>Faster CKF measurement selection</a>",
+            "author": "jburzy",
+            "createdAt": "2026-11-19",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -611,40 +622,29 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/167'>Optional mini-doublet requirement for seeding on double layers</a>",
             "author": "jburzy",
             "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 166,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/166'>Faster CKF measurement selection</a>",
-            "author": "jburzy",
-            "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 165,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/165'>CLD_Vertexing.py: drop the track-uncertainty calibration</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 156,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/156'>Add GreedyAmbiguityResolutionAlg</a>",
+            "num": 157,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/157'>Multi-pass CKF tracking for CLD</a>",
             "author": "jbeirer",
             "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-24",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 170,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/170'>Split telescope tracking out of CKFTrackingAlg into TelescopeCKFTrackingAlg</a>",
+            "author": "madbaron",
+            "createdAt": "2026-11-20",
+            "updatedAt": "2026-11-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -655,8 +655,8 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/173'>first attempt at full luxe tracking</a>",
             "author": "madbaron",
             "createdAt": "2026-11-24",
-            "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -667,17 +667,6 @@
             "author": "Baucki1",
             "createdAt": "2026-11-23",
             "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 157,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/157'>Multi-pass CKF tracking for CLD</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-20",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -821,7 +810,7 @@
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
             "updatedAt": "2026-11-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -832,7 +821,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-11-05",
             "updatedAt": "2026-11-19",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
         },
@@ -865,7 +854,7 @@
             "author": "Debottam",
             "createdAt": "2026-10-21",
             "updatedAt": "2026-11-09",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": "SanghyunKo"
         },
@@ -876,7 +865,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-06-04",
             "updatedAt": "2026-11-03",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": "ueinhaus"
         },
@@ -1425,7 +1414,7 @@
             "title": "<a href='https://github.com/key4hep/k4Bench/pull/302'>feat(blame): review every pull request selected in one window in a single call</a>",
             "author": "jbeirer",
             "createdAt": "2026-11-24",
-            "updatedAt": "2026-11-24",
+            "updatedAt": "2026-11-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1712,7 +1701,7 @@
             "author": "vasilllis",
             "createdAt": "2026-08-27",
             "updatedAt": "2026-08-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1723,7 +1712,18 @@
             "author": "vasilllis",
             "createdAt": "2026-08-18",
             "updatedAt": "2026-08-18",
-            "mergeOk": "no",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 585,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/585'>[pre-edm4hep1] Vertexing: fix folded track momenta at the vertex and reject NaN-momentum fits</a>",
+            "author": "defranchis",
+            "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1733,7 +1733,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/575'>[pre-edm4hep1] V0 finders: start the two-track fit at the crossing points of the track circles</a>",
             "author": "defranchis",
             "createdAt": "2026-10-20",
-            "updatedAt": "2026-11-24",
+            "updatedAt": "2026-11-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1745,18 +1745,7 @@
             "author": "forthommel",
             "createdAt": "2026-11-16",
             "updatedAt": "2026-11-18",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 136,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/136'>GM alternate implementation</a>",
-            "author": "Edler1",
-            "createdAt": "2022-04-22",
-            "updatedAt": "2026-10-26",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1767,7 +1756,7 @@
             "author": "Zehvogel",
             "createdAt": "2026-10-15",
             "updatedAt": "2026-10-15",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1800,7 +1789,7 @@
             "author": "goblirsc",
             "createdAt": "2026-02-16",
             "updatedAt": "2026-09-21",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1822,7 +1811,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1833,7 +1822,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1844,7 +1833,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1855,7 +1844,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1866,7 +1855,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1877,7 +1866,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-16",
             "updatedAt": "2026-07-30",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1888,7 +1877,7 @@
             "author": "forthommel",
             "createdAt": "2026-05-10",
             "updatedAt": "2026-05-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1910,7 +1899,7 @@
             "author": "thisismeamir",
             "createdAt": "2025-12-10",
             "updatedAt": "2026-02-17",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1948,17 +1937,6 @@
             "assignees": ""
         },
         {
-            "repo": "hep-fcc/<br>FCCAnalyses",
-            "num": 123,
-            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/123'>Adding ghost matching jet flavour defn </a>",
-            "author": "Edler1",
-            "createdAt": "2022-03-10",
-            "updatedAt": "2022-10-03",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
             "repo": "hep-fcc/<br>IDEADetectorSIM",
             "num": 14,
             "title": "<a href='https://github.com/HEP-FCC/IDEADetectorSIM/pull/14'>modifications to converter to EDM4Hep and to install_standalone.sh</a>",
@@ -1977,6 +1955,17 @@
             "createdAt": "2022-05-26",
             "updatedAt": "2022-05-26",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCC-config",
+            "num": 423,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/423'>[ALLEGRO] Do not store `CaloHitMCLinks` when calo cells are dropped</a>",
+            "author": "jacofan",
+            "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2097,7 +2086,7 @@
             "author": "jacofan",
             "createdAt": "2026-10-16",
             "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2360,7 +2349,29 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1731'>Compact2Objects: fail on unknown top-level tags</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-24",
-            "updatedAt": "2026-11-24",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1732,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1732'>Geant4Output2EDM4hep: optionally merge the calo hit contributions</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1733,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1733'>Geant4EventSeed: use a different seed for generation of primaries and simulation</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2591,8 +2602,8 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/1085'>Split the pre-commit configuration into linting and formatting and static analysis checks</a>",
             "author": "tmadlener",
             "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-17",
-            "mergeOk": "no",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2614,6 +2625,28 @@
             "author": "jmcarcell",
             "createdAt": "2026-11-22",
             "updatedAt": "2026-11-22",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1090,
+            "title": "<a href='https://github.com/AIDASoft/podio/pull/1090'>Use python3 in shebangs for python scripts</a>",
+            "author": "t-debajyoti",
+            "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>podio",
+            "num": 1091,
+            "title": "<a href='https://github.com/AIDASoft/podio/pull/1091'>Remove redundant tests</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
