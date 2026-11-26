@@ -35,17 +35,6 @@
         },
         {
             "repo": "key4hep/<br>k4geo",
-            "num": 685,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/685'>[ALLEGRO][IDEA] Reduce the world volume to the detector extent plus 50 cm</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-11",
-            "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
             "num": 688,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/688'>[IDEA] return field in the muon-system iron (barrel Bz, endcap Br), simplified from the IDEA FEM field map</a>",
             "author": "mahmoudali2",
@@ -139,7 +128,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -150,7 +139,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-12",
             "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -161,7 +150,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-11-23",
             "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -172,7 +161,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-30",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -194,7 +183,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -205,7 +194,7 @@
             "author": "paulgessinger",
             "createdAt": "2025-03-05",
             "updatedAt": "2026-06-08",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -354,6 +343,17 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
+            "num": 957,
+            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/957'>Add the latest tags for MarlinReco, Clupatra and k4RecTracker</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>key4hep-spack",
             "num": 956,
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/956'>Add BHWIDE generator</a>",
             "author": "ktht",
@@ -435,7 +435,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/179'>Fix/mc mother daughter relations</a>",
             "author": "davidlange6",
             "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-19",
+            "updatedAt": "2026-11-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -491,18 +491,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-11-23",
             "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4RecCalorimeter",
-            "num": 299,
-            "title": "<a href='https://github.com/key4hep/k4RecCalorimeter/pull/299'>Create truth links originator of tracker born particles</a>",
-            "author": "dudarboh",
-            "createdAt": "2026-11-16",
-            "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -513,7 +502,7 @@
             "author": "dudarboh",
             "createdAt": "2026-11-16",
             "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -524,7 +513,7 @@
             "author": "dudarboh",
             "createdAt": "2026-11-16",
             "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -535,7 +524,7 @@
             "author": "dudarboh",
             "createdAt": "2026-11-16",
             "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -546,7 +535,7 @@
             "author": "davidlange6",
             "createdAt": "2026-10-22",
             "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -568,7 +557,7 @@
             "author": "ianna",
             "createdAt": "2025-08-07",
             "updatedAt": "2026-04-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -612,18 +601,7 @@
             "author": "jburzy",
             "createdAt": "2026-11-19",
             "updatedAt": "2026-11-25",
-            "mergeOk": "no",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 167,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/167'>Optional mini-doublet requirement for seeding on double layers</a>",
-            "author": "jburzy",
-            "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -634,7 +612,18 @@
             "author": "jbeirer",
             "createdAt": "2026-11-13",
             "updatedAt": "2026-11-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4ActsTracking",
+            "num": 167,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/167'>Optional mini-doublet requirement for seeding on double layers</a>",
+            "author": "jburzy",
+            "createdAt": "2026-11-19",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -810,7 +799,7 @@
             "author": "JonaDilg",
             "createdAt": "2026-05-07",
             "updatedAt": "2026-11-24",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -821,7 +810,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-11-05",
             "updatedAt": "2026-11-19",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": "SanghyunKo"
         },
@@ -854,7 +843,7 @@
             "author": "Debottam",
             "createdAt": "2026-10-21",
             "updatedAt": "2026-11-09",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": "SanghyunKo"
         },
@@ -865,7 +854,7 @@
             "author": "mahmoudali2",
             "createdAt": "2026-06-04",
             "updatedAt": "2026-11-03",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": "ueinhaus"
         },
@@ -1267,23 +1256,12 @@
         },
         {
             "repo": "key4hep/<br>k4PFHitML",
-            "num": 11,
-            "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/11'>Release unused ONNX Runtime arena memory after each inference call</a>",
-            "author": "davidlange6",
-            "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-17",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4PFHitML",
             "num": 10,
             "title": "<a href='https://github.com/key4hep/k4PFHitML/pull/10'>Separate linker</a>",
             "author": "dudarboh",
             "createdAt": "2026-11-03",
-            "updatedAt": "2026-11-13",
-            "mergeOk": "yes",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1407,17 +1385,6 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
-        },
-        {
-            "repo": "key4hep/<br>k4Bench",
-            "num": 302,
-            "title": "<a href='https://github.com/key4hep/k4Bench/pull/302'>feat(blame): review every pull request selected in one window in a single call</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-24",
-            "updatedAt": "2026-11-25",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
         },
         {
             "repo": "hep-fcc/<br>FCCSW",
@@ -2086,7 +2053,7 @@
             "author": "jacofan",
             "createdAt": "2026-10-16",
             "updatedAt": "2026-11-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2377,6 +2344,17 @@
             "assignees": ""
         },
         {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1734,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1734'>MultiPoleField: init at object creation, avoid runtime overhead</a>",
+            "author": "andresailer",
+            "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-25",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
             "repo": "AIDASoft/<br>podio",
             "num": 424,
             "title": "<a href='https://github.com/AIDASoft/podio/pull/424'>wip: change std::vector to std::pmr::vector</a>",
@@ -2427,7 +2405,7 @@
             "author": "tmadlener",
             "createdAt": "2025-10-08",
             "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2449,7 +2427,7 @@
             "author": "wdconinc",
             "createdAt": "2025-12-20",
             "updatedAt": "2026-11-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2504,7 +2482,7 @@
             "author": "tmadlener",
             "createdAt": "2026-02-24",
             "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2548,7 +2526,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2570,7 +2548,7 @@
             "author": "veprbl",
             "createdAt": "2026-09-04",
             "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2581,7 +2559,7 @@
             "author": "mneha05",
             "createdAt": "2026-10-08",
             "updatedAt": "2026-11-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2603,7 +2581,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-17",
             "updatedAt": "2026-11-25",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2613,7 +2591,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/1088'>Require C++23</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-20",
-            "updatedAt": "2026-11-20",
+            "updatedAt": "2026-11-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2625,17 +2603,6 @@
             "author": "jmcarcell",
             "createdAt": "2026-11-22",
             "updatedAt": "2026-11-22",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "AIDASoft/<br>podio",
-            "num": 1090,
-            "title": "<a href='https://github.com/AIDASoft/podio/pull/1090'>Use python3 in shebangs for python scripts</a>",
-            "author": "t-debajyoti",
-            "createdAt": "2026-11-25",
-            "updatedAt": "2026-11-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2668,7 +2635,7 @@
             "title": "<a href='https://github.com/PandoraPFAOrg/LCContent/pull/43'>Add BIB hit flagging in CaloHitPrep, options to exclude from clustering steps, recovery algorithm to re-associate </a>",
             "author": "trholmes",
             "createdAt": "2026-09-03",
-            "updatedAt": "2026-11-04",
+            "updatedAt": "2026-11-25",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
