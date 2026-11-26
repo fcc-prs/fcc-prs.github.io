@@ -2332,20 +2332,20 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 136,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/136'>ACTS primary vertexing: open points after #109</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-10-27",
-            "updatedAt": "2026-11-25",
+            "num": 118,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/118'>Upstreaming CPU/ONNX pipeline components from k4ActsTracking to acts' Gnn plugin</a>",
+            "author": "madbaron",
+            "createdAt": "2026-10-06",
+            "updatedAt": "2026-11-26",
             "labels": "",
             "assignees": ""
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 158,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/158'>Merge order of the open CLD tracking PRs and when to regenerate the material maps</a>",
+            "num": 136,
+            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/136'>ACTS primary vertexing: open points after #109</a>",
             "author": "jbeirer",
-            "createdAt": "2026-11-13",
+            "createdAt": "2026-10-27",
             "updatedAt": "2026-11-25",
             "labels": "",
             "assignees": ""
@@ -2377,16 +2377,6 @@
             "author": "jbeirer",
             "createdAt": "2026-11-09",
             "updatedAt": "2026-11-09",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
-            "num": 118,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/issues/118'>Upstreaming CPU/ONNX pipeline components from k4ActsTracking to acts' Gnn plugin</a>",
-            "author": "madbaron",
-            "createdAt": "2026-10-06",
-            "updatedAt": "2026-10-08",
             "labels": "",
             "assignees": ""
         },
@@ -3308,6 +3298,26 @@
             "createdAt": "2026-11-25",
             "updatedAt": "2026-11-25",
             "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>DDML",
+            "num": 44,
+            "title": "<a href='https://github.com/key4hep/DDML/issues/44'>See if AllShowers configurations can be shipped such that it's less likely to break</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>DDML",
+            "num": 43,
+            "title": "<a href='https://github.com/key4hep/DDML/issues/43'>Check if AllShowers can use correct_angles=True instead of hand-coding angle shifts</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "labels": "enhancement",
             "assignees": ""
         },
         {
@@ -5166,7 +5176,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1501'>Bug/Feature: Condense duplicated particle contributions in calorimeter</a>",
             "author": "murnanedaniel",
             "createdAt": "2025-09-16",
-            "updatedAt": "2026-02-25",
+            "updatedAt": "2026-11-26",
             "labels": "enhancement \nquestion",
             "assignees": ""
         },
@@ -5248,6 +5258,36 @@
             "createdAt": "2026-10-30",
             "updatedAt": "2026-11-11",
             "labels": "enhancement",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1735,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1735'>DDG4: sensitive volumes placed with a reflection matrix get wrong cellIDs, and no hits at all in multi-threaded mode</a>",
+            "author": "veprbl",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1738,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1738'>ddsim runs off the end of the file when using EDM4hep inputs</a>",
+            "author": "tmadlener",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "labels": "bug",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1739,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/issues/1739'>Same seed used for generation of primaries and simulation</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "labels": "bug",
             "assignees": ""
         },
         {
