@@ -1,6 +1,165 @@
 {
-    "updated_at": "2026-11-25T16:39:46Z",
+    "updated_at": "2026-11-26T16:11:58Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "key4hep-doc",
+            "num": 179,
+            "title": "Bump astral-sh/setup-uv from 10.3.3 to 10.4.0",
+            "url": "https://github.com/key4hep/key4hep-doc/pull/179",
+            "author": "dependabot",
+            "mergedAt": "2026-11-26",
+            "mergedBy": "jmcarcell",
+            "labels": [
+                "dependencies",
+                "github_actions"
+            ],
+            "body": "Bumps [astral-sh/setup-uv](https://github.com/astral-sh/setup-uv) from 10.3.3 to 10.4.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/astral-sh/setup-uv/releases\">astral-sh/setup-uv's releases</a>.</em></p>\n<blockquote>\n<h2>v10.4.0 \ud83c\udf08 New input <code>require-checksums</code> and bug fixing</h2>\n<h2>Changes</h2>\n<p>This release adds the new input <code>require-checksums</code>. Its <code>false</code> by default and when you enable it, it will fail the action when no checksum is known for a release. This can happen when you use <code>version: latest</code> and the version of <code>astral-sh/setup-uv</code> that you are running does not bundle the known checksum for the uv version just released. In that case you can always supply the checksum yours\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                ".github/workflows/build.yml"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.2\n:---:\nPreview removed because the pull request was closed.\n2026-11-26 07:14 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4PFHitML",
+            "num": 10,
+            "title": "Separate linker",
+            "url": "https://github.com/key4hep/k4PFHitML/pull/10",
+            "author": "dudarboh",
+            "mergedAt": "2026-11-26",
+            "mergedBy": "herrmannlena",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\r\n\r\n- Move truth linking into a separate Gaudi algorithm.\r\n\r\nENDRELEASENOTES\r\n\r\nThe goal of this PR is to create a standalone truth-linking Gaudi algorithm, which is based on the Hungarian matching used in the HitPF paper. This way, it becomes possible to run Hungarian matching on the PandoraPFOs collections.\r\n\r\nWarning: This PR changes the behaviour for the HitPF Reco Particles which had more than one track assigned to it. Previous version: used all track nodes belonging to the HitPF Reco Particle into the IoU calculation.\r\nCurrent version: takes only the best-fitted track, because we keep only a single (best-fitted) track  per HitPF Reco Particle when writing into the collection. I don't think this makes a noticeable difference, because number of tracks per-particle is s\u2026",
+            "diff": {
+                "additions": 299,
+                "deletions": 383,
+                "files": 6
+            },
+            "files": [
+                "README.md",
+                "k4PF-HitML/options/PerformMLPF.py",
+                "k4PF-HitML/src/components/HitPFRecoMCTruthLinker.cpp",
+                "k4PF-HitML/src/components/PFHitML.cpp",
+                "k4PF-HitML/test/test_PerformHitPF.sh",
+                "setup.sh"
+            ],
+            "comments": [
+                {
+                    "author": "herrmannlena",
+                    "body": "Thanks for the update @dudarboh !\r\nDo you know which fraction of the particle flow objects have more than one track, and how often this changes the truth links? I agree it's probably negligible, but it would be nice to have some numbers. \r\nI noticed that the additional tracks dropped per PF object a\u2026"
+                },
+                {
+                    "author": "dudarboh",
+                    "body": "I tested 100 CLD Zuds 91 GeV events.\n\nThere are 24 / 100 (24%) events with at least one HitPF PFO with more than one track.\nIt makes 28 / 3166 (2%) of all charged PFOs and results in 29 dropped tracks (one PFO contained 3 tracks).\n\nMost of those cases 18 / 28 (64%) were two different MC particles, w\u2026"
+                },
+                {
+                    "author": "herrmannlena",
+                    "body": "Thanks for the detailed investigation!! Since no links changed in your test, I'm happy to merge. I've opened #13 to track the dropped tracks."
+                },
+                {
+                    "author": "dudarboh",
+                    "body": "#11 introduced a small merge conflict in the README.\r\nI have kept my refactored README and added new `onnx` arguments introduced by #11 in the corresponding table.\r\n\r\nhttps://github.com/key4hep/k4PFHitML/pull/10/changes#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5R135-R136\r\n\u2026"
+                }
+            ],
+            "comments_total": 4,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "DDML",
+            "num": 41,
+            "title": "Remove unused methods and structs",
+            "url": "https://github.com/key4hep/DDML/pull/41",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-26",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Remove unused methods and helper structs\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 0,
+                "deletions": 47,
+                "files": 3
+            },
+            "files": [
+                "include/DDML/CaloCloudsTwoAngleModel.h",
+                "include/DDML/RegularGridTwoAngleBIBAEModel.h",
+                "src/RegularGridTwoAngleBIBAEModel.cc"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "DDML",
+            "num": 40,
+            "title": "Add version information to CMake",
+            "url": "https://github.com/key4hep/DDML/pull/40",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-26",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Add version information to CMake and set it to the current tag version\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 6,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1091,
+            "title": "Remove redundant tests",
+            "url": "https://github.com/AIDASoft/podio/pull/1091",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-26",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Remove the `drop_component` schema evolution test, since `multi_schema_drop_component` uses identical models and checks, and additionally reads from a second older version.\n - Move the remaining checks from the `JSON output` unit test into `test_json_output.cpp` and remove the duplicate test.\n - Only build `test_json_output.cpp` when nlohmann_json is found, so the unit tests also build without it.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 44,
+                "deletions": 136,
+                "files": 8
+            },
+            "files": [
+                "tests/CTestCustom.cmake",
+                "tests/schema_evolution/code_gen/CMakeLists.txt",
+                "tests/schema_evolution/code_gen/drop_component/check.cpp",
+                "tests/schema_evolution/code_gen/drop_component/new.yaml",
+                "tests/schema_evolution/code_gen/drop_component/old.yaml",
+                "tests/unittests/CMakeLists.txt",
+                "tests/unittests/test_json_output.cpp",
+                "tests/unittests/unittest.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
         {
             "org": "key4hep",
             "repo": "k4geo",
@@ -98,6 +257,36 @@
                 }
             ],
             "comments_total": 2,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4RecCalorimeter",
+            "num": 299,
+            "title": "Create truth links originator of tracker born particles",
+            "url": "https://github.com/key4hep/k4RecCalorimeter/pull/299",
+            "author": "dudarboh",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "scott-snyder",
+            "labels": [],
+            "body": "Depends on #298.\r\n\r\nIn originator cases 2 (backscatter) and 3 (parent decayed in the tracker), the originator was stored in `remap_as_you_go` but `index_mcp` was not updated. The first hit of such a particle was therefore linked to the shower particle; later hits were linked correctly through the map.\r\n\r\nThe original RecoMCTruthLinker code has it:\r\n\r\nhttps://github.com/iLCSoft/MarlinReco/blob/88448e9f671cd814f20b53def132f55589942994/Analysis/RecoMCTruthLink/src/RecoMCTruthLinker.cc#L777-L778\r\n\r\nhttps://github.com/iLCSoft/MarlinReco/blob/88448e9f671cd814f20b53def132f55589942994/Analysis/RecoMCTruthLink/src/RecoMCTruthLinker.cc#L788-L789\r\n\r\nFixes test cases 4 and 6.\r\n\r\nBEGINRELEASENOTES\r\n\r\n- `CreateTruthLinks`: the first hit of a backscattered or tracker-born originator is linked to that ori\u2026",
+            "diff": {
+                "additions": 3,
+                "deletions": 1,
+                "files": 2
+            },
+            "files": [
+                "RecCalorimeter/src/components/CreateTruthLinks.cpp",
+                "RecCalorimeter/tests/scripts/check_truth_links.py"
+            ],
+            "comments": [
+                {
+                    "author": "scott-snyder",
+                    "body": "Merged; thanks."
+                }
+            ],
+            "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
         },
@@ -224,6 +413,259 @@
         {
             "org": "key4hep",
             "repo": "k4Bench",
+            "num": 308,
+            "title": "fix(analysis): tell apart runs of two releases filed on one date",
+            "url": "https://github.com/key4hep/k4Bench/pull/308",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "A triple's report window spans every release directory (`runs/{suite}/\u2026/{stack}/{sample}/{date}/`), but every trend frame set `run_id` to the date directory's name alone. When two releases are benchmarked on one date, both runs got the same `run_id`, and every join keyed on it mixed them.\n\nThis has happened: the store holds **22 such collisions**, all in sim on the gcc14 platform between 2026-07-03 and 2026-09-03. In each one, release D-1 and release D were both filed under date D, for example:\n\n```\nALLEGRO_o1_v03 / p8_ee_Zbb_ecm91: key4hep-2026-07-20/\u2026/2026-07-21 and key4hep-2026-07-21/\u2026/2026-07-21\nILD_FCCee_v02  / p8_ee_Zbb_ecm91: key4hep-2026-09-02/\u2026/2026-09-03 and key4hep-2026-09-03/\u2026/2026-09-03\n```\n\nThere have been none since, but it can still happen: dispatching a pinned older releas\u2026",
+            "diff": {
+                "additions": 752,
+                "deletions": 179,
+                "files": 31
+            },
+            "files": [
+                ".github/scripts/regression_report.py",
+                ".github/scripts/regression_report.sh",
+                "dashboard/stats.py",
+                "dashboard/tabs/_reliability.py",
+                "dashboard/tabs/reports/_blame.py",
+                "dashboard/tabs/reports/_metric_trend.py",
+                "dashboard/tabs/trends.py",
+                "docs/reference/file-formats.md",
+                "k4bench/analysis/loader.py",
+                "k4bench/analysis/trend.py",
+                "k4bench/regression/components.py",
+                "k4bench/regression/history.py",
+                "k4bench/regression/models.py",
+                "k4bench/regression/regions.py",
+                "k4bench/regression/render.py",
+                "k4bench/regression/report_builder.py",
+                "k4bench/results/reliability_evidence.py",
+                "tests/integration/test_regression_report.py",
+                "tests/unit/test_analysis_loader.py",
+                "tests/unit/test_blame_evidence.py",
+                "tests/unit/test_dashboard_blame.py",
+                "tests/unit/test_dashboard_reco_apptest.py",
+                "tests/unit/test_dashboard_section_dispatch.py",
+                "tests/unit/test_dashboard_stability.py",
+                "tests/unit/test_dashboard_stack_changes.py",
+                "tests/unit/test_dashboard_trends_flags.py",
+                "tests/unit/test_regression_history.py",
+                "tests/unit/test_regression_regions.py",
+                "tests/unit/test_regression_render.py",
+                "tests/unit/test_regression_report.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/308?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 307,
+            "title": "fix(report): retry EOS reads and report a triple that stays unreadable",
+            "url": "https://github.com/key4hep/k4Bench/pull/307",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "The nightly regression report reads each `(detector, platform, sample)` triple's trailing run window over WebEOS. Most of those reads were lenient, and a lenient read that WebEOS does not answer is left out without a trace. A cold WebEOS listing takes 15\u201325 s or returns a `504` at 30 s, and `k4bench.remote` retries each request only once. So, on main:\n\n- **A stack listing that times out drops that release's nights from the series.** `_fetch_run_dirs` calls `list_run_dates_all_stacks` without `strict`. The triple is then judged against a shorter history, which is a different baseline: a step can confirm, fail to confirm, or re-anchor differently from the night before, and nothing in the report says why.\n- **A run download that times out drops that night the same way** (`fetch_runs_windowed`\u2026",
+            "diff": {
+                "additions": 1050,
+                "deletions": 56,
+                "files": 10
+            },
+            "files": [
+                ".github/scripts/regression_report.py",
+                "dashboard/tabs/reports/overview/_data.py",
+                "docs/architecture/data-flow.md",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/regression/models.py",
+                "k4bench/regression/report_builder.py",
+                "tests/integration/test_regression_report.py",
+                "tests/unit/test_dashboard_detectors_overview.py",
+                "tests/unit/test_regression_report.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/307?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 306,
+            "title": "fix(nightly): replace a re-run's EOS files and cache a run only once its upload finished",
+            "url": "https://github.com/key4hep/k4Bench/pull/306",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "A run directory on EOS is named for its detector, platform, release, sample and the day its job started. A re-run of the same job against the same release on the same day, for example \"Re-run failed jobs\", lands in the same directory. Two things go wrong there today.\n\n**The earlier attempt's files survive.** The nightly creates the directory (`xrdfs mkdir -p`) and copies its files over it one by one with `xrdcp --force`. Nothing removes a file the new attempt did not produce. Say attempt 1 uploads 27 result CSVs and its `run_info.json`, and attempt 2 then fails earlier, before writing some of its CSVs. EOS now holds attempt 2's `run_info.json` beside CSVs, logs and per-event files that only attempt 1 wrote. The report judges that mix as one night, and the configurations attempt 2 never fin\u2026",
+            "diff": {
+                "additions": 689,
+                "deletions": 24,
+                "files": 11
+            },
+            "files": [
+                ".github/scripts/benchmark_job.py",
+                ".github/scripts/nightly_benchmark.sh",
+                ".github/scripts/run_info.py",
+                "docs/architecture/data-flow.md",
+                "docs/faq.md",
+                "docs/reference/file-formats.md",
+                "docs/user-guide/features/dashboard.md",
+                "k4bench/remote.py",
+                "tests/unit/test_nightly_upload.py",
+                "tests/unit/test_remote.py",
+                "tests/unit/test_run_info_writer.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/306?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 309,
+            "title": "feat(dashboard): hide failed runs under Reliable only",
+            "url": "https://github.com/key4hep/k4Bench/pull/309",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "Every historical dashboard view has one run-scope selector, **Reliable only** (the default) or **All runs**. It only ever applied to runs that failed the host-reliability check. Failed configs (non-zero, missing or invalid return code) were drawn as \u274c markers at their partial values whatever the choice, so the default \"trustworthy measurements only\" view still showed values that are not measurements of a finished job. The selector was also drawn only when an unreliable run was in view, so there was no way to hide a failure.\n\n### What changes\n- **Reliable only hides failed configs too.** This applies to Run Trends, the Overview's Performance Trends, the Regression Status trend preview and the regression drill-down. **All runs** brings them back as \u274c markers, as before.\n- **The selector appe\u2026",
+            "diff": {
+                "additions": 324,
+                "deletions": 108,
+                "files": 10
+            },
+            "files": [
+                "dashboard/tabs/_reliability.py",
+                "dashboard/tabs/reports/_metric_trend.py",
+                "dashboard/tabs/reports/overview/__init__.py",
+                "dashboard/tabs/reports/overview/status.py",
+                "dashboard/tabs/trends.py",
+                "docs/user-guide/features/dashboard.md",
+                "tests/unit/test_dashboard_detectors_overview.py",
+                "tests/unit/test_dashboard_overview_apptest.py",
+                "tests/unit/test_dashboard_stack_changes.py",
+                "tests/unit/test_dashboard_trends_flags.py"
+            ],
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/309?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 303,
+            "title": "fix(runner): never run the timed program after its setup script fails",
+            "url": "https://github.com/key4hep/k4Bench/pull/303",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "`timed_shell_command` built every timed run as `source <setup_script>` followed by the timed program, with nothing in between to check that the source worked. Bash carries on after a failed `source`, so a setup script that is missing, or that fails partway, still let `ddsim` or `k4run` run. It then ran in whatever environment the calling shell had. If another Key4hep stack was already on `PATH`, the run succeeded and its timings, memory and outputs were recorded under the stack the configuration named, though they were measured on a different one.\n\nFor example: a library caller passes `setup_script=/cvmfs/.../2026-11-24/.../setup.sh` from a shell that already sourced the 2026-11-20 view. The 11-24 view is half-published, so sourcing it fails. The sweep still completes with returncode 0 for\u2026",
+            "diff": {
+                "additions": 92,
+                "deletions": 9,
+                "files": 3
+            },
+            "files": [
+                "docs/user-guide/configuration.md",
+                "k4bench/runner/process.py",
+                "tests/unit/test_process.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/303?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 304,
+            "title": "fix(report): take a failed night's CI run and geometry from its run_info.json",
+            "url": "https://github.com/key4hep/k4Bench/pull/304",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "jbeirer",
+            "labels": [],
+            "body": "A benchmark job can fail before it writes any result CSV and still upload its `run_info.json`, for example when geometry preparation fails. The report builder already handles such a night: the roster in `run_info.json` turns every configured label into a `config '\u2026' produced no results tonight` failure, and the release is taken from `run_info.json` too. The group's CI run and geometry, however, were read only from result rows, so that group carried `github_run_url = None` and an empty `geometry_path`.\n\nWhen that happens to every job of a fan-out, the nightly publishes nothing:\n\n1. Every group of tonight's report has `github_run_url = None`.\n2. `report_covers_run(report, <fan-out run id>)` finds no group naming the fan-out and returns `False`.\n3. `regression_report.py` concludes the fan-out\u2026",
+            "diff": {
+                "additions": 125,
+                "deletions": 7,
+                "files": 5
+            },
+            "files": [
+                "docs/architecture/data-flow.md",
+                "docs/reference/file-formats.md",
+                "k4bench/regression/report_builder.py",
+                "tests/integration/test_regression_report.py",
+                "tests/unit/test_regression_report.py"
+            ],
+            "comments": [
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "github-actions",
+                    "body": "Failed to generate code suggestions for PR"
+                },
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/304?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
             "num": 305,
             "title": "chore(ci): remove the PR-Agent pull request review",
             "url": "https://github.com/key4hep/k4Bench/pull/305",
@@ -248,8 +690,13 @@
                 "docs/reference/file-formats.md",
                 "tests/unit/test_ai_pr_review.py"
             ],
-            "comments": [],
-            "comments_total": 0,
+            "comments": [
+                {
+                    "author": "codecov-commenter",
+                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/305?dropdown=cover\u2026"
+                }
+            ],
+            "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
         },
@@ -344,6 +791,38 @@
             "comments": [],
             "comments_total": 0,
             "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "AIDASoft",
+            "repo": "podio",
+            "num": 1090,
+            "title": "Use python3 in shebangs for python scripts",
+            "url": "https://github.com/AIDASoft/podio/pull/1090",
+            "author": "t-debajyoti",
+            "mergedAt": "2026-11-25",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "Hardcoding 'python' shebangs causes test and execution failures on modern linux distributions where 'python' is not symlinked by default such as in Ubuntu 24.04. This PR updates the remaining Python script shebangs to explicitly use 'python3'\nBEGINRELEASENOTES\n- Use 'python3' in shebangs for python scripts\nENDRELEASENOTES",
+            "diff": {
+                "additions": 3,
+                "deletions": 3,
+                "files": 3
+            },
+            "files": [
+                "python/podio_gen/test_ClassDefinitionValidator.py",
+                "python/podio_gen/test_MemberParser.py",
+                "python/podio_schema_evolution.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [
+                {
+                    "author": "jmcarcell",
+                    "state": "APPROVED",
+                    "body": "As explained in https://peps.python.org/pep-0394/#for-python-script-publishers"
+                }
+            ],
             "reviews_total": 1
         },
         {
@@ -1482,9 +1961,13 @@
                 {
                     "author": "andread3vita",
                     "body": "@BrieucF I have added a comment on the xml based on @Zehvogel's comment. Do you think we can merge this PR?"
+                },
+                {
+                    "author": "k4bench-bot",
+                    "body": "<!-- k4bench-blame-comment:v1 suite=reco window=2026-11-21..2026-11-24 -->\n<!-- k4bench-blame-facts:143db55b43637510 -->\n<!-- k4bench-blame-cumulative:v2 eNrFkUEOgjAQRe_SNTUtAQJLE5W4c6EuJGQC9UsaoZC2QY9vuYPobv5LJm_yp6rYcbff0ihpFgmL2DvPKEs4-oJ3SsmMj5MPeMoJoFvbEtRQyEDaxqHXBmEc0BjyegC5kFiUpxsRMYtZ4wUbUC\u2026"
                 }
             ],
-            "comments_total": 5,
+            "comments_total": 6,
             "reviews": [],
             "reviews_total": 2
         },
@@ -2589,272 +3072,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4geo",
-            "num": 692,
-            "title": "Do not export file-local helpers in detector constructors",
-            "url": "https://github.com/key4hep/k4geo/pull/692",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Reopens the changes from #689 without squashing the two commits.\n\nBEGINRELEASENOTES\n - Put the file-local helpers in several detector constructors in unnamed namespaces, so they are not exported from the plugin libraries.\n - Remove the unused `tForArcLength` from `ECalEndcap_Turbine_o1_v0{1,2,3}` and an unused counter from `ECalEndcap_Turbine_o1_v03`.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2456,
-                "deletions": 2430,
-                "files": 12
-            },
-            "files": [
-                "detector/PID/ARC_geo_o1_v01.cpp",
-                "detector/calorimeter/CaloEndcapDiscs_o1_v01_geo.cpp",
-                "detector/calorimeter/ECalEndcap_Turbine_o1_v01_geo.cpp",
-                "detector/calorimeter/ECalEndcap_Turbine_o1_v02_geo.cpp",
-                "detector/calorimeter/ECalEndcap_Turbine_o1_v03_geo.cpp",
-                "detector/calorimeter/HCalThreePartsEndcap_o1_v01_geo.cpp",
-                "detector/calorimeter/dual-readout-tubes/src/DREndcapTubes_o1_v01.cpp",
-                "detector/tracker/DriftChamber_o1_v02.cpp",
-                "detector/tracker/FTD_Simple_Staggered_geo.cpp",
-                "detector/tracker/StrawTubeTracker_o1_v01_geo.cpp",
-                "detector/tracker/TrackerBarrel_o1_v06_geo.cpp",
-                "test/src/TestSensThickness.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4geo",
-            "num": 689,
-            "title": "Do not export file-local helpers in detector constructors",
-            "url": "https://github.com/key4hep/k4geo/pull/689",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Put the file-local helpers in several detector constructors in unnamed namespaces, so they are not exported from the plugin libraries.\n - Remove the unused `tForArcLength` from `ECalEndcap_Turbine_o1_v0{1,2,3}` and an unused counter from `ECalEndcap_Turbine_o1_v03`.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 2456,
-                "deletions": 2430,
-                "files": 12
-            },
-            "files": [
-                "detector/PID/ARC_geo_o1_v01.cpp",
-                "detector/calorimeter/CaloEndcapDiscs_o1_v01_geo.cpp",
-                "detector/calorimeter/ECalEndcap_Turbine_o1_v01_geo.cpp",
-                "detector/calorimeter/ECalEndcap_Turbine_o1_v02_geo.cpp",
-                "detector/calorimeter/ECalEndcap_Turbine_o1_v03_geo.cpp",
-                "detector/calorimeter/HCalThreePartsEndcap_o1_v01_geo.cpp",
-                "detector/calorimeter/dual-readout-tubes/src/DREndcapTubes_o1_v01.cpp",
-                "detector/tracker/DriftChamber_o1_v02.cpp",
-                "detector/tracker/FTD_Simple_Staggered_geo.cpp",
-                "detector/tracker/StrawTubeTracker_o1_v01_geo.cpp",
-                "detector/tracker/TrackerBarrel_o1_v06_geo.cpp",
-                "test/src/TestSensThickness.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4geo",
-            "num": 691,
-            "title": "Bump cvmfs-contrib/github-action-cvmfs from 5.6 to 5.7",
-            "url": "https://github.com/key4hep/k4geo/pull/691",
-            "author": "dependabot",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [cvmfs-contrib/github-action-cvmfs](https://github.com/cvmfs-contrib/github-action-cvmfs) from 5.6 to 5.7.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/cvmfs-contrib/github-action-cvmfs/releases\">cvmfs-contrib/github-action-cvmfs's releases</a>.</em></p>\n<blockquote>\n<h2>v5.7</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>fix: abort when cvmfs package installation fails by <a href=\"https://github.com/veprbl\"><code>@\u200bveprbl</code></a> in <a href=\"https://redirect.github.com/cvmfs-contrib/github-action-cvmfs/pull/72\">cvmfs-contrib/github-action-cvmfs#72</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/veprbl\"><code>@\u200bveprbl</code></a> made their first contribution in <a href=\"https://redirect.github.com/cvmfs-contrib/git\u2026",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                ".github/workflows/coverity.yml",
-                ".github/workflows/pre-commit.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-doc",
-            "num": 178,
-            "title": "Bump cvmfs-contrib/github-action-cvmfs from 5.6 to 5.7",
-            "url": "https://github.com/key4hep/key4hep-doc/pull/178",
-            "author": "dependabot",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [cvmfs-contrib/github-action-cvmfs](https://github.com/cvmfs-contrib/github-action-cvmfs) from 5.6 to 5.7.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/cvmfs-contrib/github-action-cvmfs/releases\">cvmfs-contrib/github-action-cvmfs's releases</a>.</em></p>\n<blockquote>\n<h2>v5.7</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>fix: abort when cvmfs package installation fails by <a href=\"https://github.com/veprbl\"><code>@\u200bveprbl</code></a> in <a href=\"https://redirect.github.com/cvmfs-contrib/github-action-cvmfs/pull/72\">cvmfs-contrib/github-action-cvmfs#72</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/veprbl\"><code>@\u200bveprbl</code></a> made their first contribution in <a href=\"https://redirect.github.com/cvmfs-contrib/git\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/generate_overview.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "[PR Preview Action](https://github.com/rossjrw/pr-preview-action) v1.8.2\n:---:\nPreview removed because the pull request was closed.\n2026-11-19 06:59 UTC\n<!-- Sticky Pull Request Commentpr-preview -->"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4SimDelphes",
-            "num": 168,
-            "title": "Ensure to find a recent enough podio version",
-            "url": "https://github.com/key4hep/k4SimDelphes/pull/168",
-            "author": "tmadlener",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n- Require at least podio v01-10 to build to document actual requirements\n\nENDRELEASENOTES\n\n- [x] Needs a new podio tag first",
-            "diff": {
-                "additions": 1,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4SimDelphes",
-            "num": 180,
-            "title": "Fix compatibility with Pythia 8.318",
-            "url": "https://github.com/key4hep/k4SimDelphes/pull/180",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Support Pythia 8.318 in the standalone reader and jet-matching test while retaining compatibility with older Pythia 8 releases.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 15,
-                "deletions": 7,
-                "files": 3
-            },
-            "files": [
-                "standalone/CMakeLists.txt",
-                "standalone/src/DelphesPythia8Reader.h",
-                "tests/CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "Only Pythia8 317 was tested in CI."
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Gen",
-            "num": 74,
-            "title": "Fix compatibility with Pythia 8.318",
-            "url": "https://github.com/key4hep/k4Gen/pull/74",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Support Pythia 8.318 while retaining compatibility with older Pythia 8 releases.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 24,
-                "deletions": 30,
-                "files": 2
-            },
-            "files": [
-                "k4Gen/src/components/PythiaInterface.cpp",
-                "k4Gen/src/components/PythiaInterface.h"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "CI only tested Pythia8 317 because that's what is available at the moment in the nightlies."
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecCalorimeter",
-            "num": 294,
-            "title": "move duplicated in memory trappist onnx models to shared service",
-            "url": "https://github.com/key4hep/k4RecCalorimeter/pull/294",
-            "author": "davidlange6",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "giovannimarchiori",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- Move in memory onnx models to shared service to avoid loading models twice into memory\r\n\r\nENDRELEASENOTES\r\n\r\nsaves about 300MB RSS.",
-            "diff": {
-                "additions": 47,
-                "deletions": 18,
-                "files": 1
-            },
-            "files": [
-                "RecFCCeeCalorimeter/src/components/TRAPPISTPi0PhotonInference.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Hi @davidlange6 I made a check of your PR with Claude and here's its verdict - can you have a look?\r\n\r\nOne real issue: the Ort::Env can be destroyed before the shared session.\r\nThe session is created from the first instance\u2019s m_Env, but now the service\u2019s map keeps the session alive. ONNX Runtime req\u2026"
-                },
-                {
-                    "author": "davidlange6",
-                    "body": "Fixed in 1ea1863: the `Ort::Env` and `Ort::Session` are now cached together in `CaloCellConstantsSvc` (Env declared first, so it is destroyed last), and the per-instance `m_Env` is gone.\n\nI checked it with the FCC-config ALLEGRO_o1_v03 `run_digi_reco.py` (`--reconstructPi0s --runTRAPPIST --addNoise`\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Hi @davidlange6 \r\nthanks a lot. Will give one last chance to @scott-snyder to have a look, then proceed to merge at the beginning of next week."
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Failure of IDEA_o2_v01_reco test is unrelated (TracksFromGenParticles not found)"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "CI failure is likely due to a broken nightly on Alma9."
-                }
-            ],
-            "comments_total": 5,
-            "reviews": [
-                {
-                    "author": "giovannimarchiori",
-                    "state": "APPROVED",
-                    "body": "looks good from my side, thanks!"
-                }
-            ],
-            "reviews_total": 3
-        },
-        {
-            "org": "key4hep",
             "repo": "k4ActsTracking",
             "num": 153,
             "title": "ACTSDuplicateRemoval: never keep two equal tracks",
@@ -2901,55 +3118,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4RecTracker",
-            "num": 128,
-            "title": "Fix issue with CollectionID.",
-            "url": "https://github.com/key4hep/k4RecTracker/pull/128",
-            "author": "scott-snyder",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "CollectionIDs are not assigned until collections are written; therefore, we cannot in general use them to distinguish collections in digitization/reconstruction.  Rework GGTFTrackFinder to use the index in the input collection sequence rather than collectionID to identify collections.  Fixes test failures for ALLEGRO and IDEA seen in FCC-config.\n\nBEGINRELEASENOTES\n- Fix crashes due to use of CollectionID before having been assigned.\nENDRELEASENOTES",
-            "diff": {
-                "additions": 14,
-                "deletions": 27,
-                "files": 1
-            },
-            "files": [
-                "Tracking/components/GGTFTrackFinder.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "andread3vita",
-                    "body": "Hi! Thank you for this PR! It works for me, but I think we should consider whether we really want to leave this issue unresolved. In my opinion, `objectID` should be assigned at the digitizer stage, since other algorithms might rely on it and could encounter the same issue without being aware of it.\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I also want to point out this discussion: https://github.com/key4hep/k4FWCore/issues/311"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "> I also want to point out this discussion: [key4hep/k4FWCore#311](https://github.com/key4hep/k4FWCore/issues/311)\r\n\r\nit's a discussion between Thomas and Madlener ;) Jokes aside, @tmadlener , why was there no follow-up since > 1 year? Is there a good reason that was mentioned to you for not going i\u2026"
-                },
-                {
-                    "author": "andread3vita",
-                    "body": "> > I also want to point out this discussion: [key4hep/k4FWCore#311](https://github.com/key4hep/k4FWCore/issues/311)\r\n> \r\n> it's a discussion between Thomas and Madlener ;) Jokes aside, @tmadlener , why was there no follow-up since > 1 year? Is there a good reason that was mentioned to you for not g\u2026"
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "> Maybe we can add a comment to help to spot this \"workaround\" when podio will be fixed (?). I agree that it is better to move on with this PR if a fix in podio will require months to be discussed.\n\nIt is not going to be done immediately and it is currently failing so this is the best that can be do\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> it's a discussion between Thomas and Madlener ;) Jokes aside, @tmadlener , why was there no follow-up since > 1 year? Is there a good reason that was mentioned to you for not going in this direction?\n\nMainly because priorities apparently shifted and the original context in which this was raised wa\u2026"
-                }
-            ],
-            "comments_total": 6,
-            "reviews": [],
-            "reviews_total": 9
-        },
-        {
-            "org": "key4hep",
             "repo": "key4hep-images",
             "num": 38,
             "title": "Fix Autoconf and XRootD dependencies in build images",
@@ -2968,30 +3136,6 @@
                 "Docker/alma10/alma10-build/Dockerfile",
                 "Docker/alma9/alma9-build/Dockerfile",
                 "Docker/ubuntu24/ubuntu24-build/Dockerfile"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4DetectorPerformance",
-            "num": 14,
-            "title": "Skip tracking validation test data when tests are disabled",
-            "url": "https://github.com/key4hep/k4DetectorPerformance/pull/14",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Skip downloading the `testTrackingValidation` ROOT input when `BUILD_TESTING=OFF`.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 27,
-                "deletions": 36,
-                "files": 1
-            },
-            "files": [
-                "TrackingPerformance/CMakeLists.txt"
             ],
             "comments": [],
             "comments_total": 0,
@@ -3093,387 +3237,6 @@
                 }
             ],
             "reviews_total": 31
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCCAnalyses",
-            "num": 565,
-            "title": "[pre-edm4hep1] Vertexing: fix the per-jet track selection of get_V0s_jet and get_SV_jets",
-            "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/565",
-            "author": "defranchis",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "bistapf",
-            "labels": [],
-            "body": "## Summary\n\n`get_V0s_jet` and `get_SV_jets` built the track list of jet j from the non-primary tracks that are **not** constituents of jet j (inverted `std::find` test). The V0s and SVs of each jet were therefore built from the tracks of the other jets: with two jets every V0 and SV is assigned to the opposite jet, with more jets the same pair is booked in several jets, and with one jet nothing is found. They now use the tracks of jet j.\n\nA second, smaller fix in `get_V0s_jet`: a jet with fewer than two non-primary tracks was skipped without clearing the track list, so its leftover track was added to a later jet.\n\nThe per-jet output of the examples `vertex_lcfiplus/analysis_V0.py` and `analysis_SV.py` now corresponds to the jets. The header comment of `get_SV_jets` (SVs not separated by je\u2026",
-            "diff": {
-                "additions": 10,
-                "deletions": 5,
-                "files": 1
-            },
-            "files": [
-                "analyzers/dataframe/src/VertexFinderLCFIPlus.cc"
-            ],
-            "comments": [
-                {
-                    "author": "bistapf",
-                    "body": "Thanks! For the record: **this changes per-jet SV and V0 outputs for all analyses using get_SV_jets / get_V0s_jet,** which previously found each jet\u2019s vertices from the other jets\u2019 tracks. Event-level outputs are unchanged."
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 4
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCCAnalyses",
-            "num": 582,
-            "title": "Use unnamed namespaces for file-local globals and helpers",
-            "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/582",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "Put the file-local globals (`gWeavers`, `gWeaver2`, `m_decoder`, ...) and the `stdout` helpers in `VertexFitterSimple.cc` in unnamed namespaces so that they are not exported.",
-            "diff": {
-                "additions": 14,
-                "deletions": 4,
-                "files": 6
-            },
-            "files": [
-                "analyzers/dataframe/src/CaloNtupleizer.cc",
-                "analyzers/dataframe/src/JetFlavourUtils.cc",
-                "analyzers/dataframe/src/VertexFinderLCFIPlus.cc",
-                "analyzers/dataframe/src/VertexFitterSimple.cc",
-                "analyzers/dataframe/src/WeaverUtils.cc",
-                "analyzers/dataframe/src/myUtils.cc"
-            ],
-            "comments": [
-                {
-                    "author": "jmcarcell",
-                    "body": "That doesn't change what this PR does, the problem is if the symbol is exported (can be checked with `nm`) on Linux when it's not needed. It's better not to in general, although it doesn't cause issues most of the time."
-                },
-                {
-                    "author": "kjvbrt",
-                    "body": "Hi, I wanted to avoid just slapping anonymous namespaces, but it's just cosmetics. I pushed two small commits: debug_me is now a const, which already gives it internal linkage (checked with nm: no exported symbol), and a clang-format fix. I will merge this shortly (if CI passes.). Thanks :)"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 2
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCCAnalyses",
-            "num": 270,
-            "title": "Removing Vdt includes",
-            "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/270",
-            "author": "kjvbrt",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "bndikt",
-            "labels": [],
-            "body": "Removing separate Vdt includes, as it seems that they are no longer needed.\r\nTested in `stable` and `nightlies` key4hep stack.",
-            "diff": {
-                "additions": 0,
-                "deletions": 89,
-                "files": 5
-            },
-            "files": [
-                "addons/ONNXRuntime/CMakeLists.txt",
-                "analyzers/dataframe/CMakeLists.txt",
-                "cmake/FindVdt.cmake",
-                "tests/benchmark/CMakeLists.txt",
-                "tests/unittest/CMakeLists.txt"
-            ],
-            "comments": [
-                {
-                    "author": "vvolkl",
-                    "body": "Hmmm, I'd wait with merging this, it should be tested also with `spack install --test=root fccanalysis`"
-                },
-                {
-                    "author": "kjvbrt",
-                    "body": "Thanks :)"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [
-                {
-                    "author": "bndikt",
-                    "state": "APPROVED",
-                    "body": "I took the liberty to rebase your fixes onto master @kjvbrt .\nA dedicated spack build passed, so merging this."
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCCAnalyses",
-            "num": 569,
-            "title": "[pre-edm4hep1] Primary vertex: fix get_PrimaryTracks and the beam-spot ndf; examples skip the momentum computation in PV fits",
-            "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/569",
-            "author": "defranchis",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "bistapf",
-            "labels": [],
-            "body": "## Summary\n\nThree independent changes:\n\n1. `get_PrimaryTracks`: the selection loop started from `chi2_max = 1e30`, so its first pass removed the track with the largest chi2 before that chi2 was compared with `CHI2MAX` (25). When every track was compatible with the primary vertex, one of them was still dropped. The loop now starts from the largest track chi2 of the first fit, as before 2892c93.\n2. `VertexFitter_Tk` with a beam-spot constraint: the vertex chi2 was divided by 2N \u2212 3 (N tracks). The constraint adds three beam-spot residuals to the chi2 while the three vertex coordinates stay free, so the number of degrees of freedom is 2N. Only `vertex.chi2` of beam-spot-constrained fits changes, by a factor (2N \u2212 3)/2N.\n3. Examples `vertex_lcfiplus/analysis_V0.py`, `vertex_lcfiplus/analysis_S\u2026",
-            "diff": {
-                "additions": 8,
-                "deletions": 8,
-                "files": 4
-            },
-            "files": [
-                "analyzers/dataframe/src/VertexFitterSimple.cc",
-                "examples/FCCee/vertex/analysis.py",
-                "examples/FCCee/vertex_lcfiplus/analysis_SV.py",
-                "examples/FCCee/vertex_lcfiplus/analysis_V0.py"
-            ],
-            "comments": [
-                {
-                    "author": "bistapf",
-                    "body": "Hi @defranchis , thanks for these much needed fixes! I think the PR is on the whole good to go, if you could add just one extra comment line to make the example more understandable that would be great, thank you. See comments below. \n\nFor the record I want to spell out clearly that **merging this ch\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 3
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1730,
-            "title": "perf(DDCore): avoid quadratic name checks when registering optical surfaces",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1730",
-            "author": "chrisburr",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "andresailer",
-            "labels": [],
-            "body": "In LHCb `registerSurfaces` was taking ~1.3s as `TGeoManager::Add*Surface` does a linear name search for every surface. Indexing the registered surfaces once per call takes the DaVinci geometry load from 4.79s to 3.64s with an identical TGeo dump.\n\nBEGINRELEASENOTES\n- OpticalSurfaceManager: register surfaces without a linear name search per surface.\nENDRELEASENOTES",
-            "diff": {
-                "additions": 68,
-                "deletions": 15,
-                "files": 1
-            },
-            "files": [
-                "DDCore/src/OpticalSurfaceManager.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u200220h 31m 23s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit 7740160d.\n\n[test-results]:data:application/gzip;base64,H4sIAO3n/moC/12MSw7CIBQAr9KwdgF9bUEvYx6/hNgWw2fVeHeR1BZdzkwyG7FuNpHcOiYuHYnZpZN0DpicXwtzEAKKKjV9OvDxS/eYlfpXD/\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "DD4hep",
-            "num": 1729,
-            "title": "perf(DDG4): only format Geant4VolumeManager debug strings when they are printed",
-            "url": "https://github.com/AIDASoft/DD4hep/pull/1729",
-            "author": "chrisburr",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "MarkusFrankATcernch",
-            "labels": [],
-            "body": "I think this is fairly self-explanatory but in LHCb I saw that a non-negligible amount of time was being spent building strings for `printout()` to discard. Adding these `isActivePrintLevel()` checks took the Geant4VolumeManager construction time from 0.50s to 0.17s.\n\nBEGINRELEASENOTES\n- Geant4VolumeManager: only build the debug strings of the volume scan when they are printed.\nENDRELEASENOTES",
-            "diff": {
-                "additions": 13,
-                "deletions": 9,
-                "files": 1
-            },
-            "files": [
-                "DDG4/src/Geant4VolumeManager.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "## Test Results\n\u2007\u2008\u200718 files\u2004\u2003\u2007\u2008\u200718 suites\u2004\u2003\u20021d 0h 21m 11s \u23f1\ufe0f\n\u2007\u2008375 tests\u2003\u2007\u2008375 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n3\u2008331 runs\u200a\u20033\u2008331 \u2705\u20030 \ud83d\udca4\u20030 \u274c\n\nResults for commit f38a826e.\n\n[test-results]:data:application/gzip;base64,H4sIAAs6/moC/12MSw7CIBQAr9KwdgF9KaCXMfCAhNgWw2fVeHeR1BZdzkwyG3F+toncBiYvA0nF55NMiSr7sFaWggtWVa3500FMX7qngviv\u2026"
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4SimDelphes",
-            "num": 178,
-            "title": "Use an unnamed namespace for file-local helpers",
-            "url": "https://github.com/key4hep/k4SimDelphes/pull/178",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Put the file-local helpers in `DelphesEDM4HepConverter.cc` and in the converter comparison test in unnamed namespaces so that they are not exported.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 161,
-                "deletions": 153,
-                "files": 2
-            },
-            "files": [
-                "converter/src/DelphesEDM4HepConverter.cc",
-                "tests/src/compare_delphes_converter_outputs.cpp"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Needs another pass with clang-format to re-indent things"
-                }
-            ],
-            "reviews_total": 2
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecCalorimeter",
-            "num": 304,
-            "title": "Use unnamed namespaces for file-local helpers in the RecCaloCommon tests",
-            "url": "https://github.com/key4hep/k4RecCalorimeter/pull/304",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Use unnamed namespaces for the file-local helpers in the `RecCaloCommon` tests, including the ID generators in the `make_*_ids.icc` files.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 29,
-                "deletions": 1,
-                "files": 6
-            },
-            "files": [
-                "RecCaloCommon/tests/IDMapIndexer_test.cpp",
-                "RecCaloCommon/tests/IDMap_test.cpp",
-                "RecCaloCommon/tests/MultiIndexer_test.cpp",
-                "RecCaloCommon/tests/make_ecalb_ids.icc",
-                "RecCaloCommon/tests/make_ecale_ids.icc",
-                "RecCaloCommon/tests/make_hcalb_ids.icc"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "APPROVED",
-                    "body": "Looks good to me. Seems to be in tests only in any case and should have very little overlap with other open PRs (but I haven't checked)."
-                }
-            ],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 152,
-            "title": "Include material in the CKF extrapolation to the IP",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/152",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n\n- Include the material between the innermost hit and the reference surface (e.g. the beam pipe) when the CKF tracks are extrapolated to the IP. Before, the AtIP covariance missed it and the d0/z0 uncertainties of low-momentum tracks were too small.\n\nENDRELEASENOTES\n\nAfter the CKF, each track is extrapolated from its innermost state to the reference surface to fill the AtIP state. This propagation had no `MaterialInteractor`, so the multiple scattering in the beam pipe never entered the covariance. ACTS' own `TrackFindingAlgorithm` uses one here.\n\nEffect on CLD_o2_v08 with a material map (made as in #143, on the geometry with #144 and #151), width of the d0 / z0 pulls of prompt tracks:\n\n| sample | before | after |\n|---|---|---|\n| Z \u2192 bb\u0304 at 91 GeV, 1000 events | 5.68 / 10\u2026",
-            "diff": {
-                "additions": 7,
-                "deletions": 2,
-                "files": 1
-            },
-            "files": [
-                "k4ActsTracking/include/k4ActsTracking/CKFRunner.hxx"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "Alma9 nightlies broken due to unrelated reasons here. All other (currently relevant) CI passes. Merging this.\n\n@madbaron this will also affect MAIA in the end, but I don't know if there are studies already that have looked at impact parameters at this point."
-                }
-            ],
-            "comments_total": 1,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 159,
-            "title": "Use unnamed namespaces for file-local helpers",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/159",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Put the file-local helpers in `DD4hepBlueprintConstruction.cpp` and `ACTSDuplicateRemoval.cxx` in unnamed namespaces so that they are not exported.\n\nENDRELEASENOTES",
-            "diff": {
-                "additions": 668,
-                "deletions": 655,
-                "files": 2
-            },
-            "files": [
-                "k4ActsTracking/src/components/ACTSDuplicateRemoval.cxx",
-                "k4ActsTracking/src/components/DD4hepBlueprintConstruction.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "I have squashed the non-formatting commits and will rebase this onto `main` to keep the formatting only part ignorable in `git blame`."
-                },
-                {
-                    "author": "jmcarcell",
-                    "body": "I'll try to update the `.clang-format` today to either format everywhere or do no formatting, we'll see"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "This will potentially conflict with #153 but it should be straight forward to fix there."
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 45,
-            "title": "Require the Ubuntu 26 nightly build",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/45",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Require the Ubuntu 26 nightly build in the default GitHub ruleset (applied everywhere already).",
-            "diff": {
-                "additions": 4,
-                "deletions": 0,
-                "files": 1
-            },
-            "files": [
-                "defaults/github/default-branch-ruleset.json"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-dev-utils",
-            "num": 43,
-            "title": "Require the AlmaLinux 10 nightly build",
-            "url": "https://github.com/key4hep/key4hep-dev-utils/pull/43",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-18",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Replace the Ubuntu 24 nightly build with the AlmaLinux 10 nightly build in the default GitHub ruleset.",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "defaults/github/default-branch-ruleset.json"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
         }
     ]
 }
