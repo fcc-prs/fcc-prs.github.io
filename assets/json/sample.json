@@ -435,7 +435,18 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/179'>Fix/mc mother daughter relations</a>",
             "author": "davidlange6",
             "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-26",
+            "updatedAt": "2026-11-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4SimDelphes",
+            "num": 181,
+            "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/181'>k4SimDelphesAlg example: write the EventHeader</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-27",
+            "updatedAt": "2026-11-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -468,7 +479,7 @@
             "title": "<a href='https://github.com/key4hep/k4Gen/pull/75'>PythiaInterface: store the weight names in the HepMC3 run info</a>",
             "author": "kjvbrt",
             "createdAt": "2026-11-26",
-            "updatedAt": "2026-11-26",
+            "updatedAt": "2026-11-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -618,17 +629,6 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 166,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/166'>Faster CKF measurement selection</a>",
-            "author": "jburzy",
-            "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-27",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
             "num": 167,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/167'>Optional mini-doublet requirement for seeding on double layers</a>",
             "author": "jburzy",
@@ -644,7 +644,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/170'>Split telescope tracking out of CKFTrackingAlg into TelescopeCKFTrackingAlg</a>",
             "author": "madbaron",
             "createdAt": "2026-11-20",
-            "updatedAt": "2026-11-25",
+            "updatedAt": "2026-11-27",
             "mergeOk": "no",
             "labels": "",
             "assignees": ""
@@ -667,7 +667,7 @@
             "author": "Baucki1",
             "createdAt": "2026-11-23",
             "updatedAt": "2026-11-23",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1855,7 +1855,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1866,7 +1866,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1877,7 +1877,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1888,7 +1888,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-16",
             "updatedAt": "2026-07-30",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1899,7 +1899,7 @@
             "author": "forthommel",
             "createdAt": "2026-05-10",
             "updatedAt": "2026-05-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1921,7 +1921,7 @@
             "author": "thisismeamir",
             "createdAt": "2025-12-10",
             "updatedAt": "2026-02-17",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1998,7 +1998,7 @@
             "author": "jacofan",
             "createdAt": "2026-11-17",
             "updatedAt": "2026-11-18",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2009,7 +2009,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-10-27",
             "updatedAt": "2026-10-27",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2404,7 +2404,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1736'>Remove unused deprecated ROOT headers Hoption.h and Hparam.h</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-26",
-            "updatedAt": "2026-11-26",
+            "updatedAt": "2026-11-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2426,6 +2426,39 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1740'>Fix the dictionary rules for the IOV::Key pairs in DDCond</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1741,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1741'>fix(DDG4): keep the event weight of the EDM4hep input in the EDM4hep output</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-27",
+            "updatedAt": "2026-11-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1742,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1742'>fix(DDG4): event weight 1 in the EDM4hep output if the input provides none</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-27",
+            "updatedAt": "2026-11-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1743,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1743'>fix(DDG4): run number of HepMC3 input events from the Geant4 run</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-27",
             "updatedAt": "2026-11-27",
             "mergeOk": "yes",
             "labels": "",
