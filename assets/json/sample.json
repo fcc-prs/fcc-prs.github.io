@@ -2,6 +2,17 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 696,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/696'>Fixing missing material in detailed vertex detectors when using DDKalTest</a>",
+            "author": "armin-ilg",
+            "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 697,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/697'>Add NozzleKillAction, tests and example</a>",
             "author": "madbaron",
@@ -17,17 +28,6 @@
             "title": "<a href='https://github.com/key4hep/k4geo/pull/695'>Remove the unused ARC_SiPM_QuantumEfficiency matrix</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-24",
-            "updatedAt": "2026-11-26",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4geo",
-            "num": 696,
-            "title": "<a href='https://github.com/key4hep/k4geo/pull/696'>Fixing missing material in detailed vertex detectors when using DDKalTest</a>",
-            "author": "armin-ilg",
-            "createdAt": "2026-11-25",
             "updatedAt": "2026-11-26",
             "mergeOk": "yes",
             "labels": "",
@@ -359,7 +359,7 @@
             "author": "ktht",
             "createdAt": "2026-11-25",
             "updatedAt": "2026-11-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -370,7 +370,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-16",
             "updatedAt": "2026-11-17",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -381,7 +381,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -448,6 +448,17 @@
             "createdAt": "2021-03-15",
             "updatedAt": "2026-09-20",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 76,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/76'>HepMCToEDMConverter: optional EventHeader with the event weights</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-27",
+            "updatedAt": "2026-11-27",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -611,7 +622,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/166'>Faster CKF measurement selection</a>",
             "author": "jburzy",
             "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-26",
+            "updatedAt": "2026-11-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -622,7 +633,7 @@
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/167'>Optional mini-doublet requirement for seeding on double layers</a>",
             "author": "jburzy",
             "createdAt": "2026-11-19",
-            "updatedAt": "2026-11-25",
+            "updatedAt": "2026-11-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1058,6 +1069,17 @@
         },
         {
             "repo": "key4hep/<br>k4Reco",
+            "num": 84,
+            "title": "<a href='https://github.com/key4hep/k4Reco/pull/84'>ConformalTracking: fill the subdetector hit numbers as in LCIO</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-11-27",
+            "updatedAt": "2026-11-27",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Reco",
             "num": 83,
             "title": "<a href='https://github.com/key4hep/k4Reco/pull/83'>Run BIBUtils C++ unit tests with Catch2</a>",
             "author": "jmcarcell",
@@ -1272,7 +1294,7 @@
             "author": "peter-mckeown",
             "createdAt": "2026-10-05",
             "updatedAt": "2026-10-05",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1352,6 +1374,17 @@
             "mergeOk": "no",
             "labels": "enhancement",
             "assignees": "keplerman417"
+        },
+        {
+            "repo": "key4hep/<br>k4Bench",
+            "num": 311,
+            "title": "<a href='https://github.com/key4hep/k4Bench/pull/311'>chore(deps): update mkdocs-material requirement from >=9.8.1 to >=9.8.2</a>",
+            "author": "dependabot",
+            "createdAt": "2026-11-27",
+            "updatedAt": "2026-11-27",
+            "mergeOk": "yes",
+            "labels": "dependencies \npython",
+            "assignees": ""
         },
         {
             "repo": "key4hep/<br>KKMCee",
@@ -1822,7 +1855,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1833,7 +1866,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1844,7 +1877,7 @@
             "author": "afroch",
             "createdAt": "2026-09-16",
             "updatedAt": "2026-09-16",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1855,7 +1888,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-16",
             "updatedAt": "2026-07-30",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1866,7 +1899,7 @@
             "author": "forthommel",
             "createdAt": "2026-05-10",
             "updatedAt": "2026-05-11",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1888,7 +1921,7 @@
             "author": "thisismeamir",
             "createdAt": "2025-12-10",
             "updatedAt": "2026-02-17",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1949,11 +1982,11 @@
         },
         {
             "repo": "hep-fcc/<br>FCC-config",
-            "num": 423,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/423'>[ALLEGRO] Do not store `CaloHitMCLinks` when calo cells are dropped</a>",
-            "author": "jacofan",
-            "createdAt": "2026-11-25",
-            "updatedAt": "2026-11-26",
+            "num": 424,
+            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/424'>[ALLEGRO] Recover hits in the Si wrapper for conformal tracks</a>",
+            "author": "giovannimarchiori",
+            "createdAt": "2026-11-27",
+            "updatedAt": "2026-11-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1965,7 +1998,7 @@
             "author": "jacofan",
             "createdAt": "2026-11-17",
             "updatedAt": "2026-11-18",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2393,7 +2426,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1740'>Fix the dictionary rules for the IOV::Key pairs in DDCond</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-26",
-            "updatedAt": "2026-11-26",
+            "updatedAt": "2026-11-27",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
