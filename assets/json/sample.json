@@ -2,6 +2,17 @@
     "data": [
         {
             "repo": "key4hep/<br>k4geo",
+            "num": 697,
+            "title": "<a href='https://github.com/key4hep/k4geo/pull/697'>Add NozzleKillAction, tests and example</a>",
+            "author": "madbaron",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4geo",
             "num": 695,
             "title": "<a href='https://github.com/key4hep/k4geo/pull/695'>Remove the unused ARC_SiPM_QuantumEfficiency matrix</a>",
             "author": "jmcarcell",
@@ -128,7 +139,7 @@
             "author": "jbeirer",
             "createdAt": "2026-10-23",
             "updatedAt": "2026-11-26",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -343,23 +354,12 @@
         },
         {
             "repo": "key4hep/<br>key4hep-spack",
-            "num": 957,
-            "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/957'>Add the latest tags for MarlinReco, Clupatra and k4RecTracker</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-11-25",
-            "updatedAt": "2026-11-25",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>key4hep-spack",
             "num": 956,
             "title": "<a href='https://github.com/key4hep/key4hep-spack/pull/956'>Add BHWIDE generator</a>",
             "author": "ktht",
             "createdAt": "2026-11-25",
             "updatedAt": "2026-11-25",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -370,7 +370,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-16",
             "updatedAt": "2026-11-17",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -381,7 +381,7 @@
             "author": "tmadlener",
             "createdAt": "2026-01-22",
             "updatedAt": "2026-10-14",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -392,7 +392,7 @@
             "author": "jmcarcell",
             "createdAt": "2026-10-07",
             "updatedAt": "2026-10-07",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -403,7 +403,7 @@
             "author": "tmadlener",
             "createdAt": "2026-09-24",
             "updatedAt": "2026-09-24",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -414,7 +414,7 @@
             "author": "Panzerkampfwagen-del",
             "createdAt": "2026-08-26",
             "updatedAt": "2026-09-02",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -425,7 +425,7 @@
             "author": "dudarboh",
             "createdAt": "2026-01-13",
             "updatedAt": "2026-01-14",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -435,7 +435,7 @@
             "title": "<a href='https://github.com/key4hep/k4SimDelphes/pull/179'>Fix/mc mother daughter relations</a>",
             "author": "davidlange6",
             "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-25",
+            "updatedAt": "2026-11-26",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -448,6 +448,17 @@
             "createdAt": "2021-03-15",
             "updatedAt": "2026-09-20",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Gen",
+            "num": 75,
+            "title": "<a href='https://github.com/key4hep/k4Gen/pull/75'>PythiaInterface: store the weight names in the HepMC3 run info</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -596,17 +607,6 @@
         },
         {
             "repo": "key4hep/<br>k4ActsTracking",
-            "num": 157,
-            "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/157'>Multi-pass CKF tracking for CLD</a>",
-            "author": "jbeirer",
-            "createdAt": "2026-11-13",
-            "updatedAt": "2026-11-26",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>k4ActsTracking",
             "num": 166,
             "title": "<a href='https://github.com/key4hep/k4ActsTracking/pull/166'>Faster CKF measurement selection</a>",
             "author": "jburzy",
@@ -634,7 +634,7 @@
             "author": "madbaron",
             "createdAt": "2026-11-20",
             "updatedAt": "2026-11-25",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -690,6 +690,17 @@
             "createdAt": "2026-10-17",
             "updatedAt": "2026-10-23",
             "mergeOk": "no",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "key4hep/<br>k4Clue",
+            "num": 88,
+            "title": "<a href='https://github.com/key4hep/k4Clue/pull/88'>Add `SaveClusterCells` option and `CLUEClusterCells` output collection</a>",
+            "author": "jacofan",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -1256,45 +1267,12 @@
         },
         {
             "repo": "key4hep/<br>DDML",
-            "num": 41,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/41'>Remove unused methods and structs</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-26",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>DDML",
-            "num": 40,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/40'>Add version information to CMake</a>",
-            "author": "tmadlener",
-            "createdAt": "2026-11-17",
-            "updatedAt": "2026-11-26",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>DDML",
-            "num": 38,
-            "title": "<a href='https://github.com/key4hep/DDML/pull/38'>HCAL endcap and AllShowers</a>",
-            "author": "HenryDayHall",
-            "createdAt": "2026-11-12",
-            "updatedAt": "2026-11-16",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "key4hep/<br>DDML",
             "num": 37,
             "title": "<a href='https://github.com/key4hep/DDML/pull/37'>add CaloHadronic pion hdf5 file</a>",
             "author": "peter-mckeown",
             "createdAt": "2026-10-05",
             "updatedAt": "2026-10-05",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1685,6 +1663,39 @@
         },
         {
             "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 590,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/590'>Vertexing: fix out-of-bounds reads, uninitialised fields, the SV pointing angle and fits with a dropped track</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 589,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/589'>Vertexing: fix the per-jet track selection of get_V0s_jet and get_SV_jets</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
+            "num": 588,
+            "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/588'>Primary vertex: fix get_PrimaryTracks and the beam-spot ndf</a>",
+            "author": "kjvbrt",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "hep-fcc/<br>FCCAnalyses",
             "num": 587,
             "title": "<a href='https://github.com/HEP-FCC/FCCAnalyses/pull/587'>Replace deprecated RVersion.h include with ROOT/RVersion.hxx</a>",
             "author": "jmcarcell",
@@ -1942,18 +1953,7 @@
             "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/423'>[ALLEGRO] Do not store `CaloHitMCLinks` when calo cells are dropped</a>",
             "author": "jacofan",
             "createdAt": "2026-11-25",
-            "updatedAt": "2026-11-25",
-            "mergeOk": "yes",
-            "labels": "",
-            "assignees": ""
-        },
-        {
-            "repo": "hep-fcc/<br>FCC-config",
-            "num": 421,
-            "title": "<a href='https://github.com/HEP-FCC/FCC-config/pull/421'>[ALLEGRO] add track validation algorithm for conformal tracks</a>",
-            "author": "giovannimarchiori",
-            "createdAt": "2026-11-20",
-            "updatedAt": "2026-11-20",
+            "updatedAt": "2026-11-26",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -1976,7 +1976,7 @@
             "author": "SanghyunKo",
             "createdAt": "2026-10-27",
             "updatedAt": "2026-10-27",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -1987,7 +1987,7 @@
             "author": "scott-snyder",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-10-26",
-            "mergeOk": "yes",
+            "mergeOk": "no",
             "labels": "",
             "assignees": ""
         },
@@ -2261,7 +2261,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1664'>feat: honor DD4HEP_LIBRARY_PATH for plugin search</a>",
             "author": "wdconinc",
             "createdAt": "2026-08-24",
-            "updatedAt": "2026-09-06",
+            "updatedAt": "2026-11-26",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2349,7 +2349,7 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1733'>Geant4EventSeed: use a different seed for generation of primaries and simulation</a>",
             "author": "giovannimarchiori",
             "createdAt": "2026-11-25",
-            "updatedAt": "2026-11-25",
+            "updatedAt": "2026-11-26",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
@@ -2360,6 +2360,39 @@
             "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1734'>MultiPoleField: init at object creation, avoid runtime overhead</a>",
             "author": "andresailer",
             "createdAt": "2026-11-25",
+            "updatedAt": "2026-11-26",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1736,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1736'>Remove unused deprecated ROOT headers Hoption.h and Hparam.h</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1737,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1737'>Fix .components files being regenerated on every build</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-26",
+            "updatedAt": "2026-11-26",
+            "mergeOk": "yes",
+            "labels": "",
+            "assignees": ""
+        },
+        {
+            "repo": "AIDASoft/<br>DD4hep",
+            "num": 1740,
+            "title": "<a href='https://github.com/AIDASoft/DD4hep/pull/1740'>Fix the dictionary rules for the IOV::Key pairs in DDCond</a>",
+            "author": "jmcarcell",
+            "createdAt": "2026-11-26",
             "updatedAt": "2026-11-26",
             "mergeOk": "yes",
             "labels": "",
@@ -2416,7 +2449,7 @@
             "author": "tmadlener",
             "createdAt": "2025-10-08",
             "updatedAt": "2026-11-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2438,7 +2471,7 @@
             "author": "wdconinc",
             "createdAt": "2025-12-20",
             "updatedAt": "2026-11-16",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2493,7 +2526,7 @@
             "author": "tmadlener",
             "createdAt": "2026-02-24",
             "updatedAt": "2026-11-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2537,7 +2570,7 @@
             "author": "ZeynepEdaCabukoglu",
             "createdAt": "2026-07-30",
             "updatedAt": "2026-11-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2559,7 +2592,7 @@
             "author": "veprbl",
             "createdAt": "2026-09-04",
             "updatedAt": "2026-11-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2570,7 +2603,7 @@
             "author": "mneha05",
             "createdAt": "2026-10-08",
             "updatedAt": "2026-11-11",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2592,7 +2625,7 @@
             "author": "tmadlener",
             "createdAt": "2026-11-17",
             "updatedAt": "2026-11-25",
-            "mergeOk": "no",
+            "mergeOk": "yes",
             "labels": "",
             "assignees": ""
         },
@@ -2613,7 +2646,7 @@
             "title": "<a href='https://github.com/AIDASoft/podio/pull/1089'>Read only the used collections and the collections they point to in the DataSource</a>",
             "author": "jmcarcell",
             "createdAt": "2026-11-22",
-            "updatedAt": "2026-11-22",
+            "updatedAt": "2026-11-26",
             "mergeOk": "yes",
             "labels": "",
             "assignees": ""
