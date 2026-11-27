@@ -1,6 +1,255 @@
 {
-    "updated_at": "2026-11-26T16:11:58Z",
+    "updated_at": "2026-11-27T15:59:28Z",
     "data": [
+        {
+            "org": "key4hep",
+            "repo": "k4SimDelphes",
+            "num": 182,
+            "title": "Fix order of REQUIRED in podio find_package",
+            "url": "https://github.com/key4hep/k4SimDelphes/pull/182",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-27",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "CMakeLists.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 166,
+            "title": "Faster CKF measurement selection",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/166",
+            "author": "jburzy",
+            "mergedAt": "2026-11-27",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "This PR speeds up the CKF track finding in `CKFTrackingAlg` \r\n\r\n`SelectingTrackStateCreator` replaces `Acts::TrackStateCreator` with `Acts::MeasurementSelector` as the CKF track state creator. It computes the chi2 of each measurement on a surface directly from the `MeasurementContainer` and creates track states only for the selected measurements. The ACTS creator allocates and calibrates a track state for every measurement on the surface before selecting. The cuts are the existing `CKF_Chi2CutOff`, `CKF_Chi2CutOffOutlier` and `CKF_NumMeasurementsCutOff`. The new property `CKF_SelectBeforeCreate` (default `true`) switches back to the ACTS creator when set to `false`.\r\n\r\nOutput tracks are unaffected and CKF time is reduced by a factor of 5 for MAIA tracking with full BIB. \r\n\r\n\r\nBEGINRELEASEN\u2026",
+            "diff": {
+                "additions": 207,
+                "deletions": 20,
+                "files": 2
+            },
+            "files": [
+                "k4ActsTracking/include/k4ActsTracking/CKFRunner.hxx",
+                "k4ActsTracking/include/k4ActsTracking/SelectingTrackStateCreator.hxx"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "Can `Acts::TrackStateCreator`  be sped up instead or why is it slower?"
+                },
+                {
+                    "author": "jburzy",
+                    "body": "> Can `Acts::TrackStateCreator` be sped up instead or why is it slower?\r\n\r\nThe ACTS creator is slow because it adds a track state to the trajectory and calibrates it for every measurement on the surface, then computes the chi2 and selects, and then copies the selected ones into new track states. It \u2026"
+                },
+                {
+                    "author": "paulgessinger",
+                    "body": "The \"simple\" mode in ACTS indeed runs the calibration on all measurements and then uses a single track state based interface to evaluate them. We identified this as being a lot of work, mostly depending on your occupancy.\n\nThere's an open PR https://github.com/acts-project/acts/pull/5849 to switch t\u2026"
+                },
+                {
+                    "author": "jburzy",
+                    "body": "> The \"simple\" mode in ACTS indeed runs the calibration on all measurements and then uses a single track state based interface to evaluate them. We identified this as being a lot of work, mostly depending on your occupancy.\r\n> \r\n> There's an open PR [acts-project/acts#5849](https://github.com/acts-p\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "From a timeline perspective, does it make sense to put this in as-is and then move to the CRTP based upstream implementation later. Or can we just wait for that and directly go to that (resp. drop many things here again as that already does the \"interesting\" bits for us, IIUC)?\n\nIf https://github.co\u2026"
+                },
+                {
+                    "author": "madbaron",
+                    "body": "> From a timeline perspective, does it make sense to put this in as-is and then move to the CRTP based upstream implementation later. Or can we just wait for that and directly go to that (resp. drop many things here again as that already does the \"interesting\" bits for us, IIUC)?\n> \n> If [acts-proje\u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "OK. Giving people a chance to object, but if there is nothing, I will merge later today."
+                }
+            ],
+            "comments_total": 7,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Generally looks good to me, a few minor-ish questions inline.\n\n@jbeirer do we have anything running in k4-bench already for CLD such that we could also get an estimate of the performance gains for CLD from this for (essentially) free?"
+                }
+            ],
+            "reviews_total": 11
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-images",
+            "num": 41,
+            "title": "Reduce the size of the AlmaLinux 9/10 and Ubuntu 24/26 images",
+            "url": "https://github.com/key4hep/key4hep-images/pull/41",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-27",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "- Reduce the size of the AlmaLinux 9 and 10 images: build in a stage and copy the result into an empty image, so the files overwritten by `dnf update` and the removed packages are no longer kept in the base layer. Don't install documentation or translations other than English. Remove NetworkManager and kexec-tools in AlmaLinux 9, and kbd in both.\n- Keep `llvm-libs` in the AlmaLinux images and add `libXpm` (and `libXft` for AlmaLinux 10) so that ROOT and Geant4 OpenGL visualization work.\n- Use `--no-install-recommends` in the Ubuntu 24 and 26 images, and explicitly install the packages that were only there as recommends and are still needed (`gnupg`, `openssh-client`, `less`, and `zlib1g-dev` and `libexpat1-dev` for Ubuntu 24). Add `libxpm4` to the Ubuntu 26 image for ROOT's X11 graphics.\n-\u2026",
+            "diff": {
+                "additions": 40,
+                "deletions": 15,
+                "files": 4
+            },
+            "files": [
+                "Docker/alma10/alma10-build/Dockerfile",
+                "Docker/alma9/alma9-build/Dockerfile",
+                "Docker/ubuntu24/ubuntu24-build/Dockerfile",
+                "Docker/ubuntu26/ubuntu26-build/Dockerfile"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4MLJetTagger",
+            "num": 19,
+            "title": "Include missing standard headers in Helpers.cpp",
+            "url": "https://github.com/key4hep/k4MLJetTagger/pull/19",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-27",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n - Include `<fstream>`, `<iostream>` and `<stdexcept>` in `Helpers.cpp`, fixing the build with newer ROOT (6.42.0) that no longer provide `<fstream>` transitively.\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 4,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "k4MLJetTagger/src/components/Helpers.cpp"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4Bench",
+            "num": 310,
+            "title": "chore(deps): update pymdown-extensions requirement from >=13.1 to >=13.1.2",
+            "url": "https://github.com/key4hep/k4Bench/pull/310",
+            "author": "dependabot",
+            "mergedAt": "2026-11-27",
+            "mergedBy": "github-actions",
+            "labels": [
+                "dependencies",
+                "python"
+            ],
+            "body": "Updates the requirements on [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/pymdown-extensions/releases\">pymdown-extensions's releases</a>.</em></p>\n<blockquote>\n<h2>13.1.2</h2>\n<ul>\n<li><strong>FIX</strong>: MagicLink: Fix issue were new URL parser can consume Python Markdown placeholders unexpectedly (<a href=\"https://redirect.github.com/facelessuser/pymdown-extensions/issues/3062\">#3062</a>).</li>\n</ul>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/facelessuser/pymdown-extensions/commit/dddbccdf7c1a6b33557ab3603a5b36932c1166f4\"><code>dddbccd</code></a> Fix spelling</li>\n<li><a h\u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "docs/requirements.txt"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCCAnalyses",
+            "num": 591,
+            "title": "Support ROOT 6.42 in TMVAHelper",
+            "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/591",
+            "author": "jmcarcell",
+            "mergedAt": "2026-11-27",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "ROOT 6.42 removed the `TMVA::Experimental::RBDT(key, filename)` constructor and ROOT I/O for `RBDT` (together with `TMVA.Experimental.SaveXGBoost`), so `TMVAHelper` no longer compiles:\n\n```\naddons/TMVAHelper/src/TMVAHelper.cc:16:72: error: no matching function for call to 'TMVA::Experimental::RBDT::RBDT(const std::string&, const std::string&)'\n```\n\nWith ROOT >= 6.42, `tmva_helper_xgb` now builds the model with `RBDT::LoadXGBoost(filename)`, where `filename` is an XGBoost model saved in its JSON format (`Booster.save_model(\"model.json\")`); `name` is not used in that case. Older ROOT versions keep the current behaviour.",
+            "diff": {
+                "additions": 5,
+                "deletions": 2,
+                "files": 1
+            },
+            "files": [
+                "addons/TMVAHelper/src/TMVAHelper.cc"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 423,
+            "title": "[ALLEGRO] Drop `CaloHitMCLinks` and muon tagger cells when cells are dropped",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/423",
+            "author": "jacofan",
+            "mergedAt": "2026-11-27",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "When `--saveCells False` (default), links between calo cells and MC particles are currently stored in the output file. Since the former collection is not saved, the `from` reference is invalid. With the change, if cells are not saved, links are not stored in the output file.\r\n\r\nSame happens for muon tagger cells when muon reconstruction is on, now fixed",
+            "diff": {
+                "additions": 6,
+                "deletions": 0,
+                "files": 1
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_common/run_digi_reco_common.py"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "@jacofan I think I had commented on this PR but I don't see them - probably not saved\r\n\r\nI was proposing that you move your change a bit below, in the part where we drop the links, close to io_svc.outputCommands.append(\"drop *SimCaloHitLinks\")\r\n\r\nand that you also fix the fact that the muon tagger b\u2026"
+                },
+                {
+                    "author": "jacofan",
+                    "body": "Ciao @giovannimarchiori, done"
+                },
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Good, thanks!"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [],
+            "reviews_total": 1
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-spack",
+            "num": 957,
+            "title": "Add the latest tags for MarlinReco, Clupatra and k4RecTracker",
+            "url": "https://github.com/key4hep/key4hep-spack/pull/957",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-26",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Add `clupatra@1.5`, `marlinreco@1.38.3` and `k4rectracker@0.9.0` (with new optional `k4reco` dependency depending on `tracking` variant).\n\nENDRELEASENOTES",
+            "diff": {
+                "additions": 13,
+                "deletions": 1,
+                "files": 3
+            },
+            "files": [
+                "packages/clupatra/package.py",
+                "packages/k4rectracker/package.py",
+                "packages/marlinreco/package.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 1
+        },
         {
             "org": "key4hep",
             "repo": "key4hep-doc",
@@ -30,6 +279,69 @@
                 }
             ],
             "comments_total": 1,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "key4hep",
+            "repo": "k4ActsTracking",
+            "num": 157,
+            "title": "Multi-pass CKF tracking for CLD",
+            "url": "https://github.com/key4hep/k4ActsTracking/pull/157",
+            "author": "jbeirer",
+            "mergedAt": "2026-11-26",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n\n- New `UnusedHitsAlg` (the hits not used by a set of track collections, as a subset collection) and `SplitTrackRemovalAlg` (drops tracks whose parameters at the IP match an already kept track).\n- `make_multipass_tracking` in `test/options/_ckf_helpers.py`. `CLD_CKFTracking.py` now runs five CKF passes tuned on CLD_o2_v08. New ctest `check_ckf_tracking_CLD_o2_v08` on its output.\n\nENDRELEASENOTES\n\nBuilds on #155 and #156 and contains their commits; I'll rebase once they are in. The merge order of all open CLD tracking PRs is in #158.\n\nOne set of seeding cuts cannot cover prompt, soft, displaced and late-starting tracks at once without flooding the CKF with combinatorics. CLD's ACTS tracking therefore loses soft and displaced particles that conformal tracking finds. This ru\u2026",
+            "diff": {
+                "additions": 430,
+                "deletions": 6,
+                "files": 7
+            },
+            "files": [
+                "k4ActsTracking/CMakeLists.txt",
+                "k4ActsTracking/src/components/SplitTrackRemovalAlg.cpp",
+                "k4ActsTracking/src/components/UnusedHitsAlg.cpp",
+                "test/CMakeLists.txt",
+                "test/options/CLD_CKFTracking.py",
+                "test/options/_ckf_helpers.py",
+                "test/scripts/multipass_check_tracks.py"
+            ],
+            "comments": [],
+            "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 9
+        },
+        {
+            "org": "key4hep",
+            "repo": "key4hep-images",
+            "num": 40,
+            "title": "Add openssl to alma10 image to fix torch compile issue",
+            "url": "https://github.com/key4hep/key4hep-images/pull/40",
+            "author": "tmadlener",
+            "mergedAt": "2026-11-26",
+            "mergedBy": "jmcarcell",
+            "labels": [],
+            "body": "For some reason torch compilation wants the openssl CLI tool\n\n\nBEGINRELEASENOTES\n- Add `openssl` to alma10 image\n\nENDRELEASENOTES\n\n\nSee https://github.com/key4hep/DDML/actions/runs/45858454697/job/140042947235?pr=38 for an example failure:\n\n```\nTraceback (most recent call last):\n    File \"/cvmfs/sft-nightlies.cern.ch/lcg/views/devkey-head/Thu/x86_64-el10-gcc16-opt/lib/python3.14/site-packages/torch/utils/_contextlib.py\", line 158, in inference_mode\n      return func(*args, **kwargs)\n    File \"/__w/DDML/DDML/python/examples/allshowers_wrapper.py\", line 181, in run_inference\n      samples = generate(\n          generator,\n      ...<4 lines>...\n          num_particles=len(_PDG_LIST),\n      )\n    File \"/__w/DDML/DDML/build/allshowers_libs/allshowers/unified_sampling.py\", line 60, in generate\n  \u2026",
+            "diff": {
+                "additions": 1,
+                "deletions": 1,
+                "files": 1
+            },
+            "files": [
+                "Docker/alma10/alma10-build/Dockerfile"
+            ],
+            "comments": [
+                {
+                    "author": "jmcarcell",
+                    "body": "There is `TORCHINDUCTOR_CPP_CACHE_PRECOMPILE_HEADERS=0` to disable looking for `openssl`.\nMore: https://github.com/pytorch/pytorch/issues/204380"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Yeah, also found that (or Claude knew about it). It does work, but I would like to not have to \"hack\" the test env that way."
+                }
+            ],
+            "comments_total": 2,
             "reviews": [],
             "reviews_total": 0
         },
@@ -82,6 +394,74 @@
         {
             "org": "key4hep",
             "repo": "DDML",
+            "num": 38,
+            "title": "HCAL endcap and AllShowers",
+            "url": "https://github.com/key4hep/DDML/pull/38",
+            "author": "HenryDayHall",
+            "mergedAt": "2026-11-26",
+            "mergedBy": "tmadlener",
+            "labels": [],
+            "body": "BEGINRELEASENOTES\n- Main extension here is to add the HCAL to the endcap - done by Claude.\n- Also some extended notes in the README.md about running python inference.\n- Also a basic framework to run AllShowers in DDML + a seperate note (ALLSHOWERS_notes.md) on the setup the user must do for this. \nENDRELEASENOTES\n\nThe AllShowers weights need to be added before this is merged. Currently they are sitting at `/data/dust/group/ilc/sft-ml/model_weights/AllShowers_unified_sampling`. They need to be uploaded somewhere, and that somewhere added to the relevant section to get them automagically downloaded.\n\nSee example showers below (both CC3 and AllShowers)\n<img width=\"1600\" height=\"2050\" alt=\"out\" src=\"https://github.com/user-attachments/assets/0c8386c9-9a6e-4611-94b0-d587fae545df\" />",
+            "diff": {
+                "additions": 845,
+                "deletions": 34,
+                "files": 21
+            },
+            "files": [
+                "ALLSHOWERS_notes.md",
+                "CMakeLists.txt",
+                "README.md",
+                "include/DDML/MultiParticleModel.h",
+                "models/AllShowers_CNF_v1.pt.md5",
+                "models/AllShowers_pcfm_v1.pt.md5",
+                "models/AllShowers_trafos_v1.pt.md5",
+                "models/CMakeLists.txt",
+                "python/CMakeLists.txt",
+                "python/ddml/_install_paths.py.in",
+                "python/ddml/configs.py",
+                "python/ddml/paths.py",
+                "python/examples/allshowers_wrapper.py",
+                "python/examples/cc3_sf_2a_wrapper.py",
+                "scripts/setup_allshowers.sh",
+                "src/CMakeLists.txt",
+                "src/MLModelActions.cc",
+                "src/MultiParticleModel.cc",
+                "tests/CMakeLists.txt",
+                "tests/check_test_outputs.py",
+                "tests/create_allshowers_input.py"
+            ],
+            "comments": [
+                {
+                    "author": "tmadlener",
+                    "body": "Rebased onto new main after merging #22 and #39. PR title and release notes will probably need to be adapted to drop the HCAL layer bits since those were done in #39 instead."
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "Added some AllShowers tests that run over all species. The naive solution using `-N -1` to simply read all input events currently fails due to https://github.com/AIDASoft/DD4hep/issues/1738"
+                },
+                {
+                    "author": "tmadlener",
+                    "body": "There are a few open comments still, but we can pick them up later. The most relevant ones I have put into #44 and #43"
+                }
+            ],
+            "comments_total": 3,
+            "reviews": [
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "Very nice. There are a few comments inline.\n\nFrom a big picture PoV: `MultiParticleModel` is essentially a copy of `CaloCloudsTwoAngleModel`, the main difference being the possibility to additionally condition on the PDG. In principle it would be possible to have that as a (runtime) property. I'm a \u2026"
+                },
+                {
+                    "author": "tmadlener",
+                    "state": "COMMENTED",
+                    "body": "I was able to test this with the Key4hep nightlies (and some minor tweaking of instructions) on the NAF. Worked out of the box (for photons) for me :).\n\nI will try to put all of the necessary setup for all showers into some script and add some tests that will run some (technical only) checks for All\u2026"
+                }
+            ],
+            "reviews_total": 5
+        },
+        {
+            "org": "key4hep",
+            "repo": "DDML",
             "num": 41,
             "title": "Remove unused methods and structs",
             "url": "https://github.com/key4hep/DDML/pull/41",
@@ -126,6 +506,35 @@
             ],
             "comments": [],
             "comments_total": 0,
+            "reviews": [],
+            "reviews_total": 0
+        },
+        {
+            "org": "hep-fcc",
+            "repo": "FCC-config",
+            "num": 421,
+            "title": "[ALLEGRO] add track validation algorithm for conformal tracks",
+            "url": "https://github.com/HEP-FCC/FCC-config/pull/421",
+            "author": "giovannimarchiori",
+            "mergedAt": "2026-11-26",
+            "mergedBy": "giovannimarchiori",
+            "labels": [],
+            "body": "If both track validation and conformal tracking are enabled, truth tracks from conformal tracking over truth hits are produced, and compared to reconstructed conformal tracks",
+            "diff": {
+                "additions": 62,
+                "deletions": 5,
+                "files": 1
+            },
+            "files": [
+                "FCCee/FullSim/ALLEGRO/ALLEGRO_common/run_digi_reco_common.py"
+            ],
+            "comments": [
+                {
+                    "author": "giovannimarchiori",
+                    "body": "Examples of plots produced with muons between 0.1 and 100 GeV, polar angle between 20 and 160 degrees - basically out of the box from the canvases in the trk validation root file\r\n\r\n<img width=\"792\" height=\"544\" alt=\"c_d0_resolution_vs_p\" src=\"https://github.com/user-attachments/assets/3c4fbdb8-8ee2\u2026"
+                }
+            ],
+            "comments_total": 1,
             "reviews": [],
             "reviews_total": 0
         },
@@ -2417,107 +2826,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "k4geo",
-            "num": 681,
-            "title": "Add FCCee MDI options, adapt ILD MDI",
-            "url": "https://github.com/key4hep/k4geo/pull/681",
-            "author": "ueinhaus",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\nIntroduces MDI options with simple antisolenoid:\r\n- adds a v02 to both shape- and CAD-based FCCee MDIs, by adding a corresponding folder and a collection.xml\r\n- the difference: v02 uses the simple antisolenoid (copied from CLD) instead of the detailed antisolenoid field map \r\n\r\nAdapts the ILD FCCee_v01 and v02 geometry:\r\n- to use the shape-based MDI rather than the CAD-based one\r\n- to use the new version with the simple antisolenoid field\r\n\r\nThis fixes the tracking issue in ILD, as it cannot handle inhomogeneous magnetic fields.\r\nIn addition, the CAD-based MDI computes a lot slower than the shape-based one and it handles material budget incorrectly, see issue #680 .\r\nENDRELEASENOTES",
-            "diff": {
-                "additions": 69,
-                "deletions": 6,
-                "files": 5
-            },
-            "files": [
-                "FCCee/ILD_FCCee/compact/ILD_FCCee_v01/ILD_FCCee_v01.xml",
-                "FCCee/ILD_FCCee/compact/ILD_FCCee_v02/ILD_FCCee_v02.xml",
-                "FCCee/MDI/compact/MDI_o1_CADBased_v02/MDI_o1_CADBased_v02_collection.xml",
-                "FCCee/MDI/compact/MDI_o1_ShapeBased_v02/MDI_o1_ShapeBased_v02_collection.xml",
-                "FCCee/MDI/compact/README.md"
-            ],
-            "comments": [
-                {
-                    "author": "ueinhaus",
-                    "body": "Adding @tmadlener and @Victor-Schwan"
-                },
-                {
-                    "author": "Zehvogel",
-                    "body": "> Paging @Zehvogel to give a chance to voice opinions on whether we should give these geometries a new name and / or version.\r\n\r\nPersonally, I like the CLD/CLIC way of naming, i.e., a new option number for large changes and new version numbers for small updates. (Although we might start to drown in \u2026"
-                },
-                {
-                    "author": "BrieucF",
-                    "body": "Sorry guys, busy day... This should also be decided by our PSC MDI and geometry conveners (tagging mainly @aciarma, @s6anloes and Jan - which is not yet member of the Key4hep org).\r\n\r\nI think it is good to have the possibility to call the current MDI with the old analytical antisolenoid centrally in\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Looks like there is general consensus on naming.  Concretely\r\n- [ ] Rename the MDI bits to follow @BrieucF's suggestion\r\n- [ ] Undo my suggestion to just change the existing models and instead follow the general FCC-ee naming scheme. I.e. we should have a `ILD_FCCee_o1_v01` and `ILD_FCCee_o2_v01` wi\u2026"
-                },
-                {
-                    "author": "aciarma",
-                    "body": "if only the magnetic field is changing, why dont we do different versions of the collection.xml (e.g. naming it with options) instead of having a new folder and going up with the version?"
-                },
-                {
-                    "author": "ueinhaus",
-                    "body": "> if only the magnetic field is changing, why dont we do different versions of the collection.xml (e.g. naming it with options) instead of having a new folder and going up with the version?\r\n\r\nThat's what is implemented right now:\r\nAdded MDI_o1_ShapeBased_v01_**o2**_collection.xml in MDI_o1_ShapeBas\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Last call for objections ;) I will merge this later today otherwise."
-                },
-                {
-                    "author": "Zehvogel",
-                    "body": "\"I\" tried to use this locally, and it looks like the compensating solenoids are just silently ignored by dd4hep, as we miss the surrounding\r\n```xml\r\n<fields>\r\n...\r\n</fields>\r\n```\r\ntags here. :("
-                },
-                {
-                    "author": "k4bench-bot",
-                    "body": "<!-- k4bench-blame-comment:v1 suite=reco window=2026-11-20..2026-11-21 -->\n<!-- k4bench-blame-facts:a7939aee23096159 -->\n<!-- k4bench-blame-cumulative:v2 eNrFlEFLxDAQhf9Lzo00cSntUaoWoSKoeHBZhjQ7LsE0KUmprr_eiHpYkLquzfYWhoTvzbw3WS7JWV1fVLc3YBkM6YIk5DXPIFtQ1AXdSMkyars-lL0yG42AFFha4UOoNMKjVgbDsUVhwHkPwl\u2026"
-                },
-                {
-                    "author": "k4bench-bot",
-                    "body": "<!-- k4bench-blame-comment:v1 window=2026-11-20..2026-11-21 -->\n<!-- k4bench-blame-facts:93d491fb5133d9c7 -->\n<!-- k4bench-blame-cumulative:v2 eNrNm0tP21AUhP9L1qRKJm1ElsXQJhIL2iCkFiHLCUdgxS_ZgfLz6xTU8mpsyL0z3iCIImbm-DixPfrOz3uzw6PPYY7wdjDs7fXu9sfh-GPfkkn_arkcjvt5sa5fLvZDs_DnYhHaMp1s3riIKkvizOpfU7uMo\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> \"I\" tried to use this locally, and it looks like the compensating solenoids are just silently ignored by dd4hep, as we miss the surrounding\n> ```xml\n> <fields>\n> ...\n> </fields>\n> ```\n> tags here. :(\n\nSo there is no compensating solenoidal fields at the moment, i.e. we only have the main solenoida\u2026"
-                },
-                {
-                    "author": "ueinhaus",
-                    "body": "> \"I\" tried to use this locally, and it looks like the compensating solenoids are just silently ignored by dd4hep, as we miss the surrounding\r\n> \r\n> ```\r\n> <fields>\r\n> ...\r\n> </fields>\r\n> ```\r\n> \r\n> tags here. :(\r\n\r\nThanks for spotting that! That's a bit embarassing, but at least explains why I didn\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "> That's a bit embarassing\n\nIt did pass a review as well, so this is on the reviewers as well here...\n\nI am not sure if we can have an easy check here (i.e. on a linter level). It might be possible to come up with something when loading the full geometry, and running some checks inside DD4hep, but a\u2026"
-                },
-                {
-                    "author": "ueinhaus",
-                    "body": "Yes, I'm on it, just validating again performance and verifying it pops up in the log files."
-                }
-            ],
-            "comments_total": 14,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "I would remove the xml files that are currently commented out, as that will probably mainly lead to confusion in the future. We should put a sentence or two into https://github.com/key4hep/k4geo/tree/main/FCCee/MDI/compact/README.md that explains how `MDI_o1_ShapeBased_v01_o2` differs from the `o1`.\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Paging @Zehvogel to give a chance to voice opinions on whether we should give these geometries a new name and / or version.\n\nFor me the MDI changes look OK, but still summoning @BrieucF explicitly to see if it's OK to place this so prominently into the `FCCee/MDI` path.\n\nAlternatively, we lift what \u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "state": "APPROVED",
-                    "body": "Looks good to me from an ILD (and MDI) point of view. @BrieucF I think this should now follow your proposed naming scheme as well, right?\n\n@ueinhaus the release notes need an update to reflect the current status (that can also be still be changed after the PR is merged. It needs to happen before a t\u2026"
-                }
-            ],
-            "reviews_total": 8
-        },
-        {
-            "org": "key4hep",
             "repo": "key4hep-spack",
             "num": 953,
             "title": "Recognize Pop!_OS 26.04 in the nightly setup",
@@ -2539,72 +2847,6 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4RecCalorimeter",
-            "num": 293,
-            "title": "Optionally recentre SW position window, optionally correct per-layer barycentres for S-curve",
-            "url": "https://github.com/key4hep/k4RecCalorimeter/pull/293",
-            "author": "giovannimarchiori",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\r\n- CreateCaloClustersSlidingWindowFCCee: optionally re-centre the position window\r\n- AugmentClustersFCCee: optional S-curve correction of the per-layer theta barycentres\r\n\r\nENDRELEASENOTES\r\n\r\n**CreateCaloClustersSlidingWindowFCCee**: optionally re-centre the position window\r\n\r\nFor small showers the maximum of the sliding window is not unique (the window energy is on a plateau), so the position window can end up off-centre. It then truncates the shower asymmetrically and biases the cluster position, which shows up as a distorted S-curve at low energy. \r\nThe PR adds three new properties:\r\n- recentrePositionWindow (default false): re-centre the position window  on the tower of the cluster barycentre and recompute the barycentre, iterating until the tower does not change. The\u2026",
-            "diff": {
-                "additions": 344,
-                "deletions": 1,
-                "files": 8
-            },
-            "files": [
-                "RecFCCeeCalorimeter/src/components/AugmentClustersFCCee.cpp",
-                "RecFCCeeCalorimeter/src/components/AugmentClustersFCCee.h",
-                "RecFCCeeCalorimeter/src/components/CalibrateCaloClusters.cpp",
-                "RecFCCeeCalorimeter/src/components/CreateCaloClustersSlidingWindowFCCee.cpp",
-                "RecFCCeeCalorimeter/src/components/CreateCaloClustersSlidingWindowFCCee.h",
-                "RecFCCeeCalorimeter/src/components/PhotonIDTool.cpp",
-                "RecFCCeeCalorimeter/tests/options/ALLEGRO_o1_v03.sh",
-                "RecFCCeeCalorimeter/tests/options/ALLEGRO_o1_v03_digi_reco.py"
-            ],
-            "comments": [
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Note : I need to add the json and a test for that -> done, the json are online in https://fccsw.web.cern.ch/fccsw/filesForSimDigiReco/ALLEGRO/ALLEGRO_o1_v03/ and I modified the existing test to do te recentering and augmentation for SW clusters in the ECAL barrel"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "Thanks Giovanni, nice improvement! The re-centring of the position window looks fine to me, I have no comments on it. Most of my comments are about the S-curve correction:\n\n1. I think the cos terms of the parametrisation can only be right in one of the two hemispheres (see inline).\n2. In the current\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Hi Joshua,\r\nthanks for your careful review. I merged the suggestions that you flagged as minor\r\nAs for the other points, I answered inline but can repeat here\r\n\r\n> Thanks Giovanni, nice improvement! The re-centring of the position window looks fine to me, I have no comments on it. Most of my comment\u2026"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "Thanks Giovanni, the changes look good to me, and storing the file name as a collection parameter is fine for me.\n\nOne remaining point: the parameter doesn't reach the final clusters yet. [`CalibrateCaloClusters`](https://github.com/key4hep/k4RecCalorimeter/blob/8d39769c7f9413af1639fff0fee738692ff6c\u2026"
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "> Thanks Giovanni, the changes look good to me, and storing the file name as a collection parameter is fine for me.\r\n> \r\n> One remaining point: the parameter doesn't reach the final clusters yet. [`CalibrateCaloClusters`](https://github.com/key4hep/k4RecCalorimeter/blob/8d39769c7f9413af1639fff0fee73\u2026"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "Actually just realized I cannot merge here so either @BrieucF gives me access or merges himself ;)"
-                },
-                {
-                    "author": "BrieucF",
-                    "body": "Can you try now?"
-                }
-            ],
-            "comments_total": 7,
-            "reviews": [
-                {
-                    "author": "jbeirer",
-                    "state": "APPROVED",
-                    "body": "lgtm now, will merge tomorrow unless anyone has more comments"
-                }
-            ],
-            "reviews_total": 11
         },
         {
             "org": "key4hep",
@@ -2640,91 +2882,6 @@
         },
         {
             "org": "key4hep",
-            "repo": "key4hep-images",
-            "num": 39,
-            "title": "Install Automake in the AlmaLinux images",
-            "url": "https://github.com/key4hep/key4hep-images/pull/39",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Fixes `autoreconf: Can't exec \"aclocal\": No such file or directory`. Verified that KKMCee builds in the updated AlmaLinux 9 image with LCG 110 from CVMFS.",
-            "diff": {
-                "additions": 2,
-                "deletions": 2,
-                "files": 2
-            },
-            "files": [
-                "Docker/alma10/alma10-build/Dockerfile",
-                "Docker/alma9/alma9-build/Dockerfile"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Reco",
-            "num": 80,
-            "title": "Fix the IP track state for inside-out fits",
-            "url": "https://github.com/key4hep/k4Reco/pull/80",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n - Compute the interaction-point track state for inside-out fits with an outside-in refit of the accepted hits. This avoids counting the innermost hits twice and underestimating the d0 and z0 uncertainties.\n\nENDRELEASENOTES\n\nPorts iLCSoft/MarlinTrk#31. If the refit fails, propagate the original smoothed state at the last constrained hit instead.\n\nBuilt in the local Workarea and smoke-tested ConformalTracking and RefitFinal on CLD input: all 170 output tracks had finite IP parameters and positive d0/z0 variances.",
-            "diff": {
-                "additions": 35,
-                "deletions": 61,
-                "files": 1
-            },
-            "files": [
-                "k4Reco/ConformalTracking/src/GaudiTrkUtils.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "I suppose we need this, to fix some of the CI failures which now report a difference between Marlin and the version of ConformalTracking here?\n\nSee, e.g. https://github.com/key4hep/k4Reco/actions/runs/44703624137/job/136177697938?pr=81"
-                },
-                {
-                    "author": "k4bench-bot",
-                    "body": "<!-- k4bench-blame-comment:v1 suite=reco window=2026-11-20..2026-11-21 -->\n<!-- k4bench-blame-facts:8ac1dcda0bb2594f -->\n<!-- k4bench-blame-cumulative:v2 eNrFlFFLwzAQx79LnhtpjlHaR6lahIqg4oNjHGl3jmCalKRW56c3EwV9GW6s6VOSI-GX_939b7lk53V9Wd3dohU4pguWsPc8w2zBSRd807Yi47YfQtgrs9GExFGkFT2GSCM9aWUobDtaK2lwUB\u2026"
-                }
-            ],
-            "comments_total": 2,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Reco",
-            "num": 81,
-            "title": "Bump cvmfs-contrib/github-action-cvmfs from 5.6 to 5.7",
-            "url": "https://github.com/key4hep/k4Reco/pull/81",
-            "author": "dependabot",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "jmcarcell",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [cvmfs-contrib/github-action-cvmfs](https://github.com/cvmfs-contrib/github-action-cvmfs) from 5.6 to 5.7.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/cvmfs-contrib/github-action-cvmfs/releases\">cvmfs-contrib/github-action-cvmfs's releases</a>.</em></p>\n<blockquote>\n<h2>v5.7</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>fix: abort when cvmfs package installation fails by <a href=\"https://github.com/veprbl\"><code>@\u200bveprbl</code></a> in <a href=\"https://redirect.github.com/cvmfs-contrib/github-action-cvmfs/pull/72\">cvmfs-contrib/github-action-cvmfs#72</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/veprbl\"><code>@\u200bveprbl</code></a> made their first contribution in <a href=\"https://redirect.github.com/cvmfs-contrib/git\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/pre-commit.yaml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "key4hep",
             "repo": "k4PFHitML",
             "num": 12,
             "title": "Skip test model downloads when tests are disabled",
@@ -2741,113 +2898,6 @@
             },
             "files": [
                 "k4PF-HitML/CMakeLists.txt"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4DetectorPerformance",
-            "num": 15,
-            "title": "Identify hits and particles by their handles, not by their ObjectIDs",
-            "url": "https://github.com/key4hep/k4DetectorPerformance/pull/15",
-            "author": "giovannimarchiori",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "The collections created in the same job (e.g. by the digitizers that run before the validation) do not have a collection ID until they are written, so hits with the same index in different collections (e.g. VTXBDigis and SiWrBDigis) had the same ObjectID and were mixed up: tracks were associated with wrong extra particles and the numbers of true hits of the particles were underestimated.\r\n\r\nThe hit -> particles and particle -> hits maps and the MC particle indices now use edm4hep::TrackerHit and edm4hep::MCParticle as keys, which compare and hash by the underlying object. With ALLEGRO Z->qq events and conformal tracking, the validation run in the same job as the digitization now gives the same trees as the validation run on the reconstructed file in a separate job (before, only 29% of the \u2026",
-            "diff": {
-                "additions": 22,
-                "deletions": 22,
-                "files": 1
-            },
-            "files": [
-                "TrackingPerformance/src/components/TrackingValidation.cpp"
-            ],
-            "comments": [
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Thanks @tmadlener ! I wanted to fix the bug, for a further reorganisation of the code we can let @ArinaPon handle it since she did the original implementation, or otherwise I can have a look at it in a separate PR on a longer timescale?"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "I have created #16, so we might stumble over it again at some point (or at least actively decide against it)."
-                },
-                {
-                    "author": "giovannimarchiori",
-                    "body": "Thank you @tmadlener !"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "This definitely seems the right fix for the actual problem, so from that point of view this can be merged as is, IMO.\n\nI am wondering whether all the other index handling that is still in there is still necessary? Might be worth to have a look now, since we are already touching this in any case."
-                }
-            ],
-            "reviews_total": 2
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 299,
-            "title": "fix: warm up every CVMFS repo the nightly views use",
-            "url": "https://github.com/key4hep/k4Bench/pull/299",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "The \"Warm up CVMFS repos\" step mounts the CVMFS repos on the host before `docker run`, because a repo that autofs mounts only after the container started is not visible inside it. The list missed three repos the LCG nightly views use:\n\n- `sft.cern.ch`: the gcc16 runtime (`/cvmfs/sft.cern.ch/lcg/releases/gcc/16.1.0-43042`)\n- `geant4.cern.ch`: the Geant4 data (`G4LEDATA`, `G4NEUTRONHPDATA`, ...)\n- `fcc.cern.ch`: `FCCDICTSDIR`\n\nThey had stayed mounted on the fcc-ironic hosts since May, so this did not show until the reboot on 2026-11-20. In [run 44748422021](https://github.com/key4hep/k4Bench/actions/runs/44748422021), every job whose container started before `sft.cern.ch` was mounted failed in the plugin build with `cmake: /lib64/libstdc++.so.6: version 'GLIBCXX_3.4.32' not found`: since Thu\u2026",
-            "diff": {
-                "additions": 6,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/workflows/benchmark-detector.yml"
-            ],
-            "comments": [
-                {
-                    "author": "github-actions",
-                    "body": "Failed to generate code suggestions for PR"
-                },
-                {
-                    "author": "github-actions",
-                    "body": "Failed to generate code suggestions for PR"
-                },
-                {
-                    "author": "codecov-commenter",
-                    "body": ":warning: Please install the !['codecov app svg image'](https://github.com/codecov/engineering-team/assets/152432831/e90313f4-9d3a-4b63-8b54-cfe14e7ec20d) to ensure uploads and comments are reliably processed by Codecov.\n\n## [Codecov](https://app.codecov.io/gh/key4hep/k4Bench/pull/299?dropdown=cover\u2026"
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Bench",
-            "num": 298,
-            "title": "chore(deps): update pymdown-extensions requirement from >=13.0 to >=13.1",
-            "url": "https://github.com/key4hep/k4Bench/pull/298",
-            "author": "dependabot",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "github-actions",
-            "labels": [
-                "dependencies",
-                "python"
-            ],
-            "body": "Updates the requirements on [pymdown-extensions](https://github.com/facelessuser/pymdown-extensions) to permit the latest version.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/facelessuser/pymdown-extensions/releases\">pymdown-extensions's releases</a>.</em></p>\n<blockquote>\n<h2>13.1</h2>\n<ul>\n<li><strong>NEW</strong>: Snippets: Respect the <code>Retry-After</code> header when a URL responds with a 429. The server's requested delay is\nused instead of our backoff, and the snippet fails right away if it is longer than the longest we would wait\nourselves (<code>backoff_factor</code> times <code>max_retries</code>).</li>\n<li><strong>NEW</strong>: Snippets: Split snippet processing into steps that an extension can override (<code>parse_snippet_target\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                "docs/requirements.txt"
             ],
             "comments": [],
             "comments_total": 0,
@@ -2936,307 +2986,6 @@
             "comments_total": 0,
             "reviews": [],
             "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4Opt",
-            "num": 142,
-            "title": "Keep a study's trials in a ledger of its own, and propose them by Optuna or a grid",
-            "url": "https://github.com/key4hep/k4Opt/pull/142",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "jbeirer",
-            "labels": [],
-            "body": "## What this changes\n\nA study now owns its trials. Until now Optuna's journal or database held them: their numbers and states, the record each was told, rejections, recovery marks and the parent/child links of nested studies. `load_study`, recovery and the nested scheduler all read Optuna objects.\n\nThis PR moves all of that into k4opt and makes Optuna one interchangeable *strategy*. A second, independent strategy, a deterministic grid, proves the boundary is real.\n\n### Before \u2192 after\n\n| | Before | After |\n| --- | --- | --- |\n| Durable trial state | Optuna storage (`study.journal` or `--storage` DB), `k4opt.*` user attrs | the study's ledger `trials.jsonl`, owned by k4opt |\n| `load_study` | opens Optuna storage read-only, checks attrs against records | reads `study.json`, the ledger and the\u2026",
-            "diff": {
-                "additions": 5064,
-                "deletions": 3671,
-                "files": 63
-            },
-            "files": [
-                ".github/workflows/ci.yml",
-                "CONTRIBUTING.md",
-                "dashboard/tables.py",
-                "docs/dashboard.md",
-                "docs/optimization.md",
-                "docs/publication.md",
-                "k4opt/optimization/__init__.py",
-                "k4opt/optimization/_grid.py",
-                "k4opt/optimization/_ledger.py",
-                "k4opt/optimization/_optuna.py",
-                "k4opt/optimization/_optuna/__init__.py",
-                "k4opt/optimization/_optuna/marks.py",
-                "k4opt/optimization/_optuna/optimizer.py",
-                "k4opt/optimization/_optuna/read.py",
-                "k4opt/optimization/_optuna/run.py",
-                "k4opt/optimization/_optuna/space.py",
-                "k4opt/optimization/_optuna/storage.py",
-                "k4opt/optimization/_optuna/tell.py",
-                "k4opt/optimization/_optuna/tree.py",
-                "k4opt/optimization/_proposal.py",
-                "k4opt/optimization/_read.py",
-                "k4opt/optimization/_render.py",
-                "k4opt/optimization/_results.py",
-                "k4opt/optimization/_run.py",
-                "k4opt/optimization/_show.py",
-                "k4opt/optimization/_strategy.py",
-                "k4opt/optimization/_study.py",
-                "k4opt/optimization/_tree.py",
-                "k4opt/optimization/_trials.py",
-                "k4opt/optimization/cli.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "ALLEGRO",
-            "num": 67,
-            "title": "write_calibration_xml.py: add --outdir and --no-update options",
-            "url": "https://github.com/HEP-FCC/ALLEGRO/pull/67",
-            "author": "giovannimarchiori",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "giovannimarchiori",
-            "labels": [],
-            "body": "By default the calibration xml files are written next to the input file and the number of layers (and the quantities derived from it) is updated in the scripts of ALLEGRO and FCC-config, as before. With --outdir the xml files are written in another directory, and with --no-update the scripts are left untouched, so that the files can be produced without modifying the k4geo, ALLEGRO and FCC-config checkouts (e.g. in an automated production).",
-            "diff": {
-                "additions": 47,
-                "deletions": 35,
-                "files": 1
-            },
-            "files": [
-                "sampling_fractions/write_calibration_xml.py"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1086,
-            "title": "Bump cvmfs-contrib/github-action-cvmfs from 5.6 to 5.7",
-            "url": "https://github.com/AIDASoft/podio/pull/1086",
-            "author": "dependabot",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "tmadlener",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [cvmfs-contrib/github-action-cvmfs](https://github.com/cvmfs-contrib/github-action-cvmfs) from 5.6 to 5.7.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/cvmfs-contrib/github-action-cvmfs/releases\">cvmfs-contrib/github-action-cvmfs's releases</a>.</em></p>\n<blockquote>\n<h2>v5.7</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>fix: abort when cvmfs package installation fails by <a href=\"https://github.com/veprbl\"><code>@\u200bveprbl</code></a> in <a href=\"https://redirect.github.com/cvmfs-contrib/github-action-cvmfs/pull/72\">cvmfs-contrib/github-action-cvmfs#72</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/veprbl\"><code>@\u200bveprbl</code></a> made their first contribution in <a href=\"https://redirect.github.com/cvmfs-contrib/git\u2026",
-            "diff": {
-                "additions": 3,
-                "deletions": 3,
-                "files": 3
-            },
-            "files": [
-                ".github/workflows/coverity.yml",
-                ".github/workflows/pre-commit.yml",
-                ".github/workflows/publish-docs.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 1
-        },
-        {
-            "org": "AIDASoft",
-            "repo": "podio",
-            "num": 1087,
-            "title": "Bump cvmfs-contrib/github-action-cvmfs from 5.6 to 5.7 in /.github/actions/podio-build",
-            "url": "https://github.com/AIDASoft/podio/pull/1087",
-            "author": "dependabot",
-            "mergedAt": "2026-11-20",
-            "mergedBy": "tmadlener",
-            "labels": [
-                "dependencies",
-                "github_actions"
-            ],
-            "body": "Bumps [cvmfs-contrib/github-action-cvmfs](https://github.com/cvmfs-contrib/github-action-cvmfs) from 5.6 to 5.7.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/cvmfs-contrib/github-action-cvmfs/releases\">cvmfs-contrib/github-action-cvmfs's releases</a>.</em></p>\n<blockquote>\n<h2>v5.7</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>fix: abort when cvmfs package installation fails by <a href=\"https://github.com/veprbl\"><code>@\u200bveprbl</code></a> in <a href=\"https://redirect.github.com/cvmfs-contrib/github-action-cvmfs/pull/72\">cvmfs-contrib/github-action-cvmfs#72</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/veprbl\"><code>@\u200bveprbl</code></a> made their first contribution in <a href=\"https://redirect.github.com/cvmfs-contrib/git\u2026",
-            "diff": {
-                "additions": 1,
-                "deletions": 1,
-                "files": 1
-            },
-            "files": [
-                ".github/actions/podio-build/action.yml"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "key4hep",
-            "repo": "k4ActsTracking",
-            "num": 153,
-            "title": "ACTSDuplicateRemoval: never keep two equal tracks",
-            "url": "https://github.com/key4hep/k4ActsTracking/pull/153",
-            "author": "jbeirer",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "tmadlener",
-            "labels": [],
-            "body": "BEGINRELEASENOTES\n\n- `ACTSDuplicateRemoval` no longer keeps two equal tracks (more than half of the hits of the shorter one shared). A track is now dropped if an equal kept track is at least as good, and otherwise replaces all equal kept tracks.\n\nENDRELEASENOTES\n\nTwo ways the old loop kept duplicates:\n\n- a better track replaced the *first* equal kept track and stopped, so further kept tracks equal to it stayed;\n- a worse track did not stop at the first equal one and could replace a later one, so the kept list then held two tracks equal to each other.\n\nThis happens when partial tracks of one particle are around (they are not equal to each other, but both are equal to the full track): two full copies can each replace one of them and both survive.\n\nOn CLD_o2_v08 (CKF on the tuning samples of \u2026",
-            "diff": {
-                "additions": 182,
-                "deletions": 7,
-                "files": 4
-            },
-            "files": [
-                "k4ActsTracking/src/components/ACTSDuplicateRemoval.cxx",
-                "test/CMakeLists.txt",
-                "test/options/duplicate_removal.py",
-                "test/scripts/duplicate_removal_tracks.py"
-            ],
-            "comments": [
-                {
-                    "author": "tmadlener",
-                    "body": "> no test runs ACTSDuplicateRemoval\n\nCan we change that? Potentially with some synthetic test tracks that would have failed before but now no longer do?"
-                },
-                {
-                    "author": "jbeirer",
-                    "body": "> > no test runs ACTSDuplicateRemoval\r\n> \r\n> Can we change that? Potentially with some synthetic test tracks that would have failed before but now no longer do?\r\n\r\nDone: duplicate_removal (+ write_/check_duplicate_removal) runs ACTSDuplicateRemoval on three events of synthetic tracks (dummy hits, id\u2026"
-                },
-                {
-                    "author": "tmadlener",
-                    "body": "Alma9 nightly is still picking up the broken Tuesday build. Merging because the rest passes."
-                }
-            ],
-            "comments_total": 3,
-            "reviews": [
-                {
-                    "author": "tmadlener",
-                    "state": "COMMENTED",
-                    "body": "Thanks a lot for adding the tests. Two minor comments / questions below."
-                }
-            ],
-            "reviews_total": 5
-        },
-        {
-            "org": "key4hep",
-            "repo": "key4hep-images",
-            "num": 38,
-            "title": "Fix Autoconf and XRootD dependencies in build images",
-            "url": "https://github.com/key4hep/key4hep-images/pull/38",
-            "author": "jmcarcell",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "jmcarcell",
-            "labels": [],
-            "body": "Retains `libsystemd.so.0` on AlmaLinux without keeping the systemd daemon, addressing HEP-FCC/FCCAnalyses#583.\n\nInstalls Autoconf on AlmaLinux and adds `m4` on Ubuntu 24.04 for the Autoconf supplied by LCG. Ubuntu 26.04 already includes `m4`.",
-            "diff": {
-                "additions": 7,
-                "deletions": 5,
-                "files": 3
-            },
-            "files": [
-                "Docker/alma10/alma10-build/Dockerfile",
-                "Docker/alma9/alma9-build/Dockerfile",
-                "Docker/ubuntu24/ubuntu24-build/Dockerfile"
-            ],
-            "comments": [],
-            "comments_total": 0,
-            "reviews": [],
-            "reviews_total": 0
-        },
-        {
-            "org": "hep-fcc",
-            "repo": "FCCAnalyses",
-            "num": 538,
-            "title": "feat: add DIRAC grid submission support",
-            "url": "https://github.com/HEP-FCC/FCCAnalyses/pull/538",
-            "author": "bndikt",
-            "mergedAt": "2026-11-19",
-            "mergedBy": "kjvbrt",
-            "labels": [],
-            "body": "## Summary\r\n\r\nThis PR implements DIRAC-backed grid submission for FCCAnalyses through:\r\n\r\n```console\r\nfccanalysis submit grid ANALYSIS_SCRIPT [OPTIONS] -- [CUSTOM ANALYSIS ARGUMENTS]\r\n```\r\n\r\nThe new backend provides an end-to-end workflow that resolves inputs, creates deterministic jobs, prepares worker sandboxes, initializes DIRAC in an isolated environment, and submits through ILCDIRAC.\r\n\r\n\r\n## Main changes\r\n\r\n- Add `grid` as a dedicated `fccanalysis submit` backend.\r\n- Support two input modes:\r\n  - EOS/XRootD inputs \r\n  - DIRAC LFNs\r\n- Resolve all input files before submission and create a deterministic job plan.\r\n- Keep samples separate when grouping inputs and naming outputs.\r\n- Support balanced grouping through either:\r\n  - per-sample `chunks`;\r\n  - `--n-chunks`; or\r\n  - `--files-per\u2026",
-            "diff": {
-                "additions": 4519,
-                "deletions": 158,
-                "files": 32
-            },
-            "files": [
-                "CMakeLists.txt",
-                "bin/fccanalysis",
-                "man/man1/fccanalysis-run.1",
-                "man/man1/fccanalysis-submit.1",
-                "man/man1/fccanalysis.1",
-                "man/man7/fccanalysis-script.7",
-                "python/anascript.py",
-                "python/build_fccanalyses.py",
-                "python/dirac_submit_helper.py",
-                "python/do_combine.py",
-                "python/do_plots.py",
-                "python/grid_submission.py",
-                "python/logging_utils.py",
-                "python/parsers.py",
-                "python/pin_fccanalyses.py",
-                "python/run_analysis.py",
-                "python/run_fccanalysis.py",
-                "python/run_final_analysis.py",
-                "python/software_payload.py",
-                "python/submission.py",
-                "python/submit.py",
-                "python/test_fccanalyses.py",
-                "scripts/dirac/run_dirac_submission.sh",
-                "scripts/dirac/run_fccanalysis.sh",
-                "tests/CMakeLists.txt",
-                "tests/python/test_dirac_submit_helper.py",
-                "tests/python/test_grid_submission.py",
-                "tests/python/test_software_payload.py",
-                "tests/python/test_submission.py",
-                "tests/python/test_submit_grid.py"
-            ],
-            "comments": [
-                {
-                    "author": "kjvbrt",
-                    "body": "Hi @bndikt, can you try rebasing onto the latest master?"
-                },
-                {
-                    "author": "kjvbrt",
-                    "body": "Also, can you adjust the manual pages?"
-                },
-                {
-                    "author": "bndikt",
-                    "body": "> Also, can you adjust the manual pages?\r\n\r\nDone. Sorry for the delay"
-                },
-                {
-                    "author": "bndikt",
-                    "body": "A follow-up change has already been implemented on a separate branch to consolidate input resolution between this grid backend and the normal fccanalysis run path.\r\nThis PR introduces working XRootD directory discovery for grid submission, including xrdfs enumeration, support for arbitrary explicit \u2026"
-                },
-                {
-                    "author": "bndikt",
-                    "body": "A quite substantial refinement (if one can call it that) is now done. \r\n\r\nThe main changes were:\r\n\r\n- **Unified command parsing:** `fccanalysis` now parses arguments centrally and passes the resulting namespace to each command handler. For `run` and `submit`, the first `--` separates framework optio\u2026"
-                },
-                {
-                    "author": "bndikt",
-                    "body": "Added several fixes and cleanups following the review:\r\n\r\n- Install the grid submission bash scripts with FCCAnalyses and locate them relative to the installation when creating input sandbox for workers (no longer from source)\r\n- Add a migration error for the deprecated `submit --where` syntax, poin\u2026"
-                },
-                {
-                    "author": "bndikt",
-                    "body": "some more fixups:\r\n\r\n- Show the planned jobs and any existing output files before asking for confirmation. Declining cancels without deleting files or submitting jobs.\r\n- Add `--force` argument (useful when using scripts to submit). It skips submission confirmations, including confirmation of existi\u2026"
-                },
-                {
-                    "author": "kjvbrt",
-                    "body": "Hi @bndikt, thanks for all the fixes.\n\nThe LFN check seems to be consistent with the LFN registered."
-                },
-                {
-                    "author": "bndikt",
-                    "body": "> Thanks :) Looks good now. Merging...\n\nThank you for reviewing this mess \ud83d\ude04 !!"
-                }
-            ],
-            "comments_total": 9,
-            "reviews": [
-                {
-                    "author": "kjvbrt",
-                    "state": "COMMENTED",
-                    "body": "Thanks, the install fix, the `--where` migration message, the confirmation prompt with `--force` and stop-on-failure all look good. Remaining points are inline; the main one is the output LFN check when `--output-dir` is omitted."
-                }
-            ],
-            "reviews_total": 31
         }
     ]
 }
