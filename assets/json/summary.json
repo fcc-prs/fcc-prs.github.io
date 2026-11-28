@@ -1,10 +1,12 @@
 {
-  "updated_at": "2026-11-27T09:33:37Z",
-  "period_start": "2026-11-20",
-  "period_end": "2026-11-27",
+  "updated_at": "2026-11-28T08:46:51Z",
+  "period_start": "2026-11-21",
+  "period_end": "2026-11-28",
   "summary": [
-    "- **[key4hep/k4FWCore#459](https://github.com/key4hep/k4FWCore/pull/459)** — OverlayTiming selects background calorimeter hits relative to time of flight, consistent with all other hits, and adds ApplyTimeOfFlight; calorimeter TimeWindows tuned to the old behaviour may need revisiting.",
-    "- **[key4hep/k4geo#681](https://github.com/key4hep/k4geo/pull/681"
+    "- **[key4hep/k4FWCore#459](https://github.com/key4hep/k4FWCore/pull/459)** — OverlayTiming selects background SimCalorimeterHits relative to time of flight, like signal and tracker hits, and adds ApplyTimeOfFlight; calorimeter TimeWindows tuned for the old behaviour may need revisiting.",
+    "- **[key4hep/k4ActsTracking#157](https://github.com/key4hep/k4ActsTracking/pull/157)** — Multi-pass CKF tracking for CLD runs five passes tuned on CLD_o2_v08, using new UnusedHitsAlg and SplitTrackRemovalAlg to recover soft and displaced tracks missed by single-pass seeding.",
+    "- **[key4hep/k4ActsTracking#151](https://github.com/key4hep/k4ActsTracking/pull/151)** — The ACTS blueprint builds CLD and ILD_FCCee sensor surfaces on the sensitive silicon rather than the passive module, restoring CLD endcap hits that tracking had been dropping.",
+    "- **[key4hep/k4ActsTracking#143](https://github.com/key4hep/k4ActsTracking/pull/143)** — Adds material receivers and a CLD_o2_v08 material map"
   ],
   "omitted": [],
   "usage": {
@@ -12,12 +14,12 @@
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "inference_geo": "us",
-    "input_tokens": 58831,
-    "output_tokens": 5,
+    "input_tokens": 53076,
+    "output_tokens": 8,
     "output_tokens_details": null,
     "server_tool_use": null,
     "service_tier": "standard",
     "speed": "standard"
   },
-  "cost_usd": 0.235424
+  "cost_usd": 0.212464
 }
